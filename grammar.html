@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grammar — Al-Kitaab Adaptive Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="site-title"></h1>
+    <div class="controls">
+      <div>
+        <label id="label-book" for="book">Book:</label>
+        <select id="book">
+          <option value="1">Alif Baa</option>
+          <option value="2">الكتاب ١</option>
+          <option value="3">الكتاب ٢</option>
+          <option value="4">الكتاب ٣</option>
+        </select>
+      </div>
+      <div>
+        <label id="label-unit" for="unit">Unit:</label>
+        <select id="unit"></select>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html" id="nav-home" data-page="home"></a></li>
+      <li><a href="learn.html" id="nav-learn" data-page="learn"></a></li>
+      <li><a href="lookup.html" id="nav-lookup" data-page="lookup"></a></li>
+      <li><a href="quiz.html" id="nav-quiz" data-page="quiz"></a></li>
+      <li><a href="grammar.html" id="nav-grammar" data-page="grammar"></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <nav class="grammar-toc" aria-label="Grammar sections">
+      <a href="#roots">Roots &amp; forms</a>
+      <a href="#idaafa">Iḍāfa</a>
+      <a href="#verbs">Verb forms</a>
+      <a href="#gender">Gender &amp; number</a>
+      <a href="#prepositions">Prepositions</a>
+    </nav>
+
+    <section class="card grammar-section" id="roots">
+      <h2>Roots &amp; patterns</h2>
+      <p>
+        Most Arabic content words are built from a three-consonant <strong>root</strong>
+        (جذر) slotted into a <strong>pattern</strong> (وزن). The root carries the core
+        meaning; the pattern adds grammatical information.
+      </p>
+      <ul>
+        <li>Root <span dir="rtl">ك ت ب</span> → writing family: <span dir="rtl">كتب، كتاب، مكتبة، مكتوب</span></li>
+        <li>Root <span dir="rtl">د ر س</span> → studying family: <span dir="rtl">درس، مدرسة، درّس، دراسة</span></li>
+        <li>Look up words by root in Lookup to see related vocabulary together.</li>
+      </ul>
+    </section>
+
+    <section class="card grammar-section" id="idaafa">
+      <h2>Iḍāfa (إضافة)</h2>
+      <p>
+        An iḍāfa is a noun–noun possessive/construct chain. The first noun drops
+        nunation / the definite article; definiteness comes from the last noun.
+      </p>
+      <ul>
+        <li><span dir="rtl">كتاب الطالب</span> — the student’s book</li>
+        <li><span dir="rtl">جامعة القاهرة</span> — Cairo University</li>
+        <li>Adjectives agreeing with the first noun usually follow the whole chain.</li>
+      </ul>
+    </section>
+
+    <section class="card grammar-section" id="verbs">
+      <h2>Verb forms (الأوزان)</h2>
+      <p>
+        Derived forms alter a Form I root’s meaning (causative, reflexive, intensive, etc.).
+        Knowing the form helps you guess meaning and conjugation patterns.
+      </p>
+      <ul>
+        <li><strong>Form I</strong> — basic: <span dir="rtl">كتب، درس، ذهب</span></li>
+        <li><strong>Form II</strong> — causative/intensive (doubled middle radical): <span dir="rtl">درّس</span> “to teach”</li>
+        <li><strong>Form IV</strong> — causative with أ: <span dir="rtl">أحبّ</span> “to love”</li>
+        <li><strong>Form V</strong> — reflexive of II: <span dir="rtl">تكلّم</span> “to speak”</li>
+        <li>Past stem ≈ perfect; present stem ≈ imperfect. Imperative is built from the present.</li>
+      </ul>
+    </section>
+
+    <section class="card grammar-section" id="gender">
+      <h2>Gender &amp; number</h2>
+      <p>
+        Nouns and adjectives are masculine or feminine, and singular / dual / plural.
+        Many feminine singulars end in <span dir="rtl">ة</span> (taa’ marbuuṭa).
+      </p>
+      <ul>
+        <li>Sound masculine plural: <span dir="rtl">ون / ين</span> (e.g. معلّمون)</li>
+        <li>Sound feminine plural: <span dir="rtl">ات</span> (e.g. جامعات)</li>
+        <li>Broken plurals change the internal pattern: <span dir="rtl">كتاب → كتب</span></li>
+        <li>Adjectives agree in gender, number, and definiteness with the noun they modify.</li>
+      </ul>
+    </section>
+
+    <section class="card grammar-section" id="prepositions">
+      <h2>Prepositions &amp; verb governance</h2>
+      <p>
+        Some verbs take a fixed preposition that changes meaning. Always learn the
+        preposition with the verb.
+      </p>
+      <ul>
+        <li><span dir="rtl">ذهب إلى</span> — go to (destination)</li>
+        <li><span dir="rtl">سكن في</span> — live / reside in</li>
+        <li><span dir="rtl">تكلّم مع / عن</span> — speak with / about</li>
+        <li>Prepositions are followed by a noun in the genitive (مجرور).</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/grammar.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz — Al-Kitaab Adaptive Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="site-title"></h1>
+    <div class="controls">
+      <div>
+        <label id="label-book" for="book">Book:</label>
+        <select id="book">
+          <option value="1">Alif Baa</option>
+          <option value="2">الكتاب ١</option>
+          <option value="3">الكتاب ٢</option>
+          <option value="4">الكتاب ٣</option>
+        </select>
+      </div>
+      <div>
+        <label id="label-unit" for="unit">Unit:</label>
+        <select id="unit"></select>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html" id="nav-home" data-page="home"></a></li>
+      <li><a href="learn.html" id="nav-learn" data-page="learn"></a></li>
+      <li><a href="lookup.html" id="nav-lookup" data-page="lookup"></a></li>
+      <li><a href="quiz.html" id="nav-quiz" data-page="quiz"></a></li>
+      <li><a href="grammar.html" id="nav-grammar" data-page="grammar"></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card quiz-setup" id="quiz-setup">
+      <h2 id="quiz-setup-title">Quiz</h2>
+      <label id="label-quiz-scope" for="quiz-scope"></label>
+      <select id="quiz-scope">
+        <option value="unit">Current unit</option>
+        <option value="book">Current book</option>
+        <option value="all">All unlocked</option>
+      </select>
+
+      <label id="label-quiz-type" for="quiz-type"></label>
+      <select id="quiz-type">
+        <option value="ar-en">Arabic → English</option>
+        <option value="en-ar">English → Arabic</option>
+        <option value="conj">Conjugation</option>
+      </select>
+
+      <div class="btn-row">
+        <button type="button" class="btn" id="btn-start-quiz"></button>
+      </div>
+      <p class="muted" id="quiz-pool-info" style="margin-top:12px"></p>
+    </section>
+
+    <section class="card" id="quiz-play" hidden>
+      <div class="session-meta">
+        <span id="quiz-progress"></span>
+        <span id="quiz-live-score"></span>
+      </div>
+      <div id="quiz-question"></div>
+      <div id="quiz-options" class="quiz-options"></div>
+      <div id="quiz-conj" hidden>
+        <p class="conj-prompt" id="conj-prompt"></p>
+        <input type="text" id="conj-input" dir="rtl" autocomplete="off" placeholder="…">
+        <div class="btn-row">
+          <button type="button" class="btn" id="btn-check-conj"></button>
+        </div>
+      </div>
+      <p class="quiz-feedback" id="quiz-feedback"></p>
+      <div class="btn-row" id="quiz-next-row" hidden>
+        <button type="button" class="btn" id="btn-next-q"></button>
+      </div>
+    </section>
+
+    <section class="card" id="quiz-results" hidden>
+      <h2 id="quiz-score-title"></h2>
+      <p class="due-count" id="quiz-final-score"></p>
+      <p class="muted" id="quiz-missed-note"></p>
+      <ul id="quiz-missed-list" style="margin:12px 0 0 1.2rem;line-height:1.6"></ul>
+      <div class="btn-row">
+        <button type="button" class="btn" id="btn-quiz-again"></button>
+        <a class="btn secondary" href="learn.html">Learn</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

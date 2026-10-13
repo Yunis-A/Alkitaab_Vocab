@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lookup — Al-Kitaab Adaptive Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="site-title"></h1>
+    <div class="controls">
+      <div>
+        <label id="label-book" for="book">Book:</label>
+        <select id="book">
+          <option value="1">Alif Baa</option>
+          <option value="2">الكتاب ١</option>
+          <option value="3">الكتاب ٢</option>
+          <option value="4">الكتاب ٣</option>
+        </select>
+      </div>
+      <div>
+        <label id="label-unit" for="unit">Unit:</label>
+        <select id="unit"></select>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html" id="nav-home" data-page="home"></a></li>
+      <li><a href="learn.html" id="nav-learn" data-page="learn"></a></li>
+      <li><a href="lookup.html" id="nav-lookup" data-page="lookup"></a></li>
+      <li><a href="quiz.html" id="nav-quiz" data-page="quiz"></a></li>
+      <li><a href="grammar.html" id="nav-grammar" data-page="grammar"></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card">
+      <input
+        type="search"
+        id="lookup-search"
+        class="search-box"
+        placeholder="Search by word, root, or definition…"
+        autocomplete="off"
+      >
+      <p class="muted" id="lookup-meta"></p>
+    </section>
+
+    <div id="lookup-results"></div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/lookup.js"></script>
+</body>
+</html>

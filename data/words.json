@@ -1,0 +1,698 @@
+[
+  {
+    "id": "b1-u1-001",
+    "book": 1,
+    "unit": 1,
+    "arabic": "كتاب",
+    "transliteration": "kitaab",
+    "definition": "book",
+    "root": "ك ت ب",
+    "pos": "noun",
+    "form": null,
+    "gender": "masculine",
+    "plural": "كتب",
+    "prepositions": [],
+    "notes": "Sample Alif Baa noun.",
+    "conjugations": null
+  },
+  {
+    "id": "b1-u1-002",
+    "book": 1,
+    "unit": 1,
+    "arabic": "قلم",
+    "transliteration": "qalam",
+    "definition": "pen; pencil",
+    "root": "ق ل م",
+    "pos": "noun",
+    "form": null,
+    "gender": "masculine",
+    "plural": "أقلام",
+    "prepositions": [],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b1-u1-003",
+    "book": 1,
+    "unit": 1,
+    "arabic": "بيت",
+    "transliteration": "bayt",
+    "definition": "house; home",
+    "root": "ب ي ت",
+    "pos": "noun",
+    "form": null,
+    "gender": "masculine",
+    "plural": "بيوت",
+    "prepositions": ["في"],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b1-u2-001",
+    "book": 1,
+    "unit": 2,
+    "arabic": "مدرسة",
+    "transliteration": "madrasa",
+    "definition": "school",
+    "root": "د ر س",
+    "pos": "noun",
+    "form": null,
+    "gender": "feminine",
+    "plural": "مدارس",
+    "prepositions": ["في"],
+    "notes": "Noun of place from درس.",
+    "conjugations": null
+  },
+  {
+    "id": "b1-u2-002",
+    "book": 1,
+    "unit": 2,
+    "arabic": "طالب",
+    "transliteration": "ṭaalib",
+    "definition": "student (m.)",
+    "root": "ط ل ب",
+    "pos": "noun",
+    "form": null,
+    "gender": "masculine",
+    "plural": "طلاب",
+    "prepositions": [],
+    "notes": "Feminine: طالبة",
+    "conjugations": null
+  },
+  {
+    "id": "b1-u2-003",
+    "book": 1,
+    "unit": 2,
+    "arabic": "كبيرة",
+    "transliteration": "kabiira",
+    "definition": "big; large (f.)",
+    "root": "ك ب ر",
+    "pos": "adjective",
+    "form": null,
+    "gender": "feminine",
+    "plural": null,
+    "prepositions": [],
+    "notes": "Masculine: كبير",
+    "conjugations": null
+  },
+  {
+    "id": "b1-u3-001",
+    "book": 1,
+    "unit": 3,
+    "arabic": "مرحبا",
+    "transliteration": "marḥaban",
+    "definition": "hello; welcome",
+    "root": "ر ح ب",
+    "pos": "particle",
+    "form": null,
+    "gender": null,
+    "plural": null,
+    "prepositions": [],
+    "notes": "Greeting.",
+    "conjugations": null
+  },
+  {
+    "id": "b1-u3-002",
+    "book": 1,
+    "unit": 3,
+    "arabic": "اسم",
+    "transliteration": "ism",
+    "definition": "name",
+    "root": "س م و",
+    "pos": "noun",
+    "form": null,
+    "gender": "masculine",
+    "plural": "أسماء",
+    "prepositions": [],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u1-001",
+    "book": 2,
+    "unit": 1,
+    "arabic": "درس",
+    "transliteration": "dars",
+    "definition": "lesson; class",
+    "root": "د ر س",
+    "pos": "noun",
+    "form": null,
+    "gender": "masculine",
+    "plural": "دروس",
+    "prepositions": [],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u1-002",
+    "book": 2,
+    "unit": 1,
+    "arabic": "درس",
+    "transliteration": "darasa",
+    "definition": "to study; to learn",
+    "root": "د ر س",
+    "pos": "verb",
+    "form": 1,
+    "gender": null,
+    "plural": null,
+    "prepositions": [],
+    "notes": "Form I verb.",
+    "conjugations": {
+      "past": {
+        "1s": "درستُ",
+        "2ms": "درستَ",
+        "2fs": "درستِ",
+        "3ms": "درسَ",
+        "3fs": "درستْ",
+        "1p": "درسنا",
+        "2mp": "درستم",
+        "3mp": "درسوا"
+      },
+      "present": {
+        "1s": "أدرسُ",
+        "2ms": "تدرسُ",
+        "2fs": "تدرسين",
+        "3ms": "يدرسُ",
+        "3fs": "تدرسُ",
+        "1p": "ندرسُ",
+        "2mp": "تدرسون",
+        "3mp": "يدرسون"
+      },
+      "imperative": {
+        "2ms": "ادرسْ",
+        "2fs": "ادرسي",
+        "2mp": "ادرسوا"
+      }
+    }
+  },
+  {
+    "id": "b2-u1-003",
+    "book": 2,
+    "unit": 1,
+    "arabic": "كتب",
+    "transliteration": "kataba",
+    "definition": "to write",
+    "root": "ك ت ب",
+    "pos": "verb",
+    "form": 1,
+    "gender": null,
+    "plural": null,
+    "prepositions": [],
+    "notes": "",
+    "conjugations": {
+      "past": {
+        "1s": "كتبتُ",
+        "2ms": "كتبتَ",
+        "3ms": "كتبَ",
+        "3fs": "كتبتْ",
+        "1p": "كتبنا",
+        "3mp": "كتبوا"
+      },
+      "present": {
+        "1s": "أكتبُ",
+        "2ms": "تكتبُ",
+        "3ms": "يكتبُ",
+        "3fs": "تكتبُ",
+        "1p": "نكتبُ",
+        "3mp": "يكتبون"
+      },
+      "imperative": {
+        "2ms": "اكتبْ",
+        "2fs": "اكتبي",
+        "2mp": "اكتبوا"
+      }
+    }
+  },
+  {
+    "id": "b2-u1-004",
+    "book": 2,
+    "unit": 1,
+    "arabic": "جامعة",
+    "transliteration": "jaamiʿa",
+    "definition": "university",
+    "root": "ج م ع",
+    "pos": "noun",
+    "form": null,
+    "gender": "feminine",
+    "plural": "جامعات",
+    "prepositions": ["في"],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u1-005",
+    "book": 2,
+    "unit": 1,
+    "arabic": "ذهب",
+    "transliteration": "dhahaba",
+    "definition": "to go",
+    "root": "ذ ه ب",
+    "pos": "verb",
+    "form": 1,
+    "gender": null,
+    "plural": null,
+    "prepositions": ["إلى", "مع"],
+    "notes": "Often takes إلى for destination.",
+    "conjugations": {
+      "past": {
+        "1s": "ذهبتُ",
+        "2ms": "ذهبتَ",
+        "3ms": "ذهبَ",
+        "3fs": "ذهبتْ",
+        "1p": "ذهبنا",
+        "3mp": "ذهبوا"
+      },
+      "present": {
+        "1s": "أذهبُ",
+        "2ms": "تذهبُ",
+        "3ms": "يذهبُ",
+        "3fs": "تذهبُ",
+        "1p": "نذهبُ",
+        "3mp": "يذهبون"
+      },
+      "imperative": {
+        "2ms": "اذهبْ",
+        "2fs": "اذهبي",
+        "2mp": "اذهبوا"
+      }
+    }
+  },
+  {
+    "id": "b2-u2-001",
+    "book": 2,
+    "unit": 2,
+    "arabic": "أكل",
+    "transliteration": "akala",
+    "definition": "to eat",
+    "root": "أ ك ل",
+    "pos": "verb",
+    "form": 1,
+    "gender": null,
+    "plural": null,
+    "prepositions": [],
+    "notes": "",
+    "conjugations": {
+      "past": {
+        "1s": "أكلتُ",
+        "2ms": "أكلتَ",
+        "3ms": "أكلَ",
+        "3fs": "أكلتْ",
+        "1p": "أكلنا",
+        "3mp": "أكلوا"
+      },
+      "present": {
+        "1s": "آكلُ",
+        "2ms": "تأكلُ",
+        "3ms": "يأكلُ",
+        "3fs": "تأكلُ",
+        "1p": "نأكلُ",
+        "3mp": "يأكلون"
+      },
+      "imperative": {
+        "2ms": "كُلْ",
+        "2fs": "كُلي",
+        "2mp": "كُلوا"
+      }
+    }
+  },
+  {
+    "id": "b2-u2-002",
+    "book": 2,
+    "unit": 2,
+    "arabic": "طعام",
+    "transliteration": "ṭaʿaam",
+    "definition": "food",
+    "root": "ط ع م",
+    "pos": "noun",
+    "form": null,
+    "gender": "masculine",
+    "plural": "أطعمة",
+    "prepositions": [],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u2-003",
+    "book": 2,
+    "unit": 2,
+    "arabic": "شرب",
+    "transliteration": "shariba",
+    "definition": "to drink",
+    "root": "ش ر ب",
+    "pos": "verb",
+    "form": 1,
+    "gender": null,
+    "plural": null,
+    "prepositions": [],
+    "notes": "",
+    "conjugations": {
+      "past": {
+        "1s": "شربتُ",
+        "3ms": "شربَ",
+        "3fs": "شربتْ",
+        "1p": "شربنا",
+        "3mp": "شربوا"
+      },
+      "present": {
+        "1s": "أشربُ",
+        "3ms": "يشربُ",
+        "3fs": "تشربُ",
+        "1p": "نشربُ",
+        "3mp": "يشربون"
+      },
+      "imperative": {
+        "2ms": "اشربْ",
+        "2fs": "اشربي",
+        "2mp": "اشربوا"
+      }
+    }
+  },
+  {
+    "id": "b2-u2-004",
+    "book": 2,
+    "unit": 2,
+    "arabic": "ماء",
+    "transliteration": "maaʾ",
+    "definition": "water",
+    "root": "م و ه",
+    "pos": "noun",
+    "form": null,
+    "gender": "masculine",
+    "plural": "مياه",
+    "prepositions": [],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u3-001",
+    "book": 2,
+    "unit": 3,
+    "arabic": "تكلّم",
+    "transliteration": "takallama",
+    "definition": "to speak; to talk",
+    "root": "ك ل م",
+    "pos": "verb",
+    "form": 5,
+    "gender": null,
+    "plural": null,
+    "prepositions": ["مع", "عن"],
+    "notes": "Form V; often تكلّم مع.",
+    "conjugations": {
+      "past": {
+        "1s": "تكلّمتُ",
+        "3ms": "تكلّمَ",
+        "3fs": "تكلّمتْ",
+        "1p": "تكلّمنا",
+        "3mp": "تكلّموا"
+      },
+      "present": {
+        "1s": "أتكلّمُ",
+        "3ms": "يتكلّمُ",
+        "3fs": "تتكلّمُ",
+        "1p": "نتكلّمُ",
+        "3mp": "يتكلّمون"
+      },
+      "imperative": {
+        "2ms": "تكلّمْ",
+        "2fs": "تكلّمي",
+        "2mp": "تكلّموا"
+      }
+    }
+  },
+  {
+    "id": "b2-u3-002",
+    "book": 2,
+    "unit": 3,
+    "arabic": "لغة",
+    "transliteration": "lugha",
+    "definition": "language",
+    "root": "ل غ و",
+    "pos": "noun",
+    "form": null,
+    "gender": "feminine",
+    "plural": "لغات",
+    "prepositions": [],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u3-003",
+    "book": 2,
+    "unit": 3,
+    "arabic": "عربيّة",
+    "transliteration": "ʿarabiyya",
+    "definition": "Arabic (language/adj. f.)",
+    "root": "ع ر ب",
+    "pos": "adjective",
+    "form": null,
+    "gender": "feminine",
+    "plural": null,
+    "prepositions": [],
+    "notes": "اللغة العربية = the Arabic language",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u3-004",
+    "book": 2,
+    "unit": 3,
+    "arabic": "فهم",
+    "transliteration": "fahima",
+    "definition": "to understand",
+    "root": "ف ه م",
+    "pos": "verb",
+    "form": 1,
+    "gender": null,
+    "plural": null,
+    "prepositions": [],
+    "notes": "",
+    "conjugations": {
+      "past": {
+        "1s": "فهمتُ",
+        "3ms": "فهمَ",
+        "3fs": "فهمتْ",
+        "1p": "فهمنا",
+        "3mp": "فهموا"
+      },
+      "present": {
+        "1s": "أفهمُ",
+        "3ms": "يفهمُ",
+        "3fs": "تفهمُ",
+        "1p": "نفهمُ",
+        "3mp": "يفهمون"
+      },
+      "imperative": {
+        "2ms": "افهمْ",
+        "2fs": "افهمي",
+        "2mp": "افهموا"
+      }
+    }
+  },
+  {
+    "id": "b2-u4-001",
+    "book": 2,
+    "unit": 4,
+    "arabic": "درس",
+    "transliteration": "darrasa",
+    "definition": "to teach",
+    "root": "د ر س",
+    "pos": "verb",
+    "form": 2,
+    "gender": null,
+    "plural": null,
+    "prepositions": [],
+    "notes": "Form II causative of درس.",
+    "conjugations": {
+      "past": {
+        "1s": "درّستُ",
+        "3ms": "درّسَ",
+        "3fs": "درّستْ",
+        "1p": "درّسنا",
+        "3mp": "درّسوا"
+      },
+      "present": {
+        "1s": "أدرّسُ",
+        "3ms": "يدرّسُ",
+        "3fs": "تدرّسُ",
+        "1p": "ندرّسُ",
+        "3mp": "يدرّسون"
+      },
+      "imperative": {
+        "2ms": "درّسْ",
+        "2fs": "درّسي",
+        "2mp": "درّسوا"
+      }
+    }
+  },
+  {
+    "id": "b2-u4-002",
+    "book": 2,
+    "unit": 4,
+    "arabic": "معلّم",
+    "transliteration": "muʿallim",
+    "definition": "teacher (m.)",
+    "root": "ع ل م",
+    "pos": "noun",
+    "form": null,
+    "gender": "masculine",
+    "plural": "معلّمون",
+    "prepositions": [],
+    "notes": "Feminine: معلّمة",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u4-003",
+    "book": 2,
+    "unit": 4,
+    "arabic": "قرأ",
+    "transliteration": "qaraʾa",
+    "definition": "to read",
+    "root": "ق ر أ",
+    "pos": "verb",
+    "form": 1,
+    "gender": null,
+    "plural": null,
+    "prepositions": [],
+    "notes": "Hamzated verb.",
+    "conjugations": {
+      "past": {
+        "1s": "قرأتُ",
+        "3ms": "قرأَ",
+        "3fs": "قرأَتْ",
+        "1p": "قرأنا",
+        "3mp": "قرأوا"
+      },
+      "present": {
+        "1s": "أقرأُ",
+        "3ms": "يقرأُ",
+        "3fs": "تقرأُ",
+        "1p": "نقرأُ",
+        "3mp": "يقرأون"
+      },
+      "imperative": {
+        "2ms": "اقرأْ",
+        "2fs": "اقرأِي",
+        "2mp": "اقرأوا"
+      }
+    }
+  },
+  {
+    "id": "b2-u4-004",
+    "book": 2,
+    "unit": 4,
+    "arabic": "مكتبة",
+    "transliteration": "maktaba",
+    "definition": "library; bookstore",
+    "root": "ك ت ب",
+    "pos": "noun",
+    "form": null,
+    "gender": "feminine",
+    "plural": "مكتبات",
+    "prepositions": ["في"],
+    "notes": "Noun of place from كتب.",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u5-001",
+    "book": 2,
+    "unit": 5,
+    "arabic": "سكن",
+    "transliteration": "sakana",
+    "definition": "to live; to reside",
+    "root": "س ك ن",
+    "pos": "verb",
+    "form": 1,
+    "gender": null,
+    "plural": null,
+    "prepositions": ["في"],
+    "notes": "Takes في for location.",
+    "conjugations": {
+      "past": {
+        "1s": "سكنتُ",
+        "3ms": "سكنَ",
+        "3fs": "سكنتْ",
+        "1p": "سكنا",
+        "3mp": "سكنوا"
+      },
+      "present": {
+        "1s": "أسكنُ",
+        "3ms": "يسكنُ",
+        "3fs": "تسكنُ",
+        "1p": "نسكنُ",
+        "3mp": "يسكنون"
+      },
+      "imperative": {
+        "2ms": "اسكنْ",
+        "2fs": "اسكني",
+        "2mp": "اسكنوا"
+      }
+    }
+  },
+  {
+    "id": "b2-u5-002",
+    "book": 2,
+    "unit": 5,
+    "arabic": "مدينة",
+    "transliteration": "madiina",
+    "definition": "city",
+    "root": "م د ن",
+    "pos": "noun",
+    "form": null,
+    "gender": "feminine",
+    "plural": "مدن",
+    "prepositions": ["في"],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u5-003",
+    "book": 2,
+    "unit": 5,
+    "arabic": "عائلة",
+    "transliteration": "ʿaaʾila",
+    "definition": "family",
+    "root": "ع و ل",
+    "pos": "noun",
+    "form": null,
+    "gender": "feminine",
+    "plural": "عائلات",
+    "prepositions": [],
+    "notes": "",
+    "conjugations": null
+  },
+  {
+    "id": "b2-u5-004",
+    "book": 2,
+    "unit": 5,
+    "arabic": "أحبّ",
+    "transliteration": "aḥabba",
+    "definition": "to love; to like",
+    "root": "ح ب ب",
+    "pos": "verb",
+    "form": 4,
+    "gender": null,
+    "plural": null,
+    "prepositions": [],
+    "notes": "Form IV doubled verb.",
+    "conjugations": {
+      "past": {
+        "1s": "أحببتُ",
+        "3ms": "أحبّ",
+        "3fs": "أحبّت",
+        "1p": "أحببنا",
+        "3mp": "أحبّوا"
+      },
+      "present": {
+        "1s": "أحبّ",
+        "3ms": "يحبّ",
+        "3fs": "تحبّ",
+        "1p": "نحبّ",
+        "3mp": "يحبّون"
+      },
+      "imperative": {
+        "2ms": "أحببْ",
+        "2fs": "أحبّي",
+        "2mp": "أحبّوا"
+      }
+    }
+  }
+]

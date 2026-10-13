@@ -1,0 +1,1 @@
+AlKitaab.initShell("grammar");

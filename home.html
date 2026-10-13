@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Al-Kitaab Adaptive Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="site-title"></h1>
+    <div class="controls">
+      <div>
+        <label id="label-book" for="book">Book:</label>
+        <select id="book">
+          <option value="1">Alif Baa</option>
+          <option value="2">الكتاب ١</option>
+          <option value="3">الكتاب ٢</option>
+          <option value="4">الكتاب ٣</option>
+        </select>
+      </div>
+      <div>
+        <label id="label-unit" for="unit">Unit:</label>
+        <select id="unit"></select>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html" id="nav-home" data-page="home"></a></li>
+      <li><a href="learn.html" id="nav-learn" data-page="learn"></a></li>
+      <li><a href="lookup.html" id="nav-lookup" data-page="lookup"></a></li>
+      <li><a href="quiz.html" id="nav-quiz" data-page="quiz"></a></li>
+      <li><a href="grammar.html" id="nav-grammar" data-page="grammar"></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2 id="welcome"></h2>
+      <p class="muted" id="welcome-sub">Track vocab with spaced repetition, look up words by root, and quiz yourself as you move through Al-Kitaab.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="status-title"></h2>
+      <p id="status"></p>
+    </section>
+
+    <section class="card">
+      <h2 id="due-title"></h2>
+      <p class="due-count" id="due-count">—</p>
+      <p class="muted" id="due-detail"></p>
+      <div class="btn-row">
+        <a class="btn" href="learn.html" id="btn-start-learn"></a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 id="quick-links-title"></h2>
+      <div class="quick-links">
+        <a class="btn secondary" href="learn.html" id="ql-learn"></a>
+        <a class="btn secondary" href="lookup.html" id="ql-lookup"></a>
+        <a class="btn secondary" href="quiz.html" id="ql-quiz"></a>
+        <a class="btn secondary" href="grammar.html" id="ql-grammar"></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

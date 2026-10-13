@@ -1,0 +1,58 @@
+import { useState } from "react";
+import { Link, NavLink, Navigate, Route, Routes } from "react-router-dom";
+import { useApp } from "./context/AppContext.jsx";
+import LevelPicker from "./components/LevelPicker.jsx";
+import Home from "./pages/Home.jsx";
+import Learn from "./pages/Learn.jsx";
+import Lookup from "./pages/Lookup.jsx";
+import Grammar from "./pages/Grammar.jsx";
+import Settings from "./pages/Settings.jsx";
+
+function Onboarding() {
+  const { t, setLevel } = useApp();
+  const [value, setValue] = useState({ book: 1, unit: 1 });
+  return (
+    <main className="page narrow">
+      <h1><bdi>{t("setupTitle")}</bdi></h1>
+      <p><bdi>{t("setupHelp")}</bdi></p>
+      <LevelPicker value={value} onChange={setValue} />
+      <button className="primary" onClick={() => setLevel(value.book, value.unit)}>
+        <span dir="auto">{t("setupContinue")}</span>
+      </button>
+    </main>
+  );
+}
+
+function Shell() {
+  const { t, level, nf, bookName } = useApp();
+  return (
+    <>
+      <header className="topbar">
+        <span className="title" dir="auto">{t("siteTitle")}</span>
+        <nav>
+          <NavLink to="/" end dir="auto">{t("navHome")}</NavLink>
+          <NavLink to="/learn" dir="auto">{t("navLearn")}</NavLink>
+          <NavLink to="/lookup" dir="auto">{t("navLookup")}</NavLink>
+          <NavLink to="/grammar" dir="auto">{t("navGrammar")}</NavLink>
+          <NavLink to="/settings" dir="auto">{t("navSettings")}</NavLink>
+        </nav>
+        <Link className="level-chip" to="/settings" dir="auto">
+          {bookName(level.book)} / {nf(level.unit)}
+        </Link>
+      </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/learn" element={<Learn />} />
+        <Route path="/lookup" element={<Lookup />} />
+        <Route path="/grammar" element={<Grammar />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
+  );
+}
+
+export default function App() {
+  const { level } = useApp();
+  return level ? <Shell /> : <Onboarding />;
+}
