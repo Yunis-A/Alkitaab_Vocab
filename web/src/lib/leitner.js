@@ -8,7 +8,10 @@
 // Mastered (gold):    in the 3-month box (box 10).
 //
 // Ratings: hard -> back to box 0, good -> +1, easy -> +2.
-// Cards are Arabic -> English only (see DIRECTIONS).
+// Cards are Arabic -> English only. A word has one card per variety (MSA,
+// Egyptian, Shami; see lib/varieties.js).
+
+import { MSA, VARIETY_IDS } from "./varieties.js";
 
 const MIN = 60 * 1000;
 const HOUR = 60 * MIN;
@@ -20,10 +23,10 @@ export const PROFICIENT_BOX = 8;
 export const MASTERED_BOX = LAST_BOX;
 
 export const RATINGS = ["hard", "good", "easy"];
-export const DIRECTIONS = ["ar-en"];
+export { VARIETY_IDS };
 
-export function cardKey(wordId, direction = "ar-en") {
-  return `${wordId}|${direction}`;
+export function cardKey(wordId, variety = MSA) {
+  return `${wordId}|${variety}`;
 }
 
 export function newCard(now = Date.now()) {
@@ -56,18 +59,18 @@ export function boxStatus(box) {
   return "learning";
 }
 
-// A word with no card is "new"; otherwise its status comes from its box.
-// (With several directions, the weakest one would count.)
-export function wordStatus(cards, wordId) {
-  const found = DIRECTIONS.map((d) => cards[cardKey(wordId, d)]);
-  if (found.every((c) => !c)) return "new";
+// A word with no cards is "new"; otherwise its status comes from its weakest
+// active variety. `varieties` are the ones the student is studying.
+export function wordStatus(cards, wordId, varieties = [MSA]) {
+  const found = varieties.map((v) => cards[cardKey(wordId, v)]);
+  if (!found.length || found.every((c) => !c)) return "new";
   if (found.some((c) => !c)) return "learning";
   return boxStatus(Math.min(...found.map((c) => c.box)));
 }
 
-export function wordBox(cards, wordId) {
-  const found = DIRECTIONS.map((d) => cards[cardKey(wordId, d)]);
-  if (found.some((c) => !c)) return -1;
+export function wordBox(cards, wordId, varieties = [MSA]) {
+  const found = varieties.map((v) => cards[cardKey(wordId, v)]);
+  if (!found.length || found.some((c) => !c)) return -1;
   return Math.min(...found.map((c) => c.box));
 }
 

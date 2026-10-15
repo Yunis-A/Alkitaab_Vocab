@@ -5,8 +5,11 @@ import { getForms, analyzeVerb } from "./morphology.js";
 import { normalizeArabic } from "./arabic.js";
 import { buildIndex, search } from "./search.js";
 import {
-  newCard, review, wordStatus, boxStatus, BOX_INTERVALS, cardKey, DIRECTIONS, RATINGS,
+  newCard, review, wordStatus, boxStatus, BOX_INTERVALS, cardKey, VARIETY_IDS, RATINGS,
 } from "./leitner.js";
+import { activeVarieties, isWordAvailable, headword, varietyText, parseCardKey, dialectOf } from "./varieties.js";
+import { rootKey } from "./arabic.js";
+import { cleanText, parseCell } from "../../scripts/lib/vocab-parse.mjs";
 import { unitAfterBookChange, books, IMPERATIVE_LEVEL, levelReached } from "../config/books.js";
 import { GEO_MODES, TIME_LIMIT_MS, buildQuestions, finalTime, formatTime } from "./geoquiz.js";
 import { geoCountries } from "../data/geography.js";
@@ -38,9 +41,9 @@ test("Form I sound verb (كتب, u)", () => {
   same(f.present["1s"], "أَكْتُبُ");
   same(f.imperative["2ms"], "اُكْتُبْ");
   same(f.imperative["2mp"], "اُكْتُبُوا");
-  same(f.activeParticiple.m, "كَاتِب");
-  same(f.activeParticiple.f, "كَاتِبَة");
-  same(f.activeParticiple.pm, "كَاتِبُونَ");
+  same(f.activeParticiple.m, "كاتِب"); // no fatha before a long alef (book style)
+  same(f.activeParticiple.f, "كاتِبَة");
+  same(f.activeParticiple.pm, "كاتِبُونَ");
   same(f.passiveParticiple.m, "مَكْتُوب");
   assert.deepEqual(f.missing, ["masdar"]); // Form I masdar must be stored
 });
@@ -62,14 +65,14 @@ test("Forms II-X", () => {
   same(ii.passiveParticiple.m, "مُدَرَّس");
 
   const iii = getForms(verb("ك ت ب", 3));
-  same(iii.past["3ms"], "كَاتَبَ");
-  same(iii.present["3ms"], "يُكَاتِبُ");
+  same(iii.past["3ms"], "كاتَبَ");
+  same(iii.present["3ms"], "يُكاتِبُ");
 
   const iv = getForms(verb("خ ر ج", 4));
   same(iv.past["3ms"], "أَخْرَجَ");
   same(iv.present["3ms"], "يُخْرِجُ");
   same(iv.imperative["2ms"], "أَخْرِجْ");
-  same(iv.masdar[0], "إِخْرَاج");
+  same(iv.masdar[0], "إِخْراج");
 
   const v = getForms(verb("ك ل م", 5));
   same(v.past["3ms"], "تَكَلَّمَ");
@@ -77,8 +80,8 @@ test("Forms II-X", () => {
   same(v.masdar[0], "تَكَلُّم");
 
   const vi = getForms(verb("ك ت ب", 6));
-  same(vi.past["3ms"], "تَكَاتَبَ");
-  same(vi.present["3ms"], "يَتَكَاتَبُ");
+  same(vi.past["3ms"], "تَكاتَبَ");
+  same(vi.present["3ms"], "يَتَكاتَبُ");
 
   const vii = getForms(verb("ك س ر", 7));
   same(vii.past["3ms"], "اِنْكَسَرَ");
@@ -88,13 +91,13 @@ test("Forms II-X", () => {
   const viii = getForms(verb("ج م ع", 8));
   same(viii.past["3ms"], "اِجْتَمَعَ");
   same(viii.present["3ms"], "يَجْتَمِعُ");
-  same(viii.masdar[0], "اِجْتِمَاع");
+  same(viii.masdar[0], "اِجْتِماع");
 
   const x = getForms(verb("ك ت ب", 10));
   same(x.past["3ms"], "اِسْتَكْتَبَ");
   same(x.present["3ms"], "يَسْتَكْتِبُ");
   same(x.imperative["2ms"], "اِسْتَكْتِبْ");
-  same(x.masdar[0], "اِسْتِكْتَاب");
+  same(x.masdar[0], "اِسْتِكْتاب");
 });
 
 test("irregular roots are not generated and are reported missing", () => {
@@ -184,14 +187,49 @@ test("Leitner: 11 boxes, intervals, ratings, proficiency", () => {
   assert.equal(review(k, "easy", t0).box, 10); // capped
 });
 
-test("word status comes from the Arabic -> English card only", () => {
-  assert.deepEqual(DIRECTIONS, ["ar-en"]);
+test("word status: MSA card by default, weakest active variety when dialects are on", () => {
+  assert.deepEqual(VARIETY_IDS, ["ar-en", "egy", "shm"]);
   assert.equal(cardKey("w"), "w|ar-en");
+  assert.equal(cardKey("w", "egy"), "w|egy");
   assert.equal(wordStatus({}, "w"), "new");
   const at = (box) => ({ [cardKey("w")]: { ...newCard(), box } });
   assert.equal(wordStatus(at(0), "w"), "learning");
   assert.equal(wordStatus(at(8), "w"), "proficient");
   assert.equal(wordStatus(at(10), "w"), "mastered");
+
+  // with Egyptian on, a word is only as strong as its weakest card
+  const both = { ...at(10), [cardKey("w", "egy")]: { ...newCard(), box: 8 } };
+  assert.equal(wordStatus(both, "w", ["ar-en", "egy"]), "proficient");
+  assert.equal(wordStatus(at(10), "w", ["ar-en", "egy"]), "learning"); // Egyptian not started
+  assert.equal(wordStatus(at(10), "w", ["egy"]), "new");
+});
+
+test("varieties: dialect cards exist only for enabled dialects that have a form", () => {
+  const w = { id: "x", arabic: "كِتاب", egyptian: { arabic: "كتاب" }, shami: { plural: "كْتُب" } };
+  assert.deepEqual(activeVarieties(w, {}), ["ar-en"]);
+  assert.deepEqual(activeVarieties(w, { egyptian: true, shami: true }), ["ar-en", "egy"]); // shami has no headword
+  const only = { id: "y", arabic: null, shami: { arabic: "ماشي" } };
+  assert.equal(isWordAvailable(only, {}), false); // dialect-only row is hidden until that dialect is on
+  assert.equal(isWordAvailable(only, { shami: true }), true);
+  assert.equal(headword(only, { shami: true }), "ماشي");
+  assert.equal(varietyText(w, "egy"), "كتاب");
+  assert.deepEqual(parseCardKey("b2-u1-003|egy"), { wordId: "b2-u1-003", variety: "egy" });
+  assert.equal(dialectOf("shm"), "shami");
+});
+
+test("search: dialect forms are found only when that dialect is enabled; roots ignore hamza spelling", () => {
+  const words = [
+    { id: "1", book: 2, unit: 1, arabic: "أَكَلَ", root: "ء ك ل", pos: "verb", form: 1, transliteration: "", definition: "to eat", egyptian: { arabic: "أَكَل", present: "ياكُل" } },
+    { id: "2", book: 2, unit: 1, arabic: null, pos: "phrase", transliteration: "", definition: "OK", shami: { arabic: "ماشي" } },
+  ];
+  const idx = buildIndex(words);
+  assert.deepEqual(search(idx, "ياكل").map((w) => w.id), []);
+  assert.deepEqual(search(idx, "ياكل", { egyptian: true }).map((w) => w.id), ["1"]);
+  assert.deepEqual(search(idx, "ماشي").map((w) => w.id), []);
+  assert.deepEqual(search(idx, "ماشي", { shami: true }).map((w) => w.id), ["2"]);
+  assert.deepEqual(search(idx, "ماشي", { egyptian: true }).map((w) => w.id), []);
+  for (const q of ["ء ك ل", "أ ك ل", "اكل"]) assert.ok(search(idx, q).some((w) => w.id === "1"), q);
+  assert.equal(rootKey("أ ك ل"), rootKey("ء ك ل"));
 });
 
 test("digits switch to Arabic-Indic and back", () => {
@@ -224,12 +262,15 @@ test("grammar unlocks by level and connects to words", () => {
   assert.equal(t({ book: 3, unit: 1 }), "الكتابة العربية");
 });
 
-test("saved progress drops cards from the removed English -> Arabic direction", () => {
+test("saved progress keeps known card varieties, drops the old English -> Arabic direction, defaults dialects off", () => {
   const store = {};
   globalThis.localStorage = { getItem: (k) => store[k] ?? null, setItem: (k, v) => { store[k] = v; } };
-  saveProgress({ level: { book: 2, unit: 1 }, cards: { "a|ar-en": { box: 3 }, "a|en-ar": { box: 2 } } });
-  assert.deepEqual(Object.keys(loadProgress().cards), ["a|ar-en"]);
+  saveProgress({ level: { book: 2, unit: 1 }, cards: { "a|ar-en": { box: 3 }, "a|en-ar": { box: 2 }, "a|egy": { box: 1 }, "a|shm": { box: 1 } } });
+  assert.deepEqual(Object.keys(loadProgress().cards).sort(), ["a|ar-en", "a|egy", "a|shm"]);
   assert.deepEqual(loadProgress().level, { book: 2, unit: 1 });
+  assert.deepEqual(loadProgress().dialects, { egyptian: false, shami: false });
+  saveProgress({ ...loadProgress(), dialects: { egyptian: true } });
+  assert.deepEqual(loadProgress().dialects, { egyptian: true, shami: false });
 });
 
 test("UI language: level gate, vocabulary gate, RTL switch", () => {
@@ -277,19 +318,80 @@ test("imperative is gated to Al-Kitaab part 3 lesson 3 everywhere", () => {
   assert.equal(search(idx, "يكتب").length, 1);
 });
 
-test("sample words carry diacritics and still match undiacritized searches", () => {
-  // ماء is normally written with no short-vowel marks at all
-  const needsMarks = allWords.filter((w) => w.id !== "b2-u2-004" && !/[ً-ْ]/.test(w.arabic));
-  assert.deepEqual(needsMarks.map((w) => w.id), []);
+test("imported vocabulary: structure, levels, dialect rules and search", () => {
+  const ids = new Set(allWords.map((w) => w.id));
+  assert.equal(ids.size, allWords.length, "ids are unique");
+  assert.ok(allWords.length > 1400);
+
+  for (const w of allWords) {
+    assert.ok(w.book >= 1 && w.book <= 4, w.id);
+    assert.ok(w.unit >= 1 && w.unit <= books[w.book].maxUnits, `${w.id} unit ${w.unit}`);
+    assert.ok(w.arabic || w.egyptian?.arabic || w.shami?.arabic, `${w.id} has nothing to show`);
+    assert.ok(w.definition, `${w.id} has no English`);
+    assert.ok(["noun", "verb", "adjective", "adverb", "particle", "pronoun", "phrase", "suffix"].includes(w.pos), `${w.id} pos ${w.pos}`);
+    assert.ok(!/[ـ]/.test(w.arabic ?? "") || w.pos === "suffix", `${w.id} has a stretch mark`);
+    if (w.book === 1) assert.equal(w.root, null, `${w.id}: Alif Baa has no roots`);
+    if (w.form) assert.ok(w.root && w.pos === "verb", `${w.id} form without root`);
+    if (w.hideFromBook) assert.equal(w.book, 1, "only Alif Baa form rows are hidden later");
+    for (const d of ["egyptian", "shami"]) if (w[d]) assert.ok(Object.keys(w[d]).length, `${w.id} empty ${d}`);
+  }
+
+  // most MSA headwords carry diacritics (the rest are listed in data/review.csv)
+  const withArabic = allWords.filter((w) => w.arabic);
+  const voweled = withArabic.filter((w) => /[ً-ْ]/.test(w.arabic));
+  assert.ok(voweled.length / withArabic.length > 0.9);
+
+  // dialect-only rows exist and have no MSA word
+  assert.ok(allWords.some((w) => !w.arabic && w.egyptian?.arabic));
+  // the 18 Alif Baa conjugated-form rows are hidden from Al-Kitaab part 1 onward
+  assert.equal(allWords.filter((w) => w.hideFromBook).length, 18);
+
+  // search ignores diacritics and finds by root
   const idx = buildIndex(allWords);
-  assert.ok(search(idx, "كتاب").some((w) => w.id === "b1-u1-001"));
-  assert.ok(search(idx, "كِتاب").some((w) => w.id === "b1-u1-001"));
-  assert.ok(search(idx, "مرحبا").some((w) => w.id === "b1-u3-001"));
-  // generated conjugations of sound verbs are fully voweled
-  const f = getForms(allWords.find((w) => w.id === "b2-u1-003"));
-  same(f.present["3ms"], "يَكْتُبُ");
+  const kitab = allWords.find((w) => stripDiacritics(w.arabic ?? "") === "كتاب" && w.pos === "noun");
+  assert.ok(kitab, "كتاب is in the list");
+  assert.ok(search(idx, "كتاب").some((w) => w.id === kitab.id));
+  assert.ok(search(idx, kitab.arabic).some((w) => w.id === kitab.id));
+  const accept = allWords.find((w) => stripDiacritics(w.arabic ?? "") === "قبل" && w.pos === "verb");
+  assert.ok(accept && accept.root === "ق ب ل" && accept.form === 1 && accept.presentVowel === "a");
+  assert.ok(search(idx, "ق ب ل").some((w) => w.id === accept.id)); // by root
+
+  // sound verbs get fully voweled generated conjugations
+  const f = getForms(accept);
   assert.equal(f.source.present, "generated");
-  assert.equal(stripDiacritics(f.past["3ms"]), "كتب");
+  same(f.past["3ms"], "قَبِلَ");
+  same(f.present["3ms"], "يَقْبَلُ");
+});
+
+test("vocabulary parser: cleaning, verbs, plurals, feminine, prepositions, suffixes", () => {
+  assert.equal(cleanText("الـشـَّـرق  الأَوْسَط"), "الشَّرق الأَوْسَط"); // stretch marks inside words go
+  assert.equal(cleanText("ـَك- اِسمَك"), "ـَك- اِسمَك"); // a leading one marks a suffix and stays
+  assert.equal(cleanText("مِتْجَوِّز/ ة"), "مِتْجَوِّز/ة");
+
+  const v = parseCell("اِنتَقَلَ إلى،يَنتَقِل، الاِنتِقال", { verbLike: true });
+  assert.equal(v.past, "اِنتَقَلَ");
+  assert.equal(v.present, "يَنتَقِل");
+  assert.equal(v.masdar, "الاِنتِقال");
+  assert.deepEqual(v.prepositions, ["الى"]);
+
+  assert.equal(parseCell("يخاف من، الخوف", { verbLike: true }).present, "يخاف"); // unvoweled present is still a present
+
+  const p = parseCell("شَرِكة ج. –ات");
+  assert.equal(p.head, "شَرِكة");
+  assert.deepEqual(p.plural, ["شَرِكات"]);
+  assert.deepEqual(parseCell("مُوَظَّف/ة ج. –ون/ين").plural, ["مُوَظَّفون", "مُوَظَّفين"]);
+  assert.equal(parseCell("مُوَظَّف/ة ج. –ون/ين").feminine, "مُوَظَّفة");
+  assert.deepEqual(parseCell("جَدّ ج. أَجداد").plural, ["أَجداد"]);
+
+  const red = parseCell("أَحمَر(مؤنّث) حَمراءج. حُمْر");
+  assert.equal(red.head, "أَحمَر");
+  assert.equal(red.feminine, "حَمراء");
+  assert.deepEqual(red.plural, ["حُمْر"]);
+
+  const s = parseCell("ـكَ- اِسمُكَ");
+  assert.equal(s.head, "ـكَ");
+  assert.equal(s.example, "اِسمُكَ");
+  assert.equal(parseCell(""), null);
 });
 
 test("geography game: questions, timing, data", () => {

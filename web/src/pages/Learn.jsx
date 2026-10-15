@@ -1,20 +1,19 @@
 import { useEffect, useMemo, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import { useNow } from "../hooks.js";
-import { cardKey, formatInterval, RATINGS } from "../lib/leitner.js";
+import { formatInterval, RATINGS } from "../lib/leitner.js";
+import { dialectOf, parseCardKey, varietyText } from "../lib/varieties.js";
 import WordDetail from "../components/WordDetail.jsx";
 
 const NEW_BATCH = 10;
 
 export default function Learn() {
-  const { t, nf, visibleWords, visibleIds, cards } = useApp();
+  const { t, nf, visibleWords, activeCards, needsIntro } = useApp();
   const [mode, setMode] = useState("menu");
   const [batch, setBatch] = useState([]);
 
-  const newWords = visibleWords.filter((w) => !cards[cardKey(w.id)]);
-  const dueCount = Object.entries(cards).filter(
-    ([key, c]) => visibleIds.has(key.split("|")[0]) && c.due <= Date.now(),
-  ).length;
+  const newWords = visibleWords.filter(needsIntro);
+  const dueCount = activeCards.filter(([, c]) => c.due <= Date.now()).length;
 
   if (mode === "intro") {
     return <Intro words={batch} onDone={() => setMode("review")} />;
@@ -89,20 +88,18 @@ function Finish({ onDone }) {
 
 // Active recall: see the Arabic, recall the meaning, flip, then rate confidence.
 function Review({ onExit }) {
-  const { t, words, visibleIds, cards, rate } = useApp();
+  const { t, wordsById, activeCards, rate } = useApp();
   const now = useNow(1000);
   const [revealed, setRevealed] = useState(false);
 
-  const byId = useMemo(() => new Map(words.map((w) => [w.id, w])), [words]);
-
-  const queue = Object.entries(cards)
-    .filter(([key]) => visibleIds.has(key.split("|")[0]))
-    .sort((a, b) => a[1].due - b[1].due);
+  const queue = useMemo(() => [...activeCards].sort((a, b) => a[1].due - b[1].due), [activeCards]);
   const current = queue.length && queue[0][1].due <= now ? queue[0] : null;
   const nextDue = queue.length && !current ? queue[0][1].due : null;
 
   const key = current?.[0];
-  const word = key ? byId.get(key.split("|")[0]) : null;
+  const { wordId, variety } = key ? parseCardKey(key) : {};
+  const word = wordId ? wordsById.get(wordId) : null;
+  const dialect = variety ? dialectOf(variety) : null;
 
   useEffect(() => {
     if (!current) return undefined;
@@ -136,7 +133,10 @@ function Review({ onExit }) {
     <main className="page narrow">
       <section className="card flash">
         <div className="face">
-          <span className="ar huge" dir="rtl">{word.arabic}</span>
+          {dialect && (
+            <span className="badge badge-learning"><bdi>{t(dialect === "egyptian" ? "dialectEgyptian" : "dialectShami")}</bdi></span>
+          )}
+          <span className="ar huge" dir="rtl">{varietyText(word, variety)}</span>
         </div>
 
         {revealed ? (

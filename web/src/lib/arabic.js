@@ -48,3 +48,9 @@ export function rootLetters(root) {
 export function normalizeRootText(root) {
   return stripDiacritics(root).replace(/[\s\-.]/g, "");
 }
+
+// Comparison key for roots: every hamza spelling (and a bare alef, which a
+// student may type for a hamza) maps to ء, so "أ ك ل", "ء ك ل" and "اكل" match.
+export function rootKey(root) {
+  return normalizeRootText(root).replace(/[اأإآؤئء]/g, "ء").replace(/ى/g, "ي");
+}

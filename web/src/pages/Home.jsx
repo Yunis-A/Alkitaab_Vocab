@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useApp } from "../context/AppContext.jsx";
 import { useNow } from "../hooks.js";
-import { cardKey } from "../lib/leitner.js";
 
 const STATUSES = [
   ["new", "statusNew"],
@@ -11,13 +10,11 @@ const STATUSES = [
 ];
 
 export default function Home() {
-  const { t, nf, visibleWords, visibleIds, cards, statusOf } = useApp();
+  const { t, nf, visibleWords, activeCards, needsIntro, statusOf } = useApp();
   const now = useNow(15000);
 
-  const dueCount = Object.entries(cards).filter(
-    ([key, c]) => visibleIds.has(key.split("|")[0]) && c.due <= now,
-  ).length;
-  const newCount = visibleWords.filter((w) => !cards[cardKey(w.id, "ar-en")]).length;
+  const dueCount = activeCards.filter(([, c]) => c.due <= now).length;
+  const newCount = visibleWords.filter(needsIntro).length;
 
   const counts = { new: 0, learning: 0, proficient: 0, mastered: 0 };
   for (const w of visibleWords) counts[statusOf(w.id)] += 1;

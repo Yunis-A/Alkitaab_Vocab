@@ -166,6 +166,13 @@ button.primary, .button.primary {
   font-size: 0.9rem;
 }
 
+/* Dialects */
+.check { display: flex; align-items: center; gap: 0.6rem; margin: 0.4rem 0; font-size: 1.05rem; cursor: pointer; }
+.check input { width: 1.1rem; height: 1.1rem; accent-color: var(--theme); }
+.dialect { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--line); }
+.dialect h4 { margin: 0 0 0.25rem; color: var(--theme); }
+.face .badge { align-self: center; }
+
 /* Geography game */
 .geo-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; }
 .geo-controls select { padding: 0.5rem 0.6rem; border-radius: 8px; border: 1px solid var(--line); background: #fff; color: var(--text); }

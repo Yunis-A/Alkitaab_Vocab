@@ -21,8 +21,13 @@ export const PRESENT_PERSONS = PAST_PERSONS;
 export const IMPERATIVE_PERSONS = ["2ms", "2fs", "2d", "2mp", "2fp"];
 
 const VOWEL = { a: F, i: K, u: D };
+
+// House style (matches the book): no fatha is written before a long alef,
+// e.g. قابَلَ and كاتِب rather than قَابَلَ and كَاتِب.
+const plainAlef = (s) => (typeof s === "string" ? s.replace(/َا/g, "ا") : s);
+const plainAll = (o) => (o ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, plainAlef(v)])) : o);
 const WEAK_OR_HAMZA = new Set([..."وياىءأإآؤئ"]);
-const FORM_VIII_ASSIMILATING = new Set([..."ثدذزصضطظ"]);
+const FORM_VIII_ASSIMILATING = new Set([..."تثدذزصضطظ"]);
 const SUPPORTED_FORMS = [1, 2, 3, 4, 5, 6, 7, 8, 10];
 
 // ---------- verb stems ----------
@@ -145,7 +150,7 @@ function conjugateRegular(word, letters) {
   const imperative = {};
   for (const p of IMPERATIVE_PERSONS) imperative[p] = st.impCore + r3 + IMPERATIVE_ENDINGS[p];
 
-  return { past, present, imperative };
+  return { past: plainAll(past), present: plainAll(present), imperative: plainAll(imperative) };
 }
 
 // ---------- nouns derived from verbs ----------
@@ -195,7 +200,8 @@ function passiveParticipleRegular(form, [r1, r2, r3]) {
 
 // Masculine/feminine/plural set for an agent noun or participle `m`.
 function participleSet(m) {
-  return { m, f: m + F + "ة", pm: m + D + "ون" + F, pf: m + F + "ات" };
+  const p = plainAlef(m);
+  return { m: p, f: plainAlef(m + F + "ة"), pm: plainAlef(m + D + "ون" + F), pf: plainAlef(m + F + "ات") };
 }
 
 // ---------- public API ----------
@@ -241,7 +247,7 @@ export function getForms(word) {
       out.masdar = storedMasdar;
       out.source.masdar = "stored";
     } else if (letters && masdarRegular(word.form, letters)) {
-      out.masdar = masdarRegular(word.form, letters);
+      out.masdar = masdarRegular(word.form, letters).map(plainAlef);
       out.source.masdar = "generated";
     } else {
       out.missing.push("masdar");

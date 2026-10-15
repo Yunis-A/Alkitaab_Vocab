@@ -1,0 +1,344 @@
+﻿id,book,unit,english,arabic,flags
+b1-u1-006,1,1,my name,اسمي,no-diacritics
+b1-u1-008,1,1,the city of …,مدينة,no-diacritics
+b1-u1-009,1,1,in,في,no-diacritics
+b1-u2-001,1,2,door,باب,no-diacritics
+b1-u2-003,1,2,what?,ما؟,no-diacritics
+b1-u2-006,1,2,"(reply to) assalaamu calaykum you (polite form, to a male)",وعليكم السلام,no-diacritics
+b1-u2-017,1,2,no,لا,no-diacritics
+b1-u3-012,1,3,signal that you are addressing someone directly,يا,no-diacritics
+b1-u3-018,1,3,this (masc.),هٰذا,no-diacritics
+b1-u4-009,1,4,her/hers her name,ـها,no-diacritics
+b1-u4-017,1,4,neighbor (male),جار,no-diacritics
+b1-u4-018,1,4,neighbor (female),جارة,no-diacritics
+b1-u4-021,1,4,new (masc.),جديد,no-diacritics
+b1-u5-001,1,5,bus,أوتوبيس,no-diacritics
+b1-u5-003,1,5,tea,شاي,no-diacritics
+b1-u6-007,1,6,water,ماء,no-diacritics
+b1-u6-020,1,6,"watch, clock; hour",ساعة,no-diacritics
+b1-u7-009,1,7,money,مال,no-diacritics
+b1-u7-010,1,7,"must, need to, have to (fixed form; with following verb)",لازِم,pos-uncertain
+b1-u7-011,1,7,"it is possible, can (fixed form, with following verb)",مُمكِن,pos-uncertain
+b1-u7-019,1,7,movie,فيلم,no-diacritics
+b1-u8-025,1,8,"(response to) ""salaamatak!"" (Get well soon!)",!اللّه يِسَلِّمَِك,english-inferred
+b2-u1-006,2,1,I study,أَدرُس,irregular:Form I needs presentVowel (a/i/u)
+b2-u1-007,2,1,"I live, reside",أَسكُن,irregular:Form I needs presentVowel (a/i/u)
+b2-u1-008,2,1,"she lives, resides",تَسكُن,irregular:Form I needs presentVowel (a/i/u)
+b2-u1-013,2,1,she works,تَعمَل,irregular:Form I needs presentVowel (a/i/u)
+b2-u2-001,2,2,(nuclear) family,أُسْرة,root-uncertain
+b2-u2-002,2,2,people,الناس,root-uncertain; no-diacritics
+b2-u2-003,2,2,also,أَيضاً,root-uncertain
+b2-u2-008,2,2,maternal aunt,خالة,no-diacritics
+b2-u2-019,2,2,I have,لي,no-diacritics
+b2-u3-002,2,3,now,الآن,root-uncertain; no-diacritics
+b2-u3-018,2,3,picture,صورة,no-diacritics
+b2-u3-021,2,3,I know,أعرِف,irregular:Form I needs presentVowel (a/i/u)
+b2-u3-027,2,3,(extended) family,عائِلة,root-uncertain
+b2-u4-001,2,4,he eats,يَأكُل,irregular:weak or hamzated root
+b2-u4-005,2,4,I memorize,أَحفَظ,irregular:Form I needs presentVowel (a/i/u)
+b2-u4-016,2,4,soup,شوربة,no-diacritics
+b2-u4-024,2,4,he reads,يَقرَأ,irregular:weak or hamzated root
+b2-u4-025,2,4,he says,يَقول,irregular:weak or hamzated root
+b2-u4-028,2,4,he was,كانَ,irregular:weak or hamzated root
+b2-u4-029,2,4,was,كُنتُ,irregular:weak or hamzated root
+b2-u5-026,2,5,only,فَقَط,root-uncertain
+b2-u6-006,2,6,to obtain/obtaining,الحُصول,irregular:Form I needs presentVowel (a/i/u)
+b2-u6-011,2,6,business administration,إدارة الأعمال,no-diacritics
+b2-u7-012,2,7,to live,يَعيش,irregular:weak or hamzated root
+b2-u7-015,2,7,he died,ماتَ,irregular:weak or hamzated root
+b2-u7-016,2,7,she died,ماتَت,irregular:weak or hamzated root
+b2-u7-017,2,7,money,مال,no-diacritics
+b2-u8-003,2,8,I obtained,حَصَلْتُ,irregular:Form I needs presentVowel (a/i/u)
+b2-u8-005,2,8,I entered,دَخَلْتُ,irregular:Form I needs presentVowel (a/i/u)
+b2-u8-013,2,8,he refused,رفَضَ,irregular:Form I needs presentVowel (a/i/u)
+b2-u8-014,2,8,to refuse,يرفُض,diacritics-differ-present
+b2-u8-015,2,8,he wanted to,أرادَ,irregular:weak or hamzated root
+b2-u8-016,2,8,he wants to,يُريد,irregular:weak or hamzated root
+b2-u8-025,2,8,"past, last (week, year, etc.)",الماضي,no-diacritics
+b2-u8-026,2,8,"I succeeded in, passed",نَجَحْتُ,irregular:Form I needs presentVowel (a/i/u)
+b2-u9-002,2,9,or,أو,no-diacritics
+b2-u9-003,2,9,to begin,بَدَأَ,irregular:weak or hamzated root
+b2-u9-015,2,9,to be able to,اِستَطاعَ,irregular:weak or hamzated root
+b2-u9-020,2,9,to return,عادَ,irregular:weak or hamzated root
+b2-u9-025,2,9,"club (e.g., sports, social)",نادي,no-diacritics
+b2-u9-029,2,9,to wake (someone) up,أَيْقَظَ,irregular:weak or hamzated root
+b2-u10-002,2,10,if,الفعل,no-diacritics
+b2-u10-005,2,10,to come,جاءَ,irregular:weak or hamzated root
+b2-u10-010,2,10,to become,أصبَحَ,diacritics-differ-past
+b2-u10-011,2,10,to wake up,صَحا,irregular:weak or hamzated root
+b2-u10-014,2,10,"to pray, do ritual prayers",صَلّى,irregular:weak or hamzated root
+b2-u10-019,2,10,more,أَكثَر,pos-uncertain
+b2-u10-020,2,10,to be,يَكون,irregular:weak or hamzated root
+b2-u10-023,2,10,to enjoy,اِستَمْتَع,diacritics-differ-present
+b2-u10-024,2,10,going well,ماشي,pos-uncertain
+b2-u10-028,2,10,"to sleep, go to sleep",نامَ,irregular:weak or hamzated root
+b2-u11-004,2,11,"to exchange (news, opinions, etc.)",تَبَادَلَ,diacritics-differ-past
+b2-u11-011,2,11,she got engaged to,خُطِبَت,passive; irregular:Form I needs presentVowel (a/i/u)
+b2-u11-013,2,11,market,سوق,no-diacritics
+b2-u11-014,2,11,pharmacy,صَيْدَلِيَّة,root-uncertain
+b2-u11-015,2,11,several,عِدّة,pos-uncertain
+b2-u11-020,2,11,relations (between),عَلاقات,pos-uncertain
+b2-u11-022,2,11,expensive,غالي,no-diacritics
+b2-u11-028,2,11,engineer,مُهَنْدِس,root-uncertain
+b2-u12-001,2,12,to take,أَخَذَ,irregular:weak or hamzated root
+b2-u12-004,2,12,vacation (from work),إجازة,no-diacritics
+b2-u12-006,2,12,to visit,زارَ,irregular:weak or hamzated root
+b2-u12-007,2,12,he did not travel,لم يُسافِر,english-inferred
+b2-u12-012,2,12,I was appointed,عُيِّنْتُ,passive; irregular:weak or hamzated root
+b2-u12-013,2,12,"to be absent from, miss",تَغَيَّبَ,irregular:weak or hamzated root
+b2-u12-015,2,12,to decide to,قَرَّرَ,irregular:doubled root
+b2-u12-018,2,12,to spend (time),قَضى,irregular:weak or hamzated root
+b2-u12-022,2,12,death,وَفاة,english-inferred
+b2-u13-006,2,13,to return,رَجَعَ,english-inferred; irregular:Form I needs presentVowel (a/i/u)
+b2-u13-008,2,13,"continues to, is still",ما زالَ,pos-uncertain; irregular:weak or hamzated root
+b2-u13-011,2,13,"to think that, believe",ظنَّ,irregular:doubled root
+b2-u13-012,2,13,it means,يَعني,irregular:weak or hamzated root
+b2-u13-019,2,13,"to settle down, become stable",اِسْتَقَرَّ,irregular:doubled root
+b2-u13-023,2,13,to finish (something),اِنْتهى,irregular:weak or hamzated root
+b2-u13-024,2,13,to find,وَجَدَ,irregular:weak or hamzated root
+b2-u13-025,2,13,I did not find,لم أجِد,irregular:weak or hamzated root
+b3-u1-001,3,1,to rent,اِستَأجَرَ,irregular:weak or hamzated root
+b3-u1-002,3,1,rent,الإيجار,no-diacritics
+b3-u1-010,3,1,generation,جيل,no-diacritics
+b3-u1-024,3,1,"to prepare, get (something) ready",أعَدَّ,irregular:doubled root
+b3-u1-026,3,1,"unoccupied, not busy",فاضي,root-uncertain
+b3-u1-028,3,1,church,كَنيسة,root-uncertain
+b3-u1-030,3,1,"to hope, wish (for someone to)",يَتَمَنّى,irregular:weak or hamzated root
+b3-u1-031,3,1,to move to,اِنْتَقَلَ,form-corrected:7->8
+b3-u1-035,3,1,new (plural),جُدُد,english-inferred
+b3-u1-040,3,1,to recall,ذَكَرَ,form-uncertain
+b3-u1-042,3,1,"comfort, ease",راحة,no-diacritics
+b3-u1-044,3,1,last year,السنة اللي فاتت,english-inferred
+b3-u1-049,3,1,"to consist of, to be made up of",تَكَوَّنَ,irregular:weak or hamzated root
+b3-u1-052,3,1,"is found, exists",يوجَد / توجَد,passive; irregular:weak or hamzated root
+b3-u2-002,3,2,"to remain, stay",بَقِيَ,irregular:weak or hamzated root
+b3-u2-006,3,2,"to determine, set (e.g., a time, topic)",حَدَّدَ,irregular:doubled root
+b3-u2-011,3,2,"to increase, become larger (of a number)",اِزدادَ,irregular:weak or hamzated root
+b3-u2-012,3,2,to permit ( someone),سَمَحَلِ,irregular:Form I needs presentVowel (a/i/u)
+b3-u2-017,3,2,year,عام,english-inferred; no-diacritics
+b3-u2-028,3,2,to intend to,نَوى,irregular:weak or hamzated root
+b3-u2-037,3,2,too busy (to have time) for,مشغول,no-diacritics
+b3-u2-047,3,2,these (plural of this),هٰؤُلاء,english-inferred
+b3-u2-049,3,2,she was born I was born,وُلِدَت وُلِدتُ,passive; irregular:weak or hamzated root
+b3-u3-002,3,3,to sell,باعَ,irregular:weak or hamzated root
+b3-u3-019,3,3,"to buy, purchase",اِشتَرى,irregular:weak or hamzated root
+b3-u3-030,3,3,towel,فوطة,root-uncertain; no-diacritics
+b3-u3-034,3,3,to arrive,وَصَلَ,irregular:weak or hamzated root
+b3-u3-039,3,3,"white (masculine, feminine and plural forms)",أَبيَض,english-inferred
+b3-u3-043,3,3,",to get ready for prepare oneself for",اِسْتَعَدَّ,irregular:doubled root
+b3-u3-047,3,3,to change (something),غَيَّرَ,irregular:weak or hamzated root
+b3-u3-048,3,3,to change (intransitive),تَغَيَّرَ,irregular:weak or hamzated root
+b3-u3-052,3,3,it is necessary,يَجِب,irregular:weak or hamzated root
+b3-u4-001,3,4,father,أب,no-diacritics
+b3-u4-002,3,4,to believe in,آمَنَ,irregular:weak or hamzated root
+b3-u4-003,3,4,"it appears, seems that",يَبدو أَنَّ,irregular:weak or hamzated root
+b3-u4-007,3,4,to invite,دعا,no-diacritics; irregular:weak or hamzated root
+b3-u4-014,3,4,newspaper,صَحيفة,english-inferred
+b3-u4-015,3,4,to fast,صامَ,irregular:weak or hamzated root
+b3-u4-024,3,4,to get up,قامَ,irregular:weak or hamzated root
+b3-u4-027,3,4,"to put, place (something)",وَضَعَ,irregular:weak or hamzated root
+b3-u4-031,3,4,to bring,جاءَ,irregular:weak or hamzated root
+b3-u4-040,3,4,"to get used to, accustomed to",اِعتادَ,irregular:weak or hamzated root
+b3-u4-046,3,4,"to undertake, assume (a task or position)",تَوَلّى,irregular:weak or hamzated root
+b3-u5-008,3,5,"to try to, attempt",حاوَلَ,irregular:weak or hamzated root
+b3-u5-012,3,5,to be afraid for (someone),خافَ,irregular:weak or hamzated root
+b3-u5-013,3,5,to be afraid of,خافَ,irregular:weak or hamzated root
+b3-u5-017,3,5,"smart, intelligent",ذَكِيّ,root-uncertain
+b3-u5-030,3,5,"to trust, have confidence in",وَثِقَ,irregular:weak or hamzated root
+b3-u5-034,3,5,hand,يَد,root-uncertain
+b3-u5-045,3,5,to praise (a person),شَكَر,irregular:Form I needs presentVowel (a/i/u)
+b3-u5-048,3,5,to turn out (to be),طِلِع,irregular:Form I needs presentVowel (a/i/u)
+b3-u5-050,3,5,to get (someone) accustomed to,عَوَّدَ,irregular:weak or hamzated root
+b3-u6-002,3,6,environment,بيئة,no-diacritics
+b3-u6-006,3,6,to need,اِحتاجَإلى,irregular:weak or hamzated root
+b3-u6-007,3,6,(a) need,حاجة,no-diacritics
+b3-u6-017,3,6,to give,أَعطى,irregular:weak or hamzated root
+b3-u6-024,3,6,to grow up; to arise,نَشَأَ,irregular:weak or hamzated root
+b3-u6-029,3,6,to stop (intransitive),تَوَقَّفَ,irregular:weak or hamzated root
+b3-u6-030,3,6,it was taken,أُخِذ,passive; irregular:weak or hamzated root
+b3-u6-031,3,6,etc. (used in writing),إلخ.,no-diacritics
+b3-u6-032,3,6,date,تاريخ,no-diacritics
+b3-u6-033,3,6,"human being, (pl.) people",إنسان,no-diacritics
+b3-u6-034,3,6,to be completed,تَمَّ,irregular:doubled root
+b3-u6-035,3,6,to run,جَرى,irregular:weak or hamzated root
+b3-u6-036,3,6,to talk about,تَحَدَّثَ,english-inferred
+b3-u6-037,3,6,to feel,أَحَسَّ,english-inferred; irregular:doubled root
+b3-u6-040,3,6,to choose,اِختارَ,irregular:weak or hamzated root
+b3-u6-046,3,6,it was accepted,قُبِلَ,passive; irregular:Form I needs presentVowel (a/i/u)
+b3-u6-051,3,6,"to pass, pass by",مَرَّ,irregular:doubled root
+b3-u7-006,3,7,"state, condition",حال,no-diacritics
+b3-u7-029,3,7,value,قيمة,no-diacritics
+b3-u7-032,3,7,"to extend, stretch (in space or time)",اِمتَدَّ,irregular:doubled root
+b3-u7-035,3,7,to look at,نَظَرَ,irregular:Form I needs presentVowel (a/i/u)
+b3-u7-039,3,7,"first ones (e.g., days or years)",أَوائِل,root-uncertain
+b3-u7-041,3,7,to translate,تَرجَمَ,quadriliteral; irregular:quadriliteral root
+b3-u7-042,3,7,was/were translated,تُرجِمَ / تُرجِمَت,quadriliteral; passive; irregular:quadriliteral root
+b3-u7-057,3,7,"length, height",طول,no-diacritics
+b3-u7-062,3,7,"to repeat, re-(do)",أعادَ,irregular:weak or hamzated root
+b3-u7-063,3,7,habit,عادة,no-diacritics
+b3-u7-064,3,7,judge,قاضي,english-inferred; no-diacritics
+b3-u7-066,3,7,"to undertake, carry out",قامَ,irregular:weak or hamzated root
+b3-u7-069,3,7,"to publish; to spread (something, e.g., news)",نَشَرَ,irregular:Form I needs presentVowel (a/i/u)
+b3-u7-071,3,7,to be interested in,اِهتَمَّ,irregular:doubled root
+b3-u7-073,3,7,to describe (as),وَصَفَ,irregular:weak or hamzated root
+b3-u8-004,3,8,when,حينَ,english-inferred
+b3-u8-009,3,8,to decorate,زَيَّنَ,irregular:weak or hamzated root
+b3-u8-010,3,8,decoration,زينة,no-diacritics
+b3-u8-017,3,8,advertisement,إعلان,no-diacritics
+b3-u8-029,3,8,to vary,تَنَوَّعَ,irregular:weak or hamzated root
+b3-u8-032,3,8,"greetings, congratulations",التَّهاني,root-uncertain
+b3-u8-033,3,8,"to fall, be located",وَقَعَ,irregular:weak or hamzated root
+b3-u8-040,3,8,"to change, transform (intransitive)",تَحَوَّلَ,irregular:weak or hamzated root
+b3-u8-042,3,8,it (he/she) is called,يُسَمّى / تُسَمّى,passive; irregular:weak or hamzated root
+b3-u8-047,3,8,"to combine, bring together",ضَمَّ,irregular:doubled root
+b3-u8-056,3,8,"custom, habit",عادة,no-diacritics
+b3-u8-057,3,8,"holiday, feast day, day of celebration",عيد,no-diacritics
+b3-u8-058,3,8,"birthday, Christmas",عيد ميلاد,no-diacritics
+b3-u8-061,3,8,to be distinguished by,تَمَيَّزَ,irregular:weak or hamzated root
+b3-u8-062,3,8,forum (including internet forum),مُنتَدى,root-uncertain
+b3-u9-001,3,9,"to influence, affect",أَثَّرَ,irregular:weak or hamzated root
+b3-u9-002,3,9,to be influenced by,تَأَثَّرَ,irregular:weak or hamzated root
+b3-u9-004,3,9,"to stir up, arouse (e.g., emotion)",أَثارَ,irregular:weak or hamzated root
+b3-u9-014,3,9,"to record, write down",دَوَّنَ,irregular:weak or hamzated root
+b3-u9-025,3,9,to develop (transitive),طَوَّرَ,irregular:weak or hamzated root
+b3-u9-026,3,9,to develop (intransitive),تَطَوَّرَ,irregular:weak or hamzated root
+b3-u9-027,3,9,"to remain, stay, keep (doing)",ظَلَّ,irregular:doubled root
+b3-u9-035,3,9,to cover,غَطّى,irregular:weak or hamzated root
+b3-u9-041,3,9,to organize,نَظّمَ,diacritics-differ-past
+b3-u9-051,3,9,computer,حاسوب,english-inferred; no-diacritics
+b3-u9-053,3,9,to occupy,اِحتَلَّ,irregular:doubled root
+b3-u9-067,3,9,to host (someone),اِستَضافَ,irregular:weak or hamzated root
+b3-u9-073,3,9,expression,تَعبير,english-inferred
+b3-u9-079,3,9,to resist,قاوَمَ,irregular:weak or hamzated root
+b3-u9-081,3,9,to break,كَسَرَ,html-leftover-removed
+b3-u9-083,3,9,to continue to continue (doing something),اِستَمَرَّ,irregular:doubled root
+b3-u9-084,3,9,"to establish, erect, found",أَنشَأَ,irregular:weak or hamzated root
+b3-u9-085,3,9,it was established,أُنشِئَ,passive; irregular:weak or hamzated root
+b3-u9-087,3,9,"to bring, deliver, take (something / someone) to",أَوصَلَ,irregular:weak or hamzated root
+b3-u9-088,3,9,to be in contact (with someone),تَواصَلَ,irregular:weak or hamzated root
+b3-u9-089,3,9,"to contact (someone, e.g., by telephone)",اِتَّصَلَ,irregular:weak or hamzated root
+b3-u10-001,3,10,to lead to,أَدَّى,irregular:weak or hamzated root
+b3-u10-003,3,10,"machine; (pl.) equipment, machinery",آلة,root-uncertain; no-diacritics
+b3-u10-006,3,10,to follow,اِتَّبَعَ,irregular:Form VIII assimilation
+b3-u10-010,3,10,statistic,إحصاء,no-diacritics
+b3-u10-011,3,10,to plan,خَطَّطَ,irregular:doubled root
+b3-u10-014,3,10,possessing,ذو,pos-uncertain; no-diacritics
+b3-u10-015,3,10,self,ذات ذاتُهُ,english-inferred
+b3-u10-017,3,10,"rural area, countryside",ريف,no-diacritics
+b3-u10-019,3,10,"to point to, indicate",أشارَ,irregular:weak or hamzated root
+b3-u10-021,3,10,to suffer from,عانى,no-diacritics; irregular:weak or hamzated root
+b3-u10-023,3,10,to explain,فَسَّرَ,form-uncertain
+b3-u10-024,3,10,law,قانون,root-uncertain; no-diacritics
+b3-u10-025,3,10,to lead to drive,قادَ,irregular:weak or hamzated root
+b3-u10-030,3,10,to negate; to deny (the truth of),نَفى,irregular:weak or hamzated root
+b3-u10-038,3,10,to distribute,وَزَّعَ,irregular:weak or hamzated root
+b3-u10-039,3,10,"to be in agreement (with someone) on, approve",وافَقَ,irregular:weak or hamzated root
+b3-u10-042,3,10,to build,بَنى,irregular:weak or hamzated root
+b3-u10-043,3,10,to adopt,تَبَنّى,irregular:weak or hamzated root
+b3-u10-045,3,10,"to show clearly, demonstrate",بَيَّنَ,irregular:weak or hamzated root
+b3-u10-046,3,10,"to conduct, carry out",أجرى,no-diacritics; irregular:weak or hamzated root
+b3-u10-050,3,10,to test by experiment or trial,اِختَبرَ,diacritics-differ-past
+b3-u10-053,3,10,"to designate (e.g., funds) for",خَصَّصَ,irregular:doubled root
+b3-u10-056,3,10,to see,رَأى,irregular:weak or hamzated root
+b3-u10-057,3,10,to have the opinion that,رَأى,irregular:weak or hamzated root
+b3-u10-061,3,10,"semi, pseudo-, nearly",شِبه,pos-uncertain
+b3-u10-063,3,10,to add,أَضافَ,irregular:weak or hamzated root
+b3-u10-064,3,10,"arbitrary, random",عَشوائِيّ,root-uncertain
+b3-u10-077,3,10,to evaluate,قَيَّمَ,irregular:weak or hamzated root
+b3-u10-080,3,10,"to finance, fund",مَوَّلَ,irregular:weak or hamzated root
+b3-u10-083,3,10,"to copy (by hand, especially in an exam)",نَقَل,irregular:Form I needs presentVowel (a/i/u)
+b4-u1-001,4,1,"to compose, author",أَلّفَ,irregular:weak or hamzated root
+b4-u1-003,4,1,"creation, innovation",الإبداع,no-diacritics
+b4-u1-011,4,1,"to obtain, gain possession of",حازَ,english-inferred; irregular:weak or hamzated root
+b4-u1-014,4,1,"to become dizzy dizziness, vertigo",داخَ,irregular:weak or hamzated root
+b4-u1-015,4,1,"broadcasting, radio",إذاعة,no-diacritics
+b4-u1-016,4,1,"to reclaim, recover; to return",اِستَرَدَّ,english-inferred; irregular:doubled root
+b4-u1-017,4,1,"nomination (e.g. for an award, a position)",الترشيح,no-diacritics
+b4-u1-021,4,1,"long for, yearn for",اِشتاقَ إلى/لِ,irregular:weak or hamzated root
+b4-u1-028,4,1,complication,تعقيد,no-diacritics
+b4-u1-034,4,1,"to win, gain",فازَ,irregular:weak or hamzated root
+b4-u1-057,4,1,"to go beyond, exceed, surpass",تَجاوَزَ,irregular:weak or hamzated root
+b4-u1-059,4,1,"to achieve, realize",حَقَّقَ,irregular:doubled root
+b4-u1-060,4,1,"to change, transform",حَوَّلَ,irregular:weak or hamzated root
+b4-u1-063,4,1,"courtyard, arena, domain",ساحة,no-diacritics
+b4-u1-071,4,1,"to meet, receive",لاقى,no-diacritics; irregular:weak or hamzated root
+b4-u1-075,4,1,"to head toward, to go to",تَوَجَّهَ,irregular:weak or hamzated root
+b4-u2-001,4,2,"tool, instrument",أداة,no-diacritics
+b4-u2-002,4,2,"current, stream, trend",تَيّار,root-uncertain
+b4-u2-012,4,2,"to dominate, control",سَيْطَرَ,quadriliteral; irregular:quadriliteral root
+b4-u2-021,4,2,"military (used mainly as adjective) also: soldier, police",عَسكَرِيّ,missing-column-assumed-shami-blank
+b4-u2-028,4,2,"most, the majority",أَغلَب,english-inferred
+b4-u2-030,4,2,to benefit from,اِستَفادَ,irregular:weak or hamzated root
+b4-u2-033,4,2,"to cancel, invalidate, abolish",أَلغى,irregular:weak or hamzated root
+b4-u2-040,4,2,sample; model,نُموذَج,root-uncertain
+b4-u2-041,4,2,"to obtain, attain",نالَ,english-inferred; irregular:weak or hamzated root
+b4-u2-047,4,2,"to clarify, explain (that)",أَوضَحَ,irregular:weak or hamzated root
+b4-u2-049,4,2,"to confirm, stress, emphasize",أَكَّدَ,irregular:weak or hamzated root
+b4-u2-053,4,2,"to value lightly, to not take seriously; to look down upon",اِستَخَفَّ,irregular:doubled root
+b4-u2-068,4,2,alone,بِمُفرَد,pos-uncertain
+b4-u2-069,4,2,"next, coming",المُقبِل,english-inferred
+b4-u3-001,4,3,and then; all of a sudden,وإذا,no-diacritics
+b4-u3-002,4,3,to permit (someone) to (do something),أَذِنَ,irregular:weak or hamzated root
+b4-u3-005,4,3,"to order, give (someone) an order (to)",أَمَرَ,irregular:weak or hamzated root
+b4-u3-011,4,3,"to weep, cry",بَكى,irregular:weak or hamzated root
+b4-u3-019,4,3,"to put, place, land an airplane",حَطَّ,irregular:doubled root
+b4-u3-020,4,3,to betray,خانَ,irregular:weak or hamzated root
+b4-u3-025,4,3,to throw,رَمى,irregular:weak or hamzated root
+b4-u3-030,4,3,"to strive to, work towards",سَعى,irregular:weak or hamzated root
+b4-u3-033,4,3,to become intense,اِشتَدَّ,irregular:doubled root
+b4-u3-034,4,3,to become,صارَ,english-inferred; irregular:weak or hamzated root
+b4-u3-035,4,3,"to shout, to scream",صاحَ,irregular:weak or hamzated root
+b4-u3-040,4,3,"to raid, to invade",غَزا,irregular:weak or hamzated root
+b4-u3-043,4,3,to be able to,قَدَرَ,english-inferred; irregular:Form I needs presentVowel (a/i/u)
+b4-u3-051,4,3,"let alone, leave it be, let (me, you, us) do something",دَع! دَعي! دَعوا!,root-uncertain; pos-uncertain; irregular:weak or hamzated root
+b4-u3-052,4,3,"to donate, to grant",وَهَبَ,irregular:weak or hamzated root
+b4-u3-053,4,3,to accuse (someone) of (something),اِتَّهَ,irregular:weak or hamzated root
+b4-u3-057,4,3,"to finish, to complete",أتمّ,irregular:doubled root
+b4-u3-058,4,3,to happen,جَرى,english-inferred; irregular:weak or hamzated root
+b4-u3-061,4,3,to last,دامَ,irregular:weak or hamzated root
+b4-u3-062,4,3,to relax,اِرتاحَ,irregular:weak or hamzated root
+b4-u3-063,4,3,biography autobiography,سيرة,no-diacritics
+b4-u3-066,4,3,strike,إضراب,no-diacritics
+b4-u3-068,4,3,to count,عَدَّ,irregular:doubled root
+b4-u3-069,4,3,"to reckon, to consider",عَدَّ,irregular:doubled root
+b4-u3-071,4,3,globalization,العَوْلَمة,root-uncertain
+b4-u3-081,4,3,"to bequeath, give inheritance to",وَرَّثَ,irregular:weak or hamzated root
+b4-u4-005,4,4,clothes,ثِياب,english-inferred
+b4-u4-008,4,4,"to contain, comprise",اِحتَوى,irregular:weak or hamzated root
+b4-u4-009,4,4,"to long for, yearn; to feel affection towards someone or something",حَنَّ,irregular:doubled root
+b4-u4-017,4,4,to flourish,اِزْدَهَرَ,irregular:Form VIII assimilation
+b4-u4-020,4,4,"to be cured, healed, to recover",شُفِيَ,passive; irregular:weak or hamzated root
+b4-u4-021,4,4,soap,صابون,no-diacritics
+b4-u4-022,4,4,"to include, join together (elements of a whole), to embrace",ضَمَّ,irregular:doubled root
+b4-u4-023,4,4,"old, ancient",عَتيق,english-inferred
+b4-u4-024,4,4,to play a musical instrument,عزَف,diacritics-differ-past
+b4-u4-029,4,4,to vary varying,تَفاوَتَ,irregular:weak or hamzated root
+b4-u4-032,4,4,"open place, square, field",مَيدان,root-uncertain
+b4-u4-039,4,4,"sample, model, type",نُموذَج,root-uncertain
+b4-u4-041,4,4,"to provide (in abundance), to make abundant",وَفَّر,irregular:weak or hamzated root
+b4-u4-043,4,4,"achievement, accomplishment",إنجاز,no-diacritics
+b4-u4-044,4,4,"to take on, adopt",اِتَّخَذَ,irregular:weak or hamzated root
+b4-u4-047,4,4,to interrogate,اِستَجوَب,irregular:weak or hamzated root
+b4-u4-048,4,4,to bathe,اِسْتَحَمَّ,irregular:doubled root
+b4-u4-051,4,4,"to rest, relax",اِسْتَراحَ,irregular:weak or hamzated root
+b4-u4-053,4,4,"to stress, intensify, impress upon",شَدَّدَ,irregular:doubled root
+b4-u4-057,4,4,"at that time, then",عِندَئِذٍ,english-inferred
+b4-u4-072,4,4,"to matter to, be of concern to",هَمَّ,irregular:doubled root
+b4-u4-073,4,4,to head in the direction of,اِتَّجَهَ,irregular:weak or hamzated root
+b4-u4-076,4,4,"to possess as a characteristic, be described, characterized by",اِتَّصَفَ,irregular:weak or hamzated root
+b4-u4-078,4,4,"to take over, seize, take possession of",اِستَولى,irregular:weak or hamzated root
+b4-u5-002,4,5,to become hoarse,بُحَّ,passive; irregular:doubled root
+b4-u5-003,4,5,to begin,بَدَأَ,irregular:weak or hamzated root
+b4-u5-005,4,5,"essential, fundamental",جَوهَرِيّ,root-uncertain
+b4-u5-006,4,5,"to protest against, to object to",اِحتَجَّ,irregular:doubled root
+b4-u5-008,4,5,to disappear,اِختَفى,irregular:weak or hamzated root
+b4-u5-011,4,5,"nearest, lowest Near East",أدنى,no-diacritics
+b4-u5-024,4,5,"to hinder, impede obstacle, impediment",أَعاقَ,irregular:weak or hamzated root
+b4-u5-032,4,5,to blame,لامَ,irregular:weak or hamzated root
+b4-u5-040,4,5,"to deserve, be worthy of",اِستَحَقَّ,irregular:doubled root
+b4-u5-041,4,5,to analyze,حَلََّلَ,irregular:doubled root
+b4-u5-042,4,5,to prevent s.o. from s.th,حالَ,irregular:weak or hamzated root
+b4-u5-046,4,5,to volunteer,تَطَوَّعَ,irregular:weak or hamzated root
+b4-u5-049,4,5,to generalize,عَمَّمَ,irregular:doubled root
+b4-u5-051,4,5,exclusion (removing someone and making them marginal),الإِقصاء,pos-uncertain; form-uncertain
+b4-u5-055,4,5,to increase/grow gradually,تَنامى,irregular:weak or hamzated root

@@ -1,0 +1,42 @@
+{
+  "_comment": "Hand-resolved rows. `skip` drops entries with no Arabic at all. `patch` replaces fields on the built word (dialect objects replace whole).",
+  "skip": ["b3-u2-031", "b3-u7-046", "b3-u7-054", "b3-u10-048"],
+  "patch": {
+    "b2-u11-020": { "arabic": "عَلاقات", "definition": "relations (between)", "pos": "noun", "gender": "feminine", "root": "ع ل ق", "plural": null, "prepositions": ["بَيْنَ"] },
+    "b3-u6-052": { "arabic": "مالِيّ", "feminine": "مالِيّة", "pos": "adjective", "root": "م و ل", "plural": null },
+    "b3-u7-038": { "arabic": "أَواخِر", "pos": "noun", "gender": "masculine", "root": "ء خ ر", "plural": null, "notes": "plural-only: the last days/years of a period" },
+    "b3-u7-039": { "arabic": "أَوائِل", "pos": "noun", "gender": "masculine", "root": "ء و ل", "plural": null, "notes": "plural-only: the first days/years of a period" },
+    "b3-u8-050": { "arabic": "طُقوس", "pos": "noun", "gender": "masculine", "root": "ط ق س", "plural": null, "notes": "listed in the plural" },
+    "b3-u10-081": { "arabic": "نِسبة", "pos": "noun", "gender": "feminine", "root": "ن س ب", "plural": "نِسَب" },
+    "b3-u9-071": { "arabic": "عَبَّرَ", "prepositions": ["عن"], "root": "ع ب ر", "form": 2, "notes": "source typo غَبَّرَ corrected" },
+    "b3-u10-023": { "arabic": "فَسَّرَ", "root": "ف س ر", "form": 2, "notes": "source typo فَسرَ corrected" },
+    "b4-u5-051": {
+      "definition": "exclusion (removing someone and making them marginal)", "pos": "noun", "gender": "masculine",
+      "root": "ق ص و", "form": null
+    },
+    "b3-u1-035": {
+      "definition": "new (plural)", "arabic": "جُدُد", "pos": "adjective", "root": "ج د د", "plural": null,
+      "egyptian": { "arabic": "جُداد" }, "shami": { "arabic": "جْداد" }
+    },
+    "b3-u1-044": {
+      "definition": "last year", "arabic": null, "pos": "phrase", "root": null, "plural": null,
+      "egyptian": { "arabic": "السنة اللي فاتت" }, "shami": null
+    },
+    "b3-u2-047": {
+      "definition": "these (plural of this)", "arabic": "هٰؤُلاء", "pos": "pronoun", "root": null, "plural": null,
+      "egyptian": { "arabic": "دول" }, "shami": { "arabic": "هول", "alternates": ["هادول", "هَيدول"] }
+    },
+    "b3-u3-039": {
+      "definition": "white (masculine, feminine and plural forms)", "arabic": "أَبيَض", "pos": "adjective", "root": "ب ي ض",
+      "feminine": "بَيضاء", "plural": "بيض", "egyptian": { "feminine": "بيضا" }, "shami": { "feminine": "بيضا" }
+    },
+    "b3-u3-040": {
+      "definition": "green (masculine, feminine and plural forms)", "arabic": "أَخضَر", "pos": "adjective", "root": "خ ض ر",
+      "feminine": "خَضراء", "plural": "خُضر", "egyptian": { "feminine": "خَضرا" }, "shami": { "feminine": "خَضرا", "plural": "خِضر" }
+    },
+    "b3-u3-042": {
+      "definition": "black (masculine, feminine and plural forms)", "arabic": "أَسوَد", "pos": "adjective", "root": "س و د",
+      "feminine": "سَوداء", "plural": "سود", "egyptian": { "feminine": "سودا" }, "shami": { "feminine": "سودا" }
+    }
+  }
+}

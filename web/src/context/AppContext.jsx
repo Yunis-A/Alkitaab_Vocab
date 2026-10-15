@@ -4,7 +4,8 @@ import { books, compareLevel, levelReached, ARABIC_DIGITS_LEVEL, TRANSLITERATION
 import { localizeDigits } from "../lib/numerals.js";
 import { strings } from "../i18n/strings.js";
 import { vocabSets, arabicRatio, isRtl, translate, isArabic } from "../lib/i18n.js";
-import { cardKey, newCard, review, DIRECTIONS, wordStatus } from "../lib/leitner.js";
+import { cardKey, newCard, review, wordStatus } from "../lib/leitner.js";
+import { activeVarieties, isWordAvailable, parseCardKey } from "../lib/varieties.js";
 import { buildIndex } from "../lib/search.js";
 import { loadProgress, saveProgress } from "../lib/storage.js";
 
@@ -15,22 +16,44 @@ const DEFAULT_LEVEL = { book: 1, unit: 1 };
 
 // Words are curriculum-ordered by book, then unit, then their order in the file.
 const sortedWords = [...allWords].sort((a, b) => a.book - b.book || a.unit - b.unit);
+const wordsById = new Map(sortedWords.map((w) => [w.id, w]));
 const searchIndex = buildIndex(sortedWords);
 
 export function AppProvider({ children }) {
   const [progress, setProgress] = useState(loadProgress);
   useEffect(() => saveProgress(progress), [progress]);
 
-  const { level, cards } = progress;
+  const { level, cards, dialects } = progress;
   const effectiveLevel = level ?? DEFAULT_LEVEL;
 
-  // Words up to and including the student's current unit.
+  // Words up to and including the student's current unit, minus entries hidden
+  // from this book onward (`hideFromBook`) and entries with nothing to show
+  // (dialect-only rows when that dialect is off).
   const visibleWords = useMemo(
-    () => (level ? sortedWords.filter((w) => compareLevel(w, level) <= 0) : []),
-    [level],
+    () =>
+      level
+        ? sortedWords.filter(
+            (w) =>
+              compareLevel(w, level) <= 0 &&
+              !(w.hideFromBook && level.book >= w.hideFromBook) &&
+              isWordAvailable(w, dialects),
+          )
+        : [],
+    [level, dialects],
   );
   const visibleIds = useMemo(() => new Set(visibleWords.map((w) => w.id)), [visibleWords]);
   const visibleIndex = useMemo(() => searchIndex.filter((e) => visibleIds.has(e.word.id)), [visibleIds]);
+
+  // Cards that are in play: the word is visible and its variety is enabled.
+  const activeCards = useMemo(() => {
+    const out = [];
+    for (const [key, card] of Object.entries(cards)) {
+      const { wordId, variety } = parseCardKey(key);
+      const word = wordsById.get(wordId);
+      if (word && visibleIds.has(wordId) && activeVarieties(word, dialects).includes(variety)) out.push([key, card]);
+    }
+    return out;
+  }, [cards, visibleIds, dialects]);
 
   const vocab = useMemo(() => vocabSets(sortedWords, cards), [cards]);
   const ratio = useMemo(() => arabicRatio(strings, effectiveLevel, vocab), [effectiveLevel, vocab]);
@@ -72,18 +95,30 @@ export function AppProvider({ children }) {
     setProgress((p) => ({ ...p, level: { book, unit: u } }));
   }, []);
 
-  // Start tracking a word in both directions, due immediately in box 0.
+  // Start tracking a word in every variety the student studies, due immediately in box 0.
   const introduce = useCallback((wordId) => {
     setProgress((p) => {
+      const word = wordsById.get(wordId);
+      if (!word) return p;
       const cards = { ...p.cards };
       const now = Date.now();
-      for (const d of DIRECTIONS) {
-        const k = cardKey(wordId, d);
+      for (const v of activeVarieties(word, p.dialects)) {
+        const k = cardKey(wordId, v);
         if (!cards[k]) cards[k] = newCard(now);
       }
       return { ...p, cards };
     });
   }, []);
+
+  const setDialect = useCallback((name, on) => {
+    setProgress((p) => ({ ...p, dialects: { ...p.dialects, [name]: !!on } }));
+  }, []);
+
+  // True if the word has an active variety the student has not started yet.
+  const needsIntro = useCallback(
+    (word) => activeVarieties(word, dialects).some((v) => !cards[cardKey(word.id, v)]),
+    [dialects, cards],
+  );
 
   const rate = useCallback((key, rating) => {
     setProgress((p) => {
@@ -103,13 +138,24 @@ export function AppProvider({ children }) {
     [progress.geoBest],
   );
 
-  const statusOf =useCallback((wordId) => wordStatus(cards, wordId), [cards]);
+  const statusOf = useCallback(
+    (wordId) => {
+      const word = wordsById.get(wordId);
+      return wordStatus(cards, wordId, word ? activeVarieties(word, dialects) : undefined);
+    },
+    [cards, dialects],
+  );
 
   const value = {
     words: sortedWords,
+    wordsById,
     visibleWords,
     visibleIds,
     visibleIndex,
+    activeCards,
+    dialects,
+    setDialect,
+    needsIntro,
     level,
     cards,
     rtl,

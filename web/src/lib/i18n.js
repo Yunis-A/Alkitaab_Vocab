@@ -10,6 +10,7 @@ export function vocabSets(words, cards) {
   const known = new Set();
   const learned = new Set();
   for (const w of words) {
+    if (!w.arabic) continue; // dialect-only rows have no MSA word
     const n = normalizeArabic(w.arabic);
     known.add(n);
     if (wordBox(cards, w.id) >= UI_LEARNED_BOX) learned.add(n);

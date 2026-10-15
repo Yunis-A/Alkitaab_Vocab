@@ -26,6 +26,22 @@ export const strings = {
     ar: "كتابك ودرسك. ترى الكلمات والقواعد حتى هذا الدرس.",
     unlock: u(3, 5),
   },
+  // Dialect names stay English until you decide which lesson they turn Arabic at.
+  dialectsTitle: { en: "Dialects", ar: "اللهجات", unlock: u(9, 1) },
+  dialectsHelp: {
+    en: "Also learn Egyptian and/or Shami (Levantine) words. Each one you turn on gets its own flashcards.",
+    ar: "تعلم أيضا الكلمات المصرية و/أو الشامية. كل لهجة تفعلها تحصل على بطاقاتها الخاصة.",
+    unlock: u(9, 1),
+  },
+  dialectEgyptian: { en: "Egyptian", ar: "مصري", unlock: u(9, 1) },
+  dialectShami: { en: "Shami", ar: "شامي", unlock: u(9, 1) },
+  femForm: { en: "Feminine", ar: "المؤنث", unlock: u(3, 8) },
+  exampleLabel: { en: "Example", ar: "مثال", unlock: u(3, 8) },
+  alsoLabel: { en: "Also", ar: "وأيضا", unlock: u(3, 8) },
+  posAdverb: { en: "adverb", ar: "ظرف", unlock: u(3, 1) },
+  posPronoun: { en: "pronoun", ar: "ضمير", unlock: u(3, 1) },
+  posPhrase: { en: "phrase", ar: "عبارة", unlock: u(3, 1) },
+  posSuffix: { en: "suffix", ar: "لاحقة", unlock: u(3, 1) },
   navGrammar: { en: "Grammar", ar: "قواعد", unlock: u(2, 3) },
 
   // --- level setup ---
