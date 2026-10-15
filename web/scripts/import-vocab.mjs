@@ -13,7 +13,7 @@ import {
   parseSource, buildEntries, dedupe, assignIds, bare, hasMarks, isArabicText,
 } from "./lib/vocab-parse.mjs";
 import { getForms } from "../src/lib/morphology.js";
-import { stripDiacritics } from "../src/lib/arabic.js";
+import { stripDiacritics, rootKey } from "../src/lib/arabic.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SOURCE = path.join(root, "data/source/arabic-vocab.txt");
@@ -87,9 +87,118 @@ const looseKey = (s) => stripDiacritics(s).replace(/[أإآٱ]/g, "ا").replace(
 // For comparing generated vs. listed forms: ignore sukun and the final case vowel.
 const shape = (s) => s.normalize("NFC").replace(/ْ/g, "").replace(/[َُِ]$/u, "");
 
-function buildWord(e, en, overrides) {
+// ---------- "= <Arabic word>" glosses ----------
+// Some rows have no English, only "= جريدة" (same as a word the student knows).
+// Use the English of that word from elsewhere in the list.
+
+const noArticle = (s) => bare(s).replace(/^ال(?=.{2})/, "");
+
+function buildReferenceIndex(entries) {
+  const index = new Map(); // key -> entries (source order)
+  const add = (key, e) => { if (key && key.length > 1) index.set(key, [...(index.get(key) ?? []), e]); };
+  for (const e of entries) {
+    if (!e.en || /[؀-ۿ=*]/.test(e.en)) continue; // only rows with a real English gloss
+    const m = e.msa;
+    if (!m) continue;
+    for (const tok of [m.head, m.past, m.present, ...(m.alternates ?? [])]) {
+      if (!tok) continue;
+      const first = tok.split(" ")[0];
+      add(noArticle(first), e);
+      add(noArticle(first).replace(/^ي(?=.{2})/, ""), e); // present-tense heads: يَتَكَلَّم -> تكلم
+    }
+  }
+  return index;
+}
+
+const IRREGULAR_3RD = { has: "have", does: "do", goes: "go", is: "be" };
+const thirdToBase = (w) =>
+  IRREGULAR_3RD[w] ?? (/(ch|sh|ss|x|z)es$/.test(w) ? w.slice(0, -2) : /[^aeiou]ies$/.test(w) ? w.slice(0, -3) + "y" : /s$/.test(w) && !/ss$/.test(w) ? w.slice(0, -1) : w);
+
+// "he obtains, acquires (a job)" -> "to obtain, acquire (a job)"
+function toInfinitive(en) {
+  const m = en.match(/^(?:he|she|it) (.*)$/i);
+  if (!m) return en;
+  const parts = m[1].split(/,\s*/).map((p, i) => {
+    const [first, ...rest] = p.split(" ");
+    return [thirdToBase(first.toLowerCase()), ...rest].join(" ");
+  });
+  return `to ${parts.join(", ")}`;
+}
+
+function referencedEnglish(e, index) {
+  const latin = e.en.replace(/[؀-ۿ]/g, "").replace(/[^A-Za-z]/g, "");
+  if (latin.length >= 2 || !/[؀-ۿ]/.test(e.en)) return null; // already has English, or nothing to look up
+  const refs = (e.en.match(/[؀-ۿ][؀-ۿ\sً-ْ]*/g) ?? []).flatMap((s) => s.split(/[،,]/)).map((s) => s.trim()).filter(Boolean);
+  for (const r of refs) {
+    const words = r.split(/\s+/);
+    const last = words.length > 1 ? words.at(-1) : null;
+    const lastIsPrep = last && Object.hasOwn(PREP_DISPLAY, normPrepWord(last));
+    // multi-word references match as a whole phrase; "X + preposition" may also match X by its preposition
+    const keys = [noArticle(words.join(" "))];
+    if (words.length === 1 || (words.length === 2 && lastIsPrep)) keys.push(noArticle(words[0]));
+    for (const key of keys) {
+      const hits = (index.get(key) ?? []).filter((h) => h.id !== e.id);
+      if (!hits.length) continue;
+      const withPrep = lastIsPrep ? hits.find((h) => (h.msa?.prepositions ?? []).includes(normPrepWord(last))) : null;
+      const hit = withPrep ?? hits[0];
+      return { english: toInfinitive(hit.en), ref: r, from: hit.id };
+    }
+  }
+  return null;
+}
+
+const normPrepWord = (w) => stripDiacritics(w).replace(/ـ/g, "").replace(/[أإآ]/g, "ا");
+
+// House style (matches the book and the generator): no fatha before a long alef.
+const plainAlef = (s) => (typeof s === "string" ? s.replace(/َا/g, "ا") : s);
+const mapValues = (o, f) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, f(v)]));
+const spaced = (r) => [...r].join(" ");
+
+// Stored conjugations looked up on Wiktionary (scripts/fetch-conjugations.mjs).
+function applyConjugations(w, c, flags) {
+  if (!c || c.match === "none") return;
+  w.conjugations = Object.fromEntries(["past", "present", "imperative"].filter((k) => c[k]).map((k) => [k, mapValues(c[k], plainAlef)]));
+  if (c.activeParticiple?.length) w.activeParticiple = plainAlef(c.activeParticiple.join(" / "));
+  if (c.passiveParticiple?.length) w.passiveParticiple = plainAlef(c.passiveParticiple.join(" / "));
+  if (!w.masdar && c.masdar?.length) w.masdar = c.masdar.map(plainAlef); // Form I verbal nouns the list did not give
+  if (c.match === "partial") flags.push("conjugation-matches-listed-form-only-partly");
+  // The table matches the listed forms but is filed under another root. A difference only in a weak
+  // letter (و vs ي) is a matter of convention, so keep ours and flag it; anything else is corrected.
+  if (c.match === "exact" && c.root && w.root && rootKey(w.root) !== rootKey(c.root)) {
+    const weakless = (r) => rootKey(r).replace(/و/g, "ي");
+    if (weakless(w.root) === weakless(c.root)) flags.push(`root-differs-from-conjugation-source:${spaced(c.root)}`);
+    else { flags.push(`root-corrected-from-conjugation:${w.root}->${spaced(c.root)}`); w.root = spaced(c.root); }
+  }
+}
+
+// Wiktionary's roots for the entry (scripts/verify-roots.mjs).
+function applyRootCheck(w, rc, flags) {
+  if (!rc || !w.root) return;
+  if (rc.status === "confirmed") {
+    const i = flags.indexOf("root-uncertain");
+    if (i >= 0) flags.splice(i, 1);
+  } else if (rc.status === "differs") {
+    // Never auto-applied: Wiktionary often files a word under a different but valid root
+    // (حياة: ح ي ي / ح و ي), or lists only one of several entries on the page.
+    flags.push(`root-differs-from-wiktionary:${rc.roots.join("/")}`);
+  }
+}
+
+// Roots decided by hand after looking them up (data/root-decisions.json).
+function applyRootDecision(w, d, flags) {
+  if (!d) return;
+  const i = flags.indexOf("root-uncertain");
+  if (i >= 0) flags.splice(i, 1);
+  for (let j = flags.length - 1; j >= 0; j--) if (flags[j].startsWith("root-differs-from-wiktionary")) flags.splice(j, 1);
+  if ((w.root ?? null) !== d.root) flags.push(`root-decided:${w.root ?? "none"}->${d.root ?? "none"}`);
+  w.root = d.root;
+}
+
+function buildWord(e, en, overrides, refIndex, conj, rootCheck, rootDecisions) {
   const flags = [...e.flags, ...(en.flags ?? [])];
   const msa = e.msa;
+  const fromRef = refIndex ? referencedEnglish(e, refIndex) : null;
+  if (fromRef) flags.push(`english-from-referenced-word:${fromRef.ref}->${fromRef.from}`);
   const isVerb = en.pos === "verb";
   const w = {
     id: e.id,
@@ -97,7 +206,7 @@ function buildWord(e, en, overrides) {
     unit: e.unit,
     part: e.part ?? null,
     arabic: msa?.head || null,
-    definition: en.english || e.en,
+    definition: fromRef?.english ?? (en.english || e.en),
     transliteration: null,
     root: e.book === 1 ? null : en.root,
     pos: POS.has(en.pos) ? en.pos : "phrase",
@@ -108,7 +217,7 @@ function buildWord(e, en, overrides) {
     alternates: msa?.alternates?.length ? msa.alternates : null,
     masdar: msa?.masdar ? stripArticle(msa.masdar) : null,
     prepositions: showPreps(msa?.prepositions),
-    notes: msa?.notes?.length ? msa.notes.join("؛ ") : "",
+    notes: [msa?.notes?.length ? msa.notes.join("؛ ") : "", fromRef ? `Listed in the source as = ${fromRef.ref}` : ""].filter(Boolean).join("؛ "),
     example: msa?.example ?? null,
     conjugations: null,
     egyptian: dialectObject(e.egyptian),
@@ -116,8 +225,16 @@ function buildWord(e, en, overrides) {
   };
   if (!POS.has(en.pos)) flags.push(`unknown-pos:${en.pos}`);
   if (e.book === 1 && e.conjugatedRow) w.hideFromBook = 2; // Alif Baa form rows are for Alif Baa students only
-  if (w.form === 1) Object.assign(w, formIVowels(msa?.past, msa?.present));
+  if (w.form === 1) {
+    // Conjugated-form rows ("I study", "he writes") list only a present form: use it for the present vowel.
+    const presentTok = msa?.present ?? (e.conjugatedRow ? msa?.head : null);
+    Object.assign(w, formIVowels(e.conjugatedRow ? null : msa?.past, presentTok));
+    if (e.conjugatedRow && w.presentVowel) flags.push("past-vowel-assumed");
+  }
   if (w.arabic && !/[ً-ْ]/.test(w.arabic) && /[ء-ي]/.test(w.arabic)) flags.push("no-diacritics");
+  applyConjugations(w, conj?.[e.id], flags);
+  applyRootCheck(w, rootCheck?.[e.id], flags);
+  applyRootDecision(w, rootDecisions?.[e.id], flags);
   Object.assign(w, overrides.patch?.[e.id] ?? {});
   for (const k of Object.keys(w)) if (w[k] === null || w[k] === undefined || (Array.isArray(w[k]) && !w[k].length)) {
     if (!["arabic", "root", "form", "gender", "transliteration", "conjugations", "egyptian", "shami", "plural", "part"].includes(k)) delete w[k];
@@ -128,6 +245,7 @@ function buildWord(e, en, overrides) {
 // Does the generator reproduce the listed past/present forms for regular roots?
 function validateVerb(w, e, flags) {
   if (w.pos !== "verb" || !w.root || !w.form) return;
+  if (w.conjugations) return; // stored from Wiktionary: already checked against the listed forms
   let f = getForms({ ...w, pos: "verb" });
   if (!f.regular) { flags.push(`irregular:${f.irregularReason}`); return; }
   if (e.conjugatedRow) return; // heads are single conjugated forms, not past/present 3ms
@@ -169,6 +287,11 @@ if (cmd === "build") {
   const enrichment = JSON.parse(fs.readFileSync(path.join(root, "data/enrichment.json"), "utf8"));
   const overrides = JSON.parse(fs.readFileSync(path.join(root, "scripts/overrides.json"), "utf8"));
   const { entries } = load();
+  const refIndex = buildReferenceIndex(entries);
+  const readJson = (f) => (fs.existsSync(path.join(root, f)) ? JSON.parse(fs.readFileSync(path.join(root, f), "utf8")) : null);
+  const conj = readJson("data/conjugations.json");
+  const rootCheck = readJson("data/root-check.json");
+  const rootDecisions = readJson("data/root-decisions.json");
   const words = [], review = [], skipped = [];
   let drift = 0;
 
@@ -177,7 +300,7 @@ if (cmd === "build") {
     if (!en) { review.push([e.id, e.book, e.unit, e.en, "", "no-enrichment"]); continue; }
     if (en._en !== e.en) { drift++; review.push([e.id, e.book, e.unit, e.en, "", `english-changed-since-review (${en._en})`]); }
     if (overrides.skip.includes(e.id)) { skipped.push(`${e.id} "${e.en}"`); continue; }
-    const { word, flags } = buildWord(e, en, overrides);
+    const { word, flags } = buildWord(e, en, overrides, refIndex, conj, rootCheck, rootDecisions);
     if (!overrides.patch?.[e.id]) validateVerb(word, e, flags);
     words.push(word);
     if (flags.length) review.push([word.id, word.book, word.unit, word.definition, word.arabic ?? word.egyptian?.arabic ?? "", flags.join("; ")]);

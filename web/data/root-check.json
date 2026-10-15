@@ -1,0 +1,10697 @@
+{
+ "b2-u1-001": {
+  "title": "أدب",
+  "status": "confirmed",
+  "roots": [
+   "دءب",
+   "ءدب"
+  ],
+  "ours": "ء د ب",
+  "uncertain": false
+ },
+ "b2-u1-005": {
+  "title": "جنسية",
+  "status": "confirmed",
+  "roots": [
+   "جنس"
+  ],
+  "ours": "ج ن س",
+  "uncertain": false
+ },
+ "b2-u1-006": {
+  "title": "أدرس",
+  "status": "no-page",
+  "roots": [],
+  "ours": "د ر س",
+  "uncertain": false
+ },
+ "b2-u1-007": {
+  "title": "أسكن",
+  "status": "confirmed",
+  "roots": [
+   "سكن"
+  ],
+  "ours": "س ك ن",
+  "uncertain": false
+ },
+ "b2-u1-008": {
+  "title": "تسكن",
+  "status": "confirmed",
+  "roots": [
+   "سكن"
+  ],
+  "ours": "س ك ن",
+  "uncertain": false
+ },
+ "b2-u1-009": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "س ك ن",
+  "uncertain": false
+ },
+ "b2-u1-010": {
+  "title": "سنة",
+  "status": "differs",
+  "roots": [
+   "سنه",
+   "وسن",
+   "سنن"
+  ],
+  "ours": "س ن و",
+  "uncertain": false
+ },
+ "b2-u1-012": {
+  "title": "عمر",
+  "status": "confirmed",
+  "roots": [
+   "عمر"
+  ],
+  "ours": "ع م ر",
+  "uncertain": false
+ },
+ "b2-u1-013": {
+  "title": "تعمل",
+  "status": "confirmed",
+  "roots": [
+   "عمل"
+  ],
+  "ours": "ع م ل",
+  "uncertain": false
+ },
+ "b2-u1-014": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع م ل",
+  "uncertain": false
+ },
+ "b2-u1-015": {
+  "title": "عنوان",
+  "status": "confirmed",
+  "roots": [
+   "عنو"
+  ],
+  "ours": "ع ن و",
+  "uncertain": false
+ },
+ "b2-u1-016": {
+  "title": "مصري",
+  "status": "confirmed",
+  "roots": [
+   "مصر"
+  ],
+  "ours": "م ص ر",
+  "uncertain": false
+ },
+ "b2-u1-018": {
+  "title": "منطقة",
+  "status": "confirmed",
+  "roots": [
+   "نطق"
+  ],
+  "ours": "ن ط ق",
+  "uncertain": false
+ },
+ "b2-u1-020": {
+  "title": "والد",
+  "status": "confirmed",
+  "roots": [
+   "ولد"
+  ],
+  "ours": "و ل د",
+  "uncertain": false
+ },
+ "b2-u1-021": {
+  "title": "والدي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ل د",
+  "uncertain": false
+ },
+ "b2-u1-022": {
+  "title": "والدة",
+  "status": "confirmed",
+  "roots": [
+   "ولد"
+  ],
+  "ours": "و ل د",
+  "uncertain": false
+ },
+ "b2-u1-023": {
+  "title": "والدتي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ل د",
+  "uncertain": false
+ },
+ "b2-u2-001": {
+  "title": "أسرة",
+  "status": "confirmed",
+  "roots": [
+   "ءسر"
+  ],
+  "ours": "ء س ر",
+  "uncertain": true
+ },
+ "b2-u2-002": {
+  "title": "ناس",
+  "status": "differs",
+  "roots": [
+   "نوس"
+  ],
+  "ours": "ء ن س",
+  "uncertain": true
+ },
+ "b2-u2-003": {
+  "title": "أيضا",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ء ي ض",
+  "uncertain": true
+ },
+ "b2-u2-004": {
+  "title": "بلد",
+  "status": "confirmed",
+  "roots": [
+   "بلد"
+  ],
+  "ours": "ب ل د",
+  "uncertain": false
+ },
+ "b2-u2-006": {
+  "title": "مترجم",
+  "status": "confirmed",
+  "roots": [
+   "ترجم"
+  ],
+  "ours": "ت ر ج م",
+  "uncertain": false
+ },
+ "b2-u2-007": {
+  "title": "متخصص",
+  "status": "confirmed",
+  "roots": [
+   "خصص"
+  ],
+  "ours": "خ ص ص",
+  "uncertain": false
+ },
+ "b2-u2-008": {
+  "title": "خالة",
+  "status": "confirmed",
+  "roots": [
+   "خول"
+  ],
+  "ours": "خ و ل",
+  "uncertain": false
+ },
+ "b2-u2-009": {
+  "title": "دائما",
+  "status": "confirmed",
+  "roots": [
+   "دوم"
+  ],
+  "ours": "د و م",
+  "uncertain": false
+ },
+ "b2-u2-010": {
+  "title": "مركز",
+  "status": "confirmed",
+  "roots": [
+   "ركز"
+  ],
+  "ours": "ر ك ز",
+  "uncertain": false
+ },
+ "b2-u2-012": {
+  "title": "مشغول",
+  "status": "confirmed",
+  "roots": [
+   "شغل"
+  ],
+  "ours": "ش غ ل",
+  "uncertain": false
+ },
+ "b2-u2-013": {
+  "title": "عمل",
+  "status": "confirmed",
+  "roots": [
+   "عمل"
+  ],
+  "ours": "ع م ل",
+  "uncertain": false
+ },
+ "b2-u2-014": {
+  "title": "غدا",
+  "status": "confirmed",
+  "roots": [
+   "غدو"
+  ],
+  "ours": "غ د و",
+  "uncertain": false
+ },
+ "b2-u2-015": {
+  "title": "فعلا",
+  "status": "confirmed",
+  "roots": [
+   "فعل"
+  ],
+  "ours": "ف ع ل",
+  "uncertain": false
+ },
+ "b2-u2-016": {
+  "title": "قبول",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b2-u2-017": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ك ل م",
+  "uncertain": false
+ },
+ "b2-u2-018": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ك ل م",
+  "uncertain": false
+ },
+ "b2-u2-020": {
+  "title": "لغة",
+  "status": "confirmed",
+  "roots": [
+   "لغو"
+  ],
+  "ours": "ل غ و",
+  "uncertain": false
+ },
+ "b2-u2-021": {
+  "title": "مساء",
+  "status": "differs",
+  "roots": [
+   "مسي"
+  ],
+  "ours": "م س و",
+  "uncertain": false
+ },
+ "b2-u2-022": {
+  "title": "ليل",
+  "status": "confirmed",
+  "roots": [
+   "ليل"
+  ],
+  "ours": "ل ي ل",
+  "uncertain": false
+ },
+ "b2-u2-023": {
+  "title": "نهار",
+  "status": "confirmed",
+  "roots": [
+   "نهر"
+  ],
+  "ours": "ن ه ر",
+  "uncertain": false
+ },
+ "b2-u2-024": {
+  "title": "وحيد",
+  "status": "confirmed",
+  "roots": [
+   "وحد"
+  ],
+  "ours": "و ح د",
+  "uncertain": false
+ },
+ "b2-u2-025": {
+  "title": "موظف",
+  "status": "confirmed",
+  "roots": [
+   "وظف"
+  ],
+  "ours": "و ظ ف",
+  "uncertain": false
+ },
+ "b2-u2-026": {
+  "title": "يوم",
+  "status": "confirmed",
+  "roots": [
+   "يوم"
+  ],
+  "ours": "ي و م",
+  "uncertain": false
+ },
+ "b2-u3-001": {
+  "title": "تاريخ",
+  "status": "confirmed",
+  "roots": [
+   "ءرخ"
+  ],
+  "ours": "ء ر خ",
+  "uncertain": false
+ },
+ "b2-u3-002": {
+  "title": "الآن",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ء و ن",
+  "uncertain": true
+ },
+ "b2-u3-005": {
+  "title": "ابن",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ب ن و",
+  "uncertain": false
+ },
+ "b2-u3-006": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع م م",
+  "uncertain": false
+ },
+ "b2-u3-007": {
+  "title": "جد",
+  "status": "confirmed",
+  "roots": [
+   "جدد"
+  ],
+  "ours": "ج د د",
+  "uncertain": false
+ },
+ "b2-u3-008": {
+  "title": "جدة",
+  "status": "confirmed",
+  "roots": [
+   "جدد"
+  ],
+  "ours": "ج د د",
+  "uncertain": false
+ },
+ "b2-u3-009": {
+  "title": "جيش",
+  "status": "confirmed",
+  "roots": [
+   "جيش"
+  ],
+  "ours": "ج ي ش",
+  "uncertain": false
+ },
+ "b2-u3-010": {
+  "title": "حقوق",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ح ق ق",
+  "uncertain": false
+ },
+ "b2-u3-012": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "د ر س",
+  "uncertain": false
+ },
+ "b2-u3-013": {
+  "title": "دين",
+  "status": "confirmed",
+  "roots": [
+   "دين"
+  ],
+  "ours": "د ي ن",
+  "uncertain": false
+ },
+ "b2-u3-014": {
+  "title": "رسالة",
+  "status": "confirmed",
+  "roots": [
+   "رسل"
+  ],
+  "ours": "ر س ل",
+  "uncertain": false
+ },
+ "b2-u3-015": {
+  "title": "زوج",
+  "status": "confirmed",
+  "roots": [
+   "زوج"
+  ],
+  "ours": "ز و ج",
+  "uncertain": false
+ },
+ "b2-u3-016": {
+  "title": "زوجة",
+  "status": "confirmed",
+  "roots": [
+   "زوج"
+  ],
+  "ours": "ز و ج",
+  "uncertain": false
+ },
+ "b2-u3-017": {
+  "title": "متزوج",
+  "status": "confirmed",
+  "roots": [
+   "زوج"
+  ],
+  "ours": "ز و ج",
+  "uncertain": false
+ },
+ "b2-u3-018": {
+  "title": "صورة",
+  "status": "confirmed",
+  "roots": [
+   "صور"
+  ],
+  "ours": "ص و ر",
+  "uncertain": false
+ },
+ "b2-u3-019": {
+  "title": "ضابط",
+  "status": "confirmed",
+  "roots": [
+   "ضبط"
+  ],
+  "ours": "ض ب ط",
+  "uncertain": false
+ },
+ "b2-u3-020": {
+  "title": "الطب",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ط ب ب",
+  "uncertain": false
+ },
+ "b2-u3-021": {
+  "title": "أعرف",
+  "status": "confirmed",
+  "roots": [
+   "عرف"
+  ],
+  "ours": "ع ر ف",
+  "uncertain": false
+ },
+ "b2-u3-022": {
+  "title": "علم",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b2-u3-026": {
+  "title": "عم",
+  "status": "confirmed",
+  "roots": [
+   "عمم"
+  ],
+  "ours": "ع م م",
+  "uncertain": false
+ },
+ "b2-u3-027": {
+  "title": "عائلة",
+  "status": "confirmed",
+  "roots": [
+   "عول"
+  ],
+  "ours": "ع و ل",
+  "uncertain": true
+ },
+ "b2-u3-028": {
+  "title": "قريب",
+  "status": "confirmed",
+  "roots": [
+   "قرب"
+  ],
+  "ours": "ق ر ب",
+  "uncertain": false
+ },
+ "b2-u3-029": {
+  "title": "كلية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ك ل ل",
+  "uncertain": false
+ },
+ "b2-u3-031": {
+  "title": "هندسة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ه ن د س",
+  "uncertain": false
+ },
+ "b2-u4-001": {
+  "title": "أكل",
+  "status": "confirmed",
+  "roots": [
+   "ءكل",
+   "كلل"
+  ],
+  "ours": "ء ك ل",
+  "uncertain": false
+ },
+ "b2-u4-002": {
+  "title": "أمس",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ء م س",
+  "uncertain": false
+ },
+ "b2-u4-003": {
+  "title": "أول",
+  "status": "confirmed",
+  "roots": [
+   "ءول"
+  ],
+  "ours": "ء و ل",
+  "uncertain": false
+ },
+ "b2-u4-004": {
+  "title": "ابتدائي",
+  "status": "confirmed",
+  "roots": [
+   "بدء"
+  ],
+  "ours": "ب د ء",
+  "uncertain": false
+ },
+ "b2-u4-005": {
+  "title": "أحفظ",
+  "status": "confirmed",
+  "roots": [
+   "حفظ"
+  ],
+  "ours": "ح ف ظ",
+  "uncertain": false
+ },
+ "b2-u4-006": {
+  "title": "حلويات",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ح ل و",
+  "uncertain": false
+ },
+ "b2-u4-007": {
+  "title": "خضار",
+  "status": "confirmed",
+  "roots": [
+   "خضر"
+  ],
+  "ours": "خ ض ر",
+  "uncertain": false
+ },
+ "b2-u4-008": {
+  "title": "مدرسة",
+  "status": "confirmed",
+  "roots": [
+   "درس"
+  ],
+  "ours": "د ر س",
+  "uncertain": false
+ },
+ "b2-u4-009": {
+  "title": "أتذكر",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ذ ك ر",
+  "uncertain": false
+ },
+ "b2-u4-010": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ز م ل",
+  "uncertain": false
+ },
+ "b2-u4-011": {
+  "title": "سفر",
+  "status": "confirmed",
+  "roots": [
+   "سفر"
+  ],
+  "ours": "س ف ر",
+  "uncertain": false
+ },
+ "b2-u4-012": {
+  "title": "أسافر",
+  "status": "no-page",
+  "roots": [],
+  "ours": "س ف ر",
+  "uncertain": false
+ },
+ "b2-u4-013": {
+  "title": "سلطة",
+  "status": "confirmed",
+  "roots": [
+   "سلط"
+  ],
+  "ours": "س ل ط",
+  "uncertain": false
+ },
+ "b2-u4-014": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "س م ع",
+  "uncertain": false
+ },
+ "b2-u4-015": {
+  "title": "سمك",
+  "status": "confirmed",
+  "roots": [
+   "سمك"
+  ],
+  "ours": "س م ك",
+  "uncertain": false
+ },
+ "b2-u4-017": {
+  "title": "صديق",
+  "status": "confirmed",
+  "roots": [
+   "صدق"
+  ],
+  "ours": "ص د ق",
+  "uncertain": false
+ },
+ "b2-u4-018": {
+  "title": "صديقة",
+  "status": "confirmed",
+  "roots": [
+   "صدق"
+  ],
+  "ours": "ص د ق",
+  "uncertain": false
+ },
+ "b2-u4-019": {
+  "title": "طفولة",
+  "status": "confirmed",
+  "roots": [
+   "طفل"
+  ],
+  "ours": "ط ف ل",
+  "uncertain": false
+ },
+ "b2-u4-020": {
+  "title": "مطعم",
+  "status": "confirmed",
+  "roots": [
+   "طعم"
+  ],
+  "ours": "ط ع م",
+  "uncertain": false
+ },
+ "b2-u4-021": {
+  "title": "فرد",
+  "status": "confirmed",
+  "roots": [
+   "فرد"
+  ],
+  "ours": "ف ر د",
+  "uncertain": false
+ },
+ "b2-u4-022": {
+  "title": "فواكه",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ك ه",
+  "uncertain": false
+ },
+ "b2-u4-024": {
+  "title": "قرأ",
+  "status": "confirmed",
+  "roots": [
+   "قرء"
+  ],
+  "ours": "ق ر ء",
+  "uncertain": false
+ },
+ "b2-u4-025": {
+  "title": "قال",
+  "status": "confirmed",
+  "roots": [
+   "قول",
+   "قيل"
+  ],
+  "ours": "ق و ل",
+  "uncertain": false
+ },
+ "b2-u4-026": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ك ت ب",
+  "uncertain": false
+ },
+ "b2-u4-028": {
+  "title": "كان",
+  "status": "confirmed",
+  "roots": [
+   "كون"
+  ],
+  "ours": "ك و ن",
+  "uncertain": false
+ },
+ "b2-u4-029": {
+  "title": "كان",
+  "status": "confirmed",
+  "roots": [
+   "كون"
+  ],
+  "ours": "ك و ن",
+  "uncertain": false
+ },
+ "b2-u4-030": {
+  "title": "لحم",
+  "status": "confirmed",
+  "roots": [
+   "لحم"
+  ],
+  "ours": "ل ح م",
+  "uncertain": false
+ },
+ "b2-u5-002": {
+  "title": "بارد",
+  "status": "confirmed",
+  "roots": [
+   "برد"
+  ],
+  "ours": "ب ر د",
+  "uncertain": false
+ },
+ "b2-u5-003": {
+  "title": "ثلج",
+  "status": "confirmed",
+  "roots": [
+   "ثلج"
+  ],
+  "ours": "ث ل ج",
+  "uncertain": false
+ },
+ "b2-u5-004": {
+  "title": "جدا",
+  "status": "confirmed",
+  "roots": [
+   "جدد"
+  ],
+  "ours": "ج د د",
+  "uncertain": false
+ },
+ "b2-u5-005": {
+  "title": "الجو",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج و و",
+  "uncertain": false
+ },
+ "b2-u5-006": {
+  "title": "طقس",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ط ق س",
+  "uncertain": false
+ },
+ "b2-u5-007": {
+  "title": "جيدا",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج و د",
+  "uncertain": false
+ },
+ "b2-u5-008": {
+  "title": "حار",
+  "status": "confirmed",
+  "roots": [
+   "حرر",
+   "حور"
+  ],
+  "ours": "ح ر ر",
+  "uncertain": false
+ },
+ "b2-u5-009": {
+  "title": "أحسن",
+  "status": "confirmed",
+  "roots": [
+   "حسن"
+  ],
+  "ours": "ح س ن",
+  "uncertain": false
+ },
+ "b2-u5-010": {
+  "title": "أحيانا",
+  "status": "confirmed",
+  "roots": [
+   "حين"
+  ],
+  "ours": "ح ي ن",
+  "uncertain": false
+ },
+ "b2-u5-011": {
+  "title": "خريف",
+  "status": "confirmed",
+  "roots": [
+   "خرف"
+  ],
+  "ours": "خ ر ف",
+  "uncertain": false
+ },
+ "b2-u5-012": {
+  "title": "درجة",
+  "status": "confirmed",
+  "roots": [
+   "درج"
+  ],
+  "ours": "د ر ج",
+  "uncertain": false
+ },
+ "b2-u5-014": {
+  "title": "ربيع",
+  "status": "confirmed",
+  "roots": [
+   "ربع"
+  ],
+  "ours": "ر ب ع",
+  "uncertain": false
+ },
+ "b2-u5-015": {
+  "title": "رطوبة",
+  "status": "confirmed",
+  "roots": [
+   "رطب"
+  ],
+  "ours": "ر ط ب",
+  "uncertain": false
+ },
+ "b2-u5-016": {
+  "title": "ازدحام",
+  "status": "confirmed",
+  "roots": [
+   "زحم"
+  ],
+  "ours": "ز ح م",
+  "uncertain": false
+ },
+ "b2-u5-018": {
+  "title": "شتاء",
+  "status": "confirmed",
+  "roots": [
+   "شتو"
+  ],
+  "ours": "ش ت و",
+  "uncertain": false
+ },
+ "b2-u5-019": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ش ع ر",
+  "uncertain": false
+ },
+ "b2-u5-020": {
+  "title": "مشمس",
+  "status": "confirmed",
+  "roots": [
+   "شمس"
+  ],
+  "ours": "ش م س",
+  "uncertain": false
+ },
+ "b2-u5-021": {
+  "title": "صيف",
+  "status": "confirmed",
+  "roots": [
+   "صفو",
+   "صيف"
+  ],
+  "ours": "ص ي ف",
+  "uncertain": false
+ },
+ "b2-u5-022": {
+  "title": "عالي",
+  "status": "differs",
+  "roots": [
+   "علي"
+  ],
+  "ours": "ع ل و",
+  "uncertain": false
+ },
+ "b2-u5-023": {
+  "title": "غائم",
+  "status": "confirmed",
+  "roots": [
+   "غيم"
+  ],
+  "ours": "غ ي م",
+  "uncertain": false
+ },
+ "b2-u5-024": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ص ل",
+  "uncertain": false
+ },
+ "b2-u5-026": {
+  "title": "فقط",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ق ط",
+  "uncertain": true
+ },
+ "b2-u5-027": {
+  "title": "قليلا",
+  "status": "confirmed",
+  "roots": [
+   "قلل"
+  ],
+  "ours": "ق ل ل",
+  "uncertain": false
+ },
+ "b2-u5-028": {
+  "title": "كثيرا",
+  "status": "confirmed",
+  "roots": [
+   "كثر"
+  ],
+  "ours": "ك ث ر",
+  "uncertain": false
+ },
+ "b2-u5-029": {
+  "title": "مطر",
+  "status": "confirmed",
+  "roots": [
+   "مطر"
+  ],
+  "ours": "م ط ر",
+  "uncertain": false
+ },
+ "b2-u5-031": {
+  "title": "وحدة",
+  "status": "confirmed",
+  "roots": [
+   "وحد"
+  ],
+  "ours": "و ح د",
+  "uncertain": false
+ },
+ "b2-u6-003": {
+  "title": "تجارة",
+  "status": "confirmed",
+  "roots": [
+   "تجر"
+  ],
+  "ours": "ت ج ر",
+  "uncertain": false
+ },
+ "b2-u6-004": {
+  "title": "جري",
+  "status": "confirmed",
+  "roots": [
+   "جري"
+  ],
+  "ours": "ج ر ي",
+  "uncertain": false
+ },
+ "b2-u6-005": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ح ص ل",
+  "uncertain": false
+ },
+ "b2-u6-006": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ح ص ل",
+  "uncertain": false
+ },
+ "b2-u6-007": {
+  "title": "محاضرة",
+  "status": "confirmed",
+  "roots": [
+   "حضر"
+  ],
+  "ours": "ح ض ر",
+  "uncertain": false
+ },
+ "b2-u6-008": {
+  "title": "حياة",
+  "status": "differs",
+  "roots": [
+   "حيو"
+  ],
+  "ours": "ح ي ي",
+  "uncertain": false
+ },
+ "b2-u6-009": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "خ ر ج",
+  "uncertain": false
+ },
+ "b2-u6-010": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "خ ر ج",
+  "uncertain": false
+ },
+ "b2-u6-012": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ذ ه ب",
+  "uncertain": false
+ },
+ "b2-u6-013": {
+  "title": "رقص",
+  "status": "confirmed",
+  "roots": [
+   "رقص"
+  ],
+  "ours": "ر ق ص",
+  "uncertain": false
+ },
+ "b2-u6-014": {
+  "title": "رياضة",
+  "status": "confirmed",
+  "roots": [
+   "روض"
+  ],
+  "ours": "ر و ض",
+  "uncertain": false
+ },
+ "b2-u6-015": {
+  "title": "سباحة",
+  "status": "confirmed",
+  "roots": [
+   "سبح"
+  ],
+  "ours": "س ب ح",
+  "uncertain": false
+ },
+ "b2-u6-016": {
+  "title": "أسبوع",
+  "status": "confirmed",
+  "roots": [
+   "سبع"
+  ],
+  "ours": "س ب ع",
+  "uncertain": false
+ },
+ "b2-u6-017": {
+  "title": "سنتان",
+  "status": "no-page",
+  "roots": [],
+  "ours": "س ن و",
+  "uncertain": false
+ },
+ "b2-u6-018": {
+  "title": "شركة",
+  "status": "confirmed",
+  "roots": [
+   "شرك"
+  ],
+  "ours": "ش ر ك",
+  "uncertain": false
+ },
+ "b2-u6-019": {
+  "title": "تصوير",
+  "status": "confirmed",
+  "roots": [
+   "صور"
+  ],
+  "ours": "ص و ر",
+  "uncertain": false
+ },
+ "b2-u6-020": {
+  "title": "معيد",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b2-u6-027": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ل ع ب",
+  "uncertain": false
+ },
+ "b2-u6-030": {
+  "title": "هواية",
+  "status": "confirmed",
+  "roots": [
+   "هوي"
+  ],
+  "ours": "ه و ي",
+  "uncertain": false
+ },
+ "b2-u6-031": {
+  "title": "يوم",
+  "status": "confirmed",
+  "roots": [
+   "يوم"
+  ],
+  "ours": "ي و م",
+  "uncertain": false
+ },
+ "b2-u7-001": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ء و ل",
+  "uncertain": false
+ },
+ "b2-u7-002": {
+  "title": "ثانوي",
+  "status": "confirmed",
+  "roots": [
+   "ثني"
+  ],
+  "ours": "ث ن ي",
+  "uncertain": false
+ },
+ "b2-u7-003": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج ن ن",
+  "uncertain": false
+ },
+ "b2-u7-004": {
+  "title": "حادث",
+  "status": "confirmed",
+  "roots": [
+   "حدث"
+  ],
+  "ours": "ح د ث",
+  "uncertain": false
+ },
+ "b2-u7-005": {
+  "title": "محزن",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ح ز ن",
+  "uncertain": false
+ },
+ "b2-u7-006": {
+  "title": "خارجية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "خ ر ج",
+  "uncertain": false
+ },
+ "b2-u7-009": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ش ف ي",
+  "uncertain": false
+ },
+ "b2-u7-010": {
+  "title": "إعدادي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع د د",
+  "uncertain": false
+ },
+ "b2-u7-011": {
+  "title": "عام",
+  "status": "confirmed",
+  "roots": [
+   "عوم",
+   "عمم"
+  ],
+  "ours": "ع م م",
+  "uncertain": false
+ },
+ "b2-u7-012": {
+  "title": "عاش",
+  "status": "confirmed",
+  "roots": [
+   "عيش"
+  ],
+  "ours": "ع ي ش",
+  "uncertain": false
+ },
+ "b2-u7-013": {
+  "title": "اقتصاد",
+  "status": "confirmed",
+  "roots": [
+   "قصد"
+  ],
+  "ours": "ق ص د",
+  "uncertain": false
+ },
+ "b2-u7-014": {
+  "title": "أكبر",
+  "status": "confirmed",
+  "roots": [
+   "كبر"
+  ],
+  "ours": "ك ب ر",
+  "uncertain": false
+ },
+ "b2-u7-015": {
+  "title": "مات",
+  "status": "confirmed",
+  "roots": [
+   "موت"
+  ],
+  "ours": "م و ت",
+  "uncertain": false
+ },
+ "b2-u7-016": {
+  "title": "مات",
+  "status": "confirmed",
+  "roots": [
+   "موت"
+  ],
+  "ours": "م و ت",
+  "uncertain": false
+ },
+ "b2-u7-017": {
+  "title": "مال",
+  "status": "confirmed",
+  "roots": [
+   "ميل",
+   "مول"
+  ],
+  "ours": "م و ل",
+  "uncertain": false
+ },
+ "b2-u7-018": {
+  "title": "وزارة",
+  "status": "confirmed",
+  "roots": [
+   "وزر"
+  ],
+  "ours": "و ز ر",
+  "uncertain": false
+ },
+ "b2-u8-001": {
+  "title": "أم",
+  "status": "confirmed",
+  "roots": [
+   "ءمم"
+  ],
+  "ours": "ء م م",
+  "uncertain": false
+ },
+ "b2-u8-003": {
+  "title": "حصل",
+  "status": "confirmed",
+  "roots": [
+   "حصل"
+  ],
+  "ours": "ح ص ل",
+  "uncertain": false
+ },
+ "b2-u8-004": {
+  "title": "حكومة",
+  "status": "confirmed",
+  "roots": [
+   "حكم"
+  ],
+  "ours": "ح ك م",
+  "uncertain": false
+ },
+ "b2-u8-005": {
+  "title": "دخل",
+  "status": "confirmed",
+  "roots": [
+   "دخل"
+  ],
+  "ours": "د خ ل",
+  "uncertain": false
+ },
+ "b2-u8-006": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "د خ ل",
+  "uncertain": false
+ },
+ "b2-u8-007": {
+  "title": "دولة",
+  "status": "confirmed",
+  "roots": [
+   "دول"
+  ],
+  "ours": "د و ل",
+  "uncertain": false
+ },
+ "b2-u8-008": {
+  "title": "دولي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "د و ل",
+  "uncertain": false
+ },
+ "b2-u8-009": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ذ ك ر",
+  "uncertain": false
+ },
+ "b2-u8-010": {
+  "title": "رئيس",
+  "status": "confirmed",
+  "roots": [
+   "رءس"
+  ],
+  "ours": "ر ء س",
+  "uncertain": false
+ },
+ "b2-u8-012": {
+  "title": "رأي",
+  "status": "confirmed",
+  "roots": [
+   "رءي"
+  ],
+  "ours": "ر ء ي",
+  "uncertain": false
+ },
+ "b2-u8-013": {
+  "title": "رفض",
+  "status": "confirmed",
+  "roots": [
+   "رفض"
+  ],
+  "ours": "ر ف ض",
+  "uncertain": false
+ },
+ "b2-u8-014": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ر ف ض",
+  "uncertain": false
+ },
+ "b2-u8-015": {
+  "title": "أراد",
+  "status": "confirmed",
+  "roots": [
+   "رود"
+  ],
+  "ours": "ر و د",
+  "uncertain": false
+ },
+ "b2-u8-016": {
+  "title": "أراد",
+  "status": "confirmed",
+  "roots": [
+   "رود"
+  ],
+  "ours": "ر و د",
+  "uncertain": false
+ },
+ "b2-u8-017": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "س ع د",
+  "uncertain": false
+ },
+ "b2-u8-020": {
+  "title": "مستقبل",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b2-u8-022": {
+  "title": "التحق",
+  "status": "confirmed",
+  "roots": [
+   "لحق"
+  ],
+  "ours": "ل ح ق",
+  "uncertain": false
+ },
+ "b2-u8-023": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ل ح ق",
+  "uncertain": false
+ },
+ "b2-u8-025": {
+  "title": "ماضي",
+  "status": "confirmed",
+  "roots": [
+   "مضي"
+  ],
+  "ours": "م ض ي",
+  "uncertain": false
+ },
+ "b2-u8-026": {
+  "title": "نجح",
+  "status": "confirmed",
+  "roots": [
+   "نجح"
+  ],
+  "ours": "ن ج ح",
+  "uncertain": false
+ },
+ "b2-u8-027": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن ج ح",
+  "uncertain": false
+ },
+ "b2-u9-001": {
+  "title": "آخر",
+  "status": "confirmed",
+  "roots": [
+   "ءخر"
+  ],
+  "ours": "ء خ ر",
+  "uncertain": false
+ },
+ "b2-u9-003": {
+  "title": "بدأ",
+  "status": "confirmed",
+  "roots": [
+   "بدء"
+  ],
+  "ours": "ب د ء",
+  "uncertain": false
+ },
+ "b2-u9-005": {
+  "title": "بعض",
+  "status": "confirmed",
+  "roots": [
+   "بعض"
+  ],
+  "ours": "ب ع ض",
+  "uncertain": false
+ },
+ "b2-u9-007": {
+  "title": "جريدة",
+  "status": "confirmed",
+  "roots": [
+   "جرد"
+  ],
+  "ours": "ج ر د",
+  "uncertain": false
+ },
+ "b2-u9-008": {
+  "title": "جلس",
+  "status": "confirmed",
+  "roots": [
+   "جلس"
+  ],
+  "ours": "ج ل س",
+  "uncertain": false
+ },
+ "b2-u9-010": {
+  "title": "خرج",
+  "status": "confirmed",
+  "roots": [
+   "خرج"
+  ],
+  "ours": "خ ر ج",
+  "uncertain": false
+ },
+ "b2-u9-011": {
+  "title": "خاص",
+  "status": "confirmed",
+  "roots": [
+   "خصص"
+  ],
+  "ours": "خ ص ص",
+  "uncertain": false
+ },
+ "b2-u9-012": {
+  "title": "دخن",
+  "status": "confirmed",
+  "roots": [
+   "دخن"
+  ],
+  "ours": "د خ ن",
+  "uncertain": false
+ },
+ "b2-u9-013": {
+  "title": "سادس",
+  "status": "confirmed",
+  "roots": [
+   "سدس"
+  ],
+  "ours": "س د س",
+  "uncertain": false
+ },
+ "b2-u9-015": {
+  "title": "استطاع",
+  "status": "confirmed",
+  "roots": [
+   "طوع"
+  ],
+  "ours": "ط و ع",
+  "uncertain": false
+ },
+ "b2-u9-016": {
+  "title": "ظهر",
+  "status": "confirmed",
+  "roots": [
+   "ظهر"
+  ],
+  "ours": "ظ ه ر",
+  "uncertain": false
+ },
+ "b2-u9-018": {
+  "title": "عشاء",
+  "status": "confirmed",
+  "roots": [
+   "عشو"
+  ],
+  "ours": "ع ش و",
+  "uncertain": false
+ },
+ "b2-u9-019": {
+  "title": "عالم",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b2-u9-020": {
+  "title": "عاد",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b2-u9-021": {
+  "title": "عين",
+  "status": "confirmed",
+  "roots": [
+   "عين"
+  ],
+  "ours": "ع ي ن",
+  "uncertain": false
+ },
+ "b2-u9-022": {
+  "title": "غداء",
+  "status": "confirmed",
+  "roots": [
+   "غدو"
+  ],
+  "ours": "غ د و",
+  "uncertain": false
+ },
+ "b2-u9-023": {
+  "title": "مفضل",
+  "status": "confirmed",
+  "roots": [
+   "فضل"
+  ],
+  "ours": "ف ض ل",
+  "uncertain": false
+ },
+ "b2-u9-024": {
+  "title": "فطر",
+  "status": "confirmed",
+  "roots": [
+   "فطر"
+  ],
+  "ours": "ف ط ر",
+  "uncertain": false
+ },
+ "b2-u9-025": {
+  "title": "نادي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن د و",
+  "uncertain": false
+ },
+ "b2-u9-026": {
+  "title": "نزل",
+  "status": "confirmed",
+  "roots": [
+   "نزل"
+  ],
+  "ours": "ن ز ل",
+  "uncertain": false
+ },
+ "b2-u9-027": {
+  "title": "نصف",
+  "status": "confirmed",
+  "roots": [
+   "نصف"
+  ],
+  "ours": "ن ص ف",
+  "uncertain": false
+ },
+ "b2-u9-028": {
+  "title": "موضوع",
+  "status": "confirmed",
+  "roots": [
+   "وضع"
+  ],
+  "ours": "و ض ع",
+  "uncertain": false
+ },
+ "b2-u9-029": {
+  "title": "أيقظ",
+  "status": "confirmed",
+  "roots": [
+   "يقظ"
+  ],
+  "ours": "ي ق ظ",
+  "uncertain": false
+ },
+ "b2-u10-001": {
+  "title": "متأخر",
+  "status": "confirmed",
+  "roots": [
+   "ءخر"
+  ],
+  "ours": "ء خ ر",
+  "uncertain": false
+ },
+ "b2-u10-003": {
+  "title": "مباراة",
+  "status": "confirmed",
+  "roots": [
+   "بري"
+  ],
+  "ours": "ب ر ي",
+  "uncertain": false
+ },
+ "b2-u10-004": {
+  "title": "جامع",
+  "status": "confirmed",
+  "roots": [
+   "جمع"
+  ],
+  "ours": "ج م ع",
+  "uncertain": false
+ },
+ "b2-u10-005": {
+  "title": "جاء",
+  "status": "confirmed",
+  "roots": [
+   "جيء"
+  ],
+  "ours": "ج ي ء",
+  "uncertain": false
+ },
+ "b2-u10-006": {
+  "title": "مرتب",
+  "status": "confirmed",
+  "roots": [
+   "رتب"
+  ],
+  "ours": "ر ت ب",
+  "uncertain": false
+ },
+ "b2-u10-007": {
+  "title": "استراحة",
+  "status": "confirmed",
+  "roots": [
+   "روح"
+  ],
+  "ours": "ر و ح",
+  "uncertain": false
+ },
+ "b2-u10-008": {
+  "title": "بسرعة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "س ر ع",
+  "uncertain": false
+ },
+ "b2-u10-009": {
+  "title": "سهر",
+  "status": "confirmed",
+  "roots": [
+   "سهر"
+  ],
+  "ours": "س ه ر",
+  "uncertain": false
+ },
+ "b2-u10-010": {
+  "title": "أصبح",
+  "status": "confirmed",
+  "roots": [
+   "صبح"
+  ],
+  "ours": "ص ب ح",
+  "uncertain": false
+ },
+ "b2-u10-011": {
+  "title": "صحا",
+  "status": "confirmed",
+  "roots": [
+   "صحو"
+  ],
+  "ours": "ص ح و",
+  "uncertain": false
+ },
+ "b2-u10-012": {
+  "title": "بصراحة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ص ر ح",
+  "uncertain": false
+ },
+ "b2-u10-013": {
+  "title": "صلاة",
+  "status": "confirmed",
+  "roots": [
+   "صلو"
+  ],
+  "ours": "ص ل و",
+  "uncertain": false
+ },
+ "b2-u10-014": {
+  "title": "صلى",
+  "status": "confirmed",
+  "roots": [
+   "صلو",
+   "صلي"
+  ],
+  "ours": "ص ل و",
+  "uncertain": false
+ },
+ "b2-u10-015": {
+  "title": "عادة",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b2-u10-016": {
+  "title": "فهم",
+  "status": "confirmed",
+  "roots": [
+   "فهم"
+  ],
+  "ours": "ف ه م",
+  "uncertain": false
+ },
+ "b2-u10-017": {
+  "title": "قابل",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b2-u10-018": {
+  "title": "مقابلة",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b2-u10-019": {
+  "title": "أكثر",
+  "status": "confirmed",
+  "roots": [
+   "كثر"
+  ],
+  "ours": "ك ث ر",
+  "uncertain": false
+ },
+ "b2-u10-020": {
+  "title": "كان",
+  "status": "confirmed",
+  "roots": [
+   "كون"
+  ],
+  "ours": "ك و ن",
+  "uncertain": false
+ },
+ "b2-u10-021": {
+  "title": "ليلة",
+  "status": "confirmed",
+  "roots": [
+   "ليل"
+  ],
+  "ours": "ل ي ل",
+  "uncertain": false
+ },
+ "b2-u10-022": {
+  "title": "ليلة",
+  "status": "confirmed",
+  "roots": [
+   "ليل"
+  ],
+  "ours": "ل ي ل",
+  "uncertain": false
+ },
+ "b2-u10-023": {
+  "title": "استمتع",
+  "status": "confirmed",
+  "roots": [
+   "متع"
+  ],
+  "ours": "م ت ع",
+  "uncertain": false
+ },
+ "b2-u10-024": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "م ش ي",
+  "uncertain": false
+ },
+ "b2-u10-026": {
+  "title": "ممل",
+  "status": "confirmed",
+  "roots": [
+   "ملل"
+  ],
+  "ours": "م ل ل",
+  "uncertain": false
+ },
+ "b2-u10-027": {
+  "title": "ملك",
+  "status": "confirmed",
+  "roots": [
+   "ملك"
+  ],
+  "ours": "م ل ك",
+  "uncertain": false
+ },
+ "b2-u10-028": {
+  "title": "نام",
+  "status": "confirmed",
+  "roots": [
+   "نوم"
+  ],
+  "ours": "ن و م",
+  "uncertain": false
+ },
+ "b2-u10-029": {
+  "title": "موعد",
+  "status": "confirmed",
+  "roots": [
+   "وعد"
+  ],
+  "ours": "و ع د",
+  "uncertain": false
+ },
+ "b2-u10-030": {
+  "title": "وقت",
+  "status": "confirmed",
+  "roots": [
+   "وقت",
+   "وقط",
+   "قتت"
+  ],
+  "ours": "و ق ت",
+  "uncertain": false
+ },
+ "b2-u11-003": {
+  "title": "بحر",
+  "status": "confirmed",
+  "roots": [
+   "بحر"
+  ],
+  "ours": "ب ح ر",
+  "uncertain": false
+ },
+ "b2-u11-004": {
+  "title": "تبادل",
+  "status": "confirmed",
+  "roots": [
+   "بدل"
+  ],
+  "ours": "ب د ل",
+  "uncertain": false
+ },
+ "b2-u11-006": {
+  "title": "جبل",
+  "status": "confirmed",
+  "roots": [
+   "جبل"
+  ],
+  "ours": "ج ب ل",
+  "uncertain": false
+ },
+ "b2-u11-007": {
+  "title": "تجربة",
+  "status": "confirmed",
+  "roots": [
+   "جرب"
+  ],
+  "ours": "ج ر ب",
+  "uncertain": false
+ },
+ "b2-u11-008": {
+  "title": "تجمع",
+  "status": "confirmed",
+  "roots": [
+   "جمع"
+  ],
+  "ours": "ج م ع",
+  "uncertain": false
+ },
+ "b2-u11-009": {
+  "title": "جولة",
+  "status": "confirmed",
+  "roots": [
+   "جول"
+  ],
+  "ours": "ج و ل",
+  "uncertain": false
+ },
+ "b2-u11-010": {
+  "title": "خجل",
+  "status": "confirmed",
+  "roots": [
+   "خجل"
+  ],
+  "ours": "خ ج ل",
+  "uncertain": false
+ },
+ "b2-u11-011": {
+  "title": "خطبت",
+  "status": "no-page",
+  "roots": [],
+  "ours": "خ ط ب",
+  "uncertain": false
+ },
+ "b2-u11-012": {
+  "title": "سياحة",
+  "status": "confirmed",
+  "roots": [
+   "سيح"
+  ],
+  "ours": "س ي ح",
+  "uncertain": false
+ },
+ "b2-u11-013": {
+  "title": "سوق",
+  "status": "confirmed",
+  "roots": [
+   "سوق"
+  ],
+  "ours": "س و ق",
+  "uncertain": false
+ },
+ "b2-u11-014": {
+  "title": "صيدلية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ص ي د ل",
+  "uncertain": true
+ },
+ "b2-u11-015": {
+  "title": "عدة",
+  "status": "confirmed",
+  "roots": [
+   "عدد"
+  ],
+  "ours": "ع د د",
+  "uncertain": false
+ },
+ "b2-u11-016": {
+  "title": "تعرف",
+  "status": "confirmed",
+  "roots": [
+   "عرف"
+  ],
+  "ours": "ع ر ف",
+  "uncertain": false
+ },
+ "b2-u11-017": {
+  "title": "عاطفي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع ط ف",
+  "uncertain": false
+ },
+ "b2-u11-018": {
+  "title": "معظم",
+  "status": "confirmed",
+  "roots": [
+   "عظم"
+  ],
+  "ours": "ع ظ م",
+  "uncertain": false
+ },
+ "b2-u11-019": {
+  "title": "علاقة",
+  "status": "confirmed",
+  "roots": [
+   "علق"
+  ],
+  "ours": "ع ل ق",
+  "uncertain": false
+ },
+ "b2-u11-020": {
+  "title": "علاقات",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع ل ق",
+  "uncertain": false
+ },
+ "b2-u11-022": {
+  "title": "غالي",
+  "status": "differs",
+  "roots": [
+   "غلي"
+  ],
+  "ours": "غ ل و",
+  "uncertain": false
+ },
+ "b2-u11-024": {
+  "title": "انقطع",
+  "status": "confirmed",
+  "roots": [
+   "قطع"
+  ],
+  "ours": "ق ط ع",
+  "uncertain": false
+ },
+ "b2-u11-025": {
+  "title": "مرة",
+  "status": "confirmed",
+  "roots": [
+   "مرر"
+  ],
+  "ours": "م ر ر",
+  "uncertain": false
+ },
+ "b2-u11-028": {
+  "title": "مهندس",
+  "status": "confirmed",
+  "roots": [
+   "هندس"
+  ],
+  "ours": "ه ن د س",
+  "uncertain": true
+ },
+ "b2-u12-001": {
+  "title": "أخذ",
+  "status": "confirmed",
+  "roots": [
+   "ءخذ"
+  ],
+  "ours": "ء خ ذ",
+  "uncertain": false
+ },
+ "b2-u12-002": {
+  "title": "آخر",
+  "status": "confirmed",
+  "roots": [
+   "ءخر"
+  ],
+  "ours": "ء خ ر",
+  "uncertain": false
+ },
+ "b2-u12-003": {
+  "title": "جميعا",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج م ع",
+  "uncertain": false
+ },
+ "b2-u12-004": {
+  "title": "إجازة",
+  "status": "confirmed",
+  "roots": [
+   "جوز"
+  ],
+  "ours": "ج و ز",
+  "uncertain": false
+ },
+ "b2-u12-005": {
+  "title": "مدير",
+  "status": "confirmed",
+  "roots": [
+   "دور"
+  ],
+  "ours": "د و ر",
+  "uncertain": false
+ },
+ "b2-u12-006": {
+  "title": "زار",
+  "status": "confirmed",
+  "roots": [
+   "زور"
+  ],
+  "ours": "ز و ر",
+  "uncertain": false
+ },
+ "b2-u12-009": {
+  "title": "طبعا",
+  "status": "confirmed",
+  "roots": [
+   "طبع"
+  ],
+  "ours": "ط ب ع",
+  "uncertain": false
+ },
+ "b2-u12-010": {
+  "title": "عطلة",
+  "status": "confirmed",
+  "roots": [
+   "عطل"
+  ],
+  "ours": "ع ط ل",
+  "uncertain": false
+ },
+ "b2-u12-011": {
+  "title": "علم",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b2-u12-012": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع ي ن",
+  "uncertain": false
+ },
+ "b2-u12-013": {
+  "title": "تغيب",
+  "status": "confirmed",
+  "roots": [
+   "غيب"
+  ],
+  "ours": "غ ي ب",
+  "uncertain": false
+ },
+ "b2-u12-014": {
+  "title": "قادم",
+  "status": "confirmed",
+  "roots": [
+   "قدم"
+  ],
+  "ours": "ق د م",
+  "uncertain": false
+ },
+ "b2-u12-015": {
+  "title": "قرر",
+  "status": "confirmed",
+  "roots": [
+   "قرر"
+  ],
+  "ours": "ق ر ر",
+  "uncertain": false
+ },
+ "b2-u12-016": {
+  "title": "قرار",
+  "status": "confirmed",
+  "roots": [
+   "قرر"
+  ],
+  "ours": "ق ر ر",
+  "uncertain": false
+ },
+ "b2-u12-017": {
+  "title": "مقارن",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ق ر ن",
+  "uncertain": false
+ },
+ "b2-u12-018": {
+  "title": "قضى",
+  "status": "confirmed",
+  "roots": [
+   "قضي"
+  ],
+  "ours": "ق ض ي",
+  "uncertain": false
+ },
+ "b2-u12-019": {
+  "title": "منحة",
+  "status": "confirmed",
+  "roots": [
+   "منح"
+  ],
+  "ours": "م ن ح",
+  "uncertain": false
+ },
+ "b2-u12-022": {
+  "title": "وفاة",
+  "status": "confirmed",
+  "roots": [
+   "وفي"
+  ],
+  "ours": "و ف ي",
+  "uncertain": false
+ },
+ "b2-u13-001": {
+  "title": "أخيرا",
+  "status": "confirmed",
+  "roots": [
+   "ءخر"
+  ],
+  "ours": "ء خ ر",
+  "uncertain": false
+ },
+ "b2-u13-004": {
+  "title": "مجلة",
+  "status": "confirmed",
+  "roots": [
+   "جلل"
+  ],
+  "ours": "ج ل ل",
+  "uncertain": false
+ },
+ "b2-u13-005": {
+  "title": "حلم",
+  "status": "confirmed",
+  "roots": [
+   "حلم",
+   "مني"
+  ],
+  "ours": "ح ل م",
+  "uncertain": false
+ },
+ "b2-u13-006": {
+  "title": "رجع",
+  "status": "confirmed",
+  "roots": [
+   "رجع"
+  ],
+  "ours": "ر ج ع",
+  "uncertain": false
+ },
+ "b2-u13-007": {
+  "title": "رغب",
+  "status": "confirmed",
+  "roots": [
+   "رغب"
+  ],
+  "ours": "ر غ ب",
+  "uncertain": false
+ },
+ "b2-u13-008": {
+  "title": "زال",
+  "status": "confirmed",
+  "roots": [
+   "زول",
+   "زيل"
+  ],
+  "ours": "ز و ل",
+  "uncertain": false
+ },
+ "b2-u13-009": {
+  "title": "مسرح",
+  "status": "confirmed",
+  "roots": [
+   "سرح"
+  ],
+  "ours": "س ر ح",
+  "uncertain": false
+ },
+ "b2-u13-010": {
+  "title": "شجع",
+  "status": "confirmed",
+  "roots": [
+   "شجع"
+  ],
+  "ours": "ش ج ع",
+  "uncertain": false
+ },
+ "b2-u13-011": {
+  "title": "ظن",
+  "status": "confirmed",
+  "roots": [
+   "ظنن"
+  ],
+  "ours": "ظ ن ن",
+  "uncertain": false
+ },
+ "b2-u13-012": {
+  "title": "عنى",
+  "status": "confirmed",
+  "roots": [
+   "عني"
+  ],
+  "ours": "ع ن ي",
+  "uncertain": false
+ },
+ "b2-u13-013": {
+  "title": "غربة",
+  "status": "confirmed",
+  "roots": [
+   "غرب"
+  ],
+  "ours": "غ ر ب",
+  "uncertain": false
+ },
+ "b2-u13-014": {
+  "title": "فرصة",
+  "status": "confirmed",
+  "roots": [
+   "فرص"
+  ],
+  "ours": "ف ر ص",
+  "uncertain": false
+ },
+ "b2-u13-016": {
+  "title": "فشل",
+  "status": "confirmed",
+  "roots": [
+   "فشل"
+  ],
+  "ours": "ف ش ل",
+  "uncertain": false
+ },
+ "b2-u13-017": {
+  "title": "فصل",
+  "status": "confirmed",
+  "roots": [
+   "فصل"
+  ],
+  "ours": "ف ص ل",
+  "uncertain": false
+ },
+ "b2-u13-018": {
+  "title": "فكر",
+  "status": "confirmed",
+  "roots": [
+   "فكر"
+  ],
+  "ours": "ف ك ر",
+  "uncertain": false
+ },
+ "b2-u13-019": {
+  "title": "استقر",
+  "status": "confirmed",
+  "roots": [
+   "قرر"
+  ],
+  "ours": "ق ر ر",
+  "uncertain": false
+ },
+ "b2-u13-020": {
+  "title": "مقالة",
+  "status": "confirmed",
+  "roots": [
+   "قول"
+  ],
+  "ours": "ق و ل",
+  "uncertain": false
+ },
+ "b2-u13-022": {
+  "title": "مناسب",
+  "status": "confirmed",
+  "roots": [
+   "نسب"
+  ],
+  "ours": "ن س ب",
+  "uncertain": false
+ },
+ "b2-u13-023": {
+  "title": "انتهى",
+  "status": "confirmed",
+  "roots": [
+   "نهي"
+  ],
+  "ours": "ن ه ي",
+  "uncertain": false
+ },
+ "b2-u13-024": {
+  "title": "وجد",
+  "status": "confirmed",
+  "roots": [
+   "وجد"
+  ],
+  "ours": "و ج د",
+  "uncertain": false
+ },
+ "b2-u13-025": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ج د",
+  "uncertain": false
+ },
+ "b2-u13-026": {
+  "title": "وظيفة",
+  "status": "confirmed",
+  "roots": [
+   "وظف"
+  ],
+  "ours": "و ظ ف",
+  "uncertain": false
+ },
+ "b3-u1-001": {
+  "title": "استأجر",
+  "status": "confirmed",
+  "roots": [
+   "ءجر"
+  ],
+  "ours": "ء ج ر",
+  "uncertain": false
+ },
+ "b3-u1-002": {
+  "title": "إيجار",
+  "status": "confirmed",
+  "roots": [
+   "ءجر"
+  ],
+  "ours": "ء ج ر",
+  "uncertain": false
+ },
+ "b3-u1-005": {
+  "title": "بسيط",
+  "status": "confirmed",
+  "roots": [
+   "بسط"
+  ],
+  "ours": "ب س ط",
+  "uncertain": false
+ },
+ "b3-u1-007": {
+  "title": "ترك",
+  "status": "confirmed",
+  "roots": [
+   "ترك"
+  ],
+  "ours": "ت ر ك",
+  "uncertain": false
+ },
+ "b3-u1-008": {
+  "title": "جانب",
+  "status": "confirmed",
+  "roots": [
+   "جنب"
+  ],
+  "ours": "ج ن ب",
+  "uncertain": false
+ },
+ "b3-u1-010": {
+  "title": "جيل",
+  "status": "confirmed",
+  "roots": [
+   "جيل"
+  ],
+  "ours": "ج ي ل",
+  "uncertain": false
+ },
+ "b3-u1-011": {
+  "title": "حديقة",
+  "status": "confirmed",
+  "roots": [
+   "حدق"
+  ],
+  "ours": "ح د ق",
+  "uncertain": false
+ },
+ "b3-u1-013": {
+  "title": "حل",
+  "status": "confirmed",
+  "roots": [
+   "حلل"
+  ],
+  "ours": "ح ل ل",
+  "uncertain": false
+ },
+ "b3-u1-014": {
+  "title": "حمام",
+  "status": "confirmed",
+  "roots": [
+   "حمم"
+  ],
+  "ours": "ح م م",
+  "uncertain": false
+ },
+ "b3-u1-015": {
+  "title": "حماة",
+  "status": "confirmed",
+  "roots": [
+   "حمو"
+  ],
+  "ours": "ح م و",
+  "uncertain": false
+ },
+ "b3-u1-016": {
+  "title": "خلاف",
+  "status": "confirmed",
+  "roots": [
+   "خلف"
+  ],
+  "ours": "خ ل ف",
+  "uncertain": false
+ },
+ "b3-u1-017": {
+  "title": "الرب",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ر ب ب",
+  "uncertain": false
+ },
+ "b3-u1-018": {
+  "title": "سفرة",
+  "status": "confirmed",
+  "roots": [
+   "سفر"
+  ],
+  "ours": "س ف ر",
+  "uncertain": false
+ },
+ "b3-u1-019": {
+  "title": "شقة",
+  "status": "confirmed",
+  "roots": [
+   "شقق"
+  ],
+  "ours": "ش ق ق",
+  "uncertain": false
+ },
+ "b3-u1-020": {
+  "title": "طبخ",
+  "status": "confirmed",
+  "roots": [
+   "طبخ"
+  ],
+  "ours": "ط ب خ",
+  "uncertain": false
+ },
+ "b3-u1-021": {
+  "title": "مطبخ",
+  "status": "confirmed",
+  "roots": [
+   "طبخ"
+  ],
+  "ours": "ط ب خ",
+  "uncertain": false
+ },
+ "b3-u1-022": {
+  "title": "طابق",
+  "status": "confirmed",
+  "roots": [
+   "طبق"
+  ],
+  "ours": "ط ب ق",
+  "uncertain": false
+ },
+ "b3-u1-023": {
+  "title": "طلاق",
+  "status": "confirmed",
+  "roots": [
+   "طلق"
+  ],
+  "ours": "ط ل ق",
+  "uncertain": false
+ },
+ "b3-u1-024": {
+  "title": "أعد",
+  "status": "confirmed",
+  "roots": [
+   "عدد"
+  ],
+  "ours": "ع د د",
+  "uncertain": false
+ },
+ "b3-u1-025": {
+  "title": "عدم",
+  "status": "confirmed",
+  "roots": [
+   "عدم"
+  ],
+  "ours": "ع د م",
+  "uncertain": false
+ },
+ "b3-u1-026": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ض و",
+  "uncertain": true
+ },
+ "b3-u1-028": {
+  "title": "كنيسة",
+  "status": "confirmed",
+  "roots": [
+   "كنس"
+  ],
+  "ours": "ك ن س",
+  "uncertain": true
+ },
+ "b3-u1-029": {
+  "title": "ممنوع",
+  "status": "confirmed",
+  "roots": [
+   "منع"
+  ],
+  "ours": "م ن ع",
+  "uncertain": false
+ },
+ "b3-u1-030": {
+  "title": "تمنى",
+  "status": "confirmed",
+  "roots": [
+   "مني",
+   "منو"
+  ],
+  "ours": "م ن ي",
+  "uncertain": false
+ },
+ "b3-u1-031": {
+  "title": "انتقل",
+  "status": "confirmed",
+  "roots": [
+   "نقل"
+  ],
+  "ours": "ن ق ل",
+  "uncertain": false
+ },
+ "b3-u1-033": {
+  "title": "أهل",
+  "status": "confirmed",
+  "roots": [
+   "ءهل",
+   "هلل"
+  ],
+  "ours": "ء ه ل",
+  "uncertain": false
+ },
+ "b3-u1-034": {
+  "title": "بداية",
+  "status": "confirmed",
+  "roots": [
+   "بدء",
+   "بدي"
+  ],
+  "ours": "ب د ء",
+  "uncertain": false
+ },
+ "b3-u1-035": {
+  "title": "جدد",
+  "status": "confirmed",
+  "roots": [
+   "جدد"
+  ],
+  "ours": "ج د د",
+  "uncertain": false
+ },
+ "b3-u1-036": {
+  "title": "حدث",
+  "status": "confirmed",
+  "roots": [
+   "حدث"
+  ],
+  "ours": "ح د ث",
+  "uncertain": false
+ },
+ "b3-u1-037": {
+  "title": "خصوصية",
+  "status": "confirmed",
+  "roots": [
+   "خصص"
+  ],
+  "ours": "خ ص ص",
+  "uncertain": false
+ },
+ "b3-u1-038": {
+  "title": "خطيب",
+  "status": "confirmed",
+  "roots": [
+   "خطب"
+  ],
+  "ours": "خ ط ب",
+  "uncertain": false
+ },
+ "b3-u1-039": {
+  "title": "مخطوبة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "خ ط ب",
+  "uncertain": false
+ },
+ "b3-u1-040": {
+  "title": "ذكر",
+  "status": "confirmed",
+  "roots": [
+   "ذكر"
+  ],
+  "ours": "ذ ك ر",
+  "uncertain": false
+ },
+ "b3-u1-041": {
+  "title": "ذكر",
+  "status": "confirmed",
+  "roots": [
+   "ذكر"
+  ],
+  "ours": "ذ ك ر",
+  "uncertain": false
+ },
+ "b3-u1-042": {
+  "title": "راحة",
+  "status": "confirmed",
+  "roots": [
+   "روح"
+  ],
+  "ours": "ر و ح",
+  "uncertain": false
+ },
+ "b3-u1-043": {
+  "title": "مسبح",
+  "status": "confirmed",
+  "roots": [
+   "سبح"
+  ],
+  "ours": "س ب ح",
+  "uncertain": false
+ },
+ "b3-u1-045": {
+  "title": "فكرة",
+  "status": "confirmed",
+  "roots": [
+   "فكر"
+  ],
+  "ours": "ف ك ر",
+  "uncertain": false
+ },
+ "b3-u1-046": {
+  "title": "استقبل",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b3-u1-048": {
+  "title": "استقلال",
+  "status": "confirmed",
+  "roots": [
+   "قلل"
+  ],
+  "ours": "ق ل ل",
+  "uncertain": false
+ },
+ "b3-u1-049": {
+  "title": "تكون",
+  "status": "confirmed",
+  "roots": [
+   "كون"
+  ],
+  "ours": "ك و ن",
+  "uncertain": false
+ },
+ "b3-u1-050": {
+  "title": "مكان",
+  "status": "confirmed",
+  "roots": [
+   "كون"
+  ],
+  "ours": "ك و ن",
+  "uncertain": false
+ },
+ "b3-u1-051": {
+  "title": "نهاية",
+  "status": "confirmed",
+  "roots": [
+   "نهي"
+  ],
+  "ours": "ن ه ي",
+  "uncertain": false
+ },
+ "b3-u1-052": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ج د",
+  "uncertain": false
+ },
+ "b3-u1-053": {
+  "title": "وجود",
+  "status": "confirmed",
+  "roots": [
+   "وجد"
+  ],
+  "ours": "و ج د",
+  "uncertain": false
+ },
+ "b3-u1-054": {
+  "title": "مؤقت",
+  "status": "confirmed",
+  "roots": [
+   "وقت"
+  ],
+  "ours": "و ق ت",
+  "uncertain": false
+ },
+ "b3-u2-001": {
+  "title": "بحث",
+  "status": "confirmed",
+  "roots": [
+   "بحث"
+  ],
+  "ours": "ب ح ث",
+  "uncertain": false
+ },
+ "b3-u2-002": {
+  "title": "بقي",
+  "status": "confirmed",
+  "roots": [
+   "بقي"
+  ],
+  "ours": "ب ق ي",
+  "uncertain": false
+ },
+ "b3-u2-004": {
+  "title": "تنورة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن و ر",
+  "uncertain": false
+ },
+ "b3-u2-005": {
+  "title": "جالية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج ل و",
+  "uncertain": false
+ },
+ "b3-u2-006": {
+  "title": "حدد",
+  "status": "confirmed",
+  "roots": [
+   "حدد"
+  ],
+  "ours": "ح د د",
+  "uncertain": false
+ },
+ "b3-u2-007": {
+  "title": "حد",
+  "status": "confirmed",
+  "roots": [
+   "حدد",
+   "وحد"
+  ],
+  "ours": "ح د د",
+  "uncertain": false
+ },
+ "b3-u2-008": {
+  "title": "حذاء",
+  "status": "confirmed",
+  "roots": [
+   "حذو"
+  ],
+  "ours": "ح ذ و",
+  "uncertain": false
+ },
+ "b3-u2-009": {
+  "title": "حرية",
+  "status": "confirmed",
+  "roots": [
+   "حرر"
+  ],
+  "ours": "ح ر ر",
+  "uncertain": false
+ },
+ "b3-u2-010": {
+  "title": "محل",
+  "status": "confirmed",
+  "roots": [
+   "حلل",
+   "محل"
+  ],
+  "ours": "ح ل ل",
+  "uncertain": false
+ },
+ "b3-u2-011": {
+  "title": "ازداد",
+  "status": "confirmed",
+  "roots": [
+   "زيد"
+  ],
+  "ours": "ز ي د",
+  "uncertain": false
+ },
+ "b3-u2-012": {
+  "title": "سمح",
+  "status": "confirmed",
+  "roots": [
+   "سمح"
+  ],
+  "ours": "س م ح",
+  "uncertain": false
+ },
+ "b3-u2-013": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "س م ح",
+  "uncertain": false
+ },
+ "b3-u2-014": {
+  "title": "شخص",
+  "status": "confirmed",
+  "roots": [
+   "شخص"
+  ],
+  "ours": "ش خ ص",
+  "uncertain": false
+ },
+ "b3-u2-015": {
+  "title": "شخصية",
+  "status": "confirmed",
+  "roots": [
+   "شخص"
+  ],
+  "ours": "ش خ ص",
+  "uncertain": false
+ },
+ "b3-u2-016": {
+  "title": "شمال",
+  "status": "confirmed",
+  "roots": [
+   "شمل",
+   "جنب"
+  ],
+  "ours": "ش م ل",
+  "uncertain": false
+ },
+ "b3-u2-017": {
+  "title": "عام",
+  "status": "confirmed",
+  "roots": [
+   "عوم",
+   "عمم"
+  ],
+  "ours": "ع و م",
+  "uncertain": false
+ },
+ "b3-u2-018": {
+  "title": "غضب",
+  "status": "confirmed",
+  "roots": [
+   "غضب"
+  ],
+  "ours": "غ ض ب",
+  "uncertain": false
+ },
+ "b3-u2-019": {
+  "title": "غاضب",
+  "status": "confirmed",
+  "roots": [
+   "غضب"
+  ],
+  "ours": "غ ض ب",
+  "uncertain": false
+ },
+ "b3-u2-021": {
+  "title": "قميص",
+  "status": "confirmed",
+  "roots": [
+   "قمص"
+  ],
+  "ours": "ق م ص",
+  "uncertain": false
+ },
+ "b3-u2-022": {
+  "title": "أكمل",
+  "status": "confirmed",
+  "roots": [
+   "كمل"
+  ],
+  "ours": "ك م ل",
+  "uncertain": false
+ },
+ "b3-u2-023": {
+  "title": "لبس",
+  "status": "confirmed",
+  "roots": [
+   "لبس"
+  ],
+  "ours": "ل ب س",
+  "uncertain": false
+ },
+ "b3-u2-024": {
+  "title": "ملابس",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ل ب س",
+  "uncertain": false
+ },
+ "b3-u2-025": {
+  "title": "باستمرار",
+  "status": "no-page",
+  "roots": [],
+  "ours": "م ر ر",
+  "uncertain": false
+ },
+ "b3-u2-026": {
+  "title": "انتشر",
+  "status": "confirmed",
+  "roots": [
+   "نشر"
+  ],
+  "ours": "ن ش ر",
+  "uncertain": false
+ },
+ "b3-u2-027": {
+  "title": "منتشر",
+  "status": "confirmed",
+  "roots": [
+   "نشر"
+  ],
+  "ours": "ن ش ر",
+  "uncertain": false
+ },
+ "b3-u2-028": {
+  "title": "نوى",
+  "status": "confirmed",
+  "roots": [
+   "نوي"
+  ],
+  "ours": "ن و ي",
+  "uncertain": false
+ },
+ "b3-u2-029": {
+  "title": "هاجر",
+  "status": "confirmed",
+  "roots": [
+   "هجر"
+  ],
+  "ours": "ه ج ر",
+  "uncertain": false
+ },
+ "b3-u2-030": {
+  "title": "مهاجر",
+  "status": "confirmed",
+  "roots": [
+   "هجر"
+  ],
+  "ours": "ه ج ر",
+  "uncertain": false
+ },
+ "b3-u2-033": {
+  "title": "مجموعة",
+  "status": "confirmed",
+  "roots": [
+   "جمع"
+  ],
+  "ours": "ج م ع",
+  "uncertain": false
+ },
+ "b3-u2-034": {
+  "title": "جنوب",
+  "status": "confirmed",
+  "roots": [
+   "جنب",
+   "شمل"
+  ],
+  "ours": "ج ن ب",
+  "uncertain": false
+ },
+ "b3-u2-035": {
+  "title": "أجنبي",
+  "status": "confirmed",
+  "roots": [
+   "جنب"
+  ],
+  "ours": "ج ن ب",
+  "uncertain": false
+ },
+ "b3-u2-036": {
+  "title": "اشترك",
+  "status": "confirmed",
+  "roots": [
+   "شرك"
+  ],
+  "ours": "ش ر ك",
+  "uncertain": false
+ },
+ "b3-u2-037": {
+  "title": "مشغول",
+  "status": "confirmed",
+  "roots": [
+   "شغل"
+  ],
+  "ours": "ش غ ل",
+  "uncertain": false
+ },
+ "b3-u2-038": {
+  "title": "طبيعة",
+  "status": "confirmed",
+  "roots": [
+   "طبع"
+  ],
+  "ours": "ط ب ع",
+  "uncertain": false
+ },
+ "b3-u2-039": {
+  "title": "علم",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b3-u2-040": {
+  "title": "تعليم",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b3-u2-041": {
+  "title": "تعلم",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b3-u2-042": {
+  "title": "غرب",
+  "status": "confirmed",
+  "roots": [
+   "غرب"
+  ],
+  "ours": "غ ر ب",
+  "uncertain": false
+ },
+ "b3-u2-045": {
+  "title": "ملك",
+  "status": "confirmed",
+  "roots": [
+   "ملك"
+  ],
+  "ours": "م ل ك",
+  "uncertain": false
+ },
+ "b3-u2-046": {
+  "title": "نفس",
+  "status": "confirmed",
+  "roots": [
+   "نفس"
+  ],
+  "ours": "ن ف س",
+  "uncertain": false
+ },
+ "b3-u2-048": {
+  "title": "هوية",
+  "status": "confirmed",
+  "roots": [
+   "هوي"
+  ],
+  "ours": "ه و ي",
+  "uncertain": false
+ },
+ "b3-u2-049": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ل د",
+  "uncertain": false
+ },
+ "b3-u3-002": {
+  "title": "باع",
+  "status": "confirmed",
+  "roots": [
+   "بيع",
+   "بوع"
+  ],
+  "ours": "ب ي ع",
+  "uncertain": false
+ },
+ "b3-u3-004": {
+  "title": "حرير",
+  "status": "confirmed",
+  "roots": [
+   "حرر"
+  ],
+  "ours": "ح ر ر",
+  "uncertain": false
+ },
+ "b3-u3-005": {
+  "title": "حساب",
+  "status": "confirmed",
+  "roots": [
+   "حسب"
+  ],
+  "ours": "ح س ب",
+  "uncertain": false
+ },
+ "b3-u3-006": {
+  "title": "أحمر",
+  "status": "confirmed",
+  "roots": [
+   "حمر"
+  ],
+  "ours": "ح م ر",
+  "uncertain": false
+ },
+ "b3-u3-007": {
+  "title": "حائط",
+  "status": "confirmed",
+  "roots": [
+   "حوط"
+  ],
+  "ours": "ح و ط",
+  "uncertain": false
+ },
+ "b3-u3-008": {
+  "title": "خزانة",
+  "status": "confirmed",
+  "roots": [
+   "خزن"
+  ],
+  "ours": "خ ز ن",
+  "uncertain": false
+ },
+ "b3-u3-009": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ذ ه ب",
+  "uncertain": false
+ },
+ "b3-u3-010": {
+  "title": "رتب",
+  "status": "confirmed",
+  "roots": [
+   "رتب"
+  ],
+  "ours": "ر ت ب",
+  "uncertain": false
+ },
+ "b3-u3-011": {
+  "title": "ترتيب",
+  "status": "confirmed",
+  "roots": [
+   "رتب"
+  ],
+  "ours": "ر ت ب",
+  "uncertain": false
+ },
+ "b3-u3-012": {
+  "title": "رخيص",
+  "status": "confirmed",
+  "roots": [
+   "رخص"
+  ],
+  "ours": "ر خ ص",
+  "uncertain": false
+ },
+ "b3-u3-013": {
+  "title": "رسم",
+  "status": "confirmed",
+  "roots": [
+   "رسم"
+  ],
+  "ours": "ر س م",
+  "uncertain": false
+ },
+ "b3-u3-014": {
+  "title": "رسم",
+  "status": "confirmed",
+  "roots": [
+   "رسم"
+  ],
+  "ours": "ر س م",
+  "uncertain": false
+ },
+ "b3-u3-015": {
+  "title": "رمادي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ر م د",
+  "uncertain": false
+ },
+ "b3-u3-016": {
+  "title": "أزرق",
+  "status": "confirmed",
+  "roots": [
+   "زرق"
+  ],
+  "ours": "ز ر ق",
+  "uncertain": false
+ },
+ "b3-u3-017": {
+  "title": "سعر",
+  "status": "confirmed",
+  "roots": [
+   "سعر"
+  ],
+  "ours": "س ع ر",
+  "uncertain": false
+ },
+ "b3-u3-019": {
+  "title": "اشترى",
+  "status": "confirmed",
+  "roots": [
+   "شري"
+  ],
+  "ours": "ش ر ي",
+  "uncertain": false
+ },
+ "b3-u3-020": {
+  "title": "شهر",
+  "status": "confirmed",
+  "roots": [
+   "شهر"
+  ],
+  "ours": "ش ه ر",
+  "uncertain": false
+ },
+ "b3-u3-021": {
+  "title": "مشهور",
+  "status": "confirmed",
+  "roots": [
+   "شهر"
+  ],
+  "ours": "ش ه ر",
+  "uncertain": false
+ },
+ "b3-u3-022": {
+  "title": "أصفر",
+  "status": "confirmed",
+  "roots": [
+   "صفر"
+  ],
+  "ours": "ص ف ر",
+  "uncertain": false
+ },
+ "b3-u3-023": {
+  "title": "أصلح",
+  "status": "confirmed",
+  "roots": [
+   "صلح"
+  ],
+  "ours": "ص ل ح",
+  "uncertain": false
+ },
+ "b3-u3-024": {
+  "title": "تصليحات",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ص ل ح",
+  "uncertain": false
+ },
+ "b3-u3-025": {
+  "title": "غسل",
+  "status": "confirmed",
+  "roots": [
+   "غسل"
+  ],
+  "ours": "غ س ل",
+  "uncertain": false
+ },
+ "b3-u3-026": {
+  "title": "غامق",
+  "status": "confirmed",
+  "roots": [
+   "غمق"
+  ],
+  "ours": "غ م ق",
+  "uncertain": false
+ },
+ "b3-u3-027": {
+  "title": "فاتح",
+  "status": "confirmed",
+  "roots": [
+   "فتح"
+  ],
+  "ours": "ف ت ح",
+  "uncertain": false
+ },
+ "b3-u3-028": {
+  "title": "مفروشات",
+  "status": "confirmed",
+  "roots": [
+   "فرش"
+  ],
+  "ours": "ف ر ش",
+  "uncertain": false
+ },
+ "b3-u3-029": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ض ض",
+  "uncertain": false
+ },
+ "b3-u3-030": {
+  "title": "فوطة",
+  "status": "confirmed",
+  "roots": [
+   "فوط"
+  ],
+  "ours": "ف و ط",
+  "uncertain": true
+ },
+ "b3-u3-031": {
+  "title": "قسم",
+  "status": "confirmed",
+  "roots": [
+   "قسم"
+  ],
+  "ours": "ق س م",
+  "uncertain": false
+ },
+ "b3-u3-032": {
+  "title": "لون",
+  "status": "confirmed",
+  "roots": [
+   "لون"
+  ],
+  "ours": "ل و ن",
+  "uncertain": false
+ },
+ "b3-u3-034": {
+  "title": "وصل",
+  "status": "confirmed",
+  "roots": [
+   "وصل"
+  ],
+  "ours": "و ص ل",
+  "uncertain": false
+ },
+ "b3-u3-035": {
+  "title": "يسار",
+  "status": "confirmed",
+  "roots": [
+   "يسر"
+  ],
+  "ours": "ي س ر",
+  "uncertain": false
+ },
+ "b3-u3-036": {
+  "title": "يمين",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ي م ن",
+  "uncertain": false
+ },
+ "b3-u3-037": {
+  "title": "براد",
+  "status": "confirmed",
+  "roots": [
+   "برد"
+  ],
+  "ours": "ب ر د",
+  "uncertain": false
+ },
+ "b3-u3-039": {
+  "title": "أبيض",
+  "status": "confirmed",
+  "roots": [
+   "بيض"
+  ],
+  "ours": "ب ي ض",
+  "uncertain": false
+ },
+ "b3-u3-040": {
+  "title": "أخضر",
+  "status": "confirmed",
+  "roots": [
+   "خضر"
+  ],
+  "ours": "خ ض ر",
+  "uncertain": false
+ },
+ "b3-u3-041": {
+  "title": "أرسل",
+  "status": "confirmed",
+  "roots": [
+   "رسل"
+  ],
+  "ours": "ر س ل",
+  "uncertain": false
+ },
+ "b3-u3-042": {
+  "title": "أسود",
+  "status": "confirmed",
+  "roots": [
+   "سود"
+  ],
+  "ours": "س و د",
+  "uncertain": false
+ },
+ "b3-u3-043": {
+  "title": "استعد",
+  "status": "confirmed",
+  "roots": [
+   "عدد",
+   "عود",
+   "عدو"
+  ],
+  "ours": "ع د د",
+  "uncertain": false
+ },
+ "b3-u3-044": {
+  "title": "مستعد",
+  "status": "confirmed",
+  "roots": [
+   "عدد"
+  ],
+  "ours": "ع د د",
+  "uncertain": false
+ },
+ "b3-u3-045": {
+  "title": "معطل",
+  "status": "confirmed",
+  "roots": [
+   "عطل"
+  ],
+  "ours": "ع ط ل",
+  "uncertain": false
+ },
+ "b3-u3-046": {
+  "title": "استعمل",
+  "status": "confirmed",
+  "roots": [
+   "عمل"
+  ],
+  "ours": "ع م ل",
+  "uncertain": false
+ },
+ "b3-u3-047": {
+  "title": "غير",
+  "status": "confirmed",
+  "roots": [
+   "غير"
+  ],
+  "ours": "غ ي ر",
+  "uncertain": false
+ },
+ "b3-u3-048": {
+  "title": "تغير",
+  "status": "confirmed",
+  "roots": [
+   "غير"
+  ],
+  "ours": "غ ي ر",
+  "uncertain": false
+ },
+ "b3-u3-049": {
+  "title": "قبل",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b3-u3-050": {
+  "title": "تمكن",
+  "status": "confirmed",
+  "roots": [
+   "مكن"
+  ],
+  "ours": "م ك ن",
+  "uncertain": false
+ },
+ "b3-u3-051": {
+  "title": "منتصف",
+  "status": "confirmed",
+  "roots": [
+   "نصف"
+  ],
+  "ours": "ن ص ف",
+  "uncertain": false
+ },
+ "b3-u3-052": {
+  "title": "وجب",
+  "status": "confirmed",
+  "roots": [
+   "وجب"
+  ],
+  "ours": "و ج ب",
+  "uncertain": false
+ },
+ "b3-u3-053": {
+  "title": "وسط",
+  "status": "confirmed",
+  "roots": [
+   "وسط"
+  ],
+  "ours": "و س ط",
+  "uncertain": false
+ },
+ "b3-u4-001": {
+  "title": "أب",
+  "status": "confirmed",
+  "roots": [
+   "ءبو",
+   "ءبب"
+  ],
+  "ours": "ء ب و",
+  "uncertain": false
+ },
+ "b3-u4-002": {
+  "title": "آمن",
+  "status": "confirmed",
+  "roots": [
+   "ءمن"
+  ],
+  "ours": "ء م ن",
+  "uncertain": false
+ },
+ "b3-u4-003": {
+  "title": "بدا",
+  "status": "confirmed",
+  "roots": [
+   "بدو",
+   "بدي"
+  ],
+  "ours": "ب د و",
+  "uncertain": false
+ },
+ "b3-u4-005": {
+  "title": "حفلة",
+  "status": "confirmed",
+  "roots": [
+   "حفل"
+  ],
+  "ours": "ح ف ل",
+  "uncertain": false
+ },
+ "b3-u4-006": {
+  "title": "حي",
+  "status": "differs",
+  "roots": [
+   "حيو",
+   "حوي"
+  ],
+  "ours": "ح ي ي",
+  "uncertain": false
+ },
+ "b3-u4-007": {
+  "title": "دعا",
+  "status": "confirmed",
+  "roots": [
+   "دعو"
+  ],
+  "ours": "د ع و",
+  "uncertain": false
+ },
+ "b3-u4-008": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ب ط ق",
+  "uncertain": false
+ },
+ "b3-u4-009": {
+  "title": "رحلة",
+  "status": "confirmed",
+  "roots": [
+   "رحل"
+  ],
+  "ours": "ر ح ل",
+  "uncertain": false
+ },
+ "b3-u4-010": {
+  "title": "سحور",
+  "status": "confirmed",
+  "roots": [
+   "سحر"
+  ],
+  "ours": "س ح ر",
+  "uncertain": false
+ },
+ "b3-u4-011": {
+  "title": "مسلسل",
+  "status": "confirmed",
+  "roots": [
+   "سلسل"
+  ],
+  "ours": "س ل س ل",
+  "uncertain": false
+ },
+ "b3-u4-012": {
+  "title": "سماء",
+  "status": "confirmed",
+  "roots": [
+   "سمو"
+  ],
+  "ours": "س م و",
+  "uncertain": false
+ },
+ "b3-u4-013": {
+  "title": "أشرف",
+  "status": "confirmed",
+  "roots": [
+   "شرف"
+  ],
+  "ours": "ش ر ف",
+  "uncertain": false
+ },
+ "b3-u4-014": {
+  "title": "صحيفة",
+  "status": "confirmed",
+  "roots": [
+   "صحف"
+  ],
+  "ours": "ص ح ف",
+  "uncertain": false
+ },
+ "b3-u4-015": {
+  "title": "صام",
+  "status": "confirmed",
+  "roots": [
+   "صوم"
+  ],
+  "ours": "ص و م",
+  "uncertain": false
+ },
+ "b3-u4-016": {
+  "title": "عرس",
+  "status": "confirmed",
+  "roots": [
+   "عرس"
+  ],
+  "ours": "ع ر س",
+  "uncertain": false
+ },
+ "b3-u4-017": {
+  "title": "عاصمة",
+  "status": "confirmed",
+  "roots": [
+   "عصم"
+  ],
+  "ours": "ع ص م",
+  "uncertain": false
+ },
+ "b3-u4-018": {
+  "title": "أعتقد",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع ق د",
+  "uncertain": false
+ },
+ "b3-u4-019": {
+  "title": "معهد",
+  "status": "confirmed",
+  "roots": [
+   "عهد"
+  ],
+  "ours": "ع ه د",
+  "uncertain": false
+ },
+ "b3-u4-020": {
+  "title": "فرح",
+  "status": "confirmed",
+  "roots": [
+   "فرح"
+  ],
+  "ours": "ف ر ح",
+  "uncertain": false
+ },
+ "b3-u4-021": {
+  "title": "فعل",
+  "status": "confirmed",
+  "roots": [
+   "فعل"
+  ],
+  "ours": "ف ع ل",
+  "uncertain": false
+ },
+ "b3-u4-022": {
+  "title": "مقدس",
+  "status": "confirmed",
+  "roots": [
+   "قدس"
+  ],
+  "ours": "ق د س",
+  "uncertain": false
+ },
+ "b3-u4-023": {
+  "title": "قلق",
+  "status": "confirmed",
+  "roots": [
+   "قلق"
+  ],
+  "ours": "ق ل ق",
+  "uncertain": false
+ },
+ "b3-u4-024": {
+  "title": "قام",
+  "status": "confirmed",
+  "roots": [
+   "قوم",
+   "قيم"
+  ],
+  "ours": "ق و م",
+  "uncertain": false
+ },
+ "b3-u4-025": {
+  "title": "كاف",
+  "status": "confirmed",
+  "roots": [
+   "كفي"
+  ],
+  "ours": "ك ف ي",
+  "uncertain": false
+ },
+ "b3-u4-026": {
+  "title": "نجم",
+  "status": "confirmed",
+  "roots": [
+   "نجم"
+  ],
+  "ours": "ن ج م",
+  "uncertain": false
+ },
+ "b3-u4-027": {
+  "title": "وضع",
+  "status": "confirmed",
+  "roots": [
+   "وضع"
+  ],
+  "ours": "و ض ع",
+  "uncertain": false
+ },
+ "b3-u4-028": {
+  "title": "بقية",
+  "status": "confirmed",
+  "roots": [
+   "بقي"
+  ],
+  "ours": "ب ق ي",
+  "uncertain": false
+ },
+ "b3-u4-029": {
+  "title": "اجتمع",
+  "status": "confirmed",
+  "roots": [
+   "جمع"
+  ],
+  "ours": "ج م ع",
+  "uncertain": false
+ },
+ "b3-u4-030": {
+  "title": "اجتماع",
+  "status": "confirmed",
+  "roots": [
+   "جمع"
+  ],
+  "ours": "ج م ع",
+  "uncertain": false
+ },
+ "b3-u4-031": {
+  "title": "جاء",
+  "status": "confirmed",
+  "roots": [
+   "جيء"
+  ],
+  "ours": "ج ي ء",
+  "uncertain": false
+ },
+ "b3-u4-032": {
+  "title": "محلي",
+  "status": "confirmed",
+  "roots": [
+   "حلل"
+  ],
+  "ours": "ح ل ل",
+  "uncertain": false
+ },
+ "b3-u4-033": {
+  "title": "اختلف",
+  "status": "confirmed",
+  "roots": [
+   "خلف"
+  ],
+  "ours": "خ ل ف",
+  "uncertain": false
+ },
+ "b3-u4-034": {
+  "title": "اختلف",
+  "status": "confirmed",
+  "roots": [
+   "خلف"
+  ],
+  "ours": "خ ل ف",
+  "uncertain": false
+ },
+ "b3-u4-035": {
+  "title": "شرقي",
+  "status": "confirmed",
+  "roots": [
+   "شرق"
+  ],
+  "ours": "ش ر ق",
+  "uncertain": false
+ },
+ "b3-u4-036": {
+  "title": "انشغل",
+  "status": "confirmed",
+  "roots": [
+   "شغل"
+  ],
+  "ours": "ش غ ل",
+  "uncertain": false
+ },
+ "b3-u4-037": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ر ج",
+  "uncertain": false
+ },
+ "b3-u4-038": {
+  "title": "طباخ",
+  "status": "confirmed",
+  "roots": [
+   "طبخ"
+  ],
+  "ours": "ط ب خ",
+  "uncertain": false
+ },
+ "b3-u4-039": {
+  "title": "طعم",
+  "status": "confirmed",
+  "roots": [
+   "طعم"
+  ],
+  "ours": "ط ع م",
+  "uncertain": false
+ },
+ "b3-u4-040": {
+  "title": "اعتاد",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b3-u4-042": {
+  "title": "أفطر",
+  "status": "confirmed",
+  "roots": [
+   "فطر"
+  ],
+  "ours": "ف ط ر",
+  "uncertain": false
+ },
+ "b3-u4-043": {
+  "title": "مقهى",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ق ه و",
+  "uncertain": false
+ },
+ "b3-u4-044": {
+  "title": "ملل",
+  "status": "confirmed",
+  "roots": [
+   "ملل"
+  ],
+  "ours": "م ل ل",
+  "uncertain": false
+ },
+ "b3-u4-045": {
+  "title": "وجبة",
+  "status": "confirmed",
+  "roots": [
+   "وجب"
+  ],
+  "ours": "و ج ب",
+  "uncertain": false
+ },
+ "b3-u4-046": {
+  "title": "تولى",
+  "status": "confirmed",
+  "roots": [
+   "ولي"
+  ],
+  "ours": "و ل ي",
+  "uncertain": false
+ },
+ "b3-u5-001": {
+  "title": "أبدا",
+  "status": "confirmed",
+  "roots": [
+   "ءبد"
+  ],
+  "ours": "ء ب د",
+  "uncertain": false
+ },
+ "b3-u5-002": {
+  "title": "متأكد",
+  "status": "confirmed",
+  "roots": [
+   "ءكد"
+  ],
+  "ours": "ء ك د",
+  "uncertain": false
+ },
+ "b3-u5-003": {
+  "title": "بريد",
+  "status": "confirmed",
+  "roots": [
+   "برد"
+  ],
+  "ours": "ب ر د",
+  "uncertain": false
+ },
+ "b3-u5-004": {
+  "title": "بطن",
+  "status": "confirmed",
+  "roots": [
+   "بطن"
+  ],
+  "ours": "ب ط ن",
+  "uncertain": false
+ },
+ "b3-u5-005": {
+  "title": "ثقيل",
+  "status": "confirmed",
+  "roots": [
+   "ثقل"
+  ],
+  "ours": "ث ق ل",
+  "uncertain": false
+ },
+ "b3-u5-006": {
+  "title": "جزء",
+  "status": "confirmed",
+  "roots": [
+   "جزء"
+  ],
+  "ours": "ج ز ء",
+  "uncertain": false
+ },
+ "b3-u5-007": {
+  "title": "جسم",
+  "status": "confirmed",
+  "roots": [
+   "جسم"
+  ],
+  "ours": "ج س م",
+  "uncertain": false
+ },
+ "b3-u5-008": {
+  "title": "حاول",
+  "status": "confirmed",
+  "roots": [
+   "حول"
+  ],
+  "ours": "ح و ل",
+  "uncertain": false
+ },
+ "b3-u5-009": {
+  "title": "مخدرات",
+  "status": "no-page",
+  "roots": [],
+  "ours": "خ د ر",
+  "uncertain": false
+ },
+ "b3-u5-010": {
+  "title": "خفيف",
+  "status": "confirmed",
+  "roots": [
+   "خفف"
+  ],
+  "ours": "خ ف ف",
+  "uncertain": false
+ },
+ "b3-u5-011": {
+  "title": "أخلاق",
+  "status": "confirmed",
+  "roots": [
+   "خلق"
+  ],
+  "ours": "خ ل ق",
+  "uncertain": false
+ },
+ "b3-u5-012": {
+  "title": "خاف",
+  "status": "confirmed",
+  "roots": [
+   "خوف"
+  ],
+  "ours": "خ و ف",
+  "uncertain": false
+ },
+ "b3-u5-013": {
+  "title": "خاف",
+  "status": "confirmed",
+  "roots": [
+   "خوف"
+  ],
+  "ours": "خ و ف",
+  "uncertain": false
+ },
+ "b3-u5-014": {
+  "title": "خائف",
+  "status": "confirmed",
+  "roots": [
+   "خوف"
+  ],
+  "ours": "خ و ف",
+  "uncertain": false
+ },
+ "b3-u5-015": {
+  "title": "دم",
+  "status": "differs",
+  "roots": [
+   "دمم"
+  ],
+  "ours": "د م و",
+  "uncertain": false
+ },
+ "b3-u5-017": {
+  "title": "ذكي",
+  "status": "confirmed",
+  "roots": [
+   "ذكي",
+   "ذكو"
+  ],
+  "ours": "ذ ك و",
+  "uncertain": true
+ },
+ "b3-u5-019": {
+  "title": "زمن",
+  "status": "confirmed",
+  "roots": [
+   "زمن"
+  ],
+  "ours": "ز م ن",
+  "uncertain": false
+ },
+ "b3-u5-020": {
+  "title": "شعر",
+  "status": "confirmed",
+  "roots": [
+   "شعر"
+  ],
+  "ours": "ش ع ر",
+  "uncertain": false
+ },
+ "b3-u5-021": {
+  "title": "متضايق",
+  "status": "confirmed",
+  "roots": [
+   "ضيق"
+  ],
+  "ours": "ض ي ق",
+  "uncertain": false
+ },
+ "b3-u5-022": {
+  "title": "اعتبر",
+  "status": "confirmed",
+  "roots": [
+   "عبر"
+  ],
+  "ours": "ع ب ر",
+  "uncertain": false
+ },
+ "b3-u5-023": {
+  "title": "غادر",
+  "status": "confirmed",
+  "roots": [
+   "غدر"
+  ],
+  "ours": "غ د ر",
+  "uncertain": false
+ },
+ "b3-u5-024": {
+  "title": "قلب",
+  "status": "confirmed",
+  "roots": [
+   "قلب"
+  ],
+  "ours": "ق ل ب",
+  "uncertain": false
+ },
+ "b3-u5-025": {
+  "title": "لمح",
+  "status": "confirmed",
+  "roots": [
+   "لمح"
+  ],
+  "ours": "ل م ح",
+  "uncertain": false
+ },
+ "b3-u5-026": {
+  "title": "ناقش",
+  "status": "confirmed",
+  "roots": [
+   "نقش"
+  ],
+  "ours": "ن ق ش",
+  "uncertain": false
+ },
+ "b3-u5-027": {
+  "title": "تناقش",
+  "status": "confirmed",
+  "roots": [
+   "نقش"
+  ],
+  "ours": "ن ق ش",
+  "uncertain": false
+ },
+ "b3-u5-028": {
+  "title": "مهم",
+  "status": "confirmed",
+  "roots": [
+   "همم"
+  ],
+  "ours": "ه م م",
+  "uncertain": false
+ },
+ "b3-u5-029": {
+  "title": "أهم",
+  "status": "confirmed",
+  "roots": [
+   "همم"
+  ],
+  "ours": "ه م م",
+  "uncertain": false
+ },
+ "b3-u5-030": {
+  "title": "وثق",
+  "status": "confirmed",
+  "roots": [
+   "وثق"
+  ],
+  "ours": "و ث ق",
+  "uncertain": false
+ },
+ "b3-u5-031": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ث ق",
+  "uncertain": false
+ },
+ "b3-u5-032": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ث ق",
+  "uncertain": false
+ },
+ "b3-u5-033": {
+  "title": "وجه",
+  "status": "confirmed",
+  "roots": [
+   "وجه"
+  ],
+  "ours": "و ج ه",
+  "uncertain": false
+ },
+ "b3-u5-034": {
+  "title": "يد",
+  "status": "confirmed",
+  "roots": [
+   "يدي"
+  ],
+  "ours": "ي د ي",
+  "uncertain": true
+ },
+ "b3-u5-035": {
+  "title": "مؤدب",
+  "status": "confirmed",
+  "roots": [
+   "ءدب"
+  ],
+  "ours": "ء د ب",
+  "uncertain": false
+ },
+ "b3-u5-036": {
+  "title": "خارج",
+  "status": "confirmed",
+  "roots": [
+   "خرج"
+  ],
+  "ours": "خ ر ج",
+  "uncertain": false
+ },
+ "b3-u5-038": {
+  "title": "مختلف",
+  "status": "confirmed",
+  "roots": [
+   "خلف"
+  ],
+  "ours": "خ ل ف",
+  "uncertain": false
+ },
+ "b3-u5-039": {
+  "title": "رأس",
+  "status": "confirmed",
+  "roots": [
+   "رءس"
+  ],
+  "ours": "ر ء س",
+  "uncertain": false
+ },
+ "b3-u5-040": {
+  "title": "رجل",
+  "status": "confirmed",
+  "roots": [
+   "رجل"
+  ],
+  "ours": "ر ج ل",
+  "uncertain": false
+ },
+ "b3-u5-041": {
+  "title": "رحب",
+  "status": "confirmed",
+  "roots": [
+   "رحب"
+  ],
+  "ours": "ر ح ب",
+  "uncertain": false
+ },
+ "b3-u5-042": {
+  "title": "ركز",
+  "status": "confirmed",
+  "roots": [
+   "ركز"
+  ],
+  "ours": "ر ك ز",
+  "uncertain": false
+ },
+ "b3-u5-043": {
+  "title": "شباب",
+  "status": "confirmed",
+  "roots": [
+   "شبب"
+  ],
+  "ours": "ش ب ب",
+  "uncertain": false
+ },
+ "b3-u5-044": {
+  "title": "شغل",
+  "status": "confirmed",
+  "roots": [
+   "شغل"
+  ],
+  "ours": "ش غ ل",
+  "uncertain": false
+ },
+ "b3-u5-045": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ش ك ر",
+  "uncertain": false
+ },
+ "b3-u5-046": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ش ك ل",
+  "uncertain": false
+ },
+ "b3-u5-047": {
+  "title": "صداقة",
+  "status": "confirmed",
+  "roots": [
+   "صدق"
+  ],
+  "ours": "ص د ق",
+  "uncertain": false
+ },
+ "b3-u5-048": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ط ل ع",
+  "uncertain": false
+ },
+ "b3-u5-050": {
+  "title": "عود",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b3-u5-051": {
+  "title": "فتح",
+  "status": "confirmed",
+  "roots": [
+   "فتح"
+  ],
+  "ours": "ف ت ح",
+  "uncertain": false
+ },
+ "b3-u5-052": {
+  "title": "متفوق",
+  "status": "confirmed",
+  "roots": [
+   "فوق"
+  ],
+  "ours": "ف و ق",
+  "uncertain": false
+ },
+ "b3-u6-002": {
+  "title": "بيئة",
+  "status": "confirmed",
+  "roots": [
+   "بوء"
+  ],
+  "ours": "ب و ء",
+  "uncertain": false
+ },
+ "b3-u6-003": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج و ز",
+  "uncertain": false
+ },
+ "b3-u6-004": {
+  "title": "احترم",
+  "status": "confirmed",
+  "roots": [
+   "حرم"
+  ],
+  "ours": "ح ر م",
+  "uncertain": false
+ },
+ "b3-u6-005": {
+  "title": "حمل",
+  "status": "confirmed",
+  "roots": [
+   "حمل"
+  ],
+  "ours": "ح م ل",
+  "uncertain": false
+ },
+ "b3-u6-006": {
+  "title": "احتاج",
+  "status": "confirmed",
+  "roots": [
+   "حوج"
+  ],
+  "ours": "ح و ج",
+  "uncertain": false
+ },
+ "b3-u6-007": {
+  "title": "حاجة",
+  "status": "confirmed",
+  "roots": [
+   "حوج"
+  ],
+  "ours": "ح و ج",
+  "uncertain": false
+ },
+ "b3-u6-009": {
+  "title": "دفع",
+  "status": "confirmed",
+  "roots": [
+   "دفع"
+  ],
+  "ours": "د ف ع",
+  "uncertain": false
+ },
+ "b3-u6-010": {
+  "title": "دافع",
+  "status": "confirmed",
+  "roots": [
+   "دفع"
+  ],
+  "ours": "د ف ع",
+  "uncertain": false
+ },
+ "b3-u6-011": {
+  "title": "دنيا",
+  "status": "confirmed",
+  "roots": [
+   "دنو"
+  ],
+  "ours": "د ن و",
+  "uncertain": false
+ },
+ "b3-u6-012": {
+  "title": "سلوك",
+  "status": "confirmed",
+  "roots": [
+   "سلك"
+  ],
+  "ours": "س ل ك",
+  "uncertain": false
+ },
+ "b3-u6-013": {
+  "title": "تصرف",
+  "status": "confirmed",
+  "roots": [
+   "صرف"
+  ],
+  "ours": "ص ر ف",
+  "uncertain": false
+ },
+ "b3-u6-014": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ص ر ف",
+  "uncertain": false
+ },
+ "b3-u6-015": {
+  "title": "ضروري",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ض ر ر",
+  "uncertain": false
+ },
+ "b3-u6-016": {
+  "title": "ظلم",
+  "status": "confirmed",
+  "roots": [
+   "ظلم"
+  ],
+  "ours": "ظ ل م",
+  "uncertain": false
+ },
+ "b3-u6-017": {
+  "title": "أعطى",
+  "status": "confirmed",
+  "roots": [
+   "عطو"
+  ],
+  "ours": "ع ط و",
+  "uncertain": false
+ },
+ "b3-u6-018": {
+  "title": "غني",
+  "status": "confirmed",
+  "roots": [
+   "غني"
+  ],
+  "ours": "غ ن ي",
+  "uncertain": false
+ },
+ "b3-u6-019": {
+  "title": "فخر",
+  "status": "confirmed",
+  "roots": [
+   "فخر"
+  ],
+  "ours": "ف خ ر",
+  "uncertain": false
+ },
+ "b3-u6-020": {
+  "title": "فخور",
+  "status": "confirmed",
+  "roots": [
+   "فخر"
+  ],
+  "ours": "ف خ ر",
+  "uncertain": false
+ },
+ "b3-u6-021": {
+  "title": "فقير",
+  "status": "confirmed",
+  "roots": [
+   "فقر",
+   "غني"
+  ],
+  "ours": "ف ق ر",
+  "uncertain": false
+ },
+ "b3-u6-022": {
+  "title": "قصد",
+  "status": "confirmed",
+  "roots": [
+   "قصد"
+  ],
+  "ours": "ق ص د",
+  "uncertain": false
+ },
+ "b3-u6-023": {
+  "title": "كرامة",
+  "status": "confirmed",
+  "roots": [
+   "كرم"
+  ],
+  "ours": "ك ر م",
+  "uncertain": false
+ },
+ "b3-u6-024": {
+  "title": "نشأ",
+  "status": "confirmed",
+  "roots": [
+   "نشء"
+  ],
+  "ours": "ن ش ء",
+  "uncertain": false
+ },
+ "b3-u6-025": {
+  "title": "نصيحة",
+  "status": "confirmed",
+  "roots": [
+   "نصح"
+  ],
+  "ours": "ن ص ح",
+  "uncertain": false
+ },
+ "b3-u6-026": {
+  "title": "هدية",
+  "status": "confirmed",
+  "roots": [
+   "هدي"
+  ],
+  "ours": "ه د ي",
+  "uncertain": false
+ },
+ "b3-u6-027": {
+  "title": "وطن",
+  "status": "confirmed",
+  "roots": [
+   "وطن"
+  ],
+  "ours": "و ط ن",
+  "uncertain": false
+ },
+ "b3-u6-028": {
+  "title": "مواطن",
+  "status": "confirmed",
+  "roots": [
+   "وطن"
+  ],
+  "ours": "و ط ن",
+  "uncertain": false
+ },
+ "b3-u6-029": {
+  "title": "توقف",
+  "status": "confirmed",
+  "roots": [
+   "وقف"
+  ],
+  "ours": "و ق ف",
+  "uncertain": false
+ },
+ "b3-u6-030": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ء خ ذ",
+  "uncertain": false
+ },
+ "b3-u6-032": {
+  "title": "تاريخ",
+  "status": "confirmed",
+  "roots": [
+   "ءرخ"
+  ],
+  "ours": "ء ر خ",
+  "uncertain": false
+ },
+ "b3-u6-033": {
+  "title": "إنسان",
+  "status": "confirmed",
+  "roots": [
+   "ءنس"
+  ],
+  "ours": "ء ن س",
+  "uncertain": false
+ },
+ "b3-u6-034": {
+  "title": "تم",
+  "status": "confirmed",
+  "roots": [
+   "تمم"
+  ],
+  "ours": "ت م م",
+  "uncertain": false
+ },
+ "b3-u6-035": {
+  "title": "جرى",
+  "status": "confirmed",
+  "roots": [
+   "جري"
+  ],
+  "ours": "ج ر ي",
+  "uncertain": false
+ },
+ "b3-u6-036": {
+  "title": "تحدث",
+  "status": "confirmed",
+  "roots": [
+   "حدث"
+  ],
+  "ours": "ح د ث",
+  "uncertain": false
+ },
+ "b3-u6-037": {
+  "title": "أحس",
+  "status": "confirmed",
+  "roots": [
+   "حسس"
+  ],
+  "ours": "ح س س",
+  "uncertain": false
+ },
+ "b3-u6-038": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ح س س",
+  "uncertain": false
+ },
+ "b3-u6-040": {
+  "title": "اختار",
+  "status": "confirmed",
+  "roots": [
+   "خير"
+  ],
+  "ours": "خ ي ر",
+  "uncertain": false
+ },
+ "b3-u6-041": {
+  "title": "اختيار",
+  "status": "confirmed",
+  "roots": [
+   "خير"
+  ],
+  "ours": "خ ي ر",
+  "uncertain": false
+ },
+ "b3-u6-042": {
+  "title": "سفارة",
+  "status": "confirmed",
+  "roots": [
+   "سفر"
+  ],
+  "ours": "س ف ر",
+  "uncertain": false
+ },
+ "b3-u6-043": {
+  "title": "طفل",
+  "status": "confirmed",
+  "roots": [
+   "طفل"
+  ],
+  "ours": "ط ف ل",
+  "uncertain": false
+ },
+ "b3-u6-044": {
+  "title": "طلب",
+  "status": "confirmed",
+  "roots": [
+   "طلب"
+  ],
+  "ours": "ط ل ب",
+  "uncertain": false
+ },
+ "b3-u6-045": {
+  "title": "طلب",
+  "status": "confirmed",
+  "roots": [
+   "طلب"
+  ],
+  "ours": "ط ل ب",
+  "uncertain": false
+ },
+ "b3-u6-046": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b3-u6-047": {
+  "title": "قدس",
+  "status": "confirmed",
+  "roots": [
+   "قدس"
+  ],
+  "ours": "ق د س",
+  "uncertain": false
+ },
+ "b3-u6-048": {
+  "title": "قدم",
+  "status": "confirmed",
+  "roots": [
+   "قدم"
+  ],
+  "ours": "ق د م",
+  "uncertain": false
+ },
+ "b3-u6-051": {
+  "title": "مر",
+  "status": "confirmed",
+  "roots": [
+   "مرر"
+  ],
+  "ours": "م ر ر",
+  "uncertain": false
+ },
+ "b3-u6-052": {
+  "title": "مالي",
+  "status": "confirmed",
+  "roots": [
+   "مول"
+  ],
+  "ours": "م و ل",
+  "uncertain": false
+ },
+ "b3-u6-053": {
+  "title": "واسطة",
+  "status": "confirmed",
+  "roots": [
+   "وسط"
+  ],
+  "ours": "و س ط",
+  "uncertain": false
+ },
+ "b3-u6-054": {
+  "title": "وضع",
+  "status": "confirmed",
+  "roots": [
+   "وضع"
+  ],
+  "ours": "و ض ع",
+  "uncertain": false
+ },
+ "b3-u7-001": {
+  "title": "أساس",
+  "status": "confirmed",
+  "roots": [
+   "ءسس"
+  ],
+  "ours": "ء س س",
+  "uncertain": false
+ },
+ "b3-u7-002": {
+  "title": "بلغ",
+  "status": "confirmed",
+  "roots": [
+   "بلغ"
+  ],
+  "ours": "ب ل غ",
+  "uncertain": false
+ },
+ "b3-u7-003": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ح ر ب",
+  "uncertain": false
+ },
+ "b3-u7-004": {
+  "title": "حضارة",
+  "status": "confirmed",
+  "roots": [
+   "حضر"
+  ],
+  "ours": "ح ض ر",
+  "uncertain": false
+ },
+ "b3-u7-005": {
+  "title": "حقيبة",
+  "status": "confirmed",
+  "roots": [
+   "حقب"
+  ],
+  "ours": "ح ق ب",
+  "uncertain": false
+ },
+ "b3-u7-006": {
+  "title": "حال",
+  "status": "confirmed",
+  "roots": [
+   "حول",
+   "حلي"
+  ],
+  "ours": "ح و ل",
+  "uncertain": false
+ },
+ "b3-u7-007": {
+  "title": "محيط",
+  "status": "confirmed",
+  "roots": [
+   "حوط"
+  ],
+  "ours": "ح و ط",
+  "uncertain": false
+ },
+ "b3-u7-009": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "د و ر",
+  "uncertain": false
+ },
+ "b3-u7-010": {
+  "title": "رابطة",
+  "status": "confirmed",
+  "roots": [
+   "ربط"
+  ],
+  "ours": "ر ب ط",
+  "uncertain": false
+ },
+ "b3-u7-011": {
+  "title": "سجل",
+  "status": "confirmed",
+  "roots": [
+   "سجل"
+  ],
+  "ours": "س ج ل",
+  "uncertain": false
+ },
+ "b3-u7-012": {
+  "title": "سفينة",
+  "status": "confirmed",
+  "roots": [
+   "سفن"
+  ],
+  "ours": "س ف ن",
+  "uncertain": false
+ },
+ "b3-u7-013": {
+  "title": "شعب",
+  "status": "confirmed",
+  "roots": [
+   "شعب"
+  ],
+  "ours": "ش ع ب",
+  "uncertain": false
+ },
+ "b3-u7-014": {
+  "title": "شمل",
+  "status": "confirmed",
+  "roots": [
+   "شمل"
+  ],
+  "ours": "ش م ل",
+  "uncertain": false
+ },
+ "b3-u7-015": {
+  "title": "شامل",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ش م ل",
+  "uncertain": false
+ },
+ "b3-u7-016": {
+  "title": "صحراء",
+  "status": "confirmed",
+  "roots": [
+   "صحر"
+  ],
+  "ours": "ص ح ر",
+  "uncertain": false
+ },
+ "b3-u7-017": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ص ل ب",
+  "uncertain": false
+ },
+ "b3-u7-018": {
+  "title": "ضعف",
+  "status": "confirmed",
+  "roots": [
+   "ضعف"
+  ],
+  "ours": "ض ع ف",
+  "uncertain": false
+ },
+ "b3-u7-019": {
+  "title": "ضعيف",
+  "status": "confirmed",
+  "roots": [
+   "ضعف"
+  ],
+  "ours": "ض ع ف",
+  "uncertain": false
+ },
+ "b3-u7-020": {
+  "title": "طريق",
+  "status": "confirmed",
+  "roots": [
+   "طرق"
+  ],
+  "ours": "ط ر ق",
+  "uncertain": false
+ },
+ "b3-u7-022": {
+  "title": "طريقة",
+  "status": "confirmed",
+  "roots": [
+   "طرق"
+  ],
+  "ours": "ط ر ق",
+  "uncertain": false
+ },
+ "b3-u7-023": {
+  "title": "عصر",
+  "status": "confirmed",
+  "roots": [
+   "عصر"
+  ],
+  "ours": "ع ص ر",
+  "uncertain": false
+ },
+ "b3-u7-024": {
+  "title": "عظيم",
+  "status": "confirmed",
+  "roots": [
+   "عظم"
+  ],
+  "ours": "ع ظ م",
+  "uncertain": false
+ },
+ "b3-u7-025": {
+  "title": "قرن",
+  "status": "confirmed",
+  "roots": [
+   "قرن"
+  ],
+  "ours": "ق ر ن",
+  "uncertain": false
+ },
+ "b3-u7-026": {
+  "title": "قافلة",
+  "status": "confirmed",
+  "roots": [
+   "قفل"
+  ],
+  "ours": "ق ف ل",
+  "uncertain": false
+ },
+ "b3-u7-027": {
+  "title": "قوة",
+  "status": "confirmed",
+  "roots": [
+   "قوي",
+   "قوو"
+  ],
+  "ours": "ق و ي",
+  "uncertain": false
+ },
+ "b3-u7-028": {
+  "title": "قوي",
+  "status": "confirmed",
+  "roots": [
+   "قوي"
+  ],
+  "ours": "ق و ي",
+  "uncertain": false
+ },
+ "b3-u7-029": {
+  "title": "قيمة",
+  "status": "confirmed",
+  "roots": [
+   "قوم"
+  ],
+  "ours": "ق و م",
+  "uncertain": false
+ },
+ "b3-u7-030": {
+  "title": "استكشف",
+  "status": "confirmed",
+  "roots": [
+   "كشف"
+  ],
+  "ours": "ك ش ف",
+  "uncertain": false
+ },
+ "b3-u7-031": {
+  "title": "لاحظ",
+  "status": "confirmed",
+  "roots": [
+   "لحظ"
+  ],
+  "ours": "ل ح ظ",
+  "uncertain": false
+ },
+ "b3-u7-032": {
+  "title": "امتد",
+  "status": "confirmed",
+  "roots": [
+   "مدد"
+  ],
+  "ours": "م د د",
+  "uncertain": false
+ },
+ "b3-u7-033": {
+  "title": "مدة",
+  "status": "confirmed",
+  "roots": [
+   "مدد"
+  ],
+  "ours": "م د د",
+  "uncertain": false
+ },
+ "b3-u7-034": {
+  "title": "نسخة",
+  "status": "confirmed",
+  "roots": [
+   "نسخ"
+  ],
+  "ours": "ن س خ",
+  "uncertain": false
+ },
+ "b3-u7-035": {
+  "title": "نظر",
+  "status": "confirmed",
+  "roots": [
+   "نظر"
+  ],
+  "ours": "ن ظ ر",
+  "uncertain": false
+ },
+ "b3-u7-036": {
+  "title": "نظرة",
+  "status": "confirmed",
+  "roots": [
+   "نظر"
+  ],
+  "ours": "ن ظ ر",
+  "uncertain": false
+ },
+ "b3-u7-037": {
+  "title": "تراث",
+  "status": "confirmed",
+  "roots": [
+   "ورث"
+  ],
+  "ours": "و ر ث",
+  "uncertain": false
+ },
+ "b3-u7-038": {
+  "title": "أواخر",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ء خ ر",
+  "uncertain": false
+ },
+ "b3-u7-039": {
+  "title": "أوائل",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ء و ل",
+  "uncertain": true
+ },
+ "b3-u7-040": {
+  "title": "بركة",
+  "status": "confirmed",
+  "roots": [
+   "برك"
+  ],
+  "ours": "ب ر ك",
+  "uncertain": false
+ },
+ "b3-u7-041": {
+  "title": "ترجم",
+  "status": "confirmed",
+  "roots": [
+   "ترجم"
+  ],
+  "ours": "ت ر ج م",
+  "uncertain": false
+ },
+ "b3-u7-042": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ت ر ج م",
+  "uncertain": false
+ },
+ "b3-u7-043": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج م ع",
+  "uncertain": false
+ },
+ "b3-u7-044": {
+  "title": "مجتمع",
+  "status": "confirmed",
+  "roots": [
+   "جمع"
+  ],
+  "ours": "ج م ع",
+  "uncertain": false
+ },
+ "b3-u7-047": {
+  "title": "حقيقة",
+  "status": "confirmed",
+  "roots": [
+   "حقق"
+  ],
+  "ours": "ح ق ق",
+  "uncertain": false
+ },
+ "b3-u7-049": {
+  "title": "بحق",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ح ق ق",
+  "uncertain": false
+ },
+ "b3-u7-050": {
+  "title": "رحل",
+  "status": "confirmed",
+  "roots": [
+   "رحل"
+  ],
+  "ours": "ر ح ل",
+  "uncertain": false
+ },
+ "b3-u7-051": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ر ح ل",
+  "uncertain": false
+ },
+ "b3-u7-052": {
+  "title": "مستشرق",
+  "status": "confirmed",
+  "roots": [
+   "شرق"
+  ],
+  "ours": "ش ر ق",
+  "uncertain": false
+ },
+ "b3-u7-055": {
+  "title": "طبع",
+  "status": "confirmed",
+  "roots": [
+   "طبع"
+  ],
+  "ours": "ط ب ع",
+  "uncertain": false
+ },
+ "b3-u7-056": {
+  "title": "طبعة",
+  "status": "confirmed",
+  "roots": [
+   "طبع"
+  ],
+  "ours": "ط ب ع",
+  "uncertain": false
+ },
+ "b3-u7-057": {
+  "title": "طول",
+  "status": "confirmed",
+  "roots": [
+   "طول"
+  ],
+  "ours": "ط و ل",
+  "uncertain": false
+ },
+ "b3-u7-058": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع ب ر",
+  "uncertain": false
+ },
+ "b3-u7-059": {
+  "title": "علم",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b3-u7-060": {
+  "title": "عالم",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b3-u7-061": {
+  "title": "معلومات",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b3-u7-062": {
+  "title": "أعاد",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b3-u7-063": {
+  "title": "عادة",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b3-u7-064": {
+  "title": "قاضي",
+  "status": "confirmed",
+  "roots": [
+   "قضي"
+  ],
+  "ours": "ق ض ي",
+  "uncertain": false
+ },
+ "b3-u7-065": {
+  "title": "قطع",
+  "status": "confirmed",
+  "roots": [
+   "قطع"
+  ],
+  "ours": "ق ط ع",
+  "uncertain": false
+ },
+ "b3-u7-066": {
+  "title": "قام",
+  "status": "confirmed",
+  "roots": [
+   "قوم",
+   "قيم"
+  ],
+  "ours": "ق و م",
+  "uncertain": false
+ },
+ "b3-u7-067": {
+  "title": "كامل",
+  "status": "confirmed",
+  "roots": [
+   "كمل"
+  ],
+  "ours": "ك م ل",
+  "uncertain": false
+ },
+ "b3-u7-068": {
+  "title": "لقاء",
+  "status": "confirmed",
+  "roots": [
+   "لقي"
+  ],
+  "ours": "ل ق ي",
+  "uncertain": false
+ },
+ "b3-u7-069": {
+  "title": "نشر",
+  "status": "confirmed",
+  "roots": [
+   "نشر"
+  ],
+  "ours": "ن ش ر",
+  "uncertain": false
+ },
+ "b3-u7-070": {
+  "title": "تنقل",
+  "status": "confirmed",
+  "roots": [
+   "نقل"
+  ],
+  "ours": "ن ق ل",
+  "uncertain": false
+ },
+ "b3-u7-071": {
+  "title": "اهتم",
+  "status": "confirmed",
+  "roots": [
+   "همم"
+  ],
+  "ours": "ه م م",
+  "uncertain": false
+ },
+ "b3-u7-072": {
+  "title": "أهمية",
+  "status": "confirmed",
+  "roots": [
+   "همم"
+  ],
+  "ours": "ه م م",
+  "uncertain": false
+ },
+ "b3-u7-073": {
+  "title": "وصف",
+  "status": "confirmed",
+  "roots": [
+   "وصف"
+  ],
+  "ours": "و ص ف",
+  "uncertain": false
+ },
+ "b3-u7-074": {
+  "title": "وصف",
+  "status": "confirmed",
+  "roots": [
+   "وصف"
+  ],
+  "ours": "و ص ف",
+  "uncertain": false
+ },
+ "b3-u8-001": {
+  "title": "أرض",
+  "status": "confirmed",
+  "roots": [
+   "ءرض"
+  ],
+  "ours": "ء ر ض",
+  "uncertain": false
+ },
+ "b3-u8-002": {
+  "title": "جاف",
+  "status": "confirmed",
+  "roots": [
+   "جفف",
+   "جوف",
+   "جفو"
+  ],
+  "ours": "ج ف ف",
+  "uncertain": false
+ },
+ "b3-u8-003": {
+  "title": "حلقة",
+  "status": "confirmed",
+  "roots": [
+   "حلق"
+  ],
+  "ours": "ح ل ق",
+  "uncertain": false
+ },
+ "b3-u8-005": {
+  "title": "خاتم",
+  "status": "confirmed",
+  "roots": [
+   "ختم"
+  ],
+  "ours": "خ ت م",
+  "uncertain": false
+ },
+ "b3-u8-006": {
+  "title": "خليج",
+  "status": "confirmed",
+  "roots": [
+   "خلج"
+  ],
+  "ours": "خ ل ج",
+  "uncertain": false
+ },
+ "b3-u8-007": {
+  "title": "خيمة",
+  "status": "confirmed",
+  "roots": [
+   "خيم"
+  ],
+  "ours": "خ ي م",
+  "uncertain": false
+ },
+ "b3-u8-008": {
+  "title": "ارتفع",
+  "status": "confirmed",
+  "roots": [
+   "رفع"
+  ],
+  "ours": "ر ف ع",
+  "uncertain": false
+ },
+ "b3-u8-009": {
+  "title": "زين",
+  "status": "confirmed",
+  "roots": [
+   "زين"
+  ],
+  "ours": "ز ي ن",
+  "uncertain": false
+ },
+ "b3-u8-010": {
+  "title": "زينة",
+  "status": "confirmed",
+  "roots": [
+   "زين"
+  ],
+  "ours": "ز ي ن",
+  "uncertain": false
+ },
+ "b3-u8-011": {
+  "title": "أشبه",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ش ب ه",
+  "uncertain": false
+ },
+ "b3-u8-012": {
+  "title": "تشابه",
+  "status": "confirmed",
+  "roots": [
+   "شبه"
+  ],
+  "ours": "ش ب ه",
+  "uncertain": false
+ },
+ "b3-u8-013": {
+  "title": "صحن",
+  "status": "confirmed",
+  "roots": [
+   "صفح",
+   "صحن"
+  ],
+  "ours": "ص ح ن",
+  "uncertain": false
+ },
+ "b3-u8-014": {
+  "title": "ضيف",
+  "status": "confirmed",
+  "roots": [
+   "ضيف"
+  ],
+  "ours": "ض ي ف",
+  "uncertain": false
+ },
+ "b3-u8-015": {
+  "title": "طبلة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ط ب ل",
+  "uncertain": false
+ },
+ "b3-u8-016": {
+  "title": "أعلن",
+  "status": "confirmed",
+  "roots": [
+   "علن"
+  ],
+  "ours": "ع ل ن",
+  "uncertain": false
+ },
+ "b3-u8-017": {
+  "title": "إعلان",
+  "status": "confirmed",
+  "roots": [
+   "علن"
+  ],
+  "ours": "ع ل ن",
+  "uncertain": false
+ },
+ "b3-u8-018": {
+  "title": "فترة",
+  "status": "confirmed",
+  "roots": [
+   "فتر"
+  ],
+  "ours": "ف ت ر",
+  "uncertain": false
+ },
+ "b3-u8-019": {
+  "title": "فارغ",
+  "status": "confirmed",
+  "roots": [
+   "فرغ"
+  ],
+  "ours": "ف ر غ",
+  "uncertain": false
+ },
+ "b3-u8-021": {
+  "title": "فريق",
+  "status": "confirmed",
+  "roots": [
+   "فرق"
+  ],
+  "ours": "ف ر ق",
+  "uncertain": false
+ },
+ "b3-u8-022": {
+  "title": "تقليدي",
+  "status": "confirmed",
+  "roots": [
+   "قلد"
+  ],
+  "ours": "ق ل د",
+  "uncertain": false
+ },
+ "b3-u8-023": {
+  "title": "كف",
+  "status": "confirmed",
+  "roots": [
+   "كفف"
+  ],
+  "ours": "ك ف ف",
+  "uncertain": false
+ },
+ "b3-u8-024": {
+  "title": "مارس",
+  "status": "confirmed",
+  "roots": [
+   "مرس"
+  ],
+  "ours": "م ر س",
+  "uncertain": false
+ },
+ "b3-u8-025": {
+  "title": "مسيحي",
+  "status": "confirmed",
+  "roots": [
+   "مسح"
+  ],
+  "ours": "م س ح",
+  "uncertain": false
+ },
+ "b3-u8-026": {
+  "title": "مائدة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "م ي د",
+  "uncertain": false
+ },
+ "b3-u8-027": {
+  "title": "نشاط",
+  "status": "confirmed",
+  "roots": [
+   "نشط"
+  ],
+  "ours": "ن ش ط",
+  "uncertain": false
+ },
+ "b3-u8-028": {
+  "title": "نوع",
+  "status": "confirmed",
+  "roots": [
+   "نوع"
+  ],
+  "ours": "ن و ع",
+  "uncertain": false
+ },
+ "b3-u8-029": {
+  "title": "تنوع",
+  "status": "confirmed",
+  "roots": [
+   "نوع"
+  ],
+  "ours": "ن و ع",
+  "uncertain": false
+ },
+ "b3-u8-030": {
+  "title": "متنوع",
+  "status": "confirmed",
+  "roots": [
+   "نوع"
+  ],
+  "ours": "ن و ع",
+  "uncertain": false
+ },
+ "b3-u8-031": {
+  "title": "هلال",
+  "status": "confirmed",
+  "roots": [
+   "هلل"
+  ],
+  "ours": "ه ل ل",
+  "uncertain": false
+ },
+ "b3-u8-032": {
+  "title": "تهاني",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ه ن ء",
+  "uncertain": true
+ },
+ "b3-u8-033": {
+  "title": "وقع",
+  "status": "confirmed",
+  "roots": [
+   "وقع"
+  ],
+  "ours": "و ق ع",
+  "uncertain": false
+ },
+ "b3-u8-034": {
+  "title": "موقع",
+  "status": "confirmed",
+  "roots": [
+   "وقع"
+  ],
+  "ours": "و ق ع",
+  "uncertain": false
+ },
+ "b3-u8-035": {
+  "title": "مأكولات",
+  "status": "confirmed",
+  "roots": [
+   "ءكل"
+  ],
+  "ours": "ء ك ل",
+  "uncertain": false
+ },
+ "b3-u8-036": {
+  "title": "بيض",
+  "status": "confirmed",
+  "roots": [
+   "بيض"
+  ],
+  "ours": "ب ي ض",
+  "uncertain": false
+ },
+ "b3-u8-037": {
+  "title": "محدود",
+  "status": "confirmed",
+  "roots": [
+   "حدد"
+  ],
+  "ours": "ح د د",
+  "uncertain": false
+ },
+ "b3-u8-038": {
+  "title": "حضر",
+  "status": "confirmed",
+  "roots": [
+   "حضر"
+  ],
+  "ours": "ح ض ر",
+  "uncertain": false
+ },
+ "b3-u8-039": {
+  "title": "احتفل",
+  "status": "confirmed",
+  "roots": [
+   "حفل"
+  ],
+  "ours": "ح ف ل",
+  "uncertain": false
+ },
+ "b3-u8-040": {
+  "title": "تحول",
+  "status": "confirmed",
+  "roots": [
+   "حول"
+  ],
+  "ours": "ح و ل",
+  "uncertain": false
+ },
+ "b3-u8-041": {
+  "title": "ذكرى",
+  "status": "confirmed",
+  "roots": [
+   "ذكر"
+  ],
+  "ours": "ذ ك ر",
+  "uncertain": false
+ },
+ "b3-u8-042": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "س م و",
+  "uncertain": false
+ },
+ "b3-u8-043": {
+  "title": "مشروب",
+  "status": "confirmed",
+  "roots": [
+   "شرب"
+  ],
+  "ours": "ش ر ب",
+  "uncertain": false
+ },
+ "b3-u8-044": {
+  "title": "شراب",
+  "status": "confirmed",
+  "roots": [
+   "شرب"
+  ],
+  "ours": "ش ر ب",
+  "uncertain": false
+ },
+ "b3-u8-045": {
+  "title": "شارك",
+  "status": "confirmed",
+  "roots": [
+   "شرك"
+  ],
+  "ours": "ش ر ك",
+  "uncertain": false
+ },
+ "b3-u8-046": {
+  "title": "تشارك",
+  "status": "confirmed",
+  "roots": [
+   "شرك"
+  ],
+  "ours": "ش ر ك",
+  "uncertain": false
+ },
+ "b3-u8-047": {
+  "title": "ضم",
+  "status": "confirmed",
+  "roots": [
+   "ضمم"
+  ],
+  "ours": "ض م م",
+  "uncertain": false
+ },
+ "b3-u8-048": {
+  "title": "مطبوخ",
+  "status": "confirmed",
+  "roots": [
+   "طبخ"
+  ],
+  "ours": "ط ب خ",
+  "uncertain": false
+ },
+ "b3-u8-049": {
+  "title": "طبق",
+  "status": "confirmed",
+  "roots": [
+   "طبق"
+  ],
+  "ours": "ط ب ق",
+  "uncertain": false
+ },
+ "b3-u8-050": {
+  "title": "طقوس",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ط ق س",
+  "uncertain": false
+ },
+ "b3-u8-051": {
+  "title": "مطلوب",
+  "status": "confirmed",
+  "roots": [
+   "طلب"
+  ],
+  "ours": "ط ل ب",
+  "uncertain": false
+ },
+ "b3-u8-052": {
+  "title": "معد",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع د د",
+  "uncertain": false
+ },
+ "b3-u8-053": {
+  "title": "عريس",
+  "status": "confirmed",
+  "roots": [
+   "عرس"
+  ],
+  "ours": "ع ر س",
+  "uncertain": false
+ },
+ "b3-u8-054": {
+  "title": "عروس",
+  "status": "confirmed",
+  "roots": [
+   "عرس"
+  ],
+  "ours": "ع ر س",
+  "uncertain": false
+ },
+ "b3-u8-055": {
+  "title": "معتاد",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b3-u8-056": {
+  "title": "عادة",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b3-u8-057": {
+  "title": "عيد",
+  "status": "confirmed",
+  "roots": [
+   "عيد"
+  ],
+  "ours": "ع ي د",
+  "uncertain": false
+ },
+ "b3-u8-059": {
+  "title": "مغرب",
+  "status": "confirmed",
+  "roots": [
+   "غرب"
+  ],
+  "ours": "غ ر ب",
+  "uncertain": false
+ },
+ "b3-u8-060": {
+  "title": "إمكانية",
+  "status": "confirmed",
+  "roots": [
+   "مكن"
+  ],
+  "ours": "م ك ن",
+  "uncertain": false
+ },
+ "b3-u8-061": {
+  "title": "تميز",
+  "status": "confirmed",
+  "roots": [
+   "ميز"
+  ],
+  "ours": "م ي ز",
+  "uncertain": false
+ },
+ "b3-u8-062": {
+  "title": "منتدى",
+  "status": "confirmed",
+  "roots": [
+   "ندو"
+  ],
+  "ours": "ن د و",
+  "uncertain": true
+ },
+ "b3-u8-063": {
+  "title": "مناسبة",
+  "status": "confirmed",
+  "roots": [
+   "نسب"
+  ],
+  "ours": "ن س ب",
+  "uncertain": false
+ },
+ "b3-u8-064": {
+  "title": "انتظر",
+  "status": "confirmed",
+  "roots": [
+   "نظر"
+  ],
+  "ours": "ن ظ ر",
+  "uncertain": false
+ },
+ "b3-u8-065": {
+  "title": "نافس",
+  "status": "confirmed",
+  "roots": [
+   "نفس"
+  ],
+  "ours": "ن ف س",
+  "uncertain": false
+ },
+ "b3-u8-066": {
+  "title": "تنافس",
+  "status": "confirmed",
+  "roots": [
+   "نفس"
+  ],
+  "ours": "ن ف س",
+  "uncertain": false
+ },
+ "b3-u8-067": {
+  "title": "موجود",
+  "status": "confirmed",
+  "roots": [
+   "وجد"
+  ],
+  "ours": "و ج د",
+  "uncertain": false
+ },
+ "b3-u9-001": {
+  "title": "أثر",
+  "status": "confirmed",
+  "roots": [
+   "ءثر"
+  ],
+  "ours": "ء ث ر",
+  "uncertain": false
+ },
+ "b3-u9-002": {
+  "title": "تأثر",
+  "status": "confirmed",
+  "roots": [
+   "ءثر"
+  ],
+  "ours": "ء ث ر",
+  "uncertain": false
+ },
+ "b3-u9-004": {
+  "title": "أثار",
+  "status": "confirmed",
+  "roots": [
+   "ثور"
+  ],
+  "ours": "ث و ر",
+  "uncertain": false
+ },
+ "b3-u9-005": {
+  "title": "ثورة",
+  "status": "confirmed",
+  "roots": [
+   "ثور"
+  ],
+  "ours": "ث و ر",
+  "uncertain": false
+ },
+ "b3-u9-006": {
+  "title": "حركة",
+  "status": "confirmed",
+  "roots": [
+   "حرك"
+  ],
+  "ours": "ح ر ك",
+  "uncertain": false
+ },
+ "b3-u9-007": {
+  "title": "حزب",
+  "status": "confirmed",
+  "roots": [
+   "حزب"
+  ],
+  "ours": "ح ز ب",
+  "uncertain": false
+ },
+ "b3-u9-008": {
+  "title": "خدم",
+  "status": "confirmed",
+  "roots": [
+   "خدم"
+  ],
+  "ours": "خ د م",
+  "uncertain": false
+ },
+ "b3-u9-009": {
+  "title": "خدمة",
+  "status": "confirmed",
+  "roots": [
+   "خدم"
+  ],
+  "ours": "خ د م",
+  "uncertain": false
+ },
+ "b3-u9-010": {
+  "title": "استخدم",
+  "status": "confirmed",
+  "roots": [
+   "خدم"
+  ],
+  "ours": "خ د م",
+  "uncertain": false
+ },
+ "b3-u9-011": {
+  "title": "خلق",
+  "status": "confirmed",
+  "roots": [
+   "خلق",
+   "خرق"
+  ],
+  "ours": "خ ل ق",
+  "uncertain": false
+ },
+ "b3-u9-013": {
+  "title": "دور",
+  "status": "confirmed",
+  "roots": [
+   "دور"
+  ],
+  "ours": "د و ر",
+  "uncertain": false
+ },
+ "b3-u9-014": {
+  "title": "دون",
+  "status": "differs",
+  "roots": [
+   "دنو"
+  ],
+  "ours": "د و ن",
+  "uncertain": false
+ },
+ "b3-u9-015": {
+  "title": "مدونة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "د و ن",
+  "uncertain": false
+ },
+ "b3-u9-016": {
+  "title": "رقابة",
+  "status": "confirmed",
+  "roots": [
+   "رقب"
+  ],
+  "ours": "ر ق ب",
+  "uncertain": false
+ },
+ "b3-u9-017": {
+  "title": "رقيب",
+  "status": "confirmed",
+  "roots": [
+   "رقب"
+  ],
+  "ours": "ر ق ب",
+  "uncertain": false
+ },
+ "b3-u9-018": {
+  "title": "سقط",
+  "status": "confirmed",
+  "roots": [
+   "سقط"
+  ],
+  "ours": "س ق ط",
+  "uncertain": false
+ },
+ "b3-u9-019": {
+  "title": "أسقط",
+  "status": "confirmed",
+  "roots": [
+   "سقط"
+  ],
+  "ours": "س ق ط",
+  "uncertain": false
+ },
+ "b3-u9-020": {
+  "title": "ساهم",
+  "status": "confirmed",
+  "roots": [
+   "سهم"
+  ],
+  "ours": "س ه م",
+  "uncertain": false
+ },
+ "b3-u9-021": {
+  "title": "شرطة",
+  "status": "confirmed",
+  "roots": [
+   "شرط"
+  ],
+  "ours": "ش ر ط",
+  "uncertain": false
+ },
+ "b3-u9-022": {
+  "title": "صنع",
+  "status": "confirmed",
+  "roots": [
+   "صنع"
+  ],
+  "ours": "ص ن ع",
+  "uncertain": false
+ },
+ "b3-u9-023": {
+  "title": "صناعة",
+  "status": "confirmed",
+  "roots": [
+   "صنع"
+  ],
+  "ours": "ص ن ع",
+  "uncertain": false
+ },
+ "b3-u9-024": {
+  "title": "ضرب",
+  "status": "confirmed",
+  "roots": [
+   "ضرب"
+  ],
+  "ours": "ض ر ب",
+  "uncertain": false
+ },
+ "b3-u9-025": {
+  "title": "طور",
+  "status": "confirmed",
+  "roots": [
+   "طور"
+  ],
+  "ours": "ط و ر",
+  "uncertain": false
+ },
+ "b3-u9-026": {
+  "title": "تطور",
+  "status": "confirmed",
+  "roots": [
+   "طور"
+  ],
+  "ours": "ط و ر",
+  "uncertain": false
+ },
+ "b3-u9-027": {
+  "title": "ظل",
+  "status": "confirmed",
+  "roots": [
+   "ظلل"
+  ],
+  "ours": "ظ ل ل",
+  "uncertain": false
+ },
+ "b3-u9-028": {
+  "title": "ظهر",
+  "status": "confirmed",
+  "roots": [
+   "ظهر"
+  ],
+  "ours": "ظ ه ر",
+  "uncertain": false
+ },
+ "b3-u9-029": {
+  "title": "تظاهر",
+  "status": "confirmed",
+  "roots": [
+   "ظهر"
+  ],
+  "ours": "ظ ه ر",
+  "uncertain": false
+ },
+ "b3-u9-030": {
+  "title": "مظاهرة",
+  "status": "confirmed",
+  "roots": [
+   "ظهر"
+  ],
+  "ours": "ظ ه ر",
+  "uncertain": false
+ },
+ "b3-u9-031": {
+  "title": "عارض",
+  "status": "confirmed",
+  "roots": [
+   "عرض"
+  ],
+  "ours": "ع ر ض",
+  "uncertain": false
+ },
+ "b3-u9-032": {
+  "title": "معارضة",
+  "status": "confirmed",
+  "roots": [
+   "عرض"
+  ],
+  "ours": "ع ر ض",
+  "uncertain": false
+ },
+ "b3-u9-033": {
+  "title": "إعلام",
+  "status": "confirmed",
+  "roots": [
+   "علم"
+  ],
+  "ours": "ع ل م",
+  "uncertain": false
+ },
+ "b3-u9-034": {
+  "title": "عنف",
+  "status": "confirmed",
+  "roots": [
+   "عنف"
+  ],
+  "ours": "ع ن ف",
+  "uncertain": false
+ },
+ "b3-u9-035": {
+  "title": "غطى",
+  "status": "confirmed",
+  "roots": [
+   "غطي",
+   "غطو"
+  ],
+  "ours": "غ ط و",
+  "uncertain": false
+ },
+ "b3-u9-036": {
+  "title": "فضائية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ض و",
+  "uncertain": false
+ },
+ "b3-u9-037": {
+  "title": "فن",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ن ن",
+  "uncertain": false
+ },
+ "b3-u9-038": {
+  "title": "قتل",
+  "status": "confirmed",
+  "roots": [
+   "قتل"
+  ],
+  "ours": "ق ت ل",
+  "uncertain": false
+ },
+ "b3-u9-039": {
+  "title": "قناة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ق ن و",
+  "uncertain": false
+ },
+ "b3-u9-040": {
+  "title": "نادر",
+  "status": "confirmed",
+  "roots": [
+   "ندر"
+  ],
+  "ours": "ن د ر",
+  "uncertain": false
+ },
+ "b3-u9-041": {
+  "title": "نظم",
+  "status": "confirmed",
+  "roots": [
+   "نظم"
+  ],
+  "ours": "ن ظ م",
+  "uncertain": false
+ },
+ "b3-u9-042": {
+  "title": "نظام",
+  "status": "confirmed",
+  "roots": [
+   "نظم"
+  ],
+  "ours": "ن ظ م",
+  "uncertain": false
+ },
+ "b3-u9-043": {
+  "title": "منظمة",
+  "status": "confirmed",
+  "roots": [
+   "نظم"
+  ],
+  "ours": "ن ظ م",
+  "uncertain": false
+ },
+ "b3-u9-044": {
+  "title": "وسيلة",
+  "status": "confirmed",
+  "roots": [
+   "وسل"
+  ],
+  "ours": "و س ل",
+  "uncertain": false
+ },
+ "b3-u9-046": {
+  "title": "مبدأ",
+  "status": "confirmed",
+  "roots": [
+   "بدء"
+  ],
+  "ours": "ب د ء",
+  "uncertain": false
+ },
+ "b3-u9-048": {
+  "title": "جائزة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج و ز",
+  "uncertain": false
+ },
+ "b3-u9-049": {
+  "title": "حدث",
+  "status": "confirmed",
+  "roots": [
+   "حدث"
+  ],
+  "ours": "ح د ث",
+  "uncertain": false
+ },
+ "b3-u9-050": {
+  "title": "حديث",
+  "status": "confirmed",
+  "roots": [
+   "حدث"
+  ],
+  "ours": "ح د ث",
+  "uncertain": false
+ },
+ "b3-u9-051": {
+  "title": "حاسوب",
+  "status": "confirmed",
+  "roots": [
+   "حسب"
+  ],
+  "ours": "ح س ب",
+  "uncertain": false
+ },
+ "b3-u9-052": {
+  "title": "حكم",
+  "status": "confirmed",
+  "roots": [
+   "حكم"
+  ],
+  "ours": "ح ك م",
+  "uncertain": false
+ },
+ "b3-u9-053": {
+  "title": "احتل",
+  "status": "confirmed",
+  "roots": [
+   "حلل"
+  ],
+  "ours": "ح ل ل",
+  "uncertain": false
+ },
+ "b3-u9-054": {
+  "title": "دافع",
+  "status": "confirmed",
+  "roots": [
+   "دفع"
+  ],
+  "ours": "د ف ع",
+  "uncertain": false
+ },
+ "b3-u9-055": {
+  "title": "سلطة",
+  "status": "confirmed",
+  "roots": [
+   "سلط"
+  ],
+  "ours": "س ل ط",
+  "uncertain": false
+ },
+ "b3-u9-056": {
+  "title": "شبكة",
+  "status": "confirmed",
+  "roots": [
+   "شبك"
+  ],
+  "ours": "ش ب ك",
+  "uncertain": false
+ },
+ "b3-u9-057": {
+  "title": "شجاعة",
+  "status": "confirmed",
+  "roots": [
+   "شجع"
+  ],
+  "ours": "ش ج ع",
+  "uncertain": false
+ },
+ "b3-u9-058": {
+  "title": "شجاع",
+  "status": "confirmed",
+  "roots": [
+   "شجع"
+  ],
+  "ours": "ش ج ع",
+  "uncertain": false
+ },
+ "b3-u9-059": {
+  "title": "مشروع",
+  "status": "confirmed",
+  "roots": [
+   "شرع"
+  ],
+  "ours": "ش ر ع",
+  "uncertain": false
+ },
+ "b3-u9-060": {
+  "title": "شعبي",
+  "status": "confirmed",
+  "roots": [
+   "شعب"
+  ],
+  "ours": "ش ع ب",
+  "uncertain": false
+ },
+ "b3-u9-061": {
+  "title": "شهد",
+  "status": "confirmed",
+  "roots": [
+   "شهد"
+  ],
+  "ours": "ش ه د",
+  "uncertain": false
+ },
+ "b3-u9-062": {
+  "title": "شهيد",
+  "status": "confirmed",
+  "roots": [
+   "شهد"
+  ],
+  "ours": "ش ه د",
+  "uncertain": false
+ },
+ "b3-u9-063": {
+  "title": "مشهد",
+  "status": "confirmed",
+  "roots": [
+   "شهد"
+  ],
+  "ours": "ش ه د",
+  "uncertain": false
+ },
+ "b3-u9-064": {
+  "title": "صدر",
+  "status": "confirmed",
+  "roots": [
+   "صدر"
+  ],
+  "ours": "ص د ر",
+  "uncertain": false
+ },
+ "b3-u9-065": {
+  "title": "أصدر",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ص د ر",
+  "uncertain": false
+ },
+ "b3-u9-066": {
+  "title": "صحافة",
+  "status": "confirmed",
+  "roots": [
+   "صحف"
+  ],
+  "ours": "ص ح ف",
+  "uncertain": false
+ },
+ "b3-u9-067": {
+  "title": "استضاف",
+  "status": "confirmed",
+  "roots": [
+   "ضيف"
+  ],
+  "ours": "ض ي ف",
+  "uncertain": false
+ },
+ "b3-u9-068": {
+  "title": "طباعة",
+  "status": "confirmed",
+  "roots": [
+   "طبع"
+  ],
+  "ours": "ط ب ع",
+  "uncertain": false
+ },
+ "b3-u9-069": {
+  "title": "مطبعة",
+  "status": "confirmed",
+  "roots": [
+   "طبع"
+  ],
+  "ours": "ط ب ع",
+  "uncertain": false
+ },
+ "b3-u9-070": {
+  "title": "انطباع",
+  "status": "confirmed",
+  "roots": [
+   "طبع"
+  ],
+  "ours": "ط ب ع",
+  "uncertain": false
+ },
+ "b3-u9-071": {
+  "title": "عبر",
+  "status": "confirmed",
+  "roots": [
+   "عبر"
+  ],
+  "ours": "ع ب ر",
+  "uncertain": false
+ },
+ "b3-u9-072": {
+  "title": "عبارة",
+  "status": "confirmed",
+  "roots": [
+   "عبر"
+  ],
+  "ours": "ع ب ر",
+  "uncertain": false
+ },
+ "b3-u9-073": {
+  "title": "تعبير",
+  "status": "confirmed",
+  "roots": [
+   "عبر"
+  ],
+  "ours": "ع ب ر",
+  "uncertain": false
+ },
+ "b3-u9-074": {
+  "title": "معاصر",
+  "status": "confirmed",
+  "roots": [
+   "عصر"
+  ],
+  "ours": "ع ص ر",
+  "uncertain": false
+ },
+ "b3-u9-075": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ق د ر",
+  "uncertain": false
+ },
+ "b3-u9-076": {
+  "title": "تقدم",
+  "status": "confirmed",
+  "roots": [
+   "قدم"
+  ],
+  "ours": "ق د م",
+  "uncertain": false
+ },
+ "b3-u9-077": {
+  "title": "قصيدة",
+  "status": "confirmed",
+  "roots": [
+   "قصد"
+  ],
+  "ours": "ق ص د",
+  "uncertain": false
+ },
+ "b3-u9-078": {
+  "title": "قضية",
+  "status": "confirmed",
+  "roots": [
+   "قضي"
+  ],
+  "ours": "ق ض ي",
+  "uncertain": false
+ },
+ "b3-u9-079": {
+  "title": "قاوم",
+  "status": "confirmed",
+  "roots": [
+   "قوم"
+  ],
+  "ours": "ق و م",
+  "uncertain": false
+ },
+ "b3-u9-080": {
+  "title": "مقاومة",
+  "status": "confirmed",
+  "roots": [
+   "قوم"
+  ],
+  "ours": "ق و م",
+  "uncertain": false
+ },
+ "b3-u9-081": {
+  "title": "كسر",
+  "status": "confirmed",
+  "roots": [
+   "كسر"
+  ],
+  "ours": "ك س ر",
+  "uncertain": false
+ },
+ "b3-u9-082": {
+  "title": "تمتع",
+  "status": "confirmed",
+  "roots": [
+   "متع"
+  ],
+  "ours": "م ت ع",
+  "uncertain": false
+ },
+ "b3-u9-083": {
+  "title": "استمر",
+  "status": "confirmed",
+  "roots": [
+   "مرر"
+  ],
+  "ours": "م ر ر",
+  "uncertain": false
+ },
+ "b3-u9-084": {
+  "title": "أنشأ",
+  "status": "confirmed",
+  "roots": [
+   "نشء"
+  ],
+  "ours": "ن ش ء",
+  "uncertain": false
+ },
+ "b3-u9-085": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن ش ء",
+  "uncertain": false
+ },
+ "b3-u9-086": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ج ه",
+  "uncertain": false
+ },
+ "b3-u9-087": {
+  "title": "أوصل",
+  "status": "confirmed",
+  "roots": [
+   "وصل"
+  ],
+  "ours": "و ص ل",
+  "uncertain": false
+ },
+ "b3-u9-088": {
+  "title": "تواصل",
+  "status": "confirmed",
+  "roots": [
+   "وصل"
+  ],
+  "ours": "و ص ل",
+  "uncertain": false
+ },
+ "b3-u9-089": {
+  "title": "اتصل",
+  "status": "confirmed",
+  "roots": [
+   "وصل"
+  ],
+  "ours": "و ص ل",
+  "uncertain": false
+ },
+ "b3-u9-090": {
+  "title": "اتصال",
+  "status": "confirmed",
+  "roots": [
+   "وصل"
+  ],
+  "ours": "و ص ل",
+  "uncertain": false
+ },
+ "b3-u9-091": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ق ع",
+  "uncertain": false
+ },
+ "b3-u9-092": {
+  "title": "واقعي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ق ع",
+  "uncertain": false
+ },
+ "b3-u10-001": {
+  "title": "أدى",
+  "status": "confirmed",
+  "roots": [
+   "ءدو",
+   "ءدي"
+  ],
+  "ours": "ء د و",
+  "uncertain": false
+ },
+ "b3-u10-002": {
+  "title": "أمل",
+  "status": "confirmed",
+  "roots": [
+   "ءمل",
+   "ملل"
+  ],
+  "ours": "ء م ل",
+  "uncertain": false
+ },
+ "b3-u10-003": {
+  "title": "آلة",
+  "status": "differs",
+  "roots": [
+   "ءول"
+  ],
+  "ours": "ء ل و",
+  "uncertain": true
+ },
+ "b3-u10-004": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ب ش ر",
+  "uncertain": false
+ },
+ "b3-u10-005": {
+  "title": "بطالة",
+  "status": "confirmed",
+  "roots": [
+   "بطل"
+  ],
+  "ours": "ب ط ل",
+  "uncertain": false
+ },
+ "b3-u10-006": {
+  "title": "اتبع",
+  "status": "confirmed",
+  "roots": [
+   "تبع"
+  ],
+  "ours": "ت ب ع",
+  "uncertain": false
+ },
+ "b3-u10-007": {
+  "title": "جعل",
+  "status": "confirmed",
+  "roots": [
+   "جعل"
+  ],
+  "ours": "ج ع ل",
+  "uncertain": false
+ },
+ "b3-u10-008": {
+  "title": "جمهور",
+  "status": "confirmed",
+  "roots": [
+   "جمهر"
+  ],
+  "ours": "ج م ه ر",
+  "uncertain": false
+ },
+ "b3-u10-009": {
+  "title": "تحديتحد",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ح د ي",
+  "uncertain": false
+ },
+ "b3-u10-010": {
+  "title": "إحصاء",
+  "status": "confirmed",
+  "roots": [
+   "حصي",
+   "حصو"
+  ],
+  "ours": "ح ص ي",
+  "uncertain": false
+ },
+ "b3-u10-011": {
+  "title": "خطط",
+  "status": "confirmed",
+  "roots": [
+   "خطط"
+  ],
+  "ours": "خ ط ط",
+  "uncertain": false
+ },
+ "b3-u10-012": {
+  "title": "خطة",
+  "status": "confirmed",
+  "roots": [
+   "خطط"
+  ],
+  "ours": "خ ط ط",
+  "uncertain": false
+ },
+ "b3-u10-013": {
+  "title": "انخفض",
+  "status": "confirmed",
+  "roots": [
+   "خفض"
+  ],
+  "ours": "خ ف ض",
+  "uncertain": false
+ },
+ "b3-u10-015": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ذ و ت",
+  "uncertain": false
+ },
+ "b3-u10-016": {
+  "title": "ربح",
+  "status": "confirmed",
+  "roots": [
+   "ربح"
+  ],
+  "ours": "ر ب ح",
+  "uncertain": false
+ },
+ "b3-u10-017": {
+  "title": "ريف",
+  "status": "confirmed",
+  "roots": [
+   "ريف"
+  ],
+  "ours": "ر ي ف",
+  "uncertain": false
+ },
+ "b3-u10-018": {
+  "title": "شرط",
+  "status": "confirmed",
+  "roots": [
+   "شرط"
+  ],
+  "ours": "ش ر ط",
+  "uncertain": false
+ },
+ "b3-u10-019": {
+  "title": "أشار",
+  "status": "confirmed",
+  "roots": [
+   "شور"
+  ],
+  "ours": "ش و ر",
+  "uncertain": false
+ },
+ "b3-u10-020": {
+  "title": "اعتمد",
+  "status": "confirmed",
+  "roots": [
+   "عمد"
+  ],
+  "ours": "ع م د",
+  "uncertain": false
+ },
+ "b3-u10-021": {
+  "title": "عانى",
+  "status": "confirmed",
+  "roots": [
+   "عني"
+  ],
+  "ours": "ع ن ي",
+  "uncertain": false
+ },
+ "b3-u10-022": {
+  "title": "فرع",
+  "status": "confirmed",
+  "roots": [
+   "فرع"
+  ],
+  "ours": "ف ر ع",
+  "uncertain": false
+ },
+ "b3-u10-023": {
+  "title": "فسر",
+  "status": "confirmed",
+  "roots": [
+   "فسر"
+  ],
+  "ours": "ف س ر",
+  "uncertain": false
+ },
+ "b3-u10-024": {
+  "title": "قانون",
+  "status": "confirmed",
+  "roots": [
+   "قنن"
+  ],
+  "ours": "ق ن ن",
+  "uncertain": true
+ },
+ "b3-u10-025": {
+  "title": "قاد",
+  "status": "confirmed",
+  "roots": [
+   "قود",
+   "قدد"
+  ],
+  "ours": "ق و د",
+  "uncertain": false
+ },
+ "b3-u10-026": {
+  "title": "تكلفة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ك ل ف",
+  "uncertain": false
+ },
+ "b3-u10-027": {
+  "title": "مهنة",
+  "status": "confirmed",
+  "roots": [
+   "مهن"
+  ],
+  "ours": "م ه ن",
+  "uncertain": false
+ },
+ "b3-u10-028": {
+  "title": "نتيجة",
+  "status": "confirmed",
+  "roots": [
+   "نتج"
+  ],
+  "ours": "ن ت ج",
+  "uncertain": false
+ },
+ "b3-u10-029": {
+  "title": "أنفق",
+  "status": "confirmed",
+  "roots": [
+   "نفق"
+  ],
+  "ours": "ن ف ق",
+  "uncertain": false
+ },
+ "b3-u10-030": {
+  "title": "نفى",
+  "status": "confirmed",
+  "roots": [
+   "نفي"
+  ],
+  "ours": "ن ف ي",
+  "uncertain": false
+ },
+ "b3-u10-031": {
+  "title": "نمط",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن م ط",
+  "uncertain": false
+ },
+ "b3-u10-032": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ص و ر",
+  "uncertain": false
+ },
+ "b3-u10-033": {
+  "title": "تنمية",
+  "status": "confirmed",
+  "roots": [
+   "نمو"
+  ],
+  "ours": "ن م و",
+  "uncertain": false
+ },
+ "b3-u10-034": {
+  "title": "منهج",
+  "status": "confirmed",
+  "roots": [
+   "نهج"
+  ],
+  "ours": "ن ه ج",
+  "uncertain": false
+ },
+ "b3-u10-035": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن ه ج",
+  "uncertain": false
+ },
+ "b3-u10-036": {
+  "title": "هدف",
+  "status": "confirmed",
+  "roots": [
+   "هدف"
+  ],
+  "ours": "ه د ف",
+  "uncertain": false
+ },
+ "b3-u10-037": {
+  "title": "هدف",
+  "status": "confirmed",
+  "roots": [
+   "هدف"
+  ],
+  "ours": "ه د ف",
+  "uncertain": false
+ },
+ "b3-u10-038": {
+  "title": "وزع",
+  "status": "confirmed",
+  "roots": [
+   "وزع"
+  ],
+  "ours": "و ز ع",
+  "uncertain": false
+ },
+ "b3-u10-039": {
+  "title": "وافق",
+  "status": "confirmed",
+  "roots": [
+   "وفق"
+  ],
+  "ours": "و ف ق",
+  "uncertain": false
+ },
+ "b3-u10-040": {
+  "title": "مؤسسة",
+  "status": "confirmed",
+  "roots": [
+   "ءسس"
+  ],
+  "ours": "ء س س",
+  "uncertain": false
+ },
+ "b3-u10-041": {
+  "title": "مبلغ",
+  "status": "confirmed",
+  "roots": [
+   "بلغ"
+  ],
+  "ours": "ب ل غ",
+  "uncertain": false
+ },
+ "b3-u10-042": {
+  "title": "بنى",
+  "status": "confirmed",
+  "roots": [
+   "بني"
+  ],
+  "ours": "ب ن ي",
+  "uncertain": false
+ },
+ "b3-u10-043": {
+  "title": "تبنى",
+  "status": "confirmed",
+  "roots": [
+   "بنو",
+   "بني"
+  ],
+  "ours": "ب ن و",
+  "uncertain": false
+ },
+ "b3-u10-044": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ب ن ي",
+  "uncertain": false
+ },
+ "b3-u10-045": {
+  "title": "بين",
+  "status": "confirmed",
+  "roots": [
+   "بين"
+  ],
+  "ours": "ب ي ن",
+  "uncertain": false
+ },
+ "b3-u10-046": {
+  "title": "أجرى",
+  "status": "confirmed",
+  "roots": [
+   "جري"
+  ],
+  "ours": "ج ر ي",
+  "uncertain": false
+ },
+ "b3-u10-047": {
+  "title": "جنس",
+  "status": "confirmed",
+  "roots": [
+   "جنس"
+  ],
+  "ours": "ج ن س",
+  "uncertain": false
+ },
+ "b3-u10-049": {
+  "title": "تحمل",
+  "status": "confirmed",
+  "roots": [
+   "حمل"
+  ],
+  "ours": "ح م ل",
+  "uncertain": false
+ },
+ "b3-u10-050": {
+  "title": "اختبر",
+  "status": "confirmed",
+  "roots": [
+   "خبر"
+  ],
+  "ours": "خ ب ر",
+  "uncertain": false
+ },
+ "b3-u10-051": {
+  "title": "اختبار",
+  "status": "no-page",
+  "roots": [],
+  "ours": "خ ب ر",
+  "uncertain": false
+ },
+ "b3-u10-052": {
+  "title": "مختبر",
+  "status": "confirmed",
+  "roots": [
+   "خبر"
+  ],
+  "ours": "خ ب ر",
+  "uncertain": false
+ },
+ "b3-u10-053": {
+  "title": "خصص",
+  "status": "confirmed",
+  "roots": [
+   "خصص"
+  ],
+  "ours": "خ ص ص",
+  "uncertain": false
+ },
+ "b3-u10-054": {
+  "title": "دخل",
+  "status": "confirmed",
+  "roots": [
+   "دخل"
+  ],
+  "ours": "د خ ل",
+  "uncertain": false
+ },
+ "b3-u10-055": {
+  "title": "رأسمال",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ر ء س",
+  "uncertain": false
+ },
+ "b3-u10-056": {
+  "title": "رأى",
+  "status": "confirmed",
+  "roots": [
+   "رءي"
+  ],
+  "ours": "ر ء ي",
+  "uncertain": false
+ },
+ "b3-u10-057": {
+  "title": "رأى",
+  "status": "confirmed",
+  "roots": [
+   "رءي"
+  ],
+  "ours": "ر ء ي",
+  "uncertain": false
+ },
+ "b3-u10-058": {
+  "title": "مرحلة",
+  "status": "confirmed",
+  "roots": [
+   "رحل"
+  ],
+  "ours": "ر ح ل",
+  "uncertain": false
+ },
+ "b3-u10-059": {
+  "title": "مسؤولية",
+  "status": "differs",
+  "roots": [
+   "سءل"
+  ],
+  "ours": "ء س ل",
+  "uncertain": false
+ },
+ "b3-u10-060": {
+  "title": "مستوى",
+  "status": "confirmed",
+  "roots": [
+   "سوي"
+  ],
+  "ours": "س و ي",
+  "uncertain": false
+ },
+ "b3-u10-061": {
+  "title": "شبه",
+  "status": "confirmed",
+  "roots": [
+   "شبه"
+  ],
+  "ours": "ش ب ه",
+  "uncertain": false
+ },
+ "b3-u10-062": {
+  "title": "ضريبة",
+  "status": "confirmed",
+  "roots": [
+   "ضرب"
+  ],
+  "ours": "ض ر ب",
+  "uncertain": false
+ },
+ "b3-u10-063": {
+  "title": "أضاف",
+  "status": "confirmed",
+  "roots": [
+   "ضيف"
+  ],
+  "ours": "ض ي ف",
+  "uncertain": false
+ },
+ "b3-u10-064": {
+  "title": "عشوائي",
+  "status": "confirmed",
+  "roots": [
+   "عشو"
+  ],
+  "ours": "ع ش و",
+  "uncertain": true
+ },
+ "b3-u10-065": {
+  "title": "تعامل",
+  "status": "confirmed",
+  "roots": [
+   "عمل"
+  ],
+  "ours": "ع م ل",
+  "uncertain": false
+ },
+ "b3-u10-066": {
+  "title": "عملي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع م ل",
+  "uncertain": false
+ },
+ "b3-u10-067": {
+  "title": "عملية",
+  "status": "confirmed",
+  "roots": [
+   "عمل"
+  ],
+  "ours": "ع م ل",
+  "uncertain": false
+ },
+ "b3-u10-068": {
+  "title": "معين",
+  "status": "confirmed",
+  "roots": [
+   "عين"
+  ],
+  "ours": "ع ي ن",
+  "uncertain": false
+ },
+ "b3-u10-069": {
+  "title": "تفاعل",
+  "status": "confirmed",
+  "roots": [
+   "فعل"
+  ],
+  "ours": "ف ع ل",
+  "uncertain": false
+ },
+ "b3-u10-070": {
+  "title": "فاعل",
+  "status": "confirmed",
+  "roots": [
+   "فعل"
+  ],
+  "ours": "ف ع ل",
+  "uncertain": false
+ },
+ "b3-u10-071": {
+  "title": "فقر",
+  "status": "confirmed",
+  "roots": [
+   "فقر"
+  ],
+  "ours": "ف ق ر",
+  "uncertain": false
+ },
+ "b3-u10-072": {
+  "title": "افتقر",
+  "status": "confirmed",
+  "roots": [
+   "فقر"
+  ],
+  "ours": "ف ق ر",
+  "uncertain": false
+ },
+ "b3-u10-073": {
+  "title": "تقرير",
+  "status": "confirmed",
+  "roots": [
+   "قرر"
+  ],
+  "ours": "ق ر ر",
+  "uncertain": false
+ },
+ "b3-u10-074": {
+  "title": "مقرر",
+  "status": "confirmed",
+  "roots": [
+   "قرر"
+  ],
+  "ours": "ق ر ر",
+  "uncertain": false
+ },
+ "b3-u10-075": {
+  "title": "قطاع",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ق ط ع",
+  "uncertain": false
+ },
+ "b3-u10-076": {
+  "title": "قائمة",
+  "status": "confirmed",
+  "roots": [
+   "قوم"
+  ],
+  "ours": "ق و م",
+  "uncertain": false
+ },
+ "b3-u10-077": {
+  "title": "قيم",
+  "status": "confirmed",
+  "roots": [
+   "قوم",
+   "قيم"
+  ],
+  "ours": "ق ي م",
+  "uncertain": false
+ },
+ "b3-u10-078": {
+  "title": "كمية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ك م م",
+  "uncertain": false
+ },
+ "b3-u10-079": {
+  "title": "مدني",
+  "status": "confirmed",
+  "roots": [
+   "مدن"
+  ],
+  "ours": "م د ن",
+  "uncertain": false
+ },
+ "b3-u10-080": {
+  "title": "مول",
+  "status": "confirmed",
+  "roots": [
+   "مول"
+  ],
+  "ours": "م و ل",
+  "uncertain": false
+ },
+ "b3-u10-081": {
+  "title": "نسبة",
+  "status": "confirmed",
+  "roots": [
+   "نسب"
+  ],
+  "ours": "ن س ب",
+  "uncertain": false
+ },
+ "b3-u10-082": {
+  "title": "نظرية",
+  "status": "confirmed",
+  "roots": [
+   "نظر"
+  ],
+  "ours": "ن ظ ر",
+  "uncertain": false
+ },
+ "b3-u10-083": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن ق ل",
+  "uncertain": false
+ },
+ "b3-u10-084": {
+  "title": "نوعية",
+  "status": "confirmed",
+  "roots": [
+   "نوع"
+  ],
+  "ours": "ن و ع",
+  "uncertain": false
+ },
+ "b3-u10-085": {
+  "title": "ميزانية",
+  "status": "confirmed",
+  "roots": [
+   "وزن"
+  ],
+  "ours": "و ز ن",
+  "uncertain": false
+ },
+ "b4-u1-001": {
+  "title": "ألف",
+  "status": "confirmed",
+  "roots": [
+   "ءلف"
+  ],
+  "ours": "ء ل ف",
+  "uncertain": false
+ },
+ "b4-u1-002": {
+  "title": "مؤتمر",
+  "status": "confirmed",
+  "roots": [
+   "ءمر"
+  ],
+  "ours": "ء م ر",
+  "uncertain": false
+ },
+ "b4-u1-003": {
+  "title": "إبداع",
+  "status": "confirmed",
+  "roots": [
+   "بدع"
+  ],
+  "ours": "ب د ع",
+  "uncertain": false
+ },
+ "b4-u1-004": {
+  "title": "بارز",
+  "status": "confirmed",
+  "roots": [
+   "برز"
+  ],
+  "ours": "ب ر ز",
+  "uncertain": false
+ },
+ "b4-u1-005": {
+  "title": "ثابت",
+  "status": "confirmed",
+  "roots": [
+   "ثبت"
+  ],
+  "ours": "ث ب ت",
+  "uncertain": false
+ },
+ "b4-u1-006": {
+  "title": "احتكر",
+  "status": "confirmed",
+  "roots": [
+   "حكر"
+  ],
+  "ours": "ح ك ر",
+  "uncertain": false
+ },
+ "b4-u1-007": {
+  "title": "جسد",
+  "status": "confirmed",
+  "roots": [
+   "جسد"
+  ],
+  "ours": "ج س د",
+  "uncertain": false
+ },
+ "b4-u1-008": {
+  "title": "جاهلية",
+  "status": "confirmed",
+  "roots": [
+   "جهل"
+  ],
+  "ours": "ج ه ل",
+  "uncertain": false
+ },
+ "b4-u1-009": {
+  "title": "حجم",
+  "status": "confirmed",
+  "roots": [
+   "حجم"
+  ],
+  "ours": "ح ج م",
+  "uncertain": false
+ },
+ "b4-u1-010": {
+  "title": "محطة",
+  "status": "confirmed",
+  "roots": [
+   "حطط"
+  ],
+  "ours": "ح ط ط",
+  "uncertain": false
+ },
+ "b4-u1-011": {
+  "title": "حاز",
+  "status": "confirmed",
+  "roots": [
+   "حوز"
+  ],
+  "ours": "ح و ز",
+  "uncertain": false
+ },
+ "b4-u1-012": {
+  "title": "اختصر",
+  "status": "confirmed",
+  "roots": [
+   "خصر"
+  ],
+  "ours": "خ ص ر",
+  "uncertain": false
+ },
+ "b4-u1-013": {
+  "title": "خلاصة",
+  "status": "confirmed",
+  "roots": [
+   "خلص"
+  ],
+  "ours": "خ ل ص",
+  "uncertain": false
+ },
+ "b4-u1-014": {
+  "title": "داخ",
+  "status": "confirmed",
+  "roots": [
+   "دوخ"
+  ],
+  "ours": "د و خ",
+  "uncertain": false
+ },
+ "b4-u1-015": {
+  "title": "إذاعة",
+  "status": "confirmed",
+  "roots": [
+   "ذيع"
+  ],
+  "ours": "ذ ي ع",
+  "uncertain": false
+ },
+ "b4-u1-016": {
+  "title": "استرد",
+  "status": "confirmed",
+  "roots": [
+   "ردد"
+  ],
+  "ours": "ر د د",
+  "uncertain": false
+ },
+ "b4-u1-017": {
+  "title": "ترشيح",
+  "status": "confirmed",
+  "roots": [
+   "رشح"
+  ],
+  "ours": "ر ش ح",
+  "uncertain": false
+ },
+ "b4-u1-018": {
+  "title": "رواية",
+  "status": "confirmed",
+  "roots": [
+   "روي"
+  ],
+  "ours": "ر و ي",
+  "uncertain": false
+ },
+ "b4-u1-019": {
+  "title": "سجن",
+  "status": "confirmed",
+  "roots": [
+   "سجن"
+  ],
+  "ours": "س ج ن",
+  "uncertain": false
+ },
+ "b4-u1-020": {
+  "title": "شتيمة",
+  "status": "confirmed",
+  "roots": [
+   "شتم"
+  ],
+  "ours": "ش ت م",
+  "uncertain": false
+ },
+ "b4-u1-021": {
+  "title": "اشتاق",
+  "status": "confirmed",
+  "roots": [
+   "شوق"
+  ],
+  "ours": "ش و ق",
+  "uncertain": false
+ },
+ "b4-u1-022": {
+  "title": "صوت",
+  "status": "confirmed",
+  "roots": [
+   "صوت"
+  ],
+  "ours": "ص و ت",
+  "uncertain": false
+ },
+ "b4-u1-023": {
+  "title": "تطرف",
+  "status": "confirmed",
+  "roots": [
+   "طرف"
+  ],
+  "ours": "ط ر ف",
+  "uncertain": false
+ },
+ "b4-u1-025": {
+  "title": "ظرف",
+  "status": "confirmed",
+  "roots": [
+   "ظرف"
+  ],
+  "ours": "ظ ر ف",
+  "uncertain": false
+ },
+ "b4-u1-026": {
+  "title": "عرض",
+  "status": "confirmed",
+  "roots": [
+   "عرض"
+  ],
+  "ours": "ع ر ض",
+  "uncertain": false
+ },
+ "b4-u1-027": {
+  "title": "عشق",
+  "status": "confirmed",
+  "roots": [
+   "عشق"
+  ],
+  "ours": "ع ش ق",
+  "uncertain": false
+ },
+ "b4-u1-028": {
+  "title": "تعقيد",
+  "status": "confirmed",
+  "roots": [
+   "عقد"
+  ],
+  "ours": "ع ق د",
+  "uncertain": false
+ },
+ "b4-u1-029": {
+  "title": "تغلب",
+  "status": "confirmed",
+  "roots": [
+   "غلب"
+  ],
+  "ours": "غ ل ب",
+  "uncertain": false
+ },
+ "b4-u1-030": {
+  "title": "أغلق",
+  "status": "confirmed",
+  "roots": [
+   "غلق"
+  ],
+  "ours": "غ ل ق",
+  "uncertain": false
+ },
+ "b4-u1-031": {
+  "title": "غموض",
+  "status": "confirmed",
+  "roots": [
+   "غمض"
+  ],
+  "ours": "غ م ض",
+  "uncertain": false
+ },
+ "b4-u1-032": {
+  "title": "فلح",
+  "status": "confirmed",
+  "roots": [
+   "فلح"
+  ],
+  "ours": "ف ل ح",
+  "uncertain": false
+ },
+ "b4-u1-033": {
+  "title": "فوضى",
+  "status": "confirmed",
+  "roots": [
+   "فوض"
+  ],
+  "ours": "ف و ض",
+  "uncertain": false
+ },
+ "b4-u1-034": {
+  "title": "فاز",
+  "status": "confirmed",
+  "roots": [
+   "فوز",
+   "فزز"
+  ],
+  "ours": "ف و ز",
+  "uncertain": false
+ },
+ "b4-u1-035": {
+  "title": "قبيح",
+  "status": "confirmed",
+  "roots": [
+   "قبح"
+  ],
+  "ours": "ق ب ح",
+  "uncertain": false
+ },
+ "b4-u1-036": {
+  "title": "قاس",
+  "status": "confirmed",
+  "roots": [
+   "قيس",
+   "قسو",
+   "قوس"
+  ],
+  "ours": "ق س و",
+  "uncertain": false
+ },
+ "b4-u1-037": {
+  "title": "قيد",
+  "status": "confirmed",
+  "roots": [
+   "قيد"
+  ],
+  "ours": "ق ي د",
+  "uncertain": false
+ },
+ "b4-u1-038": {
+  "title": "كآبة",
+  "status": "confirmed",
+  "roots": [
+   "كءب"
+  ],
+  "ours": "ك ء ب",
+  "uncertain": false
+ },
+ "b4-u1-039": {
+  "title": "امتزج",
+  "status": "confirmed",
+  "roots": [
+   "مزج"
+  ],
+  "ours": "م ز ج",
+  "uncertain": false
+ },
+ "b4-u1-040": {
+  "title": "همس",
+  "status": "confirmed",
+  "roots": [
+   "همس"
+  ],
+  "ours": "ه م س",
+  "uncertain": false
+ },
+ "b4-u1-041": {
+  "title": "نحيف",
+  "status": "confirmed",
+  "roots": [
+   "نحف"
+  ],
+  "ours": "ن ح ف",
+  "uncertain": false
+ },
+ "b4-u1-042": {
+  "title": "نحو",
+  "status": "confirmed",
+  "roots": [
+   "نحو"
+  ],
+  "ours": "ن ح و",
+  "uncertain": false
+ },
+ "b4-u1-043": {
+  "title": "منصب",
+  "status": "confirmed",
+  "roots": [
+   "نصب"
+  ],
+  "ours": "ن ص ب",
+  "uncertain": false
+ },
+ "b4-u1-044": {
+  "title": "ناقد",
+  "status": "confirmed",
+  "roots": [
+   "نقد"
+  ],
+  "ours": "ن ق د",
+  "uncertain": false
+ },
+ "b4-u1-045": {
+  "title": "هيمنة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ه م ن",
+  "uncertain": false
+ },
+ "b4-u1-046": {
+  "title": "متوتر",
+  "status": "confirmed",
+  "roots": [
+   "وتر"
+  ],
+  "ours": "و ت ر",
+  "uncertain": false
+ },
+ "b4-u1-047": {
+  "title": "متوحش",
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ح ش",
+  "uncertain": false
+ },
+ "b4-u1-048": {
+  "title": "وجع",
+  "status": "confirmed",
+  "roots": [
+   "وجع"
+  ],
+  "ours": "و ج ع",
+  "uncertain": false
+ },
+ "b4-u1-049": {
+  "title": "مؤثر",
+  "status": "confirmed",
+  "roots": [
+   "ءثر"
+  ],
+  "ours": "ء ث ر",
+  "uncertain": false
+ },
+ "b4-u1-050": {
+  "title": "أنوثة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ء ن ث",
+  "uncertain": false
+ },
+ "b4-u1-051": {
+  "title": "أمن",
+  "status": "confirmed",
+  "roots": [
+   "ءمن"
+  ],
+  "ours": "ء م ن",
+  "uncertain": false
+ },
+ "b4-u1-052": {
+  "title": "تبدل",
+  "status": "confirmed",
+  "roots": [
+   "بدل"
+  ],
+  "ours": "ب د ل",
+  "uncertain": false
+ },
+ "b4-u1-053": {
+  "title": "بحر",
+  "status": "confirmed",
+  "roots": [
+   "بحر"
+  ],
+  "ours": "ب ح ر",
+  "uncertain": false
+ },
+ "b4-u1-054": {
+  "title": "تبع",
+  "status": "confirmed",
+  "roots": [
+   "تبع"
+  ],
+  "ours": "ت ب ع",
+  "uncertain": false
+ },
+ "b4-u1-055": {
+  "title": "ثائر",
+  "status": "confirmed",
+  "roots": [
+   "ثور"
+  ],
+  "ours": "ث و ر",
+  "uncertain": false
+ },
+ "b4-u1-056": {
+  "title": "مجمل",
+  "status": "confirmed",
+  "roots": [
+   "جمل"
+  ],
+  "ours": "ج م ل",
+  "uncertain": false
+ },
+ "b4-u1-057": {
+  "title": "تجاوز",
+  "status": "confirmed",
+  "roots": [
+   "جوز"
+  ],
+  "ours": "ج و ز",
+  "uncertain": false
+ },
+ "b4-u1-058": {
+  "title": "مجال",
+  "status": "confirmed",
+  "roots": [
+   "جول"
+  ],
+  "ours": "ج و ل",
+  "uncertain": false
+ },
+ "b4-u1-059": {
+  "title": "حقق",
+  "status": "confirmed",
+  "roots": [
+   "حقق"
+  ],
+  "ours": "ح ق ق",
+  "uncertain": false
+ },
+ "b4-u1-060": {
+  "title": "حول",
+  "status": "confirmed",
+  "roots": [
+   "حول"
+  ],
+  "ours": "ح و ل",
+  "uncertain": false
+ },
+ "b4-u1-061": {
+  "title": "دفعة",
+  "status": "confirmed",
+  "roots": [
+   "دفع"
+  ],
+  "ours": "د ف ع",
+  "uncertain": false
+ },
+ "b4-u1-062": {
+  "title": "ذاكرة",
+  "status": "confirmed",
+  "roots": [
+   "ذكر"
+  ],
+  "ours": "ذ ك ر",
+  "uncertain": false
+ },
+ "b4-u1-063": {
+  "title": "ساحة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "س و ح",
+  "uncertain": false
+ },
+ "b4-u1-064": {
+  "title": "شكل",
+  "status": "confirmed",
+  "roots": [
+   "شكل"
+  ],
+  "ours": "ش ك ل",
+  "uncertain": false
+ },
+ "b4-u1-065": {
+  "title": "ظاهرة",
+  "status": "confirmed",
+  "roots": [
+   "ظهر"
+  ],
+  "ours": "ظ ه ر",
+  "uncertain": false
+ },
+ "b4-u1-067": {
+  "title": "إعالة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع و ل",
+  "uncertain": false
+ },
+ "b4-u1-068": {
+  "title": "تفرغ",
+  "status": "confirmed",
+  "roots": [
+   "فرغ"
+  ],
+  "ours": "ف ر غ",
+  "uncertain": false
+ },
+ "b4-u1-069": {
+  "title": "مقطع",
+  "status": "confirmed",
+  "roots": [
+   "قطع"
+  ],
+  "ours": "ق ط ع",
+  "uncertain": false
+ },
+ "b4-u1-070": {
+  "title": "ملاحق",
+  "status": "confirmed",
+  "roots": [
+   "لحق"
+  ],
+  "ours": "ل ح ق",
+  "uncertain": false
+ },
+ "b4-u1-071": {
+  "title": "لاقى",
+  "status": "confirmed",
+  "roots": [
+   "لقي"
+  ],
+  "ours": "ل ق ي",
+  "uncertain": false
+ },
+ "b4-u1-072": {
+  "title": "مثل",
+  "status": "confirmed",
+  "roots": [
+   "مثل"
+  ],
+  "ours": "م ث ل",
+  "uncertain": false
+ },
+ "b4-u1-073": {
+  "title": "مميز",
+  "status": "confirmed",
+  "roots": [
+   "ميز"
+  ],
+  "ours": "م ي ز",
+  "uncertain": false
+ },
+ "b4-u1-074": {
+  "title": "مولد",
+  "status": "confirmed",
+  "roots": [
+   "ولد"
+  ],
+  "ours": "و ل د",
+  "uncertain": false
+ },
+ "b4-u1-075": {
+  "title": "توجه",
+  "status": "confirmed",
+  "roots": [
+   "وجه"
+  ],
+  "ours": "و ج ه",
+  "uncertain": false
+ },
+ "b4-u2-001": {
+  "title": "أداة",
+  "status": "confirmed",
+  "roots": [
+   "ءدو"
+  ],
+  "ours": "ء د و",
+  "uncertain": false
+ },
+ "b4-u2-002": {
+  "title": "تيار",
+  "status": "differs",
+  "roots": [
+   "رءي"
+  ],
+  "ours": "ت ي ر",
+  "uncertain": true
+ },
+ "b4-u2-003": {
+  "title": "تحرش",
+  "status": "confirmed",
+  "roots": [
+   "حرش"
+  ],
+  "ours": "ح ر ش",
+  "uncertain": false
+ },
+ "b4-u2-004": {
+  "title": "خطاب",
+  "status": "confirmed",
+  "roots": [
+   "خطب"
+  ],
+  "ours": "خ ط ب",
+  "uncertain": false
+ },
+ "b4-u2-005": {
+  "title": "دعم",
+  "status": "confirmed",
+  "roots": [
+   "دعم"
+  ],
+  "ours": "د ع م",
+  "uncertain": false
+ },
+ "b4-u2-006": {
+  "title": "دهشة",
+  "status": "confirmed",
+  "roots": [
+   "دهش"
+  ],
+  "ours": "د ه ش",
+  "uncertain": false
+ },
+ "b4-u2-007": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ر ب ب",
+  "uncertain": false
+ },
+ "b4-u2-008": {
+  "title": "رمز",
+  "status": "confirmed",
+  "roots": [
+   "رمز"
+  ],
+  "ours": "ر م ز",
+  "uncertain": false
+ },
+ "b4-u2-009": {
+  "title": "إرهاب",
+  "status": "confirmed",
+  "roots": [
+   "رهب"
+  ],
+  "ours": "ر ه ب",
+  "uncertain": false
+ },
+ "b4-u2-010": {
+  "title": "مسلح",
+  "status": "confirmed",
+  "roots": [
+   "سلح"
+  ],
+  "ours": "س ل ح",
+  "uncertain": false
+ },
+ "b4-u2-011": {
+  "title": "سلعة",
+  "status": "confirmed",
+  "roots": [
+   "سلع"
+  ],
+  "ours": "س ل ع",
+  "uncertain": false
+ },
+ "b4-u2-012": {
+  "title": "سيطر",
+  "status": "confirmed",
+  "roots": [
+   "سيطر"
+  ],
+  "ours": "س ي ط ر",
+  "uncertain": false
+ },
+ "b4-u2-013": {
+  "title": "تشريعي",
+  "status": "confirmed",
+  "roots": [
+   "شرع"
+  ],
+  "ours": "ش ر ع",
+  "uncertain": false
+ },
+ "b4-u2-014": {
+  "title": "شيوعي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ش ي ع",
+  "uncertain": false
+ },
+ "b4-u2-015": {
+  "title": "صراع",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ص ر ع",
+  "uncertain": false
+ },
+ "b4-u2-017": {
+  "title": "ضغط",
+  "status": "confirmed",
+  "roots": [
+   "ضغط"
+  ],
+  "ours": "ض غ ط",
+  "uncertain": false
+ },
+ "b4-u2-018": {
+  "title": "طموح",
+  "status": "confirmed",
+  "roots": [
+   "طمح"
+  ],
+  "ours": "ط م ح",
+  "uncertain": false
+ },
+ "b4-u2-019": {
+  "title": "عضو",
+  "status": "confirmed",
+  "roots": [
+   "عضو"
+  ],
+  "ours": "ع ض و",
+  "uncertain": false
+ },
+ "b4-u2-020": {
+  "title": "معركة",
+  "status": "confirmed",
+  "roots": [
+   "عرك"
+  ],
+  "ours": "ع ر ك",
+  "uncertain": false
+ },
+ "b4-u2-021": {
+  "title": "عسكري",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع س ك ر",
+  "uncertain": false
+ },
+ "b4-u2-022": {
+  "title": "عقبة",
+  "status": "confirmed",
+  "roots": [
+   "عقب"
+  ],
+  "ours": "ع ق ب",
+  "uncertain": false
+ },
+ "b4-u2-023": {
+  "title": "عقل",
+  "status": "confirmed",
+  "roots": [
+   "عقل"
+  ],
+  "ours": "ع ق ل",
+  "uncertain": false
+ },
+ "b4-u2-024": {
+  "title": "عقلية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع ق ل",
+  "uncertain": false
+ },
+ "b4-u2-025": {
+  "title": "عالج",
+  "status": "confirmed",
+  "roots": [
+   "علج"
+  ],
+  "ours": "ع ل ج",
+  "uncertain": false
+ },
+ "b4-u2-026": {
+  "title": "استعمار",
+  "status": "confirmed",
+  "roots": [
+   "عمر"
+  ],
+  "ours": "ع م ر",
+  "uncertain": false
+ },
+ "b4-u2-027": {
+  "title": "معيار",
+  "status": "confirmed",
+  "roots": [
+   "عير"
+  ],
+  "ours": "ع ي ر",
+  "uncertain": false
+ },
+ "b4-u2-028": {
+  "title": "أغلب",
+  "status": "confirmed",
+  "roots": [
+   "غلب"
+  ],
+  "ours": "غ ل ب",
+  "uncertain": false
+ },
+ "b4-u2-029": {
+  "title": "فرض",
+  "status": "confirmed",
+  "roots": [
+   "فرض"
+  ],
+  "ours": "ف ر ض",
+  "uncertain": false
+ },
+ "b4-u2-030": {
+  "title": "استفاد",
+  "status": "confirmed",
+  "roots": [
+   "فيد"
+  ],
+  "ours": "ف ي د",
+  "uncertain": false
+ },
+ "b4-u2-031": {
+  "title": "قومي",
+  "status": "confirmed",
+  "roots": [
+   "قوم"
+  ],
+  "ours": "ق و م",
+  "uncertain": false
+ },
+ "b4-u2-032": {
+  "title": "تكرار",
+  "status": "confirmed",
+  "roots": [
+   "كرر"
+  ],
+  "ours": "ك ر ر",
+  "uncertain": false
+ },
+ "b4-u2-033": {
+  "title": "ألغى",
+  "status": "confirmed",
+  "roots": [
+   "لغو"
+  ],
+  "ours": "ل غ و",
+  "uncertain": false
+ },
+ "b4-u2-034": {
+  "title": "تمرد",
+  "status": "confirmed",
+  "roots": [
+   "مرد"
+  ],
+  "ours": "م ر د",
+  "uncertain": false
+ },
+ "b4-u2-035": {
+  "title": "مساحة",
+  "status": "confirmed",
+  "roots": [
+   "مسح"
+  ],
+  "ours": "م س ح",
+  "uncertain": false
+ },
+ "b4-u2-036": {
+  "title": "تمسك",
+  "status": "confirmed",
+  "roots": [
+   "مسك"
+  ],
+  "ours": "م س ك",
+  "uncertain": false
+ },
+ "b4-u2-037": {
+  "title": "مزية",
+  "status": "differs",
+  "roots": [
+   "مزي",
+   "زوي"
+  ],
+  "ours": "م ي ز",
+  "uncertain": false
+ },
+ "b4-u2-038": {
+  "title": "انتخاب",
+  "status": "confirmed",
+  "roots": [
+   "نخب"
+  ],
+  "ours": "ن خ ب",
+  "uncertain": false
+ },
+ "b4-u2-039": {
+  "title": "تنفيذي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن ف ذ",
+  "uncertain": false
+ },
+ "b4-u2-040": {
+  "title": "نموذج",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن م ذ ج",
+  "uncertain": true
+ },
+ "b4-u2-041": {
+  "title": "نال",
+  "status": "confirmed",
+  "roots": [
+   "نول",
+   "نيل"
+  ],
+  "ours": "ن و ل",
+  "uncertain": false
+ },
+ "b4-u2-042": {
+  "title": "نائب",
+  "status": "confirmed",
+  "roots": [
+   "نوب"
+  ],
+  "ours": "ن و ب",
+  "uncertain": false
+ },
+ "b4-u2-043": {
+  "title": "استهلك",
+  "status": "confirmed",
+  "roots": [
+   "هلك"
+  ],
+  "ours": "ه ل ك",
+  "uncertain": false
+ },
+ "b4-u2-044": {
+  "title": "تهميش",
+  "status": "confirmed",
+  "roots": [
+   "همش"
+  ],
+  "ours": "ه م ش",
+  "uncertain": false
+ },
+ "b4-u2-045": {
+  "title": "إيجابي",
+  "status": "confirmed",
+  "roots": [
+   "وجب"
+  ],
+  "ours": "و ج ب",
+  "uncertain": false
+ },
+ "b4-u2-046": {
+  "title": "اتحاد",
+  "status": "confirmed",
+  "roots": [
+   "وحد"
+  ],
+  "ours": "و ح د",
+  "uncertain": false
+ },
+ "b4-u2-047": {
+  "title": "أوضح",
+  "status": "confirmed",
+  "roots": [
+   "وضح"
+  ],
+  "ours": "و ض ح",
+  "uncertain": false
+ },
+ "b4-u2-048": {
+  "title": "وعي",
+  "status": "confirmed",
+  "roots": [
+   "وعي"
+  ],
+  "ours": "و ع ي",
+  "uncertain": false
+ },
+ "b4-u2-049": {
+  "title": "أكد",
+  "status": "confirmed",
+  "roots": [
+   "ءكد"
+  ],
+  "ours": "ء ك د",
+  "uncertain": false
+ },
+ "b4-u2-050": {
+  "title": "بلدي",
+  "status": "confirmed",
+  "roots": [
+   "بلد"
+  ],
+  "ours": "ب ل د",
+  "uncertain": false
+ },
+ "b4-u2-051": {
+  "title": "مجلس",
+  "status": "confirmed",
+  "roots": [
+   "جلس"
+  ],
+  "ours": "ج ل س",
+  "uncertain": false
+ },
+ "b4-u2-052": {
+  "title": "حراك",
+  "status": "confirmed",
+  "roots": [
+   "حرك"
+  ],
+  "ours": "ح ر ك",
+  "uncertain": false
+ },
+ "b4-u2-053": {
+  "title": "استخف",
+  "status": "confirmed",
+  "roots": [
+   "خفف"
+  ],
+  "ours": "خ ف ف",
+  "uncertain": false
+ },
+ "b4-u2-054": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "و ز ر",
+  "uncertain": false
+ },
+ "b4-u2-055": {
+  "title": "ذكورية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ذ ك ر",
+  "uncertain": false
+ },
+ "b4-u2-056": {
+  "title": "ارتبط",
+  "status": "confirmed",
+  "roots": [
+   "ربط"
+  ],
+  "ours": "ر ب ط",
+  "uncertain": false
+ },
+ "b4-u2-057": {
+  "title": "تراجع",
+  "status": "confirmed",
+  "roots": [
+   "رجع"
+  ],
+  "ours": "ر ج ع",
+  "uncertain": false
+ },
+ "b4-u2-058": {
+  "title": "مزدوج",
+  "status": "confirmed",
+  "roots": [
+   "زوج"
+  ],
+  "ours": "ز و ج",
+  "uncertain": false
+ },
+ "b4-u2-059": {
+  "title": "تسويق",
+  "status": "confirmed",
+  "roots": [
+   "سوق"
+  ],
+  "ours": "س و ق",
+  "uncertain": false
+ },
+ "b4-u2-061": {
+  "title": "مساواة",
+  "status": "confirmed",
+  "roots": [
+   "سوي"
+  ],
+  "ours": "س و ي",
+  "uncertain": false
+ },
+ "b4-u2-062": {
+  "title": "مسار",
+  "status": "confirmed",
+  "roots": [
+   "سير"
+  ],
+  "ours": "س ي ر",
+  "uncertain": false
+ },
+ "b4-u2-063": {
+  "title": "مطلب",
+  "status": "confirmed",
+  "roots": [
+   "طلب"
+  ],
+  "ours": "ط ل ب",
+  "uncertain": false
+ },
+ "b4-u2-064": {
+  "title": "تعرض",
+  "status": "confirmed",
+  "roots": [
+   "عرض"
+  ],
+  "ours": "ع ر ض",
+  "uncertain": false
+ },
+ "b4-u2-065": {
+  "title": "اعترف",
+  "status": "confirmed",
+  "roots": [
+   "عرف"
+  ],
+  "ours": "ع ر ف",
+  "uncertain": false
+ },
+ "b4-u2-066": {
+  "title": "معقد",
+  "status": "confirmed",
+  "roots": [
+   "عقد"
+  ],
+  "ours": "ع ق د",
+  "uncertain": false
+ },
+ "b4-u2-067": {
+  "title": "عامل",
+  "status": "confirmed",
+  "roots": [
+   "عمل"
+  ],
+  "ours": "ع م ل",
+  "uncertain": false
+ },
+ "b4-u2-068": {
+  "title": "بمفرد",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ر د",
+  "uncertain": false
+ },
+ "b4-u2-069": {
+  "title": "مقبل",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b4-u2-070": {
+  "title": "اقتصر",
+  "status": "confirmed",
+  "roots": [
+   "قصر"
+  ],
+  "ours": "ق ص ر",
+  "uncertain": false
+ },
+ "b4-u2-071": {
+  "title": "تقليد",
+  "status": "confirmed",
+  "roots": [
+   "قلد"
+  ],
+  "ours": "ق ل د",
+  "uncertain": false
+ },
+ "b4-u2-072": {
+  "title": "ملتقى",
+  "status": "confirmed",
+  "roots": [
+   "لقي"
+  ],
+  "ours": "ل ق ي",
+  "uncertain": false
+ },
+ "b4-u2-073": {
+  "title": "تمكين",
+  "status": "confirmed",
+  "roots": [
+   "مكن"
+  ],
+  "ours": "م ك ن",
+  "uncertain": false
+ },
+ "b4-u2-074": {
+  "title": "منح",
+  "status": "confirmed",
+  "roots": [
+   "منح"
+  ],
+  "ours": "م ن ح",
+  "uncertain": false
+ },
+ "b4-u2-075": {
+  "title": "تمييز",
+  "status": "confirmed",
+  "roots": [
+   "ميز"
+  ],
+  "ours": "م ي ز",
+  "uncertain": false
+ },
+ "b4-u2-076": {
+  "title": "منتج",
+  "status": "confirmed",
+  "roots": [
+   "نتج"
+  ],
+  "ours": "ن ت ج",
+  "uncertain": false
+ },
+ "b4-u2-077": {
+  "title": "نسوية",
+  "status": "confirmed",
+  "roots": [
+   "نسو"
+  ],
+  "ours": "ن س و",
+  "uncertain": false
+ },
+ "b4-u3-002": {
+  "title": "أذن",
+  "status": "confirmed",
+  "roots": [
+   "ءذن"
+  ],
+  "ours": "ء ذ ن",
+  "uncertain": false
+ },
+ "b4-u3-003": {
+  "title": "أسطورة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "س ط ر",
+  "uncertain": false
+ },
+ "b4-u3-004": {
+  "title": "مأساة",
+  "status": "confirmed",
+  "roots": [
+   "ءسو"
+  ],
+  "ours": "ء س و",
+  "uncertain": false
+ },
+ "b4-u3-005": {
+  "title": "أمر",
+  "status": "confirmed",
+  "roots": [
+   "ءمر",
+   "مرر"
+  ],
+  "ours": "ء م ر",
+  "uncertain": false
+ },
+ "b4-u3-006": {
+  "title": "أمر",
+  "status": "confirmed",
+  "roots": [
+   "ءمر",
+   "مرر"
+  ],
+  "ours": "ء م ر",
+  "uncertain": false
+ },
+ "b4-u3-008": {
+  "title": "بدو",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ب د و",
+  "uncertain": false
+ },
+ "b4-u3-009": {
+  "title": "بغل",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ب غ ل",
+  "uncertain": false
+ },
+ "b4-u3-010": {
+  "title": "بطل",
+  "status": "confirmed",
+  "roots": [
+   "بطل"
+  ],
+  "ours": "ب ط ل",
+  "uncertain": false
+ },
+ "b4-u3-011": {
+  "title": "بكى",
+  "status": "confirmed",
+  "roots": [
+   "بكي"
+  ],
+  "ours": "ب ك ي",
+  "uncertain": false
+ },
+ "b4-u3-012": {
+  "title": "تمرة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ت م ر",
+  "uncertain": false
+ },
+ "b4-u3-013": {
+  "title": "جدل",
+  "status": "confirmed",
+  "roots": [
+   "جدل"
+  ],
+  "ours": "ج د ل",
+  "uncertain": false
+ },
+ "b4-u3-014": {
+  "title": "جزار",
+  "status": "confirmed",
+  "roots": [
+   "جزر"
+  ],
+  "ours": "ج ز ر",
+  "uncertain": false
+ },
+ "b4-u3-015": {
+  "title": "جلد",
+  "status": "confirmed",
+  "roots": [
+   "جلد"
+  ],
+  "ours": "ج ل د",
+  "uncertain": false
+ },
+ "b4-u3-016": {
+  "title": "جني",
+  "status": "confirmed",
+  "roots": [
+   "جنن"
+  ],
+  "ours": "ج ن ن",
+  "uncertain": false
+ },
+ "b4-u3-017": {
+  "title": "حصار",
+  "status": "confirmed",
+  "roots": [
+   "حصر"
+  ],
+  "ours": "ح ص ر",
+  "uncertain": false
+ },
+ "b4-u3-018": {
+  "title": "خلص",
+  "status": "confirmed",
+  "roots": [
+   "خلص"
+  ],
+  "ours": "خ ل ص",
+  "uncertain": false
+ },
+ "b4-u3-019": {
+  "title": "حط",
+  "status": "confirmed",
+  "roots": [
+   "حطط"
+  ],
+  "ours": "ح ط ط",
+  "uncertain": false
+ },
+ "b4-u3-020": {
+  "title": "خان",
+  "status": "confirmed",
+  "roots": [
+   "خون"
+  ],
+  "ours": "خ و ن",
+  "uncertain": false
+ },
+ "b4-u3-021": {
+  "title": "دين",
+  "status": "confirmed",
+  "roots": [
+   "دين"
+  ],
+  "ours": "د ي ن",
+  "uncertain": false
+ },
+ "b4-u3-022": {
+  "title": "دمعة",
+  "status": "confirmed",
+  "roots": [
+   "دمع"
+  ],
+  "ours": "د م ع",
+  "uncertain": false
+ },
+ "b4-u3-023": {
+  "title": "ترفيه",
+  "status": "confirmed",
+  "roots": [
+   "رفه"
+  ],
+  "ours": "ر ف ه",
+  "uncertain": false
+ },
+ "b4-u3-024": {
+  "title": "ركب",
+  "status": "confirmed",
+  "roots": [
+   "ركب"
+  ],
+  "ours": "ر ك ب",
+  "uncertain": false
+ },
+ "b4-u3-025": {
+  "title": "رمى",
+  "status": "confirmed",
+  "roots": [
+   "رمي"
+  ],
+  "ours": "ر م ي",
+  "uncertain": false
+ },
+ "b4-u3-026": {
+  "title": "سحر",
+  "status": "confirmed",
+  "roots": [
+   "سحر"
+  ],
+  "ours": "س ح ر",
+  "uncertain": false
+ },
+ "b4-u3-027": {
+  "title": "مسدس",
+  "status": "confirmed",
+  "roots": [
+   "سدس"
+  ],
+  "ours": "س د س",
+  "uncertain": false
+ },
+ "b4-u3-028": {
+  "title": "سكت",
+  "status": "confirmed",
+  "roots": [
+   "سكت"
+  ],
+  "ours": "س ك ت",
+  "uncertain": false
+ },
+ "b4-u3-029": {
+  "title": "سكين",
+  "status": "confirmed",
+  "roots": [
+   "سكن"
+  ],
+  "ours": "س ك ن",
+  "uncertain": false
+ },
+ "b4-u3-030": {
+  "title": "سعى",
+  "status": "confirmed",
+  "roots": [
+   "سعي"
+  ],
+  "ours": "س ع ي",
+  "uncertain": false
+ },
+ "b4-u3-031": {
+  "title": "سمين",
+  "status": "confirmed",
+  "roots": [
+   "سمن"
+  ],
+  "ours": "س م ن",
+  "uncertain": false
+ },
+ "b4-u3-032": {
+  "title": "سيف",
+  "status": "confirmed",
+  "roots": [
+   "سيف"
+  ],
+  "ours": "س ي ف",
+  "uncertain": false
+ },
+ "b4-u3-033": {
+  "title": "اشتد",
+  "status": "confirmed",
+  "roots": [
+   "شدد"
+  ],
+  "ours": "ش د د",
+  "uncertain": false
+ },
+ "b4-u3-034": {
+  "title": "صار",
+  "status": "confirmed",
+  "roots": [
+   "صير",
+   "صور",
+   "صري"
+  ],
+  "ours": "ص ي ر",
+  "uncertain": false
+ },
+ "b4-u3-035": {
+  "title": "صاح",
+  "status": "confirmed",
+  "roots": [
+   "صيح"
+  ],
+  "ours": "ص ي ح",
+  "uncertain": false
+ },
+ "b4-u3-036": {
+  "title": "ضحك",
+  "status": "confirmed",
+  "roots": [
+   "ضحك"
+  ],
+  "ours": "ض ح ك",
+  "uncertain": false
+ },
+ "b4-u3-037": {
+  "title": "طرد",
+  "status": "confirmed",
+  "roots": [
+   "طرد"
+  ],
+  "ours": "ط ر د",
+  "uncertain": false
+ },
+ "b4-u3-038": {
+  "title": "عجل",
+  "status": "confirmed",
+  "roots": [
+   "عجل"
+  ],
+  "ours": "ع ج ل",
+  "uncertain": false
+ },
+ "b4-u3-039": {
+  "title": "عبد",
+  "status": "confirmed",
+  "roots": [
+   "عبد"
+  ],
+  "ours": "ع ب د",
+  "uncertain": false
+ },
+ "b4-u3-040": {
+  "title": "غزا",
+  "status": "confirmed",
+  "roots": [
+   "غزو"
+  ],
+  "ours": "غ ز و",
+  "uncertain": false
+ },
+ "b4-u3-041": {
+  "title": "مغامرة",
+  "status": "confirmed",
+  "roots": [
+   "غمر"
+  ],
+  "ours": "غ م ر",
+  "uncertain": false
+ },
+ "b4-u3-042": {
+  "title": "فارس",
+  "status": "confirmed",
+  "roots": [
+   "فرس"
+  ],
+  "ours": "ف ر س",
+  "uncertain": false
+ },
+ "b4-u3-043": {
+  "title": "قدر",
+  "status": "confirmed",
+  "roots": [
+   "قدر"
+  ],
+  "ours": "ق د ر",
+  "uncertain": false
+ },
+ "b4-u3-045": {
+  "title": "لذيذ",
+  "status": "confirmed",
+  "roots": [
+   "لذذ"
+  ],
+  "ours": "ل ذ ذ",
+  "uncertain": false
+ },
+ "b4-u3-046": {
+  "title": "ملحمة",
+  "status": "confirmed",
+  "roots": [
+   "لحم"
+  ],
+  "ours": "ل ح م",
+  "uncertain": false
+ },
+ "b4-u3-047": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "م ل ء",
+  "uncertain": false
+ },
+ "b4-u3-048": {
+  "title": "ندم",
+  "status": "confirmed",
+  "roots": [
+   "ندم"
+  ],
+  "ours": "ن د م",
+  "uncertain": false
+ },
+ "b4-u3-049": {
+  "title": "منطق",
+  "status": "confirmed",
+  "roots": [
+   "نطق"
+  ],
+  "ours": "ن ط ق",
+  "uncertain": false
+ },
+ "b4-u3-050": {
+  "title": "نهضة",
+  "status": "confirmed",
+  "roots": [
+   "نهض"
+  ],
+  "ours": "ن ه ض",
+  "uncertain": false
+ },
+ "b4-u3-051": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "و د ع",
+  "uncertain": true
+ },
+ "b4-u3-052": {
+  "title": "وهب",
+  "status": "confirmed",
+  "roots": [
+   "وهب"
+  ],
+  "ours": "و ه ب",
+  "uncertain": false
+ },
+ "b4-u3-053": {
+  "title": "اتهم",
+  "status": "confirmed",
+  "roots": [
+   "وهم"
+  ],
+  "ours": "و ه م",
+  "uncertain": false
+ },
+ "b4-u3-054": {
+  "title": "يهودي",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ي ه د",
+  "uncertain": false
+ },
+ "b4-u3-055": {
+  "title": "مبالغة",
+  "status": "confirmed",
+  "roots": [
+   "بلغ"
+  ],
+  "ours": "ب ل غ",
+  "uncertain": false
+ },
+ "b4-u3-056": {
+  "title": "تاجر",
+  "status": "confirmed",
+  "roots": [
+   "تجر"
+  ],
+  "ours": "ت ج ر",
+  "uncertain": false
+ },
+ "b4-u3-057": {
+  "title": "أتم",
+  "status": "confirmed",
+  "roots": [
+   "تمم"
+  ],
+  "ours": "ت م م",
+  "uncertain": false
+ },
+ "b4-u3-058": {
+  "title": "جرى",
+  "status": "confirmed",
+  "roots": [
+   "جري"
+  ],
+  "ours": "ج ر ي",
+  "uncertain": false
+ },
+ "b4-u3-059": {
+  "title": "تجانس",
+  "status": "confirmed",
+  "roots": [
+   "جنس"
+  ],
+  "ours": "ج ن س",
+  "uncertain": false
+ },
+ "b4-u3-060": {
+  "title": "حضر",
+  "status": "confirmed",
+  "roots": [
+   "حضر"
+  ],
+  "ours": "ح ض ر",
+  "uncertain": false
+ },
+ "b4-u3-061": {
+  "title": "دام",
+  "status": "confirmed",
+  "roots": [
+   "دوم"
+  ],
+  "ours": "د و م",
+  "uncertain": false
+ },
+ "b4-u3-062": {
+  "title": "ارتاح",
+  "status": "confirmed",
+  "roots": [
+   "روح"
+  ],
+  "ours": "ر و ح",
+  "uncertain": false
+ },
+ "b4-u3-063": {
+  "title": "سيرة",
+  "status": "confirmed",
+  "roots": [
+   "سير"
+  ],
+  "ours": "س ي ر",
+  "uncertain": false
+ },
+ "b4-u3-064": {
+  "title": "تشويق",
+  "status": "confirmed",
+  "roots": [
+   "شوق"
+  ],
+  "ours": "ش و ق",
+  "uncertain": false
+ },
+ "b4-u3-065": {
+  "title": "صدق",
+  "status": "confirmed",
+  "roots": [
+   "صدق"
+  ],
+  "ours": "ص د ق",
+  "uncertain": false
+ },
+ "b4-u3-066": {
+  "title": "إضراب",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ض ر ب",
+  "uncertain": false
+ },
+ "b4-u3-067": {
+  "title": "تضمن",
+  "status": "confirmed",
+  "roots": [
+   "ضمن"
+  ],
+  "ours": "ض م ن",
+  "uncertain": false
+ },
+ "b4-u3-068": {
+  "title": "عد",
+  "status": "confirmed",
+  "roots": [
+   "عدد"
+  ],
+  "ours": "ع د د",
+  "uncertain": false
+ },
+ "b4-u3-069": {
+  "title": "عد",
+  "status": "confirmed",
+  "roots": [
+   "عدد"
+  ],
+  "ours": "ع د د",
+  "uncertain": false
+ },
+ "b4-u3-070": {
+  "title": "عظم",
+  "status": "confirmed",
+  "roots": [
+   "عظم"
+  ],
+  "ours": "ع ظ م",
+  "uncertain": false
+ },
+ "b4-u3-071": {
+  "title": "عولمة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع ل م",
+  "uncertain": true
+ },
+ "b4-u3-072": {
+  "title": "استعلاء",
+  "status": "differs",
+  "roots": [
+   "علي"
+  ],
+  "ours": "ع ل و",
+  "uncertain": false
+ },
+ "b4-u3-073": {
+  "title": "استغرب",
+  "status": "confirmed",
+  "roots": [
+   "غرب"
+  ],
+  "ours": "غ ر ب",
+  "uncertain": false
+ },
+ "b4-u3-074": {
+  "title": "انفرد",
+  "status": "confirmed",
+  "roots": [
+   "فرد"
+  ],
+  "ours": "ف ر د",
+  "uncertain": false
+ },
+ "b4-u3-075": {
+  "title": "فرغ",
+  "status": "confirmed",
+  "roots": [
+   "فرغ"
+  ],
+  "ours": "ف ر غ",
+  "uncertain": false
+ },
+ "b4-u3-076": {
+  "title": "قبل",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b4-u3-077": {
+  "title": "أقبل",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b4-u3-078": {
+  "title": "قبيلة",
+  "status": "confirmed",
+  "roots": [
+   "قبل"
+  ],
+  "ours": "ق ب ل",
+  "uncertain": false
+ },
+ "b4-u3-079": {
+  "title": "تنازل",
+  "status": "confirmed",
+  "roots": [
+   "نزل"
+  ],
+  "ours": "ن ز ل",
+  "uncertain": false
+ },
+ "b4-u3-080": {
+  "title": "هم",
+  "status": "confirmed",
+  "roots": [
+   "همم"
+  ],
+  "ours": "ه م م",
+  "uncertain": false
+ },
+ "b4-u3-081": {
+  "title": "ورث",
+  "status": "confirmed",
+  "roots": [
+   "ورث"
+  ],
+  "ours": "و ر ث",
+  "uncertain": false
+ },
+ "b4-u4-001": {
+  "title": "أثر",
+  "status": "confirmed",
+  "roots": [
+   "ءثر"
+  ],
+  "ours": "ء ث ر",
+  "uncertain": false
+ },
+ "b4-u4-002": {
+  "title": "أمي",
+  "status": "differs",
+  "roots": [
+   "ءمو"
+  ],
+  "ours": "ء م م",
+  "uncertain": false
+ },
+ "b4-u4-003": {
+  "title": "بضاعة",
+  "status": "confirmed",
+  "roots": [
+   "بضع"
+  ],
+  "ours": "ب ض ع",
+  "uncertain": false
+ },
+ "b4-u4-004": {
+  "title": "ثواب",
+  "status": "confirmed",
+  "roots": [
+   "ثوب"
+  ],
+  "ours": "ث و ب",
+  "uncertain": false
+ },
+ "b4-u4-005": {
+  "title": "ثياب",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ث و ب",
+  "uncertain": false
+ },
+ "b4-u4-006": {
+  "title": "جراحة",
+  "status": "confirmed",
+  "roots": [
+   "جرح"
+  ],
+  "ours": "ج ر ح",
+  "uncertain": false
+ },
+ "b4-u4-007": {
+  "title": "حريق",
+  "status": "confirmed",
+  "roots": [
+   "حرق"
+  ],
+  "ours": "ح ر ق",
+  "uncertain": false
+ },
+ "b4-u4-008": {
+  "title": "احتوى",
+  "status": "confirmed",
+  "roots": [
+   "حوي"
+  ],
+  "ours": "ح و ي",
+  "uncertain": false
+ },
+ "b4-u4-009": {
+  "title": "حن",
+  "status": "confirmed",
+  "roots": [
+   "حنن"
+  ],
+  "ours": "ح ن ن",
+  "uncertain": false
+ },
+ "b4-u4-010": {
+  "title": "خمر",
+  "status": "confirmed",
+  "roots": [
+   "خمر"
+  ],
+  "ours": "خ م ر",
+  "uncertain": false
+ },
+ "b4-u4-011": {
+  "title": "دواء",
+  "status": "confirmed",
+  "roots": [
+   "دوي"
+  ],
+  "ours": "د و ي",
+  "uncertain": false
+ },
+ "b4-u4-012": {
+  "title": "ركن",
+  "status": "confirmed",
+  "roots": [
+   "ركن"
+  ],
+  "ours": "ر ك ن",
+  "uncertain": false
+ },
+ "b4-u4-013": {
+  "title": "رائحة",
+  "status": "confirmed",
+  "roots": [
+   "روح"
+  ],
+  "ours": "ر و ح",
+  "uncertain": false
+ },
+ "b4-u4-014": {
+  "title": "رائع",
+  "status": "confirmed",
+  "roots": [
+   "روع"
+  ],
+  "ours": "ر و ع",
+  "uncertain": false
+ },
+ "b4-u4-015": {
+  "title": "زبون",
+  "status": "confirmed",
+  "roots": [
+   "زمل",
+   "وزن",
+   "زبن"
+  ],
+  "ours": "ز ب ن",
+  "uncertain": false
+ },
+ "b4-u4-016": {
+  "title": "زفاف",
+  "status": "confirmed",
+  "roots": [
+   "زفف"
+  ],
+  "ours": "ز ف ف",
+  "uncertain": false
+ },
+ "b4-u4-017": {
+  "title": "ازدهر",
+  "status": "confirmed",
+  "roots": [
+   "زهر"
+  ],
+  "ours": "ز ه ر",
+  "uncertain": false
+ },
+ "b4-u4-018": {
+  "title": "سبيل",
+  "status": "confirmed",
+  "roots": [
+   "سبل"
+  ],
+  "ours": "س ب ل",
+  "uncertain": false
+ },
+ "b4-u4-019": {
+  "title": "شريحة",
+  "status": "confirmed",
+  "roots": [
+   "شرح"
+  ],
+  "ours": "ش ر ح",
+  "uncertain": false
+ },
+ "b4-u4-020": {
+  "title": "شفي",
+  "status": "confirmed",
+  "roots": [
+   "شفي"
+  ],
+  "ours": "ش ف ي",
+  "uncertain": false
+ },
+ "b4-u4-021": {
+  "title": "صابون",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ص ب ن",
+  "uncertain": false
+ },
+ "b4-u4-022": {
+  "title": "ضم",
+  "status": "confirmed",
+  "roots": [
+   "ضمم"
+  ],
+  "ours": "ض م م",
+  "uncertain": false
+ },
+ "b4-u4-023": {
+  "title": "عتيق",
+  "status": "confirmed",
+  "roots": [
+   "عتق"
+  ],
+  "ours": "ع ت ق",
+  "uncertain": false
+ },
+ "b4-u4-024": {
+  "title": "عزف",
+  "status": "confirmed",
+  "roots": [
+   "عزف"
+  ],
+  "ours": "ع ز ف",
+  "uncertain": false
+ },
+ "b4-u4-025": {
+  "title": "عطر",
+  "status": "confirmed",
+  "roots": [
+   "عطر"
+  ],
+  "ours": "ع ط ر",
+  "uncertain": false
+ },
+ "b4-u4-026": {
+  "title": "عمارة",
+  "status": "confirmed",
+  "roots": [
+   "عمر"
+  ],
+  "ours": "ع م ر",
+  "uncertain": false
+ },
+ "b4-u4-027": {
+  "title": "فئة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ف ي ء",
+  "uncertain": false
+ },
+ "b4-u4-028": {
+  "title": "فاخر",
+  "status": "confirmed",
+  "roots": [
+   "فخر"
+  ],
+  "ours": "ف خ ر",
+  "uncertain": false
+ },
+ "b4-u4-029": {
+  "title": "تفاوت",
+  "status": "confirmed",
+  "roots": [
+   "فوت"
+  ],
+  "ours": "ف و ت",
+  "uncertain": false
+ },
+ "b4-u4-030": {
+  "title": "أقصى",
+  "status": "confirmed",
+  "roots": [
+   "قصو"
+  ],
+  "ours": "ق ص و",
+  "uncertain": false
+ },
+ "b4-u4-032": {
+  "title": "ميدان",
+  "status": "no-page",
+  "roots": [],
+  "ours": "م ي د",
+  "uncertain": true
+ },
+ "b4-u4-033": {
+  "title": "نخبة",
+  "status": "confirmed",
+  "roots": [
+   "نخب"
+  ],
+  "ours": "ن خ ب",
+  "uncertain": false
+ },
+ "b4-u4-034": {
+  "title": "نضج",
+  "status": "confirmed",
+  "roots": [
+   "نضج"
+  ],
+  "ours": "ن ض ج",
+  "uncertain": false
+ },
+ "b4-u4-035": {
+  "title": "ناضج",
+  "status": "confirmed",
+  "roots": [
+   "نضج"
+  ],
+  "ours": "ن ض ج",
+  "uncertain": false
+ },
+ "b4-u4-036": {
+  "title": "نظافة",
+  "status": "confirmed",
+  "roots": [
+   "نظف"
+  ],
+  "ours": "ن ظ ف",
+  "uncertain": false
+ },
+ "b4-u4-037": {
+  "title": "نظيف",
+  "status": "confirmed",
+  "roots": [
+   "نظف"
+  ],
+  "ours": "ن ظ ف",
+  "uncertain": false
+ },
+ "b4-u4-038": {
+  "title": "نفوذ",
+  "status": "confirmed",
+  "roots": [
+   "نفذ"
+  ],
+  "ours": "ن ف ذ",
+  "uncertain": false
+ },
+ "b4-u4-039": {
+  "title": "نموذج",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن م ذ ج",
+  "uncertain": true
+ },
+ "b4-u4-040": {
+  "title": "مورد",
+  "status": "confirmed",
+  "roots": [
+   "ورد"
+  ],
+  "ours": "و ر د",
+  "uncertain": false
+ },
+ "b4-u4-041": {
+  "title": "وفر",
+  "status": "confirmed",
+  "roots": [
+   "وفر"
+  ],
+  "ours": "و ف ر",
+  "uncertain": false
+ },
+ "b4-u4-042": {
+  "title": "وفير",
+  "status": "confirmed",
+  "roots": [
+   "وفر"
+  ],
+  "ours": "و ف ر",
+  "uncertain": false
+ },
+ "b4-u4-043": {
+  "title": "إنجاز",
+  "status": "confirmed",
+  "roots": [
+   "نجز"
+  ],
+  "ours": "ن ج ز",
+  "uncertain": false
+ },
+ "b4-u4-044": {
+  "title": "اتخذ",
+  "status": "confirmed",
+  "roots": [
+   "ءخذ"
+  ],
+  "ours": "ء خ ذ",
+  "uncertain": false
+ },
+ "b4-u4-045": {
+  "title": "مبنى",
+  "status": "confirmed",
+  "roots": [
+   "بني"
+  ],
+  "ours": "ب ن ي",
+  "uncertain": false
+ },
+ "b4-u4-046": {
+  "title": null,
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج و د",
+  "uncertain": false
+ },
+ "b4-u4-047": {
+  "title": "استجوب",
+  "status": "confirmed",
+  "roots": [
+   "جوب"
+  ],
+  "ours": "ج و ب",
+  "uncertain": false
+ },
+ "b4-u4-048": {
+  "title": "استحم",
+  "status": "confirmed",
+  "roots": [
+   "حمم"
+  ],
+  "ours": "ح م م",
+  "uncertain": false
+ },
+ "b4-u4-049": {
+  "title": "خيري",
+  "status": "confirmed",
+  "roots": [
+   "خير"
+  ],
+  "ours": "خ ي ر",
+  "uncertain": false
+ },
+ "b4-u4-050": {
+  "title": "تداخل",
+  "status": "confirmed",
+  "roots": [
+   "دخل"
+  ],
+  "ours": "د خ ل",
+  "uncertain": false
+ },
+ "b4-u4-051": {
+  "title": "استراح",
+  "status": "confirmed",
+  "roots": [
+   "روح"
+  ],
+  "ours": "ر و ح",
+  "uncertain": false
+ },
+ "b4-u4-052": {
+  "title": "تشخيص",
+  "status": "confirmed",
+  "roots": [
+   "شخص"
+  ],
+  "ours": "ش خ ص",
+  "uncertain": false
+ },
+ "b4-u4-053": {
+  "title": "شدد",
+  "status": "confirmed",
+  "roots": [
+   "شدد"
+  ],
+  "ours": "ش د د",
+  "uncertain": false
+ },
+ "b4-u4-054": {
+  "title": "ضمن",
+  "status": "confirmed",
+  "roots": [
+   "ضمن"
+  ],
+  "ours": "ض م ن",
+  "uncertain": false
+ },
+ "b4-u4-055": {
+  "title": "طابع",
+  "status": "confirmed",
+  "roots": [
+   "طبع"
+  ],
+  "ours": "ط ب ع",
+  "uncertain": false
+ },
+ "b4-u4-056": {
+  "title": "طبقة",
+  "status": "confirmed",
+  "roots": [
+   "طبق"
+  ],
+  "ours": "ط ب ق",
+  "uncertain": false
+ },
+ "b4-u4-058": {
+  "title": "عيادة",
+  "status": "confirmed",
+  "roots": [
+   "عود"
+  ],
+  "ours": "ع و د",
+  "uncertain": false
+ },
+ "b4-u4-059": {
+  "title": "أفلس",
+  "status": "confirmed",
+  "roots": [
+   "فلس"
+  ],
+  "ours": "ف ل س",
+  "uncertain": false
+ },
+ "b4-u4-060": {
+  "title": "قاعدة",
+  "status": "confirmed",
+  "roots": [
+   "قعد"
+  ],
+  "ours": "ق ع د",
+  "uncertain": false
+ },
+ "b4-u4-061": {
+  "title": "أكثر",
+  "status": "confirmed",
+  "roots": [
+   "كثر"
+  ],
+  "ours": "ك ث ر",
+  "uncertain": false
+ },
+ "b4-u4-062": {
+  "title": "كون",
+  "status": "confirmed",
+  "roots": [
+   "كون"
+  ],
+  "ours": "ك و ن",
+  "uncertain": false
+ },
+ "b4-u4-063": {
+  "title": "ملحوظ",
+  "status": "confirmed",
+  "roots": [
+   "لحظ"
+  ],
+  "ours": "ل ح ظ",
+  "uncertain": false
+ },
+ "b4-u4-064": {
+  "title": "لون",
+  "status": "confirmed",
+  "roots": [
+   "لون"
+  ],
+  "ours": "ل و ن",
+  "uncertain": false
+ },
+ "b4-u4-065": {
+  "title": "استنتج",
+  "status": "confirmed",
+  "roots": [
+   "نتج"
+  ],
+  "ours": "ن ت ج",
+  "uncertain": false
+ },
+ "b4-u4-066": {
+  "title": "نزل",
+  "status": "confirmed",
+  "roots": [
+   "نزل"
+  ],
+  "ours": "ن ز ل",
+  "uncertain": false
+ },
+ "b4-u4-067": {
+  "title": "منزل",
+  "status": "confirmed",
+  "roots": [
+   "نزل"
+  ],
+  "ours": "ن ز ل",
+  "uncertain": false
+ },
+ "b4-u4-068": {
+  "title": "منشأة",
+  "status": "confirmed",
+  "roots": [
+   "نشء"
+  ],
+  "ours": "ن ش ء",
+  "uncertain": false
+ },
+ "b4-u4-069": {
+  "title": "تناقل",
+  "status": "confirmed",
+  "roots": [
+   "نقل"
+  ],
+  "ours": "ن ق ل",
+  "uncertain": false
+ },
+ "b4-u4-070": {
+  "title": "استهدف",
+  "status": "confirmed",
+  "roots": [
+   "هدف"
+  ],
+  "ours": "ه د ف",
+  "uncertain": false
+ },
+ "b4-u4-071": {
+  "title": "هام",
+  "status": "confirmed",
+  "roots": [
+   "همم",
+   "هيم"
+  ],
+  "ours": "ه م م",
+  "uncertain": false
+ },
+ "b4-u4-072": {
+  "title": "هم",
+  "status": "confirmed",
+  "roots": [
+   "همم"
+  ],
+  "ours": "ه م م",
+  "uncertain": false
+ },
+ "b4-u4-073": {
+  "title": "اتجه",
+  "status": "confirmed",
+  "roots": [
+   "وجه"
+  ],
+  "ours": "و ج ه",
+  "uncertain": false
+ },
+ "b4-u4-074": {
+  "title": "واجهة",
+  "status": "confirmed",
+  "roots": [
+   "وجه"
+  ],
+  "ours": "و ج ه",
+  "uncertain": false
+ },
+ "b4-u4-076": {
+  "title": "اتصف",
+  "status": "confirmed",
+  "roots": [
+   "وصف"
+  ],
+  "ours": "و ص ف",
+  "uncertain": false
+ },
+ "b4-u4-077": {
+  "title": "وقف",
+  "status": "confirmed",
+  "roots": [
+   "وقف"
+  ],
+  "ours": "و ق ف",
+  "uncertain": false
+ },
+ "b4-u4-078": {
+  "title": "استولى",
+  "status": "confirmed",
+  "roots": [
+   "ولي"
+  ],
+  "ours": "و ل ي",
+  "uncertain": false
+ },
+ "b4-u5-001": {
+  "title": "مباشر",
+  "status": "confirmed",
+  "roots": [
+   "بشر"
+  ],
+  "ours": "ب ش ر",
+  "uncertain": false
+ },
+ "b4-u5-002": {
+  "title": "بح",
+  "status": "confirmed",
+  "roots": [
+   "بحح"
+  ],
+  "ours": "ب ح ح",
+  "uncertain": false
+ },
+ "b4-u5-003": {
+  "title": "بدأ",
+  "status": "confirmed",
+  "roots": [
+   "بدء"
+  ],
+  "ours": "ب د ء",
+  "uncertain": false
+ },
+ "b4-u5-004": {
+  "title": "استثمار",
+  "status": "confirmed",
+  "roots": [
+   "ثمر"
+  ],
+  "ours": "ث م ر",
+  "uncertain": false
+ },
+ "b4-u5-005": {
+  "title": "جوهري",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ج و ه ر",
+  "uncertain": true
+ },
+ "b4-u5-006": {
+  "title": "احتج",
+  "status": "confirmed",
+  "roots": [
+   "حجج"
+  ],
+  "ours": "ح ج ج",
+  "uncertain": false
+ },
+ "b4-u5-007": {
+  "title": "أخفق",
+  "status": "confirmed",
+  "roots": [
+   "خفق"
+  ],
+  "ours": "خ ف ق",
+  "uncertain": false
+ },
+ "b4-u5-008": {
+  "title": "اختفى",
+  "status": "confirmed",
+  "roots": [
+   "خفي"
+  ],
+  "ours": "خ ف ي",
+  "uncertain": false
+ },
+ "b4-u5-009": {
+  "title": "خلفية",
+  "status": "confirmed",
+  "roots": [
+   "خلف"
+  ],
+  "ours": "خ ل ف",
+  "uncertain": false
+ },
+ "b4-u5-010": {
+  "title": "دليل",
+  "status": "confirmed",
+  "roots": [
+   "دلل"
+  ],
+  "ours": "د ل ل",
+  "uncertain": false
+ },
+ "b4-u5-011": {
+  "title": "أدنى",
+  "status": "confirmed",
+  "roots": [
+   "دنو",
+   "دني"
+  ],
+  "ours": "د ن و",
+  "uncertain": false
+ },
+ "b4-u5-012": {
+  "title": "ركود",
+  "status": "confirmed",
+  "roots": [
+   "ركد"
+  ],
+  "ours": "ر ك د",
+  "uncertain": false
+ },
+ "b4-u5-013": {
+  "title": "سلبي",
+  "status": "confirmed",
+  "roots": [
+   "سلب"
+  ],
+  "ours": "س ل ب",
+  "uncertain": false
+ },
+ "b4-u5-014": {
+  "title": "ساهم",
+  "status": "confirmed",
+  "roots": [
+   "سهم"
+  ],
+  "ours": "س ه م",
+  "uncertain": false
+ },
+ "b4-u5-015": {
+  "title": "سياق",
+  "status": "no-page",
+  "roots": [],
+  "ours": "س و ق",
+  "uncertain": false
+ },
+ "b4-u5-016": {
+  "title": "شعار",
+  "status": "confirmed",
+  "roots": [
+   "شعر"
+  ],
+  "ours": "ش ع ر",
+  "uncertain": false
+ },
+ "b4-u5-017": {
+  "title": "صرخ",
+  "status": "confirmed",
+  "roots": [
+   "صرخ"
+  ],
+  "ours": "ص ر خ",
+  "uncertain": false
+ },
+ "b4-u5-018": {
+  "title": "تضحية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ض ح ي",
+  "uncertain": false
+ },
+ "b4-u5-019": {
+  "title": "طائفية",
+  "status": "confirmed",
+  "roots": [
+   "طوف"
+  ],
+  "ours": "ط و ف",
+  "uncertain": false
+ },
+ "b4-u5-020": {
+  "title": "عبء",
+  "status": "confirmed",
+  "roots": [
+   "عبء"
+  ],
+  "ours": "ع ب ء",
+  "uncertain": false
+ },
+ "b4-u5-021": {
+  "title": "عدالة",
+  "status": "confirmed",
+  "roots": [
+   "عدل"
+  ],
+  "ours": "ع د ل",
+  "uncertain": false
+ },
+ "b4-u5-022": {
+  "title": "معدل",
+  "status": "confirmed",
+  "roots": [
+   "عدل"
+  ],
+  "ours": "ع د ل",
+  "uncertain": false
+ },
+ "b4-u5-023": {
+  "title": "تعزيز",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع ز ز",
+  "uncertain": false
+ },
+ "b4-u5-024": {
+  "title": "أعاق",
+  "status": "confirmed",
+  "roots": [
+   "عوق"
+  ],
+  "ours": "ع و ق",
+  "uncertain": false
+ },
+ "b4-u5-025": {
+  "title": "عيب",
+  "status": "confirmed",
+  "roots": [
+   "عيب"
+  ],
+  "ours": "ع ي ب",
+  "uncertain": false
+ },
+ "b4-u5-026": {
+  "title": "فجوة",
+  "status": "confirmed",
+  "roots": [
+   "فجو"
+  ],
+  "ours": "ف ج و",
+  "uncertain": false
+ },
+ "b4-u5-027": {
+  "title": "فساد",
+  "status": "confirmed",
+  "roots": [
+   "فسد"
+  ],
+  "ours": "ف س د",
+  "uncertain": false
+ },
+ "b4-u5-028": {
+  "title": "قبض",
+  "status": "confirmed",
+  "roots": [
+   "قبض"
+  ],
+  "ours": "ق ب ض",
+  "uncertain": false
+ },
+ "b4-u5-029": {
+  "title": "كفاءة",
+  "status": "confirmed",
+  "roots": [
+   "كفء"
+  ],
+  "ours": "ك ف ء",
+  "uncertain": false
+ },
+ "b4-u5-030": {
+  "title": "كراهية",
+  "status": "confirmed",
+  "roots": [
+   "كره"
+  ],
+  "ours": "ك ر ه",
+  "uncertain": false
+ },
+ "b4-u5-031": {
+  "title": "لاجئ",
+  "status": "confirmed",
+  "roots": [
+   "لجء"
+  ],
+  "ours": "ل ج ء",
+  "uncertain": false
+ },
+ "b4-u5-032": {
+  "title": "لام",
+  "status": "confirmed",
+  "roots": [
+   "لوم"
+  ],
+  "ours": "ل و م",
+  "uncertain": false
+ },
+ "b4-u5-033": {
+  "title": "ممارسة",
+  "status": "confirmed",
+  "roots": [
+   "مرس"
+  ],
+  "ours": "م ر س",
+  "uncertain": false
+ },
+ "b4-u5-034": {
+  "title": "مهارة",
+  "status": "confirmed",
+  "roots": [
+   "مهر"
+  ],
+  "ours": "م ه ر",
+  "uncertain": false
+ },
+ "b4-u5-035": {
+  "title": "تناقض",
+  "status": "confirmed",
+  "roots": [
+   "نقض"
+  ],
+  "ours": "ن ق ض",
+  "uncertain": false
+ },
+ "b4-u5-036": {
+  "title": "هبوط",
+  "status": "confirmed",
+  "roots": [
+   "هبط"
+  ],
+  "ours": "ه ب ط",
+  "uncertain": false
+ },
+ "b4-u5-037": {
+  "title": "سمة",
+  "status": "confirmed",
+  "roots": [
+   "وسم"
+  ],
+  "ours": "و س م",
+  "uncertain": false
+ },
+ "b4-u5-038": {
+  "title": "أجر",
+  "status": "confirmed",
+  "roots": [
+   "ءجر",
+   "جرر"
+  ],
+  "ours": "ء ج ر",
+  "uncertain": false
+ },
+ "b4-u5-039": {
+  "title": "جدي",
+  "status": "confirmed",
+  "roots": [
+   "جدد"
+  ],
+  "ours": "ج د د",
+  "uncertain": false
+ },
+ "b4-u5-040": {
+  "title": "استحق",
+  "status": "confirmed",
+  "roots": [
+   "حقق"
+  ],
+  "ours": "ح ق ق",
+  "uncertain": false
+ },
+ "b4-u5-041": {
+  "title": "حلل",
+  "status": "confirmed",
+  "roots": [
+   "حلل"
+  ],
+  "ours": "ح ل ل",
+  "uncertain": false
+ },
+ "b4-u5-042": {
+  "title": "حال",
+  "status": "confirmed",
+  "roots": [
+   "حول",
+   "حلي"
+  ],
+  "ours": "ح و ل",
+  "uncertain": false
+ },
+ "b4-u5-043": {
+  "title": "خيار",
+  "status": "confirmed",
+  "roots": [
+   "خير"
+  ],
+  "ours": "خ ي ر",
+  "uncertain": false
+ },
+ "b4-u5-044": {
+  "title": "إسكات",
+  "status": "confirmed",
+  "roots": [
+   "سكت"
+  ],
+  "ours": "س ك ت",
+  "uncertain": false
+ },
+ "b4-u5-045": {
+  "title": "إشكالية",
+  "status": "confirmed",
+  "roots": [
+   "شكل"
+  ],
+  "ours": "ش ك ل",
+  "uncertain": false
+ },
+ "b4-u5-046": {
+  "title": "تطوع",
+  "status": "confirmed",
+  "roots": [
+   "طوع"
+  ],
+  "ours": "ط و ع",
+  "uncertain": false
+ },
+ "b4-u5-047": {
+  "title": "عاطل",
+  "status": "confirmed",
+  "roots": [
+   "عطل"
+  ],
+  "ours": "ع ط ل",
+  "uncertain": false
+ },
+ "b4-u5-048": {
+  "title": "عمالة",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ع م ل",
+  "uncertain": false
+ },
+ "b4-u5-049": {
+  "title": "عمم",
+  "status": "confirmed",
+  "roots": [
+   "عمم"
+  ],
+  "ours": "ع م م",
+  "uncertain": false
+ },
+ "b4-u5-050": {
+  "title": "فعالية",
+  "status": "confirmed",
+  "roots": [
+   "فعل"
+  ],
+  "ours": "ف ع ل",
+  "uncertain": false
+ },
+ "b4-u5-051": {
+  "title": "إقصاء",
+  "status": "confirmed",
+  "roots": [
+   "قصو"
+  ],
+  "ours": "ق ص و",
+  "uncertain": false
+ },
+ "b4-u5-052": {
+  "title": "أقلية",
+  "status": "confirmed",
+  "roots": [
+   "قلل"
+  ],
+  "ours": "ق ل ل",
+  "uncertain": false
+ },
+ "b4-u5-053": {
+  "title": "إنتاجية",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن ت ج",
+  "uncertain": false
+ },
+ "b4-u5-054": {
+  "title": "ناشط",
+  "status": "no-page",
+  "roots": [],
+  "ours": "ن ش ط",
+  "uncertain": false
+ },
+ "b4-u5-055": {
+  "title": "تنامى",
+  "status": "confirmed",
+  "roots": [
+   "نمي",
+   "نمو"
+  ],
+  "ours": "ن م و",
+  "uncertain": false
+ },
+ "b4-u5-056": {
+  "title": "توقع",
+  "status": "confirmed",
+  "roots": [
+   "وقع"
+  ],
+  "ours": "و ق ع",
+  "uncertain": false
+ }
+}

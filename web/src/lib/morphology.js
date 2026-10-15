@@ -126,7 +126,10 @@ export function analyzeVerb(word) {
   if (word.pos !== "verb") return { regular: false, reason: "not a verb" };
   if (letters.length !== 3) return { regular: false, reason: "quadriliteral root" };
   if (!SUPPORTED_FORMS.includes(word.form)) return { regular: false, reason: `Form ${word.form} not covered by generator` };
-  if (letters.some((l) => WEAK_OR_HAMZA.has(l))) return { regular: false, reason: "weak or hamzated root" };
+  // In Forms II, III, V and VI a weak MIDDLE radical (carried by the shadda or a long alef) behaves like a
+  // sound letter: عَوَّدَ يُعَوِّدُ, عاوَنَ يُعاوِنُ. Weak or hamzated first/last radicals stay irregular.
+  const weakMiddleIsFine = [2, 3, 5, 6].includes(word.form) && !WEAK_OR_HAMZA.has(letters[0]) && !WEAK_OR_HAMZA.has(letters[2]);
+  if (!weakMiddleIsFine && letters.some((l) => WEAK_OR_HAMZA.has(l))) return { regular: false, reason: "weak or hamzated root" };
   if (letters[1] === letters[2]) return { regular: false, reason: "doubled root" };
   if (word.form === 8 && FORM_VIII_ASSIMILATING.has(letters[0])) return { regular: false, reason: "Form VIII assimilation" };
   if (word.form === 1 && !VOWEL[word.presentVowel]) return { regular: false, reason: "Form I needs presentVowel (a/i/u)" };

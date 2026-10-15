@@ -1,0 +1,19 @@
+{
+  "_comment": "Roots settled by looking them up (Wiktionary, Lane's Lexicon, Lisan al-Arab via arabiclexicon.hawramani.com, Quran-root sites). Applied by `build` after the automatic root check. `note` records the evidence; disputed ones keep the alternative.",
+  "b2-u2-002": { "root": "ن و س", "note": "Lane's and Wiktionary file ناس under نوس; some derive it from أ ن س (أُناس)" },
+  "b3-u10-003": { "root": "ء و ل", "note": "Wiktionary: أ و ل; classical lexicons also link آلة to أ ل ل" },
+  "b4-u2-002": { "root": "ت ي ر", "note": "disputed: Lane's ت ي ر, Lisan al-Arab ت و ر (تار يتور); Wiktionary lists ر ء ي" },
+  "b2-u11-014": { "root": "ص د ل", "note": "Lisan al-Arab files الصيدلاني under ص د ل (Persian loan); modern analyses also treat it as ص ي د ل" },
+  "b2-u5-026": { "root": null, "note": "فقط is a particle (فَـ + قَطْ), no verbal root" },
+  "b4-u3-071": { "root": "ع ل م", "note": "coined from عالَم; the verb عولَم is quadriliteral (ع و ل م)" },
+  "b4-u4-032": { "root": "م ي د", "note": "Persian loan (meydān); Arabic lexicons file it under م ي د" },
+  "b2-u2-003": { "root": "ء ي ض", "note": "confirmed: GlossGA lists أيضا under أ ي ض" },
+  "b2-u3-002": { "root": "ء و ن", "note": "confirmed: Quran root lists give أ و ن" },
+  "b3-u8-032": { "root": "ه ن ء", "note": "confirmed: Lane's files تهنّأ / هانئ under هنأ" },
+  "b3-u7-039": { "root": "ء و ل", "note": "confirmed: plural of أَوَّل (أ و ل)" },
+  "b4-u2-040": { "root": "ن م ذ ج", "note": "confirmed: Lane's files نموذج under the quadriliteral نمذج (Persian loan)" },
+  "b4-u4-039": { "root": "ن م ذ ج", "note": "confirmed: Lane's files نموذج under the quadriliteral نمذج (Persian loan)" },
+  "b4-u5-005": { "root": "ج و ه ر", "note": "confirmed: Wiktionary glossary lists ج و ه ر (Persian loan)" },
+  "b4-u3-051": { "root": "و د ع", "note": "دَعْ is the imperative of وَدَعَ (leave); the verb is hardly used in other forms" },
+  "b3-u1-026": { "root": "ف ض و", "note": "Lane's files فاضٍ under فضو; some lexicons give ف ض ي" }
+}

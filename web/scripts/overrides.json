@@ -2,6 +2,11 @@
   "_comment": "Hand-resolved rows. `skip` drops entries with no Arabic at all. `patch` replaces fields on the built word (dialect objects replace whole).",
   "skip": ["b3-u2-031", "b3-u7-046", "b3-u7-054", "b3-u10-048"],
   "patch": {
+    "b3-u2-012": { "arabic": "سَمَحَ", "prepositions": ["لِـ", "بِـ"], "notes": "source row was garbled (سَمَحَلِ)" },
+    "b3-u6-006": { "arabic": "اِحتاجَ", "prepositions": ["إلى"], "notes": "source row had the preposition glued on (اِحتاجَإلى)" },
+    "b4-u3-053": { "arabic": "اِتَّهَمَ", "prepositions": ["بِـ"], "notes": "source typo اِتَّهَ corrected" },
+    "b2-u3-004": { "definition": "(response to) congratulations!" },
+    "b2-u9-006": { "definition": "then; after that" },
     "b2-u11-020": { "arabic": "عَلاقات", "definition": "relations (between)", "pos": "noun", "gender": "feminine", "root": "ع ل ق", "plural": null, "prepositions": ["بَيْنَ"] },
     "b3-u6-052": { "arabic": "مالِيّ", "feminine": "مالِيّة", "pos": "adjective", "root": "م و ل", "plural": null },
     "b3-u7-038": { "arabic": "أَواخِر", "pos": "noun", "gender": "masculine", "root": "ء خ ر", "plural": null, "notes": "plural-only: the last days/years of a period" },

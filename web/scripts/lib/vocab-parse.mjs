@@ -185,8 +185,10 @@ export function parseCell(text, { verbLike = false } = {}) {
     if (plus > 0) { notes.push(`+ ${s.slice(plus + 3).trim()}`); s = s.slice(0, plus); }
   }
 
-  // "لم أجِد = ما وَجَدتُ": the part after "=" is an equivalent.
-  const tokens = s.split(/[،,؛;]|\s=\s/).map((t) => t.trim()).filter(Boolean);
+  // "لم أجِد = ما وَجَدتُ": the part after "=" is an equivalent, kept as an alternate (never a verbal noun).
+  const [mainPart, ...equivalents] = s.split(/\s=\s/);
+  const tokens = mainPart.split(/[،,؛;]/).map((t) => t.trim()).filter(Boolean);
+  const extraAlternates = equivalents.flatMap((q) => q.split(/[،,؛;]/)).map((t) => t.trim()).filter(Boolean);
   const res = { head: "", past: null, present: null, masdar: null, plural: [], feminine, alternates: [], prepositions, notes, example: null, flags, raw };
   if (!tokens.length) {
     if (pluralText) res.plural = resolvePlural(pluralText, "");
@@ -200,7 +202,7 @@ export function parseCell(text, { verbLike = false } = {}) {
       if (!head) continue;
       if (!res.past && !res.present && !isPresentStart(head)) { res.past = head; prepositions.push(...preps); if (rest.length) notes.push(rest.join(" ")); }
       else if (!res.present && isPresentStart(head)) { res.present = head; prepositions.push(...preps); if (rest.length) notes.push(rest.join(" ")); }
-      else if (!res.masdar && (res.past || res.present)) { res.masdar = tok; }
+      else if (!res.masdar && (res.past || res.present)) { res.masdar = head; } // "الفَوْز بـ" -> the noun only
       else others.push(tok);
     }
     if (others.length) { res.alternates = others; flags.push("extra-verb-tokens"); }
@@ -220,6 +222,7 @@ export function parseCell(text, { verbLike = false } = {}) {
     res.alternates = [...alts, ...tokens.slice(1)];
   }
 
+  if (extraAlternates.length) res.alternates = [...(res.alternates ?? []), ...extraAlternates];
   if (pluralText) res.plural = resolvePlural(pluralText, res.head);
   void pi;
   res.prepositions = [...new Set(prepositions.filter(Boolean))];

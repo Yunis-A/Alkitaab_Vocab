@@ -101,6 +101,14 @@ test("Forms II-X", () => {
 });
 
 test("irregular roots are not generated and are reported missing", () => {
+  // a weak middle radical in the derived forms is regular
+  const ii = getForms(verb("ع و د", 2));
+  same(ii.past["3ms"], "عَوَّدَ");
+  same(ii.present["3ms"], "يُعَوِّدُ");
+  same(getForms(verb("ع و ن", 3)).present["3ms"], "يُعاوِنُ");
+  assert.equal(analyzeVerb(verb("و ق ع", 2)).regular, false); // weak first radical is not
+  assert.equal(analyzeVerb(verb("ر م ي", 2)).regular, false); // nor is a weak last radical
+
   for (const [root, why] of [["ق و ل", /weak/], ["أ ك ل", /weak/], ["ح ب ب", /doubled/]]) {
     const a = analyzeVerb(verb(root, 1, { presentVowel: "u" }));
     assert.equal(a.regular, false);
@@ -355,6 +363,23 @@ test("imported vocabulary: structure, levels, dialect rules and search", () => {
   const accept = allWords.find((w) => stripDiacritics(w.arabic ?? "") === "قبل" && w.pos === "verb");
   assert.ok(accept && accept.root === "ق ب ل" && accept.form === 1 && accept.presentVowel === "a");
   assert.ok(search(idx, "ق ب ل").some((w) => w.id === accept.id)); // by root
+
+  // every irregular verb has stored conjugations, except the rows deliberately left out
+  // (passive-only, dialect-only, negated or imperative-only rows: see data/past-forms.json)
+  const irregular = allWords.filter((w) => w.pos === "verb" && w.root && w.form && !getForms(w).regular);
+  const without = irregular.filter((w) => !w.conjugations);
+  assert.ok(irregular.length > 150);
+  assert.ok(without.length <= 15, `${without.length} irregular verbs without stored forms: ${without.map((w) => w.id)}`);
+  const says = allWords.find((w) => w.id === "b2-u4-025"); // "he says" (hollow root ق و ل)
+  same(says.conjugations.past["3ms"], "قالَ");
+  same(says.conjugations.past["1s"], "قُلْتُ");
+  same(says.conjugations.present["2fs"], "تَقُولِينَ");
+  same(says.conjugations.imperative["2ms"], "قُلْ");
+  const f2 = getForms(says);
+  assert.equal(f2.source.past, "stored");
+  assert.deepEqual(f2.missing, []);
+  // no stored verbal noun carries a stray preposition
+  for (const w of allWords) for (const m of [w.masdar].flat().filter(Boolean)) assert.ok(!/\s/.test(m), `${w.id} masdar "${m}"`);
 
   // sound verbs get fully voweled generated conjugations
   const f = getForms(accept);
