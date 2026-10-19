@@ -435,8 +435,10 @@ test("lookup filters: type, lesson range, verb form, gender, status, dialect", (
   const nih = allWords.find((w) => w.definition === "end, ending");
   assert.deepEqual([bid.book, bid.unit, nih.book, nih.unit], [3, 1, 3, 1]);
   for (const key of ["filterBeginning", "filterEnd"]) assert.deepEqual(strings[key].unlock, { book: bid.book, unit: bid.unit });
-  assert.equal(strings.filterBeginning.ar, "بداية");
-  assert.equal(strings.filterEnd.ar, "نهاية");
+  assert.equal(strings.filterBeginning.ar, "البداية");
+  assert.equal(strings.filterEnd.ar, "النهاية");
+  // six game modes: country / country & capital / capital only, in English and in Arabic
+  assert.deepEqual(GEO_MODES.map((m) => m.id), ["en-countries", "en-capitals", "en-capital", "ar-countries", "ar-capitals", "ar-capital"]);
 
   const opts = filterOptions(words);
   assert.equal(opts.pos.get("verb"), 2);
@@ -522,11 +524,14 @@ test("geography game: questions, timing, data", () => {
   const rng = (() => { let s = 7; return () => (s = (s * 16807) % 2147483647) / 2147483647; })();
   for (const mode of GEO_MODES) {
     const qs = buildQuestions(mode, geoCountries, rng);
-    assert.equal(qs.length, geoCountries.length);
-    assert.equal(new Set(qs.map((q) => q.countryId)).size, geoCountries.length); // one each
+    // capital-only modes skip the places without an agreed capital (Palestine, Israel)
+    const expected = mode.only === "capital" ? geoCountries.filter((c) => c.capitalEn).length : geoCountries.length;
+    assert.equal(qs.length, expected);
+    assert.equal(new Set(qs.map((q) => q.countryId)).size, expected); // one each
     assert.equal(new Set(qs.map((q) => q.text)).size, qs.length); // prompts unambiguous
     const caps = qs.filter((q) => q.kind === "capital");
     assert.equal(caps.length > 0, mode.capitals);
+    if (mode.only === "capital") assert.equal(caps.length, qs.length); // every question is a capital
     for (const q of caps) {
       assert.ok(geoCountries.find((c) => c.id === q.countryId).capitalEn); // never a disputed capital
     }

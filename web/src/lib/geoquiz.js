@@ -2,11 +2,15 @@
 
 // Labels are built in the UI so the words "country" and "capital" can switch to
 // Arabic when the student has learned them.
+//   capitals: true  -> about half of the questions ask for a capital instead of a country name
+//   only: "capital" -> every question is a capital (places without an agreed capital are left out)
 export const GEO_MODES = [
   { id: "en-countries", lang: "en", capitals: false },
   { id: "en-capitals", lang: "en", capitals: true },
+  { id: "en-capital", lang: "en", capitals: true, only: "capital" },
   { id: "ar-countries", lang: "ar", capitals: false },
   { id: "ar-capitals", lang: "ar", capitals: true },
+  { id: "ar-capital", lang: "ar", capitals: true, only: "capital" },
 ];
 
 // Each wrong click adds this to the final time.
@@ -28,6 +32,11 @@ function shuffle(items, rng) {
 // the countries (those with an agreed capital) are asked by capital instead.
 export function buildQuestions(mode, countries, rng = Math.random) {
   const ar = mode.lang === "ar";
+  if (mode.only === "capital") {
+    return shuffle(countries.filter((c) => c.capitalEn), rng).map((c) => ({
+      countryId: c.id, kind: "capital", text: ar ? c.capitalAr : c.capitalEn,
+    }));
+  }
   const order = shuffle(countries, rng);
   const capitalPool = mode.capitals ? shuffle(order.filter((c) => c.capitalEn), rng) : [];
   const byCapital = new Set(capitalPool.slice(0, Math.ceil(order.length / 2)).map((c) => c.id));

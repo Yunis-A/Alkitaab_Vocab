@@ -36,8 +36,11 @@ export default function GeoGame() {
     }
   }, [playing, now, startedAt, wrong, solved]);
 
-  const label = (m) =>
-    `${t(m.lang === "en" ? "geoEnglish" : "geoArabic")}: ${t("geoCountry")}${m.capitals ? ` & ${t("geoCapital")}` : ""}`;
+  const label = (m) => {
+    const lang = t(m.lang === "en" ? "geoEnglish" : "geoArabic");
+    if (m.only === "capital") return `${lang}: ${t("geoCapital")}`;
+    return `${lang}: ${t("geoCountry")}${m.capitals ? ` & ${t("geoCapital")}` : ""}`;
+  };
 
   function start() {
     setQuestions(buildQuestions(mode, geoCountries));
