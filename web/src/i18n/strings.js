@@ -124,6 +124,19 @@ export const strings = {
     unlock: u(3, 1),
   },
   noResults: { en: "No matching words.", ar: "لا توجد نتائج.", unlock: u(3, 2) },
+  filterType: { en: "Type", ar: "النوع", unlock: u(3, 1) },
+  filterFrom: { en: "From", ar: "من", unlock: u(2, 3) },
+  filterTo: { en: "To", ar: "إلى", unlock: u(2, 3) },
+  filterForm: { en: "Verb form", ar: "وزن الفعل", unlock: u(3, 1) },
+  filterStatus: { en: "Status", ar: "الحالة", unlock: u(3, 1) },
+  filterDialect: { en: "Dialect form", ar: "صيغة لهجية", unlock: u(9, 1) },
+  filterAny: { en: "Any", ar: "الكل", unlock: u(2, 3) },
+  filterReset: { en: "Clear filters", ar: "مسح التصفية", unlock: u(3, 1) },
+  resultsCount: {
+    en: (n, s) => `${s} word${n === 1 ? "" : "s"}`,
+    ar: (n, s) => `${s} كلمة`,
+    unlock: u(3, 1),
+  },
   sameRoot: { en: "Same root", ar: "من الجذر نفسه", unlock: u(3, 4) },
 
   // --- word fields ---

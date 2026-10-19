@@ -9,6 +9,9 @@ import {
 } from "./leitner.js";
 import { activeVarieties, isWordAvailable, headword, varietyText, parseCardKey, dialectOf } from "./varieties.js";
 import { rootKey } from "./arabic.js";
+import {
+  filterWords, filterOptions, activeFilterCount, parseLevelKey, levelKey, levelsUpTo,
+} from "./filters.js";
 import { cleanText, parseCell } from "../../scripts/lib/vocab-parse.mjs";
 import { unitAfterBookChange, books, IMPERATIVE_LEVEL, levelReached } from "../config/books.js";
 import { GEO_MODES, TIME_LIMIT_MS, buildQuestions, finalTime, formatTime } from "./geoquiz.js";
@@ -386,6 +389,60 @@ test("imported vocabulary: structure, levels, dialect rules and search", () => {
   assert.equal(f.source.present, "generated");
   same(f.past["3ms"], "قَبِلَ");
   same(f.present["3ms"], "يَقْبَلُ");
+});
+
+test("lookup filters: type, lesson range, verb form, gender, status, dialect", () => {
+  const words = [
+    { id: "a", book: 1, unit: 2, pos: "noun", gender: "masculine", form: null },
+    { id: "b", book: 1, unit: 9, pos: "noun", gender: "feminine", form: null, egyptian: { arabic: "x" } },
+    { id: "c", book: 2, unit: 3, pos: "verb", gender: null, form: 2, shami: { arabic: "y" } },
+    { id: "d", book: 2, unit: 8, pos: "verb", gender: null, form: 1 },
+    { id: "e", book: 3, unit: 1, pos: "adjective", gender: null, form: null },
+  ];
+  const ids = (f, ctx) => filterWords(words, { ...none, ...f }, ctx).map((w) => w.id).join("");
+  const none = { pos: "", from: "", to: "", form: "", gender: "", status: "", dialect: "" };
+
+  assert.equal(ids({}), "abcde");
+  assert.equal(ids({ pos: "verb" }), "cd");
+  assert.equal(ids({ pos: "verb", form: "2" }), "c");
+  assert.equal(ids({ pos: "noun", gender: "feminine" }), "b");
+  assert.equal(ids({ from: "1.9", to: "2.3" }), "bc"); // inclusive range across books
+  assert.equal(ids({ from: "2.1" }), "cde"); // open-ended
+  assert.equal(ids({ to: "1.9" }), "ab");
+  assert.equal(ids({ from: "2.3", to: "1.9" }), "bc"); // a reversed range is swapped
+  assert.equal(ids({ dialect: "egyptian" }), "b");
+  assert.equal(ids({ dialect: "shami" }), "c");
+  const statusOf = (id) => (id === "d" ? "mastered" : "new");
+  assert.equal(ids({ status: "mastered" }, { statusOf }), "d");
+  assert.equal(ids({ status: "new", pos: "verb" }, { statusOf }), "c");
+  assert.equal(activeFilterCount(none), 0);
+  assert.equal(activeFilterCount({ ...none, pos: "verb", from: "1.1" }), 2);
+
+  assert.deepEqual(parseLevelKey("2.13"), { book: 2, unit: 13 });
+  assert.equal(parseLevelKey("nonsense"), null);
+  assert.equal(levelKey({ book: 3, unit: 4 }), "3.4");
+
+  // lessons offered stop at the student's level
+  const lv = levelsUpTo({ book: 2, unit: 2 }, books);
+  assert.equal(lv.length, books[1].maxUnits + 2);
+  assert.deepEqual(lv.at(-1), { book: 2, unit: 2 });
+  assert.deepEqual(lv[0], { book: 1, unit: 1 });
+
+  const opts = filterOptions(words);
+  assert.equal(opts.pos.get("verb"), 2);
+  assert.equal(opts.form.get(2), 1);
+  assert.equal(opts.gender.get("masculine"), 1);
+
+  // on the real vocabulary
+  const verbs = filterWords(allWords, { ...none, pos: "verb" });
+  assert.ok(verbs.length > 400 && verbs.every((w) => w.pos === "verb"));
+  const lesson = filterWords(allWords, { ...none, from: "2.1", to: "2.1" });
+  assert.ok(lesson.length > 10 && lesson.every((w) => w.book === 2 && w.unit === 1));
+  assert.ok(lesson.some((w) => w.definition === "English"));
+  const formII = filterWords(allWords, { ...none, pos: "verb", form: "2" });
+  assert.ok(formII.length > 10 && formII.every((w) => w.form === 2));
+  const sheShami = filterWords(allWords, { ...none, dialect: "shami" });
+  assert.ok(sheShami.length > 500 && sheShami.every((w) => w.shami));
 });
 
 test("review edits: references, merged forms, corrected spellings", () => {

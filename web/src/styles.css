@@ -148,6 +148,12 @@ button.primary, .button.primary {
   margin-bottom: 1rem;
 }
 .search:focus { outline: none; border-color: var(--theme); }
+/* Lookup filters */
+.filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.6rem 0.9rem; margin-bottom: 0.75rem; }
+.filter { display: flex; flex-direction: column; gap: 0.2rem; font-size: 0.8rem; color: var(--muted); }
+.filter select { padding: 0.4rem 0.5rem; border-radius: 8px; border: 1px solid var(--line); background: #fff; color: var(--text); font-size: 0.95rem; max-width: 11rem; }
+.link-button { border: none; background: none; color: var(--theme); padding: 0.4rem 0.2rem; text-decoration: underline; }
+.result-count { margin: 0 0 0.5rem; font-size: 0.9rem; }
 .results { list-style: none; padding: 0; margin: 0; }
 .results details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 0.6rem; }
 .results summary { display: flex; align-items: center; gap: 1rem; padding: 0.6rem 1rem; cursor: pointer; }
