@@ -82,10 +82,21 @@ function latinScore(entry, ql) {
   return 0;
 }
 
-// `dialects`: { egyptian: bool, shami: bool }. Returns words, best match first.
-export function search(index, query, dialects = {}) {
+// Lesson order for lists: "oldest" is curriculum order, "newest" puts the latest lesson first.
+// Within one lesson the words keep their order from the list.
+function lessonOrder(order) {
+  return order === "newest"
+    ? (a, b) => b.word.book - a.word.book || b.word.unit - a.word.unit || a.i - b.i
+    : (a, b) => a.word.book - b.word.book || a.word.unit - b.word.unit || a.i - b.i;
+}
+
+// `dialects`: { egyptian: bool, shami: bool }.
+// `order`: "oldest" (default) or "newest"; with no query it orders the whole list, with a query
+// the best match still comes first and the order only breaks ties.
+export function search(index, query, dialects = {}, order = "oldest") {
+  const byLesson = lessonOrder(order);
   const raw = String(query ?? "").trim();
-  if (!raw) return index.map((e) => e.word);
+  if (!raw) return index.map((e, i) => ({ word: e.word, i })).sort(byLesson).map((x) => x.word);
 
   const arabic = hasArabic(raw);
   const qa = arabic ? normalizeArabic(raw) : "";
@@ -93,10 +104,10 @@ export function search(index, query, dialects = {}) {
   const ql = normalizeLatin(raw);
 
   return index
-    .map((e) => ({ e, s: arabic ? arabicScore(e, qa, qRoot, dialects) : latinScore(e, ql) }))
+    .map((e, i) => ({ word: e.word, i, s: arabic ? arabicScore(e, qa, qRoot, dialects) : latinScore(e, ql) }))
     .filter((x) => x.s > 0)
-    .sort((a, b) => b.s - a.s || a.e.word.book - b.e.word.book || a.e.word.unit - b.e.word.unit)
-    .map((x) => x.e.word);
+    .sort((a, b) => b.s - a.s || byLesson(a, b))
+    .map((x) => x.word);
 }
 
 export function wordsByRoot(words, root) {

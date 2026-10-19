@@ -165,6 +165,23 @@ test("search ignores diacritics, hamza/alef variants, and finds by root / form /
   assert.equal(ids("").length, 4);
 });
 
+test("search order: newest lessons first, or oldest first; relevance still wins when searching", () => {
+  const w = (id, book, unit, extra = {}) => ({ id, book, unit, arabic: "كلمة" + id, pos: "noun", definition: "word " + id, transliteration: "", ...extra });
+  const words = [w("a", 1, 1), w("b", 1, 2), w("c", 1, 2), w("d", 2, 1), w("e", 3, 4)];
+  const idx = buildIndex(words);
+  const ids = (q, order) => search(idx, q, {}, order).map((x) => x.id).join("");
+
+  assert.equal(ids("", "oldest"), "abcde");
+  assert.equal(ids("", "newest"), "edbca"); // latest lesson first; b before c inside lesson 1/2 as in the list
+  assert.equal(ids("", undefined), "abcde"); // default stays curriculum order
+
+  // with a query, every word ties on "word" so the order decides
+  assert.equal(ids("word", "newest"), "edbca");
+  assert.equal(ids("word", "oldest"), "abcde");
+  // an exact match beats a newer lesson
+  assert.equal(search(idx, "word a", {}, "newest")[0].id, "a");
+});
+
 test("Leitner: 11 boxes, intervals, ratings, proficiency", () => {
   const MIN = 60_000, HOUR = 60 * MIN, DAY = 24 * HOUR;
   assert.deepEqual(BOX_INTERVALS, [MIN, 3 * MIN, 15 * MIN, HOUR, DAY, DAY, 2 * DAY, 7 * DAY, 30 * DAY, 30 * DAY, 90 * DAY]);

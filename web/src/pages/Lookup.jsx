@@ -59,7 +59,9 @@ export default function Lookup() {
   const options = useMemo(() => filterOptions(visibleWords), [visibleWords]);
   // newest lesson first, so the book you are in is at the top of the list
   const levels = useMemo(() => levelsUpTo(level, books).reverse(), [level]);
-  const found = useMemo(() => search(visibleIndex, q, dialects), [visibleIndex, q, dialects]);
+  // newest lessons first unless the student picks "oldest" (kept in the URL as sort=oldest)
+  const order = params.get("sort") === "oldest" ? "oldest" : "newest";
+  const found = useMemo(() => search(visibleIndex, q, dialects, order), [visibleIndex, q, dialects, order]);
   const results = useMemo(() => filterWords(found, filters, { statusOf }), [found, params, dialects, statusOf]); // eslint-disable-line react-hooks/exhaustive-deps
   const shown = results.slice(0, limit);
   const active = activeFilterCount(filters);
@@ -120,6 +122,11 @@ export default function Lookup() {
         <Select label={t("filterStatus")} value={filters.status} onChange={(v) => setParam("status", v)}>
           <option value="">{t("filterAny")}</option>
           {STATUSES.map(([s, key]) => <option key={s} value={s}>{t(key)}</option>)}
+        </Select>
+
+        <Select label={t("filterSort")} value={order} onChange={(v) => setParam("sort", v === "newest" ? "" : v)}>
+          <option value="newest">{t("sortNewest")}</option>
+          <option value="oldest">{t("sortOldest")}</option>
         </Select>
 
         {enabledDialects.length > 0 && (
