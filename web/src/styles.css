@@ -156,10 +156,12 @@ button.primary, .button.primary {
 .result-count { margin: 0 0 0.5rem; font-size: 0.9rem; }
 .results { list-style: none; padding: 0; margin: 0; }
 .results details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 0.6rem; }
-.results summary { display: flex; align-items: center; gap: 1rem; padding: 0.6rem 1rem; cursor: pointer; }
+/* The status badge is pinned to the physical LEFT edge in both English (LTR) and Arabic (RTL),
+   in its own reserved column, so the rows line up the same way in both. */
+.results summary { position: relative; display: flex; align-items: center; gap: 1rem; padding: 0.6rem 1rem 0.6rem 7rem; cursor: pointer; }
 .results summary .def { flex: 0 1 auto; }
 .results summary .pos { color: var(--muted); font-size: 0.85rem; }
-.results summary .badge { margin-inline-start: auto; }
+.results summary .badge { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); }
 .results details > .word-detail { padding: 0 1rem 1rem; }
 
 /* Header level chip */
