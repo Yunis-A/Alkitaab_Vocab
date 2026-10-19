@@ -173,29 +173,43 @@ test("Leitner: 11 boxes, intervals, ratings, proficiency", () => {
   let c = newCard(t0);
   assert.equal(c.box, 0);
   assert.equal(c.due, t0); // new cards are due right away
-  c = review(c, "good", t0);
+  // easy moves up exactly one box
+  c = review(c, "easy", t0);
   assert.equal(c.box, 1);
   assert.equal(c.due, t0 + 3 * MIN);
+  // medium keeps you where you are (the same box's interval starts again)
+  c = review(c, "medium", t0 + 10);
+  assert.equal(c.box, 1);
+  assert.equal(c.due, t0 + 10 + 3 * MIN);
+  assert.equal(c.reviews, 2);
+  assert.equal(c.lapses, 0);
   c = review(c, "easy", t0);
-  assert.equal(c.box, 3);
-  c = review(c, "hard", t0); // hard goes all the way back
+  assert.equal(c.box, 2);
+  // hard goes all the way back to the first box
+  c = review(c, "hard", t0);
   assert.equal(c.box, 0);
   assert.equal(c.due, t0 + MIN);
+  assert.equal(c.lapses, 1);
   c = review({ ...c, box: 6 }, "hard", t0);
   assert.equal(c.box, 0);
   assert.equal(c.lapses, 2);
-  assert.deepEqual(RATINGS, ["hard", "good", "easy"]);
-  assert.throws(() => review(c, "again", t0));
+  // a card that was already in the first box stays there on medium, and that is not a lapse
+  assert.equal(review({ ...newCard(t0), box: 0 }, "medium", t0).lapses, 0);
+  assert.deepEqual(RATINGS, ["hard", "medium", "easy"]);
+  for (const old of ["again", "good"]) assert.throws(() => review(c, old, t0));
 
   let k = { ...newCard(t0), box: 7 }; // in the 7-day box
   assert.equal(boxStatus(k.box), "learning");
-  k = review(k, "good", t0); // survived it
+  k = review(k, "medium", t0);
+  assert.equal(k.box, 7); // staying put does not count as surviving it
+  k = review(k, "easy", t0); // survived it
   assert.equal(k.box, 8);
   assert.equal(boxStatus(k.box), "proficient");
-  k = review({ ...k, box: 9 }, "good", t0);
+  k = review({ ...k, box: 9 }, "easy", t0);
   assert.equal(k.box, 10);
   assert.equal(boxStatus(k.box), "mastered");
   assert.equal(review(k, "easy", t0).box, 10); // capped
+  assert.equal(review(k, "medium", t0).box, 10);
 });
 
 test("word status: MSA card by default, weakest active variety when dialects are on", () => {

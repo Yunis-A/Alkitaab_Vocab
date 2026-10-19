@@ -7,7 +7,7 @@
 // Proficient (green): survived the 7-day box, i.e. reached box 8 or higher.
 // Mastered (gold):    in the 3-month box (box 10).
 //
-// Ratings: hard -> back to box 0, good -> +1, easy -> +2.
+// Ratings: hard -> back to the first box, medium -> stay in the same box, easy -> up one box.
 // Cards are Arabic -> English only. A word has one card per variety (MSA,
 // Egyptian, Shami; see lib/varieties.js).
 
@@ -22,7 +22,7 @@ export const LAST_BOX = BOX_INTERVALS.length - 1;
 export const PROFICIENT_BOX = 8;
 export const MASTERED_BOX = LAST_BOX;
 
-export const RATINGS = ["hard", "good", "easy"];
+export const RATINGS = ["hard", "medium", "easy"];
 export { VARIETY_IDS };
 
 export function cardKey(wordId, variety = MSA) {
@@ -36,15 +36,14 @@ export function newCard(now = Date.now()) {
 export function review(card, rating, now = Date.now()) {
   let box = card.box;
   if (rating === "hard") box = 0;
-  else if (rating === "good") box = Math.min(LAST_BOX, box + 1);
-  else if (rating === "easy") box = Math.min(LAST_BOX, box + 2);
-  else throw new Error(`Unknown rating: ${rating}`);
+  else if (rating === "easy") box = Math.min(LAST_BOX, box + 1);
+  else if (rating !== "medium") throw new Error(`Unknown rating: ${rating}`);
 
   return {
     box,
     due: now + BOX_INTERVALS[box],
     reviews: card.reviews + 1,
-    lapses: card.lapses + (box === 0 ? 1 : 0),
+    lapses: card.lapses + (rating === "hard" ? 1 : 0),
     lastReviewed: now,
   };
 }

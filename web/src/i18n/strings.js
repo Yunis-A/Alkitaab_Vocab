@@ -84,7 +84,7 @@ export const strings = {
   gotIt: { en: "Got it", ar: "فهمت", unlock: u(2, 6) },
   showAnswer: { en: "Show answer", ar: "أظهر الإجابة", unlock: u(2, 3) },
   hard: { en: "Hard", ar: "صعب", unlock: u(2, 5) },
-  good: { en: "Good", ar: "جيد", unlock: u(2, 6) },
+  medium: { en: "Medium", ar: "متوسط", unlock: u(2, 6) },
   easy: { en: "Easy", ar: "سهل", unlock: u(2, 7) },
   sessionDone: { en: "All caught up!", ar: "أحسنت! أنهيت كل شيء", unlock: u(3, 3) },
   nextCardIn: {

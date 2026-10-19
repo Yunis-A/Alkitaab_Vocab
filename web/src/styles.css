@@ -245,8 +245,8 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 .ratings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-top: 1rem; }
 .rate { padding: 0.6rem 0.25rem; color: #fff; border: none; }
 .rate-hard { background: #c0392b; }
-.rate-good { background: #2e9e5b; }
-.rate-easy { background: #2f6fd1; }
+.rate-medium { background: #d9822b; }
+.rate-easy { background: #2e9e5b; }
 
 @media (max-width: 520px) {
   .ar.huge { font-size: 2.6rem; }
