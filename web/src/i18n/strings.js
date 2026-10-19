@@ -68,10 +68,15 @@ export const strings = {
     unlock: u(3, 3),
   },
   progressTitle: { en: "Your vocabulary", ar: "مفرداتك", unlock: u(3, 4) },
-  statusNew: { en: "New", ar: "جديدة", unlock: u(3, 6) },
-  statusLearning: { en: "Learning", ar: "قيد التعلم", unlock: u(3, 7) },
-  statusProficient: { en: "Proficient", ar: "متقنة", unlock: u(3, 9) },
-  statusMastered: { en: "Mastered", ar: "محفوظة", unlock: u(4, 2) },
+  // Each switches to Arabic where the list teaches the word behind it:
+  //   جديدة  (new, fem.)     Alif Baa lesson 4
+  //   تعلم   (to learn)      Al-Kitaab part 2, lesson 2
+  //   حفظ    (I memorize)    Al-Kitaab part 1, lesson 4
+  // The list has no word for "proficient" (متقنة), so that one is a placeholder.
+  statusNew: { en: "New", ar: "جديدة", unlock: u(1, 4) },
+  statusLearning: { en: "Learning", ar: "قيد التعلم", unlock: u(3, 2) },
+  statusProficient: { en: "Proficient", ar: "متقنة", unlock: u(3, 3) },
+  statusMastered: { en: "Mastered", ar: "محفوظة", unlock: u(2, 4) },
 
   // --- learn ---
   learnNew: { en: "Learn new words", ar: "تعلم كلمات جديدة", unlock: u(3, 2) },

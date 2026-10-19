@@ -581,6 +581,23 @@ test("geography words unlock at the lessons that teach them", () => {
   assert.equal(strings.geoBest.ar, "أحسن");
 });
 
+test("status labels turn Arabic where the list teaches the word behind them", () => {
+  const at = (pred) => { const w = allWords.find(pred); return { book: w.book, unit: w.unit }; };
+  assert.deepEqual(strings.statusNew.unlock, at((w) => w.definition === "new (fem.)")); // جديدة
+  assert.deepEqual(strings.statusLearning.unlock, at((w) => w.definition === "to learn")); // تَعَلَّمَ
+  assert.deepEqual(strings.statusMastered.unlock, at((w) => w.definition === "I memorize")); // أَحفَظ
+  assert.deepEqual(strings.statusNew.unlock, { book: 1, unit: 4 });
+
+  // a student in Al-Kitaab part 2 sees Arabic for all four
+  const none = vocabSets([], {});
+  const level = { book: 3, unit: 3 };
+  for (const key of ["statusNew", "statusLearning", "statusProficient", "statusMastered"]) {
+    assert.equal(isArabic(strings[key], level, none), true, key);
+  }
+  // and the badge is still English before that
+  assert.equal(isArabic(strings.statusNew, { book: 1, unit: 3 }, none), false);
+});
+
 test("normalizeArabic", () => {
   assert.equal(normalizeArabic("أَكَلَ"), "اكل");
   assert.equal(normalizeArabic("مدرسة"), normalizeArabic("مَدْرَسَه"));
