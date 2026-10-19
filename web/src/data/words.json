@@ -4706,6 +4706,26 @@
   }
  },
  {
+  "id": "b2-u1-024",
+  "transliteration": null,
+  "plural": null,
+  "prepositions": [],
+  "conjugations": null,
+  "egyptian": null,
+  "shami": null,
+  "book": 2,
+  "unit": 1,
+  "part": null,
+  "arabic": "إِنجِليزِيّ",
+  "feminine": "إِنجِليزِيّة",
+  "definition": "English",
+  "pos": "adjective",
+  "root": null,
+  "form": null,
+  "gender": null,
+  "notes": "the language is الإِنجِليزِيّة"
+ },
+ {
   "id": "b2-u2-001",
   "book": 2,
   "unit": 2,

@@ -479,15 +479,26 @@ test("geography game: questions, timing, data", () => {
   assert.equal(finalTime(12_000, 3), 27_000);
   assert.equal(formatTime(65_400), "1:05.4");
   assert.equal(formatTime(9_000), "0:09.0");
-  // every quiz country has a clickable shape
+  // every quiz country has a clickable shape, and exactly ONE (Somalia used to be split in two,
+  // which made it highlight as two countries)
   const shapeIds = new Set(mapShapes.filter((s) => s.id).map((s) => s.id));
   for (const c of geoCountries) assert.ok(shapeIds.has(c.id), c.id);
+  for (const id of shapeIds) assert.equal(mapShapes.filter((s) => s.id === id).length, 1, `${id} is one shape`);
+
+  // the word "English" is in the list at Al-Kitaab part 1, lesson 1, and "Arabic" is a placeholder
+  // that unlocks with it until the Alif Baa lesson is known
+  const english = allWords.find((w) => w.definition === "English");
+  assert.ok(english && english.book === 2 && english.unit === 1);
+  assert.equal(english.arabic, "إِنجِليزِيّ");
+  assert.equal(strings.geoEnglish.ar, "إنجليزي");
+  assert.equal(strings.geoArabic.ar, "عربي");
+  assert.deepEqual(strings.geoArabic.unlock, strings.geoEnglish.unlock);
 });
 
 test("geography words unlock at the lessons that teach them", () => {
   const none = vocabSets([], {});
   const ar = (key, book, unit) => isArabic(strings[key], { book, unit }, none);
-  const gates = { geoCountry: [2, 2], geoBest: [2, 5], geoTitle: [2, 6], geoStart: [2, 9], geoCapital: [3, 4], geoStop: [3, 6], book: [2, 1] };
+  const gates = { geoEnglish: [2, 1], geoCountry: [2, 2], geoBest: [2, 5], geoTitle: [2, 6], geoStart: [2, 9], geoCapital: [3, 4], geoStop: [3, 6], book: [2, 1] };
   for (const [key, [b, u]] of Object.entries(gates)) {
     assert.equal(ar(key, b, u), true, `${key} at ${b}/${u}`);
     assert.equal(ar(key, u > 1 ? b : b - 1, u > 1 ? u - 1 : 10), false, `${key} just before`);

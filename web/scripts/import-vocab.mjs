@@ -300,6 +300,22 @@ function applyReviewEdits(words, edits) {
     applied++;
   }
 
+  // Words that are not in the source list: appended to their unit with the next free id.
+  for (const a of edits.add ?? []) {
+    const { _comment, ...fields } = a;
+    const prefix = `b${fields.book}-u${fields.unit}-`;
+    const used = words.filter((w) => w.id.startsWith(prefix)).map((w) => Number(w.id.slice(prefix.length)));
+    const word = {
+      id: prefix + String(Math.max(0, ...used) + 1).padStart(3, "0"),
+      transliteration: null, plural: null, prepositions: [], conjugations: null, egyptian: null, shami: null,
+      ...fields,
+    };
+    const last = words.map((w) => w.id.startsWith(prefix)).lastIndexOf(true);
+    words.splice(last + 1, 0, word);
+    byId.set(word.id, word);
+    applied++;
+  }
+
   const gone = new Set();
   for (const m of edits.merge ?? []) {
     if (!byId.has(m.from)) throw new Error(`review-edits: unknown merge source ${m.from}`);

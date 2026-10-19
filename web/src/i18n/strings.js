@@ -91,6 +91,10 @@ export const strings = {
   cardOf: { en: (i, n) => `${i} of ${n}`, ar: (i, n) => `${i} من ${n}`, unlock: u(3, 1) },
 
   // --- geography game (words are unlocked where the book teaches them) ---
+  // "English" is learned in Al-Kitaab part 1, lesson 1. TODO: set the exact Alif Baa lesson for "Arabic"
+  // (it is temporarily unlocked together with "English").
+  geoEnglish: { en: "English", ar: "إنجليزي", unlock: u(2, 1) },
+  geoArabic: { en: "Arabic", ar: "عربي", unlock: u(2, 1) },
   geoTitle: { en: "Geography game", ar: "لعبة الجغرافيا", unlock: u(2, 6) },
   geoCountry: { en: "country", ar: "بلد", unlock: u(2, 2) },
   geoBest: { en: "Best", ar: "أحسن", unlock: u(2, 5) },

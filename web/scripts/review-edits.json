@@ -53,6 +53,15 @@
     "b3-u5-048": { "presentVowel": "a" },
     "b3-u6-046": { "present": "يُقبَل" }
   },
+  "add": [
+    {
+      "_comment": "Learned in Al-Kitaab part 1, lesson 1 (not in the source list); also unlocks the word in the geography game.",
+      "book": 2, "unit": 1, "part": null,
+      "arabic": "إِنجِليزِيّ", "feminine": "إِنجِليزِيّة", "definition": "English",
+      "pos": "adjective", "root": null, "form": null, "gender": null,
+      "notes": "the language is الإِنجِليزِيّة"
+    }
+  ],
   "merge": [
     {
       "from": "b3-u1-035", "into": ["b1-u4-021"],

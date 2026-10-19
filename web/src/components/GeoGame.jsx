@@ -37,7 +37,7 @@ export default function GeoGame() {
   }, [playing, now, startedAt, wrong, solved]);
 
   const label = (m) =>
-    `${m.lang === "en" ? "English" : "Arabic"}: ${t("geoCountry")}${m.capitals ? ` & ${t("geoCapital")}` : ""}`;
+    `${t(m.lang === "en" ? "geoEnglish" : "geoArabic")}: ${t("geoCountry")}${m.capitals ? ` & ${t("geoCapital")}` : ""}`;
 
   function start() {
     setQuestions(buildQuestions(mode, geoCountries));
