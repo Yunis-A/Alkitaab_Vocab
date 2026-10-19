@@ -9,8 +9,11 @@ import { DIALECTS } from "./varieties.js";
 const splitList = (s) => String(s ?? "").split(/\s*\/\s*|\s*[،,]\s*/).filter(Boolean);
 
 function collectForms(word) {
+  // dialect-only words have no MSA forms to search
+  if (!word.arabic) return [];
   const f = getForms(word);
   const out = [];
+  if (word.present) out.push(word.present);
   // Imperatives are hidden until Al-Kitaab part 3, so they are not searchable.
   for (const tense of ["past", "present"]) {
     if (f[tense]) out.push(...Object.values(f[tense]));

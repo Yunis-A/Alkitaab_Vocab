@@ -276,6 +276,45 @@ function validateVerb(w, e, flags) {
   check("present", e.msa?.present);
 }
 
+// Decisions made by hand over review.csv (scripts/review-edits.json).
+function applyReviewEdits(words, edits) {
+  if (!edits) return { words, applied: 0, merged: 0 };
+  const byId = new Map(words.map((w) => [w.id, w]));
+  const mergeDialect = (w, patch) => {
+    for (const d of ["egyptian", "shami"]) if (patch[d]) w[d] = { ...(w[d] ?? {}), ...patch[d] };
+  };
+  let applied = 0;
+
+  for (const [id, arabic] of Object.entries(edits.arabic ?? {})) {
+    const w = byId.get(id);
+    if (!w) throw new Error(`review-edits: unknown id ${id}`);
+    w.arabic = arabic; applied++;
+  }
+  for (const [id, patch] of Object.entries(edits.patch ?? {})) {
+    const w = byId.get(id);
+    if (!w) throw new Error(`review-edits: unknown id ${id}`);
+    const { egyptian, shami, ...plain } = patch;
+    Object.assign(w, plain);
+    mergeDialect(w, { egyptian, shami });
+    for (const k of Object.keys(w)) if (w[k] === "" && k !== "arabic") delete w[k]; // empty notes etc.
+    applied++;
+  }
+
+  const gone = new Set();
+  for (const m of edits.merge ?? []) {
+    if (!byId.has(m.from)) throw new Error(`review-edits: unknown merge source ${m.from}`);
+    for (const id of m.into) {
+      const target = byId.get(id);
+      if (!target) throw new Error(`review-edits: unknown merge target ${id}`);
+      const { egyptian, shami, ...plain } = m.fields;
+      Object.assign(target, plain);
+      mergeDialect(target, { egyptian, shami });
+    }
+    gone.add(m.from); applied++;
+  }
+  return { words: words.filter((w) => !gone.has(w.id)), applied, merged: gone.size };
+}
+
 function csvCell(v) {
   const s = String(v ?? "");
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
@@ -288,7 +327,7 @@ if (cmd === "build") {
   const overrides = JSON.parse(fs.readFileSync(path.join(root, "scripts/overrides.json"), "utf8"));
   const { entries } = load();
   const refIndex = buildReferenceIndex(entries);
-  const readJson = (f) => (fs.existsSync(path.join(root, f)) ? JSON.parse(fs.readFileSync(path.join(root, f), "utf8")) : null);
+  const readJson = (f) => (fs.existsSync(path.join(root, f)) ? JSON.parse(fs.readFileSync(path.join(root, f), "utf8").replace(/^﻿/, "")) : null);
   const conj = readJson("data/conjugations.json");
   const rootCheck = readJson("data/root-check.json");
   const rootDecisions = readJson("data/root-decisions.json");
@@ -306,11 +345,19 @@ if (cmd === "build") {
     if (flags.length) review.push([word.id, word.book, word.unit, word.definition, word.arabic ?? word.egyptian?.arabic ?? "", flags.join("; ")]);
   }
 
-  fs.writeFileSync(path.join(root, "src/data/words.json"), JSON.stringify(words, null, 1) + "\n");
-  const csv = ["id,book,unit,english,arabic,flags", ...review.map((r) => r.map(csvCell).join(","))].join("\n");
+  const edits = readJson("scripts/review-edits.json");
+  const edited = applyReviewEdits(words, edits);
+  const reviewed = new Set(readJson("data/reviewed-ids.json") ?? []);
+
+  fs.writeFileSync(path.join(root, "src/data/words.json"), JSON.stringify(edited.words, null, 1) + "\n");
+  // review.csv lists only NEW problems: rows already looked at (data/reviewed-ids.json) are left out.
+  const open = review.filter((r) => !reviewed.has(r[0]));
+  const csv = ["id,book,unit,english,arabic,flags", ...open.map((r) => r.map(csvCell).join(","))].join("\n");
   fs.writeFileSync(path.join(root, "data/review.csv"), "﻿" + csv + "\n");
 
+  words.length = 0; words.push(...edited.words);
   const n = (f) => words.filter(f).length;
+  console.log("review edits applied:", edited.applied, "| merged away:", edited.merged, "| still open in review.csv:", open.length, "of", review.length);
   console.log("words:", words.length, "| skipped:", skipped.length, skipped, "| drift:", drift);
   console.log("by book:", [1, 2, 3, 4].map((b) => `${b}:${n((w) => w.book === b)}`).join(" "));
   console.log("verbs:", n((w) => w.pos === "verb"), "| form I with vowels:", n((w) => w.form === 1 && w.presentVowel), "of", n((w) => w.form === 1));

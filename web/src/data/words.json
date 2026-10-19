@@ -112,7 +112,7 @@
   "book": 1,
   "unit": 1,
   "part": null,
-  "arabic": "اسمي",
+  "arabic": "اِسمي",
   "definition": "my name",
   "transliteration": null,
   "root": null,
@@ -156,7 +156,7 @@
   "book": 1,
   "unit": 1,
   "part": null,
-  "arabic": "مدينة",
+  "arabic": "مَدينة",
   "definition": "the city of …",
   "transliteration": null,
   "root": null,
@@ -310,7 +310,7 @@
   "book": 1,
   "unit": 2,
   "part": null,
-  "arabic": "وعليكم السلام",
+  "arabic": "وَعَلَيكُم السَّلام",
   "definition": "(reply to) assalaamu calaykum you (polite form, to a male)",
   "transliteration": null,
   "root": null,
@@ -961,14 +961,20 @@
   "pos": "pronoun",
   "form": null,
   "gender": null,
-  "plural": null,
+  "plural": "هٰؤُلاء",
   "notes": "",
   "conjugations": null,
   "egyptian": {
-   "arabic": "دا"
+   "arabic": "دا",
+   "plural": "دول"
   },
   "shami": {
-   "arabic": "هَيدا"
+   "arabic": "هَيدا",
+   "plural": "هول / هادول / هَيدول"
+  },
+  "formsFrom": {
+   "book": 3,
+   "unit": 2
   }
  },
  {
@@ -983,14 +989,20 @@
   "pos": "pronoun",
   "form": null,
   "gender": null,
-  "plural": null,
+  "plural": "هٰؤُلاء",
   "notes": "",
   "conjugations": null,
   "egyptian": {
-   "arabic": "دي"
+   "arabic": "دي",
+   "plural": "دول"
   },
   "shami": {
-   "arabic": "هَيدي"
+   "arabic": "هَيدي",
+   "plural": "هول / هادول / هَيدول"
+  },
+  "formsFrom": {
+   "book": 3,
+   "unit": 2
   }
  },
  {
@@ -1494,21 +1506,27 @@
   "book": 1,
   "unit": 4,
   "part": 2,
-  "arabic": "جديد",
+  "arabic": "جَديد",
   "definition": "new (masc.)",
   "transliteration": null,
   "root": null,
   "pos": "adjective",
   "form": null,
   "gender": null,
-  "plural": null,
+  "plural": "جُدُد",
   "notes": "",
   "conjugations": null,
   "egyptian": {
-   "arabic": "جديد"
+   "arabic": "جديد",
+   "plural": "جُداد"
   },
   "shami": {
-   "arabic": "جديد"
+   "arabic": "جديد",
+   "plural": "جْداد"
+  },
+  "formsFrom": {
+   "book": 3,
+   "unit": 1
   }
  },
  {
@@ -1739,7 +1757,7 @@
   "book": 1,
   "unit": 5,
   "part": 1,
-  "arabic": "أوتوبيس",
+  "arabic": "أَوتوبيس",
   "definition": "bus",
   "transliteration": null,
   "root": null,
@@ -1966,14 +1984,21 @@
   "pos": "adjective",
   "form": null,
   "gender": null,
-  "plural": null,
+  "plural": "بيض",
   "notes": "",
   "conjugations": null,
   "egyptian": {
-   "arabic": "أَبْيَض"
+   "arabic": "أَبْيَض",
+   "feminine": "بيضا"
   },
   "shami": {
-   "arabic": "أَبْيَض"
+   "arabic": "أَبْيَض",
+   "feminine": "بيضا"
+  },
+  "feminine": "بَيضاء",
+  "formsFrom": {
+   "book": 3,
+   "unit": 3
   }
  },
  {
@@ -4710,12 +4735,11 @@
   "arabic": "الناس",
   "definition": "people",
   "transliteration": null,
-  "root": "ن و س",
+  "root": "ء ن س",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -6271,7 +6295,7 @@
   "book": 2,
   "unit": 4,
   "part": null,
-  "arabic": "شوربة",
+  "arabic": "شَوربة",
   "definition": "soup",
   "transliteration": null,
   "root": null,
@@ -7500,7 +7524,7 @@
   "book": 2,
   "unit": 6,
   "part": null,
-  "arabic": "الحُصول",
+  "arabic": "حَصَلَ",
   "definition": "to obtain/obtaining",
   "transliteration": null,
   "root": "ح ص ل",
@@ -7511,10 +7535,12 @@
   "prepositions": [
    "على"
   ],
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "masdar": "حُصول",
+  "presentVowel": "u",
+  "pastVowel": "a"
  },
  {
   "id": "b2-u6-007",
@@ -8965,7 +8991,7 @@
   "book": 2,
   "unit": 8,
   "part": null,
-  "arabic": "يرفُض",
+  "arabic": "يَرفُض",
   "definition": "to refuse",
   "transliteration": null,
   "root": "ر ف ض",
@@ -10293,7 +10319,7 @@
   "book": 2,
   "unit": 10,
   "part": null,
-  "arabic": "الفعل",
+  "arabic": "إذا",
   "definition": "if",
   "transliteration": null,
   "root": null,
@@ -10521,7 +10547,7 @@
   "book": 2,
   "unit": 10,
   "part": null,
-  "arabic": "أصبَحَ",
+  "arabic": "أَصبَحَ",
   "definition": "to become",
   "transliteration": null,
   "root": "ص ب ح",
@@ -10817,11 +10843,10 @@
   "definition": "more",
   "transliteration": null,
   "root": "ك ث ر",
-  "pos": "adverb",
+  "pos": "adjective",
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "أَكتَر"
@@ -11454,12 +11479,11 @@
   "arabic": "صَيْدَلِيَّة",
   "definition": "pharmacy",
   "transliteration": null,
-  "root": "ص د ل",
+  "root": "ص ي د ل",
   "pos": "noun",
   "form": null,
   "gender": "feminine",
   "plural": "صَيْدَلِيَّات",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -11632,7 +11656,7 @@
   "arabic": "غالي",
   "definition": "expensive",
   "transliteration": null,
-  "root": "غ ل و",
+  "root": "غ ل ي",
   "pos": "adjective",
   "form": null,
   "gender": null,
@@ -11989,14 +12013,13 @@
   "unit": 12,
   "part": null,
   "arabic": "لم يُسافِر",
-  "definition": "he did not travel",
+  "definition": "= ما سافَرَ",
   "transliteration": null,
   "root": null,
   "pos": "phrase",
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "ما سافِرش"
@@ -12471,14 +12494,13 @@
   "unit": 12,
   "part": null,
   "arabic": "وَفاة",
-  "definition": "death",
+  "definition": "= موت",
   "transliteration": null,
   "root": "و ف ي",
   "pos": "noun",
   "form": null,
   "gender": "feminine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -12589,7 +12611,7 @@
   "unit": 13,
   "part": null,
   "arabic": "رَجَعَ",
-  "definition": "to return",
+  "definition": "= عاد ، يعود",
   "transliteration": null,
   "root": "ر ج ع",
   "pos": "verb",
@@ -12603,7 +12625,6 @@
   "masdar": [
    "رُجُوع"
   ],
-  "notes": "Listed in the source as = عاد",
   "conjugations": {
    "past": {
     "1s": "رَجَعْتُ",
@@ -14229,28 +14250,6 @@
   "shami": null
  },
  {
-  "id": "b3-u1-035",
-  "book": 3,
-  "unit": 1,
-  "part": 2,
-  "arabic": "جُدُد",
-  "definition": "new (plural)",
-  "transliteration": null,
-  "root": "ج د د",
-  "pos": "adjective",
-  "form": null,
-  "gender": null,
-  "plural": null,
-  "notes": "",
-  "conjugations": null,
-  "egyptian": {
-   "arabic": "جُداد"
-  },
-  "shami": {
-   "arabic": "جْداد"
-  }
- },
- {
   "id": "b3-u1-036",
   "book": 3,
   "unit": 1,
@@ -14346,7 +14345,6 @@
   "gender": null,
   "plural": null,
   "masdar": "ذِكر",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "فاكِر/فاكْرة",
@@ -15230,14 +15228,13 @@
   "unit": 2,
   "part": 1,
   "arabic": "عام",
-  "definition": "year",
+  "definition": "= سنة",
   "transliteration": null,
   "root": "ع و م",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": "أَعوام",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -15714,7 +15711,7 @@
   "book": 3,
   "unit": 2,
   "part": 2,
-  "arabic": "مشغول",
+  "arabic": "مَشغول",
   "definition": "too busy (to have time) for",
   "transliteration": null,
   "root": "ش غ ل",
@@ -15930,32 +15927,6 @@
    "plural": "حالهُن",
    "notes": [
     "ـه، ـها"
-   ]
-  }
- },
- {
-  "id": "b3-u2-047",
-  "book": 3,
-  "unit": 2,
-  "part": 2,
-  "arabic": "هٰؤُلاء",
-  "definition": "these (plural of this)",
-  "transliteration": null,
-  "root": null,
-  "pos": "pronoun",
-  "form": null,
-  "gender": null,
-  "plural": null,
-  "notes": "",
-  "conjugations": null,
-  "egyptian": {
-   "arabic": "دول"
-  },
-  "shami": {
-   "arabic": "هول",
-   "alternates": [
-    "هادول",
-    "هَيدول"
    ]
   }
  },
@@ -16979,29 +16950,6 @@
   }
  },
  {
-  "id": "b3-u3-039",
-  "book": 3,
-  "unit": 3,
-  "part": 2,
-  "arabic": "أَبيَض",
-  "definition": "white (masculine, feminine and plural forms)",
-  "transliteration": null,
-  "root": "ب ي ض",
-  "pos": "adjective",
-  "form": null,
-  "gender": null,
-  "plural": "بيض",
-  "feminine": "بَيضاء",
-  "notes": "",
-  "conjugations": null,
-  "egyptian": {
-   "feminine": "بيضا"
-  },
-  "shami": {
-   "feminine": "بيضا"
-  }
- },
- {
   "id": "b3-u3-040",
   "book": 3,
   "unit": 3,
@@ -17522,7 +17470,7 @@
   "book": 3,
   "unit": 4,
   "part": 1,
-  "arabic": "أب",
+  "arabic": "أَب",
   "definition": "father",
   "transliteration": null,
   "root": "ء ب و",
@@ -17703,12 +17651,11 @@
   "arabic": "حَيّ",
   "definition": "neighborhood",
   "transliteration": null,
-  "root": "ح ي ي",
+  "root": "ح ي و",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": "أَحياء",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -17718,7 +17665,7 @@
   "book": 3,
   "unit": 4,
   "part": 1,
-  "arabic": "دعا",
+  "arabic": "دَعا",
   "definition": "to invite",
   "transliteration": null,
   "root": "د ع و",
@@ -17904,14 +17851,13 @@
   "unit": 4,
   "part": 1,
   "arabic": "صَحيفة",
-  "definition": "newspaper",
+  "definition": "= جريدة",
   "transliteration": null,
   "root": "ص ح ف",
   "pos": "noun",
   "form": null,
   "gender": "feminine",
   "plural": "صُحُف",
-  "notes": "Listed in the source as = جريدة",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -19355,12 +19301,11 @@
   "arabic": "دَم",
   "definition": "blood",
   "transliteration": null,
-  "root": "د م و",
+  "root": "د م م",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": "دِماء",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "دَمّ"
@@ -20145,7 +20090,6 @@
   "form": 1,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "شَكَر",
@@ -20160,7 +20104,8 @@
    "prepositions": [
     "في"
    ]
-  }
+  },
+  "presentVowel": "u"
  },
  {
   "id": "b3-u5-046",
@@ -20215,7 +20160,6 @@
   "form": 1,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "طِلِع",
@@ -20230,7 +20174,8 @@
    "notes": [
     "إنّو"
    ]
-  }
+  },
+  "presentVowel": "a"
  },
  {
   "id": "b3-u5-049",
@@ -21309,7 +21254,7 @@
   "unit": 6,
   "part": 2,
   "arabic": "تَحَدَّثَ",
-  "definition": "to talk about",
+  "definition": "= تكلّم عن",
   "transliteration": null,
   "root": "ح د ث",
   "pos": "verb",
@@ -21319,7 +21264,6 @@
   "prepositions": [
    "عن"
   ],
-  "notes": "Listed in the source as = تكلّم عن",
   "conjugations": null,
   "egyptian": {
    "arabic": "اِتكَلِّم",
@@ -21346,7 +21290,7 @@
   "unit": 6,
   "part": 2,
   "arabic": "أَحَسَّ",
-  "definition": "to feel, have feeling of",
+  "definition": "= شعر ب",
   "transliteration": null,
   "root": "ح س س",
   "pos": "verb",
@@ -21363,7 +21307,6 @@
   "prepositions": [
    "بِـ"
   ],
-  "notes": "Listed in the source as = شعر ب",
   "conjugations": {
    "past": {
     "1s": "أَحْسَسْتُ",
@@ -21654,14 +21597,14 @@
   "form": 1,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "اِتقَبَل"
   },
   "shami": {
    "arabic": "اِنقَبَل"
-  }
+  },
+  "present": "يُقبَل"
  },
  {
   "id": "b3-u6-047",
@@ -23743,14 +23686,13 @@
   "unit": 8,
   "part": 1,
   "arabic": "حينَ",
-  "definition": "when",
+  "definition": "= عندما",
   "transliteration": null,
   "root": null,
   "pos": "particle",
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "Listed in the source as = عندما",
   "conjugations": null,
   "egyptian": {
    "arabic": "لَمّا"
@@ -24695,12 +24637,11 @@
   "arabic": "يُسَمّى / تُسَمّى",
   "definition": "it (he/she) is called",
   "transliteration": null,
-  "root": "س م و",
+  "root": "س م ي",
   "pos": "verb",
   "form": 2,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -26721,14 +26662,13 @@
   "unit": 9,
   "part": 2,
   "arabic": "حاسوب",
-  "definition": "computer",
+  "definition": "= كمبيوتر",
   "transliteration": null,
   "root": "ح س ب",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": "حَواسيب",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -27256,14 +27196,13 @@
   "unit": 9,
   "part": 2,
   "arabic": "تَعبير",
-  "definition": "expression",
+  "definition": "= عِبارة",
   "transliteration": null,
   "root": "ع ب ر",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": "تَعبيرات",
-  "notes": "Listed in the source as = عِبارة",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -28357,8 +28296,8 @@
   "book": 3,
   "unit": 10,
   "part": 1,
-  "arabic": "ذات ذاتُهُ",
-  "definition": "self",
+  "arabic": "ذات",
+  "definition": "= نفسه",
   "transliteration": null,
   "root": "ذ و ت",
   "pos": "noun",
@@ -28366,9 +28305,9 @@
   "gender": "feminine",
   "plural": null,
   "alternates": [
-   "بِذاتِه"
+   "ذاتُهُ",
+   "بِذاتِهِ"
   ],
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "بِنَفسُه"
@@ -29384,7 +29323,7 @@
   "book": 3,
   "unit": 10,
   "part": 2,
-  "arabic": "أجرى",
+  "arabic": "أَجرى",
   "definition": "to conduct, carry out",
   "transliteration": null,
   "root": "ج ر ي",
@@ -29485,7 +29424,7 @@
   "book": 3,
   "unit": 10,
   "part": 2,
-  "arabic": "اِختَبرَ",
+  "arabic": "اِختَبَرَ",
   "definition": "to test by experiment or trial",
   "transliteration": null,
   "root": "خ ب ر",
@@ -29798,7 +29737,7 @@
   "arabic": "مَسؤولِيّة",
   "definition": "responsibility (for)",
   "transliteration": null,
-  "root": "ء س ل",
+  "root": "س ء ل",
   "pos": "noun",
   "form": null,
   "gender": "feminine",
@@ -29806,7 +29745,6 @@
   "prepositions": [
    "عن"
   ],
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -30222,7 +30160,7 @@
   "arabic": "قَيَّمَ",
   "definition": "to evaluate",
   "transliteration": null,
-  "root": "ق و م",
+  "root": "ق ي م",
   "pos": "verb",
   "form": 2,
   "gender": null,
@@ -30230,7 +30168,6 @@
   "masdar": [
    "تَقْيِيم"
   ],
-  "notes": "",
   "conjugations": {
    "past": {
     "1s": "قَيَّمْتُ",
@@ -30419,7 +30356,7 @@
   "book": 3,
   "unit": 10,
   "part": 2,
-  "arabic": null,
+  "arabic": "نَقَلَ",
   "definition": "to copy (by hand, especially in an exam)",
   "transliteration": null,
   "root": "ن ق ل",
@@ -30427,7 +30364,6 @@
   "form": 1,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "نَقَل",
@@ -30436,7 +30372,9 @@
   "shami": {
    "arabic": "نَقَل",
    "present": "يِنقُل"
-  }
+  },
+  "presentVowel": "u",
+  "pastVowel": "a"
  },
  {
   "id": "b3-u10-084",
@@ -30720,7 +30658,7 @@
   "unit": 1,
   "part": 1,
   "arabic": "حازَ",
-  "definition": "to obtain, gain possession of",
+  "definition": "= حصل على",
   "transliteration": null,
   "root": "ح و ز",
   "pos": "verb",
@@ -30731,7 +30669,6 @@
   "prepositions": [
    "على"
   ],
-  "notes": "",
   "conjugations": {
    "past": {
     "1s": "حُزْتُ",
@@ -30978,7 +30915,7 @@
   "book": 4,
   "unit": 1,
   "part": 1,
-  "arabic": "الترشيح",
+  "arabic": "التَّرشيح",
   "definition": "nomination (e.g. for an award, a position)",
   "transliteration": null,
   "root": "ر ش ح",
@@ -31254,7 +31191,7 @@
   "book": 4,
   "unit": 1,
   "part": 1,
-  "arabic": "تعقيد",
+  "arabic": "تَعقيد",
   "definition": "complication",
   "transliteration": null,
   "root": "ع ق د",
@@ -33071,14 +33008,13 @@
   "unit": 2,
   "part": 1,
   "arabic": "أَغلَب",
-  "definition": "most (of)",
+  "definition": "= معظم",
   "transliteration": null,
   "root": "غ ل ب",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": null,
-  "notes": "Listed in the source as = معظم",
   "conjugations": null,
   "egyptian": null,
   "shami": null

@@ -1,0 +1,97 @@
+﻿id,book,unit,english,arabic,flags
+b1-u1-006,1,1,my name,اِسمي,no-diacritics
+b1-u1-008,1,1,the city of …,مَدينة,no-diacritics
+b1-u2-006,1,2,"(reply to) assalaamu calaykum you (polite form, to a male)",وَعَلَيكُم السَّلام,no-diacritics
+b1-u4-021,1,4,new (masc.),جَديد,no-diacritics
+b1-u5-001,1,5,bus,أَوتوبيس,no-diacritics
+b2-u1-010,2,1,year,سَنة
+b2-u2-002,2,2,people,الناس,no-diacritics; ء ن س
+b2-u4-016,2,4,soup,شَوربة,no-diacritics
+b2-u5-026,2,5,only,فَقَط,root-decided none
+b2-u6-006,2,6,to obtain/obtaining,الحُصول,irregular:Form I needs presentVowel (a/i/u) يَحصُل
+b2-u6-008,2,6,life,الحَياة
+b2-u8-014,2,8,to refuse,يَرفُض,diacritics-differ-present
+b2-u10-002,2,10,if,إذا,no-diacritics
+b2-u10-010,2,10,to become,أَصبَحَ,diacritics-differ-past
+b2-u10-019,2,10,more,أَكثَر,pos-uncertain:adjective 
+b2-u11-014,2,11,pharmacy,صَيْدَلِيَّة,root-decided:ص ي د ل
+b2-u11-022,2,11,expensive,غالي,no-diacritics;غ ل ي
+b2-u12-007,2,12,he did not travel,لم يُسافِر,= ما سافَرَ
+b2-u12-022,2,12,وَفاة = موت
+b2-u13-006,2,13,to return,رَجَعَ, = عاد ، يعود
+b2-u13-008,2,13,"continues to, is still",ما زالَ, verb
+b2-u13-025,2,13,I did not find,لم أجِد, و ج د
+b3-u1-031,3,1,to move to,اِنْتَقَلَ,form 8
+b3-u1-035,3,1,new (plural),جُدُد,english-inferred (add under جديد)
+b3-u1-040,3,1,to recall,ذَكَرَ, form 1
+b3-u1-044,3,1,last year,السنة اللي فاتت,english-inferred (egyptian only)
+b3-u2-017,3,2,,عام, = سنة
+b3-u2-037,3,2,too busy (to have time) for,مَشغول,no-diacritics
+b3-u2-047,3,2,these (plural of this),هٰؤُلاء,english-inferred (add under هذا)
+b3-u2-049,3,2,she was born I was born,وُلِدَت وُلِدتُ,و ل د
+b3-u3-039,3,3,"white (masculine, feminine and plural forms)",أَبيَض,english-inferred add on to أبيض
+b3-u4-001,3,4,father,أَب,no-diacritics
+b3-u4-006,3,4,neighborhood,حَيّ,حيو
+b3-u4-007,3,4,to invite,دَعا,no-diacritics
+b3-u4-014,3,4,newspaper,صَحيفة,=جريدة
+b3-u5-015,3,5,blood,دَم,د م م
+b3-u5-045,3,5,to praise (a person),شَكَر,irregular:Form I needs presentVowel (a/i/u) يِشكُر (shami)   يُشكُر (egyptian)
+b3-u5-048,3,5,to turn out (to be),طِلِع,irregular:Form I needs presentVowel (a/i/u)يِطلَع
+b3-u6-030,3,6,it was taken,أُخِذ,passive; irregular:weak or hamzated root ء خ ذ
+b3-u6-036,3,6,to talk about,تَحَدَّثَ عن,=تكلّم عن
+b3-u6-037,3,6,"to feel, have feeling of", أَحَسَّ بِـ,=شعر ب->b2-u5-019
+b3-u6-046,3,6,it was accepted,قُبِلَ,passive; irregular:Form I needs presentVowel (a/i/u) يُقبَل
+b3-u7-041,3,7,to translate,تَرجَمَ,quadriliteral 
+b3-u7-042,3,7,was/were translated,تُرجِمَ / تُرجِمَت,quadriliteral; passive; irregular:quadriliteral root ت ر ج م
+b3-u7-064,3,7,judge,قاضي
+b3-u8-004,3,8,when,حينَ,=عندما->b2-u11-021
+b3-u8-042,3,8,it (he/she) is called,يُسَمّى / تُسَمّى,passive; س م ي
+b3-u9-014,3,9,"to record, write down",دَوَّنَ, د و ن
+b3-u9-035,3,9,to cover,غَطّى, غ ط ي
+b3-u9-041,3,9,to organize,نَظّمَ,
+b3-u9-051,3,9,computer,حاسوب,=كمبيوتر
+b3-u9-073,3,9,expression,تَعبير,=عِبارة->b3-u9-072
+b3-u9-081,3,9,to break,كَسَرَ,
+b3-u9-085,3,9,it was established,أُنشِئَ,passive; irregular:weak or hamzated root ن ش ء
+b3-u10-001,3,10,to lead to,أَدَّى,:ء د ي
+b3-u10-003,3,10,"machine; (pl.) equipment, machinery",آلة,no-diacritics; root-decided:ء ل و->ء و ل
+b3-u10-014,3,10,possessing,ذو,
+b3-u10-015,3,10,self,ذات ,english-inferred
+ذاتُهُ, بِذاتِهِ=نفسه
+b3-u10-023,3,10,to explain,فَسَّرَ, verb
+b3-u10-043,3,10,to adopt,تَبَنّى, ب ن ي 
+b3-u10-046,3,10,"to conduct, carry out",أَجرى
+b3-u10-050,3,10,to test by experiment or trial,اِختَبَرَ
+b3-u10-059,3,10,responsibility (for),مَسؤولِيّة,س ء ل
+b3-u10-061,3,10,"semi, pseudo-, nearly",شِبه,
+b3-u10-077,3,10,to evaluate,قَيَّمَ,ق ي م
+b3-u10-083,3,10,"to copy (by hand, especially in an exam)",نَقَل,irregular:Form I needs presentVowel (a/i/u) يَنقُل
+b4-u1-011,4,1,"to obtain, gain possession of",حازَ=حصل على
+b4-u1-016,4,1,"to reclaim, recover; to return",اِستَرَدَّ,english-inferred yes
+b4-u1-017,4,1,"nomination (e.g. for an award, a position)",التَّرشيح,no-diacritics
+b4-u1-028,4,1,complication,تَعقيد,no-diacritics
+b4-u2-012,4,2,"to dominate, control",سَيْطَرَ,quadriliteral
+b4-u2-028,4,2,most (of),أَغلَب,=معظم->b2-u11-018
+b4-u2-037,4,2,distinguishing (positive) feature or aspect,مَزِيّة,root-differs-from-wiktionary:مزي/زوي
+b4-u2-041,4,2,"to obtain, acquire (a job, degree)",نالَ,english-inferred; english-from-referenced-word:حصل على->b2-u6-005
+b4-u2-068,4,2,alone,بِمُفرَد,pos-uncertain
+b4-u2-069,4,2,"coming, next (week, year, etc.)",المُقبِل,english-inferred; english-from-referenced-word:القادِم->b2-u12-014
+b4-u3-001,4,3,and then; all of a sudden,وإذا,no-diacritics
+b4-u3-034,4,3,to become,صارَ,english-inferred
+b4-u3-043,4,3,to be able to,قَدَرَ,english-inferred
+b4-u3-051,4,3,"let alone, leave it be, let (me, you, us) do something",دَع! دَعي! دَعوا!,pos-uncertain; irregular:weak or hamzated root
+b4-u3-058,4,3,to happen,جَرى,english-inferred
+b4-u3-063,4,3,biography autobiography,سيرة,no-diacritics
+b4-u3-066,4,3,strike,إضراب,no-diacritics
+b4-u3-072,4,3,feeling of superiority,الِاستِعلاء,root-differs-from-wiktionary:علي
+b4-u4-002,4,4,"uneducated, illiterate",أُمِّيّ,root-differs-from-wiktionary:ءمو
+b4-u4-005,4,4,clothes,ثِياب,english-inferred
+b4-u4-020,4,4,"to be cured, healed, to recover",شُفِيَ,passive
+b4-u4-021,4,4,soap,صابون,no-diacritics
+b4-u4-023,4,4,"old, ancient",عَتيق,english-inferred
+b4-u4-024,4,4,to play a musical instrument,عزَف,diacritics-differ-past
+b4-u4-043,4,4,"achievement, accomplishment",إنجاز,no-diacritics
+b4-u4-057,4,4,"at that time, then",عِندَئِذٍ,english-inferred
+b4-u5-002,4,5,to become hoarse,بُحَّ,passive
+b4-u5-011,4,5,"nearest, lowest Near East",أدنى,no-diacritics
+b4-u5-051,4,5,exclusion (removing someone and making them marginal),الإِقصاء,pos-uncertain; form-uncertain

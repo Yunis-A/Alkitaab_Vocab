@@ -388,6 +388,38 @@ test("imported vocabulary: structure, levels, dialect rules and search", () => {
   same(f.present["3ms"], "يَقْبَلُ");
 });
 
+test("review edits: references, merged forms, corrected spellings", () => {
+  const byId = new Map(allWords.map((w) => [w.id, w]));
+  // rows you marked "= WORD" show that word instead of an English gloss
+  assert.equal(byId.get("b3-u4-014").definition, "= جريدة");
+  assert.equal(byId.get("b4-u2-028").definition, "= معظم");
+  const refs = allWords.filter((w) => w.definition.startsWith("="));
+  assert.ok(refs.length >= 13);
+  for (const w of refs) assert.ok(/[؀-ۿ]/.test(w.definition), w.id);
+
+  // entries folded into others are gone, and the forms sit on the target
+  for (const gone of ["b3-u1-035", "b3-u2-047", "b3-u3-039"]) assert.equal(byId.has(gone), false, gone);
+  const jadid = byId.get("b1-u4-021");
+  assert.equal(jadid.plural, "جُدُد");
+  assert.equal(jadid.egyptian.plural, "جُداد");
+  assert.deepEqual(jadid.formsFrom, { book: 3, unit: 1 }); // not shown to Alif Baa students
+  assert.equal(byId.get("b1-u3-018").plural, "هٰؤُلاء");
+  assert.equal(byId.get("b1-u5-011").feminine, "بَيضاء");
+
+  // corrected spellings and chosen roots
+  assert.equal(byId.get("b2-u10-002").arabic, "إذا");
+  assert.equal(byId.get("b1-u2-006").arabic, "وَعَلَيكُم السَّلام");
+  assert.equal(byId.get("b2-u2-002").root, "ء ن س");
+  assert.equal(byId.get("b3-u10-059").root, "س ء ل");
+
+  // a verb you gave a present vowel for now generates its own conjugation
+  const hasal = byId.get("b2-u6-006");
+  assert.equal(hasal.arabic, "حَصَلَ");
+  const f = getForms(hasal);
+  assert.equal(f.source.present, "generated");
+  same(f.present["3ms"], "يَحْصُلُ");
+});
+
 test("vocabulary parser: cleaning, verbs, plurals, feminine, prepositions, suffixes", () => {
   assert.equal(cleanText("الـشـَّـرق  الأَوْسَط"), "الشَّرق الأَوْسَط"); // stretch marks inside words go
   assert.equal(cleanText("ـَك- اِسمَك"), "ـَك- اِسمَك"); // a leading one marks a suffix and stays

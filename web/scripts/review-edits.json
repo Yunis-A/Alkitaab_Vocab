@@ -1,0 +1,70 @@
+{
+  "_comment": "Decisions from the 2026-10-19 pass over review.csv (kept in data/review-2026-10-19-edited.csv). Applied by `build` after everything else. arabic = corrected spelling/diacritics; patch = field changes (a definition starting with = means: show the referenced word instead of English); merge = fold one entry into others and drop it.",
+  "arabic": {
+    "b1-u1-006": "اِسمي",
+    "b1-u1-008": "مَدينة",
+    "b1-u2-006": "وَعَلَيكُم السَّلام",
+    "b1-u4-021": "جَديد",
+    "b1-u5-001": "أَوتوبيس",
+    "b2-u4-016": "شَوربة",
+    "b2-u8-014": "يَرفُض",
+    "b2-u10-002": "إذا",
+    "b2-u10-010": "أَصبَحَ",
+    "b3-u2-037": "مَشغول",
+    "b3-u4-001": "أَب",
+    "b3-u4-007": "دَعا",
+    "b3-u10-046": "أَجرى",
+    "b3-u10-050": "اِختَبَرَ",
+    "b4-u1-017": "التَّرشيح",
+    "b4-u1-028": "تَعقيد"
+  },
+  "patch": {
+    "b2-u2-002": { "root": "ء ن س" },
+    "b2-u11-014": { "root": "ص ي د ل" },
+    "b2-u11-022": { "root": "غ ل ي" },
+    "b3-u4-006": { "root": "ح ي و" },
+    "b3-u5-015": { "root": "د م م" },
+    "b3-u8-042": { "root": "س م ي" },
+    "b3-u10-059": { "root": "س ء ل" },
+    "b3-u10-077": { "root": "ق ي م" },
+
+    "b2-u10-019": { "pos": "adjective" },
+    "b2-u13-008": { "pos": "verb" },
+    "b3-u10-023": { "pos": "verb" },
+    "b3-u1-040": { "form": 1 },
+
+    "b2-u12-007": { "definition": "= ما سافَرَ", "notes": "" },
+    "b2-u12-022": { "definition": "= موت", "notes": "" },
+    "b2-u13-006": { "definition": "= عاد ، يعود", "notes": "" },
+    "b3-u2-017": { "definition": "= سنة", "notes": "" },
+    "b3-u4-014": { "definition": "= جريدة", "notes": "" },
+    "b3-u6-036": { "definition": "= تكلّم عن", "notes": "" },
+    "b3-u6-037": { "definition": "= شعر ب", "prepositions": ["بِـ"], "notes": "" },
+    "b3-u8-004": { "definition": "= عندما", "notes": "" },
+    "b3-u9-051": { "definition": "= كمبيوتر", "notes": "" },
+    "b3-u9-073": { "definition": "= عِبارة", "notes": "" },
+    "b3-u10-015": { "arabic": "ذات", "alternates": ["ذاتُهُ", "بِذاتِهِ"], "definition": "= نفسه", "notes": "" },
+    "b4-u1-011": { "definition": "= حصل على", "notes": "" },
+    "b4-u2-028": { "definition": "= معظم", "notes": "" },
+
+    "b2-u6-006": { "arabic": "حَصَلَ", "masdar": "حُصول", "prepositions": ["على"], "presentVowel": "u", "pastVowel": "a", "form": 1, "pos": "verb", "root": "ح ص ل" },
+    "b3-u10-083": { "arabic": "نَقَلَ", "presentVowel": "u", "pastVowel": "a" },
+    "b3-u5-045": { "presentVowel": "u" },
+    "b3-u5-048": { "presentVowel": "a" },
+    "b3-u6-046": { "present": "يُقبَل" }
+  },
+  "merge": [
+    {
+      "from": "b3-u1-035", "into": ["b1-u4-021"],
+      "fields": { "plural": "جُدُد", "formsFrom": { "book": 3, "unit": 1 }, "egyptian": { "plural": "جُداد" }, "shami": { "plural": "جْداد" } }
+    },
+    {
+      "from": "b3-u2-047", "into": ["b1-u3-018", "b1-u3-019"],
+      "fields": { "plural": "هٰؤُلاء", "formsFrom": { "book": 3, "unit": 2 }, "egyptian": { "plural": "دول" }, "shami": { "plural": "هول / هادول / هَيدول" } }
+    },
+    {
+      "from": "b3-u3-039", "into": ["b1-u5-011"],
+      "fields": { "feminine": "بَيضاء", "plural": "بيض", "formsFrom": { "book": 3, "unit": 3 }, "egyptian": { "feminine": "بيضا" }, "shami": { "feminine": "بيضا" } }
+    }
+  ]
+}
