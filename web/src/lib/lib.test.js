@@ -427,6 +427,16 @@ test("lookup filters: type, lesson range, verb form, gender, status, dialect", (
   assert.equal(lv.length, books[1].maxUnits + 2);
   assert.deepEqual(lv.at(-1), { book: 2, unit: 2 });
   assert.deepEqual(lv[0], { book: 1, unit: 1 });
+  // the Lookup page shows them newest first
+  assert.deepEqual([...lv].reverse()[0], { book: 2, unit: 2 });
+
+  // "Beginning" / "End" replace "Any" in the lesson range once بداية and نهاية are learned
+  const bid = allWords.find((w) => w.definition === "beginning");
+  const nih = allWords.find((w) => w.definition === "end, ending");
+  assert.deepEqual([bid.book, bid.unit, nih.book, nih.unit], [3, 1, 3, 1]);
+  for (const key of ["filterBeginning", "filterEnd"]) assert.deepEqual(strings[key].unlock, { book: bid.book, unit: bid.unit });
+  assert.equal(strings.filterBeginning.ar, "بداية");
+  assert.equal(strings.filterEnd.ar, "نهاية");
 
   const opts = filterOptions(words);
   assert.equal(opts.pos.get("verb"), 2);

@@ -130,6 +130,9 @@ export const strings = {
   filterForm: { en: "Verb form", ar: "وزن الفعل", unlock: u(3, 1) },
   filterStatus: { en: "Status", ar: "الحالة", unlock: u(3, 1) },
   filterDialect: { en: "Dialect form", ar: "صيغة لهجية", unlock: u(9, 1) },
+  // بداية and نهاية are both introduced in Al-Kitaab part 2, lesson 1
+  filterBeginning: { en: "Beginning", ar: "بداية", unlock: u(3, 1) },
+  filterEnd: { en: "End", ar: "نهاية", unlock: u(3, 1) },
   filterAny: { en: "Any", ar: "الكل", unlock: u(2, 3) },
   filterReset: { en: "Clear filters", ar: "مسح التصفية", unlock: u(3, 1) },
   resultsCount: {

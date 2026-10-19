@@ -57,7 +57,8 @@ export default function Lookup() {
   };
 
   const options = useMemo(() => filterOptions(visibleWords), [visibleWords]);
-  const levels = useMemo(() => levelsUpTo(level, books), [level]);
+  // newest lesson first, so the book you are in is at the top of the list
+  const levels = useMemo(() => levelsUpTo(level, books).reverse(), [level]);
   const found = useMemo(() => search(visibleIndex, q, dialects), [visibleIndex, q, dialects]);
   const results = useMemo(() => filterWords(found, filters, { statusOf }), [found, params, dialects, statusOf]); // eslint-disable-line react-hooks/exhaustive-deps
   const shown = results.slice(0, limit);
@@ -90,11 +91,11 @@ export default function Lookup() {
         </Select>
 
         <Select label={t("filterFrom")} value={filters.from} onChange={(v) => setParam("from", v)}>
-          <option value="">{t("filterAny")}</option>
+          <option value="">{t("filterBeginning")}</option>
           {levels.map(lessonOption)}
         </Select>
         <Select label={t("filterTo")} value={filters.to} onChange={(v) => setParam("to", v)}>
-          <option value="">{t("filterAny")}</option>
+          <option value="">{t("filterEnd")}</option>
           {levels.map(lessonOption)}
         </Select>
 
