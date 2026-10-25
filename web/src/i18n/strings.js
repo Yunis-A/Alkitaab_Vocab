@@ -27,14 +27,15 @@ export const strings = {
     unlock: u(3, 5),
   },
   // Dialect names stay English until you decide which lesson they turn Arabic at.
-  dialectsTitle: { en: "Dialects", ar: "اللهجات", unlock: u(9, 1) },
+  // لُغة (language) is taught in part 1, lesson 2; شامِيّ in part 1, lesson 1.
+  dialectsTitle: { en: "Language", ar: "اللغة", unlock: u(2, 2) },
   dialectsHelp: {
     en: "Also learn Egyptian and/or Shami (Levantine) words. Each one you turn on gets its own flashcards.",
     ar: "تعلم أيضا الكلمات المصرية و/أو الشامية. كل لهجة تفعلها تحصل على بطاقاتها الخاصة.",
     unlock: u(9, 1),
   },
   dialectEgyptian: { en: "Egyptian", ar: "مصري", unlock: u(9, 1) },
-  dialectShami: { en: "Shami", ar: "شامي", unlock: u(9, 1) },
+  dialectShami: { en: "Shami", ar: "شامي", unlock: u(2, 1) },
   femForm: { en: "Feminine", ar: "المؤنث", unlock: u(3, 8) },
   exampleLabel: { en: "Example", ar: "مثال", unlock: u(3, 8) },
   alsoLabel: { en: "Also", ar: "وأيضا", unlock: u(3, 8) },
@@ -82,11 +83,11 @@ export const strings = {
   studyUnits: { en: "Units to study", ar: "الدروس", unlock: u(3, 5) },
   studyLists: { en: "Lists", ar: "القوائم", unlock: u(3, 8) },
   studyListN: { en: (n, s) => `List ${s}`, ar: (n, s) => `القائمة ${s}`, unlock: u(3, 8) },
-  studyVarieties: { en: "Language", ar: "اللغة", unlock: u(3, 8) },
+  studyVarieties: { en: "Language", ar: "اللغة", unlock: u(2, 2) },
   studyFormal: { en: "Formal (MSA)", ar: "الفصحى", unlock: u(2, 1) }, // الفُصحى is taught in part 1, lesson 1
   studyFirst: { en: "Show first", ar: "يظهر أولا", unlock: u(3, 8) },
   studyNoUnits: { en: "Pick at least one unit with words.", ar: "اختر درسا فيه كلمات.", unlock: u(3, 8) },
-  studyChangeUnits: { en: "Change units", ar: "غير الدروس", unlock: u(3, 8) },
+  studyExit: { en: "Exit", ar: "خروج", unlock: u(3, 8) },
   studyDone: {
     en: "Congratulations! All the words are easy now.",
     ar: "مبروك! كل الكلمات سهلة الآن.",

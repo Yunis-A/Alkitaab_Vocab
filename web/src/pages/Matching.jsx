@@ -57,7 +57,7 @@ export default function Matching({ items: studyItems, onExit }) {
   return (
     <main className="page narrow">
       <div className="quick-bar">
-        <button type="button" className="link-button" onClick={onExit}><bdi>{t("studyChangeUnits")}</bdi></button>
+        <button type="button" className="link-button" onClick={onExit}><bdi>{t("studyExit")}</bdi></button>
       </div>
 
       <section className="card">

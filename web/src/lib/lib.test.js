@@ -759,3 +759,12 @@ test("study items: units, lists and varieties; dialects are separate cards", () 
   assert.equal(ids({ shami: true }, { varieties: new Set(["shm"]) }), "d|shm");
   assert.equal(ids({}, { units: new Set(["3.2"]), lists: new Set([1]) }), "c|ar-en"); // no list: always kept
 });
+
+test("Shami (part 1 lesson 1) and Language (part 1 lesson 2) turn Arabic where they are taught", () => {
+  const shami = allWords.find((w) => w.definition.startsWith("Shami"));
+  assert.equal(shami.arabic, "شامِيّ");
+  assert.deepEqual(strings.dialectShami.unlock, { book: shami.book, unit: shami.unit });
+  const lugha = allWords.find((w) => w.definition === "language");
+  assert.deepEqual(strings.dialectsTitle.unlock, { book: lugha.book, unit: lugha.unit });
+  assert.deepEqual(strings.studyVarieties.unlock, { book: lugha.book, unit: lugha.unit });
+});

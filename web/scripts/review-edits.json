@@ -430,6 +430,19 @@
   },
   "add": [
     {
+      "_comment": "Al-Kitaab part 1, lesson 1 (not in the source list); also turns the Shami label Arabic.",
+      "book": 2,
+      "unit": 1,
+      "part": null,
+      "arabic": "شامِيّ",
+      "feminine": "شامِيّة",
+      "definition": "Shami (Levantine)",
+      "pos": "adjective",
+      "root": "ش أ م",
+      "form": null,
+      "gender": null
+    },
+    {
       "_comment": "Learned in Al-Kitaab part 1, lesson 1 (not in the source list); also unlocks the word in the geography game.",
       "book": 2,
       "unit": 1,

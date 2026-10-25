@@ -4750,6 +4750,25 @@
   "book": 2,
   "unit": 1,
   "part": null,
+  "arabic": "شامِيّ",
+  "feminine": "شامِيّة",
+  "definition": "Shami (Levantine)",
+  "pos": "adjective",
+  "root": "ش أ م",
+  "form": null,
+  "gender": null
+ },
+ {
+  "id": "b2-u1-025",
+  "transliteration": null,
+  "plural": null,
+  "prepositions": [],
+  "conjugations": null,
+  "egyptian": null,
+  "shami": null,
+  "book": 2,
+  "unit": 1,
+  "part": null,
   "arabic": "إِنجِليزِيّ",
   "feminine": "إِنجِليزِيّة",
   "definition": "English",
@@ -4760,7 +4779,7 @@
   "notes": "the language is الإِنجِليزِيّة"
  },
  {
-  "id": "b2-u1-025",
+  "id": "b2-u1-026",
   "transliteration": null,
   "plural": null,
   "prepositions": [],
@@ -4779,7 +4798,7 @@
   "notes": "plural; the singular is مُفرَدة"
  },
  {
-  "id": "b2-u1-026",
+  "id": "b2-u1-027",
   "transliteration": null,
   "plural": null,
   "prepositions": [],
@@ -4797,7 +4816,7 @@
   "gender": "feminine"
  },
  {
-  "id": "b2-u1-027",
+  "id": "b2-u1-028",
   "transliteration": null,
   "plural": null,
   "prepositions": [],
@@ -4816,7 +4835,7 @@
   "notes": "plural of قاعِدة (rule)"
  },
  {
-  "id": "b2-u1-028",
+  "id": "b2-u1-029",
   "transliteration": null,
   "plural": null,
   "prepositions": [],
@@ -4834,7 +4853,7 @@
   "gender": "feminine"
  },
  {
-  "id": "b2-u1-029",
+  "id": "b2-u1-030",
   "transliteration": null,
   "plural": null,
   "prepositions": [],

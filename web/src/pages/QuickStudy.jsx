@@ -60,7 +60,7 @@ export default function QuickStudy({ items, englishFirst, onExit }) {
   return (
     <main className="page narrow">
       <div className="quick-bar">
-        <button type="button" className="link-button" onClick={onExit}><bdi>{t("studyChangeUnits")}</bdi></button>
+        <button type="button" className="link-button" onClick={onExit}><bdi>{t("studyExit")}</bdi></button>
         <span className="quick-counts">
           {RATINGS.map((r) => (
             <span key={r} className={`quick-count rate-${r}`}><bdi>{t(r)}</bdi> {nf(counts[r])}</span>
