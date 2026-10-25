@@ -2,6 +2,7 @@ import { test } from "node:test";
 import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
+import { COUNTRIES } from "../data/countries.js";
 import assert from "node:assert/strict";
 
 import { getForms, analyzeVerb } from "./morphology.js";
@@ -767,4 +768,25 @@ test("Shami (part 1 lesson 1) and Language (part 1 lesson 2) turn Arabic where t
   const lugha = allWords.find((w) => w.definition === "language");
   assert.deepEqual(strings.dialectsTitle.unlock, { book: lugha.book, unit: lugha.unit });
   assert.deepEqual(strings.studyVarieties.unlock, { book: lugha.book, unit: lugha.unit });
+});
+
+test("roots never use hamza seats; gender section words; 100 countries", () => {
+  assert.deepEqual(allWords.filter((w) => /[أإؤئ]/.test(w.root ?? "")).map((w) => w.id), []);
+  assert.equal(allWords.find((w) => w.definition.startsWith("Shami")).root, "ش ء م");
+  const mq = (d) => allWords.find((w) => w.definition === d);
+  assert.equal(mq("masculine").arabic, "مُذَكَّر");
+  assert.equal(mq("feminine").arabic, "مُؤَنَّث");
+  for (const d of ["masculine", "feminine"]) {
+    assert.deepEqual(strings[d].unlock, { book: mq(d).book, unit: mq(d).unit });
+    assert.deepEqual(strings[d].unlock, { book: 2, unit: 1 });
+  }
+  assert.deepEqual(strings.dialectEgyptian.unlock, { book: 2, unit: 1 }); // مِصرِيّ
+  assert.equal(COUNTRIES.length, 100);
+  assert.equal(new Set(COUNTRIES.map((c) => c.ar)).size, 100);
+  assert.equal(new Set(COUNTRIES.map((c) => c.en)).size, 100);
+  assert.ok(COUNTRIES.every((c) => ["masculine", "feminine"].includes(c.gender)));
+  const masc = COUNTRIES.filter((c) => c.gender === "masculine").map((c) => c.en);
+  for (const en of ["Lebanon", "Iraq", "Jordan", "Sudan", "Morocco"]) assert.ok(masc.includes(en), en);
+  assert.equal(COUNTRIES.find((c) => c.en === "Egypt").gender, "feminine");
+  assert.ok(COUNTRIES.every((c) => !/َا/.test(c.ar))); // house style: no fatha before alif
 });

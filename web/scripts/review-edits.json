@@ -438,7 +438,30 @@
       "feminine": "شامِيّة",
       "definition": "Shami (Levantine)",
       "pos": "adjective",
-      "root": "ش أ م",
+      "root": "ش ء م",
+      "form": null,
+      "gender": null
+    },
+    {
+      "_comment": "Al-Kitaab part 1, lesson 1 (not in the source list); unlocks the gender-of-countries section.",
+      "book": 2,
+      "unit": 1,
+      "part": null,
+      "arabic": "مُذَكَّر",
+      "definition": "masculine",
+      "pos": "adjective",
+      "root": "ذ ك ر",
+      "form": null,
+      "gender": null
+    },
+    {
+      "book": 2,
+      "unit": 1,
+      "part": null,
+      "arabic": "مُؤَنَّث",
+      "definition": "feminine",
+      "pos": "adjective",
+      "root": "ء ن ث",
       "form": null,
       "gender": null
     },

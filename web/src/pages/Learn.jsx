@@ -6,7 +6,9 @@ import { dialectOf, parseCardKey, varietyText } from "../lib/varieties.js";
 import WordDetail from "../components/WordDetail.jsx";
 import UnitPicker from "../components/UnitPicker.jsx";
 import QuickStudy from "./QuickStudy.jsx";
+import GenderQuiz from "./GenderQuiz.jsx";
 import Matching from "./Matching.jsx";
+import { levelReached } from "../config/books.js";
 import { levelKey } from "../lib/filters.js";
 import { buildItems } from "../lib/study.js";
 
@@ -52,6 +54,7 @@ export default function Learn() {
   if (mode === "review") return <Review onExit={exit} />;
   if (mode === "quick") return <QuickStudy items={items} englishFirst={englishFirst} onExit={exit} />;
   if (mode === "matching") return <Matching items={items} onExit={exit} />;
+  if (mode === "gender") return <GenderQuiz onExit={exit} />;
 
   return (
     <main className="page narrow">
@@ -111,6 +114,16 @@ export default function Learn() {
           </button>
         </div>
       </section>
+
+      {/* مُذَكَّر / مُؤَنَّث are taught in part 1, lesson 1 */}
+      {levelReached(level, { book: 2, unit: 1 }) && (
+        <section className="card">
+          <h2><bdi>{t("studyGender")}</bdi></h2>
+          <button className="primary" onClick={() => setMode("gender")}>
+            <span dir="auto">{t("geoStart")}</span>
+          </button>
+        </section>
+      )}
     </main>
   );
 }

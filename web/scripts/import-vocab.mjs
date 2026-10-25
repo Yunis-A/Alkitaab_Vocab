@@ -293,6 +293,8 @@ function finalizeWords(words) {
     def = def.replace(COMBINED_NOTE, "");
     if (w.feminine) def = def.replace(GENDER_NOTE, "");
     const out = { ...w, definition: def.replace(/\s{2,}/g, " ").trim() };
+    // a root is written with plain hamza: أ إ ؤ ئ are never root letters
+    if (out.root) out.root = out.root.replace(/[أإؤئ]/g, "ء");
     return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, k === "id" ? v : mapStrings(v, (s) => s.replace(/َ(?=ا)/g, ""))]));
   });
 }
