@@ -264,9 +264,12 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 .quick-counts { display: flex; gap: 0.5rem; }
 .quick-count { color: #fff; border-radius: 999px; padding: 0.1rem 0.7rem; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
 .match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.match-col { display: flex; flex-direction: column; gap: 0.5rem; }
-.match-tile { padding: 0.7rem; border: 2px solid var(--line); border-radius: 8px; background: #fff; color: var(--text); text-align: center; cursor: pointer; }
+.match-col { display: grid; grid-auto-rows: 5rem; gap: 0.5rem; }
+.match-tile { display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 0.4rem 0.6rem; font-size: 0.95rem; line-height: 1.25; border: 2px solid var(--line); border-radius: 8px; background: #fff; color: var(--text); text-align: center; cursor: pointer; }
 .match-tile.picked { border-color: var(--theme); background: color-mix(in srgb, var(--theme) 12%, #fff); }
 .match-tile.wrong { border-color: #c0392b; background: #fbe9e7; }
 .match-tile.matched { border-color: #2e9e5b; background: #e6f5ec; opacity: 0.6; cursor: default; }
 .match-done { text-align: center; margin-top: 1rem; }
+.match-tile .ar { font-size: 1.3rem; }
+.study-options { display: grid; gap: 0.5rem; margin-top: 0.6rem; }
+.study-options .unit-boxes { align-items: center; }

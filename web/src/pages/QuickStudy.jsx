@@ -1,15 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
-import { headword } from "../lib/varieties.js";
+import { dialectOf, varietyText } from "../lib/varieties.js";
 import { countBoxes, pickNext, startBoxes } from "../lib/quickstudy.js";
 import { RATINGS } from "../lib/leitner.js";
 import WordDetail from "../components/WordDetail.jsx";
 
 // A throwaway session: its boxes live only in this component and never touch the Leitner cards.
-export default function QuickStudy({ words, onExit }) {
-  const { t, nf, level, dialects } = useApp();
-  const ids = useMemo(() => words.map((w) => w.id), [words]);
-  const byId = useMemo(() => new Map(words.map((w) => [w.id, w])), [words]);
+export default function QuickStudy({ items, englishFirst, onExit }) {
+  const { t, nf, level, wordsById } = useApp();
+  const ids = useMemo(() => items.map((i) => i.id), [items]);
+  const byId = useMemo(() => new Map(items.map((i) => [i.id, i])), [items]);
 
   const [boxes, setBoxes] = useState(() => startBoxes(ids));
   const [keepGoing, setKeepGoing] = useState(false);
@@ -17,7 +17,10 @@ export default function QuickStudy({ words, onExit }) {
   const [current, setCurrent] = useState(() => pickNext(startBoxes(ids)));
 
   const counts = countBoxes(boxes);
-  const word = current?.id ? byId.get(current.id) : null;
+  const item = current?.id ? byId.get(current.id) : null;
+  const word = item ? wordsById.get(item.wordId) : null;
+  const dialect = item ? dialectOf(item.variety) : null;
+  const arabic = item ? varietyText(word, item.variety, level) : "";
 
   const rate = (rating) => {
     const next = { ...boxes, [current.id]: rating };
@@ -76,24 +79,41 @@ export default function QuickStudy({ words, onExit }) {
       ) : (
         <section className="card flash">
           <div className="face">
-            <span className="ar huge" dir="rtl">{headword(word, dialects, level)}</span>
+            {dialect && (
+              <span className="badge badge-learning"><bdi>{t(dialect === "egyptian" ? "dialectEgyptian" : "dialectShami")}</bdi></span>
+            )}
+            {englishFirst ? (
+              <span className="definition big" dir="auto">{word.definition}</span>
+            ) : (
+              <span className="ar huge" dir="rtl">{arabic}</span>
+            )}
           </div>
+          {/* the rating buttons take the place of "Show answer" so the mouse does not have to move */}
           {revealed ? (
-            <>
-              <hr />
-              <WordDetail word={word} showStatus={false} />
-              <div className="ratings">
-                {RATINGS.map((r) => (
-                  <button key={r} className={`rate rate-${r}`} onClick={() => rate(r)}>
-                    <span dir="auto">{t(r)}</span>
-                  </button>
-                ))}
-              </div>
-            </>
+            <div className="ratings">
+              {RATINGS.map((r) => (
+                <button key={r} className={`rate rate-${r}`} onClick={() => rate(r)}>
+                  <span dir="auto">{t(r)}</span>
+                </button>
+              ))}
+            </div>
           ) : (
             <button className="primary" onClick={() => setRevealed(true)}>
               <span dir="auto">{t("showAnswer")}</span>
             </button>
+          )}
+          {revealed && (
+            <>
+              <hr />
+              <div className="face">
+                {englishFirst ? (
+                  <span className="ar huge" dir="rtl">{arabic}</span>
+                ) : (
+                  <span className="definition big" dir="auto">{word.definition}</span>
+                )}
+              </div>
+              <WordDetail word={word} showStatus={false} showHeader={false} links={false} />
+            </>
           )}
         </section>
       )}

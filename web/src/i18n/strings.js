@@ -80,6 +80,11 @@ export const strings = {
   quickStudy: { en: "Quick study", ar: "دراسة سريعة", unlock: u(3, 6) },
   matching: { en: "Matching", ar: "مطابقة", unlock: u(3, 7) },
   studyUnits: { en: "Units to study", ar: "الدروس", unlock: u(3, 5) },
+  studyLists: { en: "Lists", ar: "القوائم", unlock: u(3, 8) },
+  studyListN: { en: (n, s) => `List ${s}`, ar: (n, s) => `القائمة ${s}`, unlock: u(3, 8) },
+  studyVarieties: { en: "Language", ar: "اللغة", unlock: u(3, 8) },
+  studyFormal: { en: "Formal (MSA)", ar: "الفصحى", unlock: u(2, 1) }, // الفُصحى is taught in part 1, lesson 1
+  studyFirst: { en: "Show first", ar: "يظهر أولا", unlock: u(3, 8) },
   studyNoUnits: { en: "Pick at least one unit with words.", ar: "اختر درسا فيه كلمات.", unlock: u(3, 8) },
   studyChangeUnits: { en: "Change units", ar: "غير الدروس", unlock: u(3, 8) },
   studyDone: {

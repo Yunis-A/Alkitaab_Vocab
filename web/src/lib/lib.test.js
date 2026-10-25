@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
+import { buildItems } from "./study.js";
 import assert from "node:assert/strict";
 
 import { getForms, analyzeVerb } from "./morphology.js";
@@ -742,4 +743,19 @@ test("matching rounds have matching sides and no ambiguous pairs", () => {
   assert.equal(new Set(r.arabic.map((i) => i.arabic)).size, r.arabic.length);
   assert.ok(r.english.every((i) => i.arabic && i.english));
   assert.equal(buildRound(items, 2).english.length, 2);
+});
+
+test("study items: units, lists and varieties; dialects are separate cards", () => {
+  const w = (id, unit, part, extra = {}) => ({ id, book: 3, unit, part, arabic: "ك", ...extra });
+  const words = [
+    w("a", 1, 1, { egyptian: { arabic: "كك" } }), w("b", 1, 2), w("c", 2, null), w("d", 1, 1, { arabic: null, shami: { arabic: "شش" } }),
+  ];
+  const opts = (o) => ({ units: new Set(["3.1"]), lists: new Set([1, 2]), varieties: new Set(["ar-en"]), ...o });
+  const ids = (dialects, o) => buildItems(words, dialects, opts(o)).map((i) => i.id).join();
+  assert.equal(ids({}, {}), "a|ar-en,b|ar-en");
+  assert.equal(ids({}, { lists: new Set([2]) }), "b|ar-en");
+  assert.equal(ids({ egyptian: true }, { varieties: new Set(["ar-en", "egy"]) }), "a|ar-en,a|egy,b|ar-en");
+  assert.equal(ids({ egyptian: true }, { varieties: new Set(["egy"]) }), "a|egy");
+  assert.equal(ids({ shami: true }, { varieties: new Set(["shm"]) }), "d|shm");
+  assert.equal(ids({}, { units: new Set(["3.2"]), lists: new Set([1]) }), "c|ar-en"); // no list: always kept
 });

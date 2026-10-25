@@ -1,14 +1,17 @@
 import { useMemo, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
-import { headword } from "../lib/varieties.js";
+import { varietyText } from "../lib/varieties.js";
 import { buildRound } from "../lib/matching.js";
 
 // Connect each English meaning to its Arabic word: pick one on each side. Rounds are not tracked anywhere.
-export default function Matching({ words, onExit }) {
-  const { t, level, dialects } = useApp();
+export default function Matching({ items: studyItems, onExit }) {
+  const { t, level, wordsById } = useApp();
   const items = useMemo(
-    () => words.map((w) => ({ id: w.id, arabic: headword(w, dialects, level), english: w.definition })),
-    [words, dialects, level],
+    () => studyItems.map((i) => {
+      const w = wordsById.get(i.wordId);
+      return { id: i.id, arabic: varietyText(w, i.variety, level), english: w.definition };
+    }),
+    [studyItems, wordsById, level],
   );
 
   const [round, setRound] = useState(() => buildRound(items));
@@ -71,7 +74,7 @@ export default function Matching({ words, onExit }) {
             {round.arabic.map((it) => (
               <button key={it.id} type="button" className={cls("ar", it.id)} disabled={matched.has(it.id)}
                 onClick={() => choose("ar", it.id)}>
-                <span className="ar big" dir="rtl">{it.arabic}</span>
+                <span className="ar" dir="rtl">{it.arabic}</span>
               </button>
             ))}
           </div>

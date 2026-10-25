@@ -93,8 +93,9 @@ function DialectBlock({ name, data, showFeminine, showPlural }) {
 }
 
 // showHeader=false omits the big Arabic word and its meaning, for places that
-// already show them (the Lookup row).
-export default function WordDetail({ word, showStatus = true, showHeader = true }) {
+// already show them (the Lookup row). links=false turns the root and grammar links into plain text, for
+// sessions (quick study) that must not be left by accident.
+export default function WordDetail({ word, showStatus = true, showHeader = true, links = true }) {
   const { t, level, nf, bookName, showTransliteration, dialects } = useApp();
   const f = getForms(word);
   const showImperative = !!level && levelReached(level, IMPERATIVE_LEVEL);
@@ -126,9 +127,13 @@ export default function WordDetail({ word, showStatus = true, showHeader = true 
         </Field>
         {word.root && (
           <Field label={t("root")}>
-            <Link className="root-link ar" dir="rtl" to={`/lookup?q=${encodeURIComponent(word.root)}`}>
-              {word.root}
-            </Link>
+            {links ? (
+              <Link className="root-link ar" dir="rtl" to={`/lookup?q=${encodeURIComponent(word.root)}`}>
+                {word.root}
+              </Link>
+            ) : (
+              <span className="ar" dir="rtl">{word.root}</span>
+            )}
           </Field>
         )}
         {word.gender && (
@@ -184,7 +189,7 @@ export default function WordDetail({ word, showStatus = true, showHeader = true 
         <Field label={t("unitOfBook")}>
           <span dir="auto">{bookName(word.book)} / {nf(word.unit)}</span>
         </Field>
-        {grammar.length > 0 && (
+        {links && grammar.length > 0 && (
           <Field label={t("grammarLinks")}>
             <span className="grammar-links">
               {grammar.map((s) => (
