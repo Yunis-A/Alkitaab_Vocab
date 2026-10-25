@@ -276,6 +276,27 @@ function validateVerb(w, e, flags) {
   check("present", e.msa?.present);
 }
 
+// Last pass over every word, after all edits:
+//  1. Gender notes in the English are redundant once the Arabic shows the feminine (جاهِز/ة), so they go.
+//     A combined "(masc./fem.)" goes everywhere; single-gender notes ("you (masc.)") stay where the
+//     masculine and feminine are separate entries. Truly gender-neutral words keep their own note.
+//  2. House style: no fatha before a long alef (تَبادَلَ -> تبادَلَ), in every Arabic string of every word.
+const GENDER_NOTE = /\s*\((?:masc\.|fem\.|masculine|feminine|m\.|f\.|male|female)[^)]*\)/gi;
+const COMBINED_NOTE = /\s*\(masc\.\s*\/\s*fem\.\)/gi;
+const mapStrings = (v, f) =>
+  typeof v === "string" ? f(v) : Array.isArray(v) ? v.map((x) => mapStrings(x, f))
+    : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, mapStrings(x, f)])) : v;
+
+function finalizeWords(words) {
+  return words.map((w) => {
+    let def = w.definition;
+    def = def.replace(COMBINED_NOTE, "");
+    if (w.feminine) def = def.replace(GENDER_NOTE, "");
+    const out = { ...w, definition: def.replace(/\s{2,}/g, " ").trim() };
+    return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, k === "id" ? v : mapStrings(v, (s) => s.replace(/َ(?=ا)/g, ""))]));
+  });
+}
+
 // Decisions made by hand over review.csv (scripts/review-edits.json).
 function applyReviewEdits(words, edits) {
   if (!edits) return { words, applied: 0, merged: 0 };
@@ -363,6 +384,7 @@ if (cmd === "build") {
 
   const edits = readJson("scripts/review-edits.json");
   const edited = applyReviewEdits(words, edits);
+  edited.words = finalizeWords(edited.words);
   const reviewed = new Set(readJson("data/reviewed-ids.json") ?? []);
 
   fs.writeFileSync(path.join(root, "src/data/words.json"), JSON.stringify(edited.words, null, 1) + "\n");

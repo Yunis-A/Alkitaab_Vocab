@@ -6,6 +6,9 @@
 //              word.egyptian / .shami { arabic, present, masdar, plural, feminine,
 //                                       prepositions, notes } or null
 
+import { levelReached } from "../config/books.js";
+import { stripDiacritics } from "./arabic.js";
+
 export const MSA = "ar-en";
 export const DIALECTS = ["egyptian", "shami"];
 export const DIALECT_VARIETY = { egyptian: "egy", shami: "shm" };
@@ -29,15 +32,34 @@ export function isWordAvailable(word, dialects) {
   return activeVarieties(word, dialects).length > 0;
 }
 
+// letters only; every hamza spelling counts as the same (مَليء / مَليئة)
+const bareLetters = (s) => stripDiacritics(s).replace(/ـ/g, "").replace(/[أإؤئ]/g, "ء");
+
+// "/ة" when the feminine is the masculine plus ة (جاهِز/ة), otherwise the whole feminine (أَحمَر/حَمراء).
+export function feminineSuffix(base, feminine) {
+  return bareLetters(feminine) === bareLetters(base) + "ة" ? "ة" : feminine;
+}
+
+// The MSA title of a word: the word, "/ة" (or the feminine) when it has one, and the preposition(s) it needs:
+// جاهِز/ة, بَعيد/ة عَن, تَعَرَّفَ على. Forms the list only introduces later (formsFrom) wait for that lesson.
+export function displayArabic(word, level) {
+  if (!word.arabic) return "";
+  let s = word.arabic;
+  const formsShown = !word.formsFrom || (level && levelReached(level, word.formsFrom));
+  if (word.feminine && formsShown) s += `/${feminineSuffix(word.arabic, word.feminine)}`;
+  if (word.prepositions?.length) s += ` ${word.prepositions.join(" / ")}`;
+  return s;
+}
+
 // The Arabic text shown on the front of a card for this variety.
-export function varietyText(word, variety) {
+export function varietyText(word, variety, level) {
   const d = dialectOf(variety);
-  return d ? word[d]?.arabic ?? "" : word.arabic ?? "";
+  return d ? word[d]?.arabic ?? "" : displayArabic(word, level);
 }
 
 // What to show as the word's title: MSA, else the first enabled dialect form.
-export function headword(word, dialects = {}) {
-  if (word.arabic) return word.arabic;
+export function headword(word, dialects = {}, level) {
+  if (word.arabic) return displayArabic(word, level);
   for (const d of DIALECTS) if (dialects[d] && word[d]?.arabic) return word[d].arabic;
   return "";
 }

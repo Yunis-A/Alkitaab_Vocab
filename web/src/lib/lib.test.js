@@ -7,7 +7,7 @@ import { buildIndex, search } from "./search.js";
 import {
   newCard, review, wordStatus, boxStatus, BOX_INTERVALS, cardKey, VARIETY_IDS, RATINGS,
 } from "./leitner.js";
-import { activeVarieties, isWordAvailable, headword, varietyText, parseCardKey, dialectOf } from "./varieties.js";
+import { activeVarieties, isWordAvailable, headword, varietyText, parseCardKey, dialectOf, displayArabic } from "./varieties.js";
 import { rootKey } from "./arabic.js";
 import {
   filterWords, filterOptions, activeFilterCount, parseLevelKey, levelKey, levelsUpTo,
@@ -488,6 +488,72 @@ test("lookup filters: type, lesson range, verb form, gender, status, dialect", (
   assert.ok(sheShami.length > 500 && sheShami.every((w) => w.shami));
 });
 
+test("titles: /ة for the feminine and the preposition a word needs", () => {
+  const L = { book: 4, unit: 10 };
+  assert.equal(displayArabic({ arabic: "جاهِز", feminine: "جاهِزة" }, L), "جاهِز/ة");
+  assert.equal(displayArabic({ arabic: "دُوَليّ", feminine: "دُوَليّة" }, L), "دُوَليّ/ة"); // shadda is ignored when comparing
+  assert.equal(displayArabic({ arabic: "أَحمَر", feminine: "حَمراء" }, L), "أَحمَر/حَمراء"); // irregular: the whole feminine
+  assert.equal(displayArabic({ arabic: "مَليء", feminine: "مَليئة", prepositions: ["بِـ"] }, L), "مَليء/ة بِـ"); // hamza seat changes
+  assert.equal(displayArabic({ arabic: "بَعيد", feminine: "بَعيدة", prepositions: ["عَن"] }, L), "بَعيد/ة عَن");
+  assert.equal(displayArabic({ arabic: "تَعَرَّفَ", prepositions: ["على"] }, L), "تَعَرَّفَ على");
+  assert.equal(displayArabic({ arabic: "اِشتاقَ", prepositions: ["إلى", "لِـ"] }, L), "اِشتاقَ إلى / لِـ");
+  assert.equal(displayArabic({ arabic: "رَحّالة" }, L), "رَحّالة"); // gender-neutral: nothing added
+  assert.equal(displayArabic({ arabic: null }, L), "");
+  // a feminine the list only introduces later stays hidden until then
+  const white = { arabic: "أَبْيَض", feminine: "بَيضاء", formsFrom: { book: 3, unit: 3 } };
+  assert.equal(displayArabic(white, { book: 1, unit: 5 }), "أَبْيَض");
+  assert.equal(displayArabic(white, { book: 3, unit: 3 }), "أَبْيَض/بَيضاء");
+  // cards show the same title
+  assert.equal(varietyText({ arabic: "بَعيد", feminine: "بَعيدة", prepositions: ["عَن"] }, "ar-en", L), "بَعيد/ة عَن");
+  assert.equal(headword({ arabic: "جاهِز", feminine: "جاهِزة" }, {}, L), "جاهِز/ة");
+
+  // on the real vocabulary
+  const byId = new Map(allWords.map((w) => [w.id, w]));
+  assert.equal(displayArabic(byId.get("b1-u8-012"), L), "بَعيد/ة عن"); // far from
+  assert.equal(displayArabic(byId.get("b1-u8-011"), L), "قَريب/ة مِن"); // close to
+  assert.equal(displayArabic(byId.get("b1-u4-021"), { book: 1, unit: 4 }), "جَديد/ة");
+  assert.equal(displayArabic(byId.get("b1-u5-011"), { book: 1, unit: 5 }), "أَبْيَض"); // white's feminine waits for part 2
+});
+
+test("house style and cleanup: no fatha before ا, no gender notes where /ة shows it", () => {
+  // no Arabic string in any word has a fatha directly before an alef
+  assert.deepEqual(allWords.filter((w) => /َا/.test(JSON.stringify(w))).map((w) => w.id), []);
+  assert.ok(allWords.some((w) => w.arabic === "تَبادَلَ"));
+
+  // entries that show a feminine carry no masc./fem. note in the English
+  for (const w of allWords.filter((x) => x.feminine)) assert.ok(!/\((?:masc|fem|m\.|f\.)/i.test(w.definition), `${w.id} ${w.definition}`);
+  // and no combined (masc./fem.) note survives anywhere
+  assert.deepEqual(allWords.filter((w) => /\(masc\.\s*\/\s*fem\.\)/i.test(w.definition)).map((w) => w.id), []);
+  // a truly gender-neutral word keeps its own note
+  assert.equal(allWords.find((w) => w.arabic === "رَحّالة").definition, "traveler, explorer (masc. & fem.)");
+
+  // adjectives: all regular ones now show a feminine; only comparatives, fixed forms and dialect-only rows have none
+  const adj = allWords.filter((w) => w.pos === "adjective");
+  assert.ok(adj.filter((w) => w.feminine).length > 150);
+  const without = adj.filter((w) => !w.feminine && w.arabic);
+  assert.ok(without.length <= 12, without.map((w) => w.arabic).join(" "));
+});
+
+test("added words: the Arabic language and the Qur'an (Alif Baa 10), part 1 lesson 1 vocabulary", () => {
+  const find = (a) => allWords.find((w) => w.arabic === a);
+  assert.deepEqual([find("عَرَبِيّ").book, find("عَرَبِيّ").unit], [1, 10]);
+  assert.equal(find("عَرَبِيّ").feminine, "عَرَبِيّة");
+  assert.deepEqual([find("القُرآن").book, find("القُرآن").unit], [1, 10]);
+  assert.equal(find("القُرآن").root, null); // Alif Baa words have no roots
+  for (const [ar, def, root] of [
+    ["المُفرَدات", "vocabulary", "ف ر د"], ["الفُصحى", "formal Arabic; Standard Arabic", "ف ص ح"],
+    ["القَواعِد", "grammar", "ق ع د"], ["الثَّقافة", "culture", "ث ق ف"], ["هَل", "(introduces a yes/no question)", null],
+  ]) {
+    const w = find(ar);
+    assert.ok(w, ar);
+    assert.deepEqual([w.book, w.unit, w.definition, w.root], [2, 1, def, root], ar);
+  }
+  assert.equal(find("هَل").pos, "particle");
+  // the Grammar tab turns Arabic with القواعد, in part 1 lesson 1
+  assert.deepEqual(strings.navGrammar.unlock, { book: 2, unit: 1 });
+  assert.equal(strings.navGrammar.ar, "القواعد");
+});
+
 test("review edits: references, merged forms, corrected spellings", () => {
   const byId = new Map(allWords.map((w) => [w.id, w]));
   // rows you marked "= WORD" show that word instead of an English gloss
@@ -498,11 +564,16 @@ test("review edits: references, merged forms, corrected spellings", () => {
   for (const w of refs) assert.ok(/[؀-ۿ]/.test(w.definition), w.id);
 
   // entries folded into others are gone, and the forms sit on the target
-  for (const gone of ["b3-u1-035", "b3-u2-047", "b3-u3-039"]) assert.equal(byId.has(gone), false, gone);
+  for (const gone of ["b3-u1-035", "b3-u2-047", "b3-u3-039", "b1-u4-022", "b3-u3-040", "b3-u3-042"]) assert.equal(byId.has(gone), false, gone);
   const jadid = byId.get("b1-u4-021");
   assert.equal(jadid.plural, "جُدُد");
+  assert.equal(jadid.feminine, "جَديدة"); // new (masc.) and new (fem.) are one entry now
+  assert.equal(jadid.definition, "new");
   assert.equal(jadid.egyptian.plural, "جُداد");
-  assert.deepEqual(jadid.formsFrom, { book: 3, unit: 1 }); // not shown to Alif Baa students
+  assert.deepEqual(jadid.pluralFrom, { book: 3, unit: 1 }); // the plural waits for part 2; the feminine shows at once
+  assert.equal(jadid.formsFrom, undefined);
+  assert.equal(byId.get("b1-u5-013").feminine, "خَضراء"); // green and black joined their Alif Baa words, like white
+  assert.equal(byId.get("b1-u5-012").feminine, "سَوداء");
   assert.equal(byId.get("b1-u3-018").plural, "هٰؤُلاء");
   assert.equal(byId.get("b1-u5-011").feminine, "بَيضاء");
 
@@ -595,7 +666,10 @@ test("geography game: questions, timing, data", () => {
   assert.equal(english.arabic, "إِنجِليزِيّ");
   assert.equal(strings.geoEnglish.ar, "إنجليزي");
   assert.equal(strings.geoArabic.ar, "عربي");
-  assert.deepEqual(strings.geoArabic.unlock, strings.geoEnglish.unlock);
+  // "Arabic" turns Arabic where عَرَبِيّ is taught: Alif Baa lesson 10
+  const arabicWord = allWords.find((w) => w.definition === "Arabic");
+  assert.ok(arabicWord && arabicWord.book === 1 && arabicWord.unit === 10);
+  assert.deepEqual(strings.geoArabic.unlock, { book: 1, unit: 10 });
 });
 
 test("geography words unlock at the lessons that teach them", () => {
@@ -614,17 +688,19 @@ test("geography words unlock at the lessons that teach them", () => {
 
 test("status labels turn Arabic where the list teaches the word behind them", () => {
   const at = (pred) => { const w = allWords.find(pred); return { book: w.book, unit: w.unit }; };
-  assert.deepEqual(strings.statusNew.unlock, at((w) => w.definition === "new (fem.)")); // جديدة
+  assert.deepEqual(strings.statusNew.unlock, at((w) => w.definition === "new")); // جَديد/ة
   assert.deepEqual(strings.statusLearning.unlock, at((w) => w.definition === "to learn")); // تَعَلَّمَ
   assert.deepEqual(strings.statusMastered.unlock, at((w) => w.definition === "I memorize")); // أَحفَظ
   assert.deepEqual(strings.statusNew.unlock, { book: 1, unit: 4 });
 
-  // a student in Al-Kitaab part 2 sees Arabic for all four
+  // a student in Al-Kitaab part 2 sees Arabic for New, Learning and Mastered. Proficient (متقنة) is not part
+  // of the standard curriculum, so it is not on the required list and stays English.
   const none = vocabSets([], {});
   const level = { book: 3, unit: 3 };
-  for (const key of ["statusNew", "statusLearning", "statusProficient", "statusMastered"]) {
+  for (const key of ["statusNew", "statusLearning", "statusMastered"]) {
     assert.equal(isArabic(strings[key], level, none), true, key);
   }
+  assert.equal(isArabic(strings.statusProficient, { book: 4, unit: 10 }, none), false);
   // and the badge is still English before that
   assert.equal(isArabic(strings.statusNew, { book: 1, unit: 3 }, none), false);
 });

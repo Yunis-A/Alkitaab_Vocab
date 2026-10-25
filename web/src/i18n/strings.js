@@ -42,7 +42,8 @@ export const strings = {
   posPronoun: { en: "pronoun", ar: "ضمير", unlock: u(3, 1) },
   posPhrase: { en: "phrase", ar: "عبارة", unlock: u(3, 1) },
   posSuffix: { en: "suffix", ar: "لاحقة", unlock: u(3, 1) },
-  navGrammar: { en: "Grammar", ar: "قواعد", unlock: u(2, 3) },
+  // القواعد (grammar) is taught in Al-Kitaab part 1, lesson 1
+  navGrammar: { en: "Grammar", ar: "القواعد", unlock: u(2, 1) },
 
   // --- level setup ---
   setupTitle: { en: "Where are you in the course?", ar: "أين أنت في المقرر؟", unlock: u(3, 5) },
@@ -72,10 +73,11 @@ export const strings = {
   //   جديدة  (new, fem.)     Alif Baa lesson 4
   //   تعلم   (to learn)      Al-Kitaab part 2, lesson 2
   //   حفظ    (I memorize)    Al-Kitaab part 1, lesson 4
-  // The list has no word for "proficient" (متقنة), so that one is a placeholder.
+  // "Proficient" (متقنة) is not part of the standard curriculum, so it is NOT on the required list: it
+  // stays English (unlocking at a lesson that does not exist keeps the Arabic label unused but ready).
   statusNew: { en: "New", ar: "جديدة", unlock: u(1, 4) },
   statusLearning: { en: "Learning", ar: "قيد التعلم", unlock: u(3, 2) },
-  statusProficient: { en: "Proficient", ar: "متقنة", unlock: u(3, 3) },
+  statusProficient: { en: "Proficient", ar: "متقنة", unlock: u(9, 1) },
   statusMastered: { en: "Mastered", ar: "محفوظة", unlock: u(2, 4) },
 
   // --- learn ---
@@ -99,7 +101,7 @@ export const strings = {
   // "English" is learned in Al-Kitaab part 1, lesson 1. TODO: set the exact Alif Baa lesson for "Arabic"
   // (it is temporarily unlocked together with "English").
   geoEnglish: { en: "English", ar: "إنجليزي", unlock: u(2, 1) },
-  geoArabic: { en: "Arabic", ar: "عربي", unlock: u(2, 1) },
+  geoArabic: { en: "Arabic", ar: "عربي", unlock: u(1, 10) }, // عَرَبِيّ is taught in Alif Baa lesson 10
   geoTitle: { en: "Geography game", ar: "لعبة الجغرافيا", unlock: u(2, 6) },
   geoCountry: { en: "country", ar: "بلد", unlock: u(2, 2) },
   geoBest: { en: "Best", ar: "أحسن", unlock: u(2, 5) },

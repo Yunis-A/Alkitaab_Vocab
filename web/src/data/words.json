@@ -1,5 +1,42 @@
 [
  {
+  "id": "b1-u10-001",
+  "transliteration": null,
+  "plural": null,
+  "prepositions": [],
+  "conjugations": null,
+  "egyptian": null,
+  "shami": null,
+  "book": 1,
+  "unit": 10,
+  "part": null,
+  "arabic": "عَرَبِيّ",
+  "feminine": "عَرَبِيّة",
+  "definition": "Arabic",
+  "pos": "adjective",
+  "root": null,
+  "form": null,
+  "gender": null
+ },
+ {
+  "id": "b1-u10-002",
+  "transliteration": null,
+  "plural": null,
+  "prepositions": [],
+  "conjugations": null,
+  "egyptian": null,
+  "shami": null,
+  "book": 1,
+  "unit": 10,
+  "part": null,
+  "arabic": "القُرآن",
+  "definition": "the Qur’an",
+  "pos": "noun",
+  "root": null,
+  "form": null,
+  "gender": "masculine"
+ },
+ {
   "id": "b1-u1-001",
   "book": 1,
   "unit": 1,
@@ -867,7 +904,7 @@
   "unit": 3,
   "part": null,
   "arabic": "كَيْفَ الحال؟",
-  "definition": "How are you? (masc./fem.)",
+  "definition": "How are you?",
   "transliteration": null,
   "root": null,
   "pos": "phrase",
@@ -918,14 +955,14 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "تَمام"
   },
   "shami": {
    "arabic": "تَمام"
-  }
+  },
+  "feminine": "جَيِّدة"
  },
  {
   "id": "b1-u3-017",
@@ -972,7 +1009,7 @@
    "arabic": "هَيدا",
    "plural": "هول / هادول / هَيدول"
   },
-  "formsFrom": {
+  "pluralFrom": {
    "book": 3,
    "unit": 2
   }
@@ -1000,7 +1037,7 @@
    "arabic": "هَيدي",
    "plural": "هول / هادول / هَيدول"
   },
-  "formsFrom": {
+  "pluralFrom": {
    "book": 3,
    "unit": 2
   }
@@ -1507,7 +1544,7 @@
   "unit": 4,
   "part": 2,
   "arabic": "جَديد",
-  "definition": "new (masc.)",
+  "definition": "new",
   "transliteration": null,
   "root": null,
   "pos": "adjective",
@@ -1518,38 +1555,19 @@
   "conjugations": null,
   "egyptian": {
    "arabic": "جديد",
-   "plural": "جُداد"
+   "plural": "جُداد",
+   "feminine": "جديدة"
   },
   "shami": {
    "arabic": "جديد",
-   "plural": "جْداد"
+   "plural": "جْداد",
+   "feminine": "جديدة"
   },
-  "formsFrom": {
+  "pluralFrom": {
    "book": 3,
    "unit": 1
-  }
- },
- {
-  "id": "b1-u4-022",
-  "book": 1,
-  "unit": 4,
-  "part": 2,
-  "arabic": "جَديدة",
-  "definition": "new (fem.)",
-  "transliteration": null,
-  "root": null,
-  "pos": "adjective",
-  "form": null,
-  "gender": null,
-  "plural": null,
-  "notes": "",
-  "conjugations": null,
-  "egyptian": {
-   "arabic": "جديدة"
   },
-  "shami": {
-   "arabic": "جديدة"
-  }
+  "feminine": "جَديدة"
  },
  {
   "id": "b1-u4-023",
@@ -1845,7 +1863,7 @@
   "book": 1,
   "unit": 5,
   "part": 1,
-  "arabic": "طَيِّب طيِّبَة",
+  "arabic": "طَيِّب",
   "definition": "good, kind-hearted (as adjective); OK (as an interjection)",
   "transliteration": null,
   "root": null,
@@ -1853,29 +1871,30 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
-   "arabic": "طَيِّب طيِّبَة"
+   "arabic": "طَيِّب",
+   "feminine": "طيِّبَة"
   },
   "shami": {
-   "arabic": "طَيِّب طيّبة"
-  }
+   "arabic": "طَيِّب",
+   "feminine": "طيّبة"
+  },
+  "feminine": "طَيِّبة"
  },
  {
   "id": "b1-u5-006",
   "book": 1,
   "unit": 5,
   "part": 1,
-  "arabic": "عن إذنكَ إذنكِ",
-  "definition": "may I be excused? (what to say when you have to leave) (masc./fem.)",
+  "arabic": "عَن إذنِكَ / إذنِكِ",
+  "definition": "may I be excused? (what to say when you have to leave)",
   "transliteration": null,
   "root": null,
   "pos": "phrase",
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "عن إذنَك"
@@ -1889,7 +1908,7 @@
   "book": 1,
   "unit": 5,
   "part": 1,
-  "arabic": "فَصل صَف",
+  "arabic": "فَصل",
   "definition": "class; classroom",
   "transliteration": null,
   "root": null,
@@ -1897,14 +1916,16 @@
   "form": null,
   "gender": "masculine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "فَصل"
   },
   "shami": {
    "arabic": "صَف"
-  }
+  },
+  "alternates": [
+   "صَف"
+  ]
  },
  {
   "id": "b1-u5-008",
@@ -1934,7 +1955,7 @@
   "unit": 5,
   "part": 1,
   "arabic": null,
-  "definition": "(reply to) ma c a s-salaama (masc./fem.)",
+  "definition": "(reply to) ma c a s-salaama",
   "transliteration": null,
   "root": null,
   "pos": "phrase",
@@ -2013,14 +2034,21 @@
   "pos": "adjective",
   "form": null,
   "gender": null,
-  "plural": null,
+  "plural": "سود",
   "notes": "",
   "conjugations": null,
   "egyptian": {
-   "arabic": "إسْوِد"
+   "arabic": "إسْوِد",
+   "feminine": "سودا"
   },
   "shami": {
-   "arabic": "أسْوَد"
+   "arabic": "أسْوَد",
+   "feminine": "سودا"
+  },
+  "feminine": "سَوداء",
+  "formsFrom": {
+   "book": 3,
+   "unit": 3
   }
  },
  {
@@ -2035,14 +2063,22 @@
   "pos": "adjective",
   "form": null,
   "gender": null,
-  "plural": null,
+  "plural": "خُضر",
   "notes": "",
   "conjugations": null,
   "egyptian": {
-   "arabic": "أَخْضر"
+   "arabic": "أَخْضر",
+   "feminine": "خَضرا"
   },
   "shami": {
-   "arabic": "أَخْضر"
+   "arabic": "أَخْضر",
+   "feminine": "خَضرا",
+   "plural": "خِضر"
+  },
+  "feminine": "خَضراء",
+  "formsFrom": {
+   "book": 3,
+   "unit": 3
   }
  },
  {
@@ -3551,7 +3587,7 @@
   "unit": 8,
   "part": null,
   "arabic": "قَريب",
-  "definition": "close to, near (masc./fem.)",
+  "definition": "close to, near",
   "transliteration": null,
   "root": null,
   "pos": "adjective",
@@ -3585,7 +3621,7 @@
   "unit": 8,
   "part": null,
   "arabic": "بَعيد",
-  "definition": "far from (masc./fem.)",
+  "definition": "far from",
   "transliteration": null,
   "root": null,
   "pos": "adjective",
@@ -3843,11 +3879,10 @@
   "definition": "a little",
   "transliteration": null,
   "root": null,
-  "pos": "adjective",
+  "pos": "adverb",
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "شوَيّة"
@@ -3868,11 +3903,10 @@
   "definition": "What’s wrong (with you?)",
   "transliteration": null,
   "root": null,
-  "pos": "adverb",
+  "pos": "phrase",
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "مالَك",
@@ -4047,7 +4081,7 @@
   "unit": 9,
   "part": null,
   "arabic": "قَصير",
-  "definition": "short (masc./fem.)",
+  "definition": "short",
   "transliteration": null,
   "root": null,
   "pos": "adjective",
@@ -4072,7 +4106,7 @@
   "unit": 9,
   "part": null,
   "arabic": "طَويل",
-  "definition": "tall, long (masc./fem.)",
+  "definition": "tall, long",
   "transliteration": null,
   "root": null,
   "pos": "adjective",
@@ -4097,7 +4131,7 @@
   "unit": 9,
   "part": null,
   "arabic": "جَميل",
-  "definition": "beautiful (masc./fem.)",
+  "definition": "beautiful",
   "transliteration": null,
   "root": null,
   "pos": "adjective",
@@ -4121,7 +4155,7 @@
   "unit": 9,
   "part": null,
   "arabic": "لَطيف",
-  "definition": "nice, pleasant (masc./fem.)",
+  "definition": "nice, pleasant",
   "transliteration": null,
   "root": null,
   "pos": "adjective",
@@ -4724,6 +4758,98 @@
   "form": null,
   "gender": null,
   "notes": "the language is الإِنجِليزِيّة"
+ },
+ {
+  "id": "b2-u1-025",
+  "transliteration": null,
+  "plural": null,
+  "prepositions": [],
+  "conjugations": null,
+  "egyptian": null,
+  "shami": null,
+  "book": 2,
+  "unit": 1,
+  "part": null,
+  "arabic": "المُفرَدات",
+  "definition": "vocabulary",
+  "pos": "noun",
+  "root": "ف ر د",
+  "form": null,
+  "gender": null,
+  "notes": "plural; the singular is مُفرَدة"
+ },
+ {
+  "id": "b2-u1-026",
+  "transliteration": null,
+  "plural": null,
+  "prepositions": [],
+  "conjugations": null,
+  "egyptian": null,
+  "shami": null,
+  "book": 2,
+  "unit": 1,
+  "part": null,
+  "arabic": "الفُصحى",
+  "definition": "formal Arabic; Standard Arabic",
+  "pos": "noun",
+  "root": "ف ص ح",
+  "form": null,
+  "gender": "feminine"
+ },
+ {
+  "id": "b2-u1-027",
+  "transliteration": null,
+  "plural": null,
+  "prepositions": [],
+  "conjugations": null,
+  "egyptian": null,
+  "shami": null,
+  "book": 2,
+  "unit": 1,
+  "part": null,
+  "arabic": "القَواعِد",
+  "definition": "grammar",
+  "pos": "noun",
+  "root": "ق ع د",
+  "form": null,
+  "gender": null,
+  "notes": "plural of قاعِدة (rule)"
+ },
+ {
+  "id": "b2-u1-028",
+  "transliteration": null,
+  "plural": null,
+  "prepositions": [],
+  "conjugations": null,
+  "egyptian": null,
+  "shami": null,
+  "book": 2,
+  "unit": 1,
+  "part": null,
+  "arabic": "الثَّقافة",
+  "definition": "culture",
+  "pos": "noun",
+  "root": "ث ق ف",
+  "form": null,
+  "gender": "feminine"
+ },
+ {
+  "id": "b2-u1-029",
+  "transliteration": null,
+  "plural": null,
+  "prepositions": [],
+  "conjugations": null,
+  "egyptian": null,
+  "shami": null,
+  "book": 2,
+  "unit": 1,
+  "part": null,
+  "arabic": "هَل",
+  "definition": "(introduces a yes/no question)",
+  "pos": "particle",
+  "root": null,
+  "form": null,
+  "gender": null
  },
  {
   "id": "b2-u2-001",
@@ -6044,10 +6170,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "أُولى"
  },
  {
   "id": "b2-u4-004",
@@ -6181,15 +6307,15 @@
   "book": 2,
   "unit": 4,
   "part": null,
-  "arabic": "زَميلج زُمَلاء زَميلة",
-  "definition": "classmate, colleague (masc./fem.)",
+  "arabic": "زَميل",
+  "definition": "classmate, colleague",
   "transliteration": null,
   "root": "ز م ل",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
-  "plural": "زَميلات",
-  "notes": "",
+  "plural": "زُمَلاء",
+  "notes": "feminine plural: زَميلات",
   "conjugations": null,
   "egyptian": {
    "arabic": "زِميل",
@@ -6197,7 +6323,8 @@
   },
   "shami": {
    "plural": "زَمايل / زُمَلا"
-  }
+  },
+  "feminine": "زَميلة"
  },
  {
   "id": "b2-u4-011",
@@ -7205,14 +7332,14 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "شَمس"
   },
   "shami": {
    "arabic": "مِشمِس"
-  }
+  },
+  "feminine": "مُشمِسة"
  },
  {
   "id": "b2-u5-021",
@@ -7264,29 +7391,28 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "مِغَيِّم"
   },
   "shami": {
    "arabic": "مغَيِّم"
-  }
+  },
+  "feminine": "غائِمة"
  },
  {
   "id": "b2-u5-024",
   "book": 2,
   "unit": 5,
   "part": null,
-  "arabic": "فَصل ج فُصول",
+  "arabic": "فَصل",
   "definition": "season",
   "transliteration": null,
   "root": "ف ص ل",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
-  "plural": null,
-  "notes": "",
+  "plural": "فُصول",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -7475,7 +7601,7 @@
   "notes": "",
   "conjugations": null,
   "egyptian": {
-   "arabic": "بَعد كِدَا"
+   "arabic": "بَعد كِدا"
   },
   "shami": {
    "arabic": "بَعد هيك"
@@ -8107,7 +8233,7 @@
   "book": 2,
   "unit": 7,
   "part": null,
-  "arabic": "(مذكر: أوَّل) أُولى",
+  "arabic": "أَوَّل",
   "definition": "first (adj.)",
   "transliteration": null,
   "root": "ء و ل",
@@ -8115,10 +8241,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "أُولى"
  },
  {
   "id": "b2-u7-002",
@@ -8148,18 +8274,18 @@
   "book": 2,
   "unit": 7,
   "part": null,
-  "arabic": "مَجنون/ة ج مَجانين",
+  "arabic": "مَجنون",
   "definition": "crazy",
   "transliteration": null,
   "root": "ج ن ن",
   "pos": "adjective",
   "form": null,
   "gender": null,
-  "plural": null,
-  "notes": "",
+  "plural": "مَجانين",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "مَجنونة"
  },
  {
   "id": "b2-u7-004",
@@ -8282,15 +8408,14 @@
   "book": 2,
   "unit": 7,
   "part": null,
-  "arabic": "مُسْتَشْفى ج مُسْتَشْفَيات",
+  "arabic": "مُسْتَشْفى",
   "definition": "hospital",
   "transliteration": null,
   "root": "ش ف ي",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
-  "plural": null,
-  "notes": "",
+  "plural": "مُسْتَشْفَيات",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -8860,10 +8985,10 @@
   "alternates": [
    "دَوليّ/ة"
   ],
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "دُوَليّة"
  },
  {
   "id": "b2-u8-009",
@@ -9489,7 +9614,6 @@
   "alternates": [
    "مؤنث: أُخرى"
   ],
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "تاني",
@@ -9498,7 +9622,8 @@
   "shami": {
    "arabic": "تاني",
    "feminine": "تانية"
-  }
+  },
+  "feminine": "أُخرى"
  },
  {
   "id": "b2-u9-002",
@@ -10374,7 +10499,7 @@
   "pos": "noun",
   "form": null,
   "gender": "feminine",
-  "plural": "مُبَارَيات",
+  "plural": "مُبارَيات",
   "notes": "",
   "conjugations": null,
   "egyptian": {
@@ -11287,7 +11412,7 @@
   "book": 2,
   "unit": 11,
   "part": null,
-  "arabic": "تَبَادَلَ",
+  "arabic": "تَبادَلَ",
   "definition": "to exchange (news, opinions, etc.)",
   "transliteration": null,
   "root": "ب د ل",
@@ -14102,10 +14227,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "مَمنوعة"
  },
  {
   "id": "b3-u1-030",
@@ -14338,18 +14463,18 @@
   "book": 3,
   "unit": 1,
   "part": 2,
-  "arabic": "مَخطوبة",
+  "arabic": "مَخطوب",
   "definition": "engaged (of a woman or couple)",
   "transliteration": null,
   "root": "خ ط ب",
   "pos": "adjective",
   "form": null,
   "gender": null,
-  "plural": "مَخطوبةون / مَخطوبةين",
-  "notes": "",
+  "plural": "مَخطوبون / مَخطوبين",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "مَخطوبة"
  },
  {
   "id": "b3-u1-040",
@@ -14703,12 +14828,12 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": {
    "arabic": "مْوَقَّت"
-  }
+  },
+  "feminine": "مُؤَقَّتة"
  },
  {
   "id": "b3-u2-001",
@@ -16213,22 +16338,24 @@
   "book": 3,
   "unit": 3,
   "part": 1,
-  "arabic": "ذَهَب ذَهَبِيّ/ة",
-  "definition": "gold golden, gold (in color)",
+  "arabic": "ذَهَب",
+  "definition": "gold; golden",
   "transliteration": null,
   "root": "ذ ه ب",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "دَهَب دَهَبي"
   },
   "shami": {
    "arabic": "دَهَب دَهَبي/ة"
-  }
+  },
+  "alternates": [
+   "ذَهَبِيّ/ة"
+  ]
  },
  {
   "id": "b3-u3-010",
@@ -16708,20 +16835,22 @@
   "book": 3,
   "unit": 3,
   "part": 1,
-  "arabic": "فِضّة فِضِّيّ/ة",
-  "definition": "silver silver (color)",
+  "arabic": "فِضّة",
+  "definition": "silver; silver (color)",
   "transliteration": null,
   "root": "ف ض ض",
   "pos": "noun",
   "form": null,
   "gender": "feminine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "فَضّةفَضّي"
   },
-  "shami": null
+  "shami": null,
+  "alternates": [
+   "فِضِّيّ/ة"
+  ]
  },
  {
   "id": "b3-u3-030",
@@ -16970,30 +17099,6 @@
   }
  },
  {
-  "id": "b3-u3-040",
-  "book": 3,
-  "unit": 3,
-  "part": 2,
-  "arabic": "أَخضَر",
-  "definition": "green (masculine, feminine and plural forms)",
-  "transliteration": null,
-  "root": "خ ض ر",
-  "pos": "adjective",
-  "form": null,
-  "gender": null,
-  "plural": "خُضر",
-  "feminine": "خَضراء",
-  "notes": "",
-  "conjugations": null,
-  "egyptian": {
-   "feminine": "خَضرا"
-  },
-  "shami": {
-   "feminine": "خَضرا",
-   "plural": "خِضر"
-  }
- },
- {
   "id": "b3-u3-041",
   "book": 3,
   "unit": 3,
@@ -17015,29 +17120,6 @@
   "shami": {
    "arabic": "بَعَت",
    "present": "يِبعَت"
-  }
- },
- {
-  "id": "b3-u3-042",
-  "book": 3,
-  "unit": 3,
-  "part": 2,
-  "arabic": "أَسوَد",
-  "definition": "black (masculine, feminine and plural forms)",
-  "transliteration": null,
-  "root": "س و د",
-  "pos": "adjective",
-  "form": null,
-  "gender": null,
-  "plural": "سود",
-  "feminine": "سَوداء",
-  "notes": "",
-  "conjugations": null,
-  "egyptian": {
-   "feminine": "سودا"
-  },
-  "shami": {
-   "feminine": "سودا"
   }
  },
  {
@@ -18529,10 +18611,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "شَرقِيّة"
  },
  {
   "id": "b3-u4-036",
@@ -19751,7 +19833,7 @@
   "book": 3,
   "unit": 5,
   "part": 1,
-  "arabic": "ثِقة بِ أو في",
+  "arabic": "ثِقة",
   "definition": "trust, confidence",
   "transliteration": null,
   "root": "و ث ق",
@@ -19759,7 +19841,6 @@
   "form": null,
   "gender": "feminine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "ثِقة",
@@ -19769,22 +19850,25 @@
   },
   "shami": {
    "arabic": "ثِقة بِ أو في"
-  }
+  },
+  "prepositions": [
+   "بِـ",
+   "في"
+  ]
  },
  {
   "id": "b3-u5-032",
   "book": 3,
   "unit": 5,
   "part": 1,
-  "arabic": "واثِق/ة بِ أو في",
+  "arabic": "واثِق",
   "definition": "trusting, confident in",
   "transliteration": null,
   "root": "و ث ق",
   "pos": "adjective",
   "form": null,
   "gender": null,
-  "plural": "واثِق/ة بِ أو فيون / واثِق/ة بِ أو فيين",
-  "notes": "",
+  "plural": "واثِقون / واثِقين",
   "conjugations": null,
   "egyptian": {
    "arabic": "واثِق",
@@ -19797,7 +19881,12 @@
   "shami": {
    "arabic": "واثِق/ة بِ أو في",
    "plural": "واثقْين"
-  }
+  },
+  "feminine": "واثِقة",
+  "prepositions": [
+   "بِـ",
+   "في"
+  ]
  },
  {
   "id": "b3-u5-033",
@@ -20132,15 +20221,14 @@
   "book": 3,
   "unit": 5,
   "part": 2,
-  "arabic": "شَكل ج أَشكال",
-  "definition": ";form, shape ... you look",
+  "arabic": "شَكل",
+  "definition": "form, shape; “you look …” (شَكلُكَ …)",
   "transliteration": null,
   "root": "ش ك ل",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
-  "plural": null,
-  "notes": "",
+  "plural": "أَشكال",
   "conjugations": null,
   "egyptian": {
    "arabic": "شَكلك"
@@ -20161,7 +20249,7 @@
   "pos": "noun",
   "form": null,
   "gender": "feminine",
-  "plural": "صَداقَات",
+  "plural": "صَداقات",
   "notes": "",
   "conjugations": null,
   "egyptian": null,
@@ -20612,15 +20700,14 @@
   "book": 3,
   "unit": 6,
   "part": 1,
-  "arabic": "تَصَرُّف ج -ات",
+  "arabic": "تَصَرُّف",
   "definition": "act (of behavior), action",
   "transliteration": null,
   "root": "ص ر ف",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
-  "plural": null,
-  "notes": "",
+  "plural": "تَصَرُّفات",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -20740,14 +20827,14 @@
   "form": null,
   "gender": null,
   "plural": "أَغنِياء",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "plural": "أَغنِيا"
   },
   "shami": {
    "plural": "أَغنِيا"
-  }
+  },
+  "feminine": "غَنِيّة"
  },
  {
   "id": "b3-u6-019",
@@ -20802,14 +20889,14 @@
   "form": null,
   "gender": null,
   "plural": "فُقَراء",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "plural": "فُقَرا"
   },
   "shami": {
    "plural": "فُقَرا"
-  }
+  },
+  "feminine": "فَقيرة"
  },
  {
   "id": "b3-u6-022",
@@ -21895,7 +21982,7 @@
   "book": 3,
   "unit": 7,
   "part": 1,
-  "arabic": "حَرب (مؤنَّث)",
+  "arabic": "حَرب",
   "definition": "war",
   "transliteration": null,
   "root": "ح ر ب",
@@ -21903,7 +21990,6 @@
   "form": null,
   "gender": "feminine",
   "plural": "حُروب",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -22009,7 +22095,7 @@
   "book": 3,
   "unit": 7,
   "part": 1,
-  "arabic": "دار (مؤنَّث)",
+  "arabic": "دار",
   "definition": "house, abode",
   "transliteration": null,
   "root": "د و ر",
@@ -22017,7 +22103,6 @@
   "form": null,
   "gender": "feminine",
   "plural": "دور",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -22168,18 +22253,21 @@
   "book": 3,
   "unit": 7,
   "part": 1,
-  "arabic": "صَليب صَليبيّ",
+  "arabic": "صَليب",
   "definition": "(a) cross Crusader",
   "transliteration": null,
   "root": "ص ل ب",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
-  "plural": "صَليب صَليبيّون / صَليب صَليبيّين",
-  "notes": "",
+  "plural": null,
+  "notes": "الصَّليبيّ = Crusader (pl. صَليبيّون)",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "alternates": [
+   "صَليبيّ"
+  ]
  },
  {
   "id": "b3-u7-018",
@@ -22212,7 +22300,6 @@
   "form": null,
   "gender": null,
   "plural": "ضُعَفاء / ضِعاف",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "plural": "ضُعاف / ضُعَفا"
@@ -22220,7 +22307,8 @@
   "shami": {
    "arabic": "ضعيف",
    "plural": "ضُعَفا / ضعاف"
-  }
+  },
+  "feminine": "ضَعيفة"
  },
  {
   "id": "b3-u7-020",
@@ -22307,14 +22395,14 @@
   "form": null,
   "gender": null,
   "plural": "عُظَماء / عِظام",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "plural": "عُظام"
   },
   "shami": {
    "plural": "عُظما"
-  }
+  },
+  "feminine": "عَظيمة"
  },
  {
   "id": "b3-u7-025",
@@ -22825,7 +22913,7 @@
   "book": 3,
   "unit": 7,
   "part": 2,
-  "arabic": "اجتِماعي ّ",
+  "arabic": "اِجتِماعيّ",
   "definition": "social",
   "transliteration": null,
   "root": "ج م ع",
@@ -22833,10 +22921,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "اِجتِماعيّة"
  },
  {
   "id": "b3-u7-044",
@@ -22968,15 +23056,14 @@
   "book": 3,
   "unit": 7,
   "part": 2,
-  "arabic": "رَحّالة (مذكر ومؤنث وجمع)",
-  "definition": "traveler, explorer",
+  "arabic": "رَحّالة",
+  "definition": "traveler, explorer (masc. & fem.)",
   "transliteration": null,
   "root": "ر ح ل",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
-  "plural": "رَحَّالون/رَحَّالين",
-  "notes": "",
+  "plural": "رَحّالون / رَحّالين",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -24330,12 +24417,12 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": {
    "arabic": "مِتنَوِّع"
-  }
+  },
+  "feminine": "مُتَنَوِّعة"
  },
  {
   "id": "b3-u8-031",
@@ -24974,10 +25061,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "مُعتادة"
  },
  {
   "id": "b3-u8-056",
@@ -27251,18 +27338,20 @@
   "book": 3,
   "unit": 9,
   "part": 2,
-  "arabic": "قَدر من قَدر كَبير مِن",
-  "definition": "amount of a large amount of, a great deal of",
+  "arabic": "قَدر مِن",
+  "definition": "an amount of; a large amount of, a great deal of",
   "transliteration": null,
   "root": "ق د ر",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "alternates": [
+   "قَدر كَبير مِن"
+  ]
  },
  {
   "id": "b3-u9-076",
@@ -27872,18 +27961,20 @@
   "book": 3,
   "unit": 9,
   "part": 2,
-  "arabic": "واقِع في الواقِع",
-  "definition": "reality in reality",
+  "arabic": "واقِع",
+  "definition": "reality; in reality",
   "transliteration": null,
   "root": "و ق ع",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "alternates": [
+   "في الواقِع"
+  ]
  },
  {
   "id": "b3-u9-092",
@@ -28007,18 +28098,20 @@
   "book": 3,
   "unit": 10,
   "part": 1,
-  "arabic": "البَشَر بَشَرِيّ",
-  "definition": "mankind, human beings human (adj.)",
+  "arabic": "البَشَر",
+  "definition": "mankind, human beings; human (adj.)",
   "transliteration": null,
   "root": "ب ش ر",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "alternates": [
+   "بَشَرِيّ"
+  ]
  },
  {
   "id": "b3-u10-005",
@@ -28306,10 +28399,10 @@
   "alternates": [
    "ذات"
   ],
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "ذات"
  },
  {
   "id": "b3-u10-015",
@@ -30546,10 +30639,10 @@
   "form": null,
   "gender": null,
   "plural": "بارِزون / بارِزين",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "بارِزة"
  },
  {
   "id": "b4-u1-005",
@@ -30564,10 +30657,10 @@
   "form": null,
   "gender": null,
   "plural": "ثابِتون / ثابِتين",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "ثابِتة"
  },
  {
   "id": "b4-u1-006",
@@ -31021,7 +31114,7 @@
   "book": 4,
   "unit": 1,
   "part": 1,
-  "arabic": "اِشتاقَ إلى/لِ",
+  "arabic": "اِشتاقَ",
   "definition": "long for, yearn for",
   "transliteration": null,
   "root": "ش و ق",
@@ -31035,7 +31128,6 @@
   "masdar": [
    "اِشْتِياق"
   ],
-  "notes": "",
   "conjugations": {
    "past": {
     "1s": "اِشْتَقْتُ",
@@ -31089,7 +31181,11 @@
    ]
   },
   "activeParticiple": "مُشْتاق",
-  "passiveParticiple": "مُشْتاق"
+  "passiveParticiple": "مُشْتاق",
+  "prepositions": [
+   "إلى",
+   "لِـ"
+  ]
  },
  {
   "id": "b4-u1-022",
@@ -31431,7 +31527,6 @@
   "form": null,
   "gender": null,
   "plural": "قَبيحون / قَبيحين",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "بَشِع",
@@ -31440,7 +31535,8 @@
   "shami": {
    "arabic": "بِشِع",
    "plural": "بِشِعين"
-  }
+  },
+  "feminine": "قَبيحة"
  },
  {
   "id": "b4-u1-036",
@@ -31458,7 +31554,8 @@
   "notes": "القاسي",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "قاسِية"
  },
  {
   "id": "b4-u1-037",
@@ -31560,13 +31657,13 @@
   "form": null,
   "gender": null,
   "plural": "نِحاف/نُحفاء",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "رُفَيَّع",
    "plural": "رُفَيّعين"
   },
-  "shami": null
+  "shami": null,
+  "feminine": "نَحيفة"
  },
  {
   "id": "b4-u1-042",
@@ -31656,10 +31753,10 @@
   "form": null,
   "gender": null,
   "plural": "مُتَوَتِّرون / مُتَوَتِّرين",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "مُتَوَتِّرة"
  },
  {
   "id": "b4-u1-047",
@@ -31674,13 +31771,13 @@
   "form": null,
   "gender": null,
   "plural": "مُتَوَحِّشون / مُتَوَحِّشين",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": {
    "arabic": "مِتوَحِّش",
    "plural": "مِتوَحِّشين"
-  }
+  },
+  "feminine": "مُتَوَحِّشة"
  },
  {
   "id": "b4-u1-048",
@@ -32276,7 +32373,8 @@
   "notes": "من/ من قِبَل",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "مُلاحَقة"
  },
  {
   "id": "b4-u1-071",
@@ -32380,10 +32478,10 @@
   "form": null,
   "gender": null,
   "plural": "مُمَيَّزون / مُمَيَّزين",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "مُمَيَّزة"
  },
  {
   "id": "b4-u1-074",
@@ -32586,20 +32684,20 @@
   "book": 4,
   "unit": 2,
   "part": 1,
-  "arabic": "رَبّ/ة بيت",
+  "arabic": "رَبّ بيت",
   "definition": "lord, master, owner, housewife",
   "transliteration": null,
   "root": "ر ب ب",
   "pos": "noun",
   "form": null,
   "gender": "masculine",
-  "plural": "أَرباب /-ات",
-  "notes": "",
+  "plural": "أَرباب بيت / رَبّات بيت",
   "conjugations": null,
   "egyptian": {
    "arabic": "سِتّ بيت ج سِتّات بيوت"
   },
-  "shami": null
+  "shami": null,
+  "feminine": "رَبّة بيت"
  },
  {
   "id": "b4-u2-008",
@@ -32650,10 +32748,10 @@
   "form": null,
   "gender": null,
   "plural": "مُسَلَّحون / مُسَلَّحين",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "مُسَلَّحة"
  },
  {
   "id": "b4-u2-011",
@@ -32764,10 +32862,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "تَشريعِيّة"
  },
  {
   "id": "b4-u2-014",
@@ -32909,10 +33007,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "عَسكَرِيّة"
  },
  {
   "id": "b4-u2-022",
@@ -33146,10 +33244,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "قَومِيّة"
  },
  {
   "id": "b4-u2-032",
@@ -33372,10 +33470,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "تَنفيذِيّة"
  },
  {
   "id": "b4-u2-040",
@@ -33544,7 +33642,8 @@
   "notes": "ة",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "إيجابِيّة"
  },
  {
   "id": "b4-u2-046",
@@ -35351,7 +35450,6 @@
   "form": null,
   "gender": null,
   "plural": "سِمان",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "سِمين",
@@ -35360,7 +35458,8 @@
   "shami": {
    "arabic": "سْمين",
    "plural": "سْمان"
-  }
+  },
+  "feminine": "سَمينة"
  },
  {
   "id": "b4-u3-032",
@@ -35929,15 +36028,14 @@
   "book": 4,
   "unit": 3,
   "part": 1,
-  "arabic": "مَليء بِ/ة",
+  "arabic": "مَليء",
   "definition": "full of",
   "transliteration": null,
   "root": "م ل ء",
   "pos": "adjective",
   "form": null,
   "gender": null,
-  "plural": "مَليء بِ/ةون / مَليء بِ/ةين",
-  "notes": "",
+  "plural": "مَليئون / مَليئين",
   "conjugations": null,
   "egyptian": {
    "arabic": "مَليان",
@@ -35948,7 +36046,11 @@
    "arabic": "مِليان",
    "plural": "مِليانين",
    "feminine": "مِليانة"
-  }
+  },
+  "feminine": "مَليئة",
+  "prepositions": [
+   "بِـ"
+  ]
  },
  {
   "id": "b4-u3-048",
@@ -37124,10 +37226,10 @@
   "form": null,
   "gender": null,
   "plural": "أُمِّيّون / أُمِّيّين",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "أُمِّيّة"
  },
  {
   "id": "b4-u4-003",
@@ -37477,10 +37579,10 @@
   "form": null,
   "gender": null,
   "plural": "رائِعون / رائِعين",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "رائِعة"
  },
  {
   "id": "b4-u4-015",
@@ -37788,17 +37890,17 @@
   "form": null,
   "gender": null,
   "plural": "عِتاق",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "قديم",
    "alternates": [
-    "قُدَام"
+    "قُدام"
    ]
   },
   "shami": {
    "plural": "عْتاق"
-  }
+  },
+  "feminine": "عَتيقة"
  },
  {
   "id": "b4-u4-024",
@@ -38086,10 +38188,10 @@
   "form": null,
   "gender": null,
   "plural": "ناضِجون / ناضِجين",
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "ناضِجة"
  },
  {
   "id": "b4-u4-036",
@@ -38124,7 +38226,6 @@
   "form": null,
   "gender": null,
   "plural": "نِظاف",
-  "notes": "",
   "conjugations": null,
   "egyptian": {
    "arabic": "نِضيف",
@@ -38133,7 +38234,8 @@
   "shami": {
    "arabic": "نْضيف",
    "plural": "نْضاف"
-  }
+  },
+  "feminine": "نَظيفة"
  },
  {
   "id": "b4-u4-038",
@@ -38383,7 +38485,7 @@
   "book": 4,
   "unit": 4,
   "part": 2,
-  "arabic": "الجَوْدة/ الجودة",
+  "arabic": "الجَوْدة",
   "definition": "(good) quality, goodness (of quality)",
   "transliteration": null,
   "root": "ج و د",
@@ -38391,7 +38493,6 @@
   "form": null,
   "gender": "feminine",
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
   "shami": null
@@ -39094,10 +39195,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "هامّة"
  },
  {
   "id": "b4-u4-072",
@@ -39437,10 +39538,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "مُباشِرة"
  },
  {
   "id": "b4-u5-002",
@@ -39615,10 +39716,10 @@
   "form": null,
   "gender": null,
   "plural": null,
-  "notes": "",
   "conjugations": null,
   "egyptian": null,
-  "shami": null
+  "shami": null,
+  "feminine": "جَوهَرِيّة"
  },
  {
   "id": "b4-u5-006",

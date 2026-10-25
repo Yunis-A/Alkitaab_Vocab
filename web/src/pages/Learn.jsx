@@ -88,7 +88,7 @@ function Finish({ onDone }) {
 
 // Active recall: see the Arabic, recall the meaning, flip, then rate confidence.
 function Review({ onExit }) {
-  const { t, wordsById, activeCards, rate } = useApp();
+  const { t, level, wordsById, activeCards, rate } = useApp();
   const now = useNow(1000);
   const [revealed, setRevealed] = useState(false);
 
@@ -136,7 +136,7 @@ function Review({ onExit }) {
           {dialect && (
             <span className="badge badge-learning"><bdi>{t(dialect === "egyptian" ? "dialectEgyptian" : "dialectShami")}</bdi></span>
           )}
-          <span className="ar huge" dir="rtl">{varietyText(word, variety)}</span>
+          <span className="ar huge" dir="rtl">{varietyText(word, variety, level)}</span>
         </div>
 
         {revealed ? (

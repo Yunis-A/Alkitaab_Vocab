@@ -19,61 +19,629 @@
     "b4-u1-028": "تَعقيد"
   },
   "patch": {
-    "b2-u2-002": { "root": "ء ن س" },
-    "b2-u11-014": { "root": "ص ي د ل" },
-    "b2-u11-022": { "root": "غ ل ي" },
-    "b3-u4-006": { "root": "ح ي و" },
-    "b3-u5-015": { "root": "د م م" },
-    "b3-u8-042": { "root": "س م ي" },
-    "b3-u10-059": { "root": "س ء ل" },
-    "b3-u10-077": { "root": "ق ي م" },
-
-    "b2-u10-019": { "pos": "adjective" },
-    "b2-u13-008": { "pos": "verb" },
-    "b3-u10-023": { "pos": "verb" },
-    "b3-u1-040": { "form": 1 },
-
-    "b2-u12-007": { "definition": "= ما سافَرَ", "notes": "" },
-    "b2-u12-022": { "definition": "= موت", "notes": "" },
-    "b2-u13-006": { "definition": "= عاد ، يعود", "notes": "" },
-    "b3-u2-017": { "definition": "= سنة", "notes": "" },
-    "b3-u4-014": { "definition": "= جريدة", "notes": "" },
-    "b3-u6-036": { "definition": "= تكلّم عن", "notes": "" },
-    "b3-u6-037": { "definition": "= شعر ب", "prepositions": ["بِـ"], "notes": "" },
-    "b3-u8-004": { "definition": "= عندما", "notes": "" },
-    "b3-u9-051": { "definition": "= كمبيوتر", "notes": "" },
-    "b3-u9-073": { "definition": "= عِبارة", "notes": "" },
-    "b3-u10-015": { "arabic": "ذات", "alternates": ["ذاتُهُ", "بِذاتِهِ"], "definition": "= نفسه", "notes": "" },
-    "b4-u1-011": { "definition": "= حصل على", "notes": "" },
-    "b4-u2-028": { "definition": "= معظم", "notes": "" },
-
-    "b2-u6-006": { "arabic": "حَصَلَ", "masdar": "حُصول", "prepositions": ["على"], "presentVowel": "u", "pastVowel": "a", "form": 1, "pos": "verb", "root": "ح ص ل" },
-    "b3-u10-083": { "arabic": "نَقَلَ", "presentVowel": "u", "pastVowel": "a" },
-    "b3-u5-045": { "presentVowel": "u" },
-    "b3-u5-048": { "presentVowel": "a" },
-    "b3-u6-046": { "present": "يُقبَل" }
+    "b2-u2-002": {
+      "root": "ء ن س"
+    },
+    "b2-u11-014": {
+      "root": "ص ي د ل"
+    },
+    "b2-u11-022": {
+      "root": "غ ل ي"
+    },
+    "b3-u4-006": {
+      "root": "ح ي و"
+    },
+    "b3-u5-015": {
+      "root": "د م م"
+    },
+    "b3-u8-042": {
+      "root": "س م ي"
+    },
+    "b3-u10-059": {
+      "root": "س ء ل"
+    },
+    "b3-u10-077": {
+      "root": "ق ي م"
+    },
+    "b2-u10-019": {
+      "pos": "adjective"
+    },
+    "b2-u13-008": {
+      "pos": "verb"
+    },
+    "b3-u10-023": {
+      "pos": "verb"
+    },
+    "b3-u1-040": {
+      "form": 1
+    },
+    "b2-u12-007": {
+      "definition": "= ما سافَرَ",
+      "notes": ""
+    },
+    "b2-u12-022": {
+      "definition": "= موت",
+      "notes": ""
+    },
+    "b2-u13-006": {
+      "definition": "= عاد ، يعود",
+      "notes": ""
+    },
+    "b3-u2-017": {
+      "definition": "= سنة",
+      "notes": ""
+    },
+    "b3-u4-014": {
+      "definition": "= جريدة",
+      "notes": ""
+    },
+    "b3-u6-036": {
+      "definition": "= تكلّم عن",
+      "notes": ""
+    },
+    "b3-u6-037": {
+      "definition": "= شعر ب",
+      "prepositions": [
+        "بِـ"
+      ],
+      "notes": ""
+    },
+    "b3-u8-004": {
+      "definition": "= عندما",
+      "notes": ""
+    },
+    "b3-u9-051": {
+      "definition": "= كمبيوتر",
+      "notes": ""
+    },
+    "b3-u9-073": {
+      "definition": "= عِبارة",
+      "notes": ""
+    },
+    "b3-u10-015": {
+      "arabic": "ذات",
+      "alternates": [
+        "ذاتُهُ",
+        "بِذاتِهِ"
+      ],
+      "definition": "= نفسه",
+      "notes": ""
+    },
+    "b4-u1-011": {
+      "definition": "= حصل على",
+      "notes": ""
+    },
+    "b4-u2-028": {
+      "definition": "= معظم",
+      "notes": ""
+    },
+    "b2-u6-006": {
+      "arabic": "حَصَلَ",
+      "masdar": "حُصول",
+      "prepositions": [
+        "على"
+      ],
+      "presentVowel": "u",
+      "pastVowel": "a",
+      "form": 1,
+      "pos": "verb",
+      "root": "ح ص ل"
+    },
+    "b3-u10-083": {
+      "arabic": "نَقَلَ",
+      "presentVowel": "u",
+      "pastVowel": "a"
+    },
+    "b3-u5-045": {
+      "presentVowel": "u"
+    },
+    "b3-u5-048": {
+      "presentVowel": "a"
+    },
+    "b3-u6-046": {
+      "present": "يُقبَل"
+    },
+    "b1-u3-016": {
+      "feminine": "جَيِّدة"
+    },
+    "b2-u5-020": {
+      "feminine": "مُشمِسة"
+    },
+    "b2-u5-023": {
+      "feminine": "غائِمة"
+    },
+    "b2-u8-008": {
+      "feminine": "دُوَليّة"
+    },
+    "b3-u1-029": {
+      "feminine": "مَمنوعة"
+    },
+    "b3-u1-054": {
+      "feminine": "مُؤَقَّتة"
+    },
+    "b3-u4-035": {
+      "feminine": "شَرقِيّة"
+    },
+    "b3-u6-018": {
+      "feminine": "غَنِيّة"
+    },
+    "b3-u6-021": {
+      "feminine": "فَقيرة"
+    },
+    "b3-u7-019": {
+      "feminine": "ضَعيفة"
+    },
+    "b3-u7-024": {
+      "feminine": "عَظيمة"
+    },
+    "b3-u8-030": {
+      "feminine": "مُتَنَوِّعة"
+    },
+    "b3-u8-055": {
+      "feminine": "مُعتادة"
+    },
+    "b4-u1-004": {
+      "feminine": "بارِزة"
+    },
+    "b4-u1-005": {
+      "feminine": "ثابِتة"
+    },
+    "b4-u1-035": {
+      "feminine": "قَبيحة"
+    },
+    "b4-u1-036": {
+      "feminine": "قاسِية"
+    },
+    "b4-u1-041": {
+      "feminine": "نَحيفة"
+    },
+    "b4-u1-046": {
+      "feminine": "مُتَوَتِّرة"
+    },
+    "b4-u1-047": {
+      "feminine": "مُتَوَحِّشة"
+    },
+    "b4-u1-070": {
+      "feminine": "مُلاحَقة"
+    },
+    "b4-u1-073": {
+      "feminine": "مُمَيَّزة"
+    },
+    "b4-u2-010": {
+      "feminine": "مُسَلَّحة"
+    },
+    "b4-u2-013": {
+      "feminine": "تَشريعِيّة"
+    },
+    "b4-u2-021": {
+      "feminine": "عَسكَرِيّة"
+    },
+    "b4-u2-031": {
+      "feminine": "قَومِيّة"
+    },
+    "b4-u2-039": {
+      "feminine": "تَنفيذِيّة"
+    },
+    "b4-u2-045": {
+      "feminine": "إيجابِيّة"
+    },
+    "b4-u3-031": {
+      "feminine": "سَمينة"
+    },
+    "b4-u4-002": {
+      "feminine": "أُمِّيّة"
+    },
+    "b4-u4-014": {
+      "feminine": "رائِعة"
+    },
+    "b4-u4-023": {
+      "feminine": "عَتيقة"
+    },
+    "b4-u4-035": {
+      "feminine": "ناضِجة"
+    },
+    "b4-u4-037": {
+      "feminine": "نَظيفة"
+    },
+    "b4-u4-071": {
+      "feminine": "هامّة"
+    },
+    "b4-u5-001": {
+      "feminine": "مُباشِرة"
+    },
+    "b4-u5-005": {
+      "feminine": "جَوهَرِيّة"
+    },
+    "b2-u9-001": {
+      "feminine": "أُخرى"
+    },
+    "b2-u4-003": {
+      "feminine": "أُولى"
+    },
+    "b3-u10-014": {
+      "feminine": "ذات"
+    },
+    "b1-u5-005": {
+      "arabic": "طَيِّب",
+      "feminine": "طَيِّبة",
+      "egyptian": {
+        "arabic": "طَيِّب",
+        "feminine": "طيِّبَة"
+      },
+      "shami": {
+        "arabic": "طَيِّب",
+        "feminine": "طيّبة"
+      }
+    },
+    "b1-u5-007": {
+      "arabic": "فَصل",
+      "alternates": [
+        "صَف"
+      ]
+    },
+    "b1-u8-023": {
+      "pos": "phrase"
+    },
+    "b1-u8-022": {
+      "pos": "adverb"
+    },
+    "b2-u4-010": {
+      "arabic": "زَميل",
+      "feminine": "زَميلة",
+      "plural": "زُمَلاء",
+      "notes": "feminine plural: زَميلات"
+    },
+    "b2-u5-024": {
+      "arabic": "فَصل",
+      "plural": "فُصول"
+    },
+    "b2-u7-001": {
+      "arabic": "أَوَّل",
+      "feminine": "أُولى"
+    },
+    "b2-u7-003": {
+      "arabic": "مَجنون",
+      "feminine": "مَجنونة",
+      "plural": "مَجانين"
+    },
+    "b2-u7-009": {
+      "arabic": "مُسْتَشْفى",
+      "plural": "مُسْتَشْفَيات"
+    },
+    "b3-u1-039": {
+      "arabic": "مَخطوب",
+      "feminine": "مَخطوبة",
+      "plural": "مَخطوبون / مَخطوبين"
+    },
+    "b3-u3-009": {
+      "arabic": "ذَهَب",
+      "alternates": [
+        "ذَهَبِيّ/ة"
+      ],
+      "definition": "gold; golden"
+    },
+    "b3-u3-029": {
+      "arabic": "فِضّة",
+      "alternates": [
+        "فِضِّيّ/ة"
+      ],
+      "definition": "silver; silver (color)"
+    },
+    "b3-u5-031": {
+      "arabic": "ثِقة",
+      "prepositions": [
+        "بِـ",
+        "في"
+      ]
+    },
+    "b3-u5-032": {
+      "arabic": "واثِق",
+      "feminine": "واثِقة",
+      "prepositions": [
+        "بِـ",
+        "في"
+      ],
+      "plural": "واثِقون / واثِقين"
+    },
+    "b3-u5-046": {
+      "arabic": "شَكل",
+      "plural": "أَشكال",
+      "definition": "form, shape; “you look …” (شَكلُكَ …)"
+    },
+    "b3-u6-014": {
+      "arabic": "تَصَرُّف",
+      "plural": "تَصَرُّفات"
+    },
+    "b3-u7-003": {
+      "arabic": "حَرب",
+      "gender": "feminine",
+      "plural": "حُروب"
+    },
+    "b3-u7-009": {
+      "arabic": "دار",
+      "gender": "feminine",
+      "plural": "دور"
+    },
+    "b3-u7-017": {
+      "arabic": "صَليب",
+      "alternates": [
+        "صَليبيّ"
+      ],
+      "plural": null,
+      "notes": "الصَّليبيّ = Crusader (pl. صَليبيّون)"
+    },
+    "b3-u7-043": {
+      "arabic": "اِجتِماعيّ",
+      "feminine": "اِجتِماعيّة"
+    },
+    "b3-u7-051": {
+      "arabic": "رَحّالة",
+      "plural": "رَحّالون / رَحّالين",
+      "definition": "traveler, explorer (masc. & fem.)"
+    },
+    "b3-u9-075": {
+      "arabic": "قَدر مِن",
+      "alternates": [
+        "قَدر كَبير مِن"
+      ],
+      "definition": "an amount of; a large amount of, a great deal of"
+    },
+    "b3-u9-091": {
+      "arabic": "واقِع",
+      "alternates": [
+        "في الواقِع"
+      ],
+      "definition": "reality; in reality"
+    },
+    "b3-u10-004": {
+      "arabic": "البَشَر",
+      "alternates": [
+        "بَشَرِيّ"
+      ],
+      "definition": "mankind, human beings; human (adj.)"
+    },
+    "b4-u1-021": {
+      "arabic": "اِشتاقَ",
+      "prepositions": [
+        "إلى",
+        "لِـ"
+      ]
+    },
+    "b4-u2-007": {
+      "arabic": "رَبّ بيت",
+      "feminine": "رَبّة بيت",
+      "plural": "أَرباب بيت / رَبّات بيت"
+    },
+    "b4-u3-047": {
+      "arabic": "مَليء",
+      "feminine": "مَليئة",
+      "prepositions": [
+        "بِـ"
+      ],
+      "plural": "مَليئون / مَليئين"
+    },
+    "b4-u4-046": {
+      "arabic": "الجَوْدة"
+    },
+    "b1-u5-006": {
+      "arabic": "عَن إذنِكَ / إذنِكِ",
+      "definition": "may I be excused? (what to say when you have to leave)"
+    }
   },
   "add": [
     {
       "_comment": "Learned in Al-Kitaab part 1, lesson 1 (not in the source list); also unlocks the word in the geography game.",
-      "book": 2, "unit": 1, "part": null,
-      "arabic": "إِنجِليزِيّ", "feminine": "إِنجِليزِيّة", "definition": "English",
-      "pos": "adjective", "root": null, "form": null, "gender": null,
+      "book": 2,
+      "unit": 1,
+      "part": null,
+      "arabic": "إِنجِليزِيّ",
+      "feminine": "إِنجِليزِيّة",
+      "definition": "English",
+      "pos": "adjective",
+      "root": null,
+      "form": null,
+      "gender": null,
       "notes": "the language is الإِنجِليزِيّة"
+    },
+    {
+      "_comment": "Alif Baa lesson 10; also where the word Arabic unlocks in the geography game.",
+      "book": 1,
+      "unit": 10,
+      "part": null,
+      "arabic": "عَرَبِيّ",
+      "feminine": "عَرَبِيّة",
+      "definition": "Arabic",
+      "pos": "adjective",
+      "root": null,
+      "form": null,
+      "gender": null
+    },
+    {
+      "book": 1,
+      "unit": 10,
+      "part": null,
+      "arabic": "القُرآن",
+      "definition": "the Qur’an",
+      "pos": "noun",
+      "root": null,
+      "form": null,
+      "gender": "masculine"
+    },
+    {
+      "_comment": "Al-Kitaab part 1, lesson 1 (not in the source list).",
+      "book": 2,
+      "unit": 1,
+      "part": null,
+      "arabic": "المُفرَدات",
+      "definition": "vocabulary",
+      "pos": "noun",
+      "root": "ف ر د",
+      "form": null,
+      "gender": null,
+      "notes": "plural; the singular is مُفرَدة"
+    },
+    {
+      "book": 2,
+      "unit": 1,
+      "part": null,
+      "arabic": "الفُصحى",
+      "definition": "formal Arabic; Standard Arabic",
+      "pos": "noun",
+      "root": "ف ص ح",
+      "form": null,
+      "gender": "feminine"
+    },
+    {
+      "book": 2,
+      "unit": 1,
+      "part": null,
+      "arabic": "القَواعِد",
+      "definition": "grammar",
+      "pos": "noun",
+      "root": "ق ع د",
+      "form": null,
+      "gender": null,
+      "notes": "plural of قاعِدة (rule)"
+    },
+    {
+      "book": 2,
+      "unit": 1,
+      "part": null,
+      "arabic": "الثَّقافة",
+      "definition": "culture",
+      "pos": "noun",
+      "root": "ث ق ف",
+      "form": null,
+      "gender": "feminine"
+    },
+    {
+      "book": 2,
+      "unit": 1,
+      "part": null,
+      "arabic": "هَل",
+      "definition": "(introduces a yes/no question)",
+      "pos": "particle",
+      "root": null,
+      "form": null,
+      "gender": null
     }
   ],
   "merge": [
     {
-      "from": "b3-u1-035", "into": ["b1-u4-021"],
-      "fields": { "plural": "جُدُد", "formsFrom": { "book": 3, "unit": 1 }, "egyptian": { "plural": "جُداد" }, "shami": { "plural": "جْداد" } }
+      "from": "b3-u1-035",
+      "into": [
+        "b1-u4-021"
+      ],
+      "fields": {
+        "plural": "جُدُد",
+        "egyptian": {
+          "plural": "جُداد"
+        },
+        "shami": {
+          "plural": "جْداد"
+        },
+        "pluralFrom": {
+          "book": 3,
+          "unit": 1
+        }
+      }
     },
     {
-      "from": "b3-u2-047", "into": ["b1-u3-018", "b1-u3-019"],
-      "fields": { "plural": "هٰؤُلاء", "formsFrom": { "book": 3, "unit": 2 }, "egyptian": { "plural": "دول" }, "shami": { "plural": "هول / هادول / هَيدول" } }
+      "from": "b3-u2-047",
+      "into": [
+        "b1-u3-018",
+        "b1-u3-019"
+      ],
+      "fields": {
+        "plural": "هٰؤُلاء",
+        "egyptian": {
+          "plural": "دول"
+        },
+        "shami": {
+          "plural": "هول / هادول / هَيدول"
+        },
+        "pluralFrom": {
+          "book": 3,
+          "unit": 2
+        }
+      }
     },
     {
-      "from": "b3-u3-039", "into": ["b1-u5-011"],
-      "fields": { "feminine": "بَيضاء", "plural": "بيض", "formsFrom": { "book": 3, "unit": 3 }, "egyptian": { "feminine": "بيضا" }, "shami": { "feminine": "بيضا" } }
+      "from": "b3-u3-039",
+      "into": [
+        "b1-u5-011"
+      ],
+      "fields": {
+        "feminine": "بَيضاء",
+        "plural": "بيض",
+        "formsFrom": {
+          "book": 3,
+          "unit": 3
+        },
+        "egyptian": {
+          "feminine": "بيضا"
+        },
+        "shami": {
+          "feminine": "بيضا"
+        }
+      }
+    },
+    {
+      "from": "b1-u4-022",
+      "into": [
+        "b1-u4-021"
+      ],
+      "fields": {
+        "feminine": "جَديدة",
+        "definition": "new",
+        "egyptian": {
+          "feminine": "جديدة"
+        },
+        "shami": {
+          "feminine": "جديدة"
+        }
+      }
+    },
+    {
+      "from": "b3-u3-040",
+      "into": [
+        "b1-u5-013"
+      ],
+      "fields": {
+        "feminine": "خَضراء",
+        "plural": "خُضر",
+        "formsFrom": {
+          "book": 3,
+          "unit": 3
+        },
+        "egyptian": {
+          "feminine": "خَضرا"
+        },
+        "shami": {
+          "feminine": "خَضرا",
+          "plural": "خِضر"
+        }
+      }
+    },
+    {
+      "from": "b3-u3-042",
+      "into": [
+        "b1-u5-012"
+      ],
+      "fields": {
+        "feminine": "سَوداء",
+        "plural": "سود",
+        "formsFrom": {
+          "book": 3,
+          "unit": 3
+        },
+        "egyptian": {
+          "feminine": "سودا"
+        },
+        "shami": {
+          "feminine": "سودا"
+        }
+      }
     }
   ]
 }

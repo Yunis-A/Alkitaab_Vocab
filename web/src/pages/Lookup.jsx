@@ -156,7 +156,7 @@ export default function Lookup() {
           <li key={w.id}>
             <details open={results.length <= 3}>
               <summary>
-                <span className="ar big" dir="rtl">{headword(w, dialects)}</span>
+                <span className="ar big" dir="rtl">{headword(w, dialects, level)}</span>
                 <span className="def" dir="auto">{w.definition}</span>
                 <span className="pos" dir="auto">{posLabel(t, w.pos)}</span>
                 <StatusBadge wordId={w.id} />

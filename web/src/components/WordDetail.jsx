@@ -60,15 +60,15 @@ function Participle({ p }) {
 }
 
 // One dialect's forms for this word (only rendered for dialects the student enabled).
-function DialectBlock({ name, data, showForms }) {
+function DialectBlock({ name, data, showFeminine, showPlural }) {
   const { t } = useApp();
   const list = (s) => (Array.isArray(s) ? s.join(" · ") : s);
   const rows = [
     [data.past ? t("past") : null, data.past && data.past !== data.arabic ? null : data.past],
     [t("present"), data.present && data.present !== data.arabic ? data.present : null],
     [t("masdar"), data.masdar],
-    [t("plural"), showForms ? list(data.plural) : null],
-    [t("femForm"), showForms ? data.feminine : null],
+    [t("plural"), showPlural ? list(data.plural) : null],
+    [t("femForm"), showFeminine ? data.feminine : null],
     [t("prepositions"), list(data.prepositions)],
     [t("alsoLabel"), list(data.alternates)],
   ].filter(([, v]) => v);
@@ -100,15 +100,18 @@ export default function WordDetail({ word, showStatus = true, showHeader = true 
   const showImperative = !!level && levelReached(level, IMPERATIVE_LEVEL);
   const missing = f.missing.filter((k) => showImperative || k !== "imperative");
   const grammar = level ? sectionsForWord(grammarSections, word, level) : [];
-  // Plural and feminine forms that the list only introduces later (word.formsFrom) stay hidden until then.
-  const showForms = !word.formsFrom || (!!level && levelReached(level, word.formsFrom));
+  // Forms that the list only introduces later stay hidden until then: formsFrom covers the plural and the
+  // feminine, pluralFrom just the plural (the feminine of such a word shows from the start).
+  const reached = (from) => !from || (!!level && levelReached(level, from));
+  const showFeminine = reached(word.formsFrom);
+  const showPlural = showFeminine && reached(word.pluralFrom);
 
   return (
     <div className="word-detail">
       {showHeader && (
         <>
           <div className="word-top">
-            <span className="ar big" dir="rtl">{headword(word, dialects)}</span>
+            <span className="ar big" dir="rtl">{headword(word, dialects, level)}</span>
             {showStatus && <StatusBadge wordId={word.id} />}
           </div>
           <p className="definition"><bdi>{word.definition}</bdi></p>
@@ -133,12 +136,12 @@ export default function WordDetail({ word, showStatus = true, showHeader = true 
             <span dir="auto">{t(word.gender)}</span>
           </Field>
         )}
-        {f.plural && showForms && (
+        {f.plural && showPlural && (
           <Field label={t("plural")}>
             <span className="ar" dir="rtl">{f.plural}</span>
           </Field>
         )}
-        {word.feminine && showForms && (
+        {word.feminine && showFeminine && (
           <Field label={t("femForm")}>
             <span className="ar" dir="rtl">{word.feminine}</span>
           </Field>
@@ -211,7 +214,7 @@ export default function WordDetail({ word, showStatus = true, showHeader = true 
         </section>
       )}
 
-      {DIALECTS.map((d) => dialects[d] && word[d] && <DialectBlock key={d} name={d} data={word[d]} showForms={showForms} />)}
+      {DIALECTS.map((d) => dialects[d] && word[d] && <DialectBlock key={d} name={d} data={word[d]} showFeminine={showFeminine} showPlural={showPlural} />)}
 
       {/* Developer note: which verb forms still need to be stored. Not shown to students. */}
       {import.meta.env.DEV && f.isVerb && missing.length > 0 && (
