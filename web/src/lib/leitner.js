@@ -58,11 +58,12 @@ export function boxStatus(box) {
   return "learning";
 }
 
-// A word with no cards is "new"; otherwise its status comes from its weakest
+// A word with no reviewed card is "new"; otherwise its status comes from its weakest
 // active variety. `varieties` are the ones the student is studying.
 export function wordStatus(cards, wordId, varieties = [MSA]) {
   const found = varieties.map((v) => cards[cardKey(wordId, v)]);
-  if (!found.length || found.every((c) => !c)) return "new";
+  // Words are tracked as soon as the student reaches them, so "new" means nothing reviewed yet.
+  if (!found.length || found.every((c) => !c || c.reviews === 0)) return "new";
   if (found.some((c) => !c)) return "learning";
   return boxStatus(Math.min(...found.map((c) => c.box)));
 }

@@ -1,4 +1,6 @@
 import { test } from "node:test";
+import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
+import { buildRound } from "./matching.js";
 import assert from "node:assert/strict";
 
 import { getForms, analyzeVerb } from "./morphology.js";
@@ -234,13 +236,14 @@ test("word status: MSA card by default, weakest active variety when dialects are
   assert.equal(cardKey("w"), "w|ar-en");
   assert.equal(cardKey("w", "egy"), "w|egy");
   assert.equal(wordStatus({}, "w"), "new");
-  const at = (box) => ({ [cardKey("w")]: { ...newCard(), box } });
+  const at = (box) => ({ [cardKey("w")]: { ...newCard(), box, reviews: 1 } });
+  assert.equal(wordStatus({ [cardKey("w")]: newCard() }, "w"), "new"); // tracked but never reviewed
   assert.equal(wordStatus(at(0), "w"), "learning");
   assert.equal(wordStatus(at(8), "w"), "proficient");
   assert.equal(wordStatus(at(10), "w"), "mastered");
 
   // with Egyptian on, a word is only as strong as its weakest card
-  const both = { ...at(10), [cardKey("w", "egy")]: { ...newCard(), box: 8 } };
+  const both = { ...at(10), [cardKey("w", "egy")]: { ...newCard(), box: 8, reviews: 1 } };
   assert.equal(wordStatus(both, "w", ["ar-en", "egy"]), "proficient");
   assert.equal(wordStatus(at(10), "w", ["ar-en", "egy"]), "learning"); // Egyptian not started
   assert.equal(wordStatus(at(10), "w", ["egy"]), "new");
@@ -700,7 +703,9 @@ test("status labels turn Arabic where the list teaches the word behind them", ()
   for (const key of ["statusNew", "statusLearning", "statusMastered"]) {
     assert.equal(isArabic(strings[key], level, none), true, key);
   }
-  assert.equal(isArabic(strings.statusProficient, { book: 4, unit: 10 }, none), false);
+  // Proficient is not required vocabulary; it just turns Arabic once part 1 is done
+  assert.equal(isArabic(strings.statusProficient, { book: 2, unit: 20 }, none), false);
+  assert.equal(isArabic(strings.statusProficient, { book: 3, unit: 1 }, none), true);
   // and the badge is still English before that
   assert.equal(isArabic(strings.statusNew, { book: 1, unit: 3 }, none), false);
 });
@@ -708,4 +713,33 @@ test("status labels turn Arabic where the list teaches the word behind them", ()
 test("normalizeArabic", () => {
   assert.equal(normalizeArabic("أَكَلَ"), "اكل");
   assert.equal(normalizeArabic("مدرسة"), normalizeArabic("مَدْرَسَه"));
+});
+
+test("quick study draws from hard, then medium, then finishes (easy only on request)", () => {
+  const seq = (vals) => { let i = 0; return () => vals[i++ % vals.length]; };
+  const boxes = { a: "hard", b: "medium", c: "easy" };
+  assert.equal(pickNext(boxes, { rng: () => 0 }).id, "a");
+  assert.equal(pickNext({ ...boxes, a: "easy" }, { rng: () => 0 }).id, "b");
+  const allEasy = { a: "easy", b: "easy" };
+  assert.deepEqual(pickNext(allEasy), { id: null, from: "done" });
+  assert.equal(pickNext(allEasy, { keepGoing: true, rng: () => 0 }).from, "easy");
+  assert.equal(pickNext({}), null);
+  // not the same word twice in a row unless it is the only one
+  assert.equal(pickNext({ a: "hard", b: "hard" }, { last: "a", rng: seq([0]) }).id, "b");
+  assert.equal(pickNext({ a: "hard", b: "easy" }, { last: "a" }).id, "a");
+  assert.deepEqual(countBoxes(startBoxes(["x", "y"])), { hard: 2, medium: 0, easy: 0 });
+});
+
+test("matching rounds have matching sides and no ambiguous pairs", () => {
+  const items = [
+    { id: "1", arabic: "أ", english: "one" }, { id: "2", arabic: "ب", english: "two" },
+    { id: "3", arabic: "ج", english: "one" }, { id: "4", arabic: "ب", english: "four" },
+    { id: "5", arabic: "هـ", english: "five" }, { id: "6", arabic: "", english: "six" },
+  ];
+  const r = buildRound(items, 6);
+  assert.deepEqual(r.english.map((i) => i.id).sort(), r.arabic.map((i) => i.id).sort());
+  assert.equal(new Set(r.english.map((i) => i.english)).size, r.english.length);
+  assert.equal(new Set(r.arabic.map((i) => i.arabic)).size, r.arabic.length);
+  assert.ok(r.english.every((i) => i.arabic && i.english));
+  assert.equal(buildRound(items, 2).english.length, 2);
 });

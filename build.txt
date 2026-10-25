@@ -1,0 +1,3 @@
+Build project locally by ...
+
+cd web; npm run dev

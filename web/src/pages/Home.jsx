@@ -10,11 +10,10 @@ const STATUSES = [
 ];
 
 export default function Home() {
-  const { t, nf, visibleWords, activeCards, needsIntro, statusOf } = useApp();
+  const { t, nf, visibleWords, activeCards, statusOf } = useApp();
   const now = useNow(15000);
 
   const dueCount = activeCards.filter(([, c]) => c.due <= now).length;
-  const newCount = visibleWords.filter(needsIntro).length;
 
   const counts = { new: 0, learning: 0, proficient: 0, mastered: 0 };
   for (const w of visibleWords) counts[statusOf(w.id)] += 1;
@@ -27,7 +26,6 @@ export default function Home() {
       <section className="card">
         <h2><bdi>{t("dueTitle")}</bdi></h2>
         <p><bdi>{dueCount ? t("dueCount", dueCount, nf(dueCount)) : t("noneDue")}</bdi></p>
-        {newCount > 0 && <p><bdi>{t("newCount", newCount, nf(newCount))}</bdi></p>}
         <Link className="button primary" to="/learn" dir="auto">{t("navLearn")}</Link>
       </section>
 

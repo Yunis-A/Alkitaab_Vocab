@@ -95,30 +95,28 @@ export function AppProvider({ children }) {
     setProgress((p) => ({ ...p, level: { book, unit: u } }));
   }, []);
 
-  // Start tracking a word in every variety the student studies, due immediately in box 0.
-  const introduce = useCallback((wordId) => {
-    setProgress((p) => {
-      const word = wordsById.get(wordId);
-      if (!word) return p;
-      const cards = { ...p.cards };
-      const now = Date.now();
-      for (const v of activeVarieties(word, p.dialects)) {
-        const k = cardKey(wordId, v);
-        if (!cards[k]) cards[k] = newCard(now);
+  // Every word the student can see is tracked right away (due immediately in box 0), in every variety
+  // they study. There is no separate "learn" step.
+  useEffect(() => {
+    const missing = [];
+    for (const w of visibleWords) {
+      for (const v of activeVarieties(w, dialects)) {
+        const k = cardKey(w.id, v);
+        if (!cards[k]) missing.push(k);
       }
-      return { ...p, cards };
+    }
+    if (!missing.length) return;
+    const now = Date.now();
+    setProgress((p) => {
+      const next = { ...p.cards };
+      for (const k of missing) if (!next[k]) next[k] = newCard(now);
+      return { ...p, cards: next };
     });
-  }, []);
+  }, [visibleWords, dialects, cards]);
 
   const setDialect = useCallback((name, on) => {
     setProgress((p) => ({ ...p, dialects: { ...p.dialects, [name]: !!on } }));
   }, []);
-
-  // True if the word has an active variety the student has not started yet.
-  const needsIntro = useCallback(
-    (word) => activeVarieties(word, dialects).some((v) => !cards[cardKey(word.id, v)]),
-    [dialects, cards],
-  );
 
   const rate = useCallback((key, rating) => {
     setProgress((p) => {
@@ -155,7 +153,6 @@ export function AppProvider({ children }) {
     activeCards,
     dialects,
     setDialect,
-    needsIntro,
     level,
     cards,
     rtl,
@@ -166,7 +163,6 @@ export function AppProvider({ children }) {
     bookName,
     showTransliteration,
     setLevel,
-    introduce,
     rate,
     statusOf,
     geoBest: progress.geoBest ?? {},

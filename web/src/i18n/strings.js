@@ -63,27 +63,34 @@ export const strings = {
     unlock: u(3, 1),
   },
   noneDue: { en: "Nothing due right now.", ar: "لا شيء مستحق الآن.", unlock: u(3, 2) },
-  newCount: {
-    en: (n, s) => `${s} new word${n === 1 ? "" : "s"} to learn`,
-    ar: (n, s) => `${s} كلمة جديدة للتعلم`,
-    unlock: u(3, 3),
-  },
   progressTitle: { en: "Your vocabulary", ar: "مفرداتك", unlock: u(3, 4) },
   // Each switches to Arabic where the list teaches the word behind it:
   //   جديدة  (new, fem.)     Alif Baa lesson 4
   //   تعلم   (to learn)      Al-Kitaab part 2, lesson 2
   //   حفظ    (I memorize)    Al-Kitaab part 1, lesson 4
   // "Proficient" (متقنة) is not part of the standard curriculum, so it is NOT on the required list: it
-  // stays English (unlocking at a lesson that does not exist keeps the Arabic label unused but ready).
+  // just turns Arabic once the student is past Al-Kitaab part 1 (i.e. at part 2, lesson 1).
   statusNew: { en: "New", ar: "جديدة", unlock: u(1, 4) },
   statusLearning: { en: "Learning", ar: "قيد التعلم", unlock: u(3, 2) },
-  statusProficient: { en: "Proficient", ar: "متقنة", unlock: u(9, 1) },
+  statusProficient: { en: "Proficient", ar: "متقنة", unlock: u(3, 1) },
   statusMastered: { en: "Mastered", ar: "محفوظة", unlock: u(2, 4) },
 
   // --- learn ---
-  learnNew: { en: "Learn new words", ar: "تعلم كلمات جديدة", unlock: u(3, 2) },
   reviewDue: { en: "Review", ar: "مراجعة", unlock: u(2, 9) },
-  gotIt: { en: "Got it", ar: "فهمت", unlock: u(2, 6) },
+  quickStudy: { en: "Quick study", ar: "دراسة سريعة", unlock: u(3, 6) },
+  matching: { en: "Matching", ar: "مطابقة", unlock: u(3, 7) },
+  studyUnits: { en: "Units to study", ar: "الدروس", unlock: u(3, 5) },
+  studyNoUnits: { en: "Pick at least one unit with words.", ar: "اختر درسا فيه كلمات.", unlock: u(3, 8) },
+  studyChangeUnits: { en: "Change units", ar: "غير الدروس", unlock: u(3, 8) },
+  studyDone: {
+    en: "Congratulations! All the words are easy now.",
+    ar: "مبروك! كل الكلمات سهلة الآن.",
+    unlock: u(3, 8),
+  },
+  studyKeepGoing: { en: "Keep going", ar: "تابع", unlock: u(3, 8) },
+  studyRestart: { en: "Start over", ar: "ابدأ من جديد", unlock: u(3, 8) },
+  matchNext: { en: "Next round", ar: "الجولة التالية", unlock: u(3, 8) },
+  matchDone: { en: "All matched!", ar: "أحسنت! طابقت الكل", unlock: u(3, 8) },
   showAnswer: { en: "Show answer", ar: "أظهر الإجابة", unlock: u(2, 3) },
   hard: { en: "Hard", ar: "صعب", unlock: u(2, 5) },
   medium: { en: "Medium", ar: "متوسط", unlock: u(2, 6) },
@@ -94,7 +101,6 @@ export const strings = {
     ar: (t) => `البطاقة التالية بعد ${t}`,
     unlock: u(3, 5),
   },
-  noNewWords: { en: "No new words at your level.", ar: "لا كلمات جديدة في مستواك.", unlock: u(3, 6) },
   cardOf: { en: (i, n) => `${i} of ${n}`, ar: (i, n) => `${i} من ${n}`, unlock: u(3, 1) },
 
   // --- geography game (words are unlocked where the book teaches them) ---

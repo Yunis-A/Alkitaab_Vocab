@@ -4,45 +4,29 @@ import { useNow } from "../hooks.js";
 import { formatInterval, RATINGS } from "../lib/leitner.js";
 import { dialectOf, parseCardKey, varietyText } from "../lib/varieties.js";
 import WordDetail from "../components/WordDetail.jsx";
-
-const NEW_BATCH = 10;
+import UnitPicker from "../components/UnitPicker.jsx";
+import QuickStudy from "./QuickStudy.jsx";
+import Matching from "./Matching.jsx";
+import { levelKey } from "../lib/filters.js";
 
 export default function Learn() {
-  const { t, nf, visibleWords, activeCards, needsIntro } = useApp();
+  const { t, nf, level, visibleWords, activeCards } = useApp();
   const [mode, setMode] = useState("menu");
-  const [batch, setBatch] = useState([]);
+  const [units, setUnits] = useState(() => new Set([levelKey(level)]));
 
-  const newWords = visibleWords.filter(needsIntro);
   const dueCount = activeCards.filter(([, c]) => c.due <= Date.now()).length;
+  const studyWords = useMemo(
+    () => visibleWords.filter((w) => units.has(levelKey(w))),
+    [visibleWords, units],
+  );
+  const exit = () => setMode("menu");
 
-  if (mode === "intro") {
-    return <Intro words={batch} onDone={() => setMode("review")} />;
-  }
-  if (mode === "review") {
-    return <Review onExit={() => setMode("menu")} />;
-  }
+  if (mode === "review") return <Review onExit={exit} />;
+  if (mode === "quick") return <QuickStudy words={studyWords} onExit={exit} />;
+  if (mode === "matching") return <Matching words={studyWords} onExit={exit} />;
 
   return (
     <main className="page narrow">
-      <section className="card">
-        <h2><bdi>{t("learnNew")}</bdi></h2>
-        {newWords.length ? (
-          <p><bdi>{t("newCount", newWords.length, nf(newWords.length))}</bdi></p>
-        ) : (
-          <p><bdi>{t("noNewWords")}</bdi></p>
-        )}
-        <button
-          className="primary"
-          disabled={!newWords.length}
-          onClick={() => {
-            setBatch(newWords.slice(0, NEW_BATCH));
-            setMode("intro");
-          }}
-        >
-          <span dir="auto">{t("learnNew")}</span>
-        </button>
-      </section>
-
       <section className="card">
         <h2><bdi>{t("reviewDue")}</bdi></h2>
         <p><bdi>{dueCount ? t("dueCount", dueCount, nf(dueCount)) : t("noneDue")}</bdi></p>
@@ -50,40 +34,22 @@ export default function Learn() {
           <span dir="auto">{t("reviewDue")}</span>
         </button>
       </section>
-    </main>
-  );
-}
 
-// First exposure: show the full entry, then start tracking the word.
-function Intro({ words, onDone }) {
-  const { t, nf, introduce } = useApp();
-  const [i, setI] = useState(0);
-  const word = words[i];
-
-  if (!word) return <Finish onDone={onDone} />;
-
-  return (
-    <main className="page narrow">
-      <p className="muted"><bdi>{t("cardOf", nf(i + 1), nf(words.length))}</bdi></p>
-      <section className="card flash">
-        <WordDetail word={word} showStatus={false} />
-        <button
-          className="primary"
-          onClick={() => {
-            introduce(word.id);
-            setI(i + 1);
-          }}
-        >
-          <span dir="auto">{t("gotIt")}</span>
-        </button>
+      <section className="card">
+        <h2><bdi>{t("studyUnits")}</bdi></h2>
+        <UnitPicker value={units} onChange={setUnits} />
+        {studyWords.length === 0 && <p className="muted"><bdi>{t("studyNoUnits")}</bdi></p>}
+        <div className="actions">
+          <button className="primary" disabled={!studyWords.length} onClick={() => setMode("quick")}>
+            <span dir="auto">{t("quickStudy")}</span>
+          </button>
+          <button className="primary" disabled={studyWords.length < 2} onClick={() => setMode("matching")}>
+            <span dir="auto">{t("matching")}</span>
+          </button>
+        </div>
       </section>
     </main>
   );
-}
-
-function Finish({ onDone }) {
-  useEffect(onDone, [onDone]);
-  return null;
 }
 
 // Active recall: see the Arabic, recall the meaning, flip, then rate confidence.
