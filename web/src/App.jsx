@@ -7,6 +7,8 @@ import Learn from "./pages/Learn.jsx";
 import Lookup from "./pages/Lookup.jsx";
 import Grammar from "./pages/Grammar.jsx";
 import Settings from "./pages/Settings.jsx";
+import Account from "./pages/Account.jsx";
+import { useAuth } from "./context/AuthContext.jsx";
 
 function Onboarding() {
   const { t, setLevel } = useApp();
@@ -19,12 +21,18 @@ function Onboarding() {
       <button className="primary" onClick={() => setLevel(value.book, value.unit)}>
         <span dir="auto">{t("setupContinue")}</span>
       </button>
+      {/* a returning student on a new device signs in instead: their saved level then loads */}
+      <details className="returning">
+        <summary>Already have an account?</summary>
+        <Account />
+      </details>
     </main>
   );
 }
 
 function Shell() {
   const { t, level, nf, bookName } = useApp();
+  const { configured, user } = useAuth();
   return (
     <>
       <header className="topbar">
@@ -35,6 +43,7 @@ function Shell() {
           <NavLink to="/lookup" dir="auto">{t("navLookup")}</NavLink>
           <NavLink to="/grammar" dir="auto">{t("navGrammar")}</NavLink>
           <NavLink to="/settings" dir="auto">{t("navSettings")}</NavLink>
+          {configured && <NavLink to="/account" dir="ltr">{user ? "Account" : "Sign in"}</NavLink>}
         </nav>
         <Link className="level-chip" to="/settings" dir="auto">
           {bookName(level.book)} / {nf(level.unit)}
@@ -46,6 +55,7 @@ function Shell() {
         <Route path="/lookup" element={<Lookup />} />
         <Route path="/grammar" element={<Grammar />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/account" element={<main className="page narrow"><Account /></main>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>

@@ -3,3 +3,6 @@ dist/
 *.log
 .DS_Store
 web/data/cache/
+
+web/.env.local
+web/.env.*.local

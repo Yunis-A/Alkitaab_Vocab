@@ -7,7 +7,7 @@ const KEY = "alkitaab_progress_v1";
 
 // geoBest:  best map-game time in ms, keyed by mode id.
 // dialects: which dialect forms the student studies (off by default).
-const empty = () => ({ level: null, cards: {}, geoBest: {}, dialects: { egyptian: false, shami: false } });
+export const emptyProgress = () => ({ level: null, cards: {}, geoBest: {}, dialects: { egyptian: false, shami: false } });
 
 // Keep only cards for known varieties (older saves had another direction).
 function migrate(progress) {
@@ -15,15 +15,15 @@ function migrate(progress) {
   for (const [key, card] of Object.entries(progress.cards ?? {})) {
     if (VARIETY_IDS.some((v) => key.endsWith(`|${v}`))) cards[key] = card;
   }
-  return { ...progress, cards, dialects: { ...empty().dialects, ...progress.dialects } };
+  return { ...progress, cards, dialects: { ...emptyProgress().dialects, ...progress.dialects } };
 }
 
 export function loadProgress() {
   try {
     const raw = JSON.parse(localStorage.getItem(KEY) || "null");
-    return raw ? migrate({ ...empty(), ...raw }) : empty();
+    return raw ? migrate({ ...emptyProgress(), ...raw }) : emptyProgress();
   } catch {
-    return empty();
+    return emptyProgress();
   }
 }
 

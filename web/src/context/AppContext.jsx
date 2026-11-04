@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import allWords from "../data/words.json";
 import { books, compareLevel, levelReached, ARABIC_DIGITS_LEVEL, TRANSLITERATION_MAX_BOOK } from "../config/books.js";
 import { localizeDigits } from "../lib/numerals.js";
@@ -7,7 +7,10 @@ import { vocabSets, arabicRatio, isRtl, translate, isArabic } from "../lib/i18n.
 import { cardKey, newCard, review, wordStatus } from "../lib/leitner.js";
 import { activeVarieties, isWordAvailable, parseCardKey } from "../lib/varieties.js";
 import { buildIndex } from "../lib/search.js";
-import { loadProgress, saveProgress } from "../lib/storage.js";
+import { emptyProgress, loadProgress, saveProgress } from "../lib/storage.js";
+import { fetchProgress, pushProgress } from "../lib/supabase.js";
+import { mergeProgress } from "../lib/sync.js";
+import { useAuth } from "./AuthContext.jsx";
 
 const Ctx = createContext(null);
 export const useApp = () => useContext(Ctx);
@@ -22,6 +25,53 @@ const searchIndex = buildIndex(sortedWords);
 export function AppProvider({ children }) {
   const [progress, setProgress] = useState(loadProgress);
   useEffect(() => saveProgress(progress), [progress]);
+
+  // --- account sync: progress also lives in the signed-in student's Supabase row ---
+  const { user, signOut: authSignOut } = useAuth();
+  const userId = user?.id ?? null;
+  const [synced, setSynced] = useState(false);
+  const [syncStatus, setSyncStatus] = useState("idle"); // idle | saving | saved | error
+  const latest = useRef(progress);
+  latest.current = progress;
+  const wasSignedIn = useRef(false);
+
+  // on sign-in: load the account's progress and merge this browser's into it (nothing is lost)
+  useEffect(() => {
+    if (!userId) {
+      setSynced(false);
+      if (wasSignedIn.current) {
+        wasSignedIn.current = false;
+        setProgress(emptyProgress()); // do not leave the last student's data on a shared computer
+        setSyncStatus("idle");
+      }
+      return undefined;
+    }
+    wasSignedIn.current = true;
+    let cancelled = false;
+    fetchProgress(userId)
+      .then((remote) => {
+        if (cancelled) return;
+        setProgress((p) => mergeProgress(p, remote));
+        setSynced(true);
+      })
+      .catch(() => !cancelled && setSyncStatus("error")); // never save over the account if loading failed
+    return () => { cancelled = true; };
+  }, [userId]);
+
+  // after that, save a moment after every change
+  useEffect(() => {
+    if (!userId || !synced) return undefined;
+    setSyncStatus("saving");
+    const h = setTimeout(() => {
+      pushProgress(userId, progress).then(() => setSyncStatus("saved"), () => setSyncStatus("error"));
+    }, 1500);
+    return () => clearTimeout(h);
+  }, [progress, userId, synced]);
+
+  const signOut = useCallback(async () => {
+    if (userId && synced) { try { await pushProgress(userId, latest.current); } catch { /* sign out anyway */ } }
+    await authSignOut();
+  }, [userId, synced, authSignOut]);
 
   const { level, cards, dialects } = progress;
   const effectiveLevel = level ?? DEFAULT_LEVEL;
@@ -166,6 +216,8 @@ export function AppProvider({ children }) {
     rate,
     statusOf,
     geoBest: progress.geoBest ?? {},
+    syncStatus,
+    signOut,
     submitGeoTime,
   };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

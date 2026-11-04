@@ -2,6 +2,7 @@ import { test } from "node:test";
 import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
+import { mergeProgress } from "./sync.js";
 import { COUNTRIES } from "../data/countries.js";
 import assert from "node:assert/strict";
 
@@ -789,4 +790,24 @@ test("roots never use hamza seats; gender section words; 100 countries", () => {
   for (const en of ["Lebanon", "Iraq", "Jordan", "Sudan", "Morocco"]) assert.ok(masc.includes(en), en);
   assert.equal(COUNTRIES.find((c) => c.en === "Egypt").gender, "feminine");
   assert.ok(COUNTRIES.every((c) => !/َا/.test(c.ar))); // house style: no fatha before alif
+});
+
+test("signing in merges this browser's progress into the account's", () => {
+  const card = (box, reviews, lastReviewed = 1) => ({ box, due: 0, reviews, lapses: 0, lastReviewed });
+  const local = {
+    level: { book: 1, unit: 3 }, dialects: { egyptian: true, shami: false },
+    cards: { "a|ar-en": card(5, 9), "b|ar-en": card(1, 1) }, geoBest: { m1: 50000, m2: 90000 },
+  };
+  const remote = {
+    level: { book: 2, unit: 1 }, dialects: { egyptian: false, shami: true },
+    cards: { "a|ar-en": card(2, 3), "c|ar-en": card(4, 6) }, geoBest: { m1: 70000 },
+  };
+  const m = mergeProgress(local, remote);
+  assert.deepEqual(m.level, { book: 2, unit: 1 }); // the account's settings win
+  assert.deepEqual(m.dialects, { egyptian: false, shami: true });
+  assert.equal(m.cards["a|ar-en"].box, 5); // the more-studied copy wins
+  assert.deepEqual(Object.keys(m.cards).sort(), ["a|ar-en", "b|ar-en", "c|ar-en"]);
+  assert.deepEqual(m.geoBest, { m1: 50000, m2: 90000 }); // the faster time wins
+  assert.equal(mergeProgress(local, null), local);
+  assert.equal(mergeProgress({ ...local, level: null }, { ...remote, level: null }).level, null);
 });
