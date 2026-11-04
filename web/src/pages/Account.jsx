@@ -14,7 +14,7 @@ const SYNC_TEXT = {
 // teaches these words, so the account screens do not turn Arabic.
 export default function Account() {
   const { configured, ready, user, recovering, signUp, signIn, signInWithGoogle, resetPassword, updatePassword } = useAuth();
-  const { syncStatus, signOut } = useApp();
+  const { t, syncStatus, signOut } = useApp();
   const [mode, setMode] = useState("signin"); // signin | signup | reset
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,8 +24,8 @@ export default function Account() {
   if (!configured) {
     return (
       <section className="card">
-        <h2>Account</h2>
-        <p className="muted">Accounts are not set up on this copy of the site, so progress is saved in this browser only.</p>
+        <h2><bdi>{t("accountTitle")}</bdi></h2>
+        <p className="muted" dir="auto">Accounts are not set up on this copy of the site, so progress is saved in this browser only.</p>
       </section>
     );
   }
@@ -49,7 +49,7 @@ export default function Account() {
   if (recovering) {
     return (
       <section className="card">
-        <h2>Choose a new password</h2>
+        <h2 dir="auto">Choose a new password</h2>
         <form
           className="auth-form"
           onSubmit={(e) => {
@@ -57,12 +57,12 @@ export default function Account() {
             run(() => updatePassword(password), () => setMessage({ kind: "info", text: "Password updated." }));
           }}
         >
-          <label className="field-label">New password
-            <input type="password" required minLength={8} autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <label className="field-label"><span dir="auto">New password</span>
+            <input dir="ltr" type="password" required minLength={8} autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </label>
-          <button className="primary" disabled={busy}>Save password</button>
+          <button className="primary" disabled={busy}><span dir="auto">Save password</span></button>
         </form>
-        {message && <p className={`auth-${message.kind}`}>{message.text}</p>}
+        {message && <p className={`auth-${message.kind}`} dir="auto">{message.text}</p>}
       </section>
     );
   }
@@ -70,12 +70,12 @@ export default function Account() {
   if (user) {
     return (
       <section className="card">
-        <h2>Account</h2>
-        <p>Signed in as <strong dir="ltr">{user.email}</strong></p>
+        <h2><bdi>{t("accountTitle")}</bdi></h2>
+        <p dir="auto">Signed in as <bdi><strong dir="ltr">{user.email}</strong></bdi></p>
         {SYNC_TEXT[syncStatus] && (
-          <p className={syncStatus === "error" ? "auth-error" : "muted"} aria-live="polite">{SYNC_TEXT[syncStatus]}</p>
+          <p className={syncStatus === "error" ? "auth-error" : "muted"} dir="auto" aria-live="polite">{SYNC_TEXT[syncStatus]}</p>
         )}
-        <button onClick={signOut}>Sign out</button>
+        <button onClick={signOut}><span dir="auto">Sign out</span></button>
       </section>
     );
   }
@@ -95,35 +95,35 @@ export default function Account() {
 
   return (
     <section className="card">
-      <h2>{mode === "signin" ? "Sign in" : mode === "signup" ? "Create an account" : "Reset your password"}</h2>
+      <h2 dir="auto">{mode === "signin" ? "Sign in" : mode === "signup" ? "Create an account" : "Reset your password"}</h2>
       <form onSubmit={submit} className="auth-form">
-        <label className="field-label">Email
-          <input type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <label className="field-label"><span dir="auto">Email</span>
+          <input dir="ltr" type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
         {mode !== "reset" && (
-          <label className="field-label">Password
-            <input type="password" required minLength={8} autoComplete={mode === "signin" ? "current-password" : "new-password"}
+          <label className="field-label"><span dir="auto">Password</span>
+            <input dir="ltr" type="password" required minLength={8} autoComplete={mode === "signin" ? "current-password" : "new-password"}
               value={password} onChange={(e) => setPassword(e.target.value)} />
           </label>
         )}
         <button className="primary" disabled={busy}>
-          {mode === "signin" ? "Sign in" : mode === "signup" ? "Sign up" : "Send reset link"}
+          <span dir="auto">{mode === "signin" ? "Sign in" : mode === "signup" ? "Sign up" : "Send reset link"}</span>
         </button>
       </form>
-      {message && <p className={`auth-${message.kind}`} aria-live="polite">{message.text}</p>}
+      {message && <p className={`auth-${message.kind}`} dir="auto" aria-live="polite">{message.text}</p>}
 
       {mode !== "reset" && (
         <button type="button" className="google-btn" disabled={busy} onClick={() => run(signInWithGoogle)}>
-          Continue with Google
+          <span dir="auto">Continue with Google</span>
         </button>
       )}
 
-      <p className="muted">By signing up you agree to the <Link to="/terms">terms</Link> and <Link to="/privacy">privacy policy</Link>.</p>
+      <p className="muted" dir="auto">By signing up you agree to the <Link to="/terms">terms</Link> and <Link to="/privacy">privacy policy</Link>.</p>
 
       <p className="auth-links">
-        {mode !== "signin" && <button type="button" className="link-button" onClick={() => go("signin")}>Sign in</button>}
-        {mode !== "signup" && <button type="button" className="link-button" onClick={() => go("signup")}>Create an account</button>}
-        {mode === "signin" && <button type="button" className="link-button" onClick={() => go("reset")}>Forgot password?</button>}
+        {mode !== "signin" && <button type="button" className="link-button" onClick={() => go("signin")}><span dir="auto">Sign in</span></button>}
+        {mode !== "signup" && <button type="button" className="link-button" onClick={() => go("signup")}><span dir="auto">Create an account</span></button>}
+        {mode === "signin" && <button type="button" className="link-button" onClick={() => go("reset")}><span dir="auto">Forgot password?</span></button>}
       </p>
     </section>
   );

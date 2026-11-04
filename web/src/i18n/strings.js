@@ -32,8 +32,10 @@ export const strings = {
   dialectsHelp: {
     en: "Also learn Egyptian and/or Shami (Levantine) words. Each one you turn on gets its own flashcards.",
     ar: "تعلم أيضا الكلمات المصرية و/أو الشامية. كل لهجة تفعلها تحصل على بطاقاتها الخاصة.",
-    unlock: u(9, 1),
+    unlock: u(3, 8),
   },
+  // حِساب (account) is taught in part 2, lesson 3
+  accountTitle: { en: "Account", ar: "الحساب", unlock: u(3, 3) },
   dialectEgyptian: { en: "Egyptian", ar: "مصري", unlock: u(2, 1) }, // مِصرِيّ is taught in part 1, lesson 1
   dialectShami: { en: "Shami", ar: "شامي", unlock: u(2, 1) },
   femForm: { en: "Feminine", ar: "المؤنث", unlock: u(3, 8) },

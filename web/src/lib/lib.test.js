@@ -821,3 +821,10 @@ test("lessons are written by the lesson: Arabic digits from Alif Baa 4, درس f
   assert.deepEqual(lessonStyle(1, 5), { digits: true, word: true });
   for (const b of [2, 3, 4]) assert.deepEqual(lessonStyle(b, 1), { digits: true, word: true });
 });
+
+test("account heading turns Arabic where حِساب (account) is taught", () => {
+  const hisab = allWords.find((w) => w.definition.startsWith("account, bill"));
+  assert.deepEqual(strings.accountTitle.unlock, { book: hisab.book, unit: hisab.unit });
+  assert.equal(strings.accountTitle.ar, "الحساب");
+  assert.deepEqual(strings.dialectsHelp.unlock, { book: 3, unit: 8 }); // no longer stuck on English
+});
