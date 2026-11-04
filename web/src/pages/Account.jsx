@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useApp } from "../context/AppContext.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 
@@ -116,6 +117,8 @@ export default function Account() {
           Continue with Google
         </button>
       )}
+
+      <p className="muted">By signing up you agree to the <Link to="/terms">terms</Link> and <Link to="/privacy">privacy policy</Link>.</p>
 
       <p className="auth-links">
         {mode !== "signin" && <button type="button" className="link-button" onClick={() => go("signin")}>Sign in</button>}

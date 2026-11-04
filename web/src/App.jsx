@@ -8,6 +8,7 @@ import Lookup from "./pages/Lookup.jsx";
 import Grammar from "./pages/Grammar.jsx";
 import Settings from "./pages/Settings.jsx";
 import Account from "./pages/Account.jsx";
+import { Privacy, Terms } from "./pages/Legal.jsx";
 import { useAuth } from "./context/AuthContext.jsx";
 
 function Onboarding() {
@@ -64,5 +65,12 @@ function Shell() {
 
 export default function App() {
   const { level } = useApp();
-  return level ? <Shell /> : <Onboarding />;
+  // the legal pages are public: reachable without signing in or choosing a level
+  return (
+    <Routes>
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="*" element={level ? <Shell /> : <Onboarding />} />
+    </Routes>
+  );
 }
