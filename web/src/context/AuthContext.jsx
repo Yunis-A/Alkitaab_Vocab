@@ -25,7 +25,8 @@ export function AuthProvider({ children }) {
   }, []);
 
   const value = useMemo(() => {
-    const origin = window.location.origin;
+    // where the emailed / Google links send the student back to (includes the /<repo>/ path on GitHub Pages)
+    const origin = window.location.origin + import.meta.env.BASE_URL.replace(/\/$/, "");
     return {
       configured: !!supabase,
       ready,
