@@ -140,6 +140,12 @@ export function AppProvider({ children }) {
     return english ? `Unit ${n}` : n;
   }, []);
 
+  // The browser tab shows the site title, in Arabic once the student has reached where it turns Arabic.
+  const siteTitle = t("siteTitle");
+  useEffect(() => {
+    document.title = siteTitle;
+  }, [siteTitle]);
+
   const showTransliteration = effectiveLevel.book <= TRANSLITERATION_MAX_BOOK;
 
   // Theme + direction live on <html>.
