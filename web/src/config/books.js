@@ -28,6 +28,15 @@ export const UI_LEARNED_BOX = 4;
 // (Alif Baa unit 4 is where the digits are taught).
 export const ARABIC_DIGITS_LEVEL = { book: 1, unit: 4 };
 
+// How a lesson is written depends on the lesson itself, not on the student's level: Arabic digits from
+// Alif Baa lesson 4 and "درس" from Alif Baa lesson 5; every Al-Kitaab lesson (books 2-4) has both.
+export const LESSON_WORD_FROM = { book: 1, unit: 5 };
+
+export function lessonStyle(book, unit) {
+  const at = { book, unit };
+  return { digits: levelReached(at, ARABIC_DIGITS_LEVEL), word: levelReached(at, LESSON_WORD_FROM) };
+}
+
 // The imperative (الأمر) is not shown before Al-Kitaab part 3, lesson 3.
 export const IMPERATIVE_LEVEL = { book: 4, unit: 3 };
 

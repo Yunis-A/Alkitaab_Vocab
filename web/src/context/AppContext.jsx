@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import allWords from "../data/words.json";
-import { books, compareLevel, levelReached, ARABIC_DIGITS_LEVEL, TRANSLITERATION_MAX_BOOK } from "../config/books.js";
+import { books, compareLevel, levelReached, lessonStyle, ARABIC_DIGITS_LEVEL, TRANSLITERATION_MAX_BOOK } from "../config/books.js";
 import { localizeDigits } from "../lib/numerals.js";
 import { strings } from "../i18n/strings.js";
 import { vocabSets, arabicRatio, isRtl, translate, isArabic } from "../lib/i18n.js";
@@ -125,10 +125,20 @@ export function AppProvider({ children }) {
     (id) => {
       const b = books[id];
       const name = b.nameAr && levelReached(effectiveLevel, b.nameArFrom) ? b.nameAr : b.name;
-      return localizeDigits(name, arabicDigits);
+      // the part number in Al-Kitaab names is always Arabic-Indic; Alif Baa has no digits in its name
+      return localizeDigits(name, arabicDigits || id >= 2);
     },
     [arabicDigits, effectiveLevel],
   );
+
+  // A lesson as printed: "٧", "درس ٧" (from Alif Baa lesson 5, and for every Al-Kitaab lesson). With
+  // `english`, early Alif Baa lessons read "Unit 3" instead of a bare number (for pickers).
+  const unitLabel = useCallback((book, unit, { english = false } = {}) => {
+    const style = lessonStyle(book, unit);
+    const n = localizeDigits(unit, style.digits);
+    if (style.word) return `درس ${n}`;
+    return english ? `Unit ${n}` : n;
+  }, []);
 
   const showTransliteration = effectiveLevel.book <= TRANSLITERATION_MAX_BOOK;
 
@@ -211,6 +221,7 @@ export function AppProvider({ children }) {
     tIsArabic,
     nf,
     bookName,
+    unitLabel,
     showTransliteration,
     setLevel,
     rate,

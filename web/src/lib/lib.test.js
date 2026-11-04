@@ -3,6 +3,7 @@ import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
 import { mergeProgress } from "./sync.js";
+import { lessonStyle } from "../config/books.js";
 import { COUNTRIES } from "../data/countries.js";
 import assert from "node:assert/strict";
 
@@ -810,4 +811,11 @@ test("signing in merges this browser's progress into the account's", () => {
   assert.deepEqual(m.geoBest, { m1: 50000, m2: 90000 }); // the faster time wins
   assert.equal(mergeProgress(local, null), local);
   assert.equal(mergeProgress({ ...local, level: null }, { ...remote, level: null }).level, null);
+});
+
+test("lessons are written by the lesson: Arabic digits from Alif Baa 4, درس from Alif Baa 5, always in Al-Kitaab", () => {
+  assert.deepEqual(lessonStyle(1, 3), { digits: false, word: false });
+  assert.deepEqual(lessonStyle(1, 4), { digits: true, word: false });
+  assert.deepEqual(lessonStyle(1, 5), { digits: true, word: true });
+  for (const b of [2, 3, 4]) assert.deepEqual(lessonStyle(b, 1), { digits: true, word: true });
 });

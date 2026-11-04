@@ -96,7 +96,7 @@ function DialectBlock({ name, data, showFeminine, showPlural }) {
 // already show them (the Lookup row). links=false turns the root and grammar links into plain text, for
 // sessions (quick study) that must not be left by accident.
 export default function WordDetail({ word, showStatus = true, showHeader = true, links = true }) {
-  const { t, level, nf, bookName, showTransliteration, dialects } = useApp();
+  const { t, level, bookName, unitLabel, showTransliteration, dialects } = useApp();
   const f = getForms(word);
   const showImperative = !!level && levelReached(level, IMPERATIVE_LEVEL);
   const missing = f.missing.filter((k) => showImperative || k !== "imperative");
@@ -187,7 +187,7 @@ export default function WordDetail({ word, showStatus = true, showHeader = true,
           </Field>
         )}
         <Field label={t("unitOfBook")}>
-          <span dir="auto">{bookName(word.book)} / {nf(word.unit)}</span>
+          <span dir="auto">{bookName(word.book)} / {unitLabel(word.book, word.unit)}</span>
         </Field>
         {links && grammar.length > 0 && (
           <Field label={t("grammarLinks")}>

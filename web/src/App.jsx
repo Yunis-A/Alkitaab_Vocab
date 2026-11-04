@@ -9,7 +9,6 @@ import Grammar from "./pages/Grammar.jsx";
 import Settings from "./pages/Settings.jsx";
 import Account from "./pages/Account.jsx";
 import { Privacy, Terms } from "./pages/Legal.jsx";
-import { useAuth } from "./context/AuthContext.jsx";
 
 function Onboarding() {
   const { t, setLevel } = useApp();
@@ -32,8 +31,7 @@ function Onboarding() {
 }
 
 function Shell() {
-  const { t, level, nf, bookName } = useApp();
-  const { configured, user } = useAuth();
+  const { t, level, bookName, unitLabel } = useApp();
   return (
     <>
       <header className="topbar">
@@ -44,10 +42,9 @@ function Shell() {
           <NavLink to="/lookup" dir="auto">{t("navLookup")}</NavLink>
           <NavLink to="/grammar" dir="auto">{t("navGrammar")}</NavLink>
           <NavLink to="/settings" dir="auto">{t("navSettings")}</NavLink>
-          {configured && <NavLink to="/account" dir="ltr">{user ? "Account" : "Sign in"}</NavLink>}
         </nav>
         <Link className="level-chip" to="/settings" dir="auto">
-          {bookName(level.book)} / {nf(level.unit)}
+          {bookName(level.book)} / {unitLabel(level.book, level.unit)}
         </Link>
       </header>
       <Routes>
@@ -56,7 +53,7 @@ function Shell() {
         <Route path="/lookup" element={<Lookup />} />
         <Route path="/grammar" element={<Grammar />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/account" element={<main className="page narrow"><Account /></main>} />
+        <Route path="/account" element={<Navigate to="/settings" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>

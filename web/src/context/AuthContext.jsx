@@ -36,7 +36,7 @@ export function AuthProvider({ children }) {
         supabase.auth.signUp({ email, password, options: { emailRedirectTo: origin } }),
       signIn: (email, password) => supabase.auth.signInWithPassword({ email, password }),
       signInWithGoogle: () => supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: origin } }),
-      resetPassword: (email) => supabase.auth.resetPasswordForEmail(email, { redirectTo: `${origin}/account` }),
+      resetPassword: (email) => supabase.auth.resetPasswordForEmail(email, { redirectTo: `${origin}/settings` }),
       updatePassword: async (password) => {
         const res = await supabase.auth.updateUser({ password });
         if (!res.error) setRecovering(false);

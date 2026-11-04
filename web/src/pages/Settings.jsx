@@ -2,6 +2,7 @@ import { useApp } from "../context/AppContext.jsx";
 import LevelPicker from "../components/LevelPicker.jsx";
 import GeoGame from "../components/GeoGame.jsx";
 import { DIALECTS } from "../lib/varieties.js";
+import Account from "./Account.jsx";
 
 export default function Settings() {
   const { t, level, setLevel, dialects, setDialect } = useApp();
@@ -30,6 +31,8 @@ export default function Settings() {
         <h2><bdi>{t("geoTitle")}</bdi></h2>
         <GeoGame />
       </section>
+
+      <Account />
     </main>
   );
 }

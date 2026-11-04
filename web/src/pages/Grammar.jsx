@@ -49,7 +49,7 @@ function Block({ block }) {
 }
 
 export default function Grammar() {
-  const { t, level, visibleWords, nf, bookName } = useApp();
+  const { t, level, visibleWords, nf, bookName, unitLabel } = useApp();
   const { hash } = useLocation();
   const open = hash.slice(1);
 
@@ -93,7 +93,7 @@ export default function Grammar() {
       <p className="muted">
         <bdi>
           {next
-            ? t("grammarNext", `${bookName(next.unlock.book)} / ${nf(next.unlock.unit)}`)
+            ? t("grammarNext", `${bookName(next.unlock.book)} / ${unitLabel(next.unlock.book, next.unlock.unit)}`)
             : t("grammarAllUnlocked")}
         </bdi>
       </p>
