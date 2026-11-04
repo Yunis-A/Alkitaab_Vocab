@@ -2,15 +2,17 @@
 
 // Labels are built in the UI so the words "country" and "capital" can switch to
 // Arabic when the student has learned them.
-//   capitals: true  -> about half of the questions ask for a capital instead of a country name
-//   only: "capital" -> every question is a capital (places without an agreed capital are left out)
+//   kind: "country" -> every question is a country name
+//   kind: "capital" -> every question is a capital (places without an agreed capital are left out)
+//   kind: "both"    -> every country is asked twice, once by name and once by capital (places
+//                      without an agreed capital are only asked by name)
 export const GEO_MODES = [
-  { id: "en-countries", lang: "en", capitals: false },
-  { id: "en-capitals", lang: "en", capitals: true },
-  { id: "en-capital", lang: "en", capitals: true, only: "capital" },
-  { id: "ar-countries", lang: "ar", capitals: false },
-  { id: "ar-capitals", lang: "ar", capitals: true },
-  { id: "ar-capital", lang: "ar", capitals: true, only: "capital" },
+  { id: "en-countries", lang: "en", kind: "country" },
+  { id: "en-capital", lang: "en", kind: "capital" },
+  { id: "en-both", lang: "en", kind: "both" },
+  { id: "ar-countries", lang: "ar", kind: "country" },
+  { id: "ar-capital", lang: "ar", kind: "capital" },
+  { id: "ar-both", lang: "ar", kind: "both" },
 ];
 
 // Each wrong click adds this to the final time.
@@ -28,24 +30,18 @@ function shuffle(items, rng) {
   return a;
 }
 
-// One question per country, in random order. In "capitals" modes about half of
-// the countries (those with an agreed capital) are asked by capital instead.
+// The questions of a run, in random order (see GEO_MODES for what each mode asks).
 export function buildQuestions(mode, countries, rng = Math.random) {
   const ar = mode.lang === "ar";
-  if (mode.only === "capital") {
-    return shuffle(countries.filter((c) => c.capitalEn), rng).map((c) => ({
-      countryId: c.id, kind: "capital", text: ar ? c.capitalAr : c.capitalEn,
-    }));
-  }
-  const order = shuffle(countries, rng);
-  const capitalPool = mode.capitals ? shuffle(order.filter((c) => c.capitalEn), rng) : [];
-  const byCapital = new Set(capitalPool.slice(0, Math.ceil(order.length / 2)).map((c) => c.id));
+  const asCountry = (c) => ({ countryId: c.id, kind: "country", text: ar ? c.nameAr : c.nameEn });
+  const asCapital = (c) => ({ countryId: c.id, kind: "capital", text: ar ? c.capitalAr : c.capitalEn });
 
-  return order.map((c) => {
-    const kind = byCapital.has(c.id) ? "capital" : "country";
-    const text = kind === "capital" ? (ar ? c.capitalAr : c.capitalEn) : ar ? c.nameAr : c.nameEn;
-    return { countryId: c.id, kind, text };
-  });
+  const all = [];
+  for (const c of countries) {
+    if (mode.kind !== "capital") all.push(asCountry(c));
+    if (mode.kind !== "country" && c.capitalEn) all.push(asCapital(c));
+  }
+  return shuffle(all, rng);
 }
 
 export function finalTime(elapsedMs, wrongClicks) {

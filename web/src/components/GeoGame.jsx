@@ -31,15 +31,15 @@ export default function GeoGame() {
   // Out of time: the run ends without a score.
   useEffect(() => {
     if (playing && finalTime(now - startedAt, wrong) >= TIME_LIMIT_MS) {
-      setResult({ ms: TIME_LIMIT_MS, isBest: false, timedOut: true, found: solved.size });
+      setResult({ ms: TIME_LIMIT_MS, isBest: false, timedOut: true, found: index });
       setStatus("done");
     }
-  }, [playing, now, startedAt, wrong, solved]);
+  }, [playing, now, startedAt, wrong, index]);
 
   const label = (m) => {
     const lang = t(m.lang === "en" ? "geoEnglish" : "geoArabic");
-    if (m.only === "capital") return `${lang}: ${t("geoCapital")}`;
-    return `${lang}: ${t("geoCountry")}${m.capitals ? ` & ${t("geoCapital")}` : ""}`;
+    if (m.kind === "capital") return `${lang}: ${t("geoCapital")}`;
+    return `${lang}: ${t("geoCountry")}${m.kind === "both" ? ` & ${t("geoCapital")}` : ""}`;
   };
 
   function start() {
@@ -64,12 +64,15 @@ export default function GeoGame() {
     if (solved.has(id)) return; // already found: no effect, no penalty
     const q = questions[index];
     if (id === q.countryId) {
-      const found = new Set(solved).add(id);
+      // a place turns green (and stops being clickable) once every question about it is answered; in
+      // "both" mode its other question may still be coming
+      const found = new Set(solved);
+      if (!questions.slice(index + 1).some((x) => x.countryId === id)) found.add(id);
       setSolved(found);
       if (index + 1 === questions.length) {
         const ms = finalTime(Date.now() - startedAt, wrong);
         if (ms >= TIME_LIMIT_MS) {
-          setResult({ ms: TIME_LIMIT_MS, isBest: false, timedOut: true, found: found.size });
+          setResult({ ms: TIME_LIMIT_MS, isBest: false, timedOut: true, found: questions.length });
         } else {
           setResult({ ms, isBest: submitGeoTime(mode.id, ms), timedOut: false, found: found.size });
         }

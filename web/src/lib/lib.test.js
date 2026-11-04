@@ -475,8 +475,8 @@ test("lookup filters: type, lesson range, verb form, gender, status, dialect", (
   for (const key of ["filterBeginning", "filterEnd"]) assert.deepEqual(strings[key].unlock, { book: bid.book, unit: bid.unit });
   assert.equal(strings.filterBeginning.ar, "البداية");
   assert.equal(strings.filterEnd.ar, "النهاية");
-  // six game modes: country / country & capital / capital only, in English and in Arabic
-  assert.deepEqual(GEO_MODES.map((m) => m.id), ["en-countries", "en-capitals", "en-capital", "ar-countries", "ar-capitals", "ar-capital"]);
+  // six game modes: countries / capitals / both, in English and in Arabic
+  assert.deepEqual(GEO_MODES.map((m) => m.id), ["en-countries", "en-capital", "en-both", "ar-countries", "ar-capital", "ar-both"]);
 
   const opts = filterOptions(words);
   assert.equal(opts.pos.get("verb"), 2);
@@ -633,14 +633,16 @@ test("geography game: questions, timing, data", () => {
   const rng = (() => { let s = 7; return () => (s = (s * 16807) % 2147483647) / 2147483647; })();
   for (const mode of GEO_MODES) {
     const qs = buildQuestions(mode, geoCountries, rng);
-    // capital-only modes skip the places without an agreed capital (Palestine, Israel)
-    const expected = mode.only === "capital" ? geoCountries.filter((c) => c.capitalEn).length : geoCountries.length;
-    assert.equal(qs.length, expected);
-    assert.equal(new Set(qs.map((q) => q.countryId)).size, expected); // one each
-    assert.equal(new Set(qs.map((q) => q.text)).size, qs.length); // prompts unambiguous
+    // capital questions skip the places without an agreed capital (Palestine, Israel)
+    const withCapital = geoCountries.filter((c) => c.capitalEn).length;
     const caps = qs.filter((q) => q.kind === "capital");
-    assert.equal(caps.length > 0, mode.capitals);
-    if (mode.only === "capital") assert.equal(caps.length, qs.length); // every question is a capital
+    const names = qs.filter((q) => q.kind === "country");
+    assert.equal(caps.length, mode.kind === "country" ? 0 : withCapital);
+    assert.equal(names.length, mode.kind === "capital" ? 0 : geoCountries.length);
+    assert.equal(qs.length, caps.length + names.length);
+    // "both" asks every place by name AND by capital
+    if (mode.kind === "both") for (const c of geoCountries) assert.ok(names.some((q) => q.countryId === c.id));
+    assert.equal(new Set(qs.map((q) => q.text)).size, qs.length); // prompts unambiguous
     for (const q of caps) {
       assert.ok(geoCountries.find((c) => c.id === q.countryId).capitalEn); // never a disputed capital
     }
