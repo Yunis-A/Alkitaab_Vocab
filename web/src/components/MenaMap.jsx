@@ -1,26 +1,25 @@
 import { useState } from "react";
 import { MAP_VIEWBOX, mapShapes } from "../data/menaMap.js";
 
-const ZOOMS = [1, 2, 3, 4];
+// The map has two views: the whole region, and a close-up of the Bahrain area (Bahrain, Qatar and the
+// neighbouring coast) where the small Gulf states are big enough to hit.
+const GULF_VIEWBOX = "818 148 110 61";
 
-// Clickable map. Grey shapes are neutral context; coloured ones are quiz
-// places. Zoom enlarges the map inside a scrollable frame so the small Gulf
-// states are easier to hit.
+// Clickable map. Grey shapes are neutral context; coloured ones are quiz places.
 export default function MenaMap({ solved, wrongId, onPick, disabled }) {
-  const [zoom, setZoom] = useState(1);
-  const step = (d) => setZoom((z) => ZOOMS[Math.min(ZOOMS.length - 1, Math.max(0, ZOOMS.indexOf(z) + d))]);
+  const [zoomed, setZoomed] = useState(false);
 
   return (
     <div className="map-wrap">
       <div className="map-zoom" dir="ltr">
-        <button type="button" aria-label="Zoom out" onClick={() => step(-1)} disabled={zoom === ZOOMS[0]}>−</button>
-        <button type="button" aria-label="Zoom in" onClick={() => step(1)} disabled={zoom === ZOOMS[ZOOMS.length - 1]}>+</button>
+        <button type="button" aria-label="Zoom out" onClick={() => setZoomed(false)} disabled={!zoomed}>−</button>
+        <button type="button" aria-label="Zoom in" onClick={() => setZoomed(true)} disabled={zoomed}>+</button>
       </div>
       <div className="map-scroll">
         <svg
           className="mena-map"
-          viewBox={MAP_VIEWBOX}
-          style={{ width: `${zoom * 100}%` }}
+          viewBox={zoomed ? GULF_VIEWBOX : MAP_VIEWBOX}
+          style={{ width: "100%" }}
           role="img"
           aria-label="Map of the Middle East and North Africa"
           dir="ltr"

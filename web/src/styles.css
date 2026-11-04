@@ -199,11 +199,12 @@ button.primary, .button.primary {
 
 .mena-map { height: auto; display: block; max-width: none; }
 .map-sea { fill: #dbe9f2; }
-.map-context { fill: #e6e3da; stroke: #fff; stroke-width: 1; }
+.map-context { fill: #e6e3da; stroke: #fff; stroke-width: 0.8; vector-effect: non-scaling-stroke; }
 .map-country {
   fill: color-mix(in srgb, var(--theme) 28%, #fff);
   stroke: #fff;
-  stroke-width: 1.5;
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
   cursor: pointer;
   transition: fill 0.15s;
 }
