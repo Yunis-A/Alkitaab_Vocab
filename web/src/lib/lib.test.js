@@ -931,14 +931,18 @@ test("verb patterns are asked only when the lesson has been reached", () => {
   assert.ok(f(1, L(3, 8)).includes("passiveParticiple") && f(3, L(3, 8)).includes("passiveParticiple")); // part 2 lesson 8
   assert.ok(!f(1, L(3, 0)).includes("makaan") && f(1, L(3, 1)).includes("makaan")); // noun of place: part 2 lesson 1, form I only
   assert.ok(!f(2, L(3, 8)).includes("makaan"));
-  // the passive: forms I and II (and four-letter form I) from part 2 lesson 7; no other form
+  // the passive: forms I and II (and four-letter form I) from part 2 lesson 7; the rest from lesson 10
   assert.ok(!f(1, L(3, 6)).includes("passivePast") && f(1, L(3, 7)).includes("passivePast") && f(2, L(3, 7)).includes("passivePast"));
-  assert.ok(!f(3, L(4, 10)).includes("passivePast") && !f(4, L(4, 10)).includes("passivePast"));
-  assert.ok(f("Q1", L(4, 10)).includes("passivePast") && !f("Q2", L(4, 10)).includes("passivePast"));
+  assert.ok(!f(3, L(3, 9)).includes("passivePast") && !f(4, L(3, 9)).includes("passivePresent")); // the other forms wait
+  assert.ok(f(3, L(3, 10)).includes("passivePast") && f(3, L(3, 10)).includes("passivePresent")); // ...until part 2 lesson 10
+  assert.ok(f(10, L(3, 10)).includes("passivePast") && f(8, L(3, 10)).includes("passivePresent"));
+  assert.ok(!f(7, L(4, 10)).includes("passivePast") && !f(9, L(4, 10)).includes("passivePast")); // VII and IX have none
+  assert.ok(f("Q1", L(3, 7)).includes("passivePast") && !f("Q2", L(4, 10)).includes("passivePast"));
   // the imperative: part 3 lesson 3
   assert.ok(!f(1, L(4, 2)).includes("imperative") && f(1, L(4, 3)).includes("imperative"));
   assert.ok(!f(9, L(4, 10)).includes("imperative"));
-  // four-letter roots arrive at the (placeholder) lesson
+  // four-letter roots arrive at part 2 lesson 7
+  assert.deepEqual(QUAD_FROM, { book: 3, unit: 7 });
   assert.ok(!formsAt(L(QUAD_FROM.book, QUAD_FROM.unit - 1)).includes("Q1") && formsAt(QUAD_FROM).includes("Q1"));
 });
 

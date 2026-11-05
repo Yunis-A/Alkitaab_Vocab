@@ -106,9 +106,8 @@ export function canon(s) {
 // 3 = part 2, 4 = part 3). The trainer only asks what the student's level covers.
 const at = (book, unit) => ({ book, unit });
 
-// TODO: placeholder until the lessons for four-letter roots are given; their passive comes at part 2
-// lesson 7 along with forms I and II, so they must be known by then.
-export const QUAD_FROM = at(3, 1);
+// Four-letter roots are learned at part 2, lesson 7 (with the passive of forms I and II).
+export const QUAD_FROM = at(3, 7);
 
 // `from`: the form, its past and its present; `masdar`: its verbal noun (null = never asked)
 export const FORM_LEVELS = {
@@ -130,14 +129,15 @@ export const FORM_LEVELS = {
 export const FIELD_LEVELS = {
   makaan: at(3, 1), // the noun of place, form I only
   activeParticiple: at(3, 5),
-  passivePast: at(3, 7),
-  passivePresent: at(3, 7), // assumed to come with the passive past
   passiveParticiple: at(3, 8), // for the other forms it is also the noun of place
   imperative: IMPERATIVE_LEVEL,
 };
 
-// the passive is only learned for forms I and II (and four-letter form I)
-const PASSIVE_FORMS = [1, 2, "Q1"];
+// The passive (past and present): forms I and II and four-letter I at part 2 lesson 7, every other form
+// that has one at part 2 lesson 10.
+const PASSIVE_EARLY = [1, 2, "Q1"];
+const PASSIVE_EARLY_FROM = at(3, 7);
+const PASSIVE_LATER_FROM = at(3, 10);
 export const PASSIVE_FIELDS = ["passivePast", "passivePresent"];
 
 // The first level at which the trainer has anything to ask.
@@ -155,7 +155,7 @@ export function fieldsAt(form, level) {
     const fl = FORM_LEVELS[form];
     if (field === "past" || field === "present") return levelReached(level, fl.from);
     if (field === "masdar") return !!fl.masdar && levelReached(level, fl.masdar);
-    if (PASSIVE_FIELDS.includes(field) && !PASSIVE_FORMS.includes(form)) return false;
+    if (PASSIVE_FIELDS.includes(field)) return levelReached(level, PASSIVE_EARLY.includes(form) ? PASSIVE_EARLY_FROM : PASSIVE_LATER_FROM);
     return levelReached(level, FIELD_LEVELS[field]);
   };
   return FIELDS.filter(known);
