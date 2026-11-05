@@ -3,6 +3,8 @@ import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
 import { mergeProgress } from "./sync.js";
+import { FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect } from "./patterns.js";
+import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey } from "./prepositions.js";
 import { lessonStyle } from "../config/books.js";
 import { COUNTRIES } from "../data/countries.js";
 import assert from "node:assert/strict";
@@ -827,4 +829,49 @@ test("account heading turns Arabic where حِساب (account) is taught", () => 
   assert.deepEqual(strings.accountTitle.unlock, { book: hisab.book, unit: hisab.unit });
   assert.equal(strings.accountTitle.ar, "الحساب");
   assert.deepEqual(strings.dialectsHelp.unlock, { book: 3, unit: 8 }); // no longer stuck on English
+});
+
+test("verb patterns on ف ع ل agree with the morphology generator and are checked leniently", () => {
+  for (const f of FORMS) {
+    const g = getForms({ pos: "verb", root: "ف ع ل", form: f, arabic: "x", presentVowel: "a" });
+    const same = (field, val) => !val || !PATTERNS[f][field] || PATTERNS[f][field].some((v) => canon(v) === canon(val));
+    assert.ok(same("past", g.past["3ms"]), `${f} past`);
+    assert.ok(same("present", g.present["3ms"]), `${f} present`);
+    assert.ok(same("imperative", g.imperative["2ms"]), `${f} imperative`);
+    assert.ok(same("masdar", g.masdar?.[0]), `${f} masdar`);
+    assert.ok(same("activeParticiple", g.activeParticiple?.m), `${f} active participle`);
+    assert.ok(same("passiveParticiple", g.passiveParticiple?.m), `${f} passive participle`);
+  }
+  // typing: sukun, fatha before alif and alif style do not matter; the vowels on the letters do
+  assert.equal(isCorrect(3, "past", "فَاعَلَ"), true);
+  assert.equal(isCorrect(4, "masdar", "اِفْعال"), true); // إ or ا
+  assert.equal(isCorrect(2, "past", "فَعَلَ"), false);
+  assert.equal(isCorrect(2, "past", ""), false);
+  assert.equal(isCorrect(1, "present", "يَفعِلُ"), true); // form I takes any of the three vowels
+  assert.equal(isCorrect(5, "form", 5), true);
+  // a clue always identifies one form: form I and IV share the passive present, so it is never a clue
+  const rng = (() => { let x = 11; return () => (x = (x * 16807) % 2147483647) / 2147483647; })();
+  for (let i = 0; i < 300; i++) {
+    const t = buildTask(FORMS, rng);
+    assert.ok(t.targets.every((f) => f === "form" || FIELDS.includes(f)));
+    assert.ok(!t.targets.includes(t.clue.field));
+    if (t.clue.field === "passivePresent") assert.ok(![1, 4].includes(t.form));
+    if (t.clue.field !== "form") {
+      const sharing = FORMS.filter((f) => PATTERNS[f][t.clue.field]?.some((v) => canon(v) === canon(t.clue.value)));
+      assert.deepEqual(sharing, [t.form]);
+    }
+  }
+  assert.ok(!buildTask([1], rng).targets.includes("masdar")); // form I masdar varies, so it is not asked
+});
+
+test("preposition trainer: stored prepositions, grading", () => {
+  const verbs = prepositionVerbs(allWords);
+  assert.ok(verbs.length > 100 && verbs.every((w) => w.pos === "verb" && w.prepositions.length));
+  const all = allPrepositions(allWords.filter((w) => w.pos === "verb"));
+  assert.deepEqual(all.map((p) => p.key).sort(), ["إلى", "ب", "عن", "على", "في", "مع", "من", "ل"].sort());
+  assert.equal(prepKey("بِـ"), "ب");
+  const w = { prepositions: ["بِـ", "مع"] };
+  assert.equal(gradePrepositions(new Set(["ب", "مع"]), w).perfect, true);
+  const g = gradePrepositions(new Set(["ب", "في"]), w);
+  assert.deepEqual([g.right, g.wrong, g.missed, g.perfect], [["ب"], ["في"], ["مع"], false]);
 });

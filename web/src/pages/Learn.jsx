@@ -7,6 +7,10 @@ import WordDetail from "../components/WordDetail.jsx";
 import UnitPicker from "../components/UnitPicker.jsx";
 import QuickStudy from "./QuickStudy.jsx";
 import GenderQuiz from "./GenderQuiz.jsx";
+import Prepositions from "./Prepositions.jsx";
+import VerbPatterns from "./VerbPatterns.jsx";
+import { prepositionVerbs } from "../lib/prepositions.js";
+import { FORMS } from "../lib/patterns.js";
 import Matching from "./Matching.jsx";
 import { levelReached } from "../config/books.js";
 import { levelKey } from "../lib/filters.js";
@@ -33,10 +37,21 @@ const toggled = (set, value, on) => {
   return next;
 };
 
+// The ways to study. `direct` ones start at once; the rest open a setup screen where the student picks the
+// units (and a few options) first. `options` says which extra choices the setup shows.
+const MODES = [
+  { id: "review", title: "reviewDue", desc: "modeReviewDesc", direct: true },
+  { id: "quick", title: "quickStudy", desc: "modeQuickDesc", options: ["lists", "varieties", "first"] },
+  { id: "matching", title: "matching", desc: "modeMatchingDesc", options: ["lists", "varieties"] },
+  { id: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
+  { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", options: [] },
+  { id: "gender", title: "studyGender", desc: "modeGenderDesc", direct: true, from: { book: 2, unit: 1 } }, // مُذَكَّر / مُؤَنَّث
+];
+
 export default function Learn() {
   const { t, nf, level, visibleWords, activeCards, dialects } = useApp();
-  const [mode, setMode] = useState("menu");
-  const [units, setUnits] = useState(() => new Set([levelKey(level)]));
+  const [mode, setMode] = useState("menu"); // "menu" | a mode id (setup) | "run:<id>"
+  const [units, setUnits] = useState(() => new Set([levelKey(level)])); // the current lesson to start with
   const [lists, setLists] = useState(() => new Set([1, 2]));
   const [chosen, setChosen] = useState(() => new Set(["ar-en", "egy", "shm"]));
   const [englishFirst, setEnglishFirst] = useState(false);
@@ -49,81 +64,105 @@ export default function Learn() {
     () => buildItems(visibleWords, dialects, { units, lists, varieties }),
     [visibleWords, dialects, units, lists, chosen], // eslint-disable-line react-hooks/exhaustive-deps
   );
-  const exit = () => setMode("menu");
+  // verbs of the chosen units, for the preposition and pattern trainers
+  const chosenVerbs = useMemo(
+    () => visibleWords.filter((w) => w.pos === "verb" && w.arabic && units.has(levelKey(w))),
+    [visibleWords, units],
+  );
+  const prepVerbs = useMemo(() => prepositionVerbs(chosenVerbs), [chosenVerbs]);
+  const patternForms = useMemo(
+    () => FORMS.filter((f) => chosenVerbs.some((w) => w.form === f)),
+    [chosenVerbs],
+  );
 
-  if (mode === "review") return <Review onExit={exit} />;
-  if (mode === "quick") return <QuickStudy items={items} englishFirst={englishFirst} onExit={exit} />;
-  if (mode === "matching") return <Matching items={items} onExit={exit} />;
-  if (mode === "gender") return <GenderQuiz onExit={exit} />;
+  const exit = () => setMode("menu");
+  const available = (m) => !m.from || levelReached(level, m.from);
+  const count = { quick: items.length, matching: items.length, prepositions: prepVerbs.length, patterns: patternForms.length };
+
+  if (mode === "run:review") return <Review onExit={exit} />;
+  if (mode === "run:quick") return <QuickStudy items={items} englishFirst={englishFirst} onExit={exit} />;
+  if (mode === "run:matching") return <Matching items={items} onExit={exit} />;
+  if (mode === "run:prepositions") return <Prepositions verbs={prepVerbs} onExit={exit} />;
+  if (mode === "run:patterns") return <VerbPatterns forms={patternForms} onExit={exit} />;
+  if (mode === "run:gender") return <GenderQuiz onExit={exit} />;
+
+  const setup = MODES.find((m) => m.id === mode);
+  if (setup) {
+    const needed = setup.id === "matching" ? 2 : 1;
+    return (
+      <main className="page narrow">
+        <div className="quick-bar">
+          <button type="button" className="link-button" onClick={exit}><bdi>{t("studyExit")}</bdi></button>
+        </div>
+        <section className="card">
+          <h2><bdi>{t(setup.title)}</bdi></h2>
+          <p className="muted"><bdi>{t(setup.desc)}</bdi></p>
+
+          <h3><bdi>{t("studyUnits")}</bdi></h3>
+          <UnitPicker value={units} onChange={setUnits} />
+
+          <div className="study-options">
+            {setup.options.includes("lists") && (
+              <div className="unit-boxes">
+                <strong><bdi>{t("studyLists")}</bdi></strong>
+                {[1, 2].map((n) => (
+                  <Check key={n} checked={lists.has(n)} onChange={(on) => setLists(toggled(lists, n, on))}>
+                    {t("studyListN", n, nf(n))}
+                  </Check>
+                ))}
+              </div>
+            )}
+
+            {setup.options.includes("varieties") && offered.length > 1 && (
+              <div className="unit-boxes">
+                <strong><bdi>{t("studyVarieties")}</bdi></strong>
+                {offered.map(([v, key]) => (
+                  <Check key={v} checked={chosen.has(v)} onChange={(on) => setChosen(toggled(chosen, v, on))}>
+                    {t(key)}
+                  </Check>
+                ))}
+              </div>
+            )}
+
+            {setup.options.includes("first") && (
+              <div className="unit-boxes">
+                <strong><bdi>{t("studyFirst")}</bdi></strong>
+                <label className="unit-box">
+                  <input type="radio" name="first" checked={!englishFirst} onChange={() => setEnglishFirst(false)} />
+                  <span><bdi>{t("geoArabic")}</bdi></span>
+                </label>
+                <label className="unit-box">
+                  <input type="radio" name="first" checked={englishFirst} onChange={() => setEnglishFirst(true)} />
+                  <span><bdi>{t("geoEnglish")}</bdi></span>
+                </label>
+              </div>
+            )}
+          </div>
+
+          {count[setup.id] < needed && <p className="muted"><bdi>{t("studyNoUnits")}</bdi></p>}
+          <div className="actions">
+            <button className="primary" disabled={count[setup.id] < needed} onClick={() => setMode(`run:${setup.id}`)}>
+              <span dir="auto">{t("geoStart")}</span>
+            </button>
+          </div>
+        </section>
+      </main>
+    );
+  }
 
   return (
-    <main className="page narrow">
-      <section className="card">
-        <h2><bdi>{t("reviewDue")}</bdi></h2>
-        <p><bdi>{dueCount ? t("dueCount", dueCount, nf(dueCount)) : t("noneDue")}</bdi></p>
-        <button className="primary" onClick={() => setMode("review")}>
-          <span dir="auto">{t("reviewDue")}</span>
-        </button>
-      </section>
-
-      <section className="card">
-        <h2><bdi>{t("studyUnits")}</bdi></h2>
-        <UnitPicker value={units} onChange={setUnits} />
-
-        <div className="study-options">
-          <div className="unit-boxes">
-            <strong><bdi>{t("studyLists")}</bdi></strong>
-            {[1, 2].map((n) => (
-              <Check key={n} checked={lists.has(n)} onChange={(on) => setLists(toggled(lists, n, on))}>
-                {t("studyListN", n, nf(n))}
-              </Check>
-            ))}
-          </div>
-
-          {offered.length > 1 && (
-            <div className="unit-boxes">
-              <strong><bdi>{t("studyVarieties")}</bdi></strong>
-              {offered.map(([v, key]) => (
-                <Check key={v} checked={chosen.has(v)} onChange={(on) => setChosen(toggled(chosen, v, on))}>
-                  {t(key)}
-                </Check>
-              ))}
-            </div>
-          )}
-
-          <div className="unit-boxes">
-            <strong><bdi>{t("studyFirst")}</bdi></strong>
-            <label className="unit-box">
-              <input type="radio" name="first" checked={!englishFirst} onChange={() => setEnglishFirst(false)} />
-              <span><bdi>{t("geoArabic")}</bdi></span>
-            </label>
-            <label className="unit-box">
-              <input type="radio" name="first" checked={englishFirst} onChange={() => setEnglishFirst(true)} />
-              <span><bdi>{t("geoEnglish")}</bdi></span>
-            </label>
-          </div>
-        </div>
-
-        {items.length === 0 && <p className="muted"><bdi>{t("studyNoUnits")}</bdi></p>}
-        <div className="actions">
-          <button className="primary" disabled={!items.length} onClick={() => setMode("quick")}>
-            <span dir="auto">{t("quickStudy")}</span>
+    <main className="page">
+      <div className="mode-grid">
+        {MODES.filter(available).map((m) => (
+          <button key={m.id} type="button" className="mode-card" onClick={() => setMode(m.direct ? `run:${m.id}` : m.id)}>
+            <strong><bdi>{t(m.title)}</bdi></strong>
+            <span className="muted"><bdi>{t(m.desc)}</bdi></span>
+            {m.id === "review" && (
+              <span className="mode-badge"><bdi>{dueCount ? t("dueCount", dueCount, nf(dueCount)) : t("noneDue")}</bdi></span>
+            )}
           </button>
-          <button className="primary" disabled={items.length < 2} onClick={() => setMode("matching")}>
-            <span dir="auto">{t("matching")}</span>
-          </button>
-        </div>
-      </section>
-
-      {/* مُذَكَّر / مُؤَنَّث are taught in part 1, lesson 1 */}
-      {levelReached(level, { book: 2, unit: 1 }) && (
-        <section className="card">
-          <h2><bdi>{t("studyGender")}</bdi></h2>
-          <button className="primary" onClick={() => setMode("gender")}>
-            <span dir="auto">{t("geoStart")}</span>
-          </button>
-        </section>
-      )}
+        ))}
+      </div>
     </main>
   );
 }

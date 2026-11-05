@@ -289,3 +289,33 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 .google-btn { margin-top: 0.75rem; display: block; width: 100%; max-width: 22rem; background: #fff; color: var(--text); border: 1px solid var(--line); }
 .returning { margin-top: 1.5rem; }
 .returning summary { cursor: pointer; color: var(--theme); }
+
+/* learn menu cards, prepositions, verb patterns */
+.mode-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
+.mode-card { display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; text-align: start; padding: 1.1rem; background: #fff; color: var(--text); border: 2px solid var(--line); border-radius: var(--radius); cursor: pointer; }
+.mode-card:hover { border-color: var(--theme); }
+.mode-card strong { font-size: 1.15rem; color: var(--theme); }
+.mode-badge { margin-top: auto; font-size: 0.85rem; font-weight: 600; }
+.prep-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin: 1.2rem 0; }
+.prep-circle { width: 5rem; height: 5rem; border-radius: 50%; padding: 0; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; background: #fff; color: var(--text); border: 3px solid var(--line); cursor: pointer; }
+.prep-circle.selected { background: #2e9e5b; border-color: #2e9e5b; color: #fff; }
+.prep-circle.right { background: #2e9e5b; border-color: #2e9e5b; color: #fff; cursor: default; }
+.prep-circle.wrong { background: #c0392b; border-color: #c0392b; color: #fff; cursor: default; }
+.prep-circle.missed { border-color: #2e9e5b; border-style: dashed; color: #2e9e5b; cursor: default; }
+.pattern-fields { display: grid; gap: 0.6rem; margin: 1rem 0; text-align: start; }
+.pattern-field { display: grid; grid-template-columns: 9rem 1fr; align-items: center; gap: 0.6rem; }
+.pattern-label { font-weight: 600; }
+.pattern-input { padding: 0.45rem 0.6rem; font-size: 1.3rem; border: 2px solid var(--line); border-radius: 8px; background: #fff; color: var(--text); cursor: pointer; min-height: 2.4rem; }
+.pattern-input.active { border-color: var(--theme); }
+.pattern-field.ok .pattern-input { border-color: #2e9e5b; background: #e6f5ec; }
+.pattern-field.bad .pattern-input { border-color: #c0392b; background: #fbe9e7; }
+.pattern-answer { grid-column: 2; color: #2e9e5b; font-size: 1.2rem; }
+.form-picks { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.form-pick { padding: 0.35rem 0.6rem; background: #fff; color: var(--text); border: 2px solid var(--line); }
+.form-pick.picked { background: var(--theme); border-color: var(--theme); color: #fff; }
+.ar-keyboard { display: grid; gap: 0.4rem; margin: 0.8rem 0; }
+.kb-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.35rem; }
+.kb-key { min-width: 2.6rem; padding: 0.5rem 0.4rem; font-size: 1.3rem; background: #fff; color: var(--text); border: 1px solid var(--line); border-radius: 8px; }
+.kb-key:hover:not(:disabled) { border-color: var(--theme); }
+.kb-back { font-size: 1.1rem; }
+@media (max-width: 520px) { .pattern-field { grid-template-columns: 1fr; } .pattern-answer { grid-column: 1; } }
