@@ -7,6 +7,7 @@ import WordDetail from "../components/WordDetail.jsx";
 import UnitPicker from "../components/UnitPicker.jsx";
 import QuickStudy from "./QuickStudy.jsx";
 import GenderQuiz from "./GenderQuiz.jsx";
+import SunMoonQuiz from "./SunMoonQuiz.jsx";
 import ArticleQuiz from "./ArticleQuiz.jsx";
 import GeoGame from "../components/GeoGame.jsx";
 import Prepositions from "./Prepositions.jsx";
@@ -47,6 +48,7 @@ const MODES = [
   { id: "matching", title: "matching", desc: "modeMatchingDesc", options: ["lists", "varieties"] },
   { id: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
   { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true, from: PATTERNS_FROM }, // covers what your level has learned
+  { id: "sunmoon", title: "studySunMoon", desc: "modeSunMoonDesc", direct: true },
   { id: "geography", title: "geoGamesTitle", desc: "modeGeoGamesDesc" }, // opens a menu of geography games
 ];
 
@@ -92,6 +94,7 @@ export default function Learn() {
   const backToGames = () => setMode("geography");
   if (mode === "run:gender") return <GenderQuiz onExit={backToGames} />;
   if (mode === "run:article") return <ArticleQuiz onExit={backToGames} />;
+  if (mode === "run:sunmoon") return <SunMoonQuiz onExit={exit} />;
   if (mode === "run:map") {
     return (
       <main className="page">

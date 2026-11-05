@@ -113,6 +113,11 @@ export const strings = {
   modePatternsDesc: { en: "Build every form of a verb pattern from one.", ar: "كلمة من فعل", unlock: u(3, 4) },
   modeGenderDesc: { en: "Is the country masculine or feminine?", ar: "بلد مذكر أو مؤنث؟", unlock: u(2, 2) },
   modeGeoDesc: { en: "Find each country or capital on the map, against the clock.", ar: "بلد وعاصمة", unlock: u(3, 4) },
+  // Sun and moon letters: شمس / قمر are not words of the list, so these stay English until the later lessons.
+  studySunMoon: { en: "Sun and moon letters", ar: "الحروف الشمسية والقمرية", unlock: u(3, 8) },
+  modeSunMoonDesc: { en: "Is the letter a sun letter or a moon letter?", ar: "شمس أو قمر؟", unlock: u(9, 1) },
+  sunLetter: { en: "Sun", ar: "شمس", unlock: u(3, 8) },
+  moonLetter: { en: "Moon", ar: "قمر", unlock: u(3, 8) },
   geoGamesTitle: { en: "Geography games", ar: "ألعاب الجغرافيا", unlock: u(2, 6) },
   modeGeoGamesDesc: { en: "The map, and whether a country is masculine or feminine or takes ال.", ar: "بلد وعاصمة، مذكر أو مؤنث", unlock: u(3, 4) },
   // مع is a verb's preposition from part 2 lesson 4; بِدون is taught in part 2 lesson 5

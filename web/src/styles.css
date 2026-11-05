@@ -322,3 +322,7 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 .pattern-boxes { display: flex; gap: 0.4rem; min-width: 0; }
 .pattern-boxes .pattern-input { flex: 1 1 0; min-width: 0; width: 0; box-sizing: border-box; }
 .country-en { font-size: 0.85rem; }
+
+.letter-huge { font-size: 6rem; line-height: 1.2; }
+.sm-btn { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+.sm-icon { width: 4.5rem; height: 4.5rem; }

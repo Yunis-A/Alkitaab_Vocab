@@ -9,6 +9,7 @@ import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey, preposit
 import { lessonStyle } from "../config/books.js";
 import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
+import { LETTERS } from "../data/letters.js";
 import assert from "node:assert/strict";
 
 import { getForms, analyzeVerb } from "./morphology.js";
@@ -1083,4 +1084,11 @@ test("geography games: the countries, which take ال, and prepositions usable i
   const bidun = allWords.find((w) => w.definition === "without");
   assert.deepEqual(strings.articleWithout.unlock, { book: bidun.book, unit: bidun.unit });
   assert.ok(!allWords.some((w) => ["على", "عن", "إلى"].includes((w.arabic ?? "").replace(/[ً-ْ]/g, "")))); // not added to the list
+});
+
+test("sun and moon letters: 28 letters, 14 of each", () => {
+  assert.equal(LETTERS.length, 28);
+  assert.equal(new Set(LETTERS.map((l) => l.letter)).size, 28);
+  assert.deepEqual(LETTERS.filter((l) => l.sun).map((l) => l.letter).sort(), [..."تثدذرزسشصضطظلن"].sort());
+  assert.deepEqual(LETTERS.filter((l) => !l.sun).map((l) => l.letter).sort(), [..."ابجحخعغفقكمهوي"].sort());
 });
