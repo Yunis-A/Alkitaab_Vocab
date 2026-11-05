@@ -21,3 +21,13 @@ export function presentChart(present) {
   if (!present) return present;
   return Object.fromEntries(Object.entries(present).map(([p, f]) => [p, presentChartForm(p, f)]));
 }
+
+// The present chart is free of case endings: a form that can lose its noon (تَدرُسينَ/ي) is accepted both ways.
+export function presentAnswers(person, form) {
+  const chart = presentChartForm(person, form);
+  const [base, alt] = chart.split("/");
+  if (!alt) return [base];
+  const stem = base.slice(0, -2); // without the noon and its vowel
+  return [base, alt === "وا" ? `${stem}ا` : stem];
+}
+

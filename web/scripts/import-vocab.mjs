@@ -157,7 +157,7 @@ const spaced = (r) => [...r].join(" ");
 // Stored conjugations looked up on Wiktionary (scripts/fetch-conjugations.mjs).
 function applyConjugations(w, c, flags) {
   if (!c || c.match === "none") return;
-  w.conjugations = Object.fromEntries(["past", "present", "imperative"].filter((k) => c[k]).map((k) => [k, mapValues(c[k], plainAlef)]));
+  w.conjugations = Object.fromEntries(["past", "present", "subjunctive", "jussive", "imperative"].filter((k) => c[k]).map((k) => [k, mapValues(c[k], plainAlef)]));
   if (c.activeParticiple?.length) w.activeParticiple = plainAlef(c.activeParticiple.join(" / "));
   if (c.passiveParticiple?.length) w.passiveParticiple = plainAlef(c.passiveParticiple.join(" / "));
   if (!w.masdar && c.masdar?.length) w.masdar = c.masdar.map(plainAlef); // Form I verbal nouns the list did not give

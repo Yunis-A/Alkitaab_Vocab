@@ -13,7 +13,7 @@ export default function TypingKeyboard({ layout, target, wrongCode, shiftDown, o
             const cls = ["tk-key", key.ch ? "tk-letter" : "tk-other", hit ? "tk-target" : "", key.code === wrongCode ? "tk-wrong" : "", isShift && shiftDown ? "tk-down" : ""].join(" ");
             return (
               <button key={key.code} type="button" tabIndex={-1} className={cls} style={{ flex: `${key.w} 1 0` }} onClick={() => onPress(key.code)}>
-                {key.sh && <span className="tk-shifted ar">{key.sh}</span>}
+                {key.sh && <span className="tk-shifted ar">{/[\u064B-\u0652]/.test(key.sh) ? `◌${key.sh}` : key.sh}</span>}
                 {key.ch && <span className="tk-ar ar">{key.ch}</span>}
                 <span className="tk-latin">{key.latin}</span>
               </button>

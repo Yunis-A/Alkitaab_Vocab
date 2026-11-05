@@ -11,6 +11,8 @@ import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
 import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
+import { MOODS, MOOD_LABELS, MOODS_FROM, moodCharts } from "./moods.js";
+import { TENSES, personFrom, learnedPersons, presentAnswers, conjugationItems, needsForm, isConjugationCorrect, charFor } from "./conjugation.js";
 import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult, targetLength, typicalCpm, TARGET_MINUTES } from "./typing.js";
 import assert from "node:assert/strict";
 
@@ -1044,8 +1046,9 @@ test("the learn cards' Arabic descriptions use words from the list and turn Arab
   const last = (...words) => words.map(at).reduce((m, l) => (l.book - m.book || l.unit - m.unit) > 0 ? l : m);
   for (const w of ["هل", "أتذكر", "كلمة", "أدرس", "جديد", "عربي", "إنجليزي", "في", "أو", "من", "فعل", "بلد", "عاصمة", "مذكر", "مؤنث"]) assert.ok(at(w), `${w} is in the list`);
   assert.deepEqual(strings.modeReviewDesc.unlock, last("هل", "أتذكر", "كلمة"));
-  assert.deepEqual(strings.modeQuickDesc.unlock, last("أدرس", "كلمة", "جديد"));
-  assert.deepEqual(strings.modeMatchingDesc.unlock, last("كلمة", "عربي", "إنجليزي"));
+  assert.deepEqual(strings.modeQuickDesc.unlock, last("تعلم", "كلمة", "جديد")); // تعلم: part 2 lesson 2
+  assert.deepEqual(strings.modeMatchingDesc.unlock, { book: 3, unit: 4 }); // مع (a verb's preposition, part 2 lesson 4)
+  assert.deepEqual(last("كلمة", "عربي", "إنجليزي"), { book: 2, unit: 1 });
   assert.deepEqual(strings.modePatternsDesc.unlock, last("كلمة", "من", "فعل"));
   assert.deepEqual(strings.modeGenderDesc.unlock, last("بلد", "مذكر", "مؤنث"));
   assert.deepEqual(strings.modeGeoDesc.unlock, last("بلد", "عاصمة"));
@@ -1081,7 +1084,7 @@ test("geography games: the countries, which take ال, and prepositions usable i
     { book: 2, unit: 2 }, { book: 2, unit: 4 }, { book: 2, unit: 6 }, { book: 3, unit: 4 }, { book: 1, unit: 1 },
   ]);
   const later = (...ls) => ls.reduce((m, l) => (l.book - m.book || l.unit - m.unit) > 0 ? l : m);
-  assert.deepEqual(strings.modePrepositionsDesc.unlock, later(lv.get("في"), lv.get("على"), lv.get("عن")));
+  assert.deepEqual(strings.modePrepositionsDesc.unlock, later(lv.get("في"), lv.get("على"), lv.get("مع"), { book: 3, unit: 4 })); // في أو على مع فعل
   assert.deepEqual(strings.articleWith.unlock, lv.get("مع"));
   const bidun = allWords.find((w) => w.definition === "without");
   assert.deepEqual(strings.articleWithout.unlock, { book: bidun.book, unit: bidun.unit });
@@ -1097,7 +1100,8 @@ test("sun and moon letters: 28 letters (ء instead of ا), 14 of each; the game 
   const sun = allWords.find((w) => w.definition === "sun");
   const moon = allWords.find((w) => w.definition === "moon");
   assert.deepEqual([sun.arabic, sun.book, sun.unit, moon.arabic, moon.book, moon.unit], ["شَمس", 1, 9, "قَمَر", 1, 9]);
-  for (const key of ["studySunMoon", "modeSunMoonDesc", "sunLetter", "moonLetter"]) assert.deepEqual(strings[key].unlock, { book: 1, unit: 9 }, key);
+  for (const key of ["modeSunMoonDesc", "sunLetter", "moonLetter"]) assert.deepEqual(strings[key].unlock, { book: 1, unit: 9 }, key);
+  assert.equal(strings.studySunMoon.en, "Sun letters and moon letters"); // the card title; its Arabic needs words the list does not have yet
 });
 
 test("typing lessons: the Arabic 101 key map, two letters per lesson, review lessons, strict order", () => {
@@ -1109,7 +1113,9 @@ test("typing lessons: the Arabic 101 key map, two letters per lesson, review les
   // every taught letter has exactly one key, and every letter key is taught once
   const letterKeys = pc.rows.flat().filter((k) => k.ch).map((k) => k.ch).sort();
   const shifted = pc.rows.flat().filter((k) => k.sh).map((k) => k.sh);
-  assert.deepEqual(shifted.sort(), ["أ", "آ", "إ"].sort());
+  assert.deepEqual(shifted.filter((x) => !/[ً-ْ]/.test(x)).sort(), ["أ", "آ", "إ"].sort());
+  // the vowel marks are on Shift: fatha Q, damma E, kasra A, sukun X, shadda `
+  assert.deepEqual(["KeyQ", "KeyE", "KeyA", "KeyX", "Backquote"].map((c) => pc.rows.flat().find((k) => k.code === c).sh), ["َ", "ُ", "ِ", "ْ", "ّ"]);
   assert.deepEqual([...LETTER_ORDER].sort(), [...letterKeys, "أ", "إ"].sort()); // the hamza seats أ إ are taught; آ is not
   assert.equal(new Set(letterKeys).size, 34);
   assert.deepEqual([keyFor(pc, "أ"), keyFor(pc, "إ"), keyFor(pc, "ا"), keyFor(pc, "ض")], [
@@ -1177,4 +1183,89 @@ test("typing progress is saved and merged with the account's", () => {
   assert.equal(m.typing.passed.n1.cpm, 30);
   saveProgress({ ...loadProgress(), typing: { passed: { n1: { accuracy: 1, cpm: 40 } } } });
   assert.equal(loadProgress().typing.passed.n1.cpm, 40);
+});
+
+test("conjugation game: pronouns by level, present answers, items, strict vowel marks, typing", () => {
+  const L = (book, unit) => ({ book, unit });
+  // the pronouns learned so far: the list's words first, then the rest where their labels turn Arabic
+  assert.deepEqual(learnedPersons(L(1, 1)), ["1s"]);
+  assert.deepEqual(learnedPersons(L(1, 4)), ["1s", "2ms", "2fs", "3ms", "3fs"]);
+  assert.equal(learnedPersons(L(2, 9)).length, 8); // + we, you all (m.), they (m.)
+  assert.equal(learnedPersons(L(3, 3)).length, 13); // + the duals and feminine plurals
+  assert.deepEqual(personFrom("1p"), strings["person.1p"].unlock);
+  // the present, free of case endings, accepted both ways where the noon can drop
+  assert.deepEqual(presentAnswers("2fs", "تَدْرُسِينَ"), ["تَدْرُسِينَ/ي".split("/")[0], "تَدْرُسِي"]);
+  assert.deepEqual(presentAnswers("3mp", "يَدْرُسُونَ"), ["يَدْرُسُونَ", "يَدْرُسُوا"]);
+  assert.deepEqual(presentAnswers("3md", "يَدْرُسانِ"), ["يَدْرُسانِ", "يَدْرُسا"]);
+  assert.deepEqual(presentAnswers("3ms", "يَدْرُسُ"), ["يَدْرُس"]);
+  assert.deepEqual(presentAnswers("3fp", "يَدْرُسْنَ"), ["يَدْرُسْنَ"]);
+  // items from real verbs
+  const verbs = allWords.filter((w) => w.pos === "verb" && w.arabic && w.root && w.form === 1).slice(0, 40);
+  const all = new Set(["1s", "2ms", "2fs", "3ms", "3fs", "1p", "2mp", "3mp", "2d", "3md", "3fd", "2fp", "3fp"]);
+  const items = conjugationItems(verbs, { tenses: new Set(TENSES), persons: all });
+  assert.ok(items.length > 500);
+  assert.ok(items.every((i) => i.word.root && i.answers.length && (i.tense === "masdar") === (i.person === null)));
+  assert.equal(conjugationItems(verbs, { tenses: new Set(["masdar"]), persons: all }).every((i) => i.tense === "masdar"), true);
+  assert.equal(conjugationItems(verbs, { tenses: new Set(["past"]), persons: new Set(["3ms"]) }).length > 10, true);
+  assert.equal(conjugationItems(verbs, { tenses: new Set(), persons: all }).length, 0);
+  // a past form: exact vowels are needed; fatha before alif, sukun and the case of the shadda are forgiven
+  const past = items.find((i) => i.tense === "past" && i.person === "3mp");
+  assert.equal(isConjugationCorrect(past, past.answers[0]), true);
+  assert.equal(isConjugationCorrect(past, past.answers[0].replace(/[ً-ْ]/g, "")), false); // no marks
+  assert.equal(isConjugationCorrect(past, ""), false);
+  assert.equal(isConjugationCorrect(past, past.answers[0] + "ََ"), false); // two vowels on one letter
+  const pres = items.find((i) => i.tense === "present" && i.person === "3ms");
+  assert.equal(isConjugationCorrect(pres, pres.answers[0]), true);
+  assert.equal(isConjugationCorrect(pres, pres.answers[0] + "ُ"), true); // a typed case ending is forgiven
+  const both = items.find((i) => i.tense === "present" && i.person === "2fs");
+  assert.ok(both.answers.length === 2 && both.answers.every((a) => isConjugationCorrect(both, a)));
+  const masdar = items.find((i) => i.tense === "masdar");
+  assert.equal(isConjugationCorrect(masdar, masdar.answers[0]), true);
+  assert.equal(isConjugationCorrect(masdar, "ال" + masdar.answers[0]), true); // with or without ال
+  // the form is shown only when the root has verbs of other forms
+  const w1 = { root: "ك ت ب", form: 1 }, w2 = { root: "ك ت ب", form: 2 }, w3 = { root: "د ر س", form: 1 };
+  assert.equal(needsForm(w1, [w1, w2, w3]), true);
+  assert.equal(needsForm(w3, [w1, w2, w3]), false);
+  // typing on the Arabic 101 keyboard: letters, Shift for the vowel marks and the hamza seats
+  assert.deepEqual([charFor(LAYOUT, "KeyQ", false), charFor(LAYOUT, "KeyQ", true), charFor(LAYOUT, "KeyH", true), charFor(LAYOUT, "Space", false), charFor(LAYOUT, "KeyB", false), charFor(LAYOUT, "KeyK", true), charFor(LAYOUT, "F5", false)],
+    ["ض", "َ", "أ", " ", "لا", null, null]);
+});
+
+test("conjugation game: the present asked by mood (مرفوع, منصوب, مجزوم) once it is learned", () => {
+  assert.deepEqual(MOODS.map((m) => MOOD_LABELS[m]), ["مرفوع", "منصوب", "مجزوم"]);
+  const sound = allWords.find((w) => w.pos === "verb" && w.form === 1 && w.root && !w.conjugations && getForms(w).regular && getForms(w).present);
+  const c = moodCharts(sound);
+  assert.ok(c);
+  // the endings: -u, -a, sukun; the noon-forms keep their noon in the marfūʿ and drop it in the other two
+  assert.ok(c.marfu["3ms"].endsWith("ُ") && c.mansub["3ms"].endsWith("َ") && c.majzum["3ms"].endsWith("ْ"));
+  assert.equal(c.mansub["3ms"].slice(0, -1), c.marfu["3ms"].slice(0, -1));
+  assert.ok(c.marfu["2fs"].endsWith("ينَ") && c.mansub["2fs"].endsWith("ي") && c.majzum["2fs"] === c.mansub["2fs"]);
+  assert.ok(c.marfu["3mp"].endsWith("ونَ") && c.mansub["3mp"].endsWith("وا"));
+  assert.ok(c.marfu["3md"].endsWith("انِ") && c.mansub["3md"].endsWith("ا"));
+  assert.ok(c.marfu["3fp"] === c.mansub["3fp"] && c.mansub["3fp"] === c.majzum["3fp"]); // يَفعَلْنَ in every mood
+  const all = new Set(["3ms", "2fs", "3mp"]);
+  const none = conjugationItems([sound], { tenses: new Set(["present"]), persons: all });
+  assert.ok(none.every((i) => !i.mood)); // before the moods: the plain present
+  const withMoods = conjugationItems([sound], { tenses: new Set(["present"]), persons: all, moods: new Set(MOODS) });
+  assert.equal(withMoods.length, 9);
+  assert.ok(withMoods.every((i) => i.mood && i.tense === "present"));
+  const pick = (mood, person) => withMoods.find((i) => i.mood === mood && i.person === person);
+  assert.equal(isConjugationCorrect(pick("marfu", "3ms"), c.marfu["3ms"]), true);
+  assert.equal(isConjugationCorrect(pick("marfu", "3ms"), c.mansub["3ms"]), false); // the ending decides
+  assert.equal(isConjugationCorrect(pick("mansub", "3ms"), c.mansub["3ms"]), true);
+  assert.equal(isConjugationCorrect(pick("majzum", "3ms"), c.majzum["3ms"]), true);
+  assert.equal(isConjugationCorrect(pick("majzum", "3ms"), c.majzum["3ms"].replace(/ْ$/, "")), true); // sukun is not required
+  assert.equal(isConjugationCorrect(pick("majzum", "3ms"), c.marfu["3ms"]), false);
+  assert.equal(isConjugationCorrect(pick("mansub", "2fs"), c.marfu["2fs"]), false); // the noon drops
+  assert.equal(isConjugationCorrect(pick("mansub", "2fs"), c.mansub["2fs"]), true);
+  // only the moods ticked
+  assert.equal(conjugationItems([sound], { tenses: new Set(["present"]), persons: all, moods: new Set(["majzum"]) }).length, 3);
+  // irregular verbs use the stored moods where there are some
+  const stored = allWords.find((w) => w.conjugations?.subjunctive && w.conjugations?.jussive);
+  if (stored) {
+    const sc = moodCharts(stored);
+    assert.equal(sc.mansub, stored.conjugations.subjunctive);
+    assert.ok(conjugationItems([stored], { tenses: new Set(["present"]), persons: new Set(["3ms"]), moods: new Set(MOODS) }).length === 3);
+  }
+  assert.deepEqual(MOODS_FROM, { book: 3, unit: 1 }); // placeholder lesson
 });

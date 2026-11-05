@@ -77,7 +77,7 @@ for (const w of todo) {
   const unlisted = expected === 0 && loose(t.past["3ms"]) === loose(title);
   out[w.id] = {
     title, root: c.root, args: c.conj.args, match: unlisted || (expected > 0 && score >= expected) ? "exact" : score > 0 ? "partial" : "none",
-    past: t.past, present: t.present, imperative: t.imperative,
+    past: t.past, present: t.present, subjunctive: t.subjunctive, jussive: t.jussive, imperative: t.imperative,
     masdar: t.masdar, activeParticiple: t.activeParticiple, passiveParticiple: t.passiveParticiple,
   };
   if ((expected > 0 && score < expected) || rootNote) report.push([w.id, w.definition, title, expected > 0 && score < expected ? `listed-form-differs(${loose(listedPast ?? "")}/${loose(listedPresent ?? "")} vs ${loose(t.past["3ms"])}/${loose(t.present?.["3ms"])})` : "ok", rootNote]);

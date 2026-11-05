@@ -6,14 +6,14 @@
 //   ch     the Arabic letter it types (null if it is not a letter the lessons teach); "لا" is the lam-alef key
 //   latin  the label printed on a QWERTY keycap
 //   w      width, in units of a normal key
-//   sh     the letter typed with Shift held (the hamza seats أ and إ, and آ)
+//   sh     what Shift types: the hamza seats أ إ and آ, and the vowel marks (fatha, damma, kasra, shadda, sukun)
 
 const k = (code, ch, latin, w = 1, sh = null) => ({ code, ch, latin, w, sh });
 const blank = (code, latin, w = 1) => ({ code, ch: null, latin, w });
 
 const PC_ROWS = [
   [
-    k("Backquote", "ذ", "`"),
+    k("Backquote", "ذ", "`", 1, "\u0651"),
     ...["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].map((d) => blank(`Digit${d}`, d)),
     blank("Minus", "-"),
     blank("Equal", "="),
@@ -21,21 +21,21 @@ const PC_ROWS = [
   ],
   [
     blank("Tab", "Tab", 1.5),
-    k("KeyQ", "ض", "Q"), k("KeyW", "ص", "W"), k("KeyE", "ث", "E"), k("KeyR", "ق", "R"), k("KeyT", "ف", "T"),
+    k("KeyQ", "ض", "Q", 1, "\u064E"), k("KeyW", "ص", "W"), k("KeyE", "ث", "E", 1, "\u064F"), k("KeyR", "ق", "R"), k("KeyT", "ف", "T"),
     k("KeyY", "غ", "Y", 1, "إ"), k("KeyU", "ع", "U"), k("KeyI", "ه", "I"), k("KeyO", "خ", "O"), k("KeyP", "ح", "P"),
     k("BracketLeft", "ج", "["), k("BracketRight", "د", "]"),
     blank("Backslash", "\\", 1.5),
   ],
   [
     blank("CapsLock", "Caps", 1.75),
-    k("KeyA", "ش", "A"), k("KeyS", "س", "S"), k("KeyD", "ي", "D"), k("KeyF", "ب", "F"), k("KeyG", "ل", "G"),
+    k("KeyA", "ش", "A", 1, "\u0650"), k("KeyS", "س", "S"), k("KeyD", "ي", "D"), k("KeyF", "ب", "F"), k("KeyG", "ل", "G"),
     k("KeyH", "ا", "H", 1, "أ"), k("KeyJ", "ت", "J"), k("KeyK", "ن", "K"), k("KeyL", "م", "L"),
     k("Semicolon", "ك", ";"), k("Quote", "ط", "'"),
     blank("Enter", "Enter", 2.25),
   ],
   [
     blank("ShiftLeft", "Shift", 2.25),
-    k("KeyZ", "ئ", "Z"), k("KeyX", "ء", "X"), k("KeyC", "ؤ", "C"), k("KeyV", "ر", "V"), k("KeyB", "لا", "B"),
+    k("KeyZ", "ئ", "Z"), k("KeyX", "ء", "X", 1, "\u0652"), k("KeyC", "ؤ", "C"), k("KeyV", "ر", "V"), k("KeyB", "لا", "B"),
     k("KeyN", "ى", "N", 1, "آ"), k("KeyM", "ة", "M"), k("Comma", "و", ","), k("Period", "ز", "."), k("Slash", "ظ", "/"),
     blank("ShiftRight", "Shift", 2.75),
   ],

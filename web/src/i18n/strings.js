@@ -105,11 +105,13 @@ export const strings = {
   //   هل (b2u1) أتذكر (b2u4) كلمة (b1u8) / أدرس (b2u1) جديدة (b1u4) / عربية (b1u10) إنجليزية (b2u1)
   //   في (b1u1) أو (b1u7) من (b1u1) / كلمة من فعل (b3u4) / بلد (b2u2) عاصمة (b3u4) / مذكر (b2u1) مؤنث (b2u1)
   modeReviewDesc: { en: "Cards that are due, spaced by your boxes.", ar: "هل أتذكر الكلمة؟", unlock: u(2, 4) },
-  modeQuickDesc: { en: "A short session over the units you pick. Nothing is saved.", ar: "أدرس كلمة جديدة", unlock: u(2, 1) },
-  modeMatchingDesc: { en: "Connect each English meaning to its Arabic word.", ar: "كلمة عربية وكلمة إنجليزية", unlock: u(2, 1) },
+  // تعلم (to learn) is taught in part 2 lesson 2
+  modeQuickDesc: { en: "Learn the new words.", ar: "تعلم كلمة جديدة", unlock: u(3, 2) },
+  // مع is a verb's preposition from part 2 lesson 4
+  modeMatchingDesc: { en: "Connect the Arabic word with the English word.", ar: "كلمة عربية مع كلمة إنجليزية", unlock: u(3, 4) },
   // على is introduced as a verb's preposition at part 1 lesson 6, عن at lesson 2: prepositions may be used in
   // Arabic text from there (they are not on the list to memorize); في is a word of its own from Alif Baa 1
-  modePrepositionsDesc: { en: "Choose every preposition a verb takes.", ar: "في أو على أو عن؟", unlock: u(2, 6) },
+  modePrepositionsDesc: { en: "Prepositions with a verb.", ar: "في أو على مع فعل", unlock: u(3, 4) }, // فعل is taught in part 2 lesson 4
   modePatternsDesc: { en: "Build every form of a verb pattern from one.", ar: "كلمة من فعل", unlock: u(3, 4) },
   modeGenderDesc: { en: "Is the country masculine or feminine?", ar: "بلد مذكر أو مؤنث؟", unlock: u(2, 2) },
   modeGeoDesc: { en: "Find each country or capital on the map, against the clock.", ar: "بلد وعاصمة", unlock: u(3, 4) },
@@ -132,12 +134,20 @@ export const strings = {
   typingRetry: { en: "Try again", ar: "حاول مرة أخرى", unlock: u(3, 8) },
   typingNext: { en: "Next lesson", ar: "الدرس التالي", unlock: u(3, 8) },
   // Sun and moon letters: شمس (sun) and قمر (moon) are taught in Alif Baa lesson 9, where the game unlocks
-  studySunMoon: { en: "Sun and moon letters", ar: "شمس وقمر", unlock: u(1, 9) },
+  studySunMoon: { en: "Sun letters and moon letters", ar: "الحروف الشمسية والقمرية", unlock: u(3, 8) },
   modeSunMoonDesc: { en: "Is the letter a sun letter or a moon letter?", ar: "شمس أو قمر؟", unlock: u(1, 9) },
   sunLetter: { en: "Sun", ar: "شمس", unlock: u(1, 9) },
   moonLetter: { en: "Moon", ar: "قمر", unlock: u(1, 9) },
   geoGamesTitle: { en: "Geography games", ar: "ألعاب الجغرافيا", unlock: u(2, 6) },
-  modeGeoGamesDesc: { en: "The map, and whether a country is masculine or feminine or takes ال.", ar: "بلد وعاصمة، مذكر أو مؤنث", unlock: u(3, 4) },
+  modeGeoGamesDesc: { en: "Various geography games.", ar: "بلد وعاصمة، مذكر أو مؤنث", unlock: u(3, 4) },
+  // Verbs: فعل is taught in part 2 lesson 4, تمرين (exercise) in Alif Baa lesson 8, يكتب in part 1 lesson 4
+  studyVerbs: { en: "Verbs", ar: "فعل", unlock: u(3, 4) },
+  modeVerbsDesc: { en: "Prepositions, verb forms and conjugation.", ar: "فعل مع في أو على", unlock: u(3, 4) },
+  studyConjugation: { en: "Conjugate the verb", ar: "التصريف", unlock: u(3, 8) },
+  modeConjugationDesc: { en: "Given a root, build the verb for a pronoun.", ar: "هو يكتب كلمة", unlock: u(2, 4) },
+  conjTenses: { en: "Practise", ar: "تمرين", unlock: u(1, 8) },
+  conjPronouns: { en: "Pronouns", ar: "الضمائر", unlock: u(3, 8) },
+  conjHint: { en: "Show the meaning", ar: "أظهر المعنى", unlock: u(3, 8) },
   // مع is a verb's preposition from part 2 lesson 4; بِدون is taught in part 2 lesson 5
   studyArticle: { en: "With ال or not?", ar: "مع ال أو بدون؟", unlock: u(3, 5) },
   modeArticleDesc: { en: "Does the country's name take ال?", ar: "بلد: ال أو لا؟", unlock: u(2, 2) },

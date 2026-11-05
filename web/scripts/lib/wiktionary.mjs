@@ -150,7 +150,7 @@ function personsFrom(mascCells, femCells, imperative = false) {
 export function parseConjHtml(html) {
   const rows = [...html.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)].map((m) => cellsOf(m[1]));
   const text = (c) => decode(stripTags(c.html)).replace(/\s+/g, " ").trim().toLowerCase();
-  const result = { past: null, present: null, imperative: null, masdar: null, activeParticiple: null, passiveParticiple: null };
+  const result = { past: null, present: null, subjunctive: null, jussive: null, imperative: null, masdar: null, activeParticiple: null, passiveParticiple: null };
 
   let passive = false;
   for (let i = 0; i < rows.length; i++) {
@@ -168,7 +168,7 @@ export function parseConjHtml(html) {
     else if (head.startsWith("passive participle")) single("passiveParticiple");
 
     if (passive || r[0].kind !== "h") continue;
-    const key = head.startsWith("past indicative") ? "past" : head.startsWith("non-past indicative") ? "present" : head.startsWith("imperative") ? "imperative" : null;
+    const key = head.startsWith("past indicative") ? "past" : head.startsWith("non-past indicative") ? "present" : head.startsWith("non-past subjunctive") ? "subjunctive" : head.startsWith("non-past jussive") ? "jussive" : head.startsWith("imperative") ? "imperative" : null;
     if (!key || result[key]) continue;
     // masculine row: [tense th, "m" th, ...9 td]; feminine row: ["f" th, ...5 td]
     const masc = r.filter((c) => c.kind === "d");
@@ -183,8 +183,8 @@ export async function renderConj(title, args) {
   const f = path.join(CACHE, "conj", fileKey(`${title}||${args}`) + ".json");
   if (fs.existsSync(f)) {
     const cached = JSON.parse(fs.readFileSync(f, "utf8"));
-    if (cached?.past) return cached;
-    fs.unlinkSync(f); // stale empty result from an earlier run
+    if (cached?.past && cached.subjunctive) return cached;
+    fs.unlinkSync(f); // stale: empty, or from before the subjunctive and jussive were kept
   }
   const params = new URLSearchParams({
     action: "parse", format: "json", formatversion: "2", prop: "text", contentmodel: "wikitext",

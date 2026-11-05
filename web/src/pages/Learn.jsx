@@ -15,6 +15,9 @@ import Prepositions from "./Prepositions.jsx";
 import VerbPatterns from "./VerbPatterns.jsx";
 import { prepositionVerbs } from "../lib/prepositions.js";
 import { PATTERNS_FROM } from "../lib/patterns.js";
+import Conjugation from "./Conjugation.jsx";
+import { TENSES, conjugationItems, learnedPersons } from "../lib/conjugation.js";
+import { MOODS, MOODS_FROM, MOOD_LABELS } from "../lib/moods.js";
 import Matching from "./Matching.jsx";
 import { levelReached } from "../config/books.js";
 import { levelKey } from "../lib/filters.js";
@@ -42,24 +45,36 @@ const toggled = (set, value, on) => {
 };
 
 // The ways to study. `direct` ones start at once; the rest open a setup screen where the student picks the
-// units (and a few options) first. `options` says which extra choices the setup shows.
+// units (and a few options) first. `options` says which extra choices the setup shows. A mode with no setup and
+// not `direct` is a group (see GROUPS).
 const MODES = [
   { id: "review", title: "reviewDue", desc: "modeReviewDesc", direct: true },
   { id: "quick", title: "quickStudy", desc: "modeQuickDesc", options: ["lists", "varieties", "first"] },
   { id: "matching", title: "matching", desc: "modeMatchingDesc", options: ["lists", "varieties"] },
-  { id: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
-  { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true, from: PATTERNS_FROM }, // covers what your level has learned
+  { id: "verbs", title: "studyVerbs", desc: "modeVerbsDesc" }, // opens a menu: prepositions, verb patterns, conjugation
   { id: "typing", title: "studyTyping", desc: "modeTypingDesc", direct: true },
   { id: "sunmoon", title: "studySunMoon", desc: "modeSunMoonDesc", direct: true, from: { book: 1, unit: 9 } }, // شَمس / قَمَر are taught in Alif Baa lesson 9
   { id: "geography", title: "geoGamesTitle", desc: "modeGeoGamesDesc" }, // opens a menu of geography games
 ];
 
+// the games under "Verbs"
+const CONJUGATION_FROM = PATTERNS_FROM; // the present tense is learned at part 1 lesson 4
+const VERB_GAMES = [
+  { id: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
+  { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true, from: PATTERNS_FROM }, // covers what your level has learned
+  { id: "conjugation", title: "studyConjugation", desc: "modeConjugationDesc", options: ["tenses", "moods", "pronouns"], from: CONJUGATION_FROM },
+];
+
 // the games under "Geography games"
 const GEO_GAMES = [
-  { id: "map", title: "geoTitle", desc: "modeGeoDesc" },
-  { id: "gender", title: "studyGender", desc: "modeGenderDesc", from: { book: 2, unit: 1 } }, // مُذَكَّر / مُؤَنَّث
-  { id: "article", title: "studyArticle", desc: "modeArticleDesc" },
+  { id: "map", title: "geoTitle", desc: "modeGeoDesc", direct: true },
+  { id: "gender", title: "studyGender", desc: "modeGenderDesc", direct: true, from: { book: 2, unit: 1 } }, // مُذَكَّر / مُؤَنَّث
+  { id: "article", title: "studyArticle", desc: "modeArticleDesc", direct: true },
 ];
+
+const GROUPS = { verbs: VERB_GAMES, geography: GEO_GAMES };
+// where Exit goes from a game or setup that sits in a group
+const PARENT = Object.fromEntries(Object.entries(GROUPS).flatMap(([group, games]) => games.map((g) => [g.id, group])));
 
 export default function Learn() {
   const { t, nf, level, visibleWords, activeCards, dialects } = useApp();
@@ -68,6 +83,9 @@ export default function Learn() {
   const [lists, setLists] = useState(() => new Set([1, 2]));
   const [chosen, setChosen] = useState(() => new Set(["ar-en", "egy", "shm"]));
   const [englishFirst, setEnglishFirst] = useState(false);
+  const [tenses, setTenses] = useState(() => new Set(TENSES)); // conjugation: past, present, verbal noun
+  const [offPersons, setOffPersons] = useState(() => new Set()); // conjugation: pronouns unticked (all learned ones start on)
+  const [moods, setMoods] = useState(() => new Set(MOODS)); // conjugation: marfūʿ, manṣūb, majzūm of the present
 
   const dueCount = activeCards.filter(([, c]) => c.due <= Date.now()).length;
   // formal is always offered; a dialect only once it is switched on in Settings
@@ -83,40 +101,52 @@ export default function Learn() {
     [visibleWords, units],
   );
   const prepVerbs = useMemo(() => prepositionVerbs(chosenVerbs), [chosenVerbs]);
+  // conjugation: the pronouns learned so far, minus those unticked; every verb of the list for the form check
+  const learned = useMemo(() => learnedPersons(level), [level]);
+  const persons = useMemo(() => new Set(learned.filter((p) => !offPersons.has(p))), [learned, offPersons]);
+  const allVerbs = useMemo(() => visibleWords.filter((w) => w.pos === "verb" && w.arabic && w.root), [visibleWords]);
+  // once the moods are learned the present is asked by mood
+  const moodsOn = levelReached(level, MOODS_FROM);
+  const conjItems = useMemo(
+    () => conjugationItems(chosenVerbs, { tenses, persons, moods: moodsOn ? moods : null }),
+    [chosenVerbs, tenses, persons, moods, moodsOn],
+  );
 
   const exit = () => setMode("menu");
+  const back = (id) => () => setMode(PARENT[id] ?? "menu");
   const available = (m) => !m.from || levelReached(level, m.from);
-  const count = { quick: items.length, matching: items.length, prepositions: prepVerbs.length };
+  const count = { quick: items.length, matching: items.length, prepositions: prepVerbs.length, conjugation: conjItems.length };
 
   if (mode === "run:review") return <Review onExit={exit} />;
   if (mode === "run:quick") return <QuickStudy items={items} englishFirst={englishFirst} onExit={exit} />;
   if (mode === "run:matching") return <Matching items={items} onExit={exit} />;
-  if (mode === "run:prepositions") return <Prepositions verbs={prepVerbs} onExit={exit} />;
-  if (mode === "run:patterns") return <VerbPatterns onExit={exit} />;
-  const backToGames = () => setMode("geography");
-  if (mode === "run:gender") return <GenderQuiz onExit={backToGames} />;
-  if (mode === "run:article") return <ArticleQuiz onExit={backToGames} />;
+  if (mode === "run:prepositions") return <Prepositions verbs={prepVerbs} onExit={back("prepositions")} />;
+  if (mode === "run:patterns") return <VerbPatterns onExit={back("patterns")} />;
+  if (mode === "run:conjugation") return <Conjugation items={conjItems} allVerbs={allVerbs} onExit={back("conjugation")} />;
+  if (mode === "run:gender") return <GenderQuiz onExit={back("gender")} />;
+  if (mode === "run:article") return <ArticleQuiz onExit={back("article")} />;
   if (mode === "run:sunmoon") return <SunMoonQuiz onExit={exit} />;
   if (mode === "run:typing") return <Typing onExit={exit} />;
   if (mode === "run:map") {
     return (
       <main className="page">
         <div className="quick-bar">
-          <button type="button" className="link-button" onClick={backToGames}><bdi>{t("studyExit")}</bdi></button>
+          <button type="button" className="link-button" onClick={back("map")}><bdi>{t("studyExit")}</bdi></button>
         </div>
         <section className="card"><GeoGame /></section>
       </main>
     );
   }
-  if (mode === "geography") {
+  // a group: a menu of games (the geography games, the verb games)
+  if (GROUPS[mode]) {
     return (
       <main className="page">
         <div className="quick-bar">
           <button type="button" className="link-button" onClick={exit}><bdi>{t("studyExit")}</bdi></button>
         </div>
         <div className="mode-grid">
-          {GEO_GAMES.filter(available).map((g) => (
-            <button key={g.id} type="button" className="mode-card" onClick={() => setMode(`run:${g.id}`)}>
+          {GROUPS[mode].filter(available).map((g) => (
+            <button key={g.id} type="button" className="mode-card" onClick={() => setMode(g.options ? g.id : `run:${g.id}`)}>
               <strong><bdi>{t(g.title)}</bdi></strong>
               <span className="muted"><bdi>{t(g.desc)}</bdi></span>
             </button>
@@ -126,13 +156,13 @@ export default function Learn() {
     );
   }
 
-  const setup = MODES.find((m) => m.id === mode);
+  const setup = [...MODES, ...VERB_GAMES].find((m) => m.id === mode && m.options);
   if (setup) {
     const needed = setup.id === "matching" ? 2 : 1;
     return (
       <main className="page narrow">
         <div className="quick-bar">
-          <button type="button" className="link-button" onClick={exit}><bdi>{t("studyExit")}</bdi></button>
+          <button type="button" className="link-button" onClick={back(setup.id)}><bdi>{t("studyExit")}</bdi></button>
         </div>
         <section className="card">
           <h2><bdi>{t(setup.title)}</bdi></h2>
@@ -175,6 +205,39 @@ export default function Learn() {
                   <input type="radio" name="first" checked={englishFirst} onChange={() => setEnglishFirst(true)} />
                   <span><bdi>{t("geoEnglish")}</bdi></span>
                 </label>
+              </div>
+            )}
+            {setup.options.includes("tenses") && (
+              <div className="unit-boxes">
+                <strong><bdi>{t("conjTenses")}</bdi></strong>
+                {TENSES.map((tense) => (
+                  <Check key={tense} checked={tenses.has(tense)} onChange={(on) => setTenses(toggled(tenses, tense, on))}>
+                    {t(tense)}
+                  </Check>
+                ))}
+              </div>
+            )}
+
+            {setup.options.includes("moods") && moodsOn && tenses.has("present") && (
+              <div className="unit-boxes">
+                <strong><bdi>{t("present")}</bdi></strong>
+                {MOODS.map((m) => (
+                  <label key={m} className="unit-box">
+                    <input type="checkbox" checked={moods.has(m)} onChange={(e) => setMoods(toggled(moods, m, e.target.checked))} />
+                    <span className="ar" dir="rtl">{MOOD_LABELS[m]}</span>
+                  </label>
+                ))}
+              </div>
+            )}
+
+            {setup.options.includes("pronouns") && (
+              <div className="unit-boxes">
+                <strong><bdi>{t("conjPronouns")}</bdi></strong>
+                {learned.map((p) => (
+                  <Check key={p} checked={persons.has(p)} onChange={(on) => setOffPersons(toggled(offPersons, p, !on))}>
+                    {t(`person.${p}`)}
+                  </Check>
+                ))}
               </div>
             )}
           </div>

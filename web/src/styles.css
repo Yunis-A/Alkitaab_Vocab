@@ -355,3 +355,13 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 .tk-shifted { position: absolute; top: 1px; left: 4px; font-size: 1rem; color: #999; line-height: 1; }
 .tk-target .tk-shifted { color: #fff; }
 .tk-down { background: #ddd; }
+
+/* conjugation game */
+.conj-root { letter-spacing: 0.6rem; }
+.conj-clue { display: flex; align-items: baseline; justify-content: center; gap: 0.4rem; font-size: 1.1rem; }
+.conj-person { color: var(--text); font-size: 1.3rem; }
+.conj-input { min-height: 4rem; margin: 1rem auto; max-width: 28rem; padding: 0.4rem 0.8rem; font-size: 2rem; border: 2px solid var(--theme); border-radius: 10px; background: #fff; }
+.conj-input.ok { border-color: #2e9e5b; background: #e6f5ec; }
+.conj-input.bad { border-color: #c0392b; background: #fbe9e7; }
+.conj-answer { color: #2e9e5b; font-size: 1.6rem; margin: 0; }
+.conj-mood { color: var(--text); font-size: 1.3rem; }
