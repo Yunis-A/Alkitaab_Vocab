@@ -5,9 +5,9 @@ import { buildItems } from "./study.js";
 import { mergeProgress } from "./sync.js";
 import { FORMS, ALL_FORMS, FIELDS, PATTERNS, canon, hasStackedMarks, canAppend, buildTask, isCorrect, isCorrectSet, withArticle, formsAt, fieldsAt, fieldsForAnyForm, answerSpec, QUAD_FROM } from "./patterns.js";
 import { presentChart, presentChartForm } from "./chart.js";
-import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey } from "./prepositions.js";
+import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey, prepositionLevels } from "./prepositions.js";
 import { lessonStyle } from "../config/books.js";
-import { COUNTRIES } from "../data/countries.js";
+import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import assert from "node:assert/strict";
 
 import { getForms, analyzeVerb } from "./morphology.js";
@@ -1042,8 +1042,28 @@ test("the learn cards' Arabic descriptions use words from the list and turn Arab
   assert.deepEqual(strings.modeReviewDesc.unlock, last("هل", "أتذكر", "كلمة"));
   assert.deepEqual(strings.modeQuickDesc.unlock, last("أدرس", "كلمة", "جديد"));
   assert.deepEqual(strings.modeMatchingDesc.unlock, last("كلمة", "عربي", "إنجليزي"));
-  assert.deepEqual(strings.modePrepositionsDesc.unlock, last("في", "أو", "من"));
   assert.deepEqual(strings.modePatternsDesc.unlock, last("كلمة", "من", "فعل"));
   assert.deepEqual(strings.modeGenderDesc.unlock, last("بلد", "مذكر", "مؤنث"));
   assert.deepEqual(strings.modeGeoDesc.unlock, last("بلد", "عاصمة"));
+});
+
+test("geography games: the 16 countries, which take ال, and prepositions usable in descriptions", () => {
+  assert.deepEqual(GAME_COUNTRIES.map((c) => c.en), [
+    "the United States", "China", "France", "Spain", "Britain", "Turkey", "Iran", "Russia", "Japan", "Italy",
+    "Canada", "Mexico", "Germany", "India", "Pakistan", "South Korea",
+  ]);
+  assert.ok(GAME_COUNTRIES.every(Boolean));
+  assert.deepEqual(GAME_COUNTRIES.filter((c) => c.hasArticle).map((c) => c.en), ["the United States", "China", "Japan", "Mexico", "India"]);
+  assert.equal(COUNTRIES.find((c) => c.en === "France").hasArticle, false);
+  // prepositions may be used in Arabic text from where they are introduced for a verb (not added to the list)
+  const lv = prepositionLevels(allWords);
+  assert.deepEqual([lv.get("عن"), lv.get("إلى"), lv.get("على"), lv.get("مع"), lv.get("في")], [
+    { book: 2, unit: 2 }, { book: 2, unit: 4 }, { book: 2, unit: 6 }, { book: 3, unit: 4 }, { book: 1, unit: 1 },
+  ]);
+  const later = (...ls) => ls.reduce((m, l) => (l.book - m.book || l.unit - m.unit) > 0 ? l : m);
+  assert.deepEqual(strings.modePrepositionsDesc.unlock, later(lv.get("في"), lv.get("على"), lv.get("عن")));
+  assert.deepEqual(strings.articleWith.unlock, lv.get("مع"));
+  const bidun = allWords.find((w) => w.definition === "without");
+  assert.deepEqual(strings.articleWithout.unlock, { book: bidun.book, unit: bidun.unit });
+  assert.ok(!allWords.some((w) => ["على", "عن", "إلى"].includes((w.arabic ?? "").replace(/[ً-ْ]/g, "")))); // not added to the list
 });

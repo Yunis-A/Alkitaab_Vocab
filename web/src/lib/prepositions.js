@@ -24,6 +24,23 @@ export function allPrepositions(words) {
   return [...seen.values()].sort((a, b) => b.count - a.count || a.key.localeCompare(b.key)).map(({ key, text }) => ({ key, text }));
 }
 
+// The lesson from which a preposition may be used in Arabic UI text: where it is first introduced as a
+// verb's preposition, or where it is a word of its own in the list, whichever is earlier. They are not
+// vocabulary to memorize. Returns Map key -> { book, unit }.
+export function prepositionLevels(words) {
+  const first = new Map();
+  const note = (key, w) => {
+    const seen = first.get(key);
+    if (!seen || w.book < seen.book || (w.book === seen.book && w.unit < seen.unit)) first.set(key, { book: w.book, unit: w.unit });
+  };
+  for (const w of words) {
+    if (!w.arabic) continue;
+    if (w.pos === "verb") for (const p of w.prepositions ?? []) note(prepKey(p), w);
+    if (w.pos === "particle") note(prepKey(w.arabic), w);
+  }
+  return first;
+}
+
 // How a selection did: `right` chosen and correct, `wrong` chosen but not taken, `missed` taken but not chosen.
 export function gradePrepositions(selected, word) {
   const taken = new Set(word.prepositions.map(prepKey));

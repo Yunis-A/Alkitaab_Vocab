@@ -7,6 +7,7 @@ import WordDetail from "../components/WordDetail.jsx";
 import UnitPicker from "../components/UnitPicker.jsx";
 import QuickStudy from "./QuickStudy.jsx";
 import GenderQuiz from "./GenderQuiz.jsx";
+import ArticleQuiz from "./ArticleQuiz.jsx";
 import GeoGame from "../components/GeoGame.jsx";
 import Prepositions from "./Prepositions.jsx";
 import VerbPatterns from "./VerbPatterns.jsx";
@@ -46,8 +47,14 @@ const MODES = [
   { id: "matching", title: "matching", desc: "modeMatchingDesc", options: ["lists", "varieties"] },
   { id: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
   { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true, from: PATTERNS_FROM }, // covers what your level has learned
-  { id: "gender", title: "studyGender", desc: "modeGenderDesc", direct: true, from: { book: 2, unit: 1 } }, // مُذَكَّر / مُؤَنَّث
-  { id: "geography", title: "geoTitle", desc: "modeGeoDesc", direct: true },
+  { id: "geography", title: "geoGamesTitle", desc: "modeGeoGamesDesc" }, // opens a menu of geography games
+];
+
+// the games under "Geography games"
+const GEO_GAMES = [
+  { id: "map", title: "geoTitle", desc: "modeGeoDesc" },
+  { id: "gender", title: "studyGender", desc: "modeGenderDesc", from: { book: 2, unit: 1 } }, // مُذَكَّر / مُؤَنَّث
+  { id: "article", title: "studyArticle", desc: "modeArticleDesc" },
 ];
 
 export default function Learn() {
@@ -82,14 +89,33 @@ export default function Learn() {
   if (mode === "run:matching") return <Matching items={items} onExit={exit} />;
   if (mode === "run:prepositions") return <Prepositions verbs={prepVerbs} onExit={exit} />;
   if (mode === "run:patterns") return <VerbPatterns onExit={exit} />;
-  if (mode === "run:gender") return <GenderQuiz onExit={exit} />;
-  if (mode === "run:geography") {
+  const backToGames = () => setMode("geography");
+  if (mode === "run:gender") return <GenderQuiz onExit={backToGames} />;
+  if (mode === "run:article") return <ArticleQuiz onExit={backToGames} />;
+  if (mode === "run:map") {
+    return (
+      <main className="page">
+        <div className="quick-bar">
+          <button type="button" className="link-button" onClick={backToGames}><bdi>{t("studyExit")}</bdi></button>
+        </div>
+        <section className="card"><GeoGame /></section>
+      </main>
+    );
+  }
+  if (mode === "geography") {
     return (
       <main className="page">
         <div className="quick-bar">
           <button type="button" className="link-button" onClick={exit}><bdi>{t("studyExit")}</bdi></button>
         </div>
-        <section className="card"><GeoGame /></section>
+        <div className="mode-grid">
+          {GEO_GAMES.filter(available).map((g) => (
+            <button key={g.id} type="button" className="mode-card" onClick={() => setMode(`run:${g.id}`)}>
+              <strong><bdi>{t(g.title)}</bdi></strong>
+              <span className="muted"><bdi>{t(g.desc)}</bdi></span>
+            </button>
+          ))}
+        </div>
       </main>
     );
   }

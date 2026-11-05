@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
-import { COUNTRIES } from "../data/countries.js";
+import { GAME_COUNTRIES as COUNTRIES } from "../data/countries.js";
 import { shuffle } from "../lib/matching.js";
 
 // Is this country masculine or feminine? One country at a time, answered with two buttons.

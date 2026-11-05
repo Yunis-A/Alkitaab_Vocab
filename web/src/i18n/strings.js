@@ -107,10 +107,19 @@ export const strings = {
   modeReviewDesc: { en: "Cards that are due, spaced by your boxes.", ar: "هل أتذكر الكلمة؟", unlock: u(2, 4) },
   modeQuickDesc: { en: "A short session over the units you pick. Nothing is saved.", ar: "أدرس كلمة جديدة", unlock: u(2, 1) },
   modeMatchingDesc: { en: "Connect each English meaning to its Arabic word.", ar: "كلمة عربية وكلمة إنجليزية", unlock: u(2, 1) },
-  modePrepositionsDesc: { en: "Choose every preposition a verb takes.", ar: "في أو من؟", unlock: u(1, 7) },
+  // على is introduced as a verb's preposition at part 1 lesson 6, عن at lesson 2: prepositions may be used in
+  // Arabic text from there (they are not on the list to memorize); في is a word of its own from Alif Baa 1
+  modePrepositionsDesc: { en: "Choose every preposition a verb takes.", ar: "في أو على أو عن؟", unlock: u(2, 6) },
   modePatternsDesc: { en: "Build every form of a verb pattern from one.", ar: "كلمة من فعل", unlock: u(3, 4) },
   modeGenderDesc: { en: "Is the country masculine or feminine?", ar: "بلد مذكر أو مؤنث؟", unlock: u(2, 2) },
   modeGeoDesc: { en: "Find each country or capital on the map, against the clock.", ar: "بلد وعاصمة", unlock: u(3, 4) },
+  geoGamesTitle: { en: "Geography games", ar: "ألعاب الجغرافيا", unlock: u(2, 6) },
+  modeGeoGamesDesc: { en: "The map, and whether a country is masculine or feminine or takes ال.", ar: "بلد وعاصمة، مذكر أو مؤنث", unlock: u(3, 4) },
+  // مع is a verb's preposition from part 2 lesson 4; بِدون is taught in part 2 lesson 5
+  studyArticle: { en: "With ال or not?", ar: "مع ال أو بدون؟", unlock: u(3, 5) },
+  modeArticleDesc: { en: "Does the country's name take ال?", ar: "بلد: ال أو لا؟", unlock: u(2, 2) },
+  articleWith: { en: "with ال", ar: "مع ال", unlock: u(3, 4) },
+  articleWithout: { en: "without ال", ar: "بدون ال", unlock: u(3, 5) },
   studyNoUnits: { en: "Pick at least one unit with words.", ar: "اختر درسا فيه كلمات.", unlock: u(3, 8) },
   studyExit: { en: "Exit", ar: "خروج", unlock: u(3, 8) },
   studyDone: {
