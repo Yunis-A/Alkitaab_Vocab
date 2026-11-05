@@ -2,8 +2,10 @@ import { books, BOOK_IDS, unitAfterBookChange } from "../config/books.js";
 import { useApp } from "../context/AppContext.jsx";
 
 // Book + unit selectors. Controlled by the caller via value/onChange.
-export default function LevelPicker({ value, onChange, compact = false }) {
-  const { t, bookName, unitLabel } = useApp();
+// `fixed` writes books and lessons in the static textbook style (Arabic digits, درس) whatever the level;
+// only the first-run screen uses it.
+export default function LevelPicker({ value, onChange, compact = false, fixed = false }) {
+  const { t, nf, bookName, unitLabel } = useApp();
   const { book, unit } = value;
 
   const units = Array.from({ length: books[book].maxUnits }, (_, i) => i + 1);
@@ -21,7 +23,7 @@ export default function LevelPicker({ value, onChange, compact = false }) {
           }}
         >
           {BOOK_IDS.map((id) => (
-            <option key={id} value={id}>{bookName(id)}</option>
+            <option key={id} value={id}>{bookName(id, { fixed })}</option>
           ))}
         </select>
       </label>
@@ -33,7 +35,7 @@ export default function LevelPicker({ value, onChange, compact = false }) {
           onChange={(e) => onChange({ book, unit: Number(e.target.value) })}
         >
           {units.map((n) => (
-            <option key={n} value={n}>{unitLabel(book, n, { english: true })}</option>
+            <option key={n} value={n}>{fixed ? unitLabel(book, n, { english: true }) : t("unitN", nf(n))}</option>
           ))}
         </select>
       </label>

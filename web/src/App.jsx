@@ -17,7 +17,7 @@ function Onboarding() {
     <main className="page narrow">
       <h1><bdi>{t("setupTitle")}</bdi></h1>
       <p><bdi>{t("setupHelp")}</bdi></p>
-      <LevelPicker value={value} onChange={setValue} />
+      <LevelPicker value={value} onChange={setValue} fixed />
       <button className="primary" onClick={() => setLevel(value.book, value.unit)}>
         <span dir="auto">{t("setupContinue")}</span>
       </button>
@@ -31,7 +31,7 @@ function Onboarding() {
 }
 
 function Shell() {
-  const { t, level, bookName, unitLabel } = useApp();
+  const { t, level, nf, bookName } = useApp();
   return (
     <>
       <header className="topbar">
@@ -44,7 +44,7 @@ function Shell() {
           <NavLink to="/settings" dir="auto">{t("navSettings")}</NavLink>
         </nav>
         <Link className="level-chip" to="/settings" dir="auto">
-          {bookName(level.book)} / {unitLabel(level.book, level.unit)}
+          {bookName(level.book)} / {nf(level.unit)}
         </Link>
       </header>
       <Routes>

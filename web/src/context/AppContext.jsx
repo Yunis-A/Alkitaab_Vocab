@@ -122,17 +122,19 @@ export function AppProvider({ children }) {
   const arabicDigits = levelReached(effectiveLevel, ARABIC_DIGITS_LEVEL);
   const nf = useCallback((n) => localizeDigits(n, arabicDigits), [arabicDigits]);
   const bookName = useCallback(
-    (id) => {
+    // `fixed` is the static textbook style used on the first-run screen: the part number in Al-Kitaab
+    // names is Arabic-Indic whatever the student's level; elsewhere it follows the level as usual
+    (id, { fixed = false } = {}) => {
       const b = books[id];
       const name = b.nameAr && levelReached(effectiveLevel, b.nameArFrom) ? b.nameAr : b.name;
-      // the part number in Al-Kitaab names is always Arabic-Indic; Alif Baa has no digits in its name
-      return localizeDigits(name, arabicDigits || id >= 2);
+      return localizeDigits(name, arabicDigits || (fixed && id >= 2));
     },
     [arabicDigits, effectiveLevel],
   );
 
-  // A lesson as printed: "٧", "درس ٧" (from Alif Baa lesson 5, and for every Al-Kitaab lesson). With
-  // `english`, early Alif Baa lessons read "Unit 3" instead of a bare number (for pickers).
+  // A lesson in the fixed textbook style (only the first-run screen uses it; the rest of the site follows
+  // the student's level): "٧", "درس ٧" (from Alif Baa lesson 5, and for every Al-Kitaab lesson). With
+  // `english`, early Alif Baa lessons read "Unit 3" instead of a bare number.
   const unitLabel = useCallback((book, unit, { english = false } = {}) => {
     const style = lessonStyle(book, unit);
     const n = localizeDigits(unit, style.digits);

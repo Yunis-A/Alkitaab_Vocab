@@ -32,7 +32,7 @@ function Select({ label, value, onChange, children }) {
 }
 
 export default function Lookup() {
-  const { t, nf, bookName, unitLabel, level, visibleWords, visibleIndex, dialects, statusOf } = useApp();
+  const { t, nf, bookName, level, visibleWords, visibleIndex, dialects, statusOf } = useApp();
   const [params, setParams] = useSearchParams();
   const q = params.get("q") ?? "";
   const rawFilters = filtersFromParams(params);
@@ -69,7 +69,7 @@ export default function Lookup() {
 
   const lessonOption = (l) => (
     <option key={levelKey(l)} value={levelKey(l)}>
-      {bookName(l.book)} / {unitLabel(l.book, l.unit)}
+      {bookName(l.book)} / {nf(l.unit)}
     </option>
   );
 

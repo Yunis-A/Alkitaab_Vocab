@@ -5,7 +5,7 @@ import { levelKey, levelsUpTo } from "../lib/filters.js";
 // Checkboxes for the units up to the student's level, grouped by book. Ticking a book's name ticks all of
 // its units. `value` is a Set of level keys ("book.unit").
 export default function UnitPicker({ value, onChange }) {
-  const { level, bookName, unitLabel } = useApp();
+  const { level, nf, bookName } = useApp();
   const byBook = new Map();
   for (const l of levelsUpTo(level, books)) {
     if (!byBook.has(l.book)) byBook.set(l.book, []);
@@ -39,7 +39,7 @@ export default function UnitPicker({ value, onChange }) {
                 return (
                   <label key={k} className="unit-box">
                     <input type="checkbox" checked={value.has(k)} onChange={(e) => toggle([k], e.target.checked)} />
-                    <span>{unitLabel(l.book, l.unit)}</span>
+                    <span>{nf(l.unit)}</span>
                   </label>
                 );
               })}
