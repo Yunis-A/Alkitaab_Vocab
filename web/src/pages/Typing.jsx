@@ -72,6 +72,8 @@ export function TypingLesson({ lesson, onExit, onNext }) {
     if (startedAt.current === null) startedAt.current = performance.now();
     const need = keyFor(layout, s.tokens[s.pos]);
     if (code === need.code && shift === need.shift) {
+      clearTimeout(flash.current);
+      setWrongCode(null); // the right key clears the red at once
       const next = s.pos + 1;
       setPos(next);
       if (next === s.tokens.length) {
@@ -95,8 +97,10 @@ export function TypingLesson({ lesson, onExit, onNext }) {
       press(e.code, e.shiftKey);
     };
     window.addEventListener("keydown", onKey);
-    return () => { window.removeEventListener("keydown", onKey); clearTimeout(flash.current); };
+    return () => window.removeEventListener("keydown", onKey);
   }); // re-bound each render so press() always sees the current lesson
+  // (the red flash's timer is cleared only when the lesson closes: clearing it on every render left the key red)
+  useEffect(() => () => clearTimeout(flash.current), []);
 
   const retry = () => {
     startedAt.current = null;
