@@ -1086,9 +1086,14 @@ test("geography games: the countries, which take ال, and prepositions usable i
   assert.ok(!allWords.some((w) => ["على", "عن", "إلى"].includes((w.arabic ?? "").replace(/[ً-ْ]/g, "")))); // not added to the list
 });
 
-test("sun and moon letters: 28 letters, 14 of each", () => {
+test("sun and moon letters: 28 letters (ء instead of ا), 14 of each; the game opens with شمس and قمر at Alif Baa 9", () => {
   assert.equal(LETTERS.length, 28);
   assert.equal(new Set(LETTERS.map((l) => l.letter)).size, 28);
+  assert.ok(!LETTERS.some((l) => l.letter === "ا") && LETTERS.some((l) => l.letter === "ء" && !l.sun));
   assert.deepEqual(LETTERS.filter((l) => l.sun).map((l) => l.letter).sort(), [..."تثدذرزسشصضطظلن"].sort());
-  assert.deepEqual(LETTERS.filter((l) => !l.sun).map((l) => l.letter).sort(), [..."ابجحخعغفقكمهوي"].sort());
+  assert.deepEqual(LETTERS.filter((l) => !l.sun).map((l) => l.letter).sort(), [..."ءبجحخعغفقكمهوي"].sort());
+  const sun = allWords.find((w) => w.definition === "sun");
+  const moon = allWords.find((w) => w.definition === "moon");
+  assert.deepEqual([sun.arabic, sun.book, sun.unit, moon.arabic, moon.book, moon.unit], ["شَمس", 1, 9, "قَمَر", 1, 9]);
+  for (const key of ["studySunMoon", "modeSunMoonDesc", "sunLetter", "moonLetter"]) assert.deepEqual(strings[key].unlock, { book: 1, unit: 9 }, key);
 });

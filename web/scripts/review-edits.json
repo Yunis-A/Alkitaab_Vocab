@@ -430,6 +430,29 @@
   },
   "add": [
     {
+      "_comment": "Alif Baa lesson 9 (not in the source list); unlocks the sun and moon letters game.",
+      "book": 1,
+      "unit": 9,
+      "part": null,
+      "arabic": "شَمس",
+      "definition": "sun",
+      "pos": "noun",
+      "root": null,
+      "form": null,
+      "gender": "feminine"
+    },
+    {
+      "book": 1,
+      "unit": 9,
+      "part": null,
+      "arabic": "قَمَر",
+      "definition": "moon",
+      "pos": "noun",
+      "root": null,
+      "form": null,
+      "gender": "masculine"
+    },
+    {
       "_comment": "Al-Kitaab part 1, lesson 1 (not in the source list); also turns the Shami label Arabic.",
       "book": 2,
       "unit": 1,
