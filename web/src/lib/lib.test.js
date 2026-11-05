@@ -11,8 +11,8 @@ import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
 import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
-import { MOODS, MOOD_LABELS, MOODS_FROM, moodCharts } from "./moods.js";
-import { TENSES, personFrom, learnedPersons, presentAnswers, conjugationItems, needsForm, isConjugationCorrect, charFor } from "./conjugation.js";
+import { MOODS, MOOD_LABELS, MOOD_FROM, learnedMoods, moodCharts } from "./moods.js";
+import { TENSES, tensesAt, personFrom, learnedPersons, presentAnswers, conjugationItems, needsForm, isConjugationCorrect, charFor } from "./conjugation.js";
 import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult, targetLength, typicalCpm, TARGET_MINUTES } from "./typing.js";
 import assert from "node:assert/strict";
 
@@ -1189,10 +1189,23 @@ test("conjugation game: pronouns by level, present answers, items, strict vowel 
   const L = (book, unit) => ({ book, unit });
   // the pronouns learned so far: the list's words first, then the rest where their labels turn Arabic
   assert.deepEqual(learnedPersons(L(1, 1)), ["1s"]);
-  assert.deepEqual(learnedPersons(L(1, 4)), ["1s", "2ms", "2fs", "3ms", "3fs"]);
-  assert.equal(learnedPersons(L(2, 9)).length, 8); // + we, you all (m.), they (m.)
-  assert.equal(learnedPersons(L(3, 3)).length, 13); // + the duals and feminine plurals
-  assert.deepEqual(personFrom("1p"), strings["person.1p"].unlock);
+  const same = (a, b) => assert.deepEqual([...a].sort(), [...b].sort());
+  same(learnedPersons(L(1, 4)), ["1s", "2ms", "2fs", "3ms", "3fs"]);
+  same(learnedPersons(L(2, 2)), ["1s", "2ms", "2fs", "3ms", "3fs", "2mp", "3mp", "1p"]); // you all, they (m.), we: part 1 lesson 2
+  assert.equal(learnedPersons(L(3, 4)).length, 8);
+  assert.equal(learnedPersons(L(3, 5)).length, 11); // the duals: part 2 lesson 5
+  assert.equal(learnedPersons(L(3, 6)).length, 11);
+  assert.equal(learnedPersons(L(3, 7)).length, 13); // the feminine plurals: part 2 lesson 7
+  for (const p of ["1s", "2ms", "2fs", "3ms", "3fs", "1p", "2mp", "3mp", "2d", "3md", "3fd", "2fp", "3fp"]) {
+    // the labels turn Arabic where they are learned (أنا waits a lesson: the site starts fully in English)
+    assert.deepEqual(p === "1s" ? { book: 1, unit: 2 } : personFrom(p), strings[`person.${p}`].unlock, p);
+  }
+  // the types: the present at part 1 lesson 4, the verbal noun at 6, the past at 8
+  assert.deepEqual([tensesAt(L(2, 3)), tensesAt(L(2, 4)), tensesAt(L(2, 6)), tensesAt(L(2, 8))], [[], ["present"], ["masdar", "present"], ["past", "masdar", "present"]].map((a) => a.sort((x, y) => TENSES.indexOf(x) - TENSES.indexOf(y))));
+  assert.equal(strings.conjTenses.ar, "النوع");
+  // the moods: مرفوع at part 1 lesson 9, منصوب at 10, مجزوم at 13
+  assert.deepEqual([learnedMoods(L(2, 8)), learnedMoods(L(2, 9)), learnedMoods(L(2, 10)), learnedMoods(L(2, 12)), learnedMoods(L(2, 13))],
+    [[], ["marfu"], ["marfu", "mansub"], ["marfu", "mansub"], ["marfu", "mansub", "majzum"]]);
   // the present, free of case endings, accepted both ways where the noon can drop
   assert.deepEqual(presentAnswers("2fs", "تَدْرُسِينَ"), ["تَدْرُسِينَ/ي".split("/")[0], "تَدْرُسِي"]);
   assert.deepEqual(presentAnswers("3mp", "يَدْرُسُونَ"), ["يَدْرُسُونَ", "يَدْرُسُوا"]);
@@ -1267,5 +1280,11 @@ test("conjugation game: the present asked by mood (مرفوع, منصوب, مج�
     assert.equal(sc.mansub, stored.conjugations.subjunctive);
     assert.ok(conjugationItems([stored], { tenses: new Set(["present"]), persons: new Set(["3ms"]), moods: new Set(MOODS) }).length === 3);
   }
-  assert.deepEqual(MOODS_FROM, { book: 3, unit: 1 }); // placeholder lesson
+  assert.deepEqual([MOOD_FROM.marfu, MOOD_FROM.mansub, MOOD_FROM.majzum], [{ book: 2, unit: 9 }, { book: 2, unit: 10 }, { book: 2, unit: 13 }]);
+  // before the moods are learned the plain present accepts the form with no ending and any of the three moods
+  const plain = none.find((i) => i.person === "3ms");
+  for (const form of [c.marfu["3ms"], c.mansub["3ms"], c.majzum["3ms"], c.majzum["3ms"].replace(/ْ$/, "")]) assert.equal(isConjugationCorrect(plain, form), true, form);
+  assert.equal(isConjugationCorrect(plain, plain.answers[0].replace(/[ً-ْ]/g, "")), false); // the marks still count
+  const plain2fs = none.find((i) => i.person === "2fs");
+  for (const form of [c.marfu["2fs"], c.mansub["2fs"]]) assert.equal(isConjugationCorrect(plain2fs, form), true, form);
 });

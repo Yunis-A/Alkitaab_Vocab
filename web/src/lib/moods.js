@@ -2,14 +2,21 @@
 // present is written without a case ending; the conjugation game asks for the moods once the student has
 // learned them. Irregular verbs have all three stored (from Wiktionary); regular ones are derived.
 
+import { levelReached } from "../config/books.js";
 import { getForms, PAST_PERSONS } from "./morphology.js";
 import { presentAnswers } from "./chart.js";
 
 export const MOODS = ["marfu", "mansub", "majzum"];
 export const MOOD_LABELS = { marfu: "مرفوع", mansub: "منصوب", majzum: "مجزوم" }; // always written in Arabic
 
-// TODO: placeholder until the lesson where the moods are learned is given.
-export const MOODS_FROM = { book: 3, unit: 1 };
+// Where each mood is learned (Al-Kitaab part 1, lessons 9, 10 and 13). Before a mood is learned the present is
+// asked plain, and any of the moods, or no ending at all, is accepted.
+export const MOOD_FROM = {
+  marfu: { book: 2, unit: 9 },
+  mansub: { book: 2, unit: 10 },
+  majzum: { book: 2, unit: 13 },
+};
+export const learnedMoods = (level) => MOODS.filter((m) => levelReached(level, MOOD_FROM[m]));
 
 // The persons whose form ends in a ن that drops in the manṣūb and majzūm.
 const NOON_DROPPERS = new Set(["2fs", "2mp", "3mp", "2d", "3md", "3fd"]);

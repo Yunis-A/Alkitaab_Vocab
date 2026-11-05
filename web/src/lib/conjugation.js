@@ -3,32 +3,46 @@
 // stored for irregular verbs. Vowel marks are required.
 
 import { levelReached } from "../config/books.js";
-import { strings } from "../i18n/strings.js";
 import { canon, hasStackedMarks, withArticle } from "./patterns.js";
 import { getForms, PAST_PERSONS } from "./morphology.js";
 import { presentAnswers } from "./chart.js";
-import { MOODS, MOODS_FROM, moodCharts } from "./moods.js";
+import { MOODS, MOOD_FROM, learnedMoods, moodCharts } from "./moods.js";
 
-export { presentAnswers, MOODS, MOODS_FROM };
+export { presentAnswers, MOODS, MOOD_FROM, learnedMoods };
 
 export const TENSES = ["past", "present", "masdar"];
 
-// Where each pronoun is learned: the ones that are words of the list from that word's lesson (أنا, أنتَ, أنتِ,
-// هو, هي), the rest from the lesson their label turns Arabic in (see "person.*" in the UI strings).
-const FROM_LIST = {
+// Where each tense is learned (Al-Kitaab part 1): the present at lesson 4, the verbal noun at lesson 6, the past
+// at lesson 8.
+export const TENSE_FROM = { present: { book: 2, unit: 4 }, masdar: { book: 2, unit: 6 }, past: { book: 2, unit: 8 } };
+export const tensesAt = (level) => TENSES.filter((t) => levelReached(level, TENSE_FROM[t]));
+
+// Where each pronoun is learned: أنا at Alif Baa 1, أنتَ and أنتِ at 2, هو and هي at 4; you all, they (m.) and we
+// at part 1 lesson 2; the duals at part 2 lesson 5; the feminine plurals at part 2 lesson 7. (The labels turn
+// Arabic there too: see "person.*" in the UI strings.)
+const PERSON_FROM = {
   "1s": { book: 1, unit: 1 },
   "2ms": { book: 1, unit: 2 },
   "2fs": { book: 1, unit: 2 },
   "3ms": { book: 1, unit: 4 },
   "3fs": { book: 1, unit: 4 },
+  "2mp": { book: 2, unit: 2 },
+  "3mp": { book: 2, unit: 2 },
+  "1p": { book: 2, unit: 2 },
+  "2d": { book: 3, unit: 5 },
+  "3md": { book: 3, unit: 5 },
+  "3fd": { book: 3, unit: 5 },
+  "2fp": { book: 3, unit: 7 },
+  "3fp": { book: 3, unit: 7 },
 };
-export const personFrom = (person) => FROM_LIST[person] ?? strings[`person.${person}`].unlock;
+export const personFrom = (person) => PERSON_FROM[person];
 export const learnedPersons = (level) => PAST_PERSONS.filter((p) => levelReached(level, personFrom(p)));
 
 // Every question the chosen verbs, tenses and pronouns allow. `verbs` are word entries; `tenses` and `persons`
-// are Sets. With `moods` (a Set, once the student has learned them) the present is asked in each chosen mood
-// (مرفوع, منصوب, مجزوم) and written with its ending; without, it is the plain present with no case ending.
-// Each item: { id, word, tense, mood (present only, with moods), person (null for the verbal noun), answers }.
+// are Sets. With `moods` (a Set of the moods learned and ticked) the present is asked in each of them
+// (مرفوع, منصوب, مجزوم) and written with its ending. With `moods: null`, before any mood is learned, the present
+// is asked plain and any mood, or no ending at all, is accepted (`accept` lists them).
+// Each item: { id, word, tense, mood (present only, with moods), person (null for the verbal noun), answers, accept? }.
 export function conjugationItems(verbs, { tenses, persons, moods = null }) {
   const out = [];
   for (const word of verbs) {
@@ -54,6 +68,7 @@ export function conjugationItems(verbs, { tenses, persons, moods = null }) {
         out.push({
           id: `${word.id}|${tense}|${person}`, word, tense, person,
           answers: tense === "present" ? presentAnswers(person, form) : [form],
+          ...(tense === "present" ? { accept: anyMood(word, person, presentAnswers(person, form)) } : {}),
         });
       }
     }
@@ -62,6 +77,13 @@ export function conjugationItems(verbs, { tenses, persons, moods = null }) {
     }
   }
   return out;
+}
+
+// Every form the plain present may be given with: no ending, or the ending of any of the three moods.
+function anyMood(word, person, plain) {
+  const charts = moodCharts(word);
+  const more = charts ? MOODS.flatMap((m) => (charts[m]?.[person] ?? "").split(" / ").filter(Boolean)) : [];
+  return [...plain, ...more];
 }
 
 // Is the root alone enough to know which verb is meant? The form number is shown when the same root has verbs
@@ -82,7 +104,7 @@ export function isConjugationCorrect(item, typed) {
       return t === c || t === c.replace(/^ال/, "") || t === canon(withArticle(a));
     });
   }
-  return item.answers.some((a) => t === canon(a));
+  return (item.accept ?? item.answers).some((a) => t === canon(a));
 }
 
 // The letter or mark a key press types (Shift: the shifted one), or null.

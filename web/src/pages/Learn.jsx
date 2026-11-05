@@ -16,8 +16,8 @@ import VerbPatterns from "./VerbPatterns.jsx";
 import { prepositionVerbs } from "../lib/prepositions.js";
 import { PATTERNS_FROM } from "../lib/patterns.js";
 import Conjugation from "./Conjugation.jsx";
-import { TENSES, conjugationItems, learnedPersons } from "../lib/conjugation.js";
-import { MOODS, MOODS_FROM, MOOD_LABELS } from "../lib/moods.js";
+import { conjugationItems, learnedMoods, learnedPersons, tensesAt } from "../lib/conjugation.js";
+import { MOOD_LABELS } from "../lib/moods.js";
 import Matching from "./Matching.jsx";
 import { levelReached } from "../config/books.js";
 import { levelKey } from "../lib/filters.js";
@@ -83,9 +83,9 @@ export default function Learn() {
   const [lists, setLists] = useState(() => new Set([1, 2]));
   const [chosen, setChosen] = useState(() => new Set(["ar-en", "egy", "shm"]));
   const [englishFirst, setEnglishFirst] = useState(false);
-  const [tenses, setTenses] = useState(() => new Set(TENSES)); // conjugation: past, present, verbal noun
+  const [offTenses, setOffTenses] = useState(() => new Set()); // conjugation: types unticked (all learned ones start on)
   const [offPersons, setOffPersons] = useState(() => new Set()); // conjugation: pronouns unticked (all learned ones start on)
-  const [moods, setMoods] = useState(() => new Set(MOODS)); // conjugation: marfūʿ, manṣūb, majzūm of the present
+  const [offMoods, setOffMoods] = useState(() => new Set()); // conjugation: moods unticked
 
   const dueCount = activeCards.filter(([, c]) => c.due <= Date.now()).length;
   // formal is always offered; a dialect only once it is switched on in Settings
@@ -105,11 +105,15 @@ export default function Learn() {
   const learned = useMemo(() => learnedPersons(level), [level]);
   const persons = useMemo(() => new Set(learned.filter((p) => !offPersons.has(p))), [learned, offPersons]);
   const allVerbs = useMemo(() => visibleWords.filter((w) => w.pos === "verb" && w.arabic && w.root), [visibleWords]);
-  // once the moods are learned the present is asked by mood
-  const moodsOn = levelReached(level, MOODS_FROM);
+  // the types (past, present, verbal noun) and moods learned so far, minus those unticked
+  const learnedTenses = useMemo(() => tensesAt(level), [level]);
+  const tenses = useMemo(() => new Set(learnedTenses.filter((x) => !offTenses.has(x))), [learnedTenses, offTenses]);
+  const learnedMoodList = useMemo(() => learnedMoods(level), [level]);
+  const moods = useMemo(() => new Set(learnedMoodList.filter((m) => !offMoods.has(m))), [learnedMoodList, offMoods]);
+  // once a mood is learned the present is asked by mood; before, plain, accepting any mood or no ending
   const conjItems = useMemo(
-    () => conjugationItems(chosenVerbs, { tenses, persons, moods: moodsOn ? moods : null }),
-    [chosenVerbs, tenses, persons, moods, moodsOn],
+    () => conjugationItems(chosenVerbs, { tenses, persons, moods: learnedMoodList.length ? moods : null }),
+    [chosenVerbs, tenses, persons, moods, learnedMoodList],
   );
 
   const exit = () => setMode("menu");
@@ -208,37 +212,43 @@ export default function Learn() {
               </div>
             )}
             {setup.options.includes("tenses") && (
-              <div className="unit-boxes">
-                <strong><bdi>{t("conjTenses")}</bdi></strong>
-                {TENSES.map((tense) => (
-                  <Check key={tense} checked={tenses.has(tense)} onChange={(on) => setTenses(toggled(tenses, tense, on))}>
-                    {t(tense)}
-                  </Check>
-                ))}
-              </div>
+              <details className="collapse">
+                <summary><bdi>{t("conjTenses")}</bdi></summary>
+                <div className="unit-boxes">
+                  {learnedTenses.map((tense) => (
+                    <Check key={tense} checked={tenses.has(tense)} onChange={(on) => setOffTenses(toggled(offTenses, tense, !on))}>
+                      {t(tense)}
+                    </Check>
+                  ))}
+                </div>
+              </details>
             )}
 
-            {setup.options.includes("moods") && moodsOn && tenses.has("present") && (
-              <div className="unit-boxes">
-                <strong><bdi>{t("present")}</bdi></strong>
-                {MOODS.map((m) => (
-                  <label key={m} className="unit-box">
-                    <input type="checkbox" checked={moods.has(m)} onChange={(e) => setMoods(toggled(moods, m, e.target.checked))} />
-                    <span className="ar" dir="rtl">{MOOD_LABELS[m]}</span>
-                  </label>
-                ))}
-              </div>
+            {setup.options.includes("moods") && learnedMoodList.length > 0 && tenses.has("present") && (
+              <details className="collapse">
+                <summary><bdi>{t("present")}</bdi></summary>
+                <div className="unit-boxes">
+                  {learnedMoodList.map((m) => (
+                    <label key={m} className="unit-box">
+                      <input type="checkbox" checked={moods.has(m)} onChange={(e) => setOffMoods(toggled(offMoods, m, !e.target.checked))} />
+                      <span className="ar" dir="rtl">{MOOD_LABELS[m]}</span>
+                    </label>
+                  ))}
+                </div>
+              </details>
             )}
 
             {setup.options.includes("pronouns") && (
-              <div className="unit-boxes">
-                <strong><bdi>{t("conjPronouns")}</bdi></strong>
-                {learned.map((p) => (
-                  <Check key={p} checked={persons.has(p)} onChange={(on) => setOffPersons(toggled(offPersons, p, !on))}>
-                    {t(`person.${p}`)}
-                  </Check>
-                ))}
-              </div>
+              <details className="collapse">
+                <summary><bdi>{t("conjPronouns")}</bdi></summary>
+                <div className="unit-boxes">
+                  {learned.map((p) => (
+                    <Check key={p} checked={persons.has(p)} onChange={(on) => setOffPersons(toggled(offPersons, p, !on))}>
+                      {t(`person.${p}`)}
+                    </Check>
+                  ))}
+                </div>
+              </details>
             )}
           </div>
 

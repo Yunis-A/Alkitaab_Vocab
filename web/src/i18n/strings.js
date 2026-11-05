@@ -145,7 +145,7 @@ export const strings = {
   modeVerbsDesc: { en: "Prepositions, verb forms and conjugation.", ar: "فعل مع في أو على", unlock: u(3, 4) },
   studyConjugation: { en: "Conjugate the verb", ar: "التصريف", unlock: u(3, 8) },
   modeConjugationDesc: { en: "Given a root, build the verb for a pronoun.", ar: "هو يكتب كلمة", unlock: u(2, 4) },
-  conjTenses: { en: "Practise", ar: "تمرين", unlock: u(1, 8) },
+  conjTenses: { en: "Type", ar: "النوع", unlock: u(1, 8) },
   conjPronouns: { en: "Pronouns", ar: "الضمائر", unlock: u(3, 8) },
   conjHint: { en: "Show the meaning", ar: "أظهر المعنى", unlock: u(3, 8) },
   // مع is a verb's preposition from part 2 lesson 4; بِدون is taught in part 2 lesson 5
@@ -264,17 +264,19 @@ export const strings = {
   posOther: { en: "other", ar: "أخرى", unlock: u(3, 1) },
 
   // --- persons ---
-  "person.1s": { en: "I", ar: "أنا", unlock: u(2, 9) },
-  "person.2ms": { en: "you (m.)", ar: "أنتَ", unlock: u(2, 9) },
-  "person.2fs": { en: "you (f.)", ar: "أنتِ", unlock: u(2, 9) },
-  "person.2d": { en: "you two", ar: "أنتما", unlock: u(3, 3) },
-  "person.2mp": { en: "you all (m.)", ar: "أنتم", unlock: u(2, 9) },
-  "person.2fp": { en: "you all (f.)", ar: "أنتنّ", unlock: u(3, 3) },
-  "person.3ms": { en: "he", ar: "هو", unlock: u(2, 9) },
-  "person.3fs": { en: "she", ar: "هي", unlock: u(2, 9) },
-  "person.3md": { en: "they two (m.)", ar: "هما", unlock: u(3, 3) },
-  "person.3fd": { en: "they two (f.)", ar: "هما (مؤنث)", unlock: u(3, 3) },
-  "person.3mp": { en: "they (m.)", ar: "هم", unlock: u(2, 9) },
-  "person.3fp": { en: "they (f.)", ar: "هنّ", unlock: u(3, 3) },
-  "person.1p": { en: "we", ar: "نحن", unlock: u(2, 9) },
+  // (the labels turn Arabic where each pronoun is learned, see PERSON_FROM in lib/conjugation.js; أنا waits one
+  // lesson so that the site starts fully in English)
+  "person.1s": { en: "I", ar: "أنا", unlock: u(1, 2) },
+  "person.2ms": { en: "you (m.)", ar: "أنتَ", unlock: u(1, 2) },
+  "person.2fs": { en: "you (f.)", ar: "أنتِ", unlock: u(1, 2) },
+  "person.2d": { en: "you two", ar: "أنتما", unlock: u(3, 5) },
+  "person.2mp": { en: "you all (m.)", ar: "أنتم", unlock: u(2, 2) },
+  "person.2fp": { en: "you all (f.)", ar: "أنتنّ", unlock: u(3, 7) },
+  "person.3ms": { en: "he", ar: "هو", unlock: u(1, 4) },
+  "person.3fs": { en: "she", ar: "هي", unlock: u(1, 4) },
+  "person.3md": { en: "they two (m.)", ar: "هما", unlock: u(3, 5) },
+  "person.3fd": { en: "they two (f.)", ar: "هما (مؤنث)", unlock: u(3, 5) },
+  "person.3mp": { en: "they (m.)", ar: "هم", unlock: u(2, 2) },
+  "person.3fp": { en: "they (f.)", ar: "هنّ", unlock: u(3, 7) },
+  "person.1p": { en: "we", ar: "نحن", unlock: u(2, 2) },
 };

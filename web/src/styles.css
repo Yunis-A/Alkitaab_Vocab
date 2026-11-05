@@ -365,3 +365,7 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 .conj-input.bad { border-color: #c0392b; background: #fbe9e7; }
 .conj-answer { color: #2e9e5b; font-size: 1.6rem; margin: 0; }
 .conj-mood { color: var(--text); font-size: 1.3rem; }
+
+.collapse { border: 1px solid var(--line); border-radius: 8px; padding: 0.4rem 0.8rem; }
+.collapse > summary { cursor: pointer; font-weight: 600; }
+.collapse[open] > summary { margin-bottom: 0.4rem; }
