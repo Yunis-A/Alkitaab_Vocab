@@ -113,6 +113,25 @@ export const strings = {
   modePatternsDesc: { en: "Build every form of a verb pattern from one.", ar: "كلمة من فعل", unlock: u(3, 4) },
   modeGenderDesc: { en: "Is the country masculine or feminine?", ar: "بلد مذكر أو مؤنث؟", unlock: u(2, 2) },
   modeGeoDesc: { en: "Find each country or capital on the map, against the clock.", ar: "بلد وعاصمة", unlock: u(3, 4) },
+  // Typing lessons. The Arabic card description uses list words (يكتب b2u4, كلمة b1u8); the rest turns Arabic later.
+  studyTyping: { en: "Typing lessons", ar: "دروس الطباعة", unlock: u(3, 8) },
+  modeTypingDesc: { en: "Learn the Arabic keyboard, two letters at a time.", ar: "يكتب كلمة", unlock: u(2, 4) },
+  typingLesson: { en: (n, s) => `Lesson ${s}`, ar: (n, s) => `درس ${s}`, unlock: u(1, 5) }, // درس is taught in Alif Baa lesson 5
+  typingNewLetters: { en: "New letters", ar: "حروف جديدة", unlock: u(3, 8) },
+  typingMistakes: { en: "Mistakes", ar: "أخطاء", unlock: u(3, 8) },
+  typingAccuracy: { en: "Accuracy", ar: "الدقة", unlock: u(3, 8) },
+  typingSpeed: { en: "Characters per minute", ar: "حرف في الدقيقة", unlock: u(3, 8) },
+  typingPassed: { en: "Lesson passed!", ar: "نجحت في الدرس!", unlock: u(3, 8) },
+  typingNotYet: { en: "Not yet", ar: "ليس بعد", unlock: u(3, 8) },
+  typingNeeded: {
+    en: (a, c) => `To pass: at least ${a}% accuracy and ${c} characters per minute.`,
+    ar: (a, c) => `للنجاح: دقة ${a}٪ على الأقل و${c} حرفا في الدقيقة.`,
+    unlock: u(3, 8),
+  },
+  typingMin: { en: (a, c) => `${a}% · ${c}/min`, ar: (a, c) => `${a}٪ · ${c}/د`, unlock: u(3, 8) },
+  typingRetry: { en: "Try again", ar: "حاول مرة أخرى", unlock: u(3, 8) },
+  typingNext: { en: "Next lesson", ar: "الدرس التالي", unlock: u(3, 8) },
+  typingLayout: { en: "Keyboard", ar: "لوحة المفاتيح", unlock: u(3, 8) },
   // Sun and moon letters: شمس (sun) and قمر (moon) are taught in Alif Baa lesson 9, where the game unlocks
   studySunMoon: { en: "Sun and moon letters", ar: "شمس وقمر", unlock: u(1, 9) },
   modeSunMoonDesc: { en: "Is the letter a sun letter or a moon letter?", ar: "شمس أو قمر؟", unlock: u(1, 9) },

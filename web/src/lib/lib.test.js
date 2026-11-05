@@ -10,6 +10,8 @@ import { lessonStyle } from "../config/books.js";
 import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
+import { LAYOUTS, codeFor } from "../data/keyboardLayouts.js";
+import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult } from "./typing.js";
 import assert from "node:assert/strict";
 
 import { getForms, analyzeVerb } from "./morphology.js";
@@ -1096,4 +1098,68 @@ test("sun and moon letters: 28 letters (ء instead of ا), 14 of each; the game 
   const moon = allWords.find((w) => w.definition === "moon");
   assert.deepEqual([sun.arabic, sun.book, sun.unit, moon.arabic, moon.book, moon.unit], ["شَمس", 1, 9, "قَمَر", 1, 9]);
   for (const key of ["studySunMoon", "modeSunMoonDesc", "sunLetter", "moonLetter"]) assert.deepEqual(strings[key].unlock, { book: 1, unit: 9 }, key);
+});
+
+test("typing lessons: the Arabic 101 key map, two letters per lesson, review lessons, strict order", () => {
+  const pc = LAYOUTS.pc;
+  const at = (code) => pc.rows.flat().find((k) => k.code === code)?.ch;
+  assert.deepEqual(["KeyQ", "KeyA", "KeyZ", "KeyH", "KeyB", "Backquote", "Quote", "Semicolon", "Comma"].map(at), ["ض", "ش", "ئ", "ا", "لا", "ذ", "ط", "ك", "و"]);
+  assert.equal(codeFor(pc, "ض"), "KeyQ");
+  assert.equal(codeFor(pc, " "), "Space");
+  // every taught letter has exactly one key, and every letter key is taught once
+  const letterKeys = pc.rows.flat().filter((k) => k.ch).map((k) => k.ch).sort();
+  assert.deepEqual([...LETTER_ORDER].sort(), letterKeys);
+  assert.equal(new Set(letterKeys).size, 34);
+  for (const l of LETTER_ORDER) assert.ok(codeFor(pc, l), l);
+  // by position: the home-row letters come first, then the top row, then the bottom row
+  const rowOf = (l) => pc.rows.findIndex((row) => row.some((k) => k.ch === l));
+  assert.deepEqual(LETTER_ORDER.slice(0, 10).map(rowOf), Array(10).fill(2));
+  // lessons: two new letters each (the last has the lam-alef key), a review after every three
+  const news = LESSONS.filter((l) => l.kind === "new");
+  assert.equal(news.length, 17);
+  assert.ok(news.every((l) => l.letters.length === 2));
+  assert.deepEqual(news[0].letters, ["ب", "ت"]);
+  assert.deepEqual(LESSONS.slice(0, 5).map((l) => l.id), ["n1", "n2", "n3", "r1", "n4"]);
+  assert.equal(LESSONS.at(-1).kind, "review");
+  assert.deepEqual(LESSONS.at(-1).known.length, 34);
+  assert.ok(LESSONS.every((l, i) => l.index === i && l.minCpm === 20 + 2 * i));
+  // a lesson opens only when every lesson before it is passed
+  assert.equal(isUnlocked(0, {}), true);
+  assert.equal(isUnlocked(1, {}), false);
+  assert.equal(isUnlocked(2, { n1: {} }), false);
+  assert.equal(isUnlocked(2, { n1: {}, n2: {} }), true);
+  assert.equal(isUnlocked(3, { n1: {}, n3: {}, n2: {} }), true);
+  assert.equal(isUnlocked(4, { n1: {}, n2: {}, n3: {} }), false); // n4 needs the review r1 as well
+  // the text: only known letters, real words from the list, spaces between the words
+  const rng = (() => { let x = 5; return () => (x = (x * 16807) % 2147483647) / 2147483647; })();
+  for (const lesson of LESSONS) {
+    const tokens = buildText(lesson, allWords, rng);
+    assert.ok(tokens.length >= 8, lesson.id);
+    assert.ok(tokens.every((tok) => tok === " " || lesson.known.includes(tok)), lesson.id);
+    assert.ok(tokens.every((tok) => tok === " " || codeFor(pc, tok)), lesson.id);
+    assert.notEqual(tokens[0], " ");
+    if (lesson.kind === "new") for (const l of lesson.letters) assert.ok(tokens.filter((tok) => tok === l).length >= 3, `${lesson.id} ${l}`);
+  }
+  const words = typableWords(allWords, LESSONS.at(-1).known.filter((x) => x !== "لا"));
+  assert.ok(words.length > 500 && words.every((w) => /^[ء-يٱ]+$/.test(w)));
+  assert.ok(typableWords(allWords, ["ب", "ت"]).every((w) => [...w].every((c) => "بت".includes(c))));
+  // passing needs accuracy and speed
+  const L = LESSONS[0];
+  const fast = { correct: 30, mistakes: 1, ms: 60000 }; // 30 per minute
+  assert.equal(typingResult(fast, L).passed, true);
+  assert.equal(typingResult({ correct: 30, mistakes: 5, ms: 60000 }, L).passed, false); // 86%
+  assert.equal(typingResult({ correct: 30, mistakes: 0, ms: 120000 }, L).passed, false); // 15 per minute
+  assert.ok(MIN_ACCURACY === 0.9 && Math.abs(typingResult(fast, L).accuracy - 30 / 31) < 1e-9);
+  assert.deepEqual(betterResult({ cpm: 20 }, { cpm: 25 }), { cpm: 25 });
+  assert.deepEqual(betterResult({ cpm: 30 }, { cpm: 25 }), { cpm: 30 });
+});
+
+test("typing progress is saved and merged with the account's", () => {
+  const local = { cards: {}, typing: { layout: "pc", passed: { n1: { accuracy: 0.95, cpm: 30 }, n2: { accuracy: 0.9, cpm: 25 } } } };
+  const remote = { cards: {}, typing: { layout: "pc", passed: { n1: { accuracy: 0.92, cpm: 22 }, n3: { accuracy: 0.9, cpm: 24 } } } };
+  const m = mergeProgress(local, remote);
+  assert.deepEqual(Object.keys(m.typing.passed).sort(), ["n1", "n2", "n3"]);
+  assert.equal(m.typing.passed.n1.cpm, 30);
+  saveProgress({ ...loadProgress(), typing: { layout: "pc", passed: { n1: { accuracy: 1, cpm: 40 } } } });
+  assert.equal(loadProgress().typing.passed.n1.cpm, 40);
 });

@@ -326,3 +326,24 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 .letter-huge { font-size: 6rem; line-height: 1.2; }
 .sm-btn { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
 .sm-icon { width: 4.5rem; height: 4.5rem; }
+
+/* typing lessons */
+.lesson-card.passed { border-color: #2e9e5b; }
+.lesson-letters { font-size: 1.6rem; letter-spacing: 0.3rem; }
+.typing-text { font-size: 2.4rem; line-height: 1.8; margin: 1rem 0; word-break: keep-all; }
+.typing-text span { padding: 0 0.05rem; color: var(--muted, #777); }
+.typing-text .typed { color: #2e9e5b; }
+.typing-text .current { color: var(--text); background: color-mix(in srgb, var(--theme) 25%, #fff); border-radius: 4px; white-space: pre; }
+.typing-result { margin-top: 0.5rem; }
+.typing-layout { display: flex; align-items: center; gap: 0.5rem; }
+.typing-keyboard { display: grid; gap: 0.3rem; margin: 1rem auto 0; max-width: 56rem; user-select: none; }
+.tk-row { display: flex; gap: 0.3rem; }
+.tk-key { position: relative; min-width: 0; height: 3.4rem; padding: 0; display: flex; align-items: center; justify-content: center; background: #fff; color: var(--text); border: 1px solid var(--line); border-radius: 6px; }
+.tk-other { background: #f1f1f1; color: #888; font-size: 0.7rem; }
+.tk-ar { font-size: 1.4rem; line-height: 1; }
+.tk-latin { position: absolute; bottom: 2px; right: 4px; font-size: 0.6rem; color: #999; }
+.tk-letter .tk-latin { color: #aaa; }
+.tk-target { background: var(--theme); border-color: var(--theme); color: #fff; box-shadow: 0 0 0 3px color-mix(in srgb, var(--theme) 35%, #fff); }
+.tk-target .tk-latin { color: #fff; }
+.tk-wrong { background: #c0392b; border-color: #c0392b; color: #fff; }
+@media (max-width: 640px) { .tk-key { height: 2.6rem; } .tk-ar { font-size: 1.1rem; } }

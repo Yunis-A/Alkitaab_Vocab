@@ -204,6 +204,20 @@ export function AppProvider({ children }) {
     [progress.geoBest],
   );
 
+  // Typing lessons: passed lessons are kept (with the faster result) and the chosen keyboard layout.
+  const typing = progress.typing ?? { passed: {}, layout: "pc" };
+  const passTyping = useCallback((id, result) => {
+    setProgress((p) => {
+      const t = p.typing ?? { passed: {}, layout: "pc" };
+      const prev = t.passed[id];
+      const keep = prev && prev.cpm >= result.cpm ? prev : result;
+      return { ...p, typing: { ...t, passed: { ...t.passed, [id]: keep } } };
+    });
+  }, []);
+  const setTypingLayout = useCallback((layout) => {
+    setProgress((p) => ({ ...p, typing: { ...(p.typing ?? { passed: {} }), layout } }));
+  }, []);
+
   const statusOf = useCallback(
     (wordId) => {
       const word = wordsById.get(wordId);
@@ -235,6 +249,9 @@ export function AppProvider({ children }) {
     rate,
     statusOf,
     geoBest: progress.geoBest ?? {},
+    typing,
+    passTyping,
+    setTypingLayout,
     syncStatus,
     signOut,
     submitGeoTime,

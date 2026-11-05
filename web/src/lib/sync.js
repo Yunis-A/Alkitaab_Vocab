@@ -17,9 +17,13 @@ export function mergeProgress(local, remote) {
   for (const [k, ms] of Object.entries(local.geoBest ?? {})) {
     geoBest[k] = geoBest[k] == null ? ms : Math.min(geoBest[k], ms);
   }
+  // typing lessons: a lesson passed on either side stays passed, with its faster result
+  const passed = { ...remote.typing?.passed };
+  for (const [id, r] of Object.entries(local.typing?.passed ?? {})) passed[id] = !passed[id] || r.cpm > passed[id].cpm ? r : passed[id];
   return {
     ...local,
     ...remote,
+    typing: { layout: remote.typing?.layout ?? local.typing?.layout ?? "pc", passed },
     level: remote.level ?? local.level,
     dialects: { ...local.dialects, ...remote.dialects },
     cards,
