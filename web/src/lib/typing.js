@@ -77,28 +77,54 @@ function shuffle(items, rng) {
 
 const combo = (pool, length, rng) => Array.from({ length }, () => pool[Math.floor(rng() * pool.length)]);
 
-// The tokens of a lesson: letters (or "لا") and spaces between the words. A new-letter lesson drills its two
-// letters in short strings, then adds real words that use them; a review lesson mixes words and strings of
-// the letters of the last few lessons.
-export function buildText(lesson, words, rng = Math.random) {
+// A lesson should take about this long at the speed needed to pass it (a faster typist finishes sooner).
+export const TARGET_MINUTES = 1.75;
+export const targetLength = (lesson) => Math.round(lesson.minCpm * TARGET_MINUTES);
+
+// The tokens of a lesson: letters (or "لا") and spaces between the words, as many as the lesson's length. A
+// new-letter lesson opens with short strings of its two letters, then goes on to real words (those with the new
+// letters first, mixed with other words you can type); a review lesson mixes words and strings of the letters
+// being reviewed. Where the list has too few words, strings of letters fill the rest.
+export function buildText(lesson, words, rng = Math.random, length = targetLength(lesson)) {
   const usable = typableWords(words, lesson.known);
   const hasNew = (w) => lesson.letters.some((l) => w.includes(l));
+  const withLetters = usable.filter(hasNew);
+  const others = usable.filter((w) => !hasNew(w));
+
   const units = [];
+  let size = 0; // tokens so far, spaces included
+  const add = (unit) => {
+    size += unit.length + (units.length ? 1 : 0);
+    units.push(unit);
+  };
+  // a stream of words from `pool`, shuffled again when it runs out (a pool of a few words is used once only)
+  const stream = (pool) => {
+    let queue = [];
+    return () => {
+      if (!queue.length) queue = shuffle(pool, rng);
+      return [...queue.pop()];
+    };
+  };
+  // a string of known letters that includes one of the lesson's letters
+  const mixed = () => {
+    const u = combo(lesson.known, 3 + Math.floor(rng() * 2), rng);
+    u[Math.floor(rng() * u.length)] = lesson.letters[Math.floor(rng() * lesson.letters.length)];
+    return u;
+  };
 
   if (lesson.kind === "new") {
-    // every new letter appears at least three times
-    const drills = [];
-    for (const l of lesson.letters) for (let i = 0; i < 3; i++) drills.push([l, ...combo(lesson.letters, 2, rng)]);
-    units.push(...shuffle(drills, rng));
-    const withNew = shuffle(usable.filter(hasNew), rng).slice(0, 4);
-    for (const w of withNew) units.push([...w]);
-    if (withNew.length < 2) for (let i = 0; i < 3; i++) units.push(combo(lesson.known, 3, rng));
-  } else {
-    const picked = shuffle(usable.filter(hasNew), rng).slice(0, 4);
-    const rest = shuffle(usable.filter((w) => !picked.includes(w)), rng).slice(0, 3);
-    for (const w of [...picked, ...rest]) units.push([...w]);
-    const need = Math.max(4, 8 - units.length);
-    for (let i = 0; i < need; i++) units.push(combo(lesson.letters, 3, rng));
+    // the first third: strings of the two new letters, each letter leading in turn
+    for (let i = 0; size < length * 0.35; i++) add([lesson.letters[i % lesson.letters.length], ...combo(lesson.letters, 2, rng)]);
+  }
+
+  const enough = withLetters.length >= 3;
+  const nextWith = enough ? stream(withLetters) : null;
+  const nextOther = others.length >= 3 ? stream(others) : null;
+  if (!enough) for (const w of withLetters) add([...w]); // too few to repeat: once each
+  for (let n = 0; size < length; n++) {
+    if (nextWith && (n % 3 !== 2 || !nextOther)) add(nextWith());
+    else if (nextOther) add(nextOther());
+    else add(lesson.kind === "new" ? mixed() : combo(lesson.letters, 3, rng));
   }
 
   const tokens = [];
