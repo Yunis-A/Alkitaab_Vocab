@@ -77,9 +77,12 @@ function shuffle(items, rng) {
 
 const combo = (pool, length, rng) => Array.from({ length }, () => pool[Math.floor(rng() * pool.length)]);
 
-// A lesson should take about this long at the speed needed to pass it (a faster typist finishes sooner).
+// A lesson should take about this long for a typist at a normal pace for it: 60 characters a minute in the
+// first lesson, 2 more with each lesson. (Passing needs less than that, see minCpm, so a slower student takes
+// longer.) That is a hundred characters or more, many words, over several lines.
 export const TARGET_MINUTES = 1.75;
-export const targetLength = (lesson) => Math.round(lesson.minCpm * TARGET_MINUTES);
+export const typicalCpm = (index) => 60 + 2 * index;
+export const targetLength = (lesson) => Math.round(typicalCpm(lesson.index) * TARGET_MINUTES);
 
 // The tokens of a lesson: letters (or "لا") and spaces between the words, as many as the lesson's length. A
 // new-letter lesson opens with short strings of its two letters, then goes on to real words (those with the new

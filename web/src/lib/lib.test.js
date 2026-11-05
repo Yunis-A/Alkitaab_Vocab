@@ -11,7 +11,7 @@ import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
 import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
-import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult, targetLength, TARGET_MINUTES } from "./typing.js";
+import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult, targetLength, typicalCpm, TARGET_MINUTES } from "./typing.js";
 import assert from "node:assert/strict";
 
 import { getForms, analyzeVerb } from "./morphology.js";
@@ -1140,10 +1140,12 @@ test("typing lessons: the Arabic 101 key map, two letters per lesson, review les
   const rng = (() => { let x = 5; return () => (x = (x * 16807) % 2147483647) / 2147483647; })();
   for (const lesson of LESSONS) {
     const tokens = buildText(lesson, allWords, rng);
-    // long enough to take about 1.75 minutes at the speed needed to pass (a little over the target at most)
+    // long enough to take about 1.75 minutes at a normal pace (a little over the target at most): 100+ characters
     const target = targetLength(lesson);
     assert.ok(tokens.length >= target && tokens.length <= target + 9, `${lesson.id}: ${tokens.length} for ${target}`);
-    assert.ok(tokens.length / lesson.minCpm >= TARGET_MINUTES - 0.01 && tokens.length / lesson.minCpm <= 2.2, lesson.id);
+    assert.ok(tokens.length >= 100, lesson.id);
+    assert.ok(tokens.filter((tok) => tok === " ").length >= 15, `${lesson.id} has many words`);
+    assert.ok(Math.abs(tokens.length / typicalCpm(lesson.index) - TARGET_MINUTES) < 0.15, lesson.id);
     assert.ok(tokens.every((tok) => tok === " " || lesson.known.includes(tok)), lesson.id);
     assert.ok(tokens.every((tok) => tok === " " || codeFor(pc, tok)), lesson.id);
     assert.notEqual(tokens[0], " ");

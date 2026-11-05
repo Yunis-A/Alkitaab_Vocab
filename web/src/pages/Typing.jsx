@@ -130,6 +130,8 @@ export function TypingLesson({ lesson, onExit, onNext }) {
           ))}
         </div>
 
+        <p className="muted typing-progress"><bdi>{nf(Math.min(pos, tokens.length))} / {nf(tokens.length)}</bdi></p>
+
         {result && (
           <div className="typing-result">
             <h2><bdi>{t(result.passed ? "typingPassed" : "typingNotYet")}</bdi></h2>
