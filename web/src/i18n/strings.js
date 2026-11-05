@@ -131,7 +131,6 @@ export const strings = {
   typingMin: { en: (a, c) => `${a}% · ${c}/min`, ar: (a, c) => `${a}٪ · ${c}/د`, unlock: u(3, 8) },
   typingRetry: { en: "Try again", ar: "حاول مرة أخرى", unlock: u(3, 8) },
   typingNext: { en: "Next lesson", ar: "الدرس التالي", unlock: u(3, 8) },
-  typingLayout: { en: "Keyboard", ar: "لوحة المفاتيح", unlock: u(3, 8) },
   // Sun and moon letters: شمس (sun) and قمر (moon) are taught in Alif Baa lesson 9, where the game unlocks
   studySunMoon: { en: "Sun and moon letters", ar: "شمس وقمر", unlock: u(1, 9) },
   modeSunMoonDesc: { en: "Is the letter a sun letter or a moon letter?", ar: "شمس أو قمر؟", unlock: u(1, 9) },

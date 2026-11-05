@@ -10,7 +10,7 @@ import { lessonStyle } from "../config/books.js";
 import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
-import { LAYOUTS, codeFor } from "../data/keyboardLayouts.js";
+import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
 import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult } from "./typing.js";
 import assert from "node:assert/strict";
 
@@ -1101,27 +1101,33 @@ test("sun and moon letters: 28 letters (ء instead of ا), 14 of each; the game 
 });
 
 test("typing lessons: the Arabic 101 key map, two letters per lesson, review lessons, strict order", () => {
-  const pc = LAYOUTS.pc;
+  const pc = LAYOUT;
   const at = (code) => pc.rows.flat().find((k) => k.code === code)?.ch;
   assert.deepEqual(["KeyQ", "KeyA", "KeyZ", "KeyH", "KeyB", "Backquote", "Quote", "Semicolon", "Comma"].map(at), ["ض", "ش", "ئ", "ا", "لا", "ذ", "ط", "ك", "و"]);
   assert.equal(codeFor(pc, "ض"), "KeyQ");
   assert.equal(codeFor(pc, " "), "Space");
   // every taught letter has exactly one key, and every letter key is taught once
   const letterKeys = pc.rows.flat().filter((k) => k.ch).map((k) => k.ch).sort();
-  assert.deepEqual([...LETTER_ORDER].sort(), letterKeys);
+  const shifted = pc.rows.flat().filter((k) => k.sh).map((k) => k.sh);
+  assert.deepEqual(shifted.sort(), ["أ", "آ", "إ"].sort());
+  assert.deepEqual([...LETTER_ORDER].sort(), [...letterKeys, "أ", "إ"].sort()); // the hamza seats أ إ are taught; آ is not
   assert.equal(new Set(letterKeys).size, 34);
+  assert.deepEqual([keyFor(pc, "أ"), keyFor(pc, "إ"), keyFor(pc, "ا"), keyFor(pc, "ض")], [
+    { code: "KeyH", shift: true }, { code: "KeyY", shift: true }, { code: "KeyH", shift: false }, { code: "KeyQ", shift: false },
+  ]);
   for (const l of LETTER_ORDER) assert.ok(codeFor(pc, l), l);
   // by position: the home-row letters come first, then the top row, then the bottom row
   const rowOf = (l) => pc.rows.findIndex((row) => row.some((k) => k.ch === l));
   assert.deepEqual(LETTER_ORDER.slice(0, 10).map(rowOf), Array(10).fill(2));
   // lessons: two new letters each (the last has the lam-alef key), a review after every three
   const news = LESSONS.filter((l) => l.kind === "new");
-  assert.equal(news.length, 17);
+  assert.equal(news.length, 18);
   assert.ok(news.every((l) => l.letters.length === 2));
   assert.deepEqual(news[0].letters, ["ب", "ت"]);
   assert.deepEqual(LESSONS.slice(0, 5).map((l) => l.id), ["n1", "n2", "n3", "r1", "n4"]);
   assert.equal(LESSONS.at(-1).kind, "review");
-  assert.deepEqual(LESSONS.at(-1).known.length, 34);
+  assert.deepEqual(LESSONS.at(-1).known.length, 36);
+  assert.deepEqual(news.find((l) => l.letters.includes("أ")).letters, ["أ", "إ"]); // taught together, after ؤ ئ
   assert.ok(LESSONS.every((l, i) => l.index === i && l.minCpm === 20 + 2 * i));
   // a lesson opens only when every lesson before it is passed
   assert.equal(isUnlocked(0, {}), true);
@@ -1142,6 +1148,10 @@ test("typing lessons: the Arabic 101 key map, two letters per lesson, review les
   }
   const words = typableWords(allWords, LESSONS.at(-1).known.filter((x) => x !== "لا"));
   assert.ok(words.length > 500 && words.every((w) => /^[ء-يٱ]+$/.test(w)));
+  // a word with a hamza seat waits until it is taught; the typed words keep their أ and إ
+  const noSeats = typableWords(allWords, LETTER_ORDER.filter((l) => l !== "أ" && l !== "إ" && l !== "لا"));
+  assert.ok(noSeats.every((w) => !/[أإ]/.test(w)));
+  assert.ok(words.some((w) => w.includes("أ")) && words.some((w) => w.includes("إ")));
   assert.ok(typableWords(allWords, ["ب", "ت"]).every((w) => [...w].every((c) => "بت".includes(c))));
   // passing needs accuracy and speed
   const L = LESSONS[0];
@@ -1155,11 +1165,11 @@ test("typing lessons: the Arabic 101 key map, two letters per lesson, review les
 });
 
 test("typing progress is saved and merged with the account's", () => {
-  const local = { cards: {}, typing: { layout: "pc", passed: { n1: { accuracy: 0.95, cpm: 30 }, n2: { accuracy: 0.9, cpm: 25 } } } };
-  const remote = { cards: {}, typing: { layout: "pc", passed: { n1: { accuracy: 0.92, cpm: 22 }, n3: { accuracy: 0.9, cpm: 24 } } } };
+  const local = { cards: {}, typing: { passed: { n1: { accuracy: 0.95, cpm: 30 }, n2: { accuracy: 0.9, cpm: 25 } } } };
+  const remote = { cards: {}, typing: { passed: { n1: { accuracy: 0.92, cpm: 22 }, n3: { accuracy: 0.9, cpm: 24 } } } };
   const m = mergeProgress(local, remote);
   assert.deepEqual(Object.keys(m.typing.passed).sort(), ["n1", "n2", "n3"]);
   assert.equal(m.typing.passed.n1.cpm, 30);
-  saveProgress({ ...loadProgress(), typing: { layout: "pc", passed: { n1: { accuracy: 1, cpm: 40 } } } });
+  saveProgress({ ...loadProgress(), typing: { passed: { n1: { accuracy: 1, cpm: 40 } } } });
   assert.equal(loadProgress().typing.passed.n1.cpm, 40);
 });

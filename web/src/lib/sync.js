@@ -23,7 +23,7 @@ export function mergeProgress(local, remote) {
   return {
     ...local,
     ...remote,
-    typing: { layout: remote.typing?.layout ?? local.typing?.layout ?? "pc", passed },
+    typing: { passed },
     level: remote.level ?? local.level,
     dialects: { ...local.dialects, ...remote.dialects },
     cards,

@@ -6,11 +6,13 @@
 
 import { stripDiacritics } from "./arabic.js";
 
-// 10 home-row letters, then ط (the home row's last key) and the top row, the bottom row, ذ and the lam-alef key.
+// 10 home-row letters, then ط (the home row's last key) and the top row, the bottom row, the hamza seats on alif
+// (with Shift), ذ and the lam-alef key.
 export const LETTER_ORDER = [
   "ب", "ت", "ي", "ن", "س", "م", "ش", "ك", "ل", "ا",
   "ط", "ق", "ف", "ع", "غ", "ث", "ه", "ص", "خ", "ض", "ح", "ج", "د",
   "ر", "و", "ى", "ة", "ز", "ء", "ظ", "ؤ", "ئ",
+  "أ", "إ", // the hamza seats on alif, typed with Shift (H and Y)
   "ذ", "لا",
 ];
 
@@ -51,12 +53,13 @@ export const isUnlocked = (index, passed) => LESSONS.slice(0, index).every((l) =
 // --- what to type ---
 
 // Words from the list that can be typed with the letters known so far (letters only, no spaces or marks).
+// Hamza seats count as their own letters: a word with أ or إ waits until those are taught.
 export function typableWords(words, known) {
   const ok = new Set(known.filter((t) => t.length === 1));
   const seen = new Set();
   for (const w of words) {
     if (!w.arabic) continue;
-    const s = stripDiacritics(w.arabic).replace(/[أإآٱ]/g, "ا");
+    const s = stripDiacritics(w.arabic);
     if (s.length < 2 || s.length > 7 || !/^[ء-يٱ]+$/.test(s)) continue;
     if ([...s].every((c) => ok.has(c))) seen.add(s);
   }

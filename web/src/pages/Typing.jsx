@@ -1,42 +1,31 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import TypingKeyboard from "../components/TypingKeyboard.jsx";
-import { LAYOUTS, codeFor } from "../data/keyboardLayouts.js";
+import { LAYOUT as layout, SHIFT_KEY, keyFor } from "../data/keyboardLayouts.js";
 import { LESSONS, MIN_ACCURACY, buildText, isUnlocked, typingResult } from "../lib/typing.js";
 
 const MODIFIERS = new Set(["ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight", "CapsLock", "Tab"]);
 
 // The lesson list; a lesson opens once the one before it has been passed.
 export default function Typing({ onExit }) {
-  const { t, nf, typing, setTypingLayout } = useApp();
+  const { t, nf, typing } = useApp();
   const [lessonIndex, setLessonIndex] = useState(null);
-  const layout = LAYOUTS[typing.layout] ?? LAYOUTS.pc;
 
   if (lessonIndex !== null) {
     return (
       <TypingLesson
         key={lessonIndex}
         lesson={LESSONS[lessonIndex]}
-        layout={layout}
         onExit={() => setLessonIndex(null)}
         onNext={() => setLessonIndex(lessonIndex + 1 < LESSONS.length ? lessonIndex + 1 : null)}
       />
     );
   }
 
-  const layouts = Object.values(LAYOUTS);
   return (
     <main className="page">
       <div className="quick-bar">
         <button type="button" className="link-button" onClick={onExit}><bdi>{t("studyExit")}</bdi></button>
-        {layouts.length > 1 && (
-          <label className="typing-layout">
-            <span><bdi>{t("typingLayout")}</bdi></span>
-            <select value={layout.id} onChange={(e) => setTypingLayout(e.target.value)}>
-              {layouts.map((l) => <option key={l.id} value={l.id}>{l.label}</option>)}
-            </select>
-          </label>
-        )}
       </div>
 
       <div className="mode-grid">
@@ -60,26 +49,29 @@ export default function Typing({ onExit }) {
 }
 
 // One lesson: type the shown text, key by key, on the highlighted key. A wrong key does not advance.
-export function TypingLesson({ lesson, layout, onExit, onNext }) {
+export function TypingLesson({ lesson, onExit, onNext }) {
   const { t, nf, visibleWords, passTyping } = useApp();
   const [round, setRound] = useState(0);
   const tokens = useMemo(() => buildText(lesson, visibleWords), [lesson, visibleWords, round]); // eslint-disable-line react-hooks/exhaustive-deps
   const [pos, setPos] = useState(0);
   const [mistakes, setMistakes] = useState(0);
   const [wrongCode, setWrongCode] = useState(null);
+  const [shiftDown, setShiftDown] = useState(false); // Shift tapped on the on-screen keyboard
   const [result, setResult] = useState(null);
   const startedAt = useRef(null);
   const flash = useRef(null);
   const state = useRef({});
   state.current = { pos, mistakes, tokens, done: !!result };
 
-  const targetCode = result ? null : codeFor(layout, tokens[pos]);
+  const wanted = result ? null : keyFor(layout, tokens[pos]);
+  const target = wanted && { ...wanted, shiftKey: SHIFT_KEY };
 
-  const press = (code) => {
+  const press = (code, shift = false) => {
     const s = state.current;
     if (s.done) return;
     if (startedAt.current === null) startedAt.current = performance.now();
-    if (code === codeFor(layout, s.tokens[s.pos])) {
+    const need = keyFor(layout, s.tokens[s.pos]);
+    if (code === need.code && shift === need.shift) {
       const next = s.pos + 1;
       setPos(next);
       if (next === s.tokens.length) {
@@ -100,7 +92,7 @@ export function TypingLesson({ lesson, layout, onExit, onNext }) {
       if (e.repeat || e.ctrlKey || e.metaKey || e.altKey || MODIFIERS.has(e.code)) return;
       if (!layout.rows.some((row) => row.some((key) => key.code === e.code))) return; // F5, Escape and the like keep working
       e.preventDefault();
-      press(e.code);
+      press(e.code, e.shiftKey);
     };
     window.addEventListener("keydown", onKey);
     return () => { window.removeEventListener("keydown", onKey); clearTimeout(flash.current); };
@@ -149,7 +141,16 @@ export function TypingLesson({ lesson, layout, onExit, onNext }) {
         )}
       </section>
 
-      <TypingKeyboard layout={layout} targetCode={targetCode} wrongCode={wrongCode} onPress={press} />
+      <TypingKeyboard
+        layout={layout}
+        target={target}
+        wrongCode={wrongCode}
+        shiftDown={shiftDown}
+        onPress={(code) => {
+          if (code.startsWith("Shift")) setShiftDown((d) => !d);
+          else { press(code, shiftDown); setShiftDown(false); }
+        }}
+      />
     </main>
   );
 }
