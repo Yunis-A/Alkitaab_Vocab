@@ -917,7 +917,7 @@ test("verb patterns are asked only when the lesson has been reached", () => {
   assert.deepEqual(f(1, L(2, 4)), ["past", "present"]);
   assert.deepEqual(f(2, L(2, 5)), ["past", "present"]); // the verbal noun waits for lesson 6
   assert.deepEqual(f(2, L(2, 6)), ["past", "present", "masdar"]);
-  assert.deepEqual(f(1, L(3, 8)), ["past", "present", "activeParticiple", "passiveParticiple", "makaan", "passivePast", "passivePresent"]); // form I never asks the verbal noun
+  assert.deepEqual(f(1, L(3, 8)), ["past", "present", "activeParticiple", "passiveParticiple", "makaan", "passivePast"]); // form I never asks the verbal noun
   assert.deepEqual(formsAt(L(2, 8)), [1, 2, 3, 4, 5, 8]);
   assert.deepEqual(f(4, L(2, 8)), ["past", "present", "masdar"]); // part 1 lesson 8: past, present and masdar of forms 1-5 and 8
   assert.deepEqual(formsAt(L(2, 9)), [1, 2, 3, 4, 5, 8, 10]);
@@ -931,11 +931,16 @@ test("verb patterns are asked only when the lesson has been reached", () => {
   assert.ok(f(1, L(3, 8)).includes("passiveParticiple") && f(3, L(3, 8)).includes("passiveParticiple")); // part 2 lesson 8
   assert.ok(!f(1, L(3, 0)).includes("makaan") && f(1, L(3, 1)).includes("makaan")); // noun of place: part 2 lesson 1, form I only
   assert.ok(!f(2, L(3, 8)).includes("makaan"));
-  // the passive: forms I and II (and four-letter form I) from part 2 lesson 7; the rest from lesson 10
-  assert.ok(!f(1, L(3, 6)).includes("passivePast") && f(1, L(3, 7)).includes("passivePast") && f(2, L(3, 7)).includes("passivePast"));
-  assert.ok(!f(3, L(3, 9)).includes("passivePast") && !f(4, L(3, 9)).includes("passivePresent")); // the other forms wait
-  assert.ok(f(3, L(3, 10)).includes("passivePast") && f(3, L(3, 10)).includes("passivePresent")); // ...until part 2 lesson 10
-  assert.ok(f(10, L(3, 10)).includes("passivePast") && f(8, L(3, 10)).includes("passivePresent"));
+  // the passive past of forms I and II (and four-letter I) comes at part 2 lesson 7 on its own; the passive
+  // present of every form and the passive past of the rest come at lesson 10
+  for (const form of [1, 2, "Q1"]) {
+    assert.ok(!f(form, L(3, 6)).includes("passivePast") && f(form, L(3, 7)).includes("passivePast"), `${form} passive past`);
+    assert.ok(!f(form, L(3, 9)).includes("passivePresent") && f(form, L(3, 10)).includes("passivePresent"), `${form} passive present`);
+  }
+  for (const form of [3, 4, 5, 6, 8, 10]) {
+    assert.ok(!f(form, L(3, 9)).some((x) => x.startsWith("passiveP") && x !== "passiveParticiple"), `${form} early`);
+    assert.ok(f(form, L(3, 10)).includes("passivePast") && f(form, L(3, 10)).includes("passivePresent"), `${form} at lesson 10`);
+  }
   assert.ok(!f(7, L(4, 10)).includes("passivePast") && !f(9, L(4, 10)).includes("passivePast")); // VII and IX have none
   assert.ok(f("Q1", L(3, 7)).includes("passivePast") && !f("Q2", L(4, 10)).includes("passivePast"));
   // the imperative: part 3 lesson 3

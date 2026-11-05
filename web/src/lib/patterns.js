@@ -133,8 +133,8 @@ export const FIELD_LEVELS = {
   imperative: IMPERATIVE_LEVEL,
 };
 
-// The passive (past and present): forms I and II and four-letter I at part 2 lesson 7, every other form
-// that has one at part 2 lesson 10.
+// The passive past of forms I and II and four-letter I comes at part 2 lesson 7; the passive past of every
+// other form and the passive present of every form come at part 2 lesson 10.
 const PASSIVE_EARLY = [1, 2, "Q1"];
 const PASSIVE_EARLY_FROM = at(3, 7);
 const PASSIVE_LATER_FROM = at(3, 10);
@@ -155,7 +155,8 @@ export function fieldsAt(form, level) {
     const fl = FORM_LEVELS[form];
     if (field === "past" || field === "present") return levelReached(level, fl.from);
     if (field === "masdar") return !!fl.masdar && levelReached(level, fl.masdar);
-    if (PASSIVE_FIELDS.includes(field)) return levelReached(level, PASSIVE_EARLY.includes(form) ? PASSIVE_EARLY_FROM : PASSIVE_LATER_FROM);
+    if (field === "passivePast") return levelReached(level, PASSIVE_EARLY.includes(form) ? PASSIVE_EARLY_FROM : PASSIVE_LATER_FROM);
+    if (field === "passivePresent") return levelReached(level, PASSIVE_LATER_FROM);
     return levelReached(level, FIELD_LEVELS[field]);
   };
   return FIELDS.filter(known);
