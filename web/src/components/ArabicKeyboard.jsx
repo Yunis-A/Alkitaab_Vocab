@@ -2,9 +2,11 @@
 // letters of the prefixes and suffixes, plus و for مَفعول). The text boxes next to it are read-only, so
 // nothing else can be typed.
 
-const ROOT = ["ف", "ع", "ل"];
-const LETTERS = ["إ", "أ", "ا", "و", "ي", "ت", "ن", "م", "س", "ة"];
-const MARKS = ["َ", "ِ", "ُ", "ّ"]; // fatha, kasra, damma, shadda
+// Keys are laid out left to right, so the Arabic reads right to left across each row: ف ع ل, then
+// إ أ ا و ي ت ن م س ة, with the vowel marks left to right as fatha, damma, kasra, shadda.
+const ROOT = ["ل", "ع", "ف"];
+const LETTERS = ["ة", "س", "م", "ن", "ت", "ي", "و", "ا", "أ", "إ"];
+const MARKS = ["َ", "ُ", "ِ", "ّ"]; // fatha, damma, kasra, shadda
 
 export default function ArabicKeyboard({ onKey, onBackspace, disabled }) {
   return (
