@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import ArabicKeyboard from "../components/ArabicKeyboard.jsx";
-import { FORMS, answerText, buildTask, isCorrect } from "../lib/patterns.js";
+import { FORMS, MULTI_FIELDS, answerText, buildTask, isCorrect, isCorrectSet } from "../lib/patterns.js";
 
 const LABELS = {
   form: "form",
@@ -15,24 +15,38 @@ const LABELS = {
   imperative: "imperative",
 };
 
-// One pattern on ف ع ل is given; the student builds the rest with a restricted keyboard.
+const BOXES_FOR_FORM_I = 3;
+
+// One pattern on ف ع ل is given; the student builds the rest with a restricted keyboard. Once it is form I
+// (given as the clue, or picked by the student) the past and the present get three boxes each, to be
+// filled in any order.
 export default function VerbPatterns({ forms, onExit }) {
   const { t, nf } = useApp();
   const [task, setTask] = useState(() => buildTask(forms));
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState({}); // box key -> text; boxes are "field" or "field#0".."field#2"
   const [active, setActive] = useState(null);
   const [checked, setChecked] = useState(false);
   const [right, setRight] = useState(0);
   const [asked, setAsked] = useState(0);
   const [round, setRound] = useState(1);
 
-  const typed = task.targets.filter((f) => f !== "form");
-  const cur = active ?? typed[0] ?? null; // the box the keyboard types into (the first one to start)
-  const set = (field, value) => setAnswers((a) => ({ ...a, [field]: value }));
+  const clue = task.clue;
+  const formIsI = clue.field === "form" ? clue.value === 1 : Number(answers.form) === 1;
+  const isMulti = (field) => formIsI && MULTI_FIELDS.includes(field);
+  const boxKeys = (field) =>
+    isMulti(field) ? Array.from({ length: BOXES_FOR_FORM_I }, (_, i) => `${field}#${i}`) : [field];
+  const typedKeys = task.targets.filter((f) => f !== "form").flatMap(boxKeys);
+
+  const cur = typedKeys.includes(active) ? active : typedKeys[0] ?? null; // the box the keyboard types into
+  const set = (key, value) => setAnswers((a) => ({ ...a, [key]: value }));
   const key = (c) => cur && set(cur, (answers[cur] ?? "") + c);
   const back = () => cur && set(cur, (answers[cur] ?? "").slice(0, -1));
 
-  const result = (field) => isCorrect(task.form, field, answers[field] ?? "");
+  const result = (field) => {
+    if (field === "form") return isCorrect(task.form, "form", answers.form);
+    if (isMulti(field)) return isCorrectSet(task.form, field, boxKeys(field).map((k) => answers[k] ?? ""));
+    return isCorrect(task.form, field, answers[field] ?? "");
+  };
   const check = () => {
     setChecked(true);
     setRight((r) => r + task.targets.filter(result).length);
@@ -46,7 +60,6 @@ export default function VerbPatterns({ forms, onExit }) {
     setRound((n) => n + 1);
   };
 
-  const clue = task.clue;
   return (
     <main className="page narrow">
       <div className="quick-bar">
@@ -80,16 +93,21 @@ export default function VerbPatterns({ forms, onExit }) {
                     ))}
                   </span>
                 ) : (
-                  <input
-                    className={`ar pattern-input${cur === field ? " active" : ""}`}
-                    dir="rtl"
-                    readOnly
-                    inputMode="none"
-                    value={answers[field] ?? ""}
-                    onFocus={() => setActive(field)}
-                    onClick={() => setActive(field)}
-                    disabled={checked}
-                  />
+                  <span className="pattern-boxes">
+                    {boxKeys(field).map((k) => (
+                      <input
+                        key={k}
+                        className={`ar pattern-input${cur === k ? " active" : ""}`}
+                        dir="rtl"
+                        readOnly
+                        inputMode="none"
+                        value={answers[k] ?? ""}
+                        onFocus={() => setActive(k)}
+                        onClick={() => setActive(k)}
+                        disabled={checked}
+                      />
+                    ))}
+                  </span>
                 )}
                 {ok === false && <span className="pattern-answer ar" dir="rtl">{answerText(task.form, field)}</span>}
               </div>

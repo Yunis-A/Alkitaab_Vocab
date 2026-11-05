@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useApp } from "../context/AppContext.jsx";
 import { getForms, PAST_PERSONS, IMPERATIVE_PERSONS } from "../lib/morphology.js";
 import StatusBadge from "./StatusBadge.jsx";
+import { presentChart } from "../lib/chart.js";
 import { grammarSections } from "../data/grammar.js";
 import { IMPERATIVE_LEVEL, levelReached } from "../config/books.js";
 import { sectionsForWord, sectionTitle } from "../lib/grammar.js";
@@ -213,7 +214,7 @@ export default function WordDetail({ word, showStatus = true, showHeader = true,
           <h3><bdi>{t("conjugations")}</bdi></h3>
           <div className="tenses">
             {f.past && <TenseTable title={t("past")} data={f.past} order={PAST_PERSONS} />}
-            {f.present && <TenseTable title={t("present")} data={f.present} order={PAST_PERSONS} />}
+            {f.present && <TenseTable title={t("present")} data={presentChart(f.present)} order={PAST_PERSONS} />}
             {showImperative && f.imperative && <TenseTable title={t("imperative")} data={f.imperative} order={IMPERATIVE_PERSONS} />}
           </div>
         </section>

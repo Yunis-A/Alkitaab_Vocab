@@ -319,3 +319,5 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 .kb-key:hover:not(:disabled) { border-color: var(--theme); }
 .kb-back { font-size: 1.1rem; }
 @media (max-width: 520px) { .pattern-field { grid-template-columns: 1fr; } .pattern-answer { grid-column: 1; } }
+.pattern-boxes { display: flex; gap: 0.4rem; }
+.pattern-boxes .pattern-input { flex: 1; min-width: 0; }

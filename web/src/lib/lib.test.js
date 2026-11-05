@@ -3,7 +3,8 @@ import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
 import { mergeProgress } from "./sync.js";
-import { FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect } from "./patterns.js";
+import { FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect, isCorrectSet, withArticle } from "./patterns.js";
+import { presentChart, presentChartForm } from "./chart.js";
 import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey } from "./prepositions.js";
 import { lessonStyle } from "../config/books.js";
 import { COUNTRIES } from "../data/countries.js";
@@ -831,24 +832,45 @@ test("account heading turns Arabic where حِساب (account) is taught", () => 
   assert.deepEqual(strings.dialectsHelp.unlock, { book: 3, unit: 8 }); // no longer stuck on English
 });
 
-test("verb patterns on ف ع ل agree with the morphology generator and are checked leniently", () => {
+test("verb patterns on ف ع ل agree with the morphology generator and are checked strictly where it matters", () => {
+  const noCase = (x) => x?.replace(/ُ$/, ""); // the trainer writes the present without its case ending
   for (const f of FORMS) {
     const g = getForms({ pos: "verb", root: "ف ع ل", form: f, arabic: "x", presentVowel: "a" });
     const same = (field, val) => !val || !PATTERNS[f][field] || PATTERNS[f][field].some((v) => canon(v) === canon(val));
     assert.ok(same("past", g.past["3ms"]), `${f} past`);
-    assert.ok(same("present", g.present["3ms"]), `${f} present`);
+    assert.ok(same("present", noCase(g.present["3ms"])), `${f} present`);
     assert.ok(same("imperative", g.imperative["2ms"]), `${f} imperative`);
-    assert.ok(same("masdar", g.masdar?.[0]), `${f} masdar`);
+    assert.ok(same("masdar", g.masdar?.[0] && withArticle(g.masdar[0])), `${f} masdar`);
     assert.ok(same("activeParticiple", g.activeParticiple?.m), `${f} active participle`);
     assert.ok(same("passiveParticiple", g.passiveParticiple?.m), `${f} passive participle`);
   }
-  // typing: sukun, fatha before alif and alif style do not matter; the vowels on the letters do
+  // the verbal noun always carries ال, with the shadda on a sun letter
+  assert.equal(canon(PATTERNS[2].masdar[0]), canon("التَّفعيل"));
+  assert.equal(PATTERNS[4].masdar[0], "الإِفعال");
+  assert.equal(PATTERNS[7].masdar[0], "الاِنفِعال");
+  assert.equal(isCorrect(2, "masdar", "تَفعيل"), false); // no ال
+  assert.equal(isCorrect(2, "masdar", "التَفعيل"), true); // the shadda after ال is optional
+  // ا, أ and إ are different letters
+  assert.equal(isCorrect(4, "masdar", "الاِفعال"), false);
+  assert.equal(isCorrect(4, "masdar", "الإِفعال"), true);
+  assert.equal(isCorrect(7, "masdar", "الإِنفِعال"), false);
+  assert.equal(isCorrect(4, "past", "اَفعَلَ"), false);
+  // typing: sukun and fatha before alif do not matter; the vowels on the letters do
   assert.equal(isCorrect(3, "past", "فَاعَلَ"), true);
-  assert.equal(isCorrect(4, "masdar", "اِفْعال"), true); // إ or ا
   assert.equal(isCorrect(2, "past", "فَعَلَ"), false);
   assert.equal(isCorrect(2, "past", ""), false);
-  assert.equal(isCorrect(1, "present", "يَفعِلُ"), true); // form I takes any of the three vowels
+  // present: no case ending expected, a typed one is forgiven
+  assert.equal(isCorrect(2, "present", "يُفَعِّل"), true);
+  assert.equal(isCorrect(2, "present", "يُفَعِّلُ"), true);
+  assert.equal(isCorrect(1, "present", "يَفعِلُ"), true);
+  assert.equal(isCorrect(1, "imperative", "اُفعُل"), true); // the final damma of اُفعُل is part of the stem
   assert.equal(isCorrect(5, "form", 5), true);
+  // form I: three boxes, any order, all three, each once
+  assert.equal(isCorrectSet(1, "past", ["فَعُلَ", "فَعَلَ", "فَعِلَ"]), true);
+  assert.equal(isCorrectSet(1, "past", ["فَعَلَ", "فَعَلَ", "فَعِلَ"]), false);
+  assert.equal(isCorrectSet(1, "present", ["يَفعُل", "يَفعَلُ", "يَفعِل"]), true);
+  assert.equal(isCorrectSet(1, "present", ["يَفعُل", "يَفعَل", ""]), false);
+  assert.equal(isCorrectSet(2, "past", ["فَعَّلَ"]), true);
   // a clue always identifies one form: form I and IV share the passive present, so it is never a clue
   const rng = (() => { let x = 11; return () => (x = (x * 16807) % 2147483647) / 2147483647; })();
   for (let i = 0; i < 300; i++) {
@@ -862,6 +884,27 @@ test("verb patterns on ف ع ل agree with the morphology generator and are chec
     }
   }
   assert.ok(!buildTask([1], rng).targets.includes("masdar")); // form I masdar varies, so it is not asked
+});
+
+test("present chart: no case endings; both endings where the form can lose its noon", () => {
+  assert.equal(presentChartForm("1s", "أُحِبُّ"), "أُحِبّ"); // damma then shadda
+  assert.equal(presentChartForm("1s", "أُحِبَُّ"), "أُحِبَّ"); // shadda then damma
+  assert.equal(presentChartForm("3ms", "يَفْعَلُ"), "يَفْعَل");
+  assert.equal(presentChartForm("1p", "نَفْعَلُ"), "نَفْعَل");
+  assert.equal(presentChartForm("2fs", "تَفْعَلِينَ"), "تَفْعَلِينَ/ي");
+  assert.equal(presentChartForm("2mp", "تَفْعَلُونَ"), "تَفْعَلُونَ/وا");
+  assert.equal(presentChartForm("3mp", "يَفْعَلُونَ"), "يَفْعَلُونَ/وا");
+  assert.equal(presentChartForm("2d", "تَفْعَلانِ"), "تَفْعَلانِ/ا");
+  assert.equal(presentChartForm("3fd", "تَفْعَلانِ"), "تَفْعَلانِ/ا");
+  assert.equal(presentChartForm("3fp", "يَفْعَلْنَ"), "يَفْعَلْنَ"); // fp keeps its noon in every mood
+  assert.equal(presentChartForm("3fp", "يَدْعُونَ"), "يَدْعُونَ"); // ...even when it looks like the plural
+  assert.equal(presentChartForm("3ms", "يَدعو"), "يَدعو"); // nothing to drop after a long vowel
+  assert.equal(presentChartForm("2ms", null), null);
+  // every irregular chart: no person ends in a damma any more
+  for (const w of allWords) {
+    if (!w.conjugations?.present) continue;
+    for (const [p, f] of Object.entries(presentChart(w.conjugations.present))) assert.ok(!f.endsWith("ُ"), `${w.id} ${p}`);
+  }
 });
 
 test("preposition trainer: stored prepositions, grading", () => {
