@@ -3,7 +3,7 @@ import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
 import { mergeProgress } from "./sync.js";
-import { FORMS, ALL_FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect, isCorrectSet, withArticle, formsAt, fieldsAt, QUAD_FROM } from "./patterns.js";
+import { FORMS, ALL_FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect, isCorrectSet, withArticle, formsAt, fieldsAt, fieldsForAnyForm, answerSpec, QUAD_FROM } from "./patterns.js";
 import { presentChart, presentChartForm } from "./chart.js";
 import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey } from "./prepositions.js";
 import { lessonStyle } from "../config/books.js";
@@ -848,8 +848,12 @@ test("verb patterns on ف ع ل agree with the morphology generator and are chec
   assert.equal(canon(PATTERNS[2].masdar[0]), canon("التَّفعيل"));
   assert.equal(PATTERNS[4].masdar[0], "الإِفعال");
   assert.equal(PATTERNS[7].masdar[0], "الاِنفِعال");
-  assert.equal(isCorrect(2, "masdar", "تَفعيل"), false); // no ال
+  assert.equal(isCorrect(2, "masdar", "تَفعيل"), true); // ال is the default, but an answer without it is accepted
   assert.equal(isCorrect(2, "masdar", "التَفعيل"), true); // the shadda after ال is optional
+  assert.equal(isCorrect(2, "past", "التَفعيل"), false);
+  assert.equal(isCorrect(4, "masdar", "الإفعال"), true); // the hamza under the alif already says kasra
+  assert.equal(isCorrect(4, "masdar", "إِفعال"), true);
+  assert.equal(isCorrect(4, "masdar", "الأفعال"), false);
   // ا, أ and إ are different letters
   assert.equal(isCorrect(4, "masdar", "الاِفعال"), false);
   assert.equal(isCorrect(4, "masdar", "الإِفعال"), true);
@@ -907,6 +911,28 @@ test("verb patterns on ف ع ل agree with the morphology generator and are chec
   assert.equal(isCorrect("Q1", "passivePast", "فُعلِلَ"), true);
   assert.equal(canon(PATTERNS.Q2.masdar[0]), canon("التَّفَعلُل"));
   assert.ok(ALL_FORMS.includes("Q2"));
+});
+
+test("verb patterns: boxes follow the form; form III has two verbal nouns from part 3 lesson 1", () => {
+  const L = (book, unit) => ({ book, unit });
+  assert.deepEqual([answerSpec(1, "past").boxes, answerSpec(1, "present").boxes, answerSpec(1, "imperative").boxes, answerSpec(2, "past").boxes], [3, 3, 1, 1]);
+  // form III verbal noun: only المُفاعَلة before part 3 lesson 1, then two boxes (it and الفِعال, in any order)
+  assert.equal(answerSpec(3, "masdar", L(3, 13)).boxes, 1);
+  assert.equal(isCorrect(3, "masdar", "المُفاعَلة", L(3, 13)), true);
+  assert.equal(isCorrect(3, "masdar", "الفِعال", L(3, 13)), false);
+  assert.equal(answerSpec(3, "masdar", L(4, 1)).boxes, 2);
+  assert.equal(isCorrectSet(3, "masdar", ["الفِعال", "المُفاعَلة"], L(4, 1)), true);
+  assert.equal(isCorrectSet(3, "masdar", ["فِعال", "مُفاعَلة"], L(4, 1)), true); // ال optional
+  assert.equal(isCorrectSet(3, "masdar", ["المُفاعَلة", ""], L(4, 1)), false);
+  assert.equal(isCorrectSet(3, "masdar", ["المُفاعَلة"], L(3, 13)), true);
+  // form I asks no verbal noun: picking form I on screen leaves nothing to answer for it
+  assert.ok(!fieldsAt(1, L(3, 8)).includes("masdar") && fieldsAt(2, L(3, 8)).includes("masdar"));
+  assert.ok(fieldsForAnyForm(L(3, 8)).includes("masdar") && fieldsForAnyForm(L(3, 8)).includes("makaan"));
+  assert.deepEqual(fieldsForAnyForm(L(2, 4)), ["past", "present"]);
+  // the labels for these words turn Arabic in the lessons the exercise asks for them
+  const u = (key) => strings[key].unlock;
+  assert.deepEqual([u("present"), u("masdar"), u("makaan"), u("activeParticiple"), u("passiveParticiple"), u("passivePast"), u("passivePresent")],
+    [L(2, 4), L(2, 6), L(3, 1), L(3, 5), L(3, 8), L(3, 7), L(3, 10)]);
 });
 
 test("verb patterns are asked only when the lesson has been reached", () => {

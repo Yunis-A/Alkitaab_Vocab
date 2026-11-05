@@ -97,6 +97,7 @@ export function canon(s) {
     .replace(/َ(?=[اة])/g, "")
     .replace(/ُ(?=و)/g, "")
     .replace(/ِ(?=ي)/g, "")
+    .replace(/(إ)ِ/g, "$1") // the hamza under the alif already says kasra
     .replace(/([َُِ])ّ/g, "ّ$1")
     .replace(new RegExp(`^(ال)([${SUN}])ّ`), "$1$2");
 }
@@ -192,24 +193,58 @@ const typedForm = (field, answer) => {
   return field === "present" || field === "passivePresent" ? s.replace(/ُ$/, "") : s;
 };
 
+// The verbal noun is answered with ال (التَّفعيل), but without it (تَفعيل) is accepted too.
+const matches = (field, typed, accepted) => {
+  const c = canon(accepted);
+  return typed === c || (field === "masdar" && typed === c.replace(/^ال/, ""));
+};
+
+// Form III has a second verbal noun, الفِعال, from part 3 lesson 1.
+export const MASDAR_III_BOTH_FROM = at(4, 1);
+const FAR = { book: 99, unit: 99 };
+
+// How a field is answered for this form at this level: `accepted` answers, in `boxes` boxes; with `all`,
+// every accepted answer is needed (each once, in any order), otherwise any one will do.
+//   form I past and present: three boxes, all three vowel patterns (فَعَلَ فَعِلَ فَعُلَ)
+//   form III verbal noun: one box (المُفاعَلة) until part 3 lesson 1, then two (it and الفِعال)
+export function answerSpec(form, field, level = FAR) {
+  const list = PATTERNS[form]?.[field];
+  if (!list) return { accepted: [], boxes: 1, all: false };
+  if (form === 1 && (field === "past" || field === "present")) return { accepted: list, boxes: 3, all: true };
+  if (form === 3 && field === "masdar") {
+    return levelReached(level, MASDAR_III_BOTH_FROM) ? { accepted: list, boxes: 2, all: true } : { accepted: [list[0]], boxes: 1, all: false };
+  }
+  return { accepted: list, boxes: 1, all: false };
+}
+
 // Is `answer` right for `field` of `form`? (For "form", the answer is a number.)
-export function isCorrect(form, field, answer) {
+export function isCorrect(form, field, answer, level = FAR) {
   if (field === "form") return String(answer) === String(form);
   const typed = typedForm(field, answer);
-  return typed !== "" && PATTERNS[form][field].some((v) => canon(v) === typed);
+  return typed !== "" && answerSpec(form, field, level).accepted.some((v) => matches(field, typed, v));
 }
 
-// Form I has three patterns for the past and the present (فَعَلَ فَعِلَ فَعُلَ): the student fills in three
-// boxes, in any order, and needs all three, each once. For any other form, `answers` is a single entry.
-export function isCorrectSet(form, field, answers) {
+// For a field with several boxes: all of them filled in, in any order, each answer once. For a field with
+// one box, `answers` is a single entry.
+export function isCorrectSet(form, field, answers, level = FAR) {
+  const spec = answerSpec(form, field, level);
   const typed = answers.map((a) => typedForm(field, a)).filter(Boolean);
-  if (form !== 1) return typed.length === 1 && isCorrect(form, field, typed[0]);
-  const wanted = PATTERNS[1][field].map(canon);
-  return typed.length === wanted.length && wanted.every((w) => typed.includes(w)) && new Set(typed).size === typed.length;
+  if (!spec.all) return typed.length === 1 && isCorrect(form, field, typed[0], level);
+  const wanted = spec.accepted;
+  return (
+    typed.length === wanted.length &&
+    wanted.every((w) => typed.some((t) => matches(field, t, w))) &&
+    new Set(typed).size === typed.length
+  );
 }
-
-// Fields that take three boxes once the student says it is form I.
-export const MULTI_FIELDS = ["past", "present"];
 
 // The answer to show for a field: every accepted variant.
-export const answerText = (form, field) => (field === "form" ? String(form) : PATTERNS[form][field].join(" / "));
+export const answerText = (form, field, level = FAR) =>
+  field === "form" ? String(form) : answerSpec(form, field, level).accepted.join(" / ");
+
+// Fields that may be asked of some form at this level, in order (what is on screen before the student says
+// which form it is).
+export function fieldsForAnyForm(level) {
+  const all = new Set(formsAt(level).flatMap((f) => fieldsAt(f, level)));
+  return FIELDS.filter((f) => all.has(f));
+}

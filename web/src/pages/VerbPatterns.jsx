@@ -1,30 +1,18 @@
 import { useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import ArabicKeyboard from "../components/ArabicKeyboard.jsx";
-import { MULTI_FIELDS, answerText, buildTask, formsAt, isCorrect, isCorrectSet } from "../lib/patterns.js";
+import {
+  answerSpec, answerText, buildTask, fieldsAt, fieldsForAnyForm, formsAt, isCorrect, isCorrectSet,
+} from "../lib/patterns.js";
 
-const LABELS = {
-  form: "form",
-  past: "past",
-  present: "present",
-  masdar: "masdar",
-  activeParticiple: "activeParticiple",
-  passiveParticiple: "passiveParticiple",
-  makaan: "makaan",
-  passivePast: "passivePast",
-  passivePresent: "passivePresent",
-  imperative: "imperative",
-};
-
-const BOXES_FOR_FORM_I = 3;
-
-// One pattern on ف ع ل is given; the student builds the rest with a restricted keyboard. Once it is form I
-// (given as the clue, or picked by the student) the past and the present get three boxes each, to be
-// filled in any order.
+// One pattern on ف ع ل is given; the student builds the rest with a restricted keyboard. What is asked
+// follows the form the student says it is (the form number, or the form given as the clue): form I has three
+// boxes for the past and the present and no verbal noun, form III has two verbal nouns from part 3 lesson 1,
+// and so on. Before a form is picked, every field that could be asked is shown.
 export default function VerbPatterns({ onExit }) {
   const { t, nf, level } = useApp();
   const [task, setTask] = useState(() => buildTask(level));
-  const [answers, setAnswers] = useState({}); // box key -> text; boxes are "field" or "field#0".."field#2"
+  const [answers, setAnswers] = useState({}); // box key -> text; boxes are "field#0", "field#1", ...
   const [active, setActive] = useState(null);
   const [checked, setChecked] = useState(false);
   const [right, setRight] = useState(0);
@@ -32,31 +20,30 @@ export default function VerbPatterns({ onExit }) {
   const [round, setRound] = useState(1);
 
   const clue = task.clue;
-  // 1-10 for the forms; four-letter roots read "4-letter I / II"
-  const formLabel = (f) => (typeof f === "number" ? nf(f) : `${t("quadLabel")} ${nf(Number(f.slice(1)))}`);
-  const formIsI = clue.field === "form" ? clue.value === 1 : answers.form === 1;
-  const isMulti = (field) => formIsI && MULTI_FIELDS.includes(field);
-  const boxKeys = (field) =>
-    isMulti(field) ? Array.from({ length: BOXES_FOR_FORM_I }, (_, i) => `${field}#${i}`) : [field];
-  // The noun of place (form I only) and the split of "passive participle / noun of place" appear only once
-  // it is form I, so the boxes do not give the form away; after Check everything is shown.
-  const splitPP = formIsI || (checked && task.form === 1);
-  const shown = task.targets.filter((f) => f !== "makaan" || splitPP);
-  const label = (field, isClue = false) =>
-    field === "passiveParticiple" && !(splitPP || (isClue && task.form === 1))
-      ? `${t("passiveParticiple")} / ${t("makaan")}`
-      : t(LABELS[field]);
-  const typedKeys = shown.filter((f) => f !== "form").flatMap(boxKeys);
+  const believed = clue.field === "form" ? clue.value : answers.form ?? null; // the form the student has in mind
+
+  // fields on screen (not counting the clue): by the believed form, else everything that could be asked
+  const wanted = believed !== null ? fieldsAt(believed, level) : fieldsForAnyForm(level);
+  const shown = ["form", ...wanted].filter((f) => f !== clue.field);
+  // after Check: the real form's fields, so a missed field shows its answer
+  const rows = checked ? task.targets : shown;
+
+  const boxCount = (field) => answerSpec(checked ? task.form : believed, field, level).boxes;
+  const boxKeys = (field) => Array.from({ length: boxCount(field) }, (_, i) => `${field}#${i}`);
+  const typedKeys = rows.filter((f) => f !== "form").flatMap(boxKeys);
 
   const cur = typedKeys.includes(active) ? active : typedKeys[0] ?? null; // the box the keyboard types into
   const set = (key, value) => setAnswers((a) => ({ ...a, [key]: value }));
   const key = (c) => cur && set(cur, (answers[cur] ?? "") + c);
   const back = () => cur && set(cur, (answers[cur] ?? "").slice(0, -1));
 
+  // A field counts only if it was on screen and is right; what was not on screen (the student picked another
+  // form) is missed.
   const result = (field) => {
     if (field === "form") return isCorrect(task.form, "form", answers.form);
-    if (isMulti(field)) return isCorrectSet(task.form, field, boxKeys(field).map((k) => answers[k] ?? ""));
-    return isCorrect(task.form, field, answers[field] ?? "");
+    if (!shown.includes(field)) return false;
+    const typed = Array.from({ length: answerSpec(believed, field, level).boxes }, (_, i) => answers[`${field}#${i}`] ?? "");
+    return isCorrectSet(task.form, field, typed, level);
   };
   const check = () => {
     setChecked(true);
@@ -71,6 +58,15 @@ export default function VerbPatterns({ onExit }) {
     setRound((n) => n + 1);
   };
 
+  // 1-10 for the forms; four-letter roots read "4-letter I / II"
+  const formLabel = (f) => (typeof f === "number" ? nf(f) : `${t("quadLabel")} ${nf(Number(f.slice(1)))}`);
+  // the noun of place shares the passive participle's box except in form I (and before a form is picked)
+  const label = (field, isClue = false) => {
+    if (field === "masdar") return "المصدر"; // always Arabic: the student learns the word along with the exercise
+    const split = believed === 1 || (isClue && task.form === 1) || (checked && task.form === 1);
+    return field === "passiveParticiple" && !split ? `${t("passiveParticiple")} / ${t("makaan")}` : t(field);
+  };
+
   return (
     <main className="page narrow">
       <div className="quick-bar">
@@ -80,7 +76,7 @@ export default function VerbPatterns({ onExit }) {
 
       <section className="card flash" key={round}>
         <div className="face">
-          <span className="muted"><bdi>{label(clue.field, true)}</bdi></span>
+          <span className="muted"><bdi>{clue.field === "form" ? t("form") : label(clue.field, true)}</bdi></span>
           {clue.field === "form" ? (
             <span className="huge"><bdi>{formLabel(clue.value)}</bdi></span>
           ) : (
@@ -89,11 +85,11 @@ export default function VerbPatterns({ onExit }) {
         </div>
 
         <div className="pattern-fields">
-          {shown.map((field) => {
+          {rows.map((field) => {
             const ok = checked ? result(field) : null;
             return (
               <div key={field} className={`pattern-field${ok === true ? " ok" : ok === false ? " bad" : ""}`}>
-                <span className="pattern-label"><bdi>{label(field)}</bdi></span>
+                <span className="pattern-label"><bdi>{field === "form" ? t("form") : label(field)}</bdi></span>
                 {field === "form" ? (
                   <span className="form-picks">
                     {formsAt(level).map((f) => (
@@ -120,7 +116,7 @@ export default function VerbPatterns({ onExit }) {
                     ))}
                   </span>
                 )}
-                {ok === false && <span className="pattern-answer ar" dir="rtl">{answerText(task.form, field)}</span>}
+                {ok === false && <span className="pattern-answer ar" dir="rtl">{answerText(task.form, field, level)}</span>}
               </div>
             );
           })}
