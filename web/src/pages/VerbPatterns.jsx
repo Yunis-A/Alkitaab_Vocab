@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import ArabicKeyboard from "../components/ArabicKeyboard.jsx";
-import { FORMS, MULTI_FIELDS, answerText, buildTask, isCorrect, isCorrectSet } from "../lib/patterns.js";
+import { MULTI_FIELDS, answerText, buildTask, formsAt, isCorrect, isCorrectSet } from "../lib/patterns.js";
 
 const LABELS = {
   form: "form",
@@ -21,9 +21,9 @@ const BOXES_FOR_FORM_I = 3;
 // One pattern on ف ع ل is given; the student builds the rest with a restricted keyboard. Once it is form I
 // (given as the clue, or picked by the student) the past and the present get three boxes each, to be
 // filled in any order.
-export default function VerbPatterns({ forms, onExit }) {
-  const { t, nf } = useApp();
-  const [task, setTask] = useState(() => buildTask(forms));
+export default function VerbPatterns({ onExit }) {
+  const { t, nf, level } = useApp();
+  const [task, setTask] = useState(() => buildTask(level));
   const [answers, setAnswers] = useState({}); // box key -> text; boxes are "field" or "field#0".."field#2"
   const [active, setActive] = useState(null);
   const [checked, setChecked] = useState(false);
@@ -32,7 +32,9 @@ export default function VerbPatterns({ forms, onExit }) {
   const [round, setRound] = useState(1);
 
   const clue = task.clue;
-  const formIsI = clue.field === "form" ? clue.value === 1 : Number(answers.form) === 1;
+  // 1-10 for the forms; four-letter roots read "4-letter I / II"
+  const formLabel = (f) => (typeof f === "number" ? nf(f) : `${t("quadLabel")} ${nf(Number(f.slice(1)))}`);
+  const formIsI = clue.field === "form" ? clue.value === 1 : answers.form === 1;
   const isMulti = (field) => formIsI && MULTI_FIELDS.includes(field);
   const boxKeys = (field) =>
     isMulti(field) ? Array.from({ length: BOXES_FOR_FORM_I }, (_, i) => `${field}#${i}`) : [field];
@@ -62,7 +64,7 @@ export default function VerbPatterns({ forms, onExit }) {
     setAsked((a) => a + task.targets.length);
   };
   const next = () => {
-    setTask(buildTask(forms));
+    setTask(buildTask(level));
     setAnswers({});
     setActive(null);
     setChecked(false);
@@ -80,7 +82,7 @@ export default function VerbPatterns({ forms, onExit }) {
         <div className="face">
           <span className="muted"><bdi>{label(clue.field, true)}</bdi></span>
           {clue.field === "form" ? (
-            <span className="huge">{nf(clue.value)}</span>
+            <span className="huge"><bdi>{formLabel(clue.value)}</bdi></span>
           ) : (
             <span className="ar huge" dir="rtl">{clue.value}</span>
           )}
@@ -94,10 +96,10 @@ export default function VerbPatterns({ forms, onExit }) {
                 <span className="pattern-label"><bdi>{label(field)}</bdi></span>
                 {field === "form" ? (
                   <span className="form-picks">
-                    {FORMS.map((f) => (
+                    {formsAt(level).map((f) => (
                       <button key={f} type="button" disabled={checked}
-                        className={`form-pick${Number(answers.form) === f ? " picked" : ""}`} onClick={() => set("form", f)}>
-                        {nf(f)}
+                        className={`form-pick${answers.form === f ? " picked" : ""}`} onClick={() => set("form", f)}>
+                        {formLabel(f)}
                       </button>
                     ))}
                   </span>

@@ -10,7 +10,7 @@ import GenderQuiz from "./GenderQuiz.jsx";
 import Prepositions from "./Prepositions.jsx";
 import VerbPatterns from "./VerbPatterns.jsx";
 import { prepositionVerbs } from "../lib/prepositions.js";
-import { formsForVerbs } from "../lib/patterns.js";
+import { PATTERNS_FROM } from "../lib/patterns.js";
 import Matching from "./Matching.jsx";
 import { levelReached } from "../config/books.js";
 import { levelKey } from "../lib/filters.js";
@@ -44,7 +44,7 @@ const MODES = [
   { id: "quick", title: "quickStudy", desc: "modeQuickDesc", options: ["lists", "varieties", "first"] },
   { id: "matching", title: "matching", desc: "modeMatchingDesc", options: ["lists", "varieties"] },
   { id: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
-  { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true }, // always every lesson up to the current one
+  { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true, from: PATTERNS_FROM }, // covers what your level has learned
   { id: "gender", title: "studyGender", desc: "modeGenderDesc", direct: true, from: { book: 2, unit: 1 } }, // مُذَكَّر / مُؤَنَّث
 ];
 
@@ -70,21 +70,16 @@ export default function Learn() {
     [visibleWords, units],
   );
   const prepVerbs = useMemo(() => prepositionVerbs(chosenVerbs), [chosenVerbs]);
-  // the verb patterns cover every lesson up to and including the current one
-  const patternForms = useMemo(
-    () => formsForVerbs(visibleWords.filter((w) => w.pos === "verb" && w.arabic && w.form).map((w) => w.form)),
-    [visibleWords],
-  );
 
   const exit = () => setMode("menu");
   const available = (m) => !m.from || levelReached(level, m.from);
-  const count = { quick: items.length, matching: items.length, prepositions: prepVerbs.length, patterns: patternForms.length };
+  const count = { quick: items.length, matching: items.length, prepositions: prepVerbs.length };
 
   if (mode === "run:review") return <Review onExit={exit} />;
   if (mode === "run:quick") return <QuickStudy items={items} englishFirst={englishFirst} onExit={exit} />;
   if (mode === "run:matching") return <Matching items={items} onExit={exit} />;
   if (mode === "run:prepositions") return <Prepositions verbs={prepVerbs} onExit={exit} />;
-  if (mode === "run:patterns") return <VerbPatterns forms={patternForms} onExit={exit} />;
+  if (mode === "run:patterns") return <VerbPatterns onExit={exit} />;
   if (mode === "run:gender") return <GenderQuiz onExit={exit} />;
 
   const setup = MODES.find((m) => m.id === mode);
@@ -155,7 +150,7 @@ export default function Learn() {
     <main className="page">
       <div className="mode-grid">
         {MODES.filter(available).map((m) => (
-          <button key={m.id} type="button" className="mode-card" disabled={m.id === "patterns" && !patternForms.length} onClick={() => setMode(m.direct ? `run:${m.id}` : m.id)}>
+          <button key={m.id} type="button" className="mode-card" onClick={() => setMode(m.direct ? `run:${m.id}` : m.id)}>
             <strong><bdi>{t(m.title)}</bdi></strong>
             <span className="muted"><bdi>{t(m.desc)}</bdi></span>
             {m.id === "review" && (

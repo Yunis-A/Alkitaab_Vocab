@@ -9,7 +9,12 @@
 // House style as in the word list: no sukun, no fatha before alif, no case endings on the present tense
 // (يَفعَل, not يَفعَلُ), and the verbal noun is always written with ال (الإِفعال).
 
+import { IMPERATIVE_LEVEL, levelReached } from "../config/books.js";
+
 export const FORMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// four-letter roots (فَعلَلَ): "Q1" is their form I, "Q2" their form II (تَفَعلَلَ)
+export const QUAD_FORMS = ["Q1", "Q2"];
+export const ALL_FORMS = [...FORMS, ...QUAD_FORMS];
 
 // the answer fields after the form number, in the order they are asked
 export const FIELDS = ["past", "present", "masdar", "activeParticiple", "passiveParticiple", "makaan", "passivePast", "passivePresent", "imperative"];
@@ -68,6 +73,14 @@ export const PATTERNS = {
     past: ["اِفعَلَّ"], present: ["يَفعَلّ"], masdar: M("اِفعِلال"), activeParticiple: ["مُفعَلّ"],
     passiveParticiple: null, passivePast: null, passivePresent: null, imperative: null,
   },
+  Q1: {
+    past: ["فَعلَلَ"], present: ["يُفَعلِل"], masdar: M("فَعلَلة", "فِعلال"), activeParticiple: ["مُفَعلِل"],
+    passiveParticiple: ["مُفَعلَل"], passivePast: ["فُعلِلَ"], passivePresent: ["يُفَعلَل"], imperative: ["فَعلِل"],
+  },
+  Q2: {
+    past: ["تَفَعلَلَ"], present: ["يَتَفَعلَل"], masdar: M("تَفَعلُل"), activeParticiple: ["مُتَفَعلِل"],
+    passiveParticiple: ["مُتَفَعلَل"], passivePast: null, passivePresent: null, imperative: ["تَفَعلَل"],
+  },
   10: {
     past: ["اِستَفعَلَ"], present: ["يَستَفعِل"], masdar: M("اِستِفعال"), activeParticiple: ["مُستَفعِل"],
     passiveParticiple: ["مُستَفعَل"], passivePast: ["اُستُفعِلَ"], passivePresent: ["يُستَفعَل"], imperative: ["اِستَفعِل"],
@@ -88,32 +101,86 @@ export function canon(s) {
     .replace(new RegExp(`^(ال)([${SUN}])ّ`), "$1$2");
 }
 
+
+// --- What the student has learned, lesson by lesson (levels are { book, unit }; book 2 = Al-Kitaab part 1,
+// 3 = part 2, 4 = part 3). The trainer only asks what the student's level covers.
+const at = (book, unit) => ({ book, unit });
+
+// TODO: placeholder until the lessons for four-letter roots are given; their passive comes at part 2
+// lesson 7 along with forms I and II, so they must be known by then.
+export const QUAD_FROM = at(3, 1);
+
+// `from`: the form, its past and its present; `masdar`: its verbal noun (null = never asked)
+export const FORM_LEVELS = {
+  1: { from: at(2, 4), masdar: null },
+  2: { from: at(2, 4), masdar: at(2, 6) },
+  3: { from: at(2, 4), masdar: at(2, 6) },
+  5: { from: at(2, 4), masdar: at(2, 6) },
+  4: { from: at(2, 8), masdar: at(2, 8) },
+  8: { from: at(2, 8), masdar: at(2, 8) },
+  10: { from: at(2, 9), masdar: at(2, 9) },
+  6: { from: at(2, 11), masdar: at(2, 11) },
+  7: { from: at(2, 11), masdar: at(2, 11) },
+  9: { from: at(3, 3), masdar: at(3, 3) },
+  Q1: { from: QUAD_FROM, masdar: QUAD_FROM },
+  Q2: { from: QUAD_FROM, masdar: QUAD_FROM },
+};
+
+// where each of the other fields is learned
+export const FIELD_LEVELS = {
+  makaan: at(3, 1), // the noun of place, form I only
+  activeParticiple: at(3, 5),
+  passivePast: at(3, 7),
+  passivePresent: at(3, 7), // assumed to come with the passive past
+  passiveParticiple: at(3, 8), // for the other forms it is also the noun of place
+  imperative: IMPERATIVE_LEVEL,
+};
+
+// the passive is only learned for forms I and II (and four-letter form I)
+const PASSIVE_FORMS = [1, 2, "Q1"];
+export const PASSIVE_FIELDS = ["passivePast", "passivePresent"];
+
+// The first level at which the trainer has anything to ask.
+export const PATTERNS_FROM = at(2, 4);
+
 const askable = (form, field) => !!PATTERNS[form]?.[field];
 
-// The forms to practise for a student who has met verbs of these forms. Form IX has no verbs in the word
-// list, so it comes with the later forms (VIII and X).
-export function formsForVerbs(verbForms) {
-  const met = new Set(verbForms);
-  const later = met.has(8) || met.has(10);
-  return FORMS.filter((f) => met.has(f) || (f === 9 && later));
+// Is this form on the course yet?
+export const formsAt = (level) => ALL_FORMS.filter((f) => levelReached(level, FORM_LEVELS[f].from));
+
+// The answer fields (after the form number) for this form at this level, in the order they are asked.
+export function fieldsAt(form, level) {
+  const known = (field) => {
+    if (!askable(form, field)) return false;
+    const fl = FORM_LEVELS[form];
+    if (field === "past" || field === "present") return levelReached(level, fl.from);
+    if (field === "masdar") return !!fl.masdar && levelReached(level, fl.masdar);
+    if (PASSIVE_FIELDS.includes(field) && !PASSIVE_FORMS.includes(form)) return false;
+    return levelReached(level, FIELD_LEVELS[field]);
+  };
+  return FIELDS.filter(known);
 }
 
-// Can this value be given to the student without leaving the form unclear? (Form I and form IV share the
-// passive present يُفعَل, for instance, so that one is never the clue.)
-function uniqueClue(form, field) {
+// Can this value be given to the student without leaving the form unclear? Among the forms that can be
+// asked for this field at this level, no other form may share it (form I and IV share the passive present
+// يُفعَل, but only form I has a passive at the level where that is learned, for instance).
+function uniqueClue(form, field, level) {
   const mine = PATTERNS[form][field].map(canon);
-  return FORMS.every((f) => f === form || !askable(f, field) || !PATTERNS[f][field].map(canon).some((v) => mine.includes(v)));
+  return formsAt(level).every(
+    (f) => f === form || !fieldsAt(f, level).includes(field) || !PATTERNS[f][field].map(canon).some((v) => mine.includes(v)),
+  );
 }
 
-// A round: one clue (the form number or one of the patterns) and the fields the student fills in.
-// `forms` limits which forms may come up. Returns { form, clue: { field, value }, targets: [field...] }.
-export function buildTask(forms, rng = Math.random) {
-  const pool = forms.filter((f) => PATTERNS[f]);
+// A round at this level: one clue (the form number or one of the patterns) and the fields the student fills
+// in. `only` can narrow the forms. Returns { form, clue: { field, value }, targets: [field...] }.
+export function buildTask(level, rng = Math.random, only = null) {
+  const pool = formsAt(level).filter((f) => !only || only.includes(f));
   const form = pool[Math.floor(rng() * pool.length)];
-  const clues = ["form", ...FIELDS.filter((f) => askable(form, f) && uniqueClue(form, f))];
+  const fields = fieldsAt(form, level);
+  const clues = ["form", ...fields.filter((f) => uniqueClue(form, f, level))];
   const field = clues[Math.floor(rng() * clues.length)];
   const value = field === "form" ? form : PATTERNS[form][field][0];
-  const targets = ["form", ...FIELDS.filter((f) => askable(form, f))].filter((f) => f !== field);
+  const targets = ["form", ...fields].filter((f) => f !== field);
   return { form, clue: { field, value }, targets };
 }
 
@@ -126,7 +193,7 @@ const typedForm = (field, answer) => {
 
 // Is `answer` right for `field` of `form`? (For "form", the answer is a number.)
 export function isCorrect(form, field, answer) {
-  if (field === "form") return Number(answer) === form;
+  if (field === "form") return String(answer) === String(form);
   const typed = typedForm(field, answer);
   return typed !== "" && PATTERNS[form][field].some((v) => canon(v) === typed);
 }

@@ -3,7 +3,7 @@ import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
 import { mergeProgress } from "./sync.js";
-import { FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect, isCorrectSet, withArticle, formsForVerbs } from "./patterns.js";
+import { FORMS, ALL_FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect, isCorrectSet, withArticle, formsAt, fieldsAt, QUAD_FROM } from "./patterns.js";
 import { presentChart, presentChartForm } from "./chart.js";
 import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey } from "./prepositions.js";
 import { lessonStyle } from "../config/books.js";
@@ -871,38 +871,75 @@ test("verb patterns on ف ع ل agree with the morphology generator and are chec
   assert.equal(isCorrectSet(1, "present", ["يَفعُل", "يَفعَلُ", "يَفعِل"]), true);
   assert.equal(isCorrectSet(1, "present", ["يَفعُل", "يَفعَل", ""]), false);
   assert.equal(isCorrectSet(2, "past", ["فَعَّلَ"]), true);
-  // a clue always identifies one form: form I and IV share the passive present, so it is never a clue
+  // a clue always identifies one form at the level it is asked
   const rng = (() => { let x = 11; return () => (x = (x * 16807) % 2147483647) / 2147483647; })();
-  for (let i = 0; i < 300; i++) {
-    const t = buildTask(FORMS, rng);
-    assert.ok(t.targets.every((f) => f === "form" || FIELDS.includes(f)));
-    assert.ok(!t.targets.includes(t.clue.field));
-    if (t.clue.field === "passivePresent") assert.ok(![1, 4].includes(t.form));
-    if (t.clue.field !== "form") {
-      const sharing = FORMS.filter((f) => PATTERNS[f][t.clue.field]?.some((v) => canon(v) === canon(t.clue.value)));
-      assert.deepEqual(sharing, [t.form]);
+  const TOP = { book: 4, unit: 99 };
+  for (const level of [{ book: 2, unit: 4 }, { book: 2, unit: 8 }, { book: 3, unit: 5 }, { book: 3, unit: 8 }, TOP]) {
+    for (let i = 0; i < 150; i++) {
+      const t = buildTask(level, rng);
+      assert.ok(formsAt(level).includes(t.form));
+      assert.ok(!t.targets.includes(t.clue.field));
+      assert.deepEqual([...t.targets, t.clue.field].filter((f) => f !== "form").sort(), [...fieldsAt(t.form, level)].sort());
+      if (t.clue.field !== "form") {
+        const sharing = formsAt(level).filter((f) => fieldsAt(f, level).includes(t.clue.field) && PATTERNS[f][t.clue.field].some((v) => canon(v) === canon(t.clue.value)));
+        assert.deepEqual(sharing, [t.form]);
+      }
     }
   }
-  assert.ok(!buildTask([1], rng).targets.includes("masdar")); // form I masdar varies, so it is not asked
   // form VII: no passive, passive participle or noun of place; form IX: also no imperative
   for (const f of [7, 9]) for (const field of ["passivePast", "passivePresent", "passiveParticiple", "makaan"]) assert.equal(PATTERNS[f][field] ?? null, null, `${f} ${field}`);
   assert.equal(PATTERNS[9].imperative, null);
   assert.deepEqual([PATTERNS[9].past[0], PATTERNS[9].present[0], PATTERNS[9].masdar[0], PATTERNS[9].activeParticiple[0]], ["اِفعَلَّ", "يَفعَلّ", "الاِفعِلال", "مُفعَلّ"]);
-  for (let i = 0; i < 200; i++) {
-    const t9 = buildTask([9], rng);
-    assert.ok(!t9.targets.some((f) => ["imperative", "passivePast", "passivePresent", "passiveParticiple", "makaan"].includes(f)));
-    const t7 = buildTask([7], rng);
-    assert.ok(!t7.targets.some((f) => ["passivePast", "passivePresent", "passiveParticiple", "makaan"].includes(f)));
+  for (let i = 0; i < 100; i++) {
+    for (const [form, none] of [[9, ["imperative", "passivePast", "passivePresent", "passiveParticiple", "makaan"]], [7, ["passivePast", "passivePresent", "passiveParticiple", "makaan"]]]) {
+      assert.ok(!buildTask(TOP, rng, [form]).targets.some((f) => none.includes(f)));
+    }
   }
   // the noun of place is a separate answer only for form I (مَفعَل / مَفعِل, unlike the passive participle مَفعول)
   assert.deepEqual(FORMS.filter((f) => PATTERNS[f].makaan), [1]);
   assert.equal(isCorrect(1, "makaan", "مَفعِل"), true);
   assert.equal(isCorrect(1, "makaan", "مَفعول"), false);
-  assert.ok(buildTask([1], () => 0).targets.includes("makaan") || buildTask([1], () => 0.99).targets.includes("makaan"));
-  // which forms come up: those met, plus IX once the later forms are
-  assert.deepEqual(formsForVerbs([1, 2]), [1, 2]);
-  assert.deepEqual(formsForVerbs([1, 8]), [1, 8, 9]);
-  assert.deepEqual(formsForVerbs([10]), [9, 10]);
+  // four-letter roots: the same exercise on ف ع ل ل
+  assert.equal(PATTERNS.Q1.past[0], "فَعلَلَ");
+  assert.equal(isCorrect("Q1", "form", "Q1"), true);
+  assert.equal(isCorrect("Q1", "past", "فَعلَلَ"), true);
+  assert.equal(isCorrect("Q1", "present", "يُفَعلِلُ"), true);
+  assert.equal(isCorrect("Q1", "passivePast", "فُعلِلَ"), true);
+  assert.equal(canon(PATTERNS.Q2.masdar[0]), canon("التَّفَعلُل"));
+  assert.ok(ALL_FORMS.includes("Q2"));
+});
+
+test("verb patterns are asked only when the lesson has been reached", () => {
+  const L = (book, unit) => ({ book, unit });
+  const f = (form, level) => fieldsAt(form, level);
+  assert.deepEqual(formsAt(L(2, 3)), []); // nothing before part 1 lesson 4
+  assert.deepEqual(formsAt(L(2, 4)), [1, 2, 3, 5]);
+  assert.deepEqual(f(1, L(2, 4)), ["past", "present"]);
+  assert.deepEqual(f(2, L(2, 5)), ["past", "present"]); // the verbal noun waits for lesson 6
+  assert.deepEqual(f(2, L(2, 6)), ["past", "present", "masdar"]);
+  assert.deepEqual(f(1, L(3, 8)), ["past", "present", "activeParticiple", "passiveParticiple", "makaan", "passivePast", "passivePresent"]); // form I never asks the verbal noun
+  assert.deepEqual(formsAt(L(2, 8)), [1, 2, 3, 4, 5, 8]);
+  assert.deepEqual(f(4, L(2, 8)), ["past", "present", "masdar"]); // part 1 lesson 8: past, present and masdar of forms 1-5 and 8
+  assert.deepEqual(formsAt(L(2, 9)), [1, 2, 3, 4, 5, 8, 10]);
+  assert.deepEqual(formsAt(L(2, 10)), [1, 2, 3, 4, 5, 8, 10]);
+  assert.deepEqual(formsAt(L(2, 11)), [1, 2, 3, 4, 5, 6, 7, 8, 10]);
+  assert.ok(!formsAt(L(3, 2)).includes(9));
+  assert.ok(formsAt(L(3, 3)).includes(9)); // form IX at part 2 lesson 3
+  assert.ok(!f(3, L(3, 4)).includes("activeParticiple"));
+  assert.ok(f(3, L(3, 5)).includes("activeParticiple")); // part 2 lesson 5
+  assert.ok(!f(1, L(3, 7)).includes("passiveParticiple"));
+  assert.ok(f(1, L(3, 8)).includes("passiveParticiple") && f(3, L(3, 8)).includes("passiveParticiple")); // part 2 lesson 8
+  assert.ok(!f(1, L(3, 0)).includes("makaan") && f(1, L(3, 1)).includes("makaan")); // noun of place: part 2 lesson 1, form I only
+  assert.ok(!f(2, L(3, 8)).includes("makaan"));
+  // the passive: forms I and II (and four-letter form I) from part 2 lesson 7; no other form
+  assert.ok(!f(1, L(3, 6)).includes("passivePast") && f(1, L(3, 7)).includes("passivePast") && f(2, L(3, 7)).includes("passivePast"));
+  assert.ok(!f(3, L(4, 10)).includes("passivePast") && !f(4, L(4, 10)).includes("passivePast"));
+  assert.ok(f("Q1", L(4, 10)).includes("passivePast") && !f("Q2", L(4, 10)).includes("passivePast"));
+  // the imperative: part 3 lesson 3
+  assert.ok(!f(1, L(4, 2)).includes("imperative") && f(1, L(4, 3)).includes("imperative"));
+  assert.ok(!f(9, L(4, 10)).includes("imperative"));
+  // four-letter roots arrive at the (placeholder) lesson
+  assert.ok(!formsAt(L(QUAD_FROM.book, QUAD_FROM.unit - 1)).includes("Q1") && formsAt(QUAD_FROM).includes("Q1"));
 });
 
 test("present chart: no case endings; both endings where the form can lose its noon", () => {

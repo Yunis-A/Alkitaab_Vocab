@@ -96,6 +96,7 @@ export const strings = {
   studyPatterns: { en: "Verb patterns", ar: "أوزان الأفعال", unlock: u(3, 8) },
   studySubmit: { en: "Submit", ar: "تأكيد", unlock: u(3, 8) },
   studyCheck: { en: "Check", ar: "تحقق", unlock: u(3, 8) },
+  quadLabel: { en: "4-letter", ar: "رباعي", unlock: u(3, 8) },
   makaan: { en: "Noun of place", ar: "اسم المكان", unlock: u(4, 3) },
   passivePast: { en: "Passive past", ar: "الماضي المجهول", unlock: u(4, 3) },
   passivePresent: { en: "Passive present", ar: "المضارع المجهول", unlock: u(4, 3) },
