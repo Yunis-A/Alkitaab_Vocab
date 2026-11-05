@@ -1,24 +1,21 @@
 ﻿id,english,title,problem,note
-b2-u6-006,to obtain/obtaining,الحُصول,skipped-by-design,
-b2-u12-012,I was appointed,عُيِّنْتُ,skipped-by-design,
+b2-u13-019,"to settle down, become stable",استقر,could-not-render,
 b2-u13-024,to find,وجد,ok,wiktionary-root:
 b2-u13-025,I did not find,لم أجِد,skipped-by-design,
 b3-u1-030,"to hope, wish (for someone to)",تمنى,ok,wiktionary-root:
 b3-u1-052,"is found, exists",يوجَد / توجَد,skipped-by-design,
 b3-u2-049,she was born I was born,وُلِدَت وُلِدتُ,skipped-by-design,
-b3-u5-045,to praise (a person),,skipped-by-design,
-b3-u5-048,to turn out (to be),,skipped-by-design,
-b3-u5-050,to get (someone) accustomed to,عود,no-matching-form-on-page,
 b3-u6-029,to stop (intransitive),توقف,ok,wiktionary-root:
 b3-u6-030,it was taken,أُخِذ,skipped-by-design,
 b3-u6-046,it was accepted,قُبِلَ,skipped-by-design,
 b3-u7-042,was/were translated,تُرجِمَ / تُرجِمَت,skipped-by-design,
 b3-u8-042,it (he/she) is called,يُسَمّى / تُسَمّى,skipped-by-design,
 b3-u8-047,"to combine, bring together",ضم,ok,wiktionary-root:
-b3-u9-014,"to record, write down",دون,ok,wiktionary-root:
+b3-u9-035,to cover,غطى,ok,wiktionary-root:غطو
 b3-u9-085,it was established,أُنشِئَ,skipped-by-design,
 b3-u9-089,"to contact (someone, e.g., by telephone)",اتصل,ok,wiktionary-root:
-b3-u10-083,"to copy (by hand, especially in an exam)",,skipped-by-design,
+b3-u10-001,to lead to,أدى,ok,wiktionary-root:ءدو
+b3-u10-043,to adopt,تبنى,ok,wiktionary-root:بنو
 b4-u3-002,to permit (someone) to (do something),أذن,ok,wiktionary-root:
 b4-u3-051,"let alone, leave it be, let (me, you, us) do something",دَع! دَعي! دَعوا!,skipped-by-design,
 b4-u4-020,"to be cured, healed, to recover",شفي,ok,wiktionary-root:

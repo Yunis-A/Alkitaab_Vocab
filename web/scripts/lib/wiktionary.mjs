@@ -168,7 +168,7 @@ export function parseConjHtml(html) {
     else if (head.startsWith("passive participle")) single("passiveParticiple");
 
     if (passive || r[0].kind !== "h") continue;
-    const key = head.startsWith("past indicative") ? "past" : head.startsWith("non-past indicative") ? "present" : head.startsWith("non-past subjunctive") ? "subjunctive" : head.startsWith("non-past jussive") ? "jussive" : head.startsWith("imperative") ? "imperative" : null;
+    const key = head.startsWith("past indicative") ? "past" : head.startsWith("non-past indicative") ? "present" : head.startsWith("subjunctive") ? "subjunctive" : head.startsWith("jussive") ? "jussive" : head.startsWith("imperative") ? "imperative" : null;
     if (!key || result[key]) continue;
     // masculine row: [tense th, "m" th, ...9 td]; feminine row: ["f" th, ...5 td]
     const masc = r.filter((c) => c.kind === "d");
