@@ -1,3 +1,5 @@
+import { geoCountries } from "./geography.js";
+
 // 100 countries for the "masculine or feminine?" game: every Arab country, a few borderline ones
 // (Arabic is official or widely used), and well-known others. Country names are feminine in Arabic
 // unless they are on the short list of masculine ones below.
@@ -46,9 +48,17 @@ export const COUNTRIES = NAMES.map(([en, ar], i) => ({
   hasArticle: ar.startsWith("ال"),
 }));
 
-// The gender game and the "with ال or not" game use these 16 well-known countries.
+// The gender game and the "with ال or not" game use these: 16 well-known countries, America, and every place
+// of the map game.
 const GAME_NAMES = [
   "the United States", "China", "France", "Spain", "Britain", "Turkey", "Iran", "Russia", "Japan", "Italy",
   "Canada", "Mexico", "Germany", "India", "Pakistan", "South Korea",
 ];
-export const GAME_COUNTRIES = GAME_NAMES.map((en) => COUNTRIES.find((c) => c.en === en));
+const AMERICA = { id: "america", en: "America", ar: "أَمريكا", gender: "feminine", hasArticle: false };
+const byEnglish = (en) => COUNTRIES.find((c) => c.en === en || c.en === `the ${en}`);
+
+export const GAME_COUNTRIES = [
+  ...GAME_NAMES.map(byEnglish),
+  AMERICA,
+  ...geoCountries.map((g) => byEnglish(g.nameEn)),
+];

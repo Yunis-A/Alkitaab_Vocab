@@ -2,22 +2,27 @@ import { useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import { GAME_COUNTRIES } from "../data/countries.js";
 import { shuffle } from "../lib/matching.js";
+import { addArticle, withoutArticle } from "../lib/article.js";
 
-// Does this country's Arabic name take ال (الصين) or not (فرنسا)? The country is shown in English and
-// answered with two buttons; the Arabic name is shown afterwards.
+// Does this country's Arabic name take ال (الصين) or not (فرنسا)? The name is shown without ال; "with ال"
+// previews the new spelling while the pointer is on it. After answering, the real name shows with the
+// country in small English.
 export default function ArticleQuiz({ onExit }) {
   const { t, nf } = useApp();
   const [order, setOrder] = useState(() => shuffle(GAME_COUNTRIES));
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState(null); // true = "with ال"
+  const [preview, setPreview] = useState(false); // the pointer is on "with ال": show the name with ال added
   const [score, setScore] = useState(0);
 
   const country = order[i];
   const finished = i >= order.length;
+  const bare = country ? withoutArticle(country.ar) : "";
 
   const answer = (withArticle) => {
     if (picked !== null) return;
     setPicked(withArticle);
+    setPreview(false);
     if (withArticle === country.hasArticle) setScore((s) => s + 1);
   };
   const next = () => {
@@ -37,12 +42,19 @@ export default function ArticleQuiz({ onExit }) {
       if (withArticle === country.hasArticle) cls += " right";
       else if (withArticle === picked) cls += " wrong";
     }
+    // hovering (or focusing) "with ال" shows how the name would be spelled with it
+    const hover = withArticle && picked === null
+      ? { onMouseEnter: () => setPreview(true), onMouseLeave: () => setPreview(false), onFocus: () => setPreview(true), onBlur: () => setPreview(false) }
+      : {};
     return (
-      <button key={String(withArticle)} type="button" className={cls} disabled={picked !== null} onClick={() => answer(withArticle)}>
+      <button key={String(withArticle)} type="button" className={cls} disabled={picked !== null} onClick={() => answer(withArticle)} {...hover}>
         <bdi>{t(withArticle ? "articleWith" : "articleWithout")}</bdi>
       </button>
     );
   };
+
+  // before answering: the name without ال (or with ال added while hovering); after: the correct spelling
+  const shownName = picked !== null ? country?.ar : preview ? addArticle(bare) : bare;
 
   return (
     <main className="page narrow">
@@ -62,12 +74,12 @@ export default function ArticleQuiz({ onExit }) {
       ) : (
         <section className="card flash">
           <div className="face">
-            <span className="huge"><bdi>{country.en}</bdi></span>
+            <span className="ar huge" dir="rtl">{shownName}</span>
+            {picked !== null && <small className="muted country-en"><bdi>{country.en}</bdi></small>}
           </div>
           <div className="gender-buttons">{[true, false].map(btn)}</div>
           {picked !== null && (
             <>
-              <p className="ar big" dir="rtl">{country.ar}</p>
               <p><bdi>{t(picked === country.hasArticle ? "genderRight" : "genderWrong")}</bdi></p>
               <button className="primary" onClick={next} autoFocus><span dir="auto">{t("genderNext")}</span></button>
             </>

@@ -8,6 +8,7 @@ import { presentChart, presentChartForm } from "./chart.js";
 import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey, prepositionLevels } from "./prepositions.js";
 import { lessonStyle } from "../config/books.js";
 import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
+import { withoutArticle, addArticle } from "./article.js";
 import assert from "node:assert/strict";
 
 import { getForms, analyzeVerb } from "./morphology.js";
@@ -1047,14 +1048,30 @@ test("the learn cards' Arabic descriptions use words from the list and turn Arab
   assert.deepEqual(strings.modeGeoDesc.unlock, last("بلد", "عاصمة"));
 });
 
-test("geography games: the 16 countries, which take ال, and prepositions usable in descriptions", () => {
-  assert.deepEqual(GAME_COUNTRIES.map((c) => c.en), [
+test("geography games: the countries, which take ال, and prepositions usable in descriptions", () => {
+  const names = GAME_COUNTRIES.map((c) => c.en);
+  // the 16 well-known countries, America, then every place of the map game
+  assert.deepEqual(names.slice(0, 16), [
     "the United States", "China", "France", "Spain", "Britain", "Turkey", "Iran", "Russia", "Japan", "Italy",
     "Canada", "Mexico", "Germany", "India", "Pakistan", "South Korea",
   ]);
-  assert.ok(GAME_COUNTRIES.every(Boolean));
-  assert.deepEqual(GAME_COUNTRIES.filter((c) => c.hasArticle).map((c) => c.en), ["the United States", "China", "Japan", "Mexico", "India"]);
-  assert.equal(COUNTRIES.find((c) => c.en === "France").hasArticle, false);
+  assert.equal(names[16], "America");
+  assert.equal(GAME_COUNTRIES.length, 16 + 1 + geoCountries.length);
+  assert.equal(new Set(names).size, names.length);
+  assert.ok(GAME_COUNTRIES.every((c) => c && c.ar && ["masculine", "feminine"].includes(c.gender)));
+  for (const g of geoCountries) assert.ok(GAME_COUNTRIES.some((c) => c.en === g.nameEn || c.en === `the ${g.nameEn}`), g.nameEn);
+  // the masculine ones among them: Lebanon, Iraq, Jordan, Sudan, Morocco, Yemen
+  assert.deepEqual(GAME_COUNTRIES.filter((c) => c.gender === "masculine").map((c) => c.en).sort(), ["Iraq", "Jordan", "Lebanon", "Morocco", "Sudan", "Yemen"]);
+  const withArticleNames = GAME_COUNTRIES.filter((c) => c.hasArticle).map((c) => c.en);
+  for (const en of ["the United States", "China", "Japan", "Mexico", "India", "Iraq", "Saudi Arabia", "Yemen"]) assert.ok(withArticleNames.includes(en), en);
+  for (const en of ["France", "Spain", "America", "Egypt", "Syria", "Lebanon", "Qatar"]) assert.ok(!withArticleNames.includes(en), en);
+  // the name is shown without ال and can be given it back
+  assert.equal(canon(withoutArticle("الصِّين")), canon("صِين")); // the shadda goes with ال
+  assert.equal(withoutArticle("الأُردُن"), "أُردُن");
+  assert.equal(withoutArticle("الوِلايات المُتَّحِدة"), "وِلايات المُتَّحِدة");
+  assert.equal(withoutArticle("فَرَنسا"), "فَرَنسا");
+  for (const c of GAME_COUNTRIES.filter((x) => x.hasArticle)) assert.equal(canon(addArticle(withoutArticle(c.ar))), canon(c.ar), c.en);
+  assert.ok(!GAME_COUNTRIES.some((c) => !c.hasArticle && c.ar.startsWith("ال")));
   // prepositions may be used in Arabic text from where they are introduced for a verb (not added to the list)
   const lv = prepositionLevels(allWords);
   assert.deepEqual([lv.get("عن"), lv.get("إلى"), lv.get("على"), lv.get("مع"), lv.get("في")], [

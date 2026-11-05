@@ -90,11 +90,11 @@ export const PATTERNS = {
 export function canon(s) {
   return String(s ?? "")
     .replace(/[ـْ\s]/g, "")
+    .replace(/([َُِ])ّ/g, "ّ$1") // the shadda first, so the rules below see the vowel next to its long vowel
     .replace(/َ(?=[اة])/g, "")
     .replace(/ُ(?=و)/g, "")
     .replace(/ِ(?=ي)/g, "")
     .replace(/(إ)ِ/g, "$1") // the hamza under the alif already says kasra
-    .replace(/([َُِ])ّ/g, "ّ$1")
     .replace(new RegExp(`^(ال)([${SUN}])ّ`), "$1$2");
 }
 

@@ -321,3 +321,4 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 @media (max-width: 520px) { .pattern-field { grid-template-columns: 1fr; } .pattern-answer { grid-column: 1; } }
 .pattern-boxes { display: flex; gap: 0.4rem; min-width: 0; }
 .pattern-boxes .pattern-input { flex: 1 1 0; min-width: 0; width: 0; box-sizing: border-box; }
+.country-en { font-size: 0.85rem; }
