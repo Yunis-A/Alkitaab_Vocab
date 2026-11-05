@@ -1,6 +1,5 @@
 import { useApp } from "../context/AppContext.jsx";
 import LevelPicker from "../components/LevelPicker.jsx";
-import GeoGame from "../components/GeoGame.jsx";
 import { DIALECTS } from "../lib/varieties.js";
 import Account from "./Account.jsx";
 
@@ -25,11 +24,6 @@ export default function Settings() {
             <bdi>{t(d === "egyptian" ? "dialectEgyptian" : "dialectShami")}</bdi>
           </label>
         ))}
-      </section>
-
-      <section className="card">
-        <h2><bdi>{t("geoTitle")}</bdi></h2>
-        <GeoGame />
       </section>
 
       <Account />

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import ArabicKeyboard from "../components/ArabicKeyboard.jsx";
 import {
-  answerSpec, answerText, buildTask, fieldsAt, fieldsForAnyForm, formsAt, isCorrect, isCorrectSet,
+  answerSpec, answerText, buildTask, canAppend, fieldsAt, fieldsForAnyForm, formsAt, isCorrect, isCorrectSet,
 } from "../lib/patterns.js";
 
 // One pattern on ف ع ل is given; the student builds the rest with a restricted keyboard. What is asked
@@ -34,7 +34,7 @@ export default function VerbPatterns({ onExit }) {
 
   const cur = typedKeys.includes(active) ? active : typedKeys[0] ?? null; // the box the keyboard types into
   const set = (key, value) => setAnswers((a) => ({ ...a, [key]: value }));
-  const key = (c) => cur && set(cur, (answers[cur] ?? "") + c);
+  const key = (c) => cur && canAppend(answers[cur] ?? "", c) && set(cur, (answers[cur] ?? "") + c);
   const back = () => cur && set(cur, (answers[cur] ?? "").slice(0, -1));
 
   // A field counts only if it was on screen and is right; what was not on screen (the student picked another

@@ -7,6 +7,7 @@ import WordDetail from "../components/WordDetail.jsx";
 import UnitPicker from "../components/UnitPicker.jsx";
 import QuickStudy from "./QuickStudy.jsx";
 import GenderQuiz from "./GenderQuiz.jsx";
+import GeoGame from "../components/GeoGame.jsx";
 import Prepositions from "./Prepositions.jsx";
 import VerbPatterns from "./VerbPatterns.jsx";
 import { prepositionVerbs } from "../lib/prepositions.js";
@@ -46,6 +47,7 @@ const MODES = [
   { id: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
   { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true, from: PATTERNS_FROM }, // covers what your level has learned
   { id: "gender", title: "studyGender", desc: "modeGenderDesc", direct: true, from: { book: 2, unit: 1 } }, // مُذَكَّر / مُؤَنَّث
+  { id: "geography", title: "geoTitle", desc: "modeGeoDesc", direct: true },
 ];
 
 export default function Learn() {
@@ -81,6 +83,16 @@ export default function Learn() {
   if (mode === "run:prepositions") return <Prepositions verbs={prepVerbs} onExit={exit} />;
   if (mode === "run:patterns") return <VerbPatterns onExit={exit} />;
   if (mode === "run:gender") return <GenderQuiz onExit={exit} />;
+  if (mode === "run:geography") {
+    return (
+      <main className="page">
+        <div className="quick-bar">
+          <button type="button" className="link-button" onClick={exit}><bdi>{t("studyExit")}</bdi></button>
+        </div>
+        <section className="card"><GeoGame /></section>
+      </main>
+    );
+  }
 
   const setup = MODES.find((m) => m.id === mode);
   if (setup) {

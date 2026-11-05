@@ -3,10 +3,10 @@
 // nothing else can be typed.
 
 // Keys are laid out left to right, so the Arabic reads right to left across each row: ف ع ل, then
-// إ أ ا و ي ت ن م س ة, with the vowel marks left to right as fatha, damma, kasra, shadda.
+// إ أ ا و ي ت ن م س ة, with the marks left to right as shadda, kasra, damma, fatha.
 const ROOT = ["ل", "ع", "ف"];
 const LETTERS = ["ة", "س", "م", "ن", "ت", "ي", "و", "ا", "أ", "إ"];
-const MARKS = ["َ", "ُ", "ِ", "ّ"]; // fatha, damma, kasra, shadda
+const MARKS = ["ّ", "ِ", "ُ", "َ"]; // shadda, kasra, damma, fatha
 
 export default function ArabicKeyboard({ onKey, onBackspace, disabled }) {
   return (

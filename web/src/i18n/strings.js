@@ -101,12 +101,16 @@ export const strings = {
   makaan: { en: "Noun of place", ar: "اسم المكان", unlock: u(3, 1) },
   passivePast: { en: "Passive past", ar: "الماضي المجهول", unlock: u(3, 7) },
   passivePresent: { en: "Passive present", ar: "المضارع المجهول", unlock: u(3, 10) },
-  modeReviewDesc: { en: "Cards that are due, spaced by your boxes.", ar: "بطاقات حان وقتها حسب صناديقك.", unlock: u(3, 8) },
-  modeQuickDesc: { en: "A short session over the units you pick. Nothing is saved.", ar: "جلسة قصيرة على الدروس التي تختارها. لا يحفظ شيء.", unlock: u(3, 8) },
-  modeMatchingDesc: { en: "Connect each English meaning to its Arabic word.", ar: "صل كل معنى إنجليزي بكلمته العربية.", unlock: u(3, 8) },
-  modePrepositionsDesc: { en: "Choose every preposition a verb takes.", ar: "اختر كل حرف جر يأخذه الفعل.", unlock: u(3, 8) },
-  modePatternsDesc: { en: "Build every form of a verb pattern from one.", ar: "ابن كل صيغة للوزن من صيغة واحدة.", unlock: u(3, 8) },
-  modeGenderDesc: { en: "Is the country masculine or feminine?", ar: "هل البلد مذكر أم مؤنث؟", unlock: u(3, 8) },
+  // The Arabic descriptions use only words from the list, so each turns Arabic in the lesson of its last word:
+  //   هل (b2u1) أتذكر (b2u4) كلمة (b1u8) / أدرس (b2u1) جديدة (b1u4) / عربية (b1u10) إنجليزية (b2u1)
+  //   في (b1u1) أو (b1u7) من (b1u1) / كلمة من فعل (b3u4) / بلد (b2u2) عاصمة (b3u4) / مذكر (b2u1) مؤنث (b2u1)
+  modeReviewDesc: { en: "Cards that are due, spaced by your boxes.", ar: "هل أتذكر الكلمة؟", unlock: u(2, 4) },
+  modeQuickDesc: { en: "A short session over the units you pick. Nothing is saved.", ar: "أدرس كلمة جديدة", unlock: u(2, 1) },
+  modeMatchingDesc: { en: "Connect each English meaning to its Arabic word.", ar: "كلمة عربية وكلمة إنجليزية", unlock: u(2, 1) },
+  modePrepositionsDesc: { en: "Choose every preposition a verb takes.", ar: "في أو من؟", unlock: u(1, 7) },
+  modePatternsDesc: { en: "Build every form of a verb pattern from one.", ar: "كلمة من فعل", unlock: u(3, 4) },
+  modeGenderDesc: { en: "Is the country masculine or feminine?", ar: "بلد مذكر أو مؤنث؟", unlock: u(2, 2) },
+  modeGeoDesc: { en: "Find each country or capital on the map, against the clock.", ar: "بلد وعاصمة", unlock: u(3, 4) },
   studyNoUnits: { en: "Pick at least one unit with words.", ar: "اختر درسا فيه كلمات.", unlock: u(3, 8) },
   studyExit: { en: "Exit", ar: "خروج", unlock: u(3, 8) },
   studyDone: {

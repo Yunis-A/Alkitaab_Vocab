@@ -3,7 +3,7 @@ import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
 import { mergeProgress } from "./sync.js";
-import { FORMS, ALL_FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect, isCorrectSet, withArticle, formsAt, fieldsAt, fieldsForAnyForm, answerSpec, QUAD_FROM } from "./patterns.js";
+import { FORMS, ALL_FORMS, FIELDS, PATTERNS, canon, hasStackedMarks, canAppend, buildTask, isCorrect, isCorrectSet, withArticle, formsAt, fieldsAt, fieldsForAnyForm, answerSpec, QUAD_FROM } from "./patterns.js";
 import { presentChart, presentChartForm } from "./chart.js";
 import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey } from "./prepositions.js";
 import { lessonStyle } from "../config/books.js";
@@ -909,8 +909,8 @@ test("verb patterns on ف ع ل agree with the morphology generator and are chec
   assert.equal(isCorrect("Q1", "past", "فَعلَلَ"), true);
   assert.equal(isCorrect("Q1", "present", "يُفَعلِلُ"), true);
   assert.equal(isCorrect("Q1", "passivePast", "فُعلِلَ"), true);
-  assert.equal(canon(PATTERNS.Q2.masdar[0]), canon("التَّفَعلُل"));
-  assert.ok(ALL_FORMS.includes("Q2"));
+  assert.deepEqual(ALL_FORMS.filter((f) => typeof f === "string"), ["Q1"]); // only the first four-letter form is kept
+  assert.equal(PATTERNS.Q2, undefined);
 });
 
 test("verb patterns: boxes follow the form; form III has two verbal nouns from part 3 lesson 1", () => {
@@ -968,7 +968,7 @@ test("verb patterns are asked only when the lesson has been reached", () => {
     assert.ok(f(form, L(3, 10)).includes("passivePast") && f(form, L(3, 10)).includes("passivePresent"), `${form} at lesson 10`);
   }
   assert.ok(!f(7, L(4, 10)).includes("passivePast") && !f(9, L(4, 10)).includes("passivePast")); // VII and IX have none
-  assert.ok(f("Q1", L(3, 7)).includes("passivePast") && !f("Q2", L(4, 10)).includes("passivePast"));
+  assert.ok(f("Q1", L(3, 7)).includes("passivePast"));
   // the imperative: part 3 lesson 3
   assert.ok(!f(1, L(4, 2)).includes("imperative") && f(1, L(4, 3)).includes("imperative"));
   assert.ok(!f(9, L(4, 10)).includes("imperative"));
@@ -1008,4 +1008,42 @@ test("preposition trainer: stored prepositions, grading", () => {
   assert.equal(gradePrepositions(new Set(["ب", "مع"]), w).perfect, true);
   const g = gradePrepositions(new Set(["ب", "في"]), w);
   assert.deepEqual([g.right, g.wrong, g.missed, g.perfect], [["ب"], ["في"], ["مع"], false]);
+});
+
+test("two short vowels on one letter are never accepted or typed", () => {
+  const F = "َ", D = "ُ", K = "ِ", SH = "ّ";
+  assert.equal(hasStackedMarks("فَعَلَ"), false);
+  assert.equal(hasStackedMarks(`فَ${F}ا`), true); // two fathas on one letter
+  assert.equal(hasStackedMarks(`فَ${K}عَلَ`), true); // fatha and kasra
+  assert.equal(hasStackedMarks(`فَعَّلَ`), false); // shadda with one vowel is fine
+  assert.equal(hasStackedMarks(`فَ${SH}${F}عَل`), true); // fatha, shadda, fatha
+  assert.equal(hasStackedMarks(`ف${SH}${SH}`), true);
+  // they are not accepted as answers, however the rest looks (a fatha before alif is normally forgiven)
+  assert.equal(isCorrect(3, "past", "فَاعَلَ"), true);
+  assert.equal(isCorrect(3, "past", `ف${F}${F}اعَلَ`), false);
+  assert.equal(isCorrect(3, "past", `فَاعَلَ${F}`), false);
+  assert.equal(isCorrectSet(1, "past", ["فَعَلَ", "فَعِلَ", `فَعُلَ${F}`]), false);
+  // the keyboard will not add them
+  assert.equal(canAppend("ف", F), true);
+  assert.equal(canAppend(`ف${F}`, D), false);
+  assert.equal(canAppend(`ف${F}`, F), false);
+  assert.equal(canAppend(`ف${F}`, SH), true);
+  assert.equal(canAppend(`ف${SH}`, F), true);
+  assert.equal(canAppend(`ف${SH}${F}`, K), false);
+  assert.equal(canAppend(`ف${F}ع`, K), true); // a new letter starts fresh
+  assert.equal(canAppend("", "ع"), true);
+});
+
+test("the learn cards' Arabic descriptions use words from the list and turn Arabic where those are learned", () => {
+  const L = (book, unit) => ({ book, unit });
+  const at = (arabic) => allWords.filter((w) => w.arabic && w.arabic.replace(/[ً-ْـ]/g, "") === arabic).map((w) => L(w.book, w.unit)).sort((a, b) => a.book - b.book || a.unit - b.unit)[0];
+  const last = (...words) => words.map(at).reduce((m, l) => (l.book - m.book || l.unit - m.unit) > 0 ? l : m);
+  for (const w of ["هل", "أتذكر", "كلمة", "أدرس", "جديد", "عربي", "إنجليزي", "في", "أو", "من", "فعل", "بلد", "عاصمة", "مذكر", "مؤنث"]) assert.ok(at(w), `${w} is in the list`);
+  assert.deepEqual(strings.modeReviewDesc.unlock, last("هل", "أتذكر", "كلمة"));
+  assert.deepEqual(strings.modeQuickDesc.unlock, last("أدرس", "كلمة", "جديد"));
+  assert.deepEqual(strings.modeMatchingDesc.unlock, last("كلمة", "عربي", "إنجليزي"));
+  assert.deepEqual(strings.modePrepositionsDesc.unlock, last("في", "أو", "من"));
+  assert.deepEqual(strings.modePatternsDesc.unlock, last("كلمة", "من", "فعل"));
+  assert.deepEqual(strings.modeGenderDesc.unlock, last("بلد", "مذكر", "مؤنث"));
+  assert.deepEqual(strings.modeGeoDesc.unlock, last("بلد", "عاصمة"));
 });

@@ -12,8 +12,8 @@
 import { IMPERATIVE_LEVEL, levelReached } from "../config/books.js";
 
 export const FORMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// four-letter roots (فَعلَلَ): "Q1" is their form I, "Q2" their form II (تَفَعلَلَ)
-export const QUAD_FORMS = ["Q1", "Q2"];
+// four-letter roots (فَعلَلَ): "Q1" is their form I
+export const QUAD_FORMS = ["Q1"];
 export const ALL_FORMS = [...FORMS, ...QUAD_FORMS];
 
 // the answer fields after the form number, in the order they are asked
@@ -77,10 +77,6 @@ export const PATTERNS = {
     past: ["فَعلَلَ"], present: ["يُفَعلِل"], masdar: M("فَعلَلة", "فِعلال"), activeParticiple: ["مُفَعلِل"],
     passiveParticiple: ["مُفَعلَل"], passivePast: ["فُعلِلَ"], passivePresent: ["يُفَعلَل"], imperative: ["فَعلِل"],
   },
-  Q2: {
-    past: ["تَفَعلَلَ"], present: ["يَتَفَعلَل"], masdar: M("تَفَعلُل"), activeParticiple: ["مُتَفَعلِل"],
-    passiveParticiple: ["مُتَفَعلَل"], passivePast: null, passivePresent: null, imperative: ["تَفَعلَل"],
-  },
   10: {
     past: ["اِستَفعَلَ"], present: ["يَستَفعِل"], masdar: M("اِستِفعال"), activeParticiple: ["مُستَفعِل"],
     passiveParticiple: ["مُستَفعَل"], passivePast: ["اُستُفعِلَ"], passivePresent: ["يُستَفعَل"], imperative: ["اِستَفعِل"],
@@ -123,7 +119,6 @@ export const FORM_LEVELS = {
   7: { from: at(2, 11), masdar: at(2, 11) },
   9: { from: at(3, 3), masdar: at(3, 3) },
   Q1: { from: QUAD_FROM, masdar: QUAD_FROM },
-  Q2: { from: QUAD_FROM, masdar: QUAD_FROM },
 };
 
 // where each of the other fields is learned
@@ -186,9 +181,27 @@ export function buildTask(level, rng = Math.random, only = null) {
   return { form, clue: { field, value }, targets };
 }
 
+// A letter carries at most one short vowel (or sukun) and one shadda. Two vowels on one letter (فَََاعَلَ,
+// فَِعَلَ) are never accepted, even where one of them would be forgiven.
+export function hasStackedMarks(text) {
+  for (const run of String(text ?? "").match(/[\u064B-\u0652\u0670]+/g) ?? []) {
+    if ((run.match(/[\u064E\u064F\u0650\u0652]/g) ?? []).length > 1) return true;
+    if ((run.match(/\u0651/g) ?? []).length > 1) return true;
+  }
+  return false;
+}
+
+// May this key be added to the box? Letters always; a short vowel only if the last letter has none yet; the
+// shadda only if it has no shadda yet.
+export function canAppend(text, key) {
+  if (!/[\u064B-\u0652]/.test(key)) return true;
+  return !hasStackedMarks(text + key);
+}
+
 // The present tense is written without case endings, so a typed final damma (يَفعَلُ) is not held against
 // the student.
 const typedForm = (field, answer) => {
+  if (hasStackedMarks(answer)) return "";
   const s = canon(answer);
   return field === "present" || field === "passivePresent" ? s.replace(/ُ$/, "") : s;
 };
