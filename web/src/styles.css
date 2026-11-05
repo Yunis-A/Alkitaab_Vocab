@@ -330,10 +330,15 @@ details.grammar > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem
 /* typing lessons */
 .lesson-card.passed { border-color: #2e9e5b; }
 .lesson-letters { font-size: 1.6rem; letter-spacing: 0.3rem; }
-.typing-text { font-size: 2.4rem; line-height: 1.8; margin: 1rem 0; word-break: keep-all; }
-.typing-text span { padding: 0 0.05rem; color: var(--muted, #777); }
-.typing-text .typed { color: #2e9e5b; }
-.typing-text .current { color: var(--text); background: color-mix(in srgb, var(--theme) 25%, #fff); border-radius: 4px; white-space: pre; }
+.typing-window { height: calc(3 * 3.3rem); overflow: hidden; margin: 0.75rem 0; }
+.typing-track { position: relative; font-size: 2rem; line-height: 3.3rem; transition: transform 0.25s ease; }
+.tw { display: inline-block; }
+.typing-track span { color: #888; }
+.typing-track .typed { color: #2e9e5b; }
+.typing-track .current { color: var(--text); background: color-mix(in srgb, var(--theme) 25%, #fff); border-radius: 4px; }
+.typing-track .sp { white-space: pre; }
+.typing-progress { margin: 0; }
+@media (prefers-reduced-motion: reduce) { .typing-track { transition: none; } }
 .typing-result { margin-top: 0.5rem; }
 .typing-keyboard { display: grid; gap: 0.3rem; margin: 1rem auto 0; max-width: 56rem; user-select: none; }
 .tk-row { display: flex; gap: 0.3rem; }

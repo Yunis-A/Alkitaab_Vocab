@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import TypingKeyboard from "../components/TypingKeyboard.jsx";
+import TypingText from "../components/TypingText.jsx";
 import { LAYOUT as layout, SHIFT_KEY, keyFor } from "../data/keyboardLayouts.js";
 import { LESSONS, MIN_ACCURACY, buildText, isUnlocked, typingResult } from "../lib/typing.js";
 
@@ -124,11 +125,7 @@ export function TypingLesson({ lesson, onExit, onNext }) {
         {lesson.kind === "new" && (
           <p className="muted"><bdi>{t("typingNewLetters")}: </bdi><span className="ar lesson-letters" dir="rtl">{lesson.letters.join(" ")}</span></p>
         )}
-        <div className="typing-text ar" dir="rtl">
-          {tokens.map((tok, i) => (
-            <span key={i} className={i < pos ? "typed" : i === pos ? "current" : ""}>{tok === " " ? " " : tok}</span>
-          ))}
-        </div>
+        <TypingText tokens={tokens} pos={pos} />
 
         <p className="muted typing-progress"><bdi>{nf(Math.min(pos, tokens.length))} / {nf(tokens.length)}</bdi></p>
 
