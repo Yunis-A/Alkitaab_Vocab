@@ -10,6 +10,7 @@ const LABELS = {
   masdar: "masdar",
   activeParticiple: "activeParticiple",
   passiveParticiple: "passiveParticiple",
+  makaan: "makaan",
   passivePast: "passivePast",
   passivePresent: "passivePresent",
   imperative: "imperative",
@@ -35,7 +36,15 @@ export default function VerbPatterns({ forms, onExit }) {
   const isMulti = (field) => formIsI && MULTI_FIELDS.includes(field);
   const boxKeys = (field) =>
     isMulti(field) ? Array.from({ length: BOXES_FOR_FORM_I }, (_, i) => `${field}#${i}`) : [field];
-  const typedKeys = task.targets.filter((f) => f !== "form").flatMap(boxKeys);
+  // The noun of place (form I only) and the split of "passive participle / noun of place" appear only once
+  // it is form I, so the boxes do not give the form away; after Check everything is shown.
+  const splitPP = formIsI || (checked && task.form === 1);
+  const shown = task.targets.filter((f) => f !== "makaan" || splitPP);
+  const label = (field, isClue = false) =>
+    field === "passiveParticiple" && !(splitPP || (isClue && task.form === 1))
+      ? `${t("passiveParticiple")} / ${t("makaan")}`
+      : t(LABELS[field]);
+  const typedKeys = shown.filter((f) => f !== "form").flatMap(boxKeys);
 
   const cur = typedKeys.includes(active) ? active : typedKeys[0] ?? null; // the box the keyboard types into
   const set = (key, value) => setAnswers((a) => ({ ...a, [key]: value }));
@@ -69,7 +78,7 @@ export default function VerbPatterns({ forms, onExit }) {
 
       <section className="card flash" key={round}>
         <div className="face">
-          <span className="muted"><bdi>{t(LABELS[clue.field])}</bdi></span>
+          <span className="muted"><bdi>{label(clue.field, true)}</bdi></span>
           {clue.field === "form" ? (
             <span className="huge">{nf(clue.value)}</span>
           ) : (
@@ -78,11 +87,11 @@ export default function VerbPatterns({ forms, onExit }) {
         </div>
 
         <div className="pattern-fields">
-          {task.targets.map((field) => {
+          {shown.map((field) => {
             const ok = checked ? result(field) : null;
             return (
               <div key={field} className={`pattern-field${ok === true ? " ok" : ok === false ? " bad" : ""}`}>
-                <span className="pattern-label"><bdi>{t(LABELS[field])}</bdi></span>
+                <span className="pattern-label"><bdi>{label(field)}</bdi></span>
                 {field === "form" ? (
                   <span className="form-picks">
                     {FORMS.map((f) => (

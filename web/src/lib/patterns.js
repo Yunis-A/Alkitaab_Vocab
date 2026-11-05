@@ -1,15 +1,18 @@
-// The verb patterns on the root ف ع ل (forms I-VIII and X; form IX is rare and left out). The pattern
-// trainer gives one of these and the student builds the others.
+// The verb patterns on the root ف ع ل (forms I-X). The pattern trainer gives one of these and the student
+// builds the others.
 //
 // Each value is a list of accepted answers (the first is the one shown). null = not asked: the form I
-// verbal noun varies from verb to verb, and form VII has no passive participle.
+// verbal noun varies from verb to verb, forms VII and IX have no passive, passive participle or noun of
+// place (VII is inherently passive in meaning; IX is a colour/defect verb), and IX has no imperative.
+// The noun of place has the same shape as the passive participle in every form but I, so it is only asked
+// (separately) for form I.
 // House style as in the word list: no sukun, no fatha before alif, no case endings on the present tense
 // (يَفعَل, not يَفعَلُ), and the verbal noun is always written with ال (الإِفعال).
 
-export const FORMS = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+export const FORMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // the answer fields after the form number, in the order they are asked
-export const FIELDS = ["past", "present", "masdar", "activeParticiple", "passiveParticiple", "passivePast", "passivePresent", "imperative"];
+export const FIELDS = ["past", "present", "masdar", "activeParticiple", "passiveParticiple", "makaan", "passivePast", "passivePresent", "imperative"];
 
 // Letters that assimilate the ل of ال (the shadda goes on the letter: التَّفعيل).
 const SUN = "تثدذرزسشصضطظلن";
@@ -28,6 +31,7 @@ export const PATTERNS = {
     masdar: null,
     activeParticiple: ["فاعِل"],
     passiveParticiple: ["مَفعول"],
+    makaan: ["مَفعَل", "مَفعِل"],
     passivePast: ["فُعِلَ"],
     passivePresent: ["يُفعَل"],
     imperative: ["اِفعَل", "اِفعِل", "اُفعُل"],
@@ -54,11 +58,15 @@ export const PATTERNS = {
   },
   7: {
     past: ["اِنفَعَلَ"], present: ["يَنفَعِل"], masdar: M("اِنفِعال"), activeParticiple: ["مُنفَعِل"],
-    passiveParticiple: null, passivePast: ["اُنفُعِلَ"], passivePresent: ["يُنفَعَل"], imperative: ["اِنفَعِل"],
+    passiveParticiple: null, passivePast: null, passivePresent: null, imperative: ["اِنفَعِل"],
   },
   8: {
     past: ["اِفتَعَلَ"], present: ["يَفتَعِل"], masdar: M("اِفتِعال"), activeParticiple: ["مُفتَعِل"],
     passiveParticiple: ["مُفتَعَل"], passivePast: ["اُفتُعِلَ"], passivePresent: ["يُفتَعَل"], imperative: ["اِفتَعِل"],
+  },
+  9: {
+    past: ["اِفعَلَّ"], present: ["يَفعَلّ"], masdar: M("اِفعِلال"), activeParticiple: ["مُفعَلّ"],
+    passiveParticiple: null, passivePast: null, passivePresent: null, imperative: null,
   },
   10: {
     past: ["اِستَفعَلَ"], present: ["يَستَفعِل"], masdar: M("اِستِفعال"), activeParticiple: ["مُستَفعِل"],
@@ -81,6 +89,14 @@ export function canon(s) {
 }
 
 const askable = (form, field) => !!PATTERNS[form]?.[field];
+
+// The forms to practise for a student who has met verbs of these forms. Form IX has no verbs in the word
+// list, so it comes with the later forms (VIII and X).
+export function formsForVerbs(verbForms) {
+  const met = new Set(verbForms);
+  const later = met.has(8) || met.has(10);
+  return FORMS.filter((f) => met.has(f) || (f === 9 && later));
+}
 
 // Can this value be given to the student without leaving the form unclear? (Form I and form IV share the
 // passive present يُفعَل, for instance, so that one is never the clue.)

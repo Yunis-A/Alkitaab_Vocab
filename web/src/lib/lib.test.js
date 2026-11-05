@@ -3,7 +3,7 @@ import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
 import { mergeProgress } from "./sync.js";
-import { FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect, isCorrectSet, withArticle } from "./patterns.js";
+import { FORMS, FIELDS, PATTERNS, canon, buildTask, isCorrect, isCorrectSet, withArticle, formsForVerbs } from "./patterns.js";
 import { presentChart, presentChartForm } from "./chart.js";
 import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey } from "./prepositions.js";
 import { lessonStyle } from "../config/books.js";
@@ -834,7 +834,7 @@ test("account heading turns Arabic where حِساب (account) is taught", () => 
 
 test("verb patterns on ف ع ل agree with the morphology generator and are checked strictly where it matters", () => {
   const noCase = (x) => x?.replace(/ُ$/, ""); // the trainer writes the present without its case ending
-  for (const f of FORMS) {
+  for (const f of FORMS.filter((x) => x !== 9)) { // the generator has no form IX
     const g = getForms({ pos: "verb", root: "ف ع ل", form: f, arabic: "x", presentVowel: "a" });
     const same = (field, val) => !val || !PATTERNS[f][field] || PATTERNS[f][field].some((v) => canon(v) === canon(val));
     assert.ok(same("past", g.past["3ms"]), `${f} past`);
@@ -884,6 +884,25 @@ test("verb patterns on ف ع ل agree with the morphology generator and are chec
     }
   }
   assert.ok(!buildTask([1], rng).targets.includes("masdar")); // form I masdar varies, so it is not asked
+  // form VII: no passive, passive participle or noun of place; form IX: also no imperative
+  for (const f of [7, 9]) for (const field of ["passivePast", "passivePresent", "passiveParticiple", "makaan"]) assert.equal(PATTERNS[f][field] ?? null, null, `${f} ${field}`);
+  assert.equal(PATTERNS[9].imperative, null);
+  assert.deepEqual([PATTERNS[9].past[0], PATTERNS[9].present[0], PATTERNS[9].masdar[0], PATTERNS[9].activeParticiple[0]], ["اِفعَلَّ", "يَفعَلّ", "الاِفعِلال", "مُفعَلّ"]);
+  for (let i = 0; i < 200; i++) {
+    const t9 = buildTask([9], rng);
+    assert.ok(!t9.targets.some((f) => ["imperative", "passivePast", "passivePresent", "passiveParticiple", "makaan"].includes(f)));
+    const t7 = buildTask([7], rng);
+    assert.ok(!t7.targets.some((f) => ["passivePast", "passivePresent", "passiveParticiple", "makaan"].includes(f)));
+  }
+  // the noun of place is a separate answer only for form I (مَفعَل / مَفعِل, unlike the passive participle مَفعول)
+  assert.deepEqual(FORMS.filter((f) => PATTERNS[f].makaan), [1]);
+  assert.equal(isCorrect(1, "makaan", "مَفعِل"), true);
+  assert.equal(isCorrect(1, "makaan", "مَفعول"), false);
+  assert.ok(buildTask([1], () => 0).targets.includes("makaan") || buildTask([1], () => 0.99).targets.includes("makaan"));
+  // which forms come up: those met, plus IX once the later forms are
+  assert.deepEqual(formsForVerbs([1, 2]), [1, 2]);
+  assert.deepEqual(formsForVerbs([1, 8]), [1, 8, 9]);
+  assert.deepEqual(formsForVerbs([10]), [9, 10]);
 });
 
 test("present chart: no case endings; both endings where the form can lose its noon", () => {
