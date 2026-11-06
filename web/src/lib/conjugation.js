@@ -4,6 +4,7 @@
 
 import { levelReached } from "../config/books.js";
 import { canon, hasStackedMarks, withArticle } from "./patterns.js";
+import { stripDiacritics } from "./arabic.js";
 import { getForms, PAST_PERSONS } from "./morphology.js";
 import { presentAnswers } from "./chart.js";
 import { MOODS, MOOD_FROM, learnedMoods, moodCharts } from "./moods.js";
@@ -93,7 +94,11 @@ export const needsForm = (word, allVerbs) => allVerbs.some((v) => v !== word && 
 // Is `typed` right? Vowel marks must be right (a stray fatha before alif, a sukun or the other alif spellings
 // of canon() are forgiven, two vowels on one letter are not). The present's case ending is forgiven; the verbal
 // noun is accepted with or without ال.
-export function isConjugationCorrect(item, typed) {
+//
+// With `marks: false` the vowel marks are left out of the comparison altogether: only the letters count (the
+// moods then differ only where a letter does, as in the noon of تَدرُسينَ / تَدرُسي).
+export function isConjugationCorrect(item, typed, { marks = true } = {}) {
+  if (!marks) return isLettersCorrect(item, typed);
   if (hasStackedMarks(typed)) return false;
   let t = canon(typed);
   if (!t) return false;
@@ -105,6 +110,17 @@ export function isConjugationCorrect(item, typed) {
     });
   }
   return (item.accept ?? item.answers).some((a) => t === canon(a));
+}
+
+// The letters alone, ignoring every vowel mark (and the shadda).
+function isLettersCorrect(item, typed) {
+  const t = stripDiacritics(typed).replace(/\s+/g, "");
+  if (!t) return false;
+  const letters = (a) => stripDiacritics(a).replace(/\s+/g, "");
+  return (item.accept ?? item.answers).some((a) => {
+    const l = letters(a);
+    return t === l || (item.tense === "masdar" && (t === l.replace(/^ال/, "") || t === `ال${l}`));
+  });
 }
 
 // The letter or mark a key press types (Shift: the shifted one), or null.

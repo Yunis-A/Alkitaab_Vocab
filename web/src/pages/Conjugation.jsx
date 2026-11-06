@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useShiftHeld } from "../hooks.js";
 import { useApp } from "../context/AppContext.jsx";
 import TypingKeyboard from "../components/TypingKeyboard.jsx";
 import { LAYOUT as layout } from "../data/keyboardLayouts.js";
@@ -13,7 +14,7 @@ const MODIFIERS = new Set(["ShiftLeft", "ShiftRight", "ControlLeft", "ControlRig
 // Given a root (and the form, when the root has several), type the verb for the pronoun in the tense, or its
 // verbal noun. The answer is typed on the real keyboard (Arabic 101 positions; Shift for the vowel marks) or
 // on the on-screen keys; the vowel marks must be right.
-export default function Conjugation({ items, allVerbs, onExit }) {
+export default function Conjugation({ items, allVerbs, marks = true, onExit }) {
   const { t, nf } = useApp();
   const [order, setOrder] = useState(() => shuffle(items).slice(0, QUESTIONS));
   const [i, setI] = useState(0);
@@ -22,6 +23,7 @@ export default function Conjugation({ items, allVerbs, onExit }) {
   const [hint, setHint] = useState(false);
   const [score, setScore] = useState(0);
   const [shiftDown, setShiftDown] = useState(false);
+  const shiftHeld = useShiftHeld();
 
   const item = order[i];
   const finished = i >= order.length;
@@ -33,7 +35,7 @@ export default function Conjugation({ items, allVerbs, onExit }) {
   const check = () => {
     const s = state.current;
     if (s.checked !== null || !s.item || !s.typed) return;
-    const ok = isConjugationCorrect(s.item, s.typed);
+    const ok = isConjugationCorrect(s.item, s.typed, { marks });
     setChecked(ok);
     if (ok) setScore((n) => n + 1);
   };
@@ -123,6 +125,7 @@ export default function Conjugation({ items, allVerbs, onExit }) {
             target={null}
             wrongCode={null}
             shiftDown={shiftDown}
+            shift={shiftHeld || shiftDown}
             onPress={(code) => {
               if (code.startsWith("Shift")) setShiftDown((d) => !d);
               else { press(code, shiftDown); setShiftDown(false); }

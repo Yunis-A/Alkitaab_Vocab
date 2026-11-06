@@ -4,7 +4,7 @@ import { DIALECTS } from "../lib/varieties.js";
 import Account from "./Account.jsx";
 
 export default function Settings() {
-  const { t, level, setLevel, dialects, setDialect } = useApp();
+  const { t, level, setLevel, dialects, setDialect, dark, setDark } = useApp();
   return (
     <main className="page">
       <h1><bdi>{t("navSettings")}</bdi></h1>
@@ -13,6 +13,14 @@ export default function Settings() {
         <h2><bdi>{t("level")}</bdi></h2>
         <p className="muted"><bdi>{t("settingsLevelHelp")}</bdi></p>
         <LevelPicker value={level} onChange={(v) => setLevel(v.book, v.unit)} />
+      </section>
+
+      <section className="card">
+        <h2><bdi>{t("appearance")}</bdi></h2>
+        <label className="check">
+          <input type="checkbox" checked={dark} onChange={(e) => setDark(e.target.checked)} />
+          <bdi>{t("darkMode")}</bdi>
+        </label>
       </section>
 
       <section className="card">

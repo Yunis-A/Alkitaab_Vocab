@@ -24,6 +24,7 @@ export function mergeProgress(local, remote) {
     ...local,
     ...remote,
     typing: { passed },
+    dark: remote.dark ?? local.dark ?? null,
     level: remote.level ?? local.level,
     dialects: { ...local.dialects, ...remote.dialects },
     cards,

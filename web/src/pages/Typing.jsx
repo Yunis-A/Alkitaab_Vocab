@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useShiftHeld } from "../hooks.js";
 import { useApp } from "../context/AppContext.jsx";
 import TypingKeyboard from "../components/TypingKeyboard.jsx";
 import TypingText from "../components/TypingText.jsx";
@@ -58,6 +59,7 @@ export function TypingLesson({ lesson, onExit, onNext }) {
   const [mistakes, setMistakes] = useState(0);
   const [wrongCode, setWrongCode] = useState(null);
   const [shiftDown, setShiftDown] = useState(false); // Shift tapped on the on-screen keyboard
+  const shiftHeld = useShiftHeld();
   const [result, setResult] = useState(null);
   const startedAt = useRef(null);
   const flash = useRef(null);
@@ -149,6 +151,7 @@ export function TypingLesson({ lesson, onExit, onNext }) {
         target={target}
         wrongCode={wrongCode}
         shiftDown={shiftDown}
+        shift={shiftHeld || shiftDown}
         onPress={(code) => {
           if (code.startsWith("Shift")) setShiftDown((d) => !d);
           else { press(code, shiftDown); setShiftDown(false); }

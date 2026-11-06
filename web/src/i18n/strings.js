@@ -147,6 +147,9 @@ export const strings = {
   modeConjugationDesc: { en: "Given a root, build the verb for a pronoun.", ar: "هو يكتب كلمة", unlock: u(2, 4) },
   conjTenses: { en: "Type", ar: "النوع", unlock: u(1, 8) },
   conjPronouns: { en: "Pronouns", ar: "الضمائر", unlock: u(3, 8) },
+  conjMarks: { en: "Vowel marks required", ar: "التشكيل مطلوب", unlock: u(3, 8) },
+  appearance: { en: "Appearance", ar: "المظهر", unlock: u(3, 8) },
+  darkMode: { en: "Dark mode", ar: "الوضع الداكن", unlock: u(3, 8) },
   conjHint: { en: "Show the meaning", ar: "أظهر المعنى", unlock: u(3, 8) },
   // مع is a verb's preposition from part 2 lesson 4; بِدون is taught in part 2 lesson 5
   studyArticle: { en: "With ال or not?", ar: "مع ال أو بدون؟", unlock: u(3, 5) },

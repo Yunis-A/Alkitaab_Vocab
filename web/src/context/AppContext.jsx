@@ -204,6 +204,14 @@ export function AppProvider({ children }) {
     [progress.geoBest],
   );
 
+  // Dark mode: the student's choice, else the system's setting.
+  const systemDark = typeof window !== "undefined" && window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
+  const dark = progress.dark ?? !!systemDark;
+  useEffect(() => {
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+  }, [dark]);
+  const setDark = useCallback((on) => setProgress((p) => ({ ...p, dark: !!on })), []);
+
   // Typing lessons: passed lessons are kept, with their faster result.
   const typing = progress.typing ?? { passed: {} };
   const passTyping = useCallback((id, result) => {
@@ -247,6 +255,8 @@ export function AppProvider({ children }) {
     statusOf,
     geoBest: progress.geoBest ?? {},
     typing,
+    dark,
+    setDark,
     passTyping,
     syncStatus,
     signOut,

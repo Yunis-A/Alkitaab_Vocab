@@ -62,7 +62,7 @@ const CONJUGATION_FROM = PATTERNS_FROM; // the present tense is learned at part 
 const VERB_GAMES = [
   { id: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
   { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true, from: PATTERNS_FROM }, // covers what your level has learned
-  { id: "conjugation", title: "studyConjugation", desc: "modeConjugationDesc", options: ["tenses", "moods", "pronouns"], from: CONJUGATION_FROM },
+  { id: "conjugation", title: "studyConjugation", desc: "modeConjugationDesc", options: ["tenses", "moods", "pronouns", "marks"], from: CONJUGATION_FROM },
 ];
 
 // the games under "Geography games"
@@ -83,6 +83,7 @@ export default function Learn() {
   const [lists, setLists] = useState(() => new Set([1, 2]));
   const [chosen, setChosen] = useState(() => new Set(["ar-en", "egy", "shm"]));
   const [englishFirst, setEnglishFirst] = useState(false);
+  const [marks, setMarks] = useState(true); // conjugation: the vowel marks are required (unticked: letters only)
   const [offTenses, setOffTenses] = useState(() => new Set()); // conjugation: types unticked (all learned ones start on)
   const [offPersons, setOffPersons] = useState(() => new Set()); // conjugation: pronouns unticked (all learned ones start on)
   const [offMoods, setOffMoods] = useState(() => new Set()); // conjugation: moods unticked
@@ -126,7 +127,7 @@ export default function Learn() {
   if (mode === "run:matching") return <Matching items={items} onExit={exit} />;
   if (mode === "run:prepositions") return <Prepositions verbs={prepVerbs} onExit={back("prepositions")} />;
   if (mode === "run:patterns") return <VerbPatterns onExit={back("patterns")} />;
-  if (mode === "run:conjugation") return <Conjugation items={conjItems} allVerbs={allVerbs} onExit={back("conjugation")} />;
+  if (mode === "run:conjugation") return <Conjugation items={conjItems} allVerbs={allVerbs} marks={marks} onExit={back("conjugation")} />;
   if (mode === "run:gender") return <GenderQuiz onExit={back("gender")} />;
   if (mode === "run:article") return <ArticleQuiz onExit={back("article")} />;
   if (mode === "run:sunmoon") return <SunMoonQuiz onExit={exit} />;
@@ -211,6 +212,10 @@ export default function Learn() {
                 </label>
               </div>
             )}
+            {setup.options.includes("marks") && (
+              <Check checked={marks} onChange={setMarks}>{t("conjMarks")}</Check>
+            )}
+
             {setup.options.includes("tenses") && (
               <details className="collapse">
                 <summary><bdi>{t("conjTenses")}</bdi></summary>

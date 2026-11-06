@@ -1288,3 +1288,36 @@ test("conjugation game: the present asked by mood (مرفوع, منصوب, مج�
   const plain2fs = none.find((i) => i.person === "2fs");
   for (const form of [c.marfu["2fs"], c.mansub["2fs"]]) assert.equal(isConjugationCorrect(plain2fs, form), true, form);
 });
+
+test("conjugation without vowel marks, dark mode setting", () => {
+  const verbs = allWords.filter((w) => w.pos === "verb" && w.arabic && w.root && w.form === 1).slice(0, 20);
+  const all = new Set(["3ms", "3mp", "2fs", "1s"]);
+  const items = conjugationItems(verbs, { tenses: new Set(["past", "present", "masdar"]), persons: all });
+  const past = items.find((i) => i.tense === "past" && i.person === "3mp");
+  const bare = past.answers[0].replace(/[ً-ْ]/g, "");
+  assert.equal(isConjugationCorrect(past, bare), false); // marks are required by default
+  assert.equal(isConjugationCorrect(past, bare, { marks: true }), false);
+  assert.equal(isConjugationCorrect(past, bare, { marks: false }), true); // the option: letters only
+  assert.equal(isConjugationCorrect(past, past.answers[0], { marks: false }), true); // marks typed anyway are fine
+  assert.equal(isConjugationCorrect(past, past.answers[0] + "ََ", { marks: false }), true); // and not counted
+  assert.equal(isConjugationCorrect(past, bare.slice(0, -1), { marks: false }), false); // the letters must be right
+  assert.equal(isConjugationCorrect(past, "", { marks: false }), false);
+  // the plain present: any mood, no marks
+  const pres = items.find((i) => i.tense === "present" && i.person === "2fs");
+  assert.equal(isConjugationCorrect(pres, pres.answers[0].replace(/[ً-ْ]/g, ""), { marks: false }), true);
+  assert.equal(isConjugationCorrect(pres, pres.answers[1].replace(/[ً-ْ]/g, ""), { marks: false }), true); // the noon dropped
+  const masdar = items.find((i) => i.tense === "masdar");
+  const mb = masdar.answers[0].replace(/[ً-ْ]/g, "");
+  assert.equal(isConjugationCorrect(masdar, mb, { marks: false }), true);
+  assert.equal(isConjugationCorrect(masdar, "ال" + mb, { marks: false }), true);
+  // dark mode: unset follows the system; the choice is saved and merged
+  assert.equal(loadProgress().dark ?? null, null);
+  saveProgress({ ...loadProgress(), dark: true });
+  assert.equal(loadProgress().dark, true);
+  assert.equal(mergeProgress({ cards: {}, dark: false }, { cards: {}, dark: true }).dark, true);
+  assert.equal(mergeProgress({ cards: {}, dark: true }, { cards: {}, dark: null }).dark, true);
+  assert.equal(mergeProgress({ cards: {} }, { cards: {} }).dark, null);
+  saveProgress({ ...loadProgress(), dark: null });
+  // the four-letter form reads رباعي, with no number
+  assert.equal(strings.quadLabel.ar, "رباعي");
+});

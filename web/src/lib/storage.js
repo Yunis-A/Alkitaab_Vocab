@@ -8,8 +8,9 @@ const KEY = "alkitaab_progress_v1";
 // geoBest:  best map-game time in ms, keyed by mode id.
 // dialects: which dialect forms the student studies (off by default).
 // typing:   passed typing lessons ({ id: { accuracy, cpm } }).
+// dark:     dark mode; null until the student chooses, then the system's setting is followed.
 export const emptyProgress = () => ({
-  level: null, cards: {}, geoBest: {}, dialects: { egyptian: false, shami: false }, typing: { passed: {} },
+  level: null, cards: {}, geoBest: {}, dialects: { egyptian: false, shami: false }, typing: { passed: {} }, dark: null,
 });
 
 // Keep only cards for known varieties (older saves had another direction).

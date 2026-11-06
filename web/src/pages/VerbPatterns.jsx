@@ -58,8 +58,8 @@ export default function VerbPatterns({ onExit }) {
     setRound((n) => n + 1);
   };
 
-  // 1-10 for the forms; four-letter roots read "4-letter I / II"
-  const formLabel = (f) => (typeof f === "number" ? nf(f) : `${t("quadLabel")} ${nf(Number(f.slice(1)))}`);
+  // 1-10 for the forms; the four-letter root form reads "4-letter" / رباعي
+  const formLabel = (f) => (typeof f === "number" ? nf(f) : t("quadLabel"));
   // the noun of place shares the passive participle's box except in form I (and before a form is picked)
   const label = (field, isClue = false) => {
     if (field === "masdar") return "المصدر"; // always Arabic: the student learns the word along with the exercise
