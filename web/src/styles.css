@@ -295,7 +295,7 @@ button.primary, .button.primary {
 
 /* learn menu cards, prepositions, verb patterns */
 .mode-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
-.mode-card { display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; text-align: start; padding: 1.1rem; background: var(--surface); color: var(--text); border: 2px solid var(--line); border-radius: var(--radius); cursor: pointer; }
+.mode-card { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; text-align: start; padding: 1.1rem 1.1rem 2.8rem; background: var(--surface); color: var(--text); border: 2px solid var(--line); border-radius: var(--radius); cursor: pointer; }
 .mode-card:hover { border-color: var(--theme); }
 .mode-card strong { font-size: 1.15rem; color: var(--theme); }
 .mode-badge { margin-top: auto; font-size: 0.85rem; font-weight: 600; }
@@ -381,3 +381,11 @@ button.primary, .button.primary {
 .typing-keyboard.shifted .tk-lit.tk-target .tk-ar { color: #fff; }
 .typing-keyboard.shifted .tk-dim { opacity: 0.45; }
 .tk-key, .tk-ar { transition: opacity 0.1s; }
+
+/* the picture in a card's bottom corner: right in English, left in Arabic */
+.mode-icon { position: absolute; bottom: 0.7rem; inset-inline-end: 0.8rem; width: 1.8rem; height: 1.8rem; fill: none; stroke: var(--theme); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; color: var(--theme); opacity: 0.6; }
+.mode-card:hover .mode-icon { opacity: 1; }
+
+/* the account area follows the page: right-aligned in Arabic, even for its English lines */
+[dir="rtl"] .account { text-align: right; }
+[dir="rtl"] .account .auth-links { justify-content: flex-start; }

@@ -23,7 +23,7 @@ export default function Account() {
 
   if (!configured) {
     return (
-      <section className="card">
+      <section className="card account">
         <h2><bdi>{t("accountTitle")}</bdi></h2>
         <p className="muted" dir="auto">Accounts are not set up on this copy of the site, so progress is saved in this browser only.</p>
       </section>
@@ -48,7 +48,7 @@ export default function Account() {
 
   if (recovering) {
     return (
-      <section className="card">
+      <section className="card account">
         <h2 dir="auto">Choose a new password</h2>
         <form
           className="auth-form"
@@ -69,7 +69,7 @@ export default function Account() {
 
   if (user) {
     return (
-      <section className="card">
+      <section className="card account">
         <h2><bdi>{t("accountTitle")}</bdi></h2>
         <p dir="auto">Signed in as <bdi><strong dir="ltr">{user.email}</strong></bdi></p>
         {SYNC_TEXT[syncStatus] && (
@@ -94,7 +94,7 @@ export default function Account() {
   };
 
   return (
-    <section className="card">
+    <section className="card account">
       <h2 dir="auto">{mode === "signin" ? "Sign in" : mode === "signup" ? "Create an account" : "Reset your password"}</h2>
       <form onSubmit={submit} className="auth-form">
         <label className="field-label"><span dir="auto">Email</span>

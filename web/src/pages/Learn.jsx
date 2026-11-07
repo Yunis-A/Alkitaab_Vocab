@@ -5,6 +5,7 @@ import { formatInterval, RATINGS } from "../lib/leitner.js";
 import { dialectOf, parseCardKey, varietyText } from "../lib/varieties.js";
 import WordDetail from "../components/WordDetail.jsx";
 import UnitPicker from "../components/UnitPicker.jsx";
+import ModeIcon from "../components/ModeIcon.jsx";
 import QuickStudy from "./QuickStudy.jsx";
 import GenderQuiz from "./GenderQuiz.jsx";
 import SunMoonQuiz from "./SunMoonQuiz.jsx";
@@ -48,28 +49,28 @@ const toggled = (set, value, on) => {
 // units (and a few options) first. `options` says which extra choices the setup shows. A mode with no setup and
 // not `direct` is a group (see GROUPS).
 const MODES = [
-  { id: "review", title: "reviewDue", desc: "modeReviewDesc", direct: true },
-  { id: "quick", title: "quickStudy", desc: "modeQuickDesc", options: ["lists", "varieties", "first"] },
-  { id: "matching", title: "matching", desc: "modeMatchingDesc", options: ["lists", "varieties"] },
-  { id: "verbs", title: "studyVerbs", desc: "modeVerbsDesc" }, // opens a menu: prepositions, verb patterns, conjugation
-  { id: "typing", title: "studyTyping", desc: "modeTypingDesc", direct: true },
-  { id: "sunmoon", title: "studySunMoon", desc: "modeSunMoonDesc", direct: true, from: { book: 1, unit: 9 } }, // شَمس / قَمَر are taught in Alif Baa lesson 9
-  { id: "geography", title: "geoGamesTitle", desc: "modeGeoGamesDesc" }, // opens a menu of geography games
+  { id: "review", icon: "review", title: "reviewDue", desc: "modeReviewDesc", direct: true },
+  { id: "quick", icon: "quick", title: "quickStudy", desc: "modeQuickDesc", options: ["lists", "varieties", "first"] },
+  { id: "matching", icon: "matching", title: "matching", desc: "modeMatchingDesc", options: ["lists", "varieties"] },
+  { id: "verbs", icon: "verbs", title: "studyVerbs", desc: "modeVerbsDesc" }, // opens a menu: prepositions, verb patterns, conjugation
+  { id: "typing", icon: "typing", title: "studyTyping", desc: "modeTypingDesc", direct: true },
+  { id: "sunmoon", icon: "sunmoon", title: "studySunMoon", desc: "modeSunMoonDesc", direct: true, from: { book: 1, unit: 9 } }, // شَمس / قَمَر are taught in Alif Baa lesson 9
+  { id: "geography", icon: "geography", title: "geoGamesTitle", desc: "modeGeoGamesDesc" }, // opens a menu of geography games
 ];
 
 // the games under "Verbs"
 const CONJUGATION_FROM = PATTERNS_FROM; // the present tense is learned at part 1 lesson 4
 const VERB_GAMES = [
-  { id: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
-  { id: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true, from: PATTERNS_FROM }, // covers what your level has learned
-  { id: "conjugation", title: "studyConjugation", desc: "modeConjugationDesc", options: ["tenses", "moods", "pronouns", "marks"], from: CONJUGATION_FROM },
+  { id: "prepositions", icon: "prepositions", title: "prepositions", desc: "modePrepositionsDesc", options: [] },
+  { id: "patterns", icon: "patterns", title: "studyPatterns", desc: "modePatternsDesc", direct: true, from: PATTERNS_FROM }, // covers what your level has learned
+  { id: "conjugation", icon: "conjugation", title: "studyConjugation", desc: "modeConjugationDesc", options: ["tenses", "moods", "pronouns", "marks"], from: CONJUGATION_FROM },
 ];
 
 // the games under "Geography games"
 const GEO_GAMES = [
-  { id: "map", title: "geoTitle", desc: "modeGeoDesc", direct: true },
-  { id: "gender", title: "studyGender", desc: "modeGenderDesc", direct: true, from: { book: 2, unit: 1 } }, // مُذَكَّر / مُؤَنَّث
-  { id: "article", title: "studyArticle", desc: "modeArticleDesc", direct: true },
+  { id: "map", icon: "map", title: "geoTitle", desc: "modeGeoDesc", direct: true },
+  { id: "gender", icon: "gender", title: "studyGender", desc: "modeGenderDesc", direct: true, from: { book: 2, unit: 1 } }, // مُذَكَّر / مُؤَنَّث
+  { id: "article", icon: "article", title: "studyArticle", desc: "modeArticleDesc", direct: true },
 ];
 
 const GROUPS = { verbs: VERB_GAMES, geography: GEO_GAMES };
@@ -156,6 +157,7 @@ export default function Learn() {
             <button key={g.id} type="button" className="mode-card" onClick={() => setMode(g.options ? g.id : `run:${g.id}`)}>
               <strong><bdi>{t(g.title)}</bdi></strong>
               <span className="muted"><bdi>{t(g.desc)}</bdi></span>
+              <ModeIcon name={g.icon} />
             </button>
           ))}
         </div>
@@ -277,6 +279,7 @@ export default function Learn() {
           <button key={m.id} type="button" className="mode-card" onClick={() => setMode(m.direct ? `run:${m.id}` : m.id)}>
             <strong><bdi>{t(m.title)}</bdi></strong>
             <span className="muted"><bdi>{t(m.desc)}</bdi></span>
+            <ModeIcon name={m.icon} />
             {m.id === "review" && (
               <span className="mode-badge"><bdi>{dueCount ? t("dueCount", dueCount, nf(dueCount)) : t("noneDue")}</bdi></span>
             )}
