@@ -51,7 +51,7 @@ export function Terms() {
       <p>By using {SITE_NAME} you agree to these terms.</p>
       <ul>
         <li>The site is a free study aid, provided as is, without any guarantee that it is complete, error-free or always available.</li>
-        <li>Vocabulary and grammar notes may contain mistakes. Check anything important with your teacher or textbook.</li>
+        <li>The vocabulary and word details may contain mistakes. Check anything important with your teacher or textbook.</li>
         <li>Keep your password private and do not use someone else's account. You are responsible for what happens under your account.</li>
         <li>Do not try to break, overload or gain unauthorised access to the site or other people's data.</li>
         <li>We may change or stop the site, or remove accounts that break these terms.</li>

@@ -22,8 +22,8 @@ export const strings = {
   unitN: { en: (s) => `Unit ${s}`, ar: (s) => `درس ${s}`, unlock: u(1, 5) },
   navSettings: { en: "Settings", ar: "الإعدادات", unlock: u(2, 6) },
   settingsLevelHelp: {
-    en: "Your book and unit. You see words and grammar up to and including this unit.",
-    ar: "كتابك ودرسك. ترى الكلمات والقواعد حتى هذا الدرس.",
+    en: "Your book and unit. You see words up to and including this unit.",
+    ar: "كتابك ودرسك. ترى الكلمات حتى هذا الدرس.",
     unlock: u(3, 5),
   },
   // Dialect names stay English until you decide which lesson they turn Arabic at.
@@ -45,8 +45,6 @@ export const strings = {
   posPronoun: { en: "pronoun", ar: "ضمير", unlock: u(3, 1) },
   posPhrase: { en: "phrase", ar: "عبارة", unlock: u(3, 1) },
   posSuffix: { en: "suffix", ar: "لاحقة", unlock: u(3, 1) },
-  // القواعد (grammar) is taught in Al-Kitaab part 1, lesson 1
-  navGrammar: { en: "Grammar", ar: "القواعد", unlock: u(2, 1) },
 
   // --- level setup ---
   setupTitle: { en: "Where are you in the course?", ar: "أين أنت في المقرر؟", unlock: u(3, 5) },
@@ -190,21 +188,6 @@ export const strings = {
   geoStart: { en: "Start", ar: "البدء", unlock: u(2, 9) },
   geoCapital: { en: "capital", ar: "عاصمة", unlock: u(3, 4) },
   geoStop: { en: "Stop", ar: "التوقف", unlock: u(3, 6) },
-
-  // --- grammar ---
-  grammarIntro: {
-    en: "Sections unlock as you move through the units.",
-    ar: "تفتح الأقسام كلما تقدمت في الدروس.",
-    unlock: u(3, 4),
-  },
-  grammarNext: {
-    en: (where) => `Next section unlocks at ${where}`,
-    ar: (where) => `القسم التالي يفتح عند ${where}`,
-    unlock: u(3, 4),
-  },
-  grammarAllUnlocked: { en: "All sections unlocked.", ar: "فتحت كل الأقسام.", unlock: u(3, 4) },
-  yourWords: { en: "Examples from your word list", ar: "أمثلة من قائمة كلماتك", unlock: u(3, 2) },
-  grammarLinks: { en: "Grammar", ar: "قواعد", unlock: u(2, 3) },
 
   // --- lookup ---
   searchPlaceholder: {

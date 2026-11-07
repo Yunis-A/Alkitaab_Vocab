@@ -3,9 +3,7 @@ import { useApp } from "../context/AppContext.jsx";
 import { getForms, PAST_PERSONS, IMPERATIVE_PERSONS } from "../lib/morphology.js";
 import StatusBadge from "./StatusBadge.jsx";
 import { presentChart } from "../lib/chart.js";
-import { grammarSections } from "../data/grammar.js";
 import { IMPERATIVE_LEVEL, levelReached } from "../config/books.js";
-import { sectionsForWord, sectionTitle } from "../lib/grammar.js";
 import { DIALECTS, headword } from "../lib/varieties.js";
 
 const POS_KEYS = {
@@ -94,14 +92,13 @@ function DialectBlock({ name, data, showFeminine, showPlural }) {
 }
 
 // showHeader=false omits the big Arabic word and its meaning, for places that
-// already show them (the Lookup row). links=false turns the root and grammar links into plain text, for
+// already show them (the Lookup row). links=false turns the root link into plain text, for
 // sessions (quick study) that must not be left by accident.
 export default function WordDetail({ word, showStatus = true, showHeader = true, links = true }) {
   const { t, level, nf, bookName, showTransliteration, dialects } = useApp();
   const f = getForms(word);
   const showImperative = !!level && levelReached(level, IMPERATIVE_LEVEL);
   const missing = f.missing.filter((k) => showImperative || k !== "imperative");
-  const grammar = level ? sectionsForWord(grammarSections, word, level) : [];
   // Forms that the list only introduces later stay hidden until then: formsFrom covers the plural and the
   // feminine, pluralFrom just the plural (the feminine of such a word shows from the start).
   const reached = (from) => !from || (!!level && levelReached(level, from));
@@ -190,17 +187,6 @@ export default function WordDetail({ word, showStatus = true, showHeader = true,
         <Field label={t("unitOfBook")}>
           <span dir="auto">{bookName(word.book)} / {nf(word.unit)}</span>
         </Field>
-        {links && grammar.length > 0 && (
-          <Field label={t("grammarLinks")}>
-            <span className="grammar-links">
-              {grammar.map((s) => (
-                <Link key={s.id} className="chip" to={`/grammar#${s.id}`} dir="auto">
-                  {sectionTitle(s, level)}
-                </Link>
-              ))}
-            </span>
-          </Field>
-        )}
       </dl>
 
       {word.notes && (

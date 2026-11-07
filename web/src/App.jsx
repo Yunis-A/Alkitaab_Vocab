@@ -5,7 +5,6 @@ import LevelPicker from "./components/LevelPicker.jsx";
 import Home from "./pages/Home.jsx";
 import Learn from "./pages/Learn.jsx";
 import Lookup from "./pages/Lookup.jsx";
-import Grammar from "./pages/Grammar.jsx";
 import Settings from "./pages/Settings.jsx";
 import Account from "./pages/Account.jsx";
 import { Privacy, Terms } from "./pages/Legal.jsx";
@@ -40,7 +39,6 @@ function Shell() {
           <NavLink to="/" end dir="auto">{t("navHome")}</NavLink>
           <NavLink to="/learn" dir="auto">{t("navLearn")}</NavLink>
           <NavLink to="/lookup" dir="auto">{t("navLookup")}</NavLink>
-          <NavLink to="/grammar" dir="auto">{t("navGrammar")}</NavLink>
           <NavLink to="/settings" dir="auto">{t("navSettings")}</NavLink>
         </nav>
         <Link className="level-chip" to="/settings" dir="auto">
@@ -51,7 +49,6 @@ function Shell() {
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/lookup" element={<Lookup />} />
-        <Route path="/grammar" element={<Grammar />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/account" element={<Navigate to="/settings" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -35,8 +35,6 @@ import { mapShapes } from "../data/menaMap.js";
 import allWords from "../data/words.json" with { type: "json" };
 import { stripDiacritics } from "./arabic.js";
 import { localizeDigits } from "./numerals.js";
-import { unlockedSections, nextLockedSection, sectionsForWord, sectionTitle } from "./grammar.js";
-import { grammarSections } from "../data/grammar.js";
 import { loadProgress, saveProgress } from "./storage.js";
 import { vocabSets, isArabic, arabicRatio, isRtl } from "./i18n.js";
 import { strings } from "../i18n/strings.js";
@@ -298,28 +296,6 @@ test("digits switch to Arabic-Indic and back", () => {
   assert.equal(localizeDigits("Alif Baa", true), "Alif Baa");
 });
 
-test("grammar unlocks by level and connects to words", () => {
-  const at = (book, unit) => unlockedSections(grammarSections, { book, unit }).map((s) => s.id);
-  assert.deepEqual(at(1, 1), ["script"]);
-  assert.ok(at(1, 5).includes("shadda") && !at(1, 5).includes("roots"));
-  assert.ok(at(2, 5).includes("past") && !at(2, 5).includes("present"));
-  assert.equal(at(4, 10).length, grammarSections.length);
-  assert.equal(nextLockedSection(grammarSections, { book: 1, unit: 1 }).id, "vowels");
-  assert.equal(nextLockedSection(grammarSections, { book: 4, unit: 10 }), null);
-
-  const verb = { pos: "verb", form: 2, root: "د ر س", prepositions: [] };
-  const noun = { pos: "noun", gender: "feminine", root: "م د ن", prepositions: ["في"], plural: "مدن" };
-  const ids = (w, lvl) => sectionsForWord(grammarSections, w, lvl).map((s) => s.id);
-  assert.deepEqual(ids(verb, { book: 2, unit: 9 }), ["roots", "past", "present", "forms"]);
-  assert.deepEqual(ids({ ...verb, form: 1 }, { book: 2, unit: 9 }), ["roots", "past", "present"]);
-  assert.deepEqual(ids(noun, { book: 3, unit: 5 }), ["roots", "gender", "prepositions", "plurals"]);
-  assert.deepEqual(ids(noun, { book: 1, unit: 1 }), []); // nothing unlocked applies yet
-
-  const t = (lvl) => sectionTitle(grammarSections[0], lvl);
-  assert.equal(t({ book: 2, unit: 13 }), "The Arabic script");
-  assert.equal(t({ book: 3, unit: 1 }), "الكتابة العربية");
-});
-
 test("saved progress keeps known card varieties, drops the old English -> Arabic direction, defaults dialects off", () => {
   const store = {};
   globalThis.localStorage = { getItem: (k) => store[k] ?? null, setItem: (k, v) => { store[k] = v; } };
@@ -368,8 +344,6 @@ test("imperative is gated to Al-Kitaab part 3 lesson 3 everywhere", () => {
   assert.deepEqual(IMPERATIVE_LEVEL, { book: 4, unit: 3 });
   assert.equal(levelReached({ book: 4, unit: 2 }, IMPERATIVE_LEVEL), false);
   assert.equal(levelReached({ book: 4, unit: 3 }, IMPERATIVE_LEVEL), true);
-  const imp = grammarSections.find((s) => s.id === "imperative");
-  assert.deepEqual(imp.unlock, IMPERATIVE_LEVEL);
   // not searchable by imperative form before that
   const idx = buildIndex([{ id: "1", book: 2, unit: 1, arabic: "كَتَبَ", root: "ك ت ب", pos: "verb", form: 1, presentVowel: "u", transliteration: "", definition: "to write" }]);
   assert.equal(search(idx, "اكتبوا").length, 0); // imperative 2mp (present "I write" is أكتب, which does match)
@@ -565,9 +539,7 @@ test("added words: the Arabic language and the Qur'an (Alif Baa 10), part 1 less
     assert.deepEqual([w.book, w.unit, w.definition, w.root], [2, 1, def, root], ar);
   }
   assert.equal(find("هَل").pos, "particle");
-  // the Grammar tab turns Arabic with القواعد, in part 1 lesson 1
-  assert.deepEqual(strings.navGrammar.unlock, { book: 2, unit: 1 });
-  assert.equal(strings.navGrammar.ar, "القواعد");
+  assert.equal(strings.navGrammar, undefined); // there is no Grammar section for now
 });
 
 test("review edits: references, merged forms, corrected spellings", () => {
