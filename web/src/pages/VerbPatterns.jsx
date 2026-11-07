@@ -105,8 +105,8 @@ export default function VerbPatterns({ onExit }) {
                   <span className="pattern-boxes">
                     {boxKeys(field).map((k, n) => (
                       <span className="pattern-box" key={k}>
-                        {field === "makaan" && <small className="pattern-caption"><bdi>{t(n === 0 ? "singular" : "plural")}</bdi></small>}
                         <input
+                          placeholder={field === "makaan" ? t(n === 0 ? "singular" : "plural") : undefined}
                           className={`ar pattern-input${cur === k ? " active" : ""}`}
                           dir="rtl"
                           readOnly
