@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
-import ArabicKeyboard from "../components/ArabicKeyboard.jsx";
+import { LAYOUT } from "../data/keyboardLayouts.js";
+import { charFor } from "../lib/conjugation.js";
 import {
   answerSpec, answerText, buildTask, canAppend, fieldsAt, fieldsForAnyForm, formsAt, isCorrect, isCorrectSet,
 } from "../lib/patterns.js";
+
+// What can be typed: the letters of the patterns and the vowel marks (fatha, damma, kasra, shadda), on the real
+// keyboard (Arabic 101 positions; Shift for the marks and the hamza seats). There is no on-screen keyboard.
+const ALLOWED = new Set(["ل", "ع", "ف", "ة", "س", "م", "ن", "ت", "ي", "و", "ا", "أ", "إ", "َ", "ُ", "ِ", "ّ"]);
+const MODIFIERS = new Set(["ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight", "CapsLock"]);
 
 // One pattern on ف ع ل is given; the student builds the rest with a restricted keyboard. What is asked
 // follows the form the student says it is (the form number, or the form given as the clue): form I has three
@@ -52,6 +58,34 @@ export default function VerbPatterns({ onExit }) {
     setRight((r) => r + task.targets.filter(result).length);
     setAsked((a) => a + task.targets.length);
   };
+  // The real keyboard: letters and marks type into the box, Backspace deletes, Tab / Shift+Tab move between boxes,
+  // the digits pick the form (0 is X), Enter checks and goes on.
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.repeat || e.ctrlKey || e.metaKey || e.altKey || MODIFIERS.has(e.code)) return;
+      if (e.code === "Enter") { e.preventDefault(); if (checked) next(); else check(); return; }
+      if (checked) return;
+      if (e.code === "Tab") {
+        if (!typedKeys.length) return;
+        e.preventDefault();
+        const at = typedKeys.indexOf(cur);
+        setActive(typedKeys[(at + (e.shiftKey ? typedKeys.length - 1 : 1)) % typedKeys.length]);
+        return;
+      }
+      if (e.code === "Backspace") { e.preventDefault(); back(); return; }
+      const digit = /^Digit(\d)$/.exec(e.code)?.[1];
+      if (digit !== undefined && !e.shiftKey) {
+        const form = digit === "0" ? 10 : Number(digit);
+        if (formsAt(level).includes(form)) { e.preventDefault(); set("form", form); }
+        return;
+      }
+      const ch = charFor(LAYOUT, e.code, e.shiftKey);
+      if (ch && ALLOWED.has(ch)) { e.preventDefault(); key(ch); }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }); // bound again on every render, so it always sees the current boxes
+
   const next = () => {
     setTask(buildTask(level));
     setAnswers({});
@@ -125,8 +159,6 @@ export default function VerbPatterns({ onExit }) {
             );
           })}
         </div>
-
-        <ArabicKeyboard onKey={key} onBackspace={back} disabled={checked || !cur} />
 
         {checked ? (
           <button className="primary" onClick={next} autoFocus><span dir="auto">{t("genderNext")}</span></button>
