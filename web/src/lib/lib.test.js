@@ -10,6 +10,8 @@ import { lessonStyle } from "../config/books.js";
 import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
+import crosswords from "../data/crosswords.json" with { type: "json" };
+import { puzzleId, sameLetter, entryCells, entryAt, emptyTyped, isEntrySolved, isSolved, wrongCells, nextCell, prevCell, isCell } from "./crossword.js";
 import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
 import { PLURAL_FROM, GENDER_FROM } from "../config/books.js";
 import { NAME_AR_FROM } from "../config/books.js";
@@ -1423,4 +1425,58 @@ test("the student's name, and editing the forms of an own verb", () => {
   assert.equal(edited.edited, true);
   c = updateOwnWord(c, "my-9", { conjugations: null, masdar: null, edited: false });
   assert.equal(getForms(c.words[0]).past?.["3mp"] === "قالوا", false); // back to the generated forms
+});
+
+test("crosswords: one static puzzle per unit from part 1, consistent grids, Arabic clues", () => {
+  const ids = Object.keys(crosswords);
+  assert.equal(ids.length, 28); // part 1 (13 units), part 2 (10), part 3 (5 with words)
+  for (let u = 1; u <= 13; u++) assert.ok(crosswords[puzzleId(2, u)], `b2-u${u}`);
+  for (let u = 1; u <= 10; u++) assert.ok(crosswords[puzzleId(3, u)], `b3-u${u}`);
+  assert.ok(ids.every((id) => !id.startsWith("b1")));
+  for (const [id, p] of Object.entries(crosswords)) {
+    assert.ok(p.rows <= 15 && p.cols <= 15 && p.entries.length >= 12, `${id} size/entries`);
+    assert.equal(p.cells.length, p.rows);
+    assert.ok(p.cells.every((row) => row.length === p.cols));
+    for (const e of p.entries) {
+      // the answer is spelled out by the grid, along its direction
+      entryCells(e).forEach(({ r, c }, k) => assert.equal(p.cells[r][c], e.answer[k], `${id} ${e.n} ${e.dir}`));
+      assert.ok(e.clue && /[\u0621-\u064A]/.test(e.clue) && !/[A-Za-z0-9]/.test(e.clue), `${id} clue of ${e.answer}`);
+      assert.ok(!e.clue.includes(e.answer) || e.answer.length < 4, `${id}: ${e.answer} is in its clue`);
+    }
+    // every letter cell belongs to a word; across and down clues both exist
+    const covered = new Set(p.entries.flatMap((e) => entryCells(e).map((x) => `${x.r},${x.c}`)));
+    let letters = 0;
+    p.cells.forEach((row, r) => [...row].forEach((ch, c) => { if (ch !== ".") { letters++; assert.ok(covered.has(`${r},${c}`), `${id} loose letter`); } }));
+    assert.equal(covered.size, letters);
+    assert.ok(p.entries.some((e) => e.dir === "across") && p.entries.some((e) => e.dir === "down"));
+    // numbered in reading order; an across and a down entry may share a number
+    const nums = [...new Set(p.entries.map((e) => e.n))];
+    assert.deepEqual(nums, nums.map((_, i) => i + 1));
+  }
+  // the puzzle logic
+  const p = crosswords[puzzleId(2, 1)];
+  const typed = emptyTyped(p);
+  assert.equal(isSolved(p, typed), false);
+  for (const e of p.entries) entryCells(e).forEach(({ r, c }, k) => { typed[r][c] = e.answer[k]; });
+  assert.equal(isSolved(p, typed), true);
+  assert.equal(wrongCells(p, typed).length, 0);
+  assert.ok(p.entries.every((e) => isEntrySolved(p, typed, e)));
+  const e0 = p.entries[0];
+  const { r, c } = entryCells(e0)[0];
+  typed[r][c] = "ز";
+  assert.equal(isSolved(p, typed), false);
+  assert.deepEqual(wrongCells(p, typed), [{ r, c }]);
+  typed[r][c] = "";
+  assert.equal(wrongCells(p, typed).length, 0); // empty is not wrong
+  // any spelling of a letter counts: أ إ for ا, ه for ة, ى for ي
+  assert.ok(sameLetter("أ", "ا") && sameLetter("ه", "ة") && sameLetter("ى", "ي") && !sameLetter("ب", "ت") && !sameLetter("", "ا"));
+  assert.deepEqual(nextCell(p, e0.r, e0.c, e0.dir), entryCells(e0)[1]);
+  const end = entryCells(e0).at(-1);
+  assert.deepEqual(nextCell(p, end.r, end.c, e0.dir), end); // stays at the end
+  assert.deepEqual(prevCell(p, e0.r, e0.c, e0.dir), { r: e0.r, c: e0.c });
+  assert.equal(entryAt(p, e0.r, e0.c, e0.dir), e0);
+  assert.equal(isCell(p, -1, 0), false);
+  // saved: puzzles solved
+  assert.deepEqual(loadProgress().crosswords, { done: {} });
+  assert.deepEqual(mergeProgress({ cards: {}, crosswords: { done: { "b2-u1": true } } }, { cards: {}, crosswords: { done: { "b2-u2": true } } }).crosswords, { done: { "b2-u1": true, "b2-u2": true } });
 });

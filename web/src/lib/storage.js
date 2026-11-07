@@ -8,12 +8,13 @@ const KEY = "alkitaab_progress_v1";
 // geoBest:  best map-game time in ms, keyed by mode id.
 // dialects: which dialect forms the student studies (off by default).
 // typing:   passed typing lessons ({ id: { accuracy, cpm } }).
+// crosswords: the puzzles solved ({ "b2-u1": true }).
 // profile:  the student's name, in English (asked first) and in Arabic (asked after Alif Baa).
 // custom:   the student's own words and the course words they unlocked early ({ words, early }).
 // dark:     dark mode; null until the student chooses, then the system's setting is followed.
 export const emptyProgress = () => ({
   level: null, cards: {}, geoBest: {}, dialects: { egyptian: false, shami: false }, typing: { passed: {} }, dark: null, custom: { words: [], early: [] },
-  profile: { name: "", nameAr: "", skippedAr: false },
+  profile: { name: "", nameAr: "", skippedAr: false }, crosswords: { done: {} },
 });
 
 // Keep only cards for known varieties (older saves had another direction).
@@ -29,6 +30,7 @@ function migrate(progress) {
     typing: { ...emptyProgress().typing, ...progress.typing },
     custom: { ...emptyProgress().custom, ...progress.custom },
     profile: { ...emptyProgress().profile, ...progress.profile },
+    crosswords: { done: { ...progress.crosswords?.done } },
   };
 }
 

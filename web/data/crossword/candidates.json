@@ -1,0 +1,8395 @@
+{
+ "b2-u1": [
+  {
+   "id": "b2-u1-001",
+   "answer": "ادب",
+   "arabic": "الأَدَب",
+   "english": "literature",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-005",
+   "answer": "جنسية",
+   "arabic": "جِنسِيّة",
+   "english": "nationality",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-006",
+   "answer": "ادرس",
+   "arabic": "أَدرُس",
+   "english": "I study",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u1-007",
+   "answer": "اسكن",
+   "arabic": "أَسكُن",
+   "english": "I live, reside",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u1-008",
+   "answer": "تسكن",
+   "arabic": "تَسكُن",
+   "english": "she lives, resides",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u1-009",
+   "answer": "يسكن",
+   "arabic": "يَسكُن",
+   "english": "he lives, resides",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u1-010",
+   "answer": "سنة",
+   "arabic": "سَنة",
+   "english": "year",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-012",
+   "answer": "عمر",
+   "arabic": "عُمر",
+   "english": "age",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-013",
+   "answer": "تعمل",
+   "arabic": "تَعمَل",
+   "english": "she works",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u1-014",
+   "answer": "يعمل",
+   "arabic": "يَعمَل",
+   "english": "he works",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u1-015",
+   "answer": "عنوان",
+   "arabic": "عُنوان",
+   "english": "address",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-016",
+   "answer": "مصري",
+   "arabic": "مِصرِيّ",
+   "english": "Egyptian",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u1-018",
+   "answer": "منطقة",
+   "arabic": "مِنطَقة",
+   "english": "area, region",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-020",
+   "answer": "والد",
+   "arabic": "والِد",
+   "english": "father",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-021",
+   "answer": "والدي",
+   "arabic": "والِدي",
+   "english": "my father",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-022",
+   "answer": "والدة",
+   "arabic": "والِدة",
+   "english": "mother",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-023",
+   "answer": "والدتي",
+   "arabic": "والِدتي",
+   "english": "my mother",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-024",
+   "answer": "شامي",
+   "arabic": "شامِيّ",
+   "english": "Shami (Levantine)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u1-025",
+   "answer": "مذكر",
+   "arabic": "مُذَكَّر",
+   "english": "masculine",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u1-026",
+   "answer": "مؤنث",
+   "arabic": "مُؤَنَّث",
+   "english": "feminine",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u1-027",
+   "answer": "انجليزي",
+   "arabic": "إِنجِليزِيّ",
+   "english": "English",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u1-028",
+   "answer": "مفردات",
+   "arabic": "المُفرَدات",
+   "english": "vocabulary",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-029",
+   "answer": "فصحى",
+   "arabic": "الفُصحى",
+   "english": "formal Arabic; Standard Arabic",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-030",
+   "answer": "قواعد",
+   "arabic": "القَواعِد",
+   "english": "grammar",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u1-031",
+   "answer": "ثقافة",
+   "arabic": "الثَّقافة",
+   "english": "culture",
+   "pos": "noun"
+  }
+ ],
+ "b2-u2": [
+  {
+   "id": "b2-u2-001",
+   "answer": "اسرة",
+   "arabic": "أُسْرة",
+   "english": "(nuclear) family",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-002",
+   "answer": "ناس",
+   "arabic": "الناس",
+   "english": "people",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-003",
+   "answer": "ايضا",
+   "arabic": "أَيضاً",
+   "english": "also",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u2-004",
+   "answer": "بلد",
+   "arabic": "بَلَد",
+   "english": "country",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-006",
+   "answer": "مترجم",
+   "arabic": "مُترجِم",
+   "english": "translator",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-007",
+   "answer": "متخصص",
+   "arabic": "مُتَخَصِّص",
+   "english": "specializing/specialist in",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u2-008",
+   "answer": "خالة",
+   "arabic": "خالة",
+   "english": "maternal aunt",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-009",
+   "answer": "دائما",
+   "arabic": "دائِماً",
+   "english": "always",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u2-010",
+   "answer": "مركز",
+   "arabic": "مَركَز",
+   "english": "center (n.)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-012",
+   "answer": "مشغول",
+   "arabic": "مَشغول",
+   "english": "busy (with)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u2-013",
+   "answer": "عمل",
+   "arabic": "العَمَل",
+   "english": "work",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-014",
+   "answer": "غدا",
+   "arabic": "غَداً",
+   "english": "tomorrow",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u2-015",
+   "answer": "فعلا",
+   "arabic": "فِعلاً",
+   "english": "really!, truly",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u2-016",
+   "answer": "قبول",
+   "arabic": "القُبول",
+   "english": "admission(s)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-017",
+   "answer": "يتكلم",
+   "arabic": "يَتَكَلَّم",
+   "english": "he speaks, talks",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u2-018",
+   "answer": "يتكلم",
+   "arabic": "يَتَكَلَّم",
+   "english": "he talks about",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u2-020",
+   "answer": "لغة",
+   "arabic": "لُغة",
+   "english": "language",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-021",
+   "answer": "مساء",
+   "arabic": "المَساء",
+   "english": "evening",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-022",
+   "answer": "ليل",
+   "arabic": "اللَّيْل",
+   "english": "night",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-023",
+   "answer": "نهار",
+   "arabic": "النَّهار",
+   "english": "daytime",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-024",
+   "answer": "وحيد",
+   "arabic": "وَحيد",
+   "english": "only (adj.); lonely",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u2-025",
+   "answer": "موظف",
+   "arabic": "مُوَظَّف",
+   "english": "employee",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u2-026",
+   "answer": "يوم",
+   "arabic": "اليَوْم",
+   "english": "today",
+   "pos": "adverb"
+  }
+ ],
+ "b2-u3": [
+  {
+   "id": "b2-u3-001",
+   "answer": "تاريخ",
+   "arabic": "التّاريخ",
+   "english": "history",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-002",
+   "answer": "الان",
+   "arabic": "الآن",
+   "english": "now",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u3-005",
+   "answer": "ابن",
+   "arabic": "اِبن",
+   "english": "son",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-008",
+   "answer": "جدة",
+   "arabic": "جَدّة",
+   "english": "grandmother",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-009",
+   "answer": "جيش",
+   "arabic": "جَيش",
+   "english": "army",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-010",
+   "answer": "حقوق",
+   "arabic": "الحُقوق",
+   "english": "law",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-012",
+   "answer": "يدرس",
+   "arabic": "يُدَرِّس",
+   "english": "he teaches",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u3-013",
+   "answer": "دين",
+   "arabic": "الدّين",
+   "english": "religion",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-014",
+   "answer": "رسالة",
+   "arabic": "رِسالة",
+   "english": "letter",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-015",
+   "answer": "زوج",
+   "arabic": "زَوج",
+   "english": "husband",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-016",
+   "answer": "زوجة",
+   "arabic": "زَوجة",
+   "english": "wife",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-017",
+   "answer": "متزوج",
+   "arabic": "مُتَزَوِّج",
+   "english": "married (adj.)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u3-018",
+   "answer": "صورة",
+   "arabic": "صورة",
+   "english": "picture",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-019",
+   "answer": "ضابط",
+   "arabic": "ضابِط",
+   "english": "officer",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-020",
+   "answer": "الطب",
+   "arabic": "الطِّبّ",
+   "english": "medicine",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-021",
+   "answer": "اعرف",
+   "arabic": "أعرِف",
+   "english": "I know",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u3-022",
+   "answer": "علم",
+   "arabic": "عِلم",
+   "english": "science",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-027",
+   "answer": "عائلة",
+   "arabic": "عائِلة",
+   "english": "(extended) family",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-028",
+   "answer": "قريب",
+   "arabic": "قَريب",
+   "english": "relative",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-029",
+   "answer": "كلية",
+   "arabic": "كُلِّيّة",
+   "english": "college, school (in a university)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u3-031",
+   "answer": "هندسة",
+   "arabic": "الهَندَسة",
+   "english": "engineering",
+   "pos": "noun"
+  }
+ ],
+ "b2-u4": [
+  {
+   "id": "b2-u4-001",
+   "answer": "ياكل",
+   "arabic": "يَأكُل",
+   "english": "he eats",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-002",
+   "answer": "امس",
+   "arabic": "أَمْس",
+   "english": "yesterday",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u4-003",
+   "answer": "اول",
+   "arabic": "أَوَّل",
+   "english": "first",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u4-004",
+   "answer": "ابتدائي",
+   "arabic": "اِبتِدائيّ",
+   "english": "primary, elementary",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u4-005",
+   "answer": "احفظ",
+   "arabic": "أَحفَظ",
+   "english": "I memorize",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-006",
+   "answer": "حلويات",
+   "arabic": "حَلَوِيّات",
+   "english": "sweets, desserts",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-007",
+   "answer": "خضار",
+   "arabic": "خُضار",
+   "english": "vegetables",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-008",
+   "answer": "مدرسة",
+   "arabic": "مَدرسة",
+   "english": "school",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-009",
+   "answer": "اتذكر",
+   "arabic": "أتَذَكَّر",
+   "english": "I remember",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-010",
+   "answer": "زميل",
+   "arabic": "زَميل",
+   "english": "classmate, colleague",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-011",
+   "answer": "سفر",
+   "arabic": "السَّفَر",
+   "english": "traveling",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-012",
+   "answer": "اسافر",
+   "arabic": "أُسافِر",
+   "english": "travel",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-013",
+   "answer": "سلطة",
+   "arabic": "سَلَطة",
+   "english": "salad",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-014",
+   "answer": "يستمع",
+   "arabic": "يَستَمِع",
+   "english": "he listens to",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-015",
+   "answer": "سمك",
+   "arabic": "سَمَك",
+   "english": "fish",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-016",
+   "answer": "شوربة",
+   "arabic": "شَوربة",
+   "english": "soup",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-017",
+   "answer": "صديق",
+   "arabic": "صَديق",
+   "english": "friend (m.)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-018",
+   "answer": "صديقة",
+   "arabic": "صَديقة",
+   "english": "friend (f.)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-019",
+   "answer": "طفولة",
+   "arabic": "الطُّفولة",
+   "english": "childhood",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-020",
+   "answer": "مطعم",
+   "arabic": "مَطعَم",
+   "english": "restaurant",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-021",
+   "answer": "فرد",
+   "arabic": "فَرد",
+   "english": "individual (person)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-022",
+   "answer": "فواكه",
+   "arabic": "فَواكِه",
+   "english": "fruits",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u4-024",
+   "answer": "يقرا",
+   "arabic": "يَقرَأ",
+   "english": "he reads",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-025",
+   "answer": "يقول",
+   "arabic": "يَقول",
+   "english": "he says",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-026",
+   "answer": "يكتب",
+   "arabic": "يَكتُب",
+   "english": "he writes",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-028",
+   "answer": "كان",
+   "arabic": "كانَ",
+   "english": "he was",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-029",
+   "answer": "كنت",
+   "arabic": "كُنتُ",
+   "english": "was",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u4-030",
+   "answer": "لحم",
+   "arabic": "لَحم",
+   "english": "meat",
+   "pos": "noun"
+  }
+ ],
+ "b2-u5": [
+  {
+   "id": "b2-u5-002",
+   "answer": "بارد",
+   "arabic": "بارِد",
+   "english": "cold (adj.) (of things)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u5-003",
+   "answer": "ثلج",
+   "arabic": "ثَلج",
+   "english": "snow",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-004",
+   "answer": "جدا",
+   "arabic": "جِدّاً",
+   "english": "very",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u5-005",
+   "answer": "الجو",
+   "arabic": "الجَوّ",
+   "english": "weather",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-006",
+   "answer": "طقس",
+   "arabic": "الطَّقس",
+   "english": "weather",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-007",
+   "answer": "جيدا",
+   "arabic": "جَيِّداً",
+   "english": "well (adv.)",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u5-008",
+   "answer": "حار",
+   "arabic": "حارّ",
+   "english": "hot (adj.) (of weather)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u5-009",
+   "answer": "احسن",
+   "arabic": "أَحسَن",
+   "english": "the best",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u5-010",
+   "answer": "احيانا",
+   "arabic": "أَحْياناً",
+   "english": "sometimes",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u5-011",
+   "answer": "خريف",
+   "arabic": "الخَريف",
+   "english": "autumn",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-012",
+   "answer": "درجة",
+   "arabic": "دَرَجة",
+   "english": "degree",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-014",
+   "answer": "ربيع",
+   "arabic": "الرَّبيع",
+   "english": "spring (season)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-015",
+   "answer": "رطوبة",
+   "arabic": "الرُّطوبة",
+   "english": "humidity",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-016",
+   "answer": "ازدحام",
+   "arabic": "الاِزدِحام",
+   "english": "crowding, crowdedness",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-018",
+   "answer": "شتاء",
+   "arabic": "الشِّتاء",
+   "english": "winter",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-019",
+   "answer": "يشعر",
+   "arabic": "يشعُر",
+   "english": "he feels, has feeling of",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u5-020",
+   "answer": "مشمس",
+   "arabic": "مُشمِس",
+   "english": "sunny",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u5-021",
+   "answer": "صيف",
+   "arabic": "الصَّيف",
+   "english": "summer",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-022",
+   "answer": "عالي",
+   "arabic": "عالِي",
+   "english": "high",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u5-023",
+   "answer": "غائم",
+   "arabic": "غائِم",
+   "english": "cloudy",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u5-024",
+   "answer": "فصل",
+   "arabic": "فَصل",
+   "english": "season",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-026",
+   "answer": "فقط",
+   "arabic": "فَقَط",
+   "english": "only",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u5-027",
+   "answer": "قليلا",
+   "arabic": "قَليلاً",
+   "english": "a little bit (adv.)",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u5-028",
+   "answer": "كثيرا",
+   "arabic": "كَثيراً",
+   "english": "a lot, much (adv.)",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u5-029",
+   "answer": "مطر",
+   "arabic": "مَطَر",
+   "english": "rain",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u5-031",
+   "answer": "وحدة",
+   "arabic": "الوِحدة",
+   "english": "loneliness",
+   "pos": "noun"
+  }
+ ],
+ "b2-u6": [
+  {
+   "id": "b2-u6-003",
+   "answer": "تجارة",
+   "arabic": "التِّجارة",
+   "english": "commerce, trade",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-004",
+   "answer": "جري",
+   "arabic": "الجَري",
+   "english": "running",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-005",
+   "answer": "يحصل",
+   "arabic": "يحصُل",
+   "english": "he obtains, acquires (a job, degree)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u6-006",
+   "answer": "حصل",
+   "arabic": "حَصَلَ",
+   "english": "to obtain/obtaining",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u6-007",
+   "answer": "محاضرة",
+   "arabic": "مُحاضَرة",
+   "english": "lecture, (lecture) class",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-008",
+   "answer": "حياة",
+   "arabic": "الحَياة",
+   "english": "life",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-009",
+   "answer": "يتخرج",
+   "arabic": "يَتَخَرَّج",
+   "english": "he graduates, graduating",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u6-010",
+   "answer": "تخرجت",
+   "arabic": "تَخَرَّجْتُ",
+   "english": "graduated from",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u6-012",
+   "answer": "يذهب",
+   "arabic": "يَذهَب",
+   "english": "he goes to",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u6-013",
+   "answer": "رقص",
+   "arabic": "الرَّقص",
+   "english": "dancing",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-014",
+   "answer": "رياضة",
+   "arabic": "الرِّياضة",
+   "english": "sports",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-015",
+   "answer": "سباحة",
+   "arabic": "السِّباحة",
+   "english": "swimming",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-016",
+   "answer": "اسبوع",
+   "arabic": "أُسْبوع",
+   "english": "week",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-017",
+   "answer": "سنتان",
+   "arabic": "سَنَتانِ",
+   "english": "two years",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-018",
+   "answer": "شركة",
+   "arabic": "شَرِكة",
+   "english": "company",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-019",
+   "answer": "تصوير",
+   "arabic": "التَّصْوير",
+   "english": "photography",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-020",
+   "answer": "معيد",
+   "arabic": "مُعيد",
+   "english": "graduate fellow, teaching assistant",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-027",
+   "answer": "يلعب",
+   "arabic": "يِلعَب",
+   "english": "he plays, playing",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u6-030",
+   "answer": "هواية",
+   "arabic": "هِواية",
+   "english": "hobby",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u6-031",
+   "answer": "يوم",
+   "arabic": "يَوْم",
+   "english": "day",
+   "pos": "noun"
+  }
+ ],
+ "b2-u7": [
+  {
+   "id": "b2-u7-001",
+   "answer": "اول",
+   "arabic": "أَوَّل",
+   "english": "first (adj.)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u7-002",
+   "answer": "ثانوي",
+   "arabic": "ثانَوِيّ",
+   "english": "secondary",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u7-003",
+   "answer": "مجنون",
+   "arabic": "مَجنون",
+   "english": "crazy",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u7-004",
+   "answer": "حادث",
+   "arabic": "حادِث",
+   "english": "accident",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u7-005",
+   "answer": "محزن",
+   "arabic": "مُحْزِن",
+   "english": "saddening, distressing",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u7-006",
+   "answer": "خارجية",
+   "arabic": "الخارِجِيّة",
+   "english": "foreign affairs",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u7-009",
+   "answer": "مستشفى",
+   "arabic": "مُسْتَشْفى",
+   "english": "hospital",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u7-010",
+   "answer": "اعدادي",
+   "arabic": "إعدادِيّ",
+   "english": "preparatory school (referring to middle school or junior high school)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u7-011",
+   "answer": "عام",
+   "arabic": "عامّ",
+   "english": "general, public",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u7-012",
+   "answer": "يعيش",
+   "arabic": "يَعيش",
+   "english": "to live",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u7-013",
+   "answer": "اقتصاد",
+   "arabic": "الاِقتِصاد",
+   "english": "economics, economy",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u7-014",
+   "answer": "اكبر",
+   "arabic": "أَكْبَر",
+   "english": "the biggest or oldest",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u7-015",
+   "answer": "مات",
+   "arabic": "ماتَ",
+   "english": "he died",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u7-016",
+   "answer": "ماتت",
+   "arabic": "ماتَت",
+   "english": "she died",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u7-017",
+   "answer": "مال",
+   "arabic": "مال",
+   "english": "money",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u7-018",
+   "answer": "وزارة",
+   "arabic": "وِزارة",
+   "english": "ministry",
+   "pos": "noun"
+  }
+ ],
+ "b2-u8": [
+  {
+   "id": "b2-u8-003",
+   "answer": "حصلت",
+   "arabic": "حَصَلْتُ",
+   "english": "I obtained",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-004",
+   "answer": "حكومة",
+   "arabic": "حُكومة",
+   "english": "government",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u8-005",
+   "answer": "دخلت",
+   "arabic": "دَخَلْتُ",
+   "english": "I entered",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-006",
+   "answer": "يدخل",
+   "arabic": "يَدخُل",
+   "english": "to enter",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-007",
+   "answer": "دولة",
+   "arabic": "دَولة",
+   "english": "(nation-) state",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u8-008",
+   "answer": "دولي",
+   "arabic": "دُوَليّ",
+   "english": "international",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u8-009",
+   "answer": "يذاكر",
+   "arabic": "يُذاكِر",
+   "english": "to study, go over material, review lessons",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-010",
+   "answer": "رئيس",
+   "arabic": "رَئيس",
+   "english": "president, head",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u8-012",
+   "answer": "راي",
+   "arabic": "رَأي",
+   "english": "opinion about",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u8-013",
+   "answer": "رفض",
+   "arabic": "رفَضَ",
+   "english": "he refused",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-014",
+   "answer": "يرفض",
+   "arabic": "يَرفُض",
+   "english": "to refuse",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-015",
+   "answer": "اراد",
+   "arabic": "أرادَ",
+   "english": "he wanted to",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-016",
+   "answer": "يريد",
+   "arabic": "يُريد",
+   "english": "he wants to",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-017",
+   "answer": "يساعد",
+   "arabic": "يُساعِد",
+   "english": "to help (someone) with",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-020",
+   "answer": "مستقبل",
+   "arabic": "مُسْتَقبَل",
+   "english": "future",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u8-022",
+   "answer": "تحق",
+   "arabic": "اِلتَحَقَ",
+   "english": "he joined, entered (school, army, political party)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-023",
+   "answer": "يلتحق",
+   "arabic": "يَلْتَحِق",
+   "english": "to join, enter",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-025",
+   "answer": "ماضي",
+   "arabic": "الماضي",
+   "english": "past, last (week, year, etc.)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u8-026",
+   "answer": "نجحت",
+   "arabic": "نَجَحْتُ",
+   "english": "I succeeded in, passed",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u8-027",
+   "answer": "ينجح",
+   "arabic": "يَنجَح",
+   "english": "to succeed, pass",
+   "pos": "verb"
+  }
+ ],
+ "b2-u9": [
+  {
+   "id": "b2-u9-001",
+   "answer": "اخر",
+   "arabic": "آخَر",
+   "english": "other",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u9-003",
+   "answer": "بدا",
+   "arabic": "بَدَأَ",
+   "english": "to begin",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u9-004",
+   "answer": "برنامج",
+   "arabic": "بَرنامَج",
+   "english": "program",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-005",
+   "answer": "بعض",
+   "arabic": "بَعض",
+   "english": "some (of)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-007",
+   "answer": "جريدة",
+   "arabic": "جَريدة",
+   "english": "newspaper",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-008",
+   "answer": "جلس",
+   "arabic": "جَلَسَ",
+   "english": "to sit",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u9-010",
+   "answer": "خرج",
+   "arabic": "خَرَجَ",
+   "english": "to leave (a place)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u9-011",
+   "answer": "خاص",
+   "arabic": "خاصّ",
+   "english": "special; (its) own; private",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u9-012",
+   "answer": "دخن",
+   "arabic": "دَخَّنَ",
+   "english": "to smoke",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u9-013",
+   "answer": "سادس",
+   "arabic": "سادِس",
+   "english": "sixth (adj.)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u9-014",
+   "answer": "شطرنج",
+   "arabic": "الشَّطَرَنْج",
+   "english": "chess",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-015",
+   "answer": "استطاع",
+   "arabic": "اِستَطاعَ",
+   "english": "to be able to",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u9-016",
+   "answer": "ظهر",
+   "arabic": "الظُّهر",
+   "english": "noon",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-018",
+   "answer": "عشاء",
+   "arabic": "العَشاء",
+   "english": "dinner",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-019",
+   "answer": "عالم",
+   "arabic": "العالَم",
+   "english": "the world",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-020",
+   "answer": "عاد",
+   "arabic": "عادَ",
+   "english": "to return",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u9-021",
+   "answer": "عين",
+   "arabic": "عَيْن",
+   "english": "eye",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-022",
+   "answer": "غداء",
+   "arabic": "الغَداء",
+   "english": "lunch",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-023",
+   "answer": "مفضل",
+   "arabic": "مُفَضَّل",
+   "english": "favorite",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u9-024",
+   "answer": "فطر",
+   "arabic": "فَطَرَ",
+   "english": "to eat breakfast",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u9-025",
+   "answer": "نادي",
+   "arabic": "نادي",
+   "english": "club (e.g., sports, social)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-026",
+   "answer": "نزل",
+   "arabic": "نَزَل",
+   "english": "to leave (the house); to stay (in a hotel)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u9-027",
+   "answer": "نصف",
+   "arabic": "نِصف",
+   "english": "half",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-028",
+   "answer": "موضوع",
+   "arabic": "مَوضوع",
+   "english": "subject, topic",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u9-029",
+   "answer": "ايقظ",
+   "arabic": "أَيْقَظَ",
+   "english": "to wake (someone) up",
+   "pos": "verb"
+  }
+ ],
+ "b2-u10": [
+  {
+   "id": "b2-u10-001",
+   "answer": "متاخر",
+   "arabic": "مُتَأَخِّر",
+   "english": "late",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u10-003",
+   "answer": "مباراة",
+   "arabic": "مُباراة",
+   "english": "match, game (sports)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u10-004",
+   "answer": "جامع",
+   "arabic": "جامِع",
+   "english": "mosque",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u10-005",
+   "answer": "جاء",
+   "arabic": "جاءَ",
+   "english": "to come",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-006",
+   "answer": "مرتب",
+   "arabic": "مُرَتَّب",
+   "english": "salary",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u10-007",
+   "answer": "استراحة",
+   "arabic": "اِستِراحة",
+   "english": "rest period, break",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u10-008",
+   "answer": "بسرعة",
+   "arabic": "بِسُرْعة",
+   "english": "quickly, in a hurry",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u10-009",
+   "answer": "سهر",
+   "arabic": "سَهِرَ",
+   "english": "to stay up late",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-010",
+   "answer": "اصبح",
+   "arabic": "أَصبَحَ",
+   "english": "to become",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-011",
+   "answer": "صحا",
+   "arabic": "صَحا",
+   "english": "to wake up",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-012",
+   "answer": "بصراحة",
+   "arabic": "بِصَراحة",
+   "english": "frankly, honestly",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u10-013",
+   "answer": "صلاة",
+   "arabic": "الصَّلاة",
+   "english": "(ritual) prayer",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u10-014",
+   "answer": "صلى",
+   "arabic": "صَلّى",
+   "english": "to pray, do ritual prayers",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-015",
+   "answer": "عادة",
+   "arabic": "عادةً",
+   "english": "usually",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u10-016",
+   "answer": "فهم",
+   "arabic": "فَهِم",
+   "english": "to understand",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-017",
+   "answer": "قابل",
+   "arabic": "قابَلَ",
+   "english": "to meet",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-018",
+   "answer": "مقابلة",
+   "arabic": "مُقابَلة",
+   "english": "interview",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u10-019",
+   "answer": "اكثر",
+   "arabic": "أَكثَر",
+   "english": "more",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u10-020",
+   "answer": "يكون",
+   "arabic": "يَكون",
+   "english": "to be",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-021",
+   "answer": "ليلة",
+   "arabic": "لَيلة",
+   "english": "(a) night",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u10-022",
+   "answer": "ليلة",
+   "arabic": "اللَّيلة",
+   "english": "tonight",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u10-023",
+   "answer": "استمتع",
+   "arabic": "اِستَمْتَع",
+   "english": "to enjoy",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-026",
+   "answer": "ممل",
+   "arabic": "مُمِلّ",
+   "english": "boring",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u10-027",
+   "answer": "ملك",
+   "arabic": "مَلِك",
+   "english": "king",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u10-028",
+   "answer": "نام",
+   "arabic": "نامَ",
+   "english": "to sleep, go to sleep",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u10-029",
+   "answer": "موعد",
+   "arabic": "مَوعِد",
+   "english": "(fixed) time, appointment",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u10-030",
+   "answer": "وقت",
+   "arabic": "وَقت",
+   "english": "time",
+   "pos": "noun"
+  }
+ ],
+ "b2-u11": [
+  {
+   "id": "b2-u11-003",
+   "answer": "بحر",
+   "arabic": "بَحر",
+   "english": "sea",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-004",
+   "answer": "تبادل",
+   "arabic": "تَبادَلَ",
+   "english": "to exchange (news, opinions, etc.)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u11-006",
+   "answer": "جبل",
+   "arabic": "جَبَل",
+   "english": "mountain",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-007",
+   "answer": "تجربة",
+   "arabic": "تَجْرِبة",
+   "english": "(an) experience",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-008",
+   "answer": "تجمع",
+   "arabic": "تَجَمَّعَ",
+   "english": "to gather together",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u11-009",
+   "answer": "جولة",
+   "arabic": "جَولة",
+   "english": "tour",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-010",
+   "answer": "خجل",
+   "arabic": "الخَجَل",
+   "english": "shyness, embarrassment",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-011",
+   "answer": "خطبت",
+   "arabic": "خُطِبَت",
+   "english": "she got engaged to",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u11-012",
+   "answer": "سياحة",
+   "arabic": "السِّياحة",
+   "english": "tourism",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-013",
+   "answer": "سوق",
+   "arabic": "سوق",
+   "english": "market",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-014",
+   "answer": "صيدلية",
+   "arabic": "صَيْدَلِيَّة",
+   "english": "pharmacy",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-015",
+   "answer": "عدة",
+   "arabic": "عِدّة",
+   "english": "several",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-016",
+   "answer": "تعرف",
+   "arabic": "تَعَرَّف",
+   "english": "to get to know, meet",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u11-017",
+   "answer": "عاطفي",
+   "arabic": "عاطِفيّ",
+   "english": "emotional, romantic",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u11-018",
+   "answer": "معظم",
+   "arabic": "مُعظَم",
+   "english": "most (of)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-019",
+   "answer": "علاقة",
+   "arabic": "عَلاقة",
+   "english": ",relationship",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-020",
+   "answer": "علاقات",
+   "arabic": "عَلاقات",
+   "english": "relations (between)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-022",
+   "answer": "غالي",
+   "arabic": "غالي",
+   "english": "expensive",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u11-023",
+   "answer": "فندق",
+   "arabic": "فُندُق",
+   "english": "hotel",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-024",
+   "answer": "انقطع",
+   "arabic": "اِنْقَطَعَ",
+   "english": "to be cut off",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u11-025",
+   "answer": "مرة",
+   "arabic": "مَرّة",
+   "english": "once, (one) time; pl. times",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u11-026",
+   "answer": "معا",
+   "arabic": "مَعاً",
+   "english": "together",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u11-028",
+   "answer": "مهندس",
+   "arabic": "مُهَنْدِس",
+   "english": "engineer",
+   "pos": "noun"
+  }
+ ],
+ "b2-u12": [
+  {
+   "id": "b2-u12-001",
+   "answer": "اخذ",
+   "arabic": "أَخَذَ",
+   "english": "to take",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u12-002",
+   "answer": "اخر",
+   "arabic": "آخِر",
+   "english": "...the last",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u12-003",
+   "answer": "جميعا",
+   "arabic": "جَميعاً",
+   "english": "all together",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u12-004",
+   "answer": "اجازة",
+   "arabic": "إجازة",
+   "english": "vacation (from work)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u12-005",
+   "answer": "مدير",
+   "arabic": "مُدير",
+   "english": "director",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u12-006",
+   "answer": "زار",
+   "arabic": "زارَ",
+   "english": "to visit",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u12-009",
+   "answer": "طبعا",
+   "arabic": "طَبْعاً",
+   "english": "of course, naturally",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u12-010",
+   "answer": "عطلة",
+   "arabic": "عُطلة",
+   "english": "holiday, vacation (official)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u12-011",
+   "answer": "علم",
+   "arabic": "عَلِمَ",
+   "english": "to learn of, know",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u12-012",
+   "answer": "عينت",
+   "arabic": "عُيِّنْتُ",
+   "english": "I was appointed",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u12-013",
+   "answer": "تغيب",
+   "arabic": "تَغَيَّبَ",
+   "english": "to be absent from, miss",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u12-014",
+   "answer": "قادم",
+   "arabic": "قادِم",
+   "english": "coming, next (week, year, etc.)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u12-015",
+   "answer": "قرر",
+   "arabic": "قَرَّرَ",
+   "english": "to decide to",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u12-016",
+   "answer": "قرار",
+   "arabic": "قَرار",
+   "english": "decision",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u12-017",
+   "answer": "مقارن",
+   "arabic": "مُقارَن",
+   "english": "comparative",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u12-018",
+   "answer": "قضى",
+   "arabic": "قَضى",
+   "english": "to spend (time)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u12-019",
+   "answer": "منحة",
+   "arabic": "مِنْحة",
+   "english": "scholarship award, grant, fellowship",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u12-020",
+   "answer": "هنا",
+   "arabic": "هُنا",
+   "english": "here",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u12-021",
+   "answer": "هناك",
+   "arabic": "هُناك",
+   "english": "there",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u12-022",
+   "answer": "وفاة",
+   "arabic": "وَفاة",
+   "english": "= موت",
+   "pos": "noun"
+  }
+ ],
+ "b2-u13": [
+  {
+   "id": "b2-u13-001",
+   "answer": "اخيرا",
+   "arabic": "أَخيراً",
+   "english": "finally, at last",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u13-004",
+   "answer": "مجلة",
+   "arabic": "مَجَلَّة",
+   "english": "magazine, journal",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u13-005",
+   "answer": "حلم",
+   "arabic": "حُلْم",
+   "english": "dream",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u13-006",
+   "answer": "رجع",
+   "arabic": "رَجَعَ",
+   "english": "= عاد ، يعود",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-007",
+   "answer": "رغب",
+   "arabic": "رَغِبَ",
+   "english": "to desire, wish to",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-009",
+   "answer": "مسرح",
+   "arabic": "مَسرَح",
+   "english": "theater",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u13-010",
+   "answer": "شجع",
+   "arabic": "شَجَّعَ",
+   "english": "to encourage (someone) to",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-012",
+   "answer": "يعني",
+   "arabic": "يَعني",
+   "english": "it means",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-013",
+   "answer": "غربة",
+   "arabic": "الغُربة",
+   "english": "longing for one’s native land; feeling of being a stranger; homesickness",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u13-014",
+   "answer": "فرصة",
+   "arabic": "فُرْصة",
+   "english": "opportunity, chance",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u13-016",
+   "answer": "فشل",
+   "arabic": "فَشِلَ",
+   "english": "to fail (at, in)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-017",
+   "answer": "فصل",
+   "arabic": "فَصَلَ",
+   "english": "to dismiss, fire (from a job)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-018",
+   "answer": "فكر",
+   "arabic": "فَكَّرَ",
+   "english": "to think about (doing something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-019",
+   "answer": "استقر",
+   "arabic": "اِسْتَقَرَّ",
+   "english": "to settle down, become stable",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-020",
+   "answer": "مقالة",
+   "arabic": "مَقالة",
+   "english": "article (e.g., in a newspaper)",
+   "pos": "noun"
+  },
+  {
+   "id": "b2-u13-021",
+   "answer": "كذلك",
+   "arabic": "كَذلِكَ",
+   "english": "likewise, also",
+   "pos": "adverb"
+  },
+  {
+   "id": "b2-u13-022",
+   "answer": "مناسب",
+   "arabic": "مُناسِب",
+   "english": "appropriate, suitable (for)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b2-u13-023",
+   "answer": "انتهى",
+   "arabic": "اِنْتهى",
+   "english": "to finish (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-024",
+   "answer": "وجد",
+   "arabic": "وَجَدَ",
+   "english": "to find",
+   "pos": "verb"
+  },
+  {
+   "id": "b2-u13-026",
+   "answer": "وظيفة",
+   "arabic": "وَظيفة",
+   "english": "position, job",
+   "pos": "noun"
+  }
+ ],
+ "b3-u1": [
+  {
+   "id": "b3-u1-001",
+   "answer": "استاجر",
+   "arabic": "اِستَأجَرَ",
+   "english": "to rent",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-002",
+   "answer": "ايجار",
+   "arabic": "الإيجار",
+   "english": "rent",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-005",
+   "answer": "بسيط",
+   "arabic": "بَسيط",
+   "english": "simple",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u1-007",
+   "answer": "ترك",
+   "arabic": "تَرَكَ",
+   "english": "to leave (someone or something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-008",
+   "answer": "جانب",
+   "arabic": "جانِب",
+   "english": "side",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-010",
+   "answer": "جيل",
+   "arabic": "جيل",
+   "english": "generation",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-011",
+   "answer": "حديقة",
+   "arabic": "حَديقة",
+   "english": "garden, yard, park",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-014",
+   "answer": "حمام",
+   "arabic": "حَمّام",
+   "english": "bathroom, bath, bathhouse",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-015",
+   "answer": "حماة",
+   "arabic": "حَماة",
+   "english": "mother-in-law",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-016",
+   "answer": "خلاف",
+   "arabic": "خِلاف",
+   "english": "disagreement, dispute",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-017",
+   "answer": "الرب",
+   "arabic": "الرَّبّ",
+   "english": "God, (our) Lord",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-018",
+   "answer": "سفرة",
+   "arabic": "السُّفرة",
+   "english": "dining (room)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-019",
+   "answer": "شقة",
+   "arabic": "شَقّة",
+   "english": "apartment",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-020",
+   "answer": "طبخ",
+   "arabic": "طَبَخَ",
+   "english": "to cook",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-021",
+   "answer": "مطبخ",
+   "arabic": "مَطبَخ",
+   "english": "kitchen",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-022",
+   "answer": "طابق",
+   "arabic": "طابِق",
+   "english": "floor, story",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-023",
+   "answer": "طلاق",
+   "arabic": "الطَّلاق",
+   "english": "divorce",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-024",
+   "answer": "اعد",
+   "arabic": "أعَدَّ",
+   "english": "to prepare, get (something) ready",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-025",
+   "answer": "عدم",
+   "arabic": "عَدَم",
+   "english": "( negates a) -non",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-027",
+   "answer": "فوق",
+   "arabic": "فَوْق",
+   "english": "above; upstairs",
+   "pos": "adverb"
+  },
+  {
+   "id": "b3-u1-028",
+   "answer": "كنيسة",
+   "arabic": "كَنيسة",
+   "english": "church",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-029",
+   "answer": "ممنوع",
+   "arabic": "مَمنوع",
+   "english": "forbidden",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u1-030",
+   "answer": "يتمنى",
+   "arabic": "يَتَمَنّى",
+   "english": "to hope, wish (for someone to)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-031",
+   "answer": "انتقل",
+   "arabic": "اِنْتَقَلَ",
+   "english": "to move to",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-033",
+   "answer": "اهل",
+   "arabic": "الأَهل",
+   "english": "folks, family",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-034",
+   "answer": "بداية",
+   "arabic": "بِداية",
+   "english": "beginning",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-036",
+   "answer": "حدث",
+   "arabic": "حَدَثَ",
+   "english": "to happen",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-037",
+   "answer": "خصوصية",
+   "arabic": "خُصوصِيّة",
+   "english": "privacy",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-038",
+   "answer": "خطيب",
+   "arabic": "خَطيب",
+   "english": "fiancé/fiancée",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-039",
+   "answer": "مخطوب",
+   "arabic": "مَخطوب",
+   "english": "engaged (of a woman or couple)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u1-040",
+   "answer": "ذكر",
+   "arabic": "ذَكَرَ",
+   "english": "to recall",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-041",
+   "answer": "ذكر",
+   "arabic": "ذَكَرَ",
+   "english": "to mention",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-042",
+   "answer": "راحة",
+   "arabic": "راحة",
+   "english": "comfort, ease",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-043",
+   "answer": "مسبح",
+   "arabic": "مَسبَح",
+   "english": "swimming pool",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-045",
+   "answer": "فكرة",
+   "arabic": "فِكرة",
+   "english": "idea",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-046",
+   "answer": "استقبل",
+   "arabic": "اِستَقبَلَ",
+   "english": "to receive, to welcome someone",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-048",
+   "answer": "استقلال",
+   "arabic": "الاِستِقلال",
+   "english": "independence",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-049",
+   "answer": "تكون",
+   "arabic": "تَكَوَّنَ",
+   "english": "to consist of, to be made up of",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u1-050",
+   "answer": "مكان",
+   "arabic": "مَكان",
+   "english": "place",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-051",
+   "answer": "نهاية",
+   "arabic": "نِهاية",
+   "english": "end, ending",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-053",
+   "answer": "وجود",
+   "arabic": "الوُجود",
+   "english": "existence",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u1-054",
+   "answer": "مؤقت",
+   "arabic": "مُؤَقَّت",
+   "english": "temporary",
+   "pos": "adjective"
+  }
+ ],
+ "b3-u2": [
+  {
+   "id": "b3-u2-001",
+   "answer": "بحث",
+   "arabic": "بَحَثَ",
+   "english": "to look for, search for",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-002",
+   "answer": "بقي",
+   "arabic": "بَقِيَ",
+   "english": "to remain, stay",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-003",
+   "answer": "بنطلون",
+   "arabic": "بَنطَلون",
+   "english": "(a pair of) pants",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-004",
+   "answer": "تنورة",
+   "arabic": "تَنّورة",
+   "english": "skirt",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-005",
+   "answer": "جالية",
+   "arabic": "جالِية",
+   "english": "community of immigrants, expatriate community",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-006",
+   "answer": "حدد",
+   "arabic": "حَدَّدَ",
+   "english": "to determine, set (e.g., a time, topic)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-008",
+   "answer": "حذاء",
+   "arabic": "حِذاء",
+   "english": "(a pair of) shoes",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-009",
+   "answer": "حرية",
+   "arabic": "الحُرَية",
+   "english": "freedom",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-010",
+   "answer": "محل",
+   "arabic": "مَحَلّ",
+   "english": "shop, store",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-011",
+   "answer": "ازداد",
+   "arabic": "اِزدادَ",
+   "english": "to increase, become larger (of a number)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-012",
+   "answer": "سمح",
+   "arabic": "سَمَحَ",
+   "english": "to permit ( someone)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-013",
+   "answer": "يسمح",
+   "arabic": "يَسمَح",
+   "english": "to (do)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-014",
+   "answer": "شخص",
+   "arabic": "شَخص",
+   "english": "person",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-015",
+   "answer": "شخصية",
+   "arabic": "شَخصِيّة",
+   "english": "personality, character",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-016",
+   "answer": "شمال",
+   "arabic": "شَمال",
+   "english": "north",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-017",
+   "answer": "عام",
+   "arabic": "عام",
+   "english": "= سنة",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-018",
+   "answer": "غضب",
+   "arabic": "غَضِبَ",
+   "english": "to get angry",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-019",
+   "answer": "غاضب",
+   "arabic": "غاضِب",
+   "english": "angry",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u2-020",
+   "answer": "فستان",
+   "arabic": "فُستان",
+   "english": "(a) dress",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-021",
+   "answer": "قميص",
+   "arabic": "قَميص",
+   "english": "shirt",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-022",
+   "answer": "اكمل",
+   "arabic": "أَكمَلَ",
+   "english": "to complete, finish (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-023",
+   "answer": "لبس",
+   "arabic": "لَبِسَ",
+   "english": "to wear, put on (clothes)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-024",
+   "answer": "ملابس",
+   "arabic": "مَلابِس",
+   "english": "clothes",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-025",
+   "answer": "باستمرار",
+   "arabic": "بِاستِمرار",
+   "english": "continuously",
+   "pos": "adverb"
+  },
+  {
+   "id": "b3-u2-026",
+   "answer": "انتشر",
+   "arabic": "اِنتَشَرَ",
+   "english": "to be spread out, to spread (intransitive)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-027",
+   "answer": "منتشر",
+   "arabic": "مُنتَشِر",
+   "english": "spread out, widespread",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u2-028",
+   "answer": "نوى",
+   "arabic": "نَوى",
+   "english": "to intend to",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-029",
+   "answer": "هاجر",
+   "arabic": "هاجَرَ",
+   "english": "to emigrate, immigrate",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-030",
+   "answer": "مهاجر",
+   "arabic": "مُهاجِر",
+   "english": "immigrant",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-033",
+   "answer": "مجموعة",
+   "arabic": "مَجموعة",
+   "english": "(a) group (of)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-034",
+   "answer": "جنوب",
+   "arabic": "جَنوب",
+   "english": "south",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-035",
+   "answer": "اجنبي",
+   "arabic": "أَجنبَيّ",
+   "english": "foreign, foreigner",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u2-036",
+   "answer": "اشترك",
+   "arabic": "اِشتَرَكَ",
+   "english": "to share, have in common, participate in",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-037",
+   "answer": "مشغول",
+   "arabic": "مَشغول",
+   "english": "too busy (to have time) for",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u2-038",
+   "answer": "طبيعة",
+   "arabic": "طَبيعة",
+   "english": "nature",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-039",
+   "answer": "علم",
+   "arabic": "عَلَّمَ",
+   "english": "to teach, educate (someone)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-040",
+   "answer": "تعليم",
+   "arabic": "التَّعليم",
+   "english": "education",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-041",
+   "answer": "تعلم",
+   "arabic": "تَعَلَّمَ",
+   "english": "to learn",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-042",
+   "answer": "غرب",
+   "arabic": "غَرب",
+   "english": "west",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-045",
+   "answer": "ملك",
+   "arabic": "مَلَكَ",
+   "english": "to own, possess",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u2-046",
+   "answer": "نفس",
+   "arabic": "نَفس",
+   "english": "(him, her...) -self",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u2-048",
+   "answer": "هوية",
+   "arabic": "هُوِيّة",
+   "english": "identity",
+   "pos": "noun"
+  }
+ ],
+ "b3-u3": [
+  {
+   "id": "b3-u3-002",
+   "answer": "باع",
+   "arabic": "باعَ",
+   "english": "to sell",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-004",
+   "answer": "حرير",
+   "arabic": "حَرير",
+   "english": "silk",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-005",
+   "answer": "حساب",
+   "arabic": "حِساب",
+   "english": "account, bill (in a bank, shop, or restaurant)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-006",
+   "answer": "احمر",
+   "arabic": "أَحمَر",
+   "english": "red",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-007",
+   "answer": "حائط",
+   "arabic": "حائِط",
+   "english": "wall",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-008",
+   "answer": "خزانة",
+   "arabic": "خِزانة",
+   "english": "closet",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-009",
+   "answer": "ذهب",
+   "arabic": "ذَهَب",
+   "english": "gold; golden",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-010",
+   "answer": "رتب",
+   "arabic": "رَتَّبَ",
+   "english": "to arrange",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-011",
+   "answer": "ترتيب",
+   "arabic": "تَرتيب",
+   "english": "arrangement",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-012",
+   "answer": "رخيص",
+   "arabic": "رَخيص",
+   "english": "cheap",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-013",
+   "answer": "رسم",
+   "arabic": "رَسَمَ",
+   "english": "to draw",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-014",
+   "answer": "رسم",
+   "arabic": "رَسم",
+   "english": "drawing",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-015",
+   "answer": "رمادي",
+   "arabic": "رَمادِيّ",
+   "english": "grey",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-016",
+   "answer": "ازرق",
+   "arabic": "أَزرَق",
+   "english": "blue",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-017",
+   "answer": "سعر",
+   "arabic": "سِعر",
+   "english": "price",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-018",
+   "answer": "شرشف",
+   "arabic": "شَرشَف",
+   "english": "(bed) sheet",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-019",
+   "answer": "اشترى",
+   "arabic": "اِشتَرى",
+   "english": "to buy, purchase",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-020",
+   "answer": "شهر",
+   "arabic": "شَهْر",
+   "english": "month",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-021",
+   "answer": "مشهور",
+   "arabic": "مَشهور",
+   "english": "famous",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-022",
+   "answer": "اصفر",
+   "arabic": "أَصفَر",
+   "english": "yellow",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-023",
+   "answer": "اصلح",
+   "arabic": "أَصلَحَ",
+   "english": "to repair, repairing",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-024",
+   "answer": "تصليحات",
+   "arabic": "تَصليحات",
+   "english": "repairs",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-025",
+   "answer": "غسل",
+   "arabic": "غَسَلَ",
+   "english": "to wash (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-026",
+   "answer": "غامق",
+   "arabic": "غامِق",
+   "english": "dark (in color)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-027",
+   "answer": "فاتح",
+   "arabic": "فاتِح",
+   "english": "light (in color)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-028",
+   "answer": "مفروشات",
+   "arabic": "مَفروشات",
+   "english": "furniture",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-029",
+   "answer": "فضة",
+   "arabic": "فِضّة",
+   "english": "silver; silver (color)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-030",
+   "answer": "فوطة",
+   "arabic": "فوطة",
+   "english": "towel",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-031",
+   "answer": "قسم",
+   "arabic": "قِسْم",
+   "english": "part, section, department",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-032",
+   "answer": "لون",
+   "arabic": "لَوْن",
+   "english": "color",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-034",
+   "answer": "وصل",
+   "arabic": "وَصَلَ",
+   "english": "to arrive",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-035",
+   "answer": "يسار",
+   "arabic": "يَسار",
+   "english": "left",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-036",
+   "answer": "يمين",
+   "arabic": "يَمين",
+   "english": "right",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-037",
+   "answer": "براد",
+   "arabic": "بَرّاد",
+   "english": "refrigerator",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-041",
+   "answer": "ارسل",
+   "arabic": "أَرسَلَ",
+   "english": "to send",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-043",
+   "answer": "استعد",
+   "arabic": "اِسْتَعَدَّ",
+   "english": ",to get ready for prepare oneself for",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-044",
+   "answer": "مستعد",
+   "arabic": "مُستَعِدّ",
+   "english": "ready, prepared for",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-045",
+   "answer": "معطل",
+   "arabic": "مُعَطَّل",
+   "english": "broken",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u3-046",
+   "answer": "استعمل",
+   "arabic": "اِستَعمَل",
+   "english": "to use",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-047",
+   "answer": "غير",
+   "arabic": "غَيَّرَ",
+   "english": "to change (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-048",
+   "answer": "تغير",
+   "arabic": "تَغَيَّرَ",
+   "english": "to change (intransitive)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-049",
+   "answer": "قبل",
+   "arabic": "قَبِلَ",
+   "english": "to accept",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-050",
+   "answer": "تمكن",
+   "arabic": "تَمَكَّنَ",
+   "english": "to be able to",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-051",
+   "answer": "منتصف",
+   "arabic": "مُنْتَصَف",
+   "english": "mid-, middle of (time period)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u3-052",
+   "answer": "يجب",
+   "arabic": "يَجِب",
+   "english": "it is necessary",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u3-053",
+   "answer": "وسط",
+   "arabic": "وَسَط",
+   "english": "middle, center (location)",
+   "pos": "noun"
+  }
+ ],
+ "b3-u4": [
+  {
+   "id": "b3-u4-002",
+   "answer": "امن",
+   "arabic": "آمَنَ",
+   "english": "to believe in",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-005",
+   "answer": "حفلة",
+   "arabic": "حَفْلة",
+   "english": "party",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-007",
+   "answer": "دعا",
+   "arabic": "دَعا",
+   "english": "to invite",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-009",
+   "answer": "رحلة",
+   "arabic": "رِحْلة",
+   "english": "trip",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-010",
+   "answer": "سحور",
+   "arabic": "السُّحور",
+   "english": "meal eaten before dawn during Ramadan",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-011",
+   "answer": "مسلسل",
+   "arabic": "مُسَلْسَل",
+   "english": "television series or serial",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-012",
+   "answer": "سماء",
+   "arabic": "السَّماء",
+   "english": "sky, heavens",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-013",
+   "answer": "اشرف",
+   "arabic": "أَشْرَفَ",
+   "english": "to supervise",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-014",
+   "answer": "صحيفة",
+   "arabic": "صَحيفة",
+   "english": "= جريدة",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-015",
+   "answer": "صام",
+   "arabic": "صامَ",
+   "english": "to fast",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-016",
+   "answer": "عرس",
+   "arabic": "عُرس",
+   "english": "wedding",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-017",
+   "answer": "عاصمة",
+   "arabic": "عاصِمة",
+   "english": "capital",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-018",
+   "answer": "اعتقد",
+   "arabic": "أعتَقِد",
+   "english": "I believe that",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-019",
+   "answer": "معهد",
+   "arabic": "مَعهَد",
+   "english": "institute",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-020",
+   "answer": "فرح",
+   "arabic": "فَرَح",
+   "english": "happiness happy occasion (such as wedding, graduation)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-021",
+   "answer": "فعل",
+   "arabic": "فَعَلَ",
+   "english": "to do (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-022",
+   "answer": "مقدس",
+   "arabic": "مُقَدَّس",
+   "english": "holy",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u4-023",
+   "answer": "قلق",
+   "arabic": "قَلَق",
+   "english": "nervousness, anxiety",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-024",
+   "answer": "قام",
+   "arabic": "قامَ",
+   "english": "to get up",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-025",
+   "answer": "كاف",
+   "arabic": "كافٍ",
+   "english": "enough",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u4-026",
+   "answer": "نجم",
+   "arabic": "نَجم",
+   "english": "star",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-027",
+   "answer": "وضع",
+   "arabic": "وَضَعَ",
+   "english": "to put, place (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-028",
+   "answer": "بقية",
+   "arabic": "بَقِيّة",
+   "english": "(the) rest, remainder of",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-029",
+   "answer": "اجتمع",
+   "arabic": "اِجتَمَعَ",
+   "english": "to meet, gather (with)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-030",
+   "answer": "اجتماع",
+   "arabic": "اِجتِماع",
+   "english": "meeting",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-031",
+   "answer": "جاء",
+   "arabic": "جاءَ",
+   "english": "to bring",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-032",
+   "answer": "محلي",
+   "arabic": "مَحَلّيّ",
+   "english": "location, place local",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u4-033",
+   "answer": "اختلف",
+   "arabic": "اِختَلَفَ",
+   "english": "to have a disagreement, dispute with",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-034",
+   "answer": "اختلف",
+   "arabic": "اِختَلَفَ",
+   "english": "to differ from",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-035",
+   "answer": "شرقي",
+   "arabic": "شَرقِيّ",
+   "english": "oriental, Middle Eastern",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u4-036",
+   "answer": "انشغل",
+   "arabic": "اِنشَغَلَ",
+   "english": "to be/become (pre)occupied with",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-038",
+   "answer": "طباخ",
+   "arabic": "طَبّاخ",
+   "english": "cook, chef",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-039",
+   "answer": "طعم",
+   "arabic": "طَعْم",
+   "english": "flavor",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-040",
+   "answer": "اعتاد",
+   "arabic": "اِعتادَ",
+   "english": "to get used to, accustomed to",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-042",
+   "answer": "افطر",
+   "arabic": "أَفطَرَ",
+   "english": "to break one’s fast, especially in Ramadan; to have breakfast",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u4-043",
+   "answer": "مقهى",
+   "arabic": "مَقهَى",
+   "english": "café",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-044",
+   "answer": "ملل",
+   "arabic": "المَلَل",
+   "english": "boredom",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-045",
+   "answer": "وجبة",
+   "arabic": "وَجْبة",
+   "english": "meal",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u4-046",
+   "answer": "تولى",
+   "arabic": "تَوَلّى",
+   "english": "to undertake, assume (a task or position)",
+   "pos": "verb"
+  }
+ ],
+ "b3-u5": [
+  {
+   "id": "b3-u5-001",
+   "answer": "ابدا",
+   "arabic": "أَبَداً",
+   "english": "at all",
+   "pos": "adverb"
+  },
+  {
+   "id": "b3-u5-002",
+   "answer": "متاكد",
+   "arabic": "مُتَأَكِّد",
+   "english": "certain, sure (of/that)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-003",
+   "answer": "بريد",
+   "arabic": "بَريد",
+   "english": "mail, post",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-004",
+   "answer": "بطن",
+   "arabic": "بَطن",
+   "english": "belly, stomach",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-005",
+   "answer": "ثقيل",
+   "arabic": "ثَقيل",
+   "english": "heavy (in weight or substance)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-006",
+   "answer": "جزء",
+   "arabic": "جُزء",
+   "english": "part of",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-007",
+   "answer": "جسم",
+   "arabic": "جِسم",
+   "english": "body",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-008",
+   "answer": "حاول",
+   "arabic": "حاوَلَ",
+   "english": "to try to, attempt",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-009",
+   "answer": "مخدرات",
+   "arabic": "مُخَدِّرات",
+   "english": "drugs",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-010",
+   "answer": "خفيف",
+   "arabic": "خَفيف",
+   "english": "light (in weight or substance)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-011",
+   "answer": "اخلاق",
+   "arabic": "أَخلاق",
+   "english": "morals",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-012",
+   "answer": "خاف",
+   "arabic": "خافَ",
+   "english": "to be afraid for (someone)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-013",
+   "answer": "خاف",
+   "arabic": "خافَ",
+   "english": "to be afraid of",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-014",
+   "answer": "خائف",
+   "arabic": "خائِف",
+   "english": "afraid",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-017",
+   "answer": "ذكي",
+   "arabic": "ذَكِيّ",
+   "english": "smart, intelligent",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-018",
+   "answer": "ربما",
+   "arabic": "رُبَّما",
+   "english": "perhaps, maybe",
+   "pos": "adverb"
+  },
+  {
+   "id": "b3-u5-019",
+   "answer": "زمن",
+   "arabic": "زَمَن",
+   "english": "time, times (abstract)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-020",
+   "answer": "شعر",
+   "arabic": "شَعْر",
+   "english": "hair",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-021",
+   "answer": "متضايق",
+   "arabic": "مُتَضايِق",
+   "english": "upset, bothered (by)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-022",
+   "answer": "اعتبر",
+   "arabic": "اِعتَبَرَ",
+   "english": "to consider (someone or something to be)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-023",
+   "answer": "غادر",
+   "arabic": "غادَرَ",
+   "english": "to leave (a place)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-024",
+   "answer": "قلب",
+   "arabic": "قَلب",
+   "english": "heart",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-025",
+   "answer": "لمح",
+   "arabic": "لَمَّحَ",
+   "english": "to hint to (someone) that",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-026",
+   "answer": "ناقش",
+   "arabic": "ناقَش",
+   "english": "to discuss (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-027",
+   "answer": "تناقش",
+   "arabic": "تَناقَشَ",
+   "english": "to discuss with (someone)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-028",
+   "answer": "مهم",
+   "arabic": "مُهِمّ",
+   "english": "important",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-029",
+   "answer": "اهم",
+   "arabic": "أَهَمّ",
+   "english": "most/more important",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-030",
+   "answer": "وثق",
+   "arabic": "وَثِقَ",
+   "english": "to trust, have confidence in",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-031",
+   "answer": "ثقة",
+   "arabic": "ثِقة",
+   "english": "trust, confidence",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-032",
+   "answer": "واثق",
+   "arabic": "واثِق",
+   "english": "trusting, confident in",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-033",
+   "answer": "وجه",
+   "arabic": "وَجه",
+   "english": "face",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-035",
+   "answer": "مؤدب",
+   "arabic": "مُؤَدَّب",
+   "english": "polite, well-mannered",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-036",
+   "answer": "خارج",
+   "arabic": "خارِج",
+   "english": "outside",
+   "pos": "adverb"
+  },
+  {
+   "id": "b3-u5-038",
+   "answer": "مختلف",
+   "arabic": "مُختَلِف",
+   "english": "different from",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u5-039",
+   "answer": "راس",
+   "arabic": "رَأس",
+   "english": "head",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-040",
+   "answer": "رجل",
+   "arabic": "رِجل",
+   "english": "leg",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-041",
+   "answer": "رحب",
+   "arabic": "رَحَّبَ",
+   "english": "to welcome",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-042",
+   "answer": "ركز",
+   "arabic": "رَكَّزَ",
+   "english": "to focus, concentrate on",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-043",
+   "answer": "شباب",
+   "arabic": "الشَّباب",
+   "english": "youth (stage of life)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-044",
+   "answer": "شغل",
+   "arabic": "شَغَلَ",
+   "english": "to occupy, preoccupy",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-046",
+   "answer": "شكل",
+   "arabic": "شَكل",
+   "english": "form, shape; “you look …” (شَكلُكَ …)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-047",
+   "answer": "صداقة",
+   "arabic": "صَداقَة",
+   "english": "friendship",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u5-050",
+   "answer": "عود",
+   "arabic": "عَوَّدَ",
+   "english": "to get (someone) accustomed to",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-051",
+   "answer": "فتح",
+   "arabic": "فَتَحَ",
+   "english": "to open",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u5-052",
+   "answer": "متفوق",
+   "arabic": "مُتَفَوِّق",
+   "english": "superior",
+   "pos": "adjective"
+  }
+ ],
+ "b3-u6": [
+  {
+   "id": "b3-u6-001",
+   "answer": "الف",
+   "arabic": "أَلف",
+   "english": "thousand",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-002",
+   "answer": "بيئة",
+   "arabic": "بيئة",
+   "english": "environment",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-004",
+   "answer": "احترم",
+   "arabic": "اِحتَرَمَ",
+   "english": "to respect",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-005",
+   "answer": "حمل",
+   "arabic": "حَمَلَ",
+   "english": "to carry",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-006",
+   "answer": "احتاج",
+   "arabic": "اِحتاجَ",
+   "english": "to need",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-007",
+   "answer": "حاجة",
+   "arabic": "حاجة",
+   "english": "(a) need",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-009",
+   "answer": "دفع",
+   "arabic": "دَفَعَ",
+   "english": "to push; to pay",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-010",
+   "answer": "دافع",
+   "arabic": "دافِع",
+   "english": "impetus, motive",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-011",
+   "answer": "دنيا",
+   "arabic": "الدُّنيا",
+   "english": "the world, this world",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-012",
+   "answer": "سلوك",
+   "arabic": "سُلوك",
+   "english": "behavior (in general)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-013",
+   "answer": "تصرف",
+   "arabic": "تَصَرَّفَ",
+   "english": "to act, behave",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-014",
+   "answer": "تصرف",
+   "arabic": "تَصَرُّف",
+   "english": "act (of behavior), action",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-015",
+   "answer": "ضروري",
+   "arabic": "ضَروريّ",
+   "english": "necessary",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u6-016",
+   "answer": "ظلم",
+   "arabic": "ظُلم",
+   "english": "injustice",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-017",
+   "answer": "اعطى",
+   "arabic": "أَعطى",
+   "english": "to give",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-018",
+   "answer": "غني",
+   "arabic": "غَنِيّ",
+   "english": "rich",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u6-019",
+   "answer": "فخر",
+   "arabic": "فَخر",
+   "english": "pride",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-020",
+   "answer": "فخور",
+   "arabic": "فَخور",
+   "english": "proud of",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u6-021",
+   "answer": "فقير",
+   "arabic": "فَقير",
+   "english": "poor",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u6-022",
+   "answer": "قصد",
+   "arabic": "قَصَدَ",
+   "english": "to mean, intend, aim at",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-023",
+   "answer": "كرامة",
+   "arabic": "كَرامة",
+   "english": "dignity",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-024",
+   "answer": "نشا",
+   "arabic": "نَشَأَ",
+   "english": "to grow up; to arise",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-025",
+   "answer": "نصيحة",
+   "arabic": "نَصيحة",
+   "english": "(piece of) advice",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-026",
+   "answer": "هدية",
+   "arabic": "هَدِيّة",
+   "english": "gift, present",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-027",
+   "answer": "وطن",
+   "arabic": "وَطَن",
+   "english": "homeland",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-028",
+   "answer": "مواطن",
+   "arabic": "مُواطِن",
+   "english": "citizen",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-029",
+   "answer": "توقف",
+   "arabic": "تَوَقَّفَ",
+   "english": "to stop (intransitive)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-030",
+   "answer": "اخذ",
+   "arabic": "أُخِذ",
+   "english": "it was taken",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-032",
+   "answer": "تاريخ",
+   "arabic": "تاريخ",
+   "english": "date",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-033",
+   "answer": "انسان",
+   "arabic": "إنسان",
+   "english": "human being, (pl.) people",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-035",
+   "answer": "جرى",
+   "arabic": "جَرى",
+   "english": "to run",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-036",
+   "answer": "تحدث",
+   "arabic": "تَحَدَّثَ",
+   "english": "= تكلّم عن",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-037",
+   "answer": "احس",
+   "arabic": "أَحَسَّ",
+   "english": "= شعر بـ",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-040",
+   "answer": "اختار",
+   "arabic": "اِختارَ",
+   "english": "to choose",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-041",
+   "answer": "اختيار",
+   "arabic": "اِختِيار",
+   "english": "choice",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-042",
+   "answer": "سفارة",
+   "arabic": "سِفارة",
+   "english": "embassy",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-043",
+   "answer": "طفل",
+   "arabic": "طِفل",
+   "english": "child",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-044",
+   "answer": "طلب",
+   "arabic": "طَلَبَ",
+   "english": "to ask of (someone to)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-045",
+   "answer": "طلب",
+   "arabic": "طَلَب",
+   "english": "request; application",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-046",
+   "answer": "قبل",
+   "arabic": "قُبِلَ",
+   "english": "it was accepted",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-047",
+   "answer": "قدس",
+   "arabic": "القُدس",
+   "english": "Jerusalem",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-048",
+   "answer": "قدم",
+   "arabic": "قَدَّمَ",
+   "english": "to present (e.g., gift, report, application)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u6-052",
+   "answer": "مالي",
+   "arabic": "مالِيّ",
+   "english": "financial",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u6-053",
+   "answer": "واسطة",
+   "arabic": "واسِطة",
+   "english": "connections, influential contacts",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u6-054",
+   "answer": "وضع",
+   "arabic": "وَضْع",
+   "english": "situation",
+   "pos": "noun"
+  }
+ ],
+ "b3-u7": [
+  {
+   "id": "b3-u7-001",
+   "answer": "اساس",
+   "arabic": "أَساس",
+   "english": "basis, foundation basic",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-002",
+   "answer": "بلغ",
+   "arabic": "بَلَغَ",
+   "english": "to reach, attain (a number, place)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-003",
+   "answer": "حرب",
+   "arabic": "حَرب",
+   "english": "war",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-004",
+   "answer": "حضارة",
+   "arabic": "حَضارة",
+   "english": "civilization",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-005",
+   "answer": "حقيبة",
+   "arabic": "حَقيبة",
+   "english": "suitcase, purse, backpack",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-006",
+   "answer": "حال",
+   "arabic": "حال",
+   "english": "state, condition",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-007",
+   "answer": "محيط",
+   "arabic": "مُحيط",
+   "english": "ocean, environment (physical and abstract)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-009",
+   "answer": "دار",
+   "arabic": "دار",
+   "english": "house, abode",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-010",
+   "answer": "رابطة",
+   "arabic": "رابِطة",
+   "english": "tie, bond, link link (including internet link)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-011",
+   "answer": "سجل",
+   "arabic": "سَجَّلَ",
+   "english": "to record; to register",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-012",
+   "answer": "سفينة",
+   "arabic": "سَفينة",
+   "english": "ship",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-013",
+   "answer": "شعب",
+   "arabic": "شَعْب",
+   "english": "(a) people (political in connotation, refers to a national group)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-014",
+   "answer": "شمل",
+   "arabic": "شَمِلَ",
+   "english": "to comprise, contain",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-015",
+   "answer": "شامل",
+   "arabic": "شامِل",
+   "english": "comprehensive",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u7-016",
+   "answer": "صحراء",
+   "arabic": "صَحراء",
+   "english": "desert",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-017",
+   "answer": "صليب",
+   "arabic": "صَليب",
+   "english": "(a) cross Crusader",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-018",
+   "answer": "ضعف",
+   "arabic": "ضَعْف",
+   "english": "weakness",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-019",
+   "answer": "ضعيف",
+   "arabic": "ضَعيف",
+   "english": "weak",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u7-020",
+   "answer": "طريق",
+   "arabic": "طَريق",
+   "english": "path, road, way",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-022",
+   "answer": "طريقة",
+   "arabic": "طَريقة",
+   "english": "way (abstract)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-023",
+   "answer": "عصر",
+   "arabic": "عَصْر",
+   "english": "age, era, the Middle Ages",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-024",
+   "answer": "عظيم",
+   "arabic": "عَظيم",
+   "english": "great",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u7-025",
+   "answer": "قرن",
+   "arabic": "قَرْن",
+   "english": "century",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-026",
+   "answer": "قافلة",
+   "arabic": "قافِلة",
+   "english": "caravan",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-027",
+   "answer": "قوة",
+   "arabic": "قُوّة",
+   "english": "power, force",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-028",
+   "answer": "قوي",
+   "arabic": "قَوِيّ",
+   "english": "strong, powerful",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u7-029",
+   "answer": "قيمة",
+   "arabic": "قيمة",
+   "english": "value",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-030",
+   "answer": "استكشف",
+   "arabic": "اِستَكشَفَ",
+   "english": "to explore",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-031",
+   "answer": "لاحظ",
+   "arabic": "لاحَظَ",
+   "english": "to notice, remark, observe",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-032",
+   "answer": "امتد",
+   "arabic": "اِمتَدَّ",
+   "english": "to extend, stretch (in space or time)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-033",
+   "answer": "مدة",
+   "arabic": "مُدّة",
+   "english": "period (of time)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-034",
+   "answer": "نسخة",
+   "arabic": "نُسخة",
+   "english": "copy",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-035",
+   "answer": "نظر",
+   "arabic": "نَظَرَ",
+   "english": "to look at",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-036",
+   "answer": "نظرة",
+   "arabic": "نَظْرة",
+   "english": "glance, look",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-037",
+   "answer": "تراث",
+   "arabic": "تُراث",
+   "english": "heritage (literary and cultural)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-038",
+   "answer": "اواخر",
+   "arabic": "أَواخِر",
+   "english": "last ones (e.g., days or years)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-039",
+   "answer": "اوائل",
+   "arabic": "أَوائِل",
+   "english": "first ones (e.g., days or years)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-040",
+   "answer": "بركة",
+   "arabic": "بَرَكة",
+   "english": "blessing",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-041",
+   "answer": "ترجم",
+   "arabic": "تَرجَمَ",
+   "english": "to translate",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-043",
+   "answer": "اجتماعي",
+   "arabic": "اِجتِماعيّ",
+   "english": "social",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u7-044",
+   "answer": "مجتمع",
+   "arabic": "مُجتَمَع",
+   "english": "society",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-047",
+   "answer": "حقيقة",
+   "arabic": "حَقيقة",
+   "english": "(a) truth, fact",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-049",
+   "answer": "بحق",
+   "arabic": "بِحَقّ",
+   "english": "truly, rightly so",
+   "pos": "adverb"
+  },
+  {
+   "id": "b3-u7-050",
+   "answer": "رحل",
+   "arabic": "رَحَلَ",
+   "english": "to travel, to set out, depart; (also) to pass on, go on to the next life",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-051",
+   "answer": "رحالة",
+   "arabic": "رَحّالة",
+   "english": "traveler, explorer (masc. & fem.)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-052",
+   "answer": "مستشرق",
+   "arabic": "مُستَشرِق",
+   "english": "Orientalist, scholar who studies the Middle East",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-055",
+   "answer": "طبع",
+   "arabic": "طَبَعَ",
+   "english": "to print, to type",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-056",
+   "answer": "طبعة",
+   "arabic": "طَبْعة",
+   "english": "printing, edition",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-057",
+   "answer": "طول",
+   "arabic": "طول",
+   "english": "length, height",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-059",
+   "answer": "علم",
+   "arabic": "عِلم",
+   "english": "science, knowledge, learning",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-060",
+   "answer": "عالم",
+   "arabic": "عالِم",
+   "english": "learned person, scientist",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-061",
+   "answer": "معلومات",
+   "arabic": "مَعلومات",
+   "english": "information",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-062",
+   "answer": "اعاد",
+   "arabic": "أعادَ",
+   "english": "to repeat, re-(do)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-063",
+   "answer": "عادة",
+   "arabic": "عادة",
+   "english": "habit",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-064",
+   "answer": "قاضي",
+   "arabic": "قاضي",
+   "english": "judge",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-065",
+   "answer": "قطع",
+   "arabic": "قَطَعَ",
+   "english": "to cut, cut across (a distance)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-066",
+   "answer": "قام",
+   "arabic": "قامَ",
+   "english": "to undertake, carry out",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-067",
+   "answer": "كامل",
+   "arabic": "كامِل",
+   "english": "entire, whole",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u7-068",
+   "answer": "لقاء",
+   "arabic": "لِقاء",
+   "english": "meeting",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-069",
+   "answer": "نشر",
+   "arabic": "نَشَرَ",
+   "english": "to publish; to spread (something, e.g., news)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-070",
+   "answer": "تنقل",
+   "arabic": "تَنَقَّلَ",
+   "english": "to move around",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-071",
+   "answer": "اهتم",
+   "arabic": "اِهتَمَّ",
+   "english": "to be interested in",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-072",
+   "answer": "اهمية",
+   "arabic": "أَهَمِّيّة",
+   "english": "importance",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u7-073",
+   "answer": "وصف",
+   "arabic": "وَصَفَ",
+   "english": "to describe (as)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u7-074",
+   "answer": "وصف",
+   "arabic": "وَصْف",
+   "english": "description (of)",
+   "pos": "noun"
+  }
+ ],
+ "b3-u8": [
+  {
+   "id": "b3-u8-001",
+   "answer": "ارض",
+   "arabic": "أرْض",
+   "english": "earth, land, ground",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-002",
+   "answer": "جاف",
+   "arabic": "جافّ",
+   "english": "dry",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-003",
+   "answer": "حلقة",
+   "arabic": "حَلْقة",
+   "english": "circle, ring, episode",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-005",
+   "answer": "خاتم",
+   "arabic": "خاتِم",
+   "english": "ring (jewelry)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-006",
+   "answer": "خليج",
+   "arabic": "الخَليج",
+   "english": "the (Persian) Gulf",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-007",
+   "answer": "خيمة",
+   "arabic": "خَيمة",
+   "english": "tent",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-008",
+   "answer": "ارتفع",
+   "arabic": "اِرتَفَعَ",
+   "english": "to rise",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-009",
+   "answer": "زين",
+   "arabic": "زَيَّنَ",
+   "english": "to decorate",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-010",
+   "answer": "زينة",
+   "arabic": "زينة",
+   "english": "decoration",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-011",
+   "answer": "اشبه",
+   "arabic": "أَشبَهَ",
+   "english": "to resemble",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-012",
+   "answer": "تشابه",
+   "arabic": "تَشابَهَ",
+   "english": "to resemble each other",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-013",
+   "answer": "صحن",
+   "arabic": "صَحن",
+   "english": "dish, plate",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-014",
+   "answer": "ضيف",
+   "arabic": "ضَيْف",
+   "english": "guest",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-015",
+   "answer": "طبلة",
+   "arabic": "طَبْلة",
+   "english": "drum",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-016",
+   "answer": "اعلن",
+   "arabic": "أَعلَنَ",
+   "english": "to announce",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-017",
+   "answer": "اعلان",
+   "arabic": "إعلان",
+   "english": "advertisement",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-018",
+   "answer": "فترة",
+   "arabic": "فَترة",
+   "english": "period (of time)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-019",
+   "answer": "فارغ",
+   "arabic": "فارِغ",
+   "english": "empty",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-021",
+   "answer": "فريق",
+   "arabic": "فَريق",
+   "english": "team",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-022",
+   "answer": "تقليدي",
+   "arabic": "تَقليدِيّ",
+   "english": "traditional",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-024",
+   "answer": "مارس",
+   "arabic": "مارَسَ",
+   "english": "to practice (a profession, custom, sport, or religion)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-025",
+   "answer": "مسيحي",
+   "arabic": "مَسيحيّ",
+   "english": "Christian",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-026",
+   "answer": "مائدة",
+   "arabic": "مائِدة",
+   "english": "(dining or banquet) table",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-027",
+   "answer": "نشاط",
+   "arabic": "نَشاط",
+   "english": "activity",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-028",
+   "answer": "نوع",
+   "arabic": "نَوْع",
+   "english": "type, kind (of), variety",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-029",
+   "answer": "تنوع",
+   "arabic": "تَنَوَّعَ",
+   "english": "to vary",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-030",
+   "answer": "متنوع",
+   "arabic": "مُتَنَوِّع",
+   "english": "various",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-031",
+   "answer": "هلال",
+   "arabic": "هِلال",
+   "english": "crescent moon",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-032",
+   "answer": "تهاني",
+   "arabic": "التَّهاني",
+   "english": "greetings, congratulations",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-033",
+   "answer": "وقع",
+   "arabic": "وَقَعَ",
+   "english": "to fall, be located",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-034",
+   "answer": "موقع",
+   "arabic": "مَوقِع",
+   "english": "site, website",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-035",
+   "answer": "ماكولات",
+   "arabic": "مَأكولات",
+   "english": "foods",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-036",
+   "answer": "بيض",
+   "arabic": "بَيْض",
+   "english": "eggs",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-037",
+   "answer": "محدود",
+   "arabic": "مَحدود",
+   "english": "limited",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-038",
+   "answer": "حضر",
+   "arabic": "حَضَّرَ",
+   "english": "to prepare (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-039",
+   "answer": "احتفل",
+   "arabic": "اِحتَفَلَ",
+   "english": "to celebrate",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-040",
+   "answer": "تحول",
+   "arabic": "تَحَوَّلَ",
+   "english": "to change, transform (intransitive)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-041",
+   "answer": "ذكرى",
+   "arabic": "ذِكْرى",
+   "english": "memory",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-043",
+   "answer": "مشروب",
+   "arabic": "مَشروب",
+   "english": "drink",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-044",
+   "answer": "شراب",
+   "arabic": "شَراب",
+   "english": "sweet drink made from fruit syrup and served on special occasions",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-045",
+   "answer": "شارك",
+   "arabic": "شارَكَ",
+   "english": "to join someone in, share with someone, participate with someone in",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-046",
+   "answer": "تشارك",
+   "arabic": "تَشارَكَ",
+   "english": "to share with each other",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-048",
+   "answer": "مطبوخ",
+   "arabic": "مَطبوخ",
+   "english": "cooked",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-049",
+   "answer": "طبق",
+   "arabic": "طَبَق",
+   "english": "plate, dish",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-050",
+   "answer": "طقوس",
+   "arabic": "طُقوس",
+   "english": "rituals",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-051",
+   "answer": "مطلوب",
+   "arabic": "مَطلوب",
+   "english": "sought after, in demand",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-052",
+   "answer": "معد",
+   "arabic": "مُعَدّ",
+   "english": "prepared",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-053",
+   "answer": "عريس",
+   "arabic": "عَريس",
+   "english": "groom",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-054",
+   "answer": "عروس",
+   "arabic": "عَروس",
+   "english": "bride",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-055",
+   "answer": "معتاد",
+   "arabic": "مُعتاد",
+   "english": "customary",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u8-056",
+   "answer": "عادة",
+   "arabic": "عادة",
+   "english": "custom, habit",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-057",
+   "answer": "عيد",
+   "arabic": "عيد",
+   "english": "holiday, feast day, day of celebration",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-059",
+   "answer": "مغرب",
+   "arabic": "المَغرِب",
+   "english": "sunset",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-060",
+   "answer": "امكانية",
+   "arabic": "إمكانِيّة",
+   "english": "possibility; (pl.) means",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-061",
+   "answer": "تميز",
+   "arabic": "تَمَيَّزَ",
+   "english": "to be distinguished by",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-062",
+   "answer": "منتدى",
+   "arabic": "مُنتَدى",
+   "english": "forum (including internet forum)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-063",
+   "answer": "مناسبة",
+   "arabic": "مُناسَبة",
+   "english": "occasion",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u8-064",
+   "answer": "انتظر",
+   "arabic": "اِنتَظَرَ",
+   "english": "to wait for",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-065",
+   "answer": "نافس",
+   "arabic": "نافَسَ",
+   "english": "to compete with (someone) in",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-066",
+   "answer": "تنافس",
+   "arabic": "تَنافَسَ",
+   "english": "to compete with each other in",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u8-067",
+   "answer": "موجود",
+   "arabic": "مَوجود",
+   "english": "present, found",
+   "pos": "adjective"
+  }
+ ],
+ "b3-u9": [
+  {
+   "id": "b3-u9-001",
+   "answer": "اثر",
+   "arabic": "أَثَّرَ",
+   "english": "to influence, affect",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-002",
+   "answer": "تاثر",
+   "arabic": "تَأَثَّرَ",
+   "english": "to be influenced by",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-004",
+   "answer": "اثار",
+   "arabic": "أَثارَ",
+   "english": "to stir up, arouse (e.g., emotion)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-005",
+   "answer": "ثورة",
+   "arabic": "ثَورة",
+   "english": "revolution",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-006",
+   "answer": "حركة",
+   "arabic": "حَرَكة",
+   "english": "movement (literal and figurative)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-007",
+   "answer": "حزب",
+   "arabic": "حِزب",
+   "english": "party (political)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-008",
+   "answer": "خدم",
+   "arabic": "خَدَمَ",
+   "english": "to serve",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-009",
+   "answer": "خدمة",
+   "arabic": "خِدمة",
+   "english": "service",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-010",
+   "answer": "استخدم",
+   "arabic": "اِستَخدَمَ",
+   "english": "to use",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-011",
+   "answer": "خلق",
+   "arabic": "خَلَقَ",
+   "english": "to create",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-012",
+   "answer": "دستور",
+   "arabic": "دُستور",
+   "english": "constitution",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-013",
+   "answer": "دور",
+   "arabic": "دَوْر",
+   "english": "role",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-014",
+   "answer": "دون",
+   "arabic": "دَوَّنَ",
+   "english": "to record, write down",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-015",
+   "answer": "مدونة",
+   "arabic": "مُدَوَّنة",
+   "english": "blog",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-016",
+   "answer": "رقابة",
+   "arabic": "الرَّقابة",
+   "english": "censorship",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-017",
+   "answer": "رقيب",
+   "arabic": "رَقيب",
+   "english": "censor",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-018",
+   "answer": "سقط",
+   "arabic": "سَقَطَ",
+   "english": "to fall, to fail",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-019",
+   "answer": "اسقط",
+   "arabic": "أَسقَطَ",
+   "english": "to make (something) fall",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-020",
+   "answer": "ساهم",
+   "arabic": "ساهَمَ",
+   "english": "to contribute to",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-021",
+   "answer": "شرطة",
+   "arabic": "الشُّرطة",
+   "english": "police",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-022",
+   "answer": "صنع",
+   "arabic": "صَنَعَ",
+   "english": "to make, produce, manufacture",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-023",
+   "answer": "صناعة",
+   "arabic": "الصِّناعة",
+   "english": "industry, manufacturing",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-024",
+   "answer": "ضرب",
+   "arabic": "ضَرَبَ",
+   "english": "to beat (physically)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-025",
+   "answer": "طور",
+   "arabic": "طَوَّرَ",
+   "english": "to develop (transitive)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-026",
+   "answer": "تطور",
+   "arabic": "تَطَوَّرَ",
+   "english": "to develop (intransitive)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-028",
+   "answer": "ظهر",
+   "arabic": "ظَهَرَ",
+   "english": "to appear",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-029",
+   "answer": "تظاهر",
+   "arabic": "تَظاهَرَ",
+   "english": "to demonstrate",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-030",
+   "answer": "مظاهرة",
+   "arabic": "مُظاهَرة",
+   "english": "(a) demonstration",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-031",
+   "answer": "عارض",
+   "arabic": "عارَضَ",
+   "english": "to oppose",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-032",
+   "answer": "معارضة",
+   "arabic": "المُعارَضة",
+   "english": "opposition",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-033",
+   "answer": "اعلام",
+   "arabic": "الإِعلام",
+   "english": "the media",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-034",
+   "answer": "عنف",
+   "arabic": "العُنف",
+   "english": "violence",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-035",
+   "answer": "غطى",
+   "arabic": "غَطّى",
+   "english": "to cover",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-036",
+   "answer": "فضائية",
+   "arabic": "فَضائِيّة",
+   "english": "satellite (channel)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-038",
+   "answer": "قتل",
+   "arabic": "قَتَلَ",
+   "english": "to kill",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-039",
+   "answer": "قناة",
+   "arabic": "قَناة",
+   "english": "channel, canal",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-040",
+   "answer": "نادر",
+   "arabic": "نادِر",
+   "english": "rare",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u9-041",
+   "answer": "نظم",
+   "arabic": "نَظّمَ",
+   "english": "to organize",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-042",
+   "answer": "نظام",
+   "arabic": "نِظام",
+   "english": "system, order",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-043",
+   "answer": "منظمة",
+   "arabic": "مُنَظَّمة",
+   "english": "organization",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-044",
+   "answer": "وسيلة",
+   "arabic": "وَسيلة",
+   "english": "means, way",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-046",
+   "answer": "مبدا",
+   "arabic": "مَبدَأ",
+   "english": "principle",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-048",
+   "answer": "جائزة",
+   "arabic": "جائِزة",
+   "english": "prize",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-049",
+   "answer": "حدث",
+   "arabic": "حَدَث",
+   "english": "event",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-050",
+   "answer": "حديث",
+   "arabic": "حَديث",
+   "english": "modern",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u9-051",
+   "answer": "حاسوب",
+   "arabic": "حاسوب",
+   "english": "= كمبيوتر",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-052",
+   "answer": "حكم",
+   "arabic": "حَكَم",
+   "english": "to govern, rule",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-053",
+   "answer": "احتل",
+   "arabic": "اِحتَلَّ",
+   "english": "to occupy",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-054",
+   "answer": "دافع",
+   "arabic": "دافَعَ",
+   "english": "to defend",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-055",
+   "answer": "سلطة",
+   "arabic": "سُلْطة",
+   "english": "power",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-056",
+   "answer": "شبكة",
+   "arabic": "شَبَكة",
+   "english": "net, network",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-057",
+   "answer": "شجاعة",
+   "arabic": "شَجاعة",
+   "english": "courage",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-058",
+   "answer": "شجاع",
+   "arabic": "شُجاع",
+   "english": "brave, courageous",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u9-059",
+   "answer": "مشروع",
+   "arabic": "مَشروع",
+   "english": "project, plans (abstract)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-060",
+   "answer": "شعبي",
+   "arabic": "شَعبِيّ",
+   "english": "popular",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u9-061",
+   "answer": "شهد",
+   "arabic": "شَهِدَ",
+   "english": "to witness",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-062",
+   "answer": "شهيد",
+   "arabic": "شَهيد",
+   "english": "martyr",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-063",
+   "answer": "مشهد",
+   "arabic": "مَشهَد",
+   "english": "scene",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-064",
+   "answer": "صدر",
+   "arabic": "صَدَرَ",
+   "english": "to come out, be issued or published",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-065",
+   "answer": "اصدر",
+   "arabic": "أَصدَرَ",
+   "english": "to publish",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-066",
+   "answer": "صحافة",
+   "arabic": "الصِّحافة",
+   "english": "(the) press; journalism",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-067",
+   "answer": "استضاف",
+   "arabic": "اِستَضافَ",
+   "english": "to host (someone)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-068",
+   "answer": "طباعة",
+   "arabic": "الطِّباعة",
+   "english": "printing",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-069",
+   "answer": "مطبعة",
+   "arabic": "مَطبَعة",
+   "english": "printing press or shop",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-070",
+   "answer": "انطباع",
+   "arabic": "اِنطِباع",
+   "english": "impression",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-071",
+   "answer": "عبر",
+   "arabic": "عَبَّرَ",
+   "english": "to express",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-072",
+   "answer": "عبارة",
+   "arabic": "عِبارة",
+   "english": "expression",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-073",
+   "answer": "تعبير",
+   "arabic": "تَعبير",
+   "english": "= عِبارة",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-074",
+   "answer": "معاصر",
+   "arabic": "مُعاصِر",
+   "english": "contemporary",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u9-076",
+   "answer": "تقدم",
+   "arabic": "تَقَدَّمَ",
+   "english": "to advance, progress",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-077",
+   "answer": "قصيدة",
+   "arabic": "قَصيدة",
+   "english": "poem",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-078",
+   "answer": "قضية",
+   "arabic": "قَضِيّة",
+   "english": "issue",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-079",
+   "answer": "قاوم",
+   "arabic": "قاوَمَ",
+   "english": "to resist",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-080",
+   "answer": "مقاومة",
+   "arabic": "المُقاوَمة",
+   "english": "resistance",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-081",
+   "answer": "كسر",
+   "arabic": "كَسَرَ",
+   "english": "to break",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-082",
+   "answer": "تمتع",
+   "arabic": "تَمَتَّعَ",
+   "english": "to enjoy, have the benefit of",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-083",
+   "answer": "استمر",
+   "arabic": "اِستَمَرَّ",
+   "english": "to continue to continue (doing something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-084",
+   "answer": "انشا",
+   "arabic": "أَنشَأَ",
+   "english": "to establish, erect, found",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-085",
+   "answer": "انشئ",
+   "arabic": "أُنشِئَ",
+   "english": "it was established",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-087",
+   "answer": "اوصل",
+   "arabic": "أَوصَلَ",
+   "english": "to bring, deliver, take (something / someone) to",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-088",
+   "answer": "تواصل",
+   "arabic": "تَواصَلَ",
+   "english": "to be in contact (with someone)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-089",
+   "answer": "اتصل",
+   "arabic": "اِتَّصَلَ",
+   "english": "to contact (someone, e.g., by telephone)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u9-090",
+   "answer": "اتصال",
+   "arabic": "اِتِّصال",
+   "english": "communication, contact",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-091",
+   "answer": "واقع",
+   "arabic": "واقِع",
+   "english": "reality; in reality",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u9-092",
+   "answer": "واقعي",
+   "arabic": "واقِعِيّ",
+   "english": "realistic",
+   "pos": "adjective"
+  }
+ ],
+ "b3-u10": [
+  {
+   "id": "b3-u10-001",
+   "answer": "ادى",
+   "arabic": "أَدَّى",
+   "english": "to lead to",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-002",
+   "answer": "امل",
+   "arabic": "أَمَل",
+   "english": "hope",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-003",
+   "answer": "الة",
+   "arabic": "آلة",
+   "english": "machine; (pl.) equipment, machinery",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-004",
+   "answer": "بشر",
+   "arabic": "البَشَر",
+   "english": "mankind, human beings; human (adj.)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-005",
+   "answer": "بطالة",
+   "arabic": "البِطالة",
+   "english": "unemployment",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-006",
+   "answer": "اتبع",
+   "arabic": "اِتَّبَعَ",
+   "english": "to follow",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-007",
+   "answer": "جعل",
+   "arabic": "جَعَلَ",
+   "english": "to make",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-008",
+   "answer": "جمهور",
+   "arabic": "جُمهور",
+   "english": "public; audience; (pl.) masses, crowds",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-009",
+   "answer": "تحديتحد",
+   "arabic": "تَحَدّيتَحَدٍّ",
+   "english": "challenge",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-010",
+   "answer": "احصاء",
+   "arabic": "إحصاء",
+   "english": "statistic",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-011",
+   "answer": "خطط",
+   "arabic": "خَطَّطَ",
+   "english": "to plan",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-012",
+   "answer": "خطة",
+   "arabic": "خِطّة",
+   "english": "plan",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-013",
+   "answer": "انخفض",
+   "arabic": "اِنخَفَضَ",
+   "english": "to become lower, reduced (e.g., price, voice)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-015",
+   "answer": "ذات",
+   "arabic": "ذات",
+   "english": "= نفسه",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-016",
+   "answer": "ربح",
+   "arabic": "رِبح",
+   "english": "profit for-profit",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-017",
+   "answer": "ريف",
+   "arabic": "ريف",
+   "english": "rural area, countryside",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-018",
+   "answer": "شرط",
+   "arabic": "شَرط",
+   "english": "condition",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-019",
+   "answer": "اشار",
+   "arabic": "أشارَ",
+   "english": "to point to, indicate",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-020",
+   "answer": "اعتمد",
+   "arabic": "اِعتَمَدَ",
+   "english": "to rely, depend on",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-021",
+   "answer": "عانى",
+   "arabic": "عانى",
+   "english": "to suffer from",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-022",
+   "answer": "فرع",
+   "arabic": "فَرع",
+   "english": "branch",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-023",
+   "answer": "فسر",
+   "arabic": "فَسَّرَ",
+   "english": "to explain",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-024",
+   "answer": "قانون",
+   "arabic": "قانون",
+   "english": "law",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-025",
+   "answer": "قاد",
+   "arabic": "قادَ",
+   "english": "to lead to drive",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-026",
+   "answer": "تكلفة",
+   "arabic": "تَكلِفة",
+   "english": "expense",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-027",
+   "answer": "مهنة",
+   "arabic": "مِهنة",
+   "english": "occupation, profession",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-028",
+   "answer": "نتيجة",
+   "arabic": "نَتيجة",
+   "english": "result",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-029",
+   "answer": "انفق",
+   "arabic": "أَنفَقَ",
+   "english": "to spend",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-030",
+   "answer": "نفى",
+   "arabic": "نَفى",
+   "english": "to negate; to deny (the truth of)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-031",
+   "answer": "نمط",
+   "arabic": "نَمَط",
+   "english": "type, pattern typical, patterned",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-033",
+   "answer": "تنمية",
+   "arabic": "التَّنمِية",
+   "english": "development",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-034",
+   "answer": "منهج",
+   "arabic": "مَنهَج",
+   "english": "method",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-036",
+   "answer": "هدف",
+   "arabic": "هَدَفَ",
+   "english": "to aim at",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-037",
+   "answer": "هدف",
+   "arabic": "هَدَف",
+   "english": "goal",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-038",
+   "answer": "وزع",
+   "arabic": "وَزَّعَ",
+   "english": "to distribute",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-039",
+   "answer": "وافق",
+   "arabic": "وافَقَ",
+   "english": "to be in agreement (with someone) on, approve",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-040",
+   "answer": "مؤسسة",
+   "arabic": "مُؤَسَّسة",
+   "english": "establishment, foundation",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-041",
+   "answer": "مبلغ",
+   "arabic": "مَبلَغ",
+   "english": "amount",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-042",
+   "answer": "بنى",
+   "arabic": "بَنى",
+   "english": "to build",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-043",
+   "answer": "تبنى",
+   "arabic": "تَبَنّى",
+   "english": "to adopt",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-045",
+   "answer": "بين",
+   "arabic": "بَيَّنَ",
+   "english": "to show clearly, demonstrate",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-046",
+   "answer": "اجرى",
+   "arabic": "أَجرى",
+   "english": "to conduct, carry out",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-047",
+   "answer": "جنس",
+   "arabic": "جِنس",
+   "english": "gender, sex",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-049",
+   "answer": "تحمل",
+   "arabic": "تَحَمَّلَ",
+   "english": "to bear (a burden or unpleasantness)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-050",
+   "answer": "اختبر",
+   "arabic": "اِختَبَرَ",
+   "english": "to test by experiment or trial",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-051",
+   "answer": "اختبار",
+   "arabic": "اِختِبار",
+   "english": "test, trial",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-052",
+   "answer": "مختبر",
+   "arabic": "مُختَبَر",
+   "english": "laboratory",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-053",
+   "answer": "خصص",
+   "arabic": "خَصَّصَ",
+   "english": "to designate (e.g., funds) for",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-054",
+   "answer": "دخل",
+   "arabic": "دَخْل",
+   "english": "income",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-055",
+   "answer": "راسمال",
+   "arabic": "رَأسمال",
+   "english": "capital capitalist",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-056",
+   "answer": "راى",
+   "arabic": "رَأى",
+   "english": "to see",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-057",
+   "answer": "راى",
+   "arabic": "رَأى",
+   "english": "to have the opinion that",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-058",
+   "answer": "مرحلة",
+   "arabic": "مَرحَلة",
+   "english": "stage, phase",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-059",
+   "answer": "مسؤولية",
+   "arabic": "مَسؤولِيّة",
+   "english": "responsibility (for)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-060",
+   "answer": "مستوى",
+   "arabic": "مُستَوى",
+   "english": "level",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-061",
+   "answer": "شبه",
+   "arabic": "شِبه",
+   "english": "semi, pseudo-, nearly",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-062",
+   "answer": "ضريبة",
+   "arabic": "ضَريبة",
+   "english": "tax",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-063",
+   "answer": "اضاف",
+   "arabic": "أَضافَ",
+   "english": "to add",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-064",
+   "answer": "عشوائي",
+   "arabic": "عَشوائِيّ",
+   "english": "arbitrary, random",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u10-065",
+   "answer": "تعامل",
+   "arabic": "تَعامَلَ",
+   "english": "to deal with",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-066",
+   "answer": "عملي",
+   "arabic": "عَمَلِيّ",
+   "english": "practical",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u10-067",
+   "answer": "عملية",
+   "arabic": "عَمَلِيّة",
+   "english": "process, operation",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-068",
+   "answer": "معين",
+   "arabic": "مُعَيَّن",
+   "english": "certain, specific",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u10-069",
+   "answer": "تفاعل",
+   "arabic": "تَفاعَلَ",
+   "english": "to interact with",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-070",
+   "answer": "فاعل",
+   "arabic": "فاعِل",
+   "english": "effective",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u10-071",
+   "answer": "فقر",
+   "arabic": "الفَقر",
+   "english": "poverty",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-072",
+   "answer": "افتقر",
+   "arabic": "اِفتَقَرَ",
+   "english": "to lack",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-073",
+   "answer": "تقرير",
+   "arabic": "تَقرير",
+   "english": "report",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-074",
+   "answer": "مقرر",
+   "arabic": "مُقَرَّر",
+   "english": "required",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u10-075",
+   "answer": "قطاع",
+   "arabic": "قِطاع",
+   "english": "sector (e.g., public, private)",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-076",
+   "answer": "قائمة",
+   "arabic": "قائِمة",
+   "english": "list",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-077",
+   "answer": "قيم",
+   "arabic": "قَيَّمَ",
+   "english": "to evaluate",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-078",
+   "answer": "كمية",
+   "arabic": "كَمِّيّة",
+   "english": "quantity",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-079",
+   "answer": "مدني",
+   "arabic": "مَدَنِيّ",
+   "english": "civil, civilian",
+   "pos": "adjective"
+  },
+  {
+   "id": "b3-u10-080",
+   "answer": "مول",
+   "arabic": "مَوَّلَ",
+   "english": "to finance, fund",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-081",
+   "answer": "نسبة",
+   "arabic": "نِسبة",
+   "english": "percentage",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-082",
+   "answer": "نظرية",
+   "arabic": "نَظَرِيّة",
+   "english": "theory",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-083",
+   "answer": "نقل",
+   "arabic": "نَقَلَ",
+   "english": "to copy (by hand, especially in an exam)",
+   "pos": "verb"
+  },
+  {
+   "id": "b3-u10-084",
+   "answer": "نوعية",
+   "arabic": "نَوعِيّة",
+   "english": "quality",
+   "pos": "noun"
+  },
+  {
+   "id": "b3-u10-085",
+   "answer": "ميزانية",
+   "arabic": "ميزانِيّة",
+   "english": "budget",
+   "pos": "noun"
+  }
+ ],
+ "b4-u1": [
+  {
+   "id": "b4-u1-001",
+   "answer": "الف",
+   "arabic": "أَلّفَ",
+   "english": "to compose, author",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-002",
+   "answer": "مؤتمر",
+   "arabic": "مُؤتَمَر",
+   "english": "conference",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-003",
+   "answer": "ابداع",
+   "arabic": "الإبداع",
+   "english": "creation, innovation",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-004",
+   "answer": "بارز",
+   "arabic": "بارِز",
+   "english": "prominent, salient",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u1-005",
+   "answer": "ثابت",
+   "arabic": "ثابِت",
+   "english": "firm, steady, fixed",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u1-006",
+   "answer": "احتكر",
+   "arabic": "اِحتَكَرَ",
+   "english": "to monopolize (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-007",
+   "answer": "جسد",
+   "arabic": "جَسَد",
+   "english": "body (abstract)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-008",
+   "answer": "جاهلية",
+   "arabic": "الجاهِلِيّة",
+   "english": "period in history before Islam",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-009",
+   "answer": "حجم",
+   "arabic": "حَجم",
+   "english": "size, volume",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-010",
+   "answer": "محطة",
+   "arabic": "مَحَطّة",
+   "english": "station, stop",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-011",
+   "answer": "حاز",
+   "arabic": "حازَ",
+   "english": "= حصل على",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-012",
+   "answer": "اختصر",
+   "arabic": "اِختَصَر",
+   "english": "to shorten, condense, abbreviate",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-013",
+   "answer": "خلاصة",
+   "arabic": "خُلاصة",
+   "english": "summary, conclusion",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-014",
+   "answer": "داخ",
+   "arabic": "داخَ",
+   "english": "to become dizzy dizziness, vertigo",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-015",
+   "answer": "اذاعة",
+   "arabic": "إذاعة",
+   "english": "broadcasting, radio",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-016",
+   "answer": "استرد",
+   "arabic": "اِستَرَدَّ",
+   "english": "to reclaim, recover; to return",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-017",
+   "answer": "ترشيح",
+   "arabic": "التَّرشيح",
+   "english": "nomination (e.g. for an award, a position)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-018",
+   "answer": "رواية",
+   "arabic": "رِواية",
+   "english": "novel (literary work)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-019",
+   "answer": "سجن",
+   "arabic": "سِجن",
+   "english": "prison",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-020",
+   "answer": "شتيمة",
+   "arabic": "شَتيمة",
+   "english": "cuss word, insult",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-021",
+   "answer": "اشتاق",
+   "arabic": "اِشتاقَ",
+   "english": "long for, yearn for",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-022",
+   "answer": "صوت",
+   "arabic": "صَوت",
+   "english": "voice, sound, vote (in elections)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-023",
+   "answer": "تطرف",
+   "arabic": "التَّطَرُّف",
+   "english": "extremism, radicalism",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-025",
+   "answer": "ظرف",
+   "arabic": "ظَرف",
+   "english": "circumstance, condition",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-026",
+   "answer": "عرض",
+   "arabic": "عَرَضَ",
+   "english": "to present, display, exhibit",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-027",
+   "answer": "عشق",
+   "arabic": "العِشق",
+   "english": "intense love, passion",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-028",
+   "answer": "تعقيد",
+   "arabic": "تَعقيد",
+   "english": "complication",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-029",
+   "answer": "تغلب",
+   "arabic": "تَغَلَّبَ",
+   "english": "to overcome (a problem or difficulty), to triumph over something or someone",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-030",
+   "answer": "اغلق",
+   "arabic": "أَغلَقَ",
+   "english": "to close, shut",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-031",
+   "answer": "غموض",
+   "arabic": "الغُموض",
+   "english": "vagueness, ambiguity, mystery",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-032",
+   "answer": "فلح",
+   "arabic": "فَلَحَ",
+   "english": "to farm, plow, till farmer",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-033",
+   "answer": "فوضى",
+   "arabic": "الفَوْضى",
+   "english": "chaos",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-034",
+   "answer": "فاز",
+   "arabic": "فازَ",
+   "english": "to win, gain",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-035",
+   "answer": "قبيح",
+   "arabic": "قَبيح",
+   "english": "ugly, disgraceful, disgusting",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u1-036",
+   "answer": "قاس",
+   "arabic": "قاسٍ",
+   "english": "hard, stiff, callous, harsh",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u1-037",
+   "answer": "قيد",
+   "arabic": "قَيْد",
+   "english": "fetter, chain, shackle",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-038",
+   "answer": "كابة",
+   "arabic": "الكَآبة",
+   "english": "sorrow, grief, depression",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-039",
+   "answer": "امتزج",
+   "arabic": "اِمتَزَجَ",
+   "english": "to be mixed with",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-040",
+   "answer": "همس",
+   "arabic": "هَمَسَ",
+   "english": "to whisper a whisper",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-041",
+   "answer": "نحيف",
+   "arabic": "نَحيف",
+   "english": "thin, slim, slender (for people)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u1-042",
+   "answer": "نحو",
+   "arabic": "نَحو",
+   "english": "side, direction, section",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-043",
+   "answer": "منصب",
+   "arabic": "مَنصِب",
+   "english": "position (job), post",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-044",
+   "answer": "ناقد",
+   "arabic": "ناقِد",
+   "english": "critic",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-045",
+   "answer": "هيمنة",
+   "arabic": "الهَيْمَنة",
+   "english": "domination, hegemony, total control",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-046",
+   "answer": "متوتر",
+   "arabic": "مُتَوَتِّر",
+   "english": "tense, nervous",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u1-047",
+   "answer": "متوحش",
+   "arabic": "مُتَوَحِّش",
+   "english": "savage, brutal",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u1-048",
+   "answer": "وجع",
+   "arabic": "وَجَع",
+   "english": "pain",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-049",
+   "answer": "مؤثر",
+   "arabic": "مُؤَثِّر",
+   "english": "influencing factor",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-050",
+   "answer": "انوثة",
+   "arabic": "الأُنوثة",
+   "english": "femininity",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-051",
+   "answer": "امن",
+   "arabic": "الأَمن",
+   "english": "security",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-052",
+   "answer": "تبدل",
+   "arabic": "تَبَدَّلَ",
+   "english": "to be changed",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-053",
+   "answer": "بحر",
+   "arabic": "بَحر",
+   "english": "poetry meter",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-054",
+   "answer": "تبع",
+   "arabic": "تَبِعَ",
+   "english": "to follow",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-055",
+   "answer": "ثائر",
+   "arabic": "ثائِر",
+   "english": "rebel, revolutionary",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-056",
+   "answer": "مجمل",
+   "arabic": "مُجمَل",
+   "english": "whole, sum, entirety",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-057",
+   "answer": "تجاوز",
+   "arabic": "تَجاوَزَ",
+   "english": "to go beyond, exceed, surpass",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-058",
+   "answer": "مجال",
+   "arabic": "مَجال",
+   "english": "domain, space",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-059",
+   "answer": "حقق",
+   "arabic": "حَقَّقَ",
+   "english": "to achieve, realize",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-060",
+   "answer": "حول",
+   "arabic": "حَوَّلَ",
+   "english": "to change, transform",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-061",
+   "answer": "دفعة",
+   "arabic": "دُفعة",
+   "english": "group, cohort",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-062",
+   "answer": "ذاكرة",
+   "arabic": "ذاكِرة",
+   "english": "memory",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-063",
+   "answer": "ساحة",
+   "arabic": "ساحة",
+   "english": "courtyard, arena, domain",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-064",
+   "answer": "شكل",
+   "arabic": "شَكَّلَ",
+   "english": "to shape, form, configure",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-065",
+   "answer": "ظاهرة",
+   "arabic": "ظاهِرة",
+   "english": "phenomenon",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-067",
+   "answer": "اعالة",
+   "arabic": "الإِعالة",
+   "english": "providing sustenance for someone",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-068",
+   "answer": "تفرغ",
+   "arabic": "تَفَرَّغَ",
+   "english": "to devote or dedicate oneself to",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-069",
+   "answer": "مقطع",
+   "arabic": "مَقطَع",
+   "english": "passage, section, part",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-070",
+   "answer": "ملاحق",
+   "arabic": "مُلاحَق",
+   "english": "pursued, sought by (authorities)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u1-071",
+   "answer": "لاقى",
+   "arabic": "لاقى",
+   "english": "to meet, receive",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-072",
+   "answer": "مثل",
+   "arabic": "مَثَّلَ",
+   "english": "to represent, symbolize, to play (in a film)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u1-073",
+   "answer": "مميز",
+   "arabic": "مُمَيَّز",
+   "english": "distinguished",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u1-074",
+   "answer": "مولد",
+   "arabic": "المَوْلِد",
+   "english": "birth, birthplace",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u1-075",
+   "answer": "توجه",
+   "arabic": "تَوَجَّهَ",
+   "english": "to head toward, to go to",
+   "pos": "verb"
+  }
+ ],
+ "b4-u2": [
+  {
+   "id": "b4-u2-001",
+   "answer": "اداة",
+   "arabic": "أداة",
+   "english": "tool, instrument",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-002",
+   "answer": "تيار",
+   "arabic": "تَيّار",
+   "english": "current, stream, trend",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-003",
+   "answer": "تحرش",
+   "arabic": "التَّحَرُّش",
+   "english": "provocation, harassment sexual harassment",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-004",
+   "answer": "خطاب",
+   "arabic": "الخِطاب",
+   "english": "discourse",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-005",
+   "answer": "دعم",
+   "arabic": "دَعَمَ",
+   "english": "to support, strengthen, subsidize",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-006",
+   "answer": "دهشة",
+   "arabic": "الدَّهْشة",
+   "english": "surprise",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-008",
+   "answer": "رمز",
+   "arabic": "رَمْز",
+   "english": "symbol, emblem",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-009",
+   "answer": "ارهاب",
+   "arabic": "الإِرهاب",
+   "english": "terrorism",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-010",
+   "answer": "مسلح",
+   "arabic": "مُسَلَّح",
+   "english": "armed",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-011",
+   "answer": "سلعة",
+   "arabic": "سِلْعة",
+   "english": "commodity, merchandise",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-012",
+   "answer": "سيطر",
+   "arabic": "سَيْطَرَ",
+   "english": "to dominate, control",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-013",
+   "answer": "تشريعي",
+   "arabic": "تَشريعِيّ",
+   "english": "legislative",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-014",
+   "answer": "شيوعي",
+   "arabic": "شُيوعِيّ",
+   "english": "communist",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-015",
+   "answer": "صراع",
+   "arabic": "صِراع",
+   "english": "conflict, struggle",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-017",
+   "answer": "ضغط",
+   "arabic": "ضَغط",
+   "english": "pressure, stress",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-018",
+   "answer": "طموح",
+   "arabic": "الطُّموح",
+   "english": "ambition",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-019",
+   "answer": "عضو",
+   "arabic": "عُضو",
+   "english": "member",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-020",
+   "answer": "معركة",
+   "arabic": "مَعرَكة",
+   "english": "battle",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-021",
+   "answer": "عسكري",
+   "arabic": "عَسكَرِيّ",
+   "english": "military (used mainly as adjective) also: soldier, police",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-022",
+   "answer": "عقبة",
+   "arabic": "عَقَبة",
+   "english": "obstacle, impediment",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-023",
+   "answer": "عقل",
+   "arabic": "عَقل",
+   "english": "mind",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-024",
+   "answer": "عقلية",
+   "arabic": "عَقلِيّة",
+   "english": "mentality",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-025",
+   "answer": "عالج",
+   "arabic": "عالَجَ",
+   "english": "to treat",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-026",
+   "answer": "استعمار",
+   "arabic": "الاِستِعمار",
+   "english": "colonialism",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-027",
+   "answer": "معيار",
+   "arabic": "مِعيار",
+   "english": "standard, criterion",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-028",
+   "answer": "اغلب",
+   "arabic": "أَغلَب",
+   "english": "= معظم",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-029",
+   "answer": "فرض",
+   "arabic": "فَرَضَ",
+   "english": "to impose",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-030",
+   "answer": "استفاد",
+   "arabic": "اِستَفادَ",
+   "english": "to benefit from",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-031",
+   "answer": "قومي",
+   "arabic": "قَومِيّ",
+   "english": "nationalist (pan-Arabist)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-032",
+   "answer": "تكرار",
+   "arabic": "التَكرار",
+   "english": "repetition",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-033",
+   "answer": "الغى",
+   "arabic": "أَلغى",
+   "english": "to cancel, invalidate, abolish",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-034",
+   "answer": "تمرد",
+   "arabic": "تَمَرَّد",
+   "english": "to rebel (against)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-035",
+   "answer": "مساحة",
+   "arabic": "مِساحة",
+   "english": "area, zone, space",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-036",
+   "answer": "تمسك",
+   "arabic": "تَمَسَّكَ",
+   "english": "to hold fast to, stick to, adhere to",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-037",
+   "answer": "مزية",
+   "arabic": "مَزِيّة",
+   "english": "distinguishing (positive) feature or aspect",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-038",
+   "answer": "انتخاب",
+   "arabic": "اِنتِخاب",
+   "english": "election",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-039",
+   "answer": "تنفيذي",
+   "arabic": "تَنفيذِيّ",
+   "english": "executive",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-040",
+   "answer": "نموذج",
+   "arabic": "نُموذَج",
+   "english": "sample; model",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-041",
+   "answer": "نال",
+   "arabic": "نالَ",
+   "english": "to obtain, acquire (a job, degree)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-042",
+   "answer": "نائب",
+   "arabic": "نائِب",
+   "english": "deputy, member of parliament, representative",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-043",
+   "answer": "استهلك",
+   "arabic": "اِستَهلَكَ",
+   "english": "to consume",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-044",
+   "answer": "تهميش",
+   "arabic": "التَّهميش",
+   "english": "marginalizing, sidelining",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-045",
+   "answer": "ايجابي",
+   "arabic": "إيجابِيّ",
+   "english": "positive, affirmation",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-046",
+   "answer": "اتحاد",
+   "arabic": "اِتِّحاد",
+   "english": "union",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-047",
+   "answer": "اوضح",
+   "arabic": "أَوضَحَ",
+   "english": "to clarify, explain (that)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-048",
+   "answer": "وعي",
+   "arabic": "الوَعي",
+   "english": "awareness, consciousness",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-049",
+   "answer": "اكد",
+   "arabic": "أَكَّدَ",
+   "english": "to confirm, stress, emphasize",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-050",
+   "answer": "بلدي",
+   "arabic": "بَلَدِيّ",
+   "english": "municipal, local, communal",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-051",
+   "answer": "مجلس",
+   "arabic": "مَجلِس",
+   "english": "council, assembly",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-052",
+   "answer": "حراك",
+   "arabic": "حَراك",
+   "english": "movement, motion",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-053",
+   "answer": "استخف",
+   "arabic": "اِستَخَفَّ",
+   "english": "to value lightly, to not take seriously; to look down upon",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-055",
+   "answer": "ذكورية",
+   "arabic": "الذُّكورِيّة",
+   "english": "masculinity, male chauvinism, male supremacy",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-056",
+   "answer": "ارتبط",
+   "arabic": "اِرتَبَطَ",
+   "english": "to be connected to",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-057",
+   "answer": "تراجع",
+   "arabic": "تَراجَعَ",
+   "english": "to retreat, change one's mind, fall behind, decline",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-058",
+   "answer": "مزدوج",
+   "arabic": "مُزدَوِج",
+   "english": "dual, double",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-059",
+   "answer": "تسويق",
+   "arabic": "التَّسويق",
+   "english": "marketing",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-061",
+   "answer": "مساواة",
+   "arabic": "المُساواة",
+   "english": "equality",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-062",
+   "answer": "مسار",
+   "arabic": "مَسار",
+   "english": "track, trajectory",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-063",
+   "answer": "مطلب",
+   "arabic": "مَطلَب",
+   "english": "demand, request",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-064",
+   "answer": "تعرض",
+   "arabic": "تَعَرَّضَ",
+   "english": "to be exposed to",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-065",
+   "answer": "اعترف",
+   "arabic": "اِعتَرَفَ",
+   "english": "to admit, recognize (a country, regime)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-066",
+   "answer": "معقد",
+   "arabic": "مُعَقَّد",
+   "english": "complicated, complex",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-067",
+   "answer": "عامل",
+   "arabic": "عامِل",
+   "english": "factor",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-068",
+   "answer": "بمفرد",
+   "arabic": "بِمُفرَد",
+   "english": "alone",
+   "pos": "adverb"
+  },
+  {
+   "id": "b4-u2-069",
+   "answer": "مقبل",
+   "arabic": "المُقبِل",
+   "english": "coming, next (week, year, etc.)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u2-070",
+   "answer": "اقتصر",
+   "arabic": "اِقتَصَرَ",
+   "english": "to be limited to",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-071",
+   "answer": "تقليد",
+   "arabic": "التَقليد",
+   "english": "imitation",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-072",
+   "answer": "ملتقى",
+   "arabic": "مُلتَقى",
+   "english": "meeting place, (periodic) meeting",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-073",
+   "answer": "تمكين",
+   "arabic": "التَّمكين",
+   "english": "enabling, empowering",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-074",
+   "answer": "منح",
+   "arabic": "مَنَحَ",
+   "english": "to grant, donate",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u2-075",
+   "answer": "تمييز",
+   "arabic": "التَّمييز",
+   "english": "discrimination",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-076",
+   "answer": "منتج",
+   "arabic": "مُنتَج",
+   "english": "product",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u2-077",
+   "answer": "نسوية",
+   "arabic": "النِّسَويّة",
+   "english": "feminism, feminist",
+   "pos": "noun"
+  }
+ ],
+ "b4-u3": [
+  {
+   "id": "b4-u3-002",
+   "answer": "اذن",
+   "arabic": "أَذِنَ",
+   "english": "to permit (someone) to (do something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-003",
+   "answer": "اسطورة",
+   "arabic": "أُسطورة",
+   "english": "legend, myth",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-004",
+   "answer": "ماساة",
+   "arabic": "مَأساة",
+   "english": "tragedy",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-005",
+   "answer": "امر",
+   "arabic": "أَمَرَ",
+   "english": "to order, give (someone) an order (to)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-006",
+   "answer": "امر",
+   "arabic": "أَمْر",
+   "english": "order, command; imperative (in grammar)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-008",
+   "answer": "بدو",
+   "arabic": "البَدو",
+   "english": "Bedouins",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-009",
+   "answer": "بغل",
+   "arabic": "بَغل",
+   "english": "mule",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-010",
+   "answer": "بطل",
+   "arabic": "بَطَل",
+   "english": "hero, champion, main character (movie, novel)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-011",
+   "answer": "بكى",
+   "arabic": "بَكى",
+   "english": "to weep, cry",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-012",
+   "answer": "تمرة",
+   "arabic": "تَمرة",
+   "english": "a (single) date (fruit) the date (as a species); a (type, species) of date",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-013",
+   "answer": "جدل",
+   "arabic": "الجَدَل",
+   "english": "debate, dispute, controversy",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-014",
+   "answer": "جزار",
+   "arabic": "جَزّار",
+   "english": "butcher",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-015",
+   "answer": "جلد",
+   "arabic": "جِلد",
+   "english": "skin, leather",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-016",
+   "answer": "جني",
+   "arabic": "جِنِّيّ",
+   "english": "genie",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-017",
+   "answer": "حصار",
+   "arabic": "الحِصار",
+   "english": "blockade, siege",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-018",
+   "answer": "خلص",
+   "arabic": "خَلَّصَ",
+   "english": "to save, rescue, rid (someone) of",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-020",
+   "answer": "خان",
+   "arabic": "خانَ",
+   "english": "to betray",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-021",
+   "answer": "دين",
+   "arabic": "دَيْن",
+   "english": "debt, obligation",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-022",
+   "answer": "دمعة",
+   "arabic": "دَمعة",
+   "english": "tear, teardrop",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-023",
+   "answer": "ترفيه",
+   "arabic": "التَّرفيه",
+   "english": "entertainment",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-024",
+   "answer": "ركب",
+   "arabic": "رَكِب",
+   "english": "to ride, mount, travel",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-025",
+   "answer": "رمى",
+   "arabic": "رَمى",
+   "english": "to throw",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-026",
+   "answer": "سحر",
+   "arabic": "سَحَرَ",
+   "english": "to enchant, put a spell on, to charm (someone)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-027",
+   "answer": "مسدس",
+   "arabic": "مُسَدَّس",
+   "english": "revolver, pistol, gun",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-028",
+   "answer": "سكت",
+   "arabic": "سَكَتَ",
+   "english": "to fall silent, to be silent",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-029",
+   "answer": "سكين",
+   "arabic": "سِكّين",
+   "english": "knife (noun)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-030",
+   "answer": "سعى",
+   "arabic": "سَعى",
+   "english": "to strive to, work towards",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-031",
+   "answer": "سمين",
+   "arabic": "سَمين",
+   "english": "fat, plump",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u3-032",
+   "answer": "سيف",
+   "arabic": "سَيْف",
+   "english": "sword",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-033",
+   "answer": "اشتد",
+   "arabic": "اِشتَدَّ",
+   "english": "to become intense",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-034",
+   "answer": "صار",
+   "arabic": "صارَ",
+   "english": "to become",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-035",
+   "answer": "صاح",
+   "arabic": "صاحَ",
+   "english": "to shout, to scream",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-036",
+   "answer": "ضحك",
+   "arabic": "ضَحِكَ",
+   "english": "to laugh (from/at)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-037",
+   "answer": "طرد",
+   "arabic": "طَرَد",
+   "english": "to drive out, expel, evict",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-038",
+   "answer": "عجل",
+   "arabic": "عِجل",
+   "english": "calf (young cow)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-039",
+   "answer": "عبد",
+   "arabic": "عَبْد",
+   "english": "slave, servant servant, worshipper (of God)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-040",
+   "answer": "غزا",
+   "arabic": "غَزا",
+   "english": "to raid, to invade",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-041",
+   "answer": "مغامرة",
+   "arabic": "مُغامَرة",
+   "english": "adventure",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-042",
+   "answer": "فارس",
+   "arabic": "فارِس",
+   "english": "knight",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-043",
+   "answer": "قدر",
+   "arabic": "قَدَرَ",
+   "english": "to be able to",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-045",
+   "answer": "لذيذ",
+   "arabic": "لَذيذ",
+   "english": "delicious, pleasing",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u3-046",
+   "answer": "ملحمة",
+   "arabic": "مَلحَمة",
+   "english": "epic (noun)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-047",
+   "answer": "مليء",
+   "arabic": "مَليء",
+   "english": "full of",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u3-048",
+   "answer": "ندم",
+   "arabic": "نَدِمَ",
+   "english": "to regret, to repent",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-049",
+   "answer": "منطق",
+   "arabic": "المَنطِق",
+   "english": "logic",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-050",
+   "answer": "نهضة",
+   "arabic": "النَّهضة",
+   "english": "awakening, renaissance",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-052",
+   "answer": "وهب",
+   "arabic": "وَهَبَ",
+   "english": "to donate, to grant",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-053",
+   "answer": "اتهم",
+   "arabic": "اِتَّهَمَ",
+   "english": "to accuse (someone) of (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-054",
+   "answer": "يهودي",
+   "arabic": "يَهودِيّ",
+   "english": "Jew, Jewish",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-055",
+   "answer": "مبالغة",
+   "arabic": "المُبالَغة",
+   "english": "exaggeration",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-056",
+   "answer": "تاجر",
+   "arabic": "تاجِر",
+   "english": "merchant",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-057",
+   "answer": "اتم",
+   "arabic": "أتمّ",
+   "english": "to finish, to complete",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-058",
+   "answer": "جرى",
+   "arabic": "جَرى",
+   "english": "to happen",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-059",
+   "answer": "تجانس",
+   "arabic": "تَجانَسَ",
+   "english": "to be homogenous with, compatible with",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-060",
+   "answer": "حضر",
+   "arabic": "الحَضَر",
+   "english": "settled population, town dwellers",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-061",
+   "answer": "دام",
+   "arabic": "دامَ",
+   "english": "to last",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-062",
+   "answer": "ارتاح",
+   "arabic": "اِرتاحَ",
+   "english": "to relax",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-063",
+   "answer": "سيرة",
+   "arabic": "سيرة",
+   "english": "biography autobiography",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-064",
+   "answer": "تشويق",
+   "arabic": "التَّشويق",
+   "english": "thrill, excitement",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-065",
+   "answer": "صدق",
+   "arabic": "صَدَّق",
+   "english": "to believe, to trust",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-066",
+   "answer": "اضراب",
+   "arabic": "إضراب",
+   "english": "strike",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-067",
+   "answer": "تضمن",
+   "arabic": "تَضَمَّنَ",
+   "english": "to include, to contain",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-070",
+   "answer": "عظم",
+   "arabic": "عَظْم",
+   "english": "bone (as a substance or material) a bone, bones",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-071",
+   "answer": "عولمة",
+   "arabic": "العَوْلَمة",
+   "english": "globalization",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-072",
+   "answer": "استعلاء",
+   "arabic": "الِاستِعلاء",
+   "english": "feeling of superiority",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-073",
+   "answer": "استغرب",
+   "arabic": "اِستَغرَبَ",
+   "english": "to find strange, odd, surprising",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-074",
+   "answer": "انفرد",
+   "arabic": "اِنفَرَدَ",
+   "english": "to be matchless in, to be alone in individuality",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-075",
+   "answer": "فرغ",
+   "arabic": "فَرِغَ",
+   "english": "to be done with, to finish",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-076",
+   "answer": "قبل",
+   "arabic": "قَبَّلَ",
+   "english": "to kiss",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-077",
+   "answer": "اقبل",
+   "arabic": "أَقبَلَ",
+   "english": "to approach, come to, to become or be interested in (something)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-078",
+   "answer": "قبيلة",
+   "arabic": "قَبيلة",
+   "english": "tribe",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u3-079",
+   "answer": "تنازل",
+   "arabic": "تَنازَلَ",
+   "english": "to surrender, give up",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u3-081",
+   "answer": "ورث",
+   "arabic": "وَرَّثَ",
+   "english": "to bequeath, give inheritance to",
+   "pos": "verb"
+  }
+ ],
+ "b4-u4": [
+  {
+   "id": "b4-u4-001",
+   "answer": "اثر",
+   "arabic": "أَثَر",
+   "english": "trace, mark, effect (plural) ruins, monuments, effects",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-002",
+   "answer": "امي",
+   "arabic": "أُمِّيّ",
+   "english": "uneducated, illiterate",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-003",
+   "answer": "بضاعة",
+   "arabic": "بِضاعة",
+   "english": "goods, merchandise",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-004",
+   "answer": "ثواب",
+   "arabic": "ثَواب",
+   "english": "reward from God",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-005",
+   "answer": "ثياب",
+   "arabic": "ثِياب",
+   "english": "clothes",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-006",
+   "answer": "جراحة",
+   "arabic": "جِراحة",
+   "english": "surgery",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-007",
+   "answer": "حريق",
+   "arabic": "حَريق",
+   "english": "fire (incident)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-008",
+   "answer": "احتوى",
+   "arabic": "اِحتَوى",
+   "english": "to contain, comprise",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-010",
+   "answer": "خمر",
+   "arabic": "خَمْر",
+   "english": "alcohol, wine",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-011",
+   "answer": "دواء",
+   "arabic": "دَواء",
+   "english": "medicine, drug",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-012",
+   "answer": "ركن",
+   "arabic": "رُكْن",
+   "english": "corner, cornerstone, pillar (literal and figurative)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-013",
+   "answer": "رائحة",
+   "arabic": "رائِحة",
+   "english": "smell",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-014",
+   "answer": "رائع",
+   "arabic": "رائِع",
+   "english": "wonderful, awesome",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-015",
+   "answer": "زبون",
+   "arabic": "زَبون",
+   "english": "customer",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-016",
+   "answer": "زفاف",
+   "arabic": "زِفاف",
+   "english": "wedding celebration",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-017",
+   "answer": "ازدهر",
+   "arabic": "اِزْدَهَرَ",
+   "english": "to flourish",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-018",
+   "answer": "سبيل",
+   "arabic": "سَبيل",
+   "english": "path, way; public drinking fountain",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-019",
+   "answer": "شريحة",
+   "arabic": "شَريحة",
+   "english": "slice, social group or class",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-020",
+   "answer": "شفي",
+   "arabic": "شُفِيَ",
+   "english": "to be cured, healed, to recover",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-021",
+   "answer": "صابون",
+   "arabic": "صابون",
+   "english": "soap",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-023",
+   "answer": "عتيق",
+   "arabic": "عَتيق",
+   "english": "old, ancient",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-024",
+   "answer": "عزف",
+   "arabic": "عزَف",
+   "english": "to play a musical instrument",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-025",
+   "answer": "عطر",
+   "arabic": "عِطْر",
+   "english": "scent, perfume",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-026",
+   "answer": "عمارة",
+   "arabic": "العِمارة",
+   "english": "architecture",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-027",
+   "answer": "فئة",
+   "arabic": "فِئة",
+   "english": "group, class",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-028",
+   "answer": "فاخر",
+   "arabic": "فاخِر",
+   "english": "luxurious, splendid",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-029",
+   "answer": "تفاوت",
+   "arabic": "تَفاوَتَ",
+   "english": "to vary varying",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-030",
+   "answer": "اقصى",
+   "arabic": "أَقْصى",
+   "english": "farthest, utmost, maximum",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-032",
+   "answer": "ميدان",
+   "arabic": "مَيدان",
+   "english": "open place, square, field",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-033",
+   "answer": "نخبة",
+   "arabic": "نُخبة",
+   "english": "elite, selected few",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-034",
+   "answer": "نضج",
+   "arabic": "نَضَجَ",
+   "english": "to mature or ripen",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-035",
+   "answer": "ناضج",
+   "arabic": "ناضِج",
+   "english": "mature (people), ripe (food)",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-036",
+   "answer": "نظافة",
+   "arabic": "النَّظافة",
+   "english": "cleanliness, tidiness",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-037",
+   "answer": "نظيف",
+   "arabic": "نَظيف",
+   "english": "clean, tidy",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-038",
+   "answer": "نفوذ",
+   "arabic": "نُفوذ",
+   "english": "authority, power",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-039",
+   "answer": "نموذج",
+   "arabic": "نُموذَج",
+   "english": "sample, model, type",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-040",
+   "answer": "مورد",
+   "arabic": "مَورِد",
+   "english": "resource; source of income, revenue",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-041",
+   "answer": "وفر",
+   "arabic": "وَفَّر",
+   "english": "to provide (in abundance), to make abundant",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-042",
+   "answer": "وفير",
+   "arabic": "وَفير",
+   "english": "abundant",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-043",
+   "answer": "انجاز",
+   "arabic": "إنجاز",
+   "english": "achievement, accomplishment",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-044",
+   "answer": "اتخذ",
+   "arabic": "اِتَّخَذَ",
+   "english": "to take on, adopt",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-045",
+   "answer": "مبنى",
+   "arabic": "مَبْنى",
+   "english": "building",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-046",
+   "answer": "جودة",
+   "arabic": "الجَوْدة",
+   "english": "(good) quality, goodness (of quality)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-047",
+   "answer": "استجوب",
+   "arabic": "اِستَجوَب",
+   "english": "to interrogate",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-048",
+   "answer": "استحم",
+   "arabic": "اِسْتَحَمَّ",
+   "english": "to bathe",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-049",
+   "answer": "خيري",
+   "arabic": "خَيْريّ",
+   "english": "charitable, philanthropic",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-050",
+   "answer": "تداخل",
+   "arabic": "تَداخَلَ",
+   "english": "to overlap",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-051",
+   "answer": "استراح",
+   "arabic": "اِسْتَراحَ",
+   "english": "to rest, relax",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-052",
+   "answer": "تشخيص",
+   "arabic": "تَشخيص",
+   "english": "diagnosis, identification",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-053",
+   "answer": "شدد",
+   "arabic": "شَدَّدَ",
+   "english": "to stress, intensify, impress upon",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-054",
+   "answer": "ضمن",
+   "arabic": "ضَمِنَ",
+   "english": "to guarantee, warrant, safeguard",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-055",
+   "answer": "طابع",
+   "arabic": "طابَع",
+   "english": "character, characteristic",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-056",
+   "answer": "طبقة",
+   "arabic": "طَبَقة",
+   "english": "(social) class",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-057",
+   "answer": "عندئذ",
+   "arabic": "عِندَئِذٍ",
+   "english": "at that time, then",
+   "pos": "adverb"
+  },
+  {
+   "id": "b4-u4-058",
+   "answer": "عيادة",
+   "arabic": "عِيادة",
+   "english": "clinic",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-059",
+   "answer": "افلس",
+   "arabic": "أَفلَسَ",
+   "english": "to go bankrupt",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-060",
+   "answer": "قاعدة",
+   "arabic": "قاعِدة",
+   "english": "rule",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-061",
+   "answer": "اكثر",
+   "arabic": "أَكثَرَ",
+   "english": "to do a lot of",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-062",
+   "answer": "كون",
+   "arabic": "الكَوْن",
+   "english": "being",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-063",
+   "answer": "ملحوظ",
+   "arabic": "مَلْحوظ",
+   "english": "noticeable, remarkable",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-064",
+   "answer": "لون",
+   "arabic": "لَوْن",
+   "english": "also: type (of…), kind (of...)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-065",
+   "answer": "استنتج",
+   "arabic": "اِستَنتَج",
+   "english": "to conclude, infer, deduce",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-066",
+   "answer": "نزل",
+   "arabic": "نَزَلَ",
+   "english": "to lodge, room in (e.g., a hotel)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-067",
+   "answer": "منزل",
+   "arabic": "مَنْزِل",
+   "english": "house, residence (in classical texts) a way station for travelers",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-068",
+   "answer": "منشاة",
+   "arabic": "مُنْشَأة",
+   "english": "establishment, (physical) institution",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-069",
+   "answer": "تناقل",
+   "arabic": "تَناقَلَ",
+   "english": "to pass on (news), relate, transmit among each other",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-070",
+   "answer": "استهدف",
+   "arabic": "اِستَهدَف",
+   "english": "to target, seek as a goal",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-071",
+   "answer": "هام",
+   "arabic": "هامّ",
+   "english": "important",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u4-073",
+   "answer": "اتجه",
+   "arabic": "اِتَّجَهَ",
+   "english": "to head in the direction of",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-074",
+   "answer": "واجهة",
+   "arabic": "واجِهة",
+   "english": "façade, front",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-076",
+   "answer": "اتصف",
+   "arabic": "اِتَّصَفَ",
+   "english": "to possess as a characteristic, be described, characterized by",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u4-077",
+   "answer": "وقف",
+   "arabic": "وَقْف",
+   "english": "religious endowment",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u4-078",
+   "answer": "استولى",
+   "arabic": "اِستَولى",
+   "english": "to take over, seize, take possession of",
+   "pos": "verb"
+  }
+ ],
+ "b4-u5": [
+  {
+   "id": "b4-u5-001",
+   "answer": "مباشر",
+   "arabic": "مُباشِر",
+   "english": "direct",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u5-003",
+   "answer": "بدا",
+   "arabic": "بَدَأَ",
+   "english": "to begin",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-004",
+   "answer": "استثمار",
+   "arabic": "اِستِثمار",
+   "english": "investment",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-005",
+   "answer": "جوهري",
+   "arabic": "جَوهَرِيّ",
+   "english": "essential, fundamental",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u5-006",
+   "answer": "احتج",
+   "arabic": "اِحتَجَّ",
+   "english": "to protest against, to object to",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-007",
+   "answer": "اخفق",
+   "arabic": "أَخفَقَ",
+   "english": "to fail",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-008",
+   "answer": "اختفى",
+   "arabic": "اِختَفى",
+   "english": "to disappear",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-009",
+   "answer": "خلفية",
+   "arabic": "خَلفِيّة",
+   "english": "background",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-010",
+   "answer": "دليل",
+   "arabic": "دَليل",
+   "english": "evidence, proof, indication",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-011",
+   "answer": "ادنى",
+   "arabic": "أدنى",
+   "english": "nearest, lowest Near East",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u5-012",
+   "answer": "ركود",
+   "arabic": "الرُّكود",
+   "english": "stagnation, recession",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-013",
+   "answer": "سلبي",
+   "arabic": "سَلبِيّ",
+   "english": "negative",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u5-014",
+   "answer": "ساهم",
+   "arabic": "ساهَمَ",
+   "english": "to contribute to",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-015",
+   "answer": "سياق",
+   "arabic": "سِياق",
+   "english": "context",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-016",
+   "answer": "شعار",
+   "arabic": "شِعار",
+   "english": "slogan, motto",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-017",
+   "answer": "صرخ",
+   "arabic": "صَرَخَ",
+   "english": "to cry, yell",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-018",
+   "answer": "تضحية",
+   "arabic": "التَّضحِية",
+   "english": "sacrifice",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-019",
+   "answer": "طائفية",
+   "arabic": "الطّائِفِيّة",
+   "english": "sectarianism",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-020",
+   "answer": "عبء",
+   "arabic": "عِبء",
+   "english": "burden",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-021",
+   "answer": "عدالة",
+   "arabic": "العَدالة",
+   "english": "justice just, fair",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-022",
+   "answer": "معدل",
+   "arabic": "مُعدَّل",
+   "english": "average, rate",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-023",
+   "answer": "تعزيز",
+   "arabic": "تَعزيز",
+   "english": "strengthening, enhancing, reinforcing",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-024",
+   "answer": "اعاق",
+   "arabic": "أَعاقَ",
+   "english": "to hinder, impede obstacle, impediment",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-025",
+   "answer": "عيب",
+   "arabic": "العَيْب",
+   "english": "shame, disgrace",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-026",
+   "answer": "فجوة",
+   "arabic": "فَجوة",
+   "english": "gap, hole",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-027",
+   "answer": "فساد",
+   "arabic": "الفَساد",
+   "english": "corruption",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-028",
+   "answer": "قبض",
+   "arabic": "قَبَضَ",
+   "english": "to receive (money, salary)",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-029",
+   "answer": "كفاءة",
+   "arabic": "الكَفاءة",
+   "english": "competence, proficiency",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-030",
+   "answer": "كراهية",
+   "arabic": "الكَراهِيّة",
+   "english": "hate",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-031",
+   "answer": "لاجئ",
+   "arabic": "لاجِئ",
+   "english": "refugee",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-032",
+   "answer": "لام",
+   "arabic": "لامَ",
+   "english": "to blame",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-033",
+   "answer": "ممارسة",
+   "arabic": "مُمارَسة",
+   "english": "practice",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-034",
+   "answer": "مهارة",
+   "arabic": "مَهارة",
+   "english": "skill",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-035",
+   "answer": "تناقض",
+   "arabic": "التَّناقُض",
+   "english": "contradiction",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-036",
+   "answer": "هبوط",
+   "arabic": "هُبوط",
+   "english": "fall, drop, decline",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-037",
+   "answer": "سمة",
+   "arabic": "سِمة",
+   "english": "characteristic, feature",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-038",
+   "answer": "اجر",
+   "arabic": "أَجْر",
+   "english": "wages, pay",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-039",
+   "answer": "جدي",
+   "arabic": "جِدّيّ",
+   "english": "serious",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u5-040",
+   "answer": "استحق",
+   "arabic": "اِستَحَقَّ",
+   "english": "to deserve, be worthy of",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-041",
+   "answer": "حلل",
+   "arabic": "حَلََّلَ",
+   "english": "to analyze",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-042",
+   "answer": "حال",
+   "arabic": "حالَ",
+   "english": "to prevent s.o. from s.th",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-043",
+   "answer": "خيار",
+   "arabic": "خِيار",
+   "english": "option, choice",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-044",
+   "answer": "اسكات",
+   "arabic": "إِسكات",
+   "english": "silencing",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-045",
+   "answer": "اشكالية",
+   "arabic": "إشكالِيّة",
+   "english": "problem (broader and more abstract in nature than مُشكِلة)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-046",
+   "answer": "تطوع",
+   "arabic": "تَطَوَّعَ",
+   "english": "to volunteer",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-047",
+   "answer": "عاطل",
+   "arabic": "عاطِل",
+   "english": "unemployed",
+   "pos": "adjective"
+  },
+  {
+   "id": "b4-u5-048",
+   "answer": "عمالة",
+   "arabic": "العِمالة",
+   "english": "labor force",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-049",
+   "answer": "عمم",
+   "arabic": "عَمَّمَ",
+   "english": "to generalize",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-050",
+   "answer": "فعالية",
+   "arabic": "فَعالِيّة",
+   "english": "effectiveness, efficacy",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-051",
+   "answer": "اقصاء",
+   "arabic": "الإِقصاء",
+   "english": "exclusion (removing someone and making them marginal)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-052",
+   "answer": "اقلية",
+   "arabic": "أَقَلِّيّة",
+   "english": "minority (group)",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-053",
+   "answer": "انتاجية",
+   "arabic": "الإِنتاجِيّة",
+   "english": "productivity",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-054",
+   "answer": "ناشط",
+   "arabic": "ناشِط",
+   "english": "activist",
+   "pos": "noun"
+  },
+  {
+   "id": "b4-u5-055",
+   "answer": "تنامى",
+   "arabic": "تَنامى",
+   "english": "to increase/grow gradually",
+   "pos": "verb"
+  },
+  {
+   "id": "b4-u5-056",
+   "answer": "توقع",
+   "arabic": "تَوَقُّع",
+   "english": "expectation",
+   "pos": "noun"
+  }
+ ]
+}

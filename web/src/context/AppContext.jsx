@@ -221,6 +221,11 @@ export function AppProvider({ children }) {
   useEffect(() => {
     document.documentElement.dataset.theme = dark ? "dark" : "light";
   }, [dark]);
+  const crosswordsDone = progress.crosswords?.done ?? {};
+  const finishCrossword = useCallback(
+    (id) => setProgress((p) => ({ ...p, crosswords: { done: { ...p.crosswords?.done, [id]: true } } })),
+    [],
+  );
   const setDark = useCallback((on) => setProgress((p) => ({ ...p, dark: !!on })), []);
 
   // Typing lessons: passed lessons are kept, with their faster result.
@@ -298,6 +303,8 @@ export function AppProvider({ children }) {
     typing,
     dark,
     setDark,
+    crosswordsDone,
+    finishCrossword,
     passTyping,
     syncStatus,
     signOut,

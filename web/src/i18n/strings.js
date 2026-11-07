@@ -149,6 +149,13 @@ export const strings = {
   singular: { en: "Singular", ar: "المفرد", unlock: u(3, 8) },
   appearance: { en: "Appearance", ar: "المظهر", unlock: u(3, 8) },
   darkMode: { en: "Dark mode", ar: "الوضع الداكن", unlock: u(3, 8) },
+  // Crosswords: one per unit from part 1. The Arabic description uses words of the list (كلمة, كل, درس, في).
+  crosswordTitle: { en: "Crosswords", ar: "الكلمات المتقاطعة", unlock: u(3, 8) },
+  modeCrosswordDesc: { en: "A crossword for each unit.", ar: "كلمة في كل درس", unlock: u(2, 4) },
+  crossAcross: { en: "Across", ar: "أفقي", unlock: u(3, 8) },
+  crossDown: { en: "Down", ar: "عمودي", unlock: u(3, 8) },
+  crossClear: { en: "Clear", ar: "امسح", unlock: u(3, 8) },
+  crossDone: { en: "Well done! The crossword is complete.", ar: "أحسنت! اكتمل الحل.", unlock: u(3, 8) },
   // The student's name
   welcomeName: { en: (n) => `Welcome back, ${n}`, ar: (n) => `أهلا بعودتك يا ${n}`, unlock: u(2, 5) }, // يا is taught in Alif Baa lesson 3
   nameLabel: { en: "Your name", ar: "اسمك", unlock: u(1, 2) }, // اِسم and ـكَ are taught in Alif Baa lesson 2
