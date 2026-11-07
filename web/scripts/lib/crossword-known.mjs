@@ -1,5 +1,5 @@
 // What a student knows up to a unit, for checking crossword clues: every word of the list up to it, with its
-// inflections, plus a small set of function words. Used by crossword-prep.mjs and check-crossword-clues.mjs.
+// inflections (and nothing else). Used by crossword-prep.mjs and check-crossword-clues.mjs.
 
 import { normalizeArabic, stripDiacritics } from "../../src/lib/arabic.js";
 import { getForms } from "../../src/lib/morphology.js";
@@ -7,8 +7,8 @@ import { getForms } from "../../src/lib/morphology.js";
 export const norm = (s) => normalizeArabic(stripDiacritics(String(s ?? "")));
 export const tokens = (text) => (String(text ?? "").match(/[ء-يٱ]+/g) ?? []);
 
-// grammar words every clue may use
-const FUNCTION_WORDS = "و أو لا ما هذا هذه ذلك تلك هو هي هم هن نحن انا انت انتم الذي التي الذين كل بعض ان انه انها قد لم لن ليس كان كانت يكون تكون في من على عن الى مع بين عند ثم لكن او اي كيف لماذا اين متى هل نعم كم هناك هنا هنالك حيث عندما اذا قبل بعد غير فقط جدا مثل شيء شخص ناس انسان مكان وقت يوم".split(" ");
+// No extra words are allowed: a clue may only use words the student has met in the list by that unit (و is in the list, Alif Baa lesson 3).
+const FUNCTION_WORDS = [];
 
 function wordTokens(w) {
   const out = [];

@@ -156,6 +156,10 @@ export const strings = {
   crossDown: { en: "Down", ar: "عمودي", unlock: u(3, 8) },
   crossClear: { en: "Clear", ar: "امسح", unlock: u(3, 8) },
   crossDone: { en: "Well done! The crossword is complete.", ar: "أحسنت! اكتمل الحل.", unlock: u(3, 8) },
+  // Word searches: one per unit from part 1. The Arabic description uses words of the list (كلمة, كل, درس, في).
+  wordSearchTitle: { en: "Word search", ar: "البحث عن الكلمات", unlock: u(3, 8) },
+  modeWordSearchDesc: { en: "Find the words of each unit.", ar: "كلمة في كل درس", unlock: u(2, 4) },
+  wordSearchDone: { en: "Well done! You found every word.", ar: "أحسنت! وجدت كل الكلمات.", unlock: u(3, 8) },
   // The student's name
   welcomeName: { en: (n) => `Welcome back, ${n}`, ar: (n) => `أهلا بعودتك يا ${n}`, unlock: u(2, 5) }, // يا is taught in Alif Baa lesson 3
   nameLabel: { en: "Your name", ar: "اسمك", unlock: u(1, 2) }, // اِسم and ـكَ are taught in Alif Baa lesson 2

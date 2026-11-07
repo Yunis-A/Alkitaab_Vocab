@@ -11,6 +11,7 @@ import GenderQuiz from "./GenderQuiz.jsx";
 import SunMoonQuiz from "./SunMoonQuiz.jsx";
 import Typing from "./Typing.jsx";
 import Crossword from "./Crossword.jsx";
+import WordSearch from "./WordSearch.jsx";
 import ArticleQuiz from "./ArticleQuiz.jsx";
 import GeoGame from "../components/GeoGame.jsx";
 import Prepositions from "./Prepositions.jsx";
@@ -55,6 +56,7 @@ const MODES = [
   { id: "matching", icon: "matching", title: "matching", desc: "modeMatchingDesc", options: ["lists", "varieties"] },
   { id: "verbs", icon: "verbs", title: "studyVerbs", desc: "modeVerbsDesc" }, // opens a menu: prepositions, verb patterns, conjugation
   { id: "crossword", icon: "crossword", title: "crosswordTitle", desc: "modeCrosswordDesc", direct: true, from: { book: 2, unit: 1 } }, // one per unit, from part 1
+  { id: "wordsearch", icon: "wordsearch", title: "wordSearchTitle", desc: "modeWordSearchDesc", direct: true, from: { book: 2, unit: 1 } }, // one per unit, from part 1
   { id: "typing", icon: "typing", title: "studyTyping", desc: "modeTypingDesc", direct: true },
   { id: "sunmoon", icon: "sunmoon", title: "studySunMoon", desc: "modeSunMoonDesc", direct: true, from: { book: 1, unit: 9 } }, // شَمس / قَمَر are taught in Alif Baa lesson 9
   { id: "geography", icon: "geography", title: "geoGamesTitle", desc: "modeGeoGamesDesc" }, // opens a menu of geography games
@@ -139,6 +141,7 @@ export default function Learn() {
   if (mode === "run:sunmoon") return <SunMoonQuiz onExit={exit} />;
   if (mode === "run:typing") return <Typing onExit={exit} />;
   if (mode === "run:crossword") return <Crossword onExit={exit} />;
+  if (mode === "run:wordsearch") return <WordSearch onExit={exit} />;
   if (mode === "run:map") {
     return (
       <main className="page">

@@ -1,0 +1,7834 @@
+{
+ "b2-u1": {
+  "rows": 13,
+  "cols": 13,
+  "grid": [
+   "شاميشيطوالدةي",
+   "تتنزنطؤادرسفع",
+   "عسطبهجنسيةقحن",
+   "مكقمؤنثشييتفو",
+   "لنةبكرقؤفسااا",
+   "لديفشاسكنكنمن",
+   "زبوالدتيتنجصي",
+   "والديلكلمذلرم",
+   "سمفرداتوايييذ",
+   "دزهصؤعمردعزتك",
+   "فصحىشطسلبميار",
+   "داجقواعدطلسنة",
+   "رؤشوالدثقافةل"
+  ],
+  "words": [
+   {
+    "answer": "انجليزي",
+    "arabic": "إِنجِليزِيّ",
+    "english": "English",
+    "r": 4,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مفردات",
+    "arabic": "المُفرَدات",
+    "english": "vocabulary",
+    "r": 8,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "والدتي",
+    "arabic": "والِدتي",
+    "english": "my mother",
+    "r": 6,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "والدي",
+    "arabic": "والِدي",
+    "english": "my father",
+    "r": 7,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "منطقة",
+    "arabic": "مِنطَقة",
+    "english": "area, region",
+    "r": 0,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "عنوان",
+    "arabic": "عُنوان",
+    "english": "address",
+    "r": 1,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ثقافة",
+    "arabic": "الثَّقافة",
+    "english": "culture",
+    "r": 12,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "جنسية",
+    "arabic": "جِنسِيّة",
+    "english": "nationality",
+    "r": 2,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "والدة",
+    "arabic": "والِدة",
+    "english": "mother",
+    "r": 0,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قواعد",
+    "arabic": "القَواعِد",
+    "english": "grammar",
+    "r": 11,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يعمل",
+    "arabic": "يَعمَل",
+    "english": "he works",
+    "r": 8,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تسكن",
+    "arabic": "تَسكُن",
+    "english": "she lives, resides",
+    "r": 1,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "والد",
+    "arabic": "والِد",
+    "english": "father",
+    "r": 12,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مؤنث",
+    "arabic": "مُؤَنَّث",
+    "english": "feminine",
+    "r": 3,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مصري",
+    "arabic": "مِصرِيّ",
+    "english": "Egyptian",
+    "r": 5,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ادرس",
+    "arabic": "أَدرُس",
+    "english": "I study",
+    "r": 1,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "تعمل",
+    "arabic": "تَعمَل",
+    "english": "she works",
+    "r": 1,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "فصحى",
+    "arabic": "الفُصحى",
+    "english": "formal Arabic; Standard Arabic",
+    "r": 10,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اسكن",
+    "arabic": "أَسكُن",
+    "english": "I live, reside",
+    "r": 5,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يسكن",
+    "arabic": "يَسكُن",
+    "english": "he lives, resides",
+    "r": 3,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مذكر",
+    "arabic": "مُذَكَّر",
+    "english": "masculine",
+    "r": 7,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "شامي",
+    "arabic": "شامِيّ",
+    "english": "Shami (Levantine)",
+    "r": 0,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عمر",
+    "arabic": "عُمر",
+    "english": "age",
+    "r": 9,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ادب",
+    "arabic": "الأَدَب",
+    "english": "literature",
+    "r": 8,
+    "c": 8,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سنة",
+    "arabic": "سَنة",
+    "english": "year",
+    "r": 11,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   }
+  ]
+ },
+ "b2-u2": {
+  "rows": 13,
+  "cols": 13,
+  "grid": [
+   "نااسرةءيامبشم",
+   "تاقمخقزتكجلشو",
+   "عخالةسوكجرداظ",
+   "يومساءللجحيسف",
+   "فيقبوليمهضاعع",
+   "لفناسزلعددمسج",
+   "دامتخصصدشاتزه",
+   "يافمشغولضئرزق",
+   "سفعدومركزمججة",
+   "اولغداايضاملن",
+   "فخاغاظوعملئغل",
+   "يضءونهارمغضةن",
+   "زمبخلوحيدقاال"
+  ],
+  "words": [
+   {
+    "answer": "متخصص",
+    "arabic": "مُتَخَصِّص",
+    "english": "specializing/specialist in",
+    "r": 6,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مترجم",
+    "arabic": "مُترجِم",
+    "english": "translator",
+    "r": 5,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "دائما",
+    "arabic": "دائِماً",
+    "english": "always",
+    "r": 5,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "يتكلم",
+    "arabic": "يَتَكَلَّم",
+    "english": "he speaks, talks",
+    "r": 0,
+    "c": 7,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مشغول",
+    "arabic": "مَشغول",
+    "english": "busy (with)",
+    "r": 7,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "خالة",
+    "arabic": "خالة",
+    "english": "maternal aunt",
+    "r": 2,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اسرة",
+    "arabic": "أُسْرة",
+    "english": "(nuclear) family",
+    "r": 0,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مركز",
+    "arabic": "مَركَز",
+    "english": "center (n.)",
+    "r": 8,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قبول",
+    "arabic": "القُبول",
+    "english": "admission(s)",
+    "r": 4,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فعلا",
+    "arabic": "فِعلاً",
+    "english": "really!, truly",
+    "r": 7,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مساء",
+    "arabic": "المَساء",
+    "english": "evening",
+    "r": 3,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ايضا",
+    "arabic": "أَيضاً",
+    "english": "also",
+    "r": 9,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "وحيد",
+    "arabic": "وَحيد",
+    "english": "only (adj.); lonely",
+    "r": 12,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "نهار",
+    "arabic": "النَّهار",
+    "english": "daytime",
+    "r": 11,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "موظف",
+    "arabic": "مُوَظَّف",
+    "english": "employee",
+    "r": 0,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ناس",
+    "arabic": "الناس",
+    "english": "people",
+    "r": 5,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "غدا",
+    "arabic": "غَداً",
+    "english": "tomorrow",
+    "r": 9,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "لغة",
+    "arabic": "لُغة",
+    "english": "language",
+    "r": 9,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "عمل",
+    "arabic": "العَمَل",
+    "english": "work",
+    "r": 10,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "بلد",
+    "arabic": "بَلَد",
+    "english": "country",
+    "r": 0,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ليل",
+    "arabic": "اللَّيْل",
+    "english": "night",
+    "r": 3,
+    "c": 6,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "يوم",
+    "arabic": "اليَوْم",
+    "english": "today",
+    "r": 3,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   }
+  ]
+ },
+ "b2-u3": {
+  "rows": 13,
+  "cols": 13,
+  "grid": [
+   "دجحطعاغيعكزاخ",
+   "كعاضزوجحساوكع",
+   "فاجللغضابطجتن",
+   "عئتدتوصيينةول",
+   "ولميتعواطشطزي",
+   "اةطندفرعيخرمض",
+   "تاريخهةردجسئت",
+   "زمبالطبفرياذا",
+   "لتفطحقوقسشلاق",
+   "ازضتقكليةدةخا",
+   "اوودرنرطلعلمل",
+   "ئجهلياهندسةفا",
+   "فوغابنبسجدةشن"
+  ],
+  "words": [
+   {
+    "answer": "رسالة",
+    "arabic": "رِسالة",
+    "english": "letter",
+    "r": 5,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "هندسة",
+    "arabic": "الهَندَسة",
+    "english": "engineering",
+    "r": 11,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عائلة",
+    "arabic": "عائِلة",
+    "english": "(extended) family",
+    "r": 1,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "متزوج",
+    "arabic": "مُتَزَوِّج",
+    "english": "married (adj.)",
+    "r": 7,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تاريخ",
+    "arabic": "التّاريخ",
+    "english": "history",
+    "r": 6,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "الان",
+    "arabic": "الآن",
+    "english": "now",
+    "r": 9,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "كلية",
+    "arabic": "كُلِّيّة",
+    "english": "college, school (in a university)",
+    "r": 9,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قريب",
+    "arabic": "قَريب",
+    "english": "relative",
+    "r": 9,
+    "c": 4,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "الطب",
+    "arabic": "الطِّبّ",
+    "english": "medicine",
+    "r": 7,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صورة",
+    "arabic": "صورة",
+    "english": "picture",
+    "r": 3,
+    "c": 6,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اعرف",
+    "arabic": "أعرِف",
+    "english": "I know",
+    "r": 4,
+    "c": 7,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "حقوق",
+    "arabic": "الحُقوق",
+    "english": "law",
+    "r": 8,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ضابط",
+    "arabic": "ضابِط",
+    "english": "officer",
+    "r": 2,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "زوجة",
+    "arabic": "زَوجة",
+    "english": "wife",
+    "r": 0,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "يدرس",
+    "arabic": "يُدَرِّس",
+    "english": "he teaches",
+    "r": 5,
+    "c": 8,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "زوج",
+    "arabic": "زَوج",
+    "english": "husband",
+    "r": 1,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ابن",
+    "arabic": "اِبن",
+    "english": "son",
+    "r": 12,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "علم",
+    "arabic": "عِلم",
+    "english": "science",
+    "r": 10,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "دين",
+    "arabic": "الدّين",
+    "english": "religion",
+    "r": 3,
+    "c": 3,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "جدة",
+    "arabic": "جَدّة",
+    "english": "grandmother",
+    "r": 12,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "جيش",
+    "arabic": "جَيش",
+    "english": "army",
+    "r": 6,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   }
+  ]
+ },
+ "b2-u4": {
+  "rows": 14,
+  "cols": 14,
+  "grid": [
+   "ضضلخسصيقراششحئ",
+   "زميلطئخفقيوهتف",
+   "فئصكنتضرفقرئظه",
+   "ولدزذاادلوبساو",
+   "احياكخرصيلةذدص",
+   "كمقباتةصاسافرا",
+   "هحةتناصييستمعم",
+   "شمسدللدكبزاولس",
+   "ئدلاطييتكبشظنص",
+   "صرطئئاقبحلويات",
+   "هسةيخكمطعمخطسق",
+   "اةاضشلغخلطفولة",
+   "احفظخاشاتذكركو",
+   "حجكسفرعاذسمكنص"
+  ],
+  "words": [
+   {
+    "answer": "ابتدائي",
+    "arabic": "اِبتِدائيّ",
+    "english": "primary, elementary",
+    "r": 4,
+    "c": 3,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "حلويات",
+    "arabic": "حَلَوِيّات",
+    "english": "sweets, desserts",
+    "r": 9,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صديقة",
+    "arabic": "صَديقة",
+    "english": "friend (f.)",
+    "r": 2,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "شوربة",
+    "arabic": "شَوربة",
+    "english": "soup",
+    "r": 0,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "طفولة",
+    "arabic": "الطُّفولة",
+    "english": "childhood",
+    "r": 11,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اتذكر",
+    "arabic": "أتَذَكَّر",
+    "english": "I remember",
+    "r": 12,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مدرسة",
+    "arabic": "مَدرسة",
+    "english": "school",
+    "r": 7,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "فواكه",
+    "arabic": "فَواكِه",
+    "english": "fruits",
+    "r": 2,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "يستمع",
+    "arabic": "يَستَمِع",
+    "english": "he listens to",
+    "r": 6,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اسافر",
+    "arabic": "أُسافِر",
+    "english": "travel",
+    "r": 5,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صديق",
+    "arabic": "صَديق",
+    "english": "friend (m.)",
+    "r": 6,
+    "c": 6,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "زميل",
+    "arabic": "زَميل",
+    "english": "classmate, colleague",
+    "r": 1,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يكتب",
+    "arabic": "يَكتُب",
+    "english": "he writes",
+    "r": 6,
+    "c": 7,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "يقول",
+    "arabic": "يَقول",
+    "english": "he says",
+    "r": 1,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ياكل",
+    "arabic": "يَأكُل",
+    "english": "he eats",
+    "r": 8,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "خضار",
+    "arabic": "خُضار",
+    "english": "vegetables",
+    "r": 1,
+    "c": 6,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مطعم",
+    "arabic": "مَطعَم",
+    "english": "restaurant",
+    "r": 10,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يقرا",
+    "arabic": "يَقرَأ",
+    "english": "he reads",
+    "r": 0,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "سلطة",
+    "arabic": "سَلَطة",
+    "english": "salad",
+    "r": 7,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "احفظ",
+    "arabic": "أَحفَظ",
+    "english": "I memorize",
+    "r": 12,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "سفر",
+    "arabic": "السَّفَر",
+    "english": "traveling",
+    "r": 13,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اول",
+    "arabic": "أَوَّل",
+    "english": "first",
+    "r": 7,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "لحم",
+    "arabic": "لَحم",
+    "english": "meat",
+    "r": 3,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "فرد",
+    "arabic": "فَرد",
+    "english": "individual (person)",
+    "r": 1,
+    "c": 7,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سمك",
+    "arabic": "سَمَك",
+    "english": "fish",
+    "r": 13,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "امس",
+    "arabic": "أَمْس",
+    "english": "yesterday",
+    "r": 5,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "كان",
+    "arabic": "كانَ",
+    "english": "he was",
+    "r": 4,
+    "c": 4,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "كنت",
+    "arabic": "كُنتُ",
+    "english": "was",
+    "r": 2,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   }
+  ]
+ },
+ "b2-u5": {
+  "rows": 13,
+  "cols": 13,
+  "grid": [
+   "اكدقبتجيداناي",
+   "نارزجفصليتاحس",
+   "جحجراجذربيعسا",
+   "ايةحقادطخةرنز",
+   "قاتعالياقرزهد",
+   "سنفرررصشلسياح",
+   "ااقفطوشيكجزفا",
+   "غيطقشوكتفثوطم",
+   "حاشثلجبحاليلس",
+   "وجئعتيتةاءعرل",
+   "قحتمرغلثحصلزا",
+   "طددمطرماخمشمس",
+   "ضبكةاباردفبتل"
+  ],
+  "words": [
+   {
+    "answer": "احيانا",
+    "arabic": "أَحْياناً",
+    "english": "sometimes",
+    "r": 1,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ازدحام",
+    "arabic": "الاِزدِحام",
+    "english": "crowding, crowdedness",
+    "r": 2,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "كثيرا",
+    "arabic": "كَثيراً",
+    "english": "a lot, much (adv.)",
+    "r": 6,
+    "c": 8,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "قليلا",
+    "arabic": "قَليلاً",
+    "english": "a little bit (adv.)",
+    "r": 7,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "رطوبة",
+    "arabic": "الرُّطوبة",
+    "english": "humidity",
+    "r": 5,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "عالي",
+    "arabic": "عالِي",
+    "english": "high",
+    "r": 4,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "خريف",
+    "arabic": "الخَريف",
+    "english": "autumn",
+    "r": 3,
+    "c": 8,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "جيدا",
+    "arabic": "جَيِّداً",
+    "english": "well (adv.)",
+    "r": 0,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "بارد",
+    "arabic": "بارِد",
+    "english": "cold (adj.) (of things)",
+    "r": 12,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "شتاء",
+    "arabic": "الشِّتاء",
+    "english": "winter",
+    "r": 6,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "يشعر",
+    "arabic": "يشعُر",
+    "english": "he feels, has feeling of",
+    "r": 7,
+    "c": 1,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "ربيع",
+    "arabic": "الرَّبيع",
+    "english": "spring (season)",
+    "r": 2,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "غائم",
+    "arabic": "غائِم",
+    "english": "cloudy",
+    "r": 7,
+    "c": 0,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "احسن",
+    "arabic": "أَحسَن",
+    "english": "the best",
+    "r": 0,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "وحدة",
+    "arabic": "الوِحدة",
+    "english": "loneliness",
+    "r": 9,
+    "c": 0,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "الجو",
+    "arabic": "الجَوّ",
+    "english": "weather",
+    "r": 4,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مشمس",
+    "arabic": "مُشمِس",
+    "english": "sunny",
+    "r": 11,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "درجة",
+    "arabic": "دَرَجة",
+    "english": "degree",
+    "r": 0,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "حار",
+    "arabic": "حارّ",
+    "english": "hot (adj.) (of weather)",
+    "r": 3,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "فصل",
+    "arabic": "فَصل",
+    "english": "season",
+    "r": 1,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ثلج",
+    "arabic": "ثَلج",
+    "english": "snow",
+    "r": 8,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فقط",
+    "arabic": "فَقَط",
+    "english": "only",
+    "r": 5,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "صيف",
+    "arabic": "الصَّيف",
+    "english": "summer",
+    "r": 5,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مطر",
+    "arabic": "مَطَر",
+    "english": "rain",
+    "r": 11,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "جدا",
+    "arabic": "جِدّاً",
+    "english": "very",
+    "r": 2,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "طقس",
+    "arabic": "الطَّقس",
+    "english": "weather",
+    "r": 3,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   }
+  ]
+ },
+ "b2-u6": {
+  "rows": 12,
+  "cols": 12,
+  "grid": [
+   "تصويرشميقصلل",
+   "خضوجيددحلعتذ",
+   "رخيجرييناعيح",
+   "جشهيذهبووضبا",
+   "تيافحصللمصره",
+   "جختخزهوايةرة",
+   "طةرخضتصشمخين",
+   "رتجارةاررباا",
+   "سباحةجيمقكضس",
+   "عذحياةححعصةب",
+   "رينسشقعضصيصو",
+   "خجسنتانيللدع"
+  ],
+  "words": [
+   {
+    "answer": "محاضرة",
+    "arabic": "مُحاضَرة",
+    "english": "lecture, (lecture) class",
+    "r": 0,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "يتخرج",
+    "arabic": "يَتَخَرَّج",
+    "english": "he graduates, graduating",
+    "r": 4,
+    "c": 1,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "رياضة",
+    "arabic": "الرِّياضة",
+    "english": "sports",
+    "r": 5,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تصوير",
+    "arabic": "التَّصْوير",
+    "english": "photography",
+    "r": 0,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "هواية",
+    "arabic": "هِواية",
+    "english": "hobby",
+    "r": 5,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "سنتان",
+    "arabic": "سَنَتانِ",
+    "english": "two years",
+    "r": 11,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "تجارة",
+    "arabic": "التِّجارة",
+    "english": "commerce, trade",
+    "r": 7,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "سباحة",
+    "arabic": "السِّباحة",
+    "english": "swimming",
+    "r": 8,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "تخرجت",
+    "arabic": "تَخَرَّجْتُ",
+    "english": "graduated from",
+    "r": 0,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اسبوع",
+    "arabic": "أُسْبوع",
+    "english": "week",
+    "r": 7,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "يلعب",
+    "arabic": "يِلعَب",
+    "english": "he plays, playing",
+    "r": 0,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "معيد",
+    "arabic": "مُعيد",
+    "english": "graduate fellow, teaching assistant",
+    "r": 8,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "يحصل",
+    "arabic": "يحصُل",
+    "english": "he obtains, acquires (a job, degree)",
+    "r": 8,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "شركة",
+    "arabic": "شَرِكة",
+    "english": "company",
+    "r": 6,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "حياة",
+    "arabic": "الحَياة",
+    "english": "life",
+    "r": 9,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يذهب",
+    "arabic": "يَذهَب",
+    "english": "he goes to",
+    "r": 3,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يوم",
+    "arabic": "يَوْم",
+    "english": "day",
+    "r": 2,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "جري",
+    "arabic": "الجَري",
+    "english": "running",
+    "r": 2,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "حصل",
+    "arabic": "حَصَلَ",
+    "english": "to obtain/obtaining",
+    "r": 4,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "رقص",
+    "arabic": "الرَّقص",
+    "english": "dancing",
+    "r": 7,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   }
+  ]
+ },
+ "b2-u7": {
+  "rows": 12,
+  "cols": 12,
+  "grid": [
+   "شرملكااكبرسم",
+   "ذلحاامستشفىش",
+   "عشزقمعدثعامت",
+   "خلنتجلدوحلدل",
+   "اكنصنتراشمات",
+   "راشاوحضضدداق",
+   "جنودنصةمايعي",
+   "ييللثسحقاندد",
+   "ةلاوبامالتضي",
+   "سومزتلنضدحتع",
+   "درنااانووثزي",
+   "وزارةسجدياضش"
+  ],
+  "words": [
+   {
+    "answer": "اعدادي",
+    "arabic": "إعدادِيّ",
+    "english": "preparatory school (referring to middle school or junior high school)",
+    "r": 1,
+    "c": 4,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مستشفى",
+    "arabic": "مُسْتَشْفى",
+    "english": "hospital",
+    "r": 1,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "خارجية",
+    "arabic": "الخارِجِيّة",
+    "english": "foreign affairs",
+    "r": 3,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اقتصاد",
+    "arabic": "الاِقتِصاد",
+    "english": "economics, economy",
+    "r": 1,
+    "c": 3,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ثانوي",
+    "arabic": "ثانَوِيّ",
+    "english": "secondary",
+    "r": 7,
+    "c": 4,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "وزارة",
+    "arabic": "وِزارة",
+    "english": "ministry",
+    "r": 11,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مجنون",
+    "arabic": "مَجنون",
+    "english": "crazy",
+    "r": 2,
+    "c": 4,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "حادث",
+    "arabic": "حادِث",
+    "english": "accident",
+    "r": 7,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "ماتت",
+    "arabic": "ماتَت",
+    "english": "she died",
+    "r": 6,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "محزن",
+    "arabic": "مُحْزِن",
+    "english": "saddening, distressing",
+    "r": 0,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اكبر",
+    "arabic": "أَكْبَر",
+    "english": "the biggest or oldest",
+    "r": 0,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يعيش",
+    "arabic": "يَعيش",
+    "english": "to live",
+    "r": 8,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مات",
+    "arabic": "ماتَ",
+    "english": "he died",
+    "r": 4,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مال",
+    "arabic": "مال",
+    "english": "money",
+    "r": 8,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اول",
+    "arabic": "أَوَّل",
+    "english": "first (adj.)",
+    "r": 5,
+    "c": 1,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "عام",
+    "arabic": "عامّ",
+    "english": "general, public",
+    "r": 2,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   }
+  ]
+ },
+ "b2-u8": {
+  "rows": 12,
+  "cols": 12,
+  "grid": [
+   "يدخلتاتيلتحق",
+   "ناتارايذمجيج",
+   "جيشابميةطنطع",
+   "حسناريسذببوم",
+   "اانرحارتااسا",
+   "اعخسزخدفقكوض",
+   "حدسلدوليضبري",
+   "صرئيستسصيئلر",
+   "لفنسعيحارجدق",
+   "تضجحادلقيدوق",
+   "سنحااختئدطلف",
+   "تطتكالحكومةع"
+  ],
+  "words": [
+   {
+    "answer": "مستقبل",
+    "arabic": "مُسْتَقبَل",
+    "english": "future",
+    "r": 2,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "يلتحق",
+    "arabic": "يَلْتَحِق",
+    "english": "to join, enter",
+    "r": 0,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يذاكر",
+    "arabic": "يُذاكِر",
+    "english": "to study, go over material, review lessons",
+    "r": 2,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "يساعد",
+    "arabic": "يُساعِد",
+    "english": "to help (someone) with",
+    "r": 2,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "حكومة",
+    "arabic": "حُكومة",
+    "english": "government",
+    "r": 11,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "دخلت",
+    "arabic": "دَخَلْتُ",
+    "english": "I entered",
+    "r": 0,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "دولي",
+    "arabic": "دُوَليّ",
+    "english": "international",
+    "r": 6,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يرفض",
+    "arabic": "يَرفُض",
+    "english": "to refuse",
+    "r": 3,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "رئيس",
+    "arabic": "رَئيس",
+    "english": "president, head",
+    "r": 7,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "يريد",
+    "arabic": "يُريد",
+    "english": "he wants to",
+    "r": 7,
+    "c": 8,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ماضي",
+    "arabic": "الماضي",
+    "english": "past, last (week, year, etc.)",
+    "r": 3,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "دولة",
+    "arabic": "دَولة",
+    "english": "(nation-) state",
+    "r": 8,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اراد",
+    "arabic": "أرادَ",
+    "english": "he wanted to",
+    "r": 2,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "نجحت",
+    "arabic": "نَجَحْتُ",
+    "english": "I succeeded in, passed",
+    "r": 8,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ينجح",
+    "arabic": "يَنجَح",
+    "english": "to succeed, pass",
+    "r": 0,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "يدخل",
+    "arabic": "يَدخُل",
+    "english": "to enter",
+    "r": 8,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "حصلت",
+    "arabic": "حَصَلْتُ",
+    "english": "I obtained",
+    "r": 6,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "راي",
+    "arabic": "رَأي",
+    "english": "opinion about",
+    "r": 1,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "رفض",
+    "arabic": "رفَضَ",
+    "english": "he refused",
+    "r": 7,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تحق",
+    "arabic": "اِلتَحَقَ",
+    "english": "he joined, entered (school, army, political party)",
+    "r": 7,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   }
+  ]
+ },
+ "b2-u9": {
+  "rows": 13,
+  "cols": 13,
+  "grid": [
+   "ضبدنمعلطماظكش",
+   "فءخعصجغءفلفشع",
+   "داناافرمضجعخي",
+   "سكسبملكيلطعان",
+   "جلستشخمندفشصا",
+   "فلصاطجسااةاظظ",
+   "شحلغباجدةيءصه",
+   "اطفطررعيضجقار",
+   "زسرتةغنضمزخظي",
+   "ءاخنغصداموضوع",
+   "ادغبجفدامبعضن",
+   "كسسدمعادءجخرج",
+   "كلظااخرانزللك"
+  ],
+  "words": [
+   {
+    "answer": "برنامج",
+    "arabic": "بَرنامَج",
+    "english": "program",
+    "r": 6,
+    "c": 4,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "استطاع",
+    "arabic": "اِستَطاعَ",
+    "english": "to be able to",
+    "r": 2,
+    "c": 1,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "جريدة",
+    "arabic": "جَريدة",
+    "english": "newspaper",
+    "r": 1,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "موضوع",
+    "arabic": "مَوضوع",
+    "english": "subject, topic",
+    "r": 9,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "شطرنج",
+    "arabic": "الشَّطَرَنْج",
+    "english": "chess",
+    "r": 6,
+    "c": 0,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "عشاء",
+    "arabic": "العَشاء",
+    "english": "dinner",
+    "r": 3,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ايقظ",
+    "arabic": "أَيْقَظَ",
+    "english": "to wake (someone) up",
+    "r": 5,
+    "c": 8,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مفضل",
+    "arabic": "مُفَضَّل",
+    "english": "favorite",
+    "r": 0,
+    "c": 8,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "غداء",
+    "arabic": "الغَداء",
+    "english": "lunch",
+    "r": 8,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "عالم",
+    "arabic": "العالَم",
+    "english": "the world",
+    "r": 1,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "نادي",
+    "arabic": "نادي",
+    "english": "club (e.g., sports, social)",
+    "r": 4,
+    "c": 7,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سادس",
+    "arabic": "سادِس",
+    "english": "sixth (adj.)",
+    "r": 8,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "نصف",
+    "arabic": "نِصف",
+    "english": "half",
+    "r": 0,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "عين",
+    "arabic": "عَيْن",
+    "english": "eye",
+    "r": 1,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "فطر",
+    "arabic": "فَطَرَ",
+    "english": "to eat breakfast",
+    "r": 7,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "جلس",
+    "arabic": "جَلَسَ",
+    "english": "to sit",
+    "r": 4,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اخر",
+    "arabic": "آخَر",
+    "english": "other",
+    "r": 12,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "بدا",
+    "arabic": "بَدَأَ",
+    "english": "to begin",
+    "r": 10,
+    "c": 3,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ظهر",
+    "arabic": "الظُّهر",
+    "english": "noon",
+    "r": 5,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "بعض",
+    "arabic": "بَعض",
+    "english": "some (of)",
+    "r": 10,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "دخن",
+    "arabic": "دَخَّنَ",
+    "english": "to smoke",
+    "r": 0,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "خرج",
+    "arabic": "خَرَجَ",
+    "english": "to leave (a place)",
+    "r": 11,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "خاص",
+    "arabic": "خاصّ",
+    "english": "special; (its) own; private",
+    "r": 2,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "نزل",
+    "arabic": "نَزَل",
+    "english": "to leave (the house); to stay (in a hotel)",
+    "r": 12,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عاد",
+    "arabic": "عادَ",
+    "english": "to return",
+    "r": 11,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   }
+  ]
+ },
+ "b2-u10": {
+  "rows": 13,
+  "cols": 13,
+  "grid": [
+   "بفاوبسرعةشيرم",
+   "صلصلاةالابجاج",
+   "اصقيكونىصلاكا",
+   "سلنامرشربحءثم",
+   "تىاستمتعحتفرع",
+   "رممعمنعادةهما",
+   "الممبصراحةموص",
+   "حكبللمنبلشكعح",
+   "ةراصيكقاخيخدا",
+   "ىمرتبلتامتاخر",
+   "طصاتىفةلبسسدص",
+   "شزةهحنغرجللهو",
+   "روقتقهقابلةير"
+  ],
+  "words": [
+   {
+    "answer": "استراحة",
+    "arabic": "اِستِراحة",
+    "english": "rest period, break",
+    "r": 2,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "استمتع",
+    "arabic": "اِستَمْتَع",
+    "english": "to enjoy",
+    "r": 4,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "بصراحة",
+    "arabic": "بِصَراحة",
+    "english": "frankly, honestly",
+    "r": 6,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مقابلة",
+    "arabic": "مُقابَلة",
+    "english": "interview",
+    "r": 7,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مباراة",
+    "arabic": "مُباراة",
+    "english": "match, game (sports)",
+    "r": 6,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "بسرعة",
+    "arabic": "بِسُرْعة",
+    "english": "quickly, in a hurry",
+    "r": 0,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "متاخر",
+    "arabic": "مُتَأَخِّر",
+    "english": "late",
+    "r": 9,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مرتب",
+    "arabic": "مُرَتَّب",
+    "english": "salary",
+    "r": 9,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عادة",
+    "arabic": "عادةً",
+    "english": "usually",
+    "r": 5,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ليلة",
+    "arabic": "لَيلة",
+    "english": "(a) night",
+    "r": 7,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "اصبح",
+    "arabic": "أَصبَحَ",
+    "english": "to become",
+    "r": 1,
+    "c": 8,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "موعد",
+    "arabic": "مَوعِد",
+    "english": "(fixed) time, appointment",
+    "r": 5,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "قابل",
+    "arabic": "قابَلَ",
+    "english": "to meet",
+    "r": 12,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "جامع",
+    "arabic": "جامِع",
+    "english": "mosque",
+    "r": 1,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اكثر",
+    "arabic": "أَكثَر",
+    "english": "more",
+    "r": 1,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "يكون",
+    "arabic": "يَكون",
+    "english": "to be",
+    "r": 2,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صلاة",
+    "arabic": "الصَّلاة",
+    "english": "(ritual) prayer",
+    "r": 1,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ملك",
+    "arabic": "مَلِك",
+    "english": "king",
+    "r": 5,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "جاء",
+    "arabic": "جاءَ",
+    "english": "to come",
+    "r": 1,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سهر",
+    "arabic": "سَهِرَ",
+    "english": "to stay up late",
+    "r": 10,
+    "c": 10,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "صلى",
+    "arabic": "صَلّى",
+    "english": "to pray, do ritual prayers",
+    "r": 2,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ممل",
+    "arabic": "مُمِلّ",
+    "english": "boring",
+    "r": 5,
+    "c": 2,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "نام",
+    "arabic": "نامَ",
+    "english": "to sleep, go to sleep",
+    "r": 3,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "وقت",
+    "arabic": "وَقت",
+    "english": "time",
+    "r": 12,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صحا",
+    "arabic": "صَحا",
+    "english": "to wake up",
+    "r": 6,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "فهم",
+    "arabic": "فَهِم",
+    "english": "to understand",
+    "r": 4,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   }
+  ]
+ },
+ "b2-u11": {
+  "rows": 13,
+  "cols": 13,
+  "grid": [
+   "دغملليتتجربةا",
+   "واتجولةيهتمبت",
+   "غلزوجبلاخطبتت",
+   "بيعلاقاتبادلو",
+   "حاصيدليةصممكة",
+   "رهنفسطتجمععفس",
+   "صنتقسمصنهعظاي",
+   "كغعنطوعصنامعا",
+   "دارعععقادطبلح",
+   "ومفوفندقسفراة",
+   "هرلحوخزبظياقع",
+   "طةظسةبجصحوتةد",
+   "غدهلاهيلشجكطة"
+  ],
+  "words": [
+   {
+    "answer": "علاقات",
+    "arabic": "عَلاقات",
+    "english": "relations (between)",
+    "r": 3,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صيدلية",
+    "arabic": "صَيْدَلِيَّة",
+    "english": "pharmacy",
+    "r": 4,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "انقطع",
+    "arabic": "اِنْقَطَعَ",
+    "english": "to be cut off",
+    "r": 4,
+    "c": 1,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مهندس",
+    "arabic": "مُهَنْدِس",
+    "english": "engineer",
+    "r": 5,
+    "c": 8,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سياحة",
+    "arabic": "السِّياحة",
+    "english": "tourism",
+    "r": 5,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تجربة",
+    "arabic": "تَجْرِبة",
+    "english": "(an) experience",
+    "r": 0,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عاطفي",
+    "arabic": "عاطِفيّ",
+    "english": "emotional, romantic",
+    "r": 6,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تبادل",
+    "arabic": "تَبادَلَ",
+    "english": "to exchange (news, opinions, etc.)",
+    "r": 3,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "علاقة",
+    "arabic": "عَلاقة",
+    "english": ",relationship",
+    "r": 7,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تجمع",
+    "arabic": "تَجَمَّعَ",
+    "english": "to gather together",
+    "r": 5,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "خطبت",
+    "arabic": "خُطِبَت",
+    "english": "she got engaged to",
+    "r": 2,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "تعرف",
+    "arabic": "تَعَرَّف",
+    "english": "to get to know, meet",
+    "r": 6,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "غالي",
+    "arabic": "غالي",
+    "english": "expensive",
+    "r": 0,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "فندق",
+    "arabic": "فُندُق",
+    "english": "hotel",
+    "r": 9,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "معظم",
+    "arabic": "مُعظَم",
+    "english": "most (of)",
+    "r": 4,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "جولة",
+    "arabic": "جَولة",
+    "english": "tour",
+    "r": 1,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مرة",
+    "arabic": "مَرّة",
+    "english": "once, (one) time; pl. times",
+    "r": 9,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سوق",
+    "arabic": "سوق",
+    "english": "market",
+    "r": 6,
+    "c": 4,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "جبل",
+    "arabic": "جَبَل",
+    "english": "mountain",
+    "r": 2,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عدة",
+    "arabic": "عِدّة",
+    "english": "several",
+    "r": 10,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "معا",
+    "arabic": "مَعاً",
+    "english": "together",
+    "r": 6,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "بحر",
+    "arabic": "بَحر",
+    "english": "sea",
+    "r": 3,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "خجل",
+    "arabic": "الخَجَل",
+    "english": "shyness, embarrassment",
+    "r": 10,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   }
+  ]
+ },
+ "b2-u12": {
+  "rows": 12,
+  "cols": 12,
+  "grid": [
+   "ذنخرجميعازمخ",
+   "خفرغتتزغغادا",
+   "اقبقلجفغبراغ",
+   "نريتةلطعرنقف",
+   "نتغاجازةخمخم",
+   "عنتقضىهقاقلد",
+   "ايكانهسضصاكي",
+   "كعاارغقمكرجر",
+   "تننحاةةربنضف",
+   "هوىعاعحناضات",
+   "ينبفللنصقروب",
+   "حطوفاممهضهكذ"
+  ],
+  "words": [
+   {
+    "answer": "اجازة",
+    "arabic": "إجازة",
+    "english": "vacation (from work)",
+    "r": 4,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مقارن",
+    "arabic": "مُقارَن",
+    "english": "comparative",
+    "r": 4,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "جميعا",
+    "arabic": "جَميعاً",
+    "english": "all together",
+    "r": 0,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "منحة",
+    "arabic": "مِنْحة",
+    "english": "scholarship award, grant, fellowship",
+    "r": 11,
+    "c": 6,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "هناك",
+    "arabic": "هُناك",
+    "english": "there",
+    "r": 6,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عينت",
+    "arabic": "عُيِّنْتُ",
+    "english": "I was appointed",
+    "r": 7,
+    "c": 1,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "وفاة",
+    "arabic": "وَفاة",
+    "english": "= موت",
+    "r": 11,
+    "c": 2,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "قرار",
+    "arabic": "قَرار",
+    "english": "decision",
+    "r": 7,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مدير",
+    "arabic": "مُدير",
+    "english": "director",
+    "r": 4,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تغيب",
+    "arabic": "تَغَيَّبَ",
+    "english": "to be absent from, miss",
+    "r": 5,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "قادم",
+    "arabic": "قادِم",
+    "english": "coming, next (week, year, etc.)",
+    "r": 3,
+    "c": 10,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "طبعا",
+    "arabic": "طَبْعاً",
+    "english": "of course, naturally",
+    "r": 11,
+    "c": 1,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "عطلة",
+    "arabic": "عُطلة",
+    "english": "holiday, vacation (official)",
+    "r": 3,
+    "c": 7,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "علم",
+    "arabic": "عَلِمَ",
+    "english": "to learn of, know",
+    "r": 9,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "قرر",
+    "arabic": "قَرَّرَ",
+    "english": "to decide to",
+    "r": 2,
+    "c": 1,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "اخذ",
+    "arabic": "أَخَذَ",
+    "english": "to take",
+    "r": 2,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "هنا",
+    "arabic": "هُنا",
+    "english": "here",
+    "r": 9,
+    "c": 0,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "قضى",
+    "arabic": "قَضى",
+    "english": "to spend (time)",
+    "r": 5,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اخر",
+    "arabic": "آخِر",
+    "english": "...the last",
+    "r": 5,
+    "c": 8,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "زار",
+    "arabic": "زارَ",
+    "english": "to visit",
+    "r": 0,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   }
+  ]
+ },
+ "b2-u13": {
+  "rows": 12,
+  "cols": 12,
+  "grid": [
+   "فرصةشاسنلعيى",
+   "وظيفةقنخذظقح",
+   "هغخحالدتفغرر",
+   "درصلسلجههكطا",
+   "طبشصتقوبةىرد",
+   "هةجفقغغاخيرا",
+   "ضاعسرراةلجمخ",
+   "تبسانمفىلشفي",
+   "اممرحدقكعملح",
+   "شنعسمقالةجكة",
+   "تنجيرعقذينعي",
+   "ظارصنحغككجحر"
+  ],
+  "words": [
+   {
+    "answer": "مناسب",
+    "arabic": "مُناسِب",
+    "english": "appropriate, suitable (for)",
+    "r": 7,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "اخيرا",
+    "arabic": "أَخيراً",
+    "english": "finally, at last",
+    "r": 5,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "انتهى",
+    "arabic": "اِنْتهى",
+    "english": "to finish (something)",
+    "r": 0,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "استقر",
+    "arabic": "اِسْتَقَرَّ",
+    "english": "to settle down, become stable",
+    "r": 2,
+    "c": 4,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "وظيفة",
+    "arabic": "وَظيفة",
+    "english": "position, job",
+    "r": 1,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مقالة",
+    "arabic": "مَقالة",
+    "english": "article (e.g., in a newspaper)",
+    "r": 9,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مجلة",
+    "arabic": "مَجَلَّة",
+    "english": "magazine, journal",
+    "r": 6,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "غربة",
+    "arabic": "الغُربة",
+    "english": "longing for one’s native land; feeling of being a stranger; homesickness",
+    "r": 2,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "يعني",
+    "arabic": "يَعني",
+    "english": "it means",
+    "r": 10,
+    "c": 11,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "كذلك",
+    "arabic": "كَذلِكَ",
+    "english": "likewise, also",
+    "r": 11,
+    "c": 7,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "مسرح",
+    "arabic": "مَسرَح",
+    "english": "theater",
+    "r": 8,
+    "c": 2,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "فرصة",
+    "arabic": "فُرْصة",
+    "english": "opportunity, chance",
+    "r": 0,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "وجد",
+    "arabic": "وَجَدَ",
+    "english": "to find",
+    "r": 4,
+    "c": 6,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "شجع",
+    "arabic": "شَجَّعَ",
+    "english": "to encourage (someone) to",
+    "r": 4,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "رغب",
+    "arabic": "رَغِبَ",
+    "english": "to desire, wish to",
+    "r": 6,
+    "c": 5,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "فشل",
+    "arabic": "فَشِلَ",
+    "english": "to fail (at, in)",
+    "r": 7,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "حلم",
+    "arabic": "حُلْم",
+    "english": "dream",
+    "r": 8,
+    "c": 11,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "فصل",
+    "arabic": "فَصَلَ",
+    "english": "to dismiss, fire (from a job)",
+    "r": 5,
+    "c": 3,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "رجع",
+    "arabic": "رَجَعَ",
+    "english": "= عاد ، يعود",
+    "r": 11,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "فكر",
+    "arabic": "فَكَّرَ",
+    "english": "to think about (doing something)",
+    "r": 2,
+    "c": 8,
+    "dr": 1,
+    "dc": 1
+   }
+  ]
+ },
+ "b3-u1": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "لحةيصوصخةقشغذرب",
+   "اهذفيمسبحيهبلفو",
+   "ليجامؤقتجياحقهط",
+   "فججذةحارليتمصقخ",
+   "ديقاةركفثبشاتبم",
+   "لطاةرضلاعدطملاب",
+   "دلتسطيسبمابزقطر",
+   "شازيفةامحيخحتقل",
+   "تقتنوخطيبةؤهناا",
+   "لزلكقاقجانبناسخ",
+   "بعهيوبدطمعجصيتل",
+   "قجامحنامكانفياا",
+   "تحديقةسقؤذكرلجف",
+   "سعرتمفمورمطبخرح",
+   "اقننسثدحتااهصطج"
+  ],
+  "words": [
+   {
+    "answer": "خصوصية",
+    "arabic": "خُصوصِيّة",
+    "english": "privacy",
+    "r": 0,
+    "c": 7,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "استقبل",
+    "arabic": "اِستَقبَلَ",
+    "english": "to receive, to welcome someone",
+    "r": 14,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "استاجر",
+    "arabic": "اِستَأجَرَ",
+    "english": "to rent",
+    "r": 8,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مخطوب",
+    "arabic": "مَخطوب",
+    "english": "engaged (of a woman or couple)",
+    "r": 4,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "حديقة",
+    "arabic": "حَديقة",
+    "english": "garden, yard, park",
+    "r": 12,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "انتقل",
+    "arabic": "اِنْتَقَلَ",
+    "english": "to move to",
+    "r": 9,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "بداية",
+    "arabic": "بِداية",
+    "english": "beginning",
+    "r": 4,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ايجار",
+    "arabic": "الإيجار",
+    "english": "rent",
+    "r": 1,
+    "c": 0,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "كنيسة",
+    "arabic": "كَنيسة",
+    "english": "church",
+    "r": 9,
+    "c": 3,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "جانب",
+    "arabic": "جانِب",
+    "english": "side",
+    "r": 9,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "بسيط",
+    "arabic": "بَسيط",
+    "english": "simple",
+    "r": 6,
+    "c": 7,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "حماة",
+    "arabic": "حَماة",
+    "english": "mother-in-law",
+    "r": 7,
+    "c": 8,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مؤقت",
+    "arabic": "مُؤَقَّت",
+    "english": "temporary",
+    "r": 2,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "طابق",
+    "arabic": "طابِق",
+    "english": "floor, story",
+    "r": 6,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "مطبخ",
+    "arabic": "مَطبَخ",
+    "english": "kitchen",
+    "r": 13,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فكرة",
+    "arabic": "فِكرة",
+    "english": "idea",
+    "r": 4,
+    "c": 7,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مكان",
+    "arabic": "مَكان",
+    "english": "place",
+    "r": 11,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "حمام",
+    "arabic": "حَمّام",
+    "english": "bathroom, bath, bathhouse",
+    "r": 2,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تكون",
+    "arabic": "تَكَوَّنَ",
+    "english": "to consist of, to be made up of",
+    "r": 8,
+    "c": 2,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "طلاق",
+    "arabic": "الطَّلاق",
+    "english": "divorce",
+    "r": 5,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "راحة",
+    "arabic": "راحة",
+    "english": "comfort, ease",
+    "r": 3,
+    "c": 7,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "الرب",
+    "arabic": "الرَّبّ",
+    "english": "God, (our) Lord",
+    "r": 8,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "خطيب",
+    "arabic": "خَطيب",
+    "english": "fiancé/fiancée",
+    "r": 8,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مسبح",
+    "arabic": "مَسبَح",
+    "english": "swimming pool",
+    "r": 1,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "خلاف",
+    "arabic": "خِلاف",
+    "english": "disagreement, dispute",
+    "r": 9,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ذكر",
+    "arabic": "ذَكَرَ",
+    "english": "to recall",
+    "r": 12,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اهل",
+    "arabic": "الأَهل",
+    "english": "folks, family",
+    "r": 11,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اعد",
+    "arabic": "أعَدَّ",
+    "english": "to prepare, get (something) ready",
+    "r": 14,
+    "c": 0,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "فوق",
+    "arabic": "فَوْق",
+    "english": "above; upstairs",
+    "r": 7,
+    "c": 4,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "جيل",
+    "arabic": "جيل",
+    "english": "generation",
+    "r": 2,
+    "c": 2,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عدم",
+    "arabic": "عَدَم",
+    "english": "( negates a) -non",
+    "r": 13,
+    "c": 1,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "حدث",
+    "arabic": "حَدَثَ",
+    "english": "to happen",
+    "r": 14,
+    "c": 7,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "شقة",
+    "arabic": "شَقّة",
+    "english": "apartment",
+    "r": 0,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "طبخ",
+    "arabic": "طَبَخَ",
+    "english": "to cook",
+    "r": 5,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   }
+  ]
+ },
+ "b3-u2": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "سبلصتكخللثنغءصد",
+   "مشواقاةعيبطغويت",
+   "لةيلاجحددنتةامس",
+   "عنسمجموعةةيوهقة",
+   "تملكزاتطصخشخاثع",
+   "غبضاغكلارشحاخعع",
+   "ميلعتمىبنمعبثذش",
+   "احمسيلكضستفثحبخ",
+   "اخيمنمشغولشاااص",
+   "للصنعمدىونمرشجي",
+   "يفءتلهغجفغاعتنة",
+   "كهاشماسدادزاربب",
+   "شاذرعجاضتملحكيق",
+   "دجحغهرذطماعقاجي",
+   "ارهلحمطناتسفغرب"
+  ],
+  "words": [
+   {
+    "answer": "مجموعة",
+    "arabic": "مَجموعة",
+    "english": "(a) group (of)",
+    "r": 3,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اشترك",
+    "arabic": "اِشتَرَكَ",
+    "english": "to share, have in common, participate in",
+    "r": 8,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "طبيعة",
+    "arabic": "طَبيعة",
+    "english": "nature",
+    "r": 1,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "ازداد",
+    "arabic": "اِزدادَ",
+    "english": "to increase, become larger (of a number)",
+    "r": 11,
+    "c": 11,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "فستان",
+    "arabic": "فُستان",
+    "english": "(a) dress",
+    "r": 14,
+    "c": 11,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "اجنبي",
+    "arabic": "أَجنبَيّ",
+    "english": "foreign, foreigner",
+    "r": 8,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تعليم",
+    "arabic": "التَّعليم",
+    "english": "education",
+    "r": 6,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "جالية",
+    "arabic": "جالِية",
+    "english": "community of immigrants, expatriate community",
+    "r": 2,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "انتشر",
+    "arabic": "اِنتَشَرَ",
+    "english": "to be spread out, to spread (intransitive)",
+    "r": 5,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مهاجر",
+    "arabic": "مُهاجِر",
+    "english": "immigrant",
+    "r": 9,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مشغول",
+    "arabic": "مَشغول",
+    "english": "too busy (to have time) for",
+    "r": 8,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "منتشر",
+    "arabic": "مُنتَشِر",
+    "english": "spread out, widespread",
+    "r": 8,
+    "c": 3,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "شخصية",
+    "arabic": "شَخصِيّة",
+    "english": "personality, character",
+    "r": 6,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تعلم",
+    "arabic": "تَعَلَّمَ",
+    "english": "to learn",
+    "r": 4,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "يسمح",
+    "arabic": "يَسمَح",
+    "english": "to (do)",
+    "r": 7,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "هوية",
+    "arabic": "هُوِيّة",
+    "english": "identity",
+    "r": 3,
+    "c": 12,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "هاجر",
+    "arabic": "هاجَرَ",
+    "english": "to emigrate, immigrate",
+    "r": 11,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اكمل",
+    "arabic": "أَكمَلَ",
+    "english": "to complete, finish (something)",
+    "r": 4,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "حذاء",
+    "arabic": "حِذاء",
+    "english": "(a pair of) shoes",
+    "r": 13,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "غاضب",
+    "arabic": "غاضِب",
+    "english": "angry",
+    "r": 5,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "قميص",
+    "arabic": "قَميص",
+    "english": "shirt",
+    "r": 3,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "محل",
+    "arabic": "مَحَلّ",
+    "english": "shop, store",
+    "r": 14,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "شخص",
+    "arabic": "شَخص",
+    "english": "person",
+    "r": 4,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "نوى",
+    "arabic": "نَوى",
+    "english": "to intend to",
+    "r": 9,
+    "c": 9,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عام",
+    "arabic": "عام",
+    "english": "= سنة",
+    "r": 13,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "علم",
+    "arabic": "عَلَّمَ",
+    "english": "to teach, educate (someone)",
+    "r": 9,
+    "c": 4,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "بحث",
+    "arabic": "بَحَثَ",
+    "english": "to look for, search for",
+    "r": 7,
+    "c": 13,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "لبس",
+    "arabic": "لَبِسَ",
+    "english": "to wear, put on (clothes)",
+    "r": 0,
+    "c": 2,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "حدد",
+    "arabic": "حَدَّدَ",
+    "english": "to determine, set (e.g., a time, topic)",
+    "r": 2,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "غضب",
+    "arabic": "غَضِبَ",
+    "english": "to get angry",
+    "r": 8,
+    "c": 7,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "ملك",
+    "arabic": "مَلَكَ",
+    "english": "to own, possess",
+    "r": 4,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "بقي",
+    "arabic": "بَقِيَ",
+    "english": "to remain, stay",
+    "r": 11,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "غرب",
+    "arabic": "غَرب",
+    "english": "west",
+    "r": 14,
+    "c": 12,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "سمح",
+    "arabic": "سَمَحَ",
+    "english": "to permit ( someone)",
+    "r": 7,
+    "c": 8,
+    "dr": -1,
+    "dc": 1
+   }
+  ]
+ },
+ "b3-u3": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "لتغفاصلحميئقلمع",
+   "ماشترىتشغاضصصاك",
+   "شعدجبهذلذروبراد",
+   "هحتافئيحيستلسغح",
+   "واقوفصتنملاركبر",
+   "رغحلنفجنرجرغتمي",
+   "يجبمبقبلطمموسير",
+   "ضهتمرسخاهداررضب",
+   "هدنتسمتزسمدسهمف",
+   "زغمسلتالاتيزشما",
+   "سوباعوعللنعدكقف",
+   "فنرتبرندئوةدرشل",
+   "فضفةطوففنحخزرطط",
+   "ضلجذاتمكنكاشعسه",
+   "ةحائطةزكطيضمواغ"
+  ],
+  "words": [
+   {
+    "answer": "استعد",
+    "arabic": "اِسْتَعَدَّ",
+    "english": ",to get ready for prepare oneself for",
+    "r": 7,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مشهور",
+    "arabic": "مَشهور",
+    "english": "famous",
+    "r": 1,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "رمادي",
+    "arabic": "رَمادِيّ",
+    "english": "grey",
+    "r": 5,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "منتصف",
+    "arabic": "مُنْتَصَف",
+    "english": "mid-, middle of (time period)",
+    "r": 4,
+    "c": 8,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مستعد",
+    "arabic": "مُستَعِدّ",
+    "english": "ready, prepared for",
+    "r": 7,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "خزانة",
+    "arabic": "خِزانة",
+    "english": "closet",
+    "r": 7,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "ترتيب",
+    "arabic": "تَرتيب",
+    "english": "arrangement",
+    "r": 3,
+    "c": 10,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "اشترى",
+    "arabic": "اِشتَرى",
+    "english": "to buy, purchase",
+    "r": 1,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "شرشف",
+    "arabic": "شَرشَف",
+    "english": "(bed) sheet",
+    "r": 13,
+    "c": 11,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "ازرق",
+    "arabic": "أَزرَق",
+    "english": "blue",
+    "r": 13,
+    "c": 10,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "براد",
+    "arabic": "بَرّاد",
+    "english": "refrigerator",
+    "r": 2,
+    "c": 11,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فوطة",
+    "arabic": "فوطة",
+    "english": "towel",
+    "r": 12,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "فاتح",
+    "arabic": "فاتِح",
+    "english": "light (in color)",
+    "r": 3,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "حرير",
+    "arabic": "حَرير",
+    "english": "silk",
+    "r": 3,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ارسل",
+    "arabic": "أَرسَلَ",
+    "english": "to send",
+    "r": 1,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اصلح",
+    "arabic": "أَصلَحَ",
+    "english": "to repair, repairing",
+    "r": 0,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "معطل",
+    "arabic": "مُعَطَّل",
+    "english": "broken",
+    "r": 14,
+    "c": 11,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "احمر",
+    "arabic": "أَحمَر",
+    "english": "red",
+    "r": 4,
+    "c": 1,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "تمكن",
+    "arabic": "تَمَكَّنَ",
+    "english": "to be able to",
+    "r": 13,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "حائط",
+    "arabic": "حائِط",
+    "english": "wall",
+    "r": 14,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "لون",
+    "arabic": "لَوْن",
+    "english": "color",
+    "r": 9,
+    "c": 4,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "قبل",
+    "arabic": "قَبِلَ",
+    "english": "to accept",
+    "r": 6,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "شهر",
+    "arabic": "شَهْر",
+    "english": "month",
+    "r": 9,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "يجب",
+    "arabic": "يَجِب",
+    "english": "it is necessary",
+    "r": 6,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ذهب",
+    "arabic": "ذَهَب",
+    "english": "gold; golden",
+    "r": 2,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "وصل",
+    "arabic": "وَصَلَ",
+    "english": "to arrive",
+    "r": 2,
+    "c": 10,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "رتب",
+    "arabic": "رَتَّبَ",
+    "english": "to arrange",
+    "r": 11,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "رسم",
+    "arabic": "رَسَمَ",
+    "english": "to draw",
+    "r": 7,
+    "c": 11,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "وسط",
+    "arabic": "وَسَط",
+    "english": "middle, center (location)",
+    "r": 14,
+    "c": 12,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "غسل",
+    "arabic": "غَسَلَ",
+    "english": "to wash (something)",
+    "r": 3,
+    "c": 13,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "قسم",
+    "arabic": "قِسْم",
+    "english": "part, section, department",
+    "r": 6,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "باع",
+    "arabic": "باعَ",
+    "english": "to sell",
+    "r": 10,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فضة",
+    "arabic": "فِضّة",
+    "english": "silver; silver (color)",
+    "r": 12,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سعر",
+    "arabic": "سِعر",
+    "english": "price",
+    "r": 9,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   }
+  ]
+ },
+ "b3-u4": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "حمقدسيميضاعدهشغ",
+   "تليمللتدقتعاجخا",
+   "لىلوتوضعدءامسان",
+   "جياشرقيتمقشضهبش",
+   "سفجعاصمةجصمنفطغ",
+   "فزتتمسلسلاععبسل",
+   "ممملارادرصطاكنف",
+   "اقعاجوشهضءسممفع",
+   "خةهدهحرعلارتاشل",
+   "تلةىيسفمسخزجقنق",
+   "لحفحرفبرةهياالل",
+   "فرياضتعزقلدضقءد",
+   "لفحغففيشحاداتعا",
+   "وصصربطلمواجنجمن",
+   "امنلذبرةبجولصضن"
+  ],
+  "words": [
+   {
+    "answer": "اجتماع",
+    "arabic": "اِجتِماع",
+    "english": "meeting",
+    "r": 10,
+    "c": 11,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "انشغل",
+    "arabic": "اِنشَغَلَ",
+    "english": "to be/become (pre)occupied with",
+    "r": 1,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اختلف",
+    "arabic": "اِختَلَفَ",
+    "english": "to have a disagreement, dispute with",
+    "r": 7,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اعتقد",
+    "arabic": "أعتَقِد",
+    "english": "I believe that",
+    "r": 1,
+    "c": 11,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عاصمة",
+    "arabic": "عاصِمة",
+    "english": "capital",
+    "r": 4,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صحيفة",
+    "arabic": "صَحيفة",
+    "english": "= جريدة",
+    "r": 13,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اجتمع",
+    "arabic": "اِجتَمَعَ",
+    "english": "to meet, gather (with)",
+    "r": 3,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اعتاد",
+    "arabic": "اِعتادَ",
+    "english": "to get used to, accustomed to",
+    "r": 12,
+    "c": 14,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مسلسل",
+    "arabic": "مُسَلْسَل",
+    "english": "television series or serial",
+    "r": 5,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "سحور",
+    "arabic": "السُّحور",
+    "english": "meal eaten before dawn during Ramadan",
+    "r": 9,
+    "c": 5,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "وجبة",
+    "arabic": "وَجْبة",
+    "english": "meal",
+    "r": 14,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "معهد",
+    "arabic": "مَعهَد",
+    "english": "institute",
+    "r": 9,
+    "c": 7,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "مقدس",
+    "arabic": "مُقَدَّس",
+    "english": "holy",
+    "r": 0,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "افطر",
+    "arabic": "أَفطَرَ",
+    "english": "to break one’s fast, especially in Ramadan; to have breakfast",
+    "r": 11,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مقهى",
+    "arabic": "مَقهَى",
+    "english": "café",
+    "r": 6,
+    "c": 0,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "تولى",
+    "arabic": "تَوَلّى",
+    "english": "to undertake, assume (a task or position)",
+    "r": 2,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "شرقي",
+    "arabic": "شَرقِيّ",
+    "english": "oriental, Middle Eastern",
+    "r": 3,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "رحلة",
+    "arabic": "رِحْلة",
+    "english": "trip",
+    "r": 11,
+    "c": 1,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اشرف",
+    "arabic": "أَشْرَفَ",
+    "english": "to supervise",
+    "r": 6,
+    "c": 6,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "طباخ",
+    "arabic": "طَبّاخ",
+    "english": "cook, chef",
+    "r": 4,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "سماء",
+    "arabic": "السَّماء",
+    "english": "sky, heavens",
+    "r": 2,
+    "c": 12,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "محلي",
+    "arabic": "مَحَلّيّ",
+    "english": "location, place local",
+    "r": 13,
+    "c": 7,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "دعا",
+    "arabic": "دَعا",
+    "english": "to invite",
+    "r": 0,
+    "c": 11,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "قام",
+    "arabic": "قامَ",
+    "english": "to get up",
+    "r": 9,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "عرس",
+    "arabic": "عُرس",
+    "english": "wedding",
+    "r": 11,
+    "c": 6,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "نجم",
+    "arabic": "نَجم",
+    "english": "star",
+    "r": 13,
+    "c": 11,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "وضع",
+    "arabic": "وَضَعَ",
+    "english": "to put, place (something)",
+    "r": 2,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "امن",
+    "arabic": "آمَنَ",
+    "english": "to believe in",
+    "r": 14,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فرح",
+    "arabic": "فَرَح",
+    "english": "happiness happy occasion (such as wedding, graduation)",
+    "r": 10,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "جاء",
+    "arabic": "جاءَ",
+    "english": "to bring",
+    "r": 9,
+    "c": 11,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "ملل",
+    "arabic": "المَلَل",
+    "english": "boredom",
+    "r": 1,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "طعم",
+    "arabic": "طَعْم",
+    "english": "flavor",
+    "r": 6,
+    "c": 10,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "قلق",
+    "arabic": "قَلَق",
+    "english": "nervousness, anxiety",
+    "r": 11,
+    "c": 12,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "فعل",
+    "arabic": "فَعَلَ",
+    "english": "to do (something)",
+    "r": 6,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   }
+  ]
+ },
+ "b3-u5": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "ننوخةقثؤفههجومر",
+   "اجدعيثنواخلاقحج",
+   "قذجربماتئسحاولل",
+   "شمختلفكطةذلطهيح",
+   "رافليقثمقتمعبحر",
+   "لاتفذركعاشحجزءت",
+   "خكنمختشددنخحذكي",
+   "خشاهفاديصبواثقي",
+   "اكقايغكرقليلبرغ",
+   "ئلشءفاابثقثابهز",
+   "فتيقطيتضوةبتمقر",
+   "متفوقذمغكشعاةخف",
+   "شةؤبدؤمثاامعيام",
+   "تجحاياشاءدهتاره",
+   "شغلابدامضارهدجم"
+  ],
+  "words": [
+   {
+    "answer": "تناقش",
+    "arabic": "تَناقَشَ",
+    "english": "to discuss with (someone)",
+    "r": 5,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "متاكد",
+    "arabic": "مُتَأَكِّد",
+    "english": "certain, sure (of/that)",
+    "r": 11,
+    "c": 6,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "صداقة",
+    "arabic": "صَداقَة",
+    "english": "friendship",
+    "r": 7,
+    "c": 8,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "متفوق",
+    "arabic": "مُتَفَوِّق",
+    "english": "superior",
+    "r": 11,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اخلاق",
+    "arabic": "أَخلاق",
+    "english": "morals",
+    "r": 1,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اعتبر",
+    "arabic": "اِعتَبَرَ",
+    "english": "to consider (someone or something to be)",
+    "r": 12,
+    "c": 9,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "مختلف",
+    "arabic": "مُختَلِف",
+    "english": "different from",
+    "r": 3,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "غادر",
+    "arabic": "غادَرَ",
+    "english": "to leave (a place)",
+    "r": 11,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "ابدا",
+    "arabic": "أَبَداً",
+    "english": "at all",
+    "r": 14,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "حاول",
+    "arabic": "حاوَلَ",
+    "english": "to try to, attempt",
+    "r": 2,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ثقيل",
+    "arabic": "ثَقيل",
+    "english": "heavy (in weight or substance)",
+    "r": 4,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "خفيف",
+    "arabic": "خَفيف",
+    "english": "light (in weight or substance)",
+    "r": 6,
+    "c": 4,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "واثق",
+    "arabic": "واثِق",
+    "english": "trusting, confident in",
+    "r": 7,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "خارج",
+    "arabic": "خارِج",
+    "english": "outside",
+    "r": 11,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ربما",
+    "arabic": "رُبَّما",
+    "english": "perhaps, maybe",
+    "r": 2,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ناقش",
+    "arabic": "ناقَش",
+    "english": "to discuss (something)",
+    "r": 0,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "خائف",
+    "arabic": "خائِف",
+    "english": "afraid",
+    "r": 7,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "بريد",
+    "arabic": "بَريد",
+    "english": "mail, post",
+    "r": 9,
+    "c": 7,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "مؤدب",
+    "arabic": "مُؤَدَّب",
+    "english": "polite, well-mannered",
+    "r": 12,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "شباب",
+    "arabic": "الشَّباب",
+    "english": "youth (stage of life)",
+    "r": 11,
+    "c": 9,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "اهم",
+    "arabic": "أَهَمّ",
+    "english": "most/more important",
+    "r": 8,
+    "c": 3,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "ثقة",
+    "arabic": "ثِقة",
+    "english": "trust, confidence",
+    "r": 0,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "شغل",
+    "arabic": "شَغَلَ",
+    "english": "to occupy, preoccupy",
+    "r": 14,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قلب",
+    "arabic": "قَلب",
+    "english": "heart",
+    "r": 9,
+    "c": 9,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "رجل",
+    "arabic": "رِجل",
+    "english": "leg",
+    "r": 0,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "رحب",
+    "arabic": "رَحَّبَ",
+    "english": "to welcome",
+    "r": 4,
+    "c": 14,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "وثق",
+    "arabic": "وَثِقَ",
+    "english": "to trust, have confidence in",
+    "r": 10,
+    "c": 8,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "شكل",
+    "arabic": "شَكل",
+    "english": "form, shape; “you look …” (شَكلُكَ …)",
+    "r": 7,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "جزء",
+    "arabic": "جُزء",
+    "english": "part of",
+    "r": 5,
+    "c": 11,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "خاف",
+    "arabic": "خافَ",
+    "english": "to be afraid for (someone)",
+    "r": 6,
+    "c": 0,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "وجه",
+    "arabic": "وَجه",
+    "english": "face",
+    "r": 0,
+    "c": 12,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "لمح",
+    "arabic": "لَمَّحَ",
+    "english": "to hint to (someone) that",
+    "r": 3,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مهم",
+    "arabic": "مُهِمّ",
+    "english": "important",
+    "r": 14,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "ذكي",
+    "arabic": "ذَكِيّ",
+    "english": "smart, intelligent",
+    "r": 6,
+    "c": 12,
+    "dr": 0,
+    "dc": 1
+   }
+  ]
+ },
+ "b3-u6": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "ةرقتايقعااديانا",
+   "نيذةلنيبمهكفعاي",
+   "اققرهدسيلدوفعبن",
+   "نفتاتملاظيلخندد",
+   "غاافخامزنةسوانش",
+   "فنرسماعرطسةرطكذ",
+   "طديقدسهااقغوحيع",
+   "حاخوقزنتكرامةمب",
+   "افدضظنهخفيطاغلل",
+   "جعلعادصالدنحاخذ",
+   "ةىطعاةطساودتضذا",
+   "صاررخفاجرىاررطت",
+   "تصرفذلحهااحموبس",
+   "ذراولاسجاتحارلج",
+   "لحطفلمدقلفحذيطت"
+  ],
+  "words": [
+   {
+    "answer": "تاريخ",
+    "arabic": "تاريخ",
+    "english": "date",
+    "r": 3,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "كرامة",
+    "arabic": "كَرامة",
+    "english": "dignity",
+    "r": 7,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "احتاج",
+    "arabic": "اِحتاجَ",
+    "english": "to need",
+    "r": 13,
+    "c": 11,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "سفارة",
+    "arabic": "سِفارة",
+    "english": "embassy",
+    "r": 5,
+    "c": 3,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اختار",
+    "arabic": "اِختارَ",
+    "english": "to choose",
+    "r": 9,
+    "c": 7,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "واسطة",
+    "arabic": "واسِطة",
+    "english": "connections, influential contacts",
+    "r": 10,
+    "c": 9,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "احترم",
+    "arabic": "اِحتَرَمَ",
+    "english": "to respect",
+    "r": 8,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ضروري",
+    "arabic": "ضَروريّ",
+    "english": "necessary",
+    "r": 10,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "انسان",
+    "arabic": "إنسان",
+    "english": "human being, (pl.) people",
+    "r": 0,
+    "c": 4,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "فقير",
+    "arabic": "فَقير",
+    "english": "poor",
+    "r": 3,
+    "c": 1,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "تصرف",
+    "arabic": "تَصَرَّفَ",
+    "english": "to act, behave",
+    "r": 12,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "سلوك",
+    "arabic": "سُلوك",
+    "english": "behavior (in general)",
+    "r": 4,
+    "c": 10,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "دافع",
+    "arabic": "دافِع",
+    "english": "impetus, motive",
+    "r": 6,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "هدية",
+    "arabic": "هَدِيّة",
+    "english": "gift, present",
+    "r": 1,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مالي",
+    "arabic": "مالِيّ",
+    "english": "financial",
+    "r": 5,
+    "c": 4,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "دنيا",
+    "arabic": "الدُّنيا",
+    "english": "the world, this world",
+    "r": 3,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "فخور",
+    "arabic": "فَخور",
+    "english": "proud of",
+    "r": 2,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اعطى",
+    "arabic": "أَعطى",
+    "english": "to give",
+    "r": 10,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "حاجة",
+    "arabic": "حاجة",
+    "english": "(a) need",
+    "r": 7,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "فخر",
+    "arabic": "فَخر",
+    "english": "pride",
+    "r": 11,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "الف",
+    "arabic": "أَلف",
+    "english": "thousand",
+    "r": 10,
+    "c": 8,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اخذ",
+    "arabic": "أُخِذ",
+    "english": "it was taken",
+    "r": 9,
+    "c": 12,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "طلب",
+    "arabic": "طَلَبَ",
+    "english": "to ask of (someone to)",
+    "r": 14,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "احس",
+    "arabic": "أَحَسَّ",
+    "english": "= شعر بـ",
+    "r": 11,
+    "c": 6,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ظلم",
+    "arabic": "ظُلم",
+    "english": "injustice",
+    "r": 3,
+    "c": 8,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "طفل",
+    "arabic": "طِفل",
+    "english": "child",
+    "r": 14,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قدس",
+    "arabic": "القُدس",
+    "english": "Jerusalem",
+    "r": 6,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "دفع",
+    "arabic": "دَفَعَ",
+    "english": "to push; to pay",
+    "r": 0,
+    "c": 10,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "جرى",
+    "arabic": "جَرى",
+    "english": "to run",
+    "r": 11,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قدم",
+    "arabic": "قَدَّمَ",
+    "english": "to present (e.g., gift, report, application)",
+    "r": 14,
+    "c": 7,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "وطن",
+    "arabic": "وَطَن",
+    "english": "homeland",
+    "r": 6,
+    "c": 11,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "غني",
+    "arabic": "غَنِيّ",
+    "english": "rich",
+    "r": 4,
+    "c": 0,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "حمل",
+    "arabic": "حَمَلَ",
+    "english": "to carry",
+    "r": 6,
+    "c": 12,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "وضع",
+    "arabic": "وَضْع",
+    "english": "situation",
+    "r": 7,
+    "c": 3,
+    "dr": 1,
+    "dc": 0
+   }
+  ]
+ },
+ "b3-u7": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "جمبحقمجريقظاجئص",
+   "لرطلتضااضلكاملع",
+   "احيهطباباةهةحدظ",
+   "حباكدبلطقستللاي",
+   "فصظحالعةشقفطفعم",
+   "صءملسظاةارقيواذ",
+   "واجتماعيقرنننلم",
+   "فلذضعلكرشنظسسةح",
+   "ضتددبنواكاخخةشق",
+   "عرناطلئاوامةضوي",
+   "دصظاوضةطيحملونق",
+   "صحراءاعلاتحشعبة",
+   "كعةرادخفبنرظنيش",
+   "قطعححكقرضقمجتمع",
+   "عودهرترجملعحفعع"
+  ],
+  "words": [
+   {
+    "answer": "اجتماعي",
+    "arabic": "اِجتِماعيّ",
+    "english": "social",
+    "r": 6,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صحراء",
+    "arabic": "صَحراء",
+    "english": "desert",
+    "r": 11,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اواخر",
+    "arabic": "أَواخِر",
+    "english": "last ones (e.g., days or years)",
+    "r": 9,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "اوائل",
+    "arabic": "أَوائِل",
+    "english": "first ones (e.g., days or years)",
+    "r": 9,
+    "c": 9,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "رابطة",
+    "arabic": "رابِطة",
+    "english": "tie, bond, link link (including internet link)",
+    "r": 0,
+    "c": 7,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مجتمع",
+    "arabic": "مُجتَمَع",
+    "english": "society",
+    "r": 13,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "حقيقة",
+    "arabic": "حَقيقة",
+    "english": "(a) truth, fact",
+    "r": 7,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سفينة",
+    "arabic": "سَفينة",
+    "english": "ship",
+    "r": 3,
+    "c": 9,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "اهتم",
+    "arabic": "اِهتَمَّ",
+    "english": "to be interested in",
+    "r": 3,
+    "c": 2,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "محيط",
+    "arabic": "مُحيط",
+    "english": "ocean, environment (physical and abstract)",
+    "r": 10,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "كامل",
+    "arabic": "كامِل",
+    "english": "entire, whole",
+    "r": 1,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "نظرة",
+    "arabic": "نَظْرة",
+    "english": "glance, look",
+    "r": 9,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "نسخة",
+    "arabic": "نُسخة",
+    "english": "copy",
+    "r": 6,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "لاحظ",
+    "arabic": "لاحَظَ",
+    "english": "to notice, remark, observe",
+    "r": 4,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "اعاد",
+    "arabic": "أعادَ",
+    "english": "to repeat, re-(do)",
+    "r": 5,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "ترجم",
+    "arabic": "تَرجَمَ",
+    "english": "to translate",
+    "r": 14,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "تنقل",
+    "arabic": "تَنَقَّلَ",
+    "english": "to move around",
+    "r": 11,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "شامل",
+    "arabic": "شامِل",
+    "english": "comprehensive",
+    "r": 7,
+    "c": 8,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "قاضي",
+    "arabic": "قاضي",
+    "english": "judge",
+    "r": 3,
+    "c": 8,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "طبعة",
+    "arabic": "طَبْعة",
+    "english": "printing, edition",
+    "r": 2,
+    "c": 4,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "عظيم",
+    "arabic": "عَظيم",
+    "english": "great",
+    "r": 1,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ضعف",
+    "arabic": "ضَعْف",
+    "english": "weakness",
+    "r": 10,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "طول",
+    "arabic": "طول",
+    "english": "length, height",
+    "r": 4,
+    "c": 11,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "دار",
+    "arabic": "دار",
+    "english": "house, abode",
+    "r": 12,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "بحق",
+    "arabic": "بِحَقّ",
+    "english": "truly, rightly so",
+    "r": 0,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "شعب",
+    "arabic": "شَعْب",
+    "english": "(a) people (political in connotation, refers to a national group)",
+    "r": 11,
+    "c": 11,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "وصف",
+    "arabic": "وَصَفَ",
+    "english": "to describe (as)",
+    "r": 6,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "نظر",
+    "arabic": "نَظَرَ",
+    "english": "to look at",
+    "r": 12,
+    "c": 12,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عصر",
+    "arabic": "عَصْر",
+    "english": "age, era, the Middle Ages",
+    "r": 9,
+    "c": 0,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "قرن",
+    "arabic": "قَرْن",
+    "english": "century",
+    "r": 6,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قطع",
+    "arabic": "قَطَعَ",
+    "english": "to cut, cut across (a distance)",
+    "r": 13,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "نشر",
+    "arabic": "نَشَرَ",
+    "english": "to publish; to spread (something, e.g., news)",
+    "r": 7,
+    "c": 9,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "حال",
+    "arabic": "حال",
+    "english": "state, condition",
+    "r": 3,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "طبع",
+    "arabic": "طَبَعَ",
+    "english": "to print, to type",
+    "r": 9,
+    "c": 4,
+    "dr": -1,
+    "dc": 0
+   }
+  ]
+ },
+ "b3-u8": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "ضخاندفهبنخيمةاخ",
+   "رغلالهرلحلقةنحم",
+   "ااكخنغنسماعلاند",
+   "داتعملجعضمزتفمع",
+   "زةوتعجولعهننسطم",
+   "فاشابنغقفيضاهلب",
+   "قحتةتطوجهسصبسوس",
+   "بعشملمةيناكمابس",
+   "وراسةبرظتنااهوة",
+   "كيراحطكةلبطبرعة",
+   "صسكفحةطخلجاعاود",
+   "دغعونتحئلشحيعنئ",
+   "طعارضنفاتيذدقتا",
+   "بنضعادةلنزجسويم",
+   "قحوقيلهزينةرتفه"
+  ],
+  "words": [
+   {
+    "answer": "امكانية",
+    "arabic": "إمكانِيّة",
+    "english": "possibility; (pl.) means",
+    "r": 7,
+    "c": 12,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مناسبة",
+    "arabic": "مُناسَبة",
+    "english": "occasion",
+    "r": 3,
+    "c": 9,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "معتاد",
+    "arabic": "مُعتاد",
+    "english": "customary",
+    "r": 3,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مائدة",
+    "arabic": "مائِدة",
+    "english": "(dining or banquet) table",
+    "r": 13,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "متنوع",
+    "arabic": "مُتَنَوِّع",
+    "english": "various",
+    "r": 7,
+    "c": 3,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "تشابه",
+    "arabic": "تَشابَهَ",
+    "english": "to resemble each other",
+    "r": 12,
+    "c": 8,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "اعلان",
+    "arabic": "إعلان",
+    "english": "advertisement",
+    "r": 2,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مطلوب",
+    "arabic": "مَطلوب",
+    "english": "sought after, in demand",
+    "r": 3,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "احتفل",
+    "arabic": "اِحتَفَلَ",
+    "english": "to celebrate",
+    "r": 9,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "تشارك",
+    "arabic": "تَشارَكَ",
+    "english": "to share with each other",
+    "r": 6,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "انتظر",
+    "arabic": "اِنتَظَرَ",
+    "english": "to wait for",
+    "r": 8,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "موقع",
+    "arabic": "مَوقِع",
+    "english": "site, website",
+    "r": 7,
+    "c": 5,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "طبلة",
+    "arabic": "طَبْلة",
+    "english": "drum",
+    "r": 9,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "زينة",
+    "arabic": "زينة",
+    "english": "decoration",
+    "r": 14,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "هلال",
+    "arabic": "هِلال",
+    "english": "crescent moon",
+    "r": 1,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عروس",
+    "arabic": "عَروس",
+    "english": "bride",
+    "r": 10,
+    "c": 11,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "حلقة",
+    "arabic": "حَلْقة",
+    "english": "circle, ring, episode",
+    "r": 1,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مغرب",
+    "arabic": "المَغرِب",
+    "english": "sunset",
+    "r": 3,
+    "c": 4,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "عادة",
+    "arabic": "عادة",
+    "english": "custom, habit",
+    "r": 13,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فترة",
+    "arabic": "فَترة",
+    "english": "period (of time)",
+    "r": 14,
+    "c": 13,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "نافس",
+    "arabic": "نافَسَ",
+    "english": "to compete with (someone) in",
+    "r": 1,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اعلن",
+    "arabic": "أَعلَنَ",
+    "english": "to announce",
+    "r": 5,
+    "c": 3,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "تنوع",
+    "arabic": "تَنَوَّعَ",
+    "english": "to vary",
+    "r": 12,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "عريس",
+    "arabic": "عَريس",
+    "english": "groom",
+    "r": 7,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "خليج",
+    "arabic": "الخَليج",
+    "english": "the (Persian) Gulf",
+    "r": 10,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "خيمة",
+    "arabic": "خَيمة",
+    "english": "tent",
+    "r": 0,
+    "c": 9,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عيد",
+    "arabic": "عيد",
+    "english": "holiday, feast day, day of celebration",
+    "r": 10,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "وقع",
+    "arabic": "وَقَعَ",
+    "english": "to fall, be located",
+    "r": 13,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "معد",
+    "arabic": "مُعَدّ",
+    "english": "prepared",
+    "r": 4,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "ارض",
+    "arabic": "أرْض",
+    "english": "earth, land, ground",
+    "r": 2,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "نوع",
+    "arabic": "نَوْع",
+    "english": "type, kind (of), variety",
+    "r": 11,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "طبق",
+    "arabic": "طَبَق",
+    "english": "plate, dish",
+    "r": 12,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ضيف",
+    "arabic": "ضَيْف",
+    "english": "guest",
+    "r": 5,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "حضر",
+    "arabic": "حَضَّرَ",
+    "english": "to prepare (something)",
+    "r": 14,
+    "c": 1,
+    "dr": -1,
+    "dc": 1
+   }
+  ]
+ },
+ "b3-u9": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "اضاالحزباثفنحبا",
+   "حضبىطغيعارضااطد",
+   "دظيخضرمتساااقطم",
+   "ثيقانطباعغتسخةش",
+   "شمراتصلايذصتلفه",
+   "خدروطةليسواضذاد",
+   "ةوثتحاتدكزلاوحخ",
+   "طنوجمةنغوغخفرصة",
+   "لةرهوتششثننتقيس",
+   "ساةحكمعيئشحظئخغ",
+   "جائزةادةمدخاردق",
+   "حلربيحماظنضتدمص",
+   "قااخفشحىخفمفاغي",
+   "دضثيلبرضوصضزنيد",
+   "لقاززقامعارضةنة"
+  ],
+  "words": [
+   {
+    "answer": "معارضة",
+    "arabic": "المُعارَضة",
+    "english": "opposition",
+    "r": 14,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فضائية",
+    "arabic": "فَضائِيّة",
+    "english": "satellite (channel)",
+    "r": 12,
+    "c": 9,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "استضاف",
+    "arabic": "اِستَضافَ",
+    "english": "to host (someone)",
+    "r": 2,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "انطباع",
+    "arabic": "اِنطِباع",
+    "english": "impression",
+    "r": 3,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مدونة",
+    "arabic": "مُدَوَّنة",
+    "english": "blog",
+    "r": 4,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "وسيلة",
+    "arabic": "وَسيلة",
+    "english": "means, way",
+    "r": 5,
+    "c": 9,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "اتصال",
+    "arabic": "اِتِّصال",
+    "english": "communication, contact",
+    "r": 2,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "قصيدة",
+    "arabic": "قَصيدة",
+    "english": "poem",
+    "r": 10,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "جائزة",
+    "arabic": "جائِزة",
+    "english": "prize",
+    "r": 10,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "استمر",
+    "arabic": "اِستَمَرَّ",
+    "english": "to continue to continue (doing something)",
+    "r": 2,
+    "c": 9,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "صحافة",
+    "arabic": "الصِّحافة",
+    "english": "(the) press; journalism",
+    "r": 7,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "حديث",
+    "arabic": "حَديث",
+    "english": "modern",
+    "r": 11,
+    "c": 5,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "خدمة",
+    "arabic": "خِدمة",
+    "english": "service",
+    "r": 10,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "تمتع",
+    "arabic": "تَمَتَّعَ",
+    "english": "to enjoy, have the benefit of",
+    "r": 6,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "رقيب",
+    "arabic": "رَقيب",
+    "english": "censor",
+    "r": 4,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "عارض",
+    "arabic": "عارَضَ",
+    "english": "to oppose",
+    "r": 1,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مشهد",
+    "arabic": "مَشهَد",
+    "english": "scene",
+    "r": 2,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "نادر",
+    "arabic": "نادِر",
+    "english": "rare",
+    "r": 13,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "انشئ",
+    "arabic": "أُنشِئَ",
+    "english": "it was established",
+    "r": 6,
+    "c": 5,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "اثار",
+    "arabic": "أَثارَ",
+    "english": "to stir up, arouse (e.g., emotion)",
+    "r": 14,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اتصل",
+    "arabic": "اِتَّصَلَ",
+    "english": "to contact (someone, e.g., by telephone)",
+    "r": 4,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "نظام",
+    "arabic": "نِظام",
+    "english": "system, order",
+    "r": 11,
+    "c": 9,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "ثورة",
+    "arabic": "ثَورة",
+    "english": "revolution",
+    "r": 6,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سلطة",
+    "arabic": "سُلْطة",
+    "english": "power",
+    "r": 9,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "حزب",
+    "arabic": "حِزب",
+    "english": "party (political)",
+    "r": 0,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ضرب",
+    "arabic": "ضَرَبَ",
+    "english": "to beat (physically)",
+    "r": 13,
+    "c": 7,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "خدم",
+    "arabic": "خَدَمَ",
+    "english": "to serve",
+    "r": 9,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "حدث",
+    "arabic": "حَدَث",
+    "english": "event",
+    "r": 1,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سقط",
+    "arabic": "سَقَطَ",
+    "english": "to fall, to fail",
+    "r": 3,
+    "c": 11,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "دون",
+    "arabic": "دَوَّنَ",
+    "english": "to record, write down",
+    "r": 6,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "خلق",
+    "arabic": "خَلَقَ",
+    "english": "to create",
+    "r": 12,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "حكم",
+    "arabic": "حَكَم",
+    "english": "to govern, rule",
+    "r": 9,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "غطى",
+    "arabic": "غَطّى",
+    "english": "to cover",
+    "r": 1,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "طور",
+    "arabic": "طَوَّرَ",
+    "english": "to develop (transitive)",
+    "r": 5,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   }
+  ]
+ },
+ "b3-u10": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "قكقبطالةزبقكعرل",
+   "جعليرماضلقفنالم",
+   "نسبنميحفاعلبللا",
+   "تىنجذزرجامرحادق",
+   "كدقاراوهحابةمفخ",
+   "صالفونهنصىتيسلف",
+   "ؤاكتخيمماهخلاها",
+   "مجصقصةجقءدمورنض",
+   "سشصرصلتفاملؤياا",
+   "تاجرىتاحىدضسنتط",
+   "ودرعضلكفداكمدىت",
+   "ىسقطاعنقرياقمنط",
+   "فمرحلةففقلتسنبم",
+   "لقانونعافسنححتن",
+   "ةيمكنشبوزجباديف"
+  ],
+  "words": [
+   {
+    "answer": "ميزانية",
+    "arabic": "ميزانِيّة",
+    "english": "budget",
+    "r": 1,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مسؤولية",
+    "arabic": "مَسؤولِيّة",
+    "english": "responsibility (for)",
+    "r": 10,
+    "c": 11,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "تحديتحد",
+    "arabic": "تَحَدّيتَحَدٍّ",
+    "english": "challenge",
+    "r": 8,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "راسمال",
+    "arabic": "رَأسمال",
+    "english": "capital capitalist",
+    "r": 7,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "افتقر",
+    "arabic": "اِفتَقَرَ",
+    "english": "to lack",
+    "r": 4,
+    "c": 3,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "قانون",
+    "arabic": "قانون",
+    "english": "law",
+    "r": 13,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "جمهور",
+    "arabic": "جُمهور",
+    "english": "public; audience; (pl.) masses, crowds",
+    "r": 7,
+    "c": 6,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "بطالة",
+    "arabic": "البِطالة",
+    "english": "unemployment",
+    "r": 0,
+    "c": 3,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مستوى",
+    "arabic": "مُستَوى",
+    "english": "level",
+    "r": 7,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "احصاء",
+    "arabic": "إحصاء",
+    "english": "statistic",
+    "r": 3,
+    "c": 8,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مرحلة",
+    "arabic": "مَرحَلة",
+    "english": "stage, phase",
+    "r": 12,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "مختبر",
+    "arabic": "مُختَبَر",
+    "english": "laboratory",
+    "r": 7,
+    "c": 10,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اضاف",
+    "arabic": "أَضافَ",
+    "english": "to add",
+    "r": 8,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اجرى",
+    "arabic": "أَجرى",
+    "english": "to conduct, carry out",
+    "r": 9,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فاعل",
+    "arabic": "فاعِل",
+    "english": "effective",
+    "r": 2,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قطاع",
+    "arabic": "قِطاع",
+    "english": "sector (e.g., public, private)",
+    "r": 11,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "وافق",
+    "arabic": "وافَقَ",
+    "english": "to be in agreement (with someone) on, approve",
+    "r": 14,
+    "c": 7,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "كمية",
+    "arabic": "كَمِّيّة",
+    "english": "quantity",
+    "r": 14,
+    "c": 3,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مدني",
+    "arabic": "مَدَنِيّ",
+    "english": "civil, civilian",
+    "r": 11,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "انفق",
+    "arabic": "أَنفَقَ",
+    "english": "to spend",
+    "r": 1,
+    "c": 12,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "تبنى",
+    "arabic": "تَبَنّى",
+    "english": "to adopt",
+    "r": 13,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "منهج",
+    "arabic": "مَنهَج",
+    "english": "method",
+    "r": 6,
+    "c": 7,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "نقل",
+    "arabic": "نَقَلَ",
+    "english": "to copy (by hand, especially in an exam)",
+    "r": 3,
+    "c": 2,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "قيم",
+    "arabic": "قَيَّمَ",
+    "english": "to evaluate",
+    "r": 0,
+    "c": 2,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "نمط",
+    "arabic": "نَمَط",
+    "english": "type, pattern typical, patterned",
+    "r": 13,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "ادى",
+    "arabic": "أَدَّى",
+    "english": "to lead to",
+    "r": 5,
+    "c": 1,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "نفى",
+    "arabic": "نَفى",
+    "english": "to negate; to deny (the truth of)",
+    "r": 11,
+    "c": 6,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "خصص",
+    "arabic": "خَصَّصَ",
+    "english": "to designate (e.g., funds) for",
+    "r": 6,
+    "c": 4,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "جنس",
+    "arabic": "جِنس",
+    "english": "gender, sex",
+    "r": 14,
+    "c": 9,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "امل",
+    "arabic": "أَمَل",
+    "english": "hope",
+    "r": 8,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قاد",
+    "arabic": "قادَ",
+    "english": "to lead to drive",
+    "r": 7,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "فقر",
+    "arabic": "الفَقر",
+    "english": "poverty",
+    "r": 13,
+    "c": 8,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "جعل",
+    "arabic": "جَعَلَ",
+    "english": "to make",
+    "r": 1,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فسر",
+    "arabic": "فَسَّرَ",
+    "english": "to explain",
+    "r": 12,
+    "c": 0,
+    "dr": -1,
+    "dc": 1
+   }
+  ]
+ },
+ "b4-u1": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "فوضىيعحنيقدمجمل",
+   "لعرضدشودئتاغلقذ",
+   "طذواققحافجهيلاع",
+   "خمحةراتااارمسدط",
+   "غععتةعغمجوئجساق",
+   "طفواثالتقزامحخم",
+   "دتفوولبزشدثلتتش",
+   "مبحرنةفجقطعاتصك",
+   "ةلةغاتحاولهحبرئ",
+   "عيلدبتنشاونقاكة",
+   "اثنججسدبعبباثىر",
+   "ذرثؤملوفكقدصقطك",
+   "اةياورمؤتمرارعا",
+   "ؤغرفتاعخدجلضعضذ",
+   "زخوحنضفلاكسدعبك"
+  ],
+  "words": [
+   {
+    "answer": "امتزج",
+    "arabic": "اِمتَزَجَ",
+    "english": "to be mixed with",
+    "r": 3,
+    "c": 7,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ملاحق",
+    "arabic": "مُلاحَق",
+    "english": "pursued, sought by (authorities)",
+    "r": 5,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مؤتمر",
+    "arabic": "مُؤتَمَر",
+    "english": "conference",
+    "r": 12,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "انوثة",
+    "arabic": "الأُنوثة",
+    "english": "femininity",
+    "r": 8,
+    "c": 4,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "تجاوز",
+    "arabic": "تَجاوَزَ",
+    "english": "to go beyond, exceed, surpass",
+    "r": 1,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اختصر",
+    "arabic": "اِختَصَر",
+    "english": "to shorten, condense, abbreviate",
+    "r": 4,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ذاكرة",
+    "arabic": "ذاكِرة",
+    "english": "memory",
+    "r": 13,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "متوتر",
+    "arabic": "مُتَوَتِّر",
+    "english": "tense, nervous",
+    "r": 7,
+    "c": 0,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "اذاعة",
+    "arabic": "إذاعة",
+    "english": "broadcasting, radio",
+    "r": 12,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اعالة",
+    "arabic": "الإِعالة",
+    "english": "providing sustenance for someone",
+    "r": 3,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "رواية",
+    "arabic": "رِواية",
+    "english": "novel (literary work)",
+    "r": 12,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "ابداع",
+    "arabic": "الإبداع",
+    "english": "creation, innovation",
+    "r": 9,
+    "c": 8,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "تغلب",
+    "arabic": "تَغَلَّبَ",
+    "english": "to overcome (a problem or difficulty), to triumph over something or someone",
+    "r": 3,
+    "c": 6,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مؤثر",
+    "arabic": "مُؤَثِّر",
+    "english": "influencing factor",
+    "r": 11,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "فوضى",
+    "arabic": "الفَوْضى",
+    "english": "chaos",
+    "r": 0,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ثائر",
+    "arabic": "ثائِر",
+    "english": "rebel, revolutionary",
+    "r": 6,
+    "c": 10,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "مجمل",
+    "arabic": "مُجمَل",
+    "english": "whole, sum, entirety",
+    "r": 0,
+    "c": 11,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "لاقى",
+    "arabic": "لاقى",
+    "english": "to meet, receive",
+    "r": 13,
+    "c": 10,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "ناقد",
+    "arabic": "ناقِد",
+    "english": "critic",
+    "r": 9,
+    "c": 6,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "غموض",
+    "arabic": "الغُموض",
+    "english": "vagueness, ambiguity, mystery",
+    "r": 4,
+    "c": 0,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "تفرغ",
+    "arabic": "تَفَرَّغَ",
+    "english": "to devote or dedicate oneself to",
+    "r": 13,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "ثابت",
+    "arabic": "ثابِت",
+    "english": "firm, steady, fixed",
+    "r": 10,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "تبدل",
+    "arabic": "تَبَدَّلَ",
+    "english": "to be changed",
+    "r": 9,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "اغلق",
+    "arabic": "أَغلَقَ",
+    "english": "to close, shut",
+    "r": 1,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "دفعة",
+    "arabic": "دُفعة",
+    "english": "group, cohort",
+    "r": 6,
+    "c": 0,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "مقطع",
+    "arabic": "مَقطَع",
+    "english": "passage, section, part",
+    "r": 5,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "همس",
+    "arabic": "هَمَسَ",
+    "english": "to whisper a whisper",
+    "r": 2,
+    "c": 10,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "نحو",
+    "arabic": "نَحو",
+    "english": "side, direction, section",
+    "r": 14,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عشق",
+    "arabic": "العِشق",
+    "english": "intense love, passion",
+    "r": 0,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "بحر",
+    "arabic": "بَحر",
+    "english": "poetry meter",
+    "r": 7,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عرض",
+    "arabic": "عَرَضَ",
+    "english": "to present, display, exhibit",
+    "r": 1,
+    "c": 1,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "الف",
+    "arabic": "أَلّفَ",
+    "english": "to compose, author",
+    "r": 14,
+    "c": 8,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "جسد",
+    "arabic": "جَسَد",
+    "english": "body (abstract)",
+    "r": 10,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "حقق",
+    "arabic": "حَقَّقَ",
+    "english": "to achieve, realize",
+    "r": 2,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   }
+  ]
+ },
+ "b4-u2": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "ةعلسضماحضغطرصوز",
+   "لضصدرمتراسمذدزن",
+   "مانيكمتاستهلكبم",
+   "اوجدذتشمنتجضرام",
+   "عقلهدشرسطزكصبهة",
+   "تباشقراذواراهرا",
+   "لمعةعيررراخاةاو",
+   "هفقذمعكحيتنزفما",
+   "ةريبييتعنسسيطرس",
+   "حدستلرمانيلحرتم",
+   "ديلقتلةنديانزرح",
+   "ارتبطنهلمفنمماض",
+   "شيوعييبخشوفارجو",
+   "وانسويةيطهذبدعا",
+   "باخامطلبسياجلزو"
+  ],
+  "words": [
+   {
+    "answer": "تشريعي",
+    "arabic": "تَشريعِيّ",
+    "english": "legislative",
+    "r": 3,
+    "c": 5,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مساواة",
+    "arabic": "المُساواة",
+    "english": "equality",
+    "r": 9,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "انتخاب",
+    "arabic": "اِنتِخاب",
+    "english": "election",
+    "r": 9,
+    "c": 7,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "استهلك",
+    "arabic": "اِستَهلَكَ",
+    "english": "to consume",
+    "r": 2,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "تقليد",
+    "arabic": "التَقليد",
+    "english": "imitation",
+    "r": 10,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "معيار",
+    "arabic": "مِعيار",
+    "english": "standard, criterion",
+    "r": 9,
+    "c": 6,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "تمكين",
+    "arabic": "التَّمكين",
+    "english": "enabling, empowering",
+    "r": 2,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "بمفرد",
+    "arabic": "بِمُفرَد",
+    "english": "alone",
+    "r": 5,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "نموذج",
+    "arabic": "نُموذَج",
+    "english": "sample; model",
+    "r": 10,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "تكرار",
+    "arabic": "التَكرار",
+    "english": "repetition",
+    "r": 8,
+    "c": 6,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "تراجع",
+    "arabic": "تَراجَعَ",
+    "english": "to retreat, change one's mind, fall behind, decline",
+    "r": 9,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ارتبط",
+    "arabic": "اِرتَبَطَ",
+    "english": "to be connected to",
+    "r": 11,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "نسوية",
+    "arabic": "النِّسَويّة",
+    "english": "feminism, feminist",
+    "r": 13,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ارهاب",
+    "arabic": "الإِرهاب",
+    "english": "terrorism",
+    "r": 6,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "شيوعي",
+    "arabic": "شُيوعِيّ",
+    "english": "communist",
+    "r": 12,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "تمرد",
+    "arabic": "تَمَرَّد",
+    "english": "to rebel (against)",
+    "r": 1,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مسار",
+    "arabic": "مَسار",
+    "english": "track, trajectory",
+    "r": 1,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "سلعة",
+    "arabic": "سِلْعة",
+    "english": "commodity, merchandise",
+    "r": 0,
+    "c": 3,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مقبل",
+    "arabic": "المُقبِل",
+    "english": "coming, next (week, year, etc.)",
+    "r": 6,
+    "c": 1,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مطلب",
+    "arabic": "مَطلَب",
+    "english": "demand, request",
+    "r": 14,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عامل",
+    "arabic": "عامِل",
+    "english": "factor",
+    "r": 4,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "سيطر",
+    "arabic": "سَيْطَرَ",
+    "english": "to dominate, control",
+    "r": 8,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "منتج",
+    "arabic": "مُنتَج",
+    "english": "product",
+    "r": 3,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "دهشة",
+    "arabic": "الدَّهْشة",
+    "english": "surprise",
+    "r": 3,
+    "c": 3,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اوضح",
+    "arabic": "أَوضَحَ",
+    "english": "to clarify, explain (that)",
+    "r": 13,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "معقد",
+    "arabic": "مُعَقَّد",
+    "english": "complicated, complex",
+    "r": 7,
+    "c": 4,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "حراك",
+    "arabic": "حَراك",
+    "english": "movement, motion",
+    "r": 7,
+    "c": 7,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "بلدي",
+    "arabic": "بَلَدِيّ",
+    "english": "municipal, local, communal",
+    "r": 12,
+    "c": 6,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "عالج",
+    "arabic": "عالَجَ",
+    "english": "to treat",
+    "r": 6,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "عقل",
+    "arabic": "عَقل",
+    "english": "mind",
+    "r": 4,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "رمز",
+    "arabic": "رَمْز",
+    "english": "symbol, emblem",
+    "r": 12,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "نال",
+    "arabic": "نالَ",
+    "english": "to obtain, acquire (a job, degree)",
+    "r": 11,
+    "c": 10,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "منح",
+    "arabic": "مَنَحَ",
+    "english": "to grant, donate",
+    "r": 11,
+    "c": 11,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "ضغط",
+    "arabic": "ضَغط",
+    "english": "pressure, stress",
+    "r": 0,
+    "c": 8,
+    "dr": 0,
+    "dc": 1
+   }
+  ]
+ },
+ "b4-u3": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "للضيحسحصثصكسءنس",
+   "ترفيهياقاااديسي",
+   "ىناادولجغحوسلقر",
+   "رامةتمدثرونممبة",
+   "جاضتهمعيادركبيز",
+   "دهلطبدجةلممكالن",
+   "نذهففتزجيعةدمةد",
+   "ككرءاجاءىكبرمقم",
+   "ضضجزحررمدحىفزاز",
+   "شقيوشتستاعشناذع",
+   "لقمشضذشجسلعاخنا",
+   "بدحبباىركبةاسام",
+   "قربصغعولمةمسكين",
+   "اغبدالاضرابسةقح",
+   "حةعفورغارنجباغا"
+  ],
+  "words": [
+   {
+    "answer": "ماساة",
+    "arabic": "مَأساة",
+    "english": "tragedy",
+    "r": 11,
+    "c": 14,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عولمة",
+    "arabic": "العَوْلَمة",
+    "english": "globalization",
+    "r": 12,
+    "c": 5,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اضراب",
+    "arabic": "إضراب",
+    "english": "strike",
+    "r": 13,
+    "c": 6,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "قبيلة",
+    "arabic": "قَبيلة",
+    "english": "tribe",
+    "r": 2,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تشويق",
+    "arabic": "التَّشويق",
+    "english": "thrill, excitement",
+    "r": 9,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "انفرد",
+    "arabic": "اِنفَرَدَ",
+    "english": "to be matchless in, to be alone in individuality",
+    "r": 10,
+    "c": 11,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "يهودي",
+    "arabic": "يَهودِيّ",
+    "english": "Jew, Jewish",
+    "r": 0,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "ترفيه",
+    "arabic": "التَّرفيه",
+    "english": "entertainment",
+    "r": 1,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "حصار",
+    "arabic": "الحِصار",
+    "english": "blockade, siege",
+    "r": 11,
+    "c": 2,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "مسدس",
+    "arabic": "مُسَدَّس",
+    "english": "revolver, pistol, gun",
+    "r": 3,
+    "c": 11,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "اشتد",
+    "arabic": "اِشتَدَّ",
+    "english": "to become intense",
+    "r": 11,
+    "c": 5,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "جزار",
+    "arabic": "جَزّار",
+    "english": "butcher",
+    "r": 5,
+    "c": 6,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "مليء",
+    "arabic": "مَليء",
+    "english": "full of",
+    "r": 3,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "سيرة",
+    "arabic": "سيرة",
+    "english": "biography autobiography",
+    "r": 0,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "نهضة",
+    "arabic": "النَّهضة",
+    "english": "awakening, renaissance",
+    "r": 6,
+    "c": 0,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "دمعة",
+    "arabic": "دَمعة",
+    "english": "tear, teardrop",
+    "r": 2,
+    "c": 4,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "فارس",
+    "arabic": "فارِس",
+    "english": "knight",
+    "r": 6,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "سكين",
+    "arabic": "سِكّين",
+    "english": "knife (noun)",
+    "r": 12,
+    "c": 11,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اقبل",
+    "arabic": "أَقبَلَ",
+    "english": "to approach, come to, to become or be interested in (something)",
+    "r": 13,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "دام",
+    "arabic": "دامَ",
+    "english": "to last",
+    "r": 5,
+    "c": 0,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "قدر",
+    "arabic": "قَدَرَ",
+    "english": "to be able to",
+    "r": 10,
+    "c": 1,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "جلد",
+    "arabic": "جِلد",
+    "english": "skin, leather",
+    "r": 6,
+    "c": 7,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "اتم",
+    "arabic": "أتمّ",
+    "english": "to finish, to complete",
+    "r": 2,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "ندم",
+    "arabic": "نَدِمَ",
+    "english": "to regret, to repent",
+    "r": 5,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "ورث",
+    "arabic": "وَرَّثَ",
+    "english": "to bequeath, give inheritance to",
+    "r": 3,
+    "c": 9,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "بدو",
+    "arabic": "البَدو",
+    "english": "Bedouins",
+    "r": 12,
+    "c": 2,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "جرى",
+    "arabic": "جَرى",
+    "english": "to happen",
+    "r": 4,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "سعى",
+    "arabic": "سَعى",
+    "english": "to strive to, work towards",
+    "r": 10,
+    "c": 8,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "بطل",
+    "arabic": "بَطَل",
+    "english": "hero, champion, main character (movie, novel)",
+    "r": 5,
+    "c": 4,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "بكى",
+    "arabic": "بَكى",
+    "english": "to weep, cry",
+    "r": 7,
+    "c": 10,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "اذن",
+    "arabic": "أَذِنَ",
+    "english": "to permit (someone) to (do something)",
+    "r": 8,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "بغل",
+    "arabic": "بَغل",
+    "english": "mule",
+    "r": 11,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "ركب",
+    "arabic": "رَكِب",
+    "english": "to ride, mount, travel",
+    "r": 4,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صاح",
+    "arabic": "صاحَ",
+    "english": "to shout, to scream",
+    "r": 0,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   }
+  ]
+ },
+ "b4-u4": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "دةحئارنبضاعةفتة",
+   "زكةنوهظاحذعةفيد",
+   "فصهاتفاوتئتئجهع",
+   "اذجاسصفرفديفذجا",
+   "فزااقتةفهنقغوتق",
+   "رصويدقحوحعحغماش",
+   "ةسرزمرامخصجانول",
+   "دحتناقلاشتعسظاي",
+   "اهاكذتمدنئضتتنس",
+   "يلنذختاتاامرلجب",
+   "عزكنمزسرنسناخاي",
+   "عمارةانوكتزحنزل",
+   "طةظقديغفرهلىصقا",
+   "يلىنبمذينديريخق",
+   "كحهامغعرتفسارمخ"
+  ],
+  "words": [
+   {
+    "answer": "استنتج",
+    "arabic": "اِستَنتَج",
+    "english": "to conclude, infer, deduce",
+    "r": 11,
+    "c": 5,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "استهدف",
+    "arabic": "اِستَهدَف",
+    "english": "to target, seek as a goal",
+    "r": 9,
+    "c": 9,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "استراح",
+    "arabic": "اِسْتَراحَ",
+    "english": "to rest, relax",
+    "r": 6,
+    "c": 11,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تفاوت",
+    "arabic": "تَفاوَتَ",
+    "english": "to vary varying",
+    "r": 2,
+    "c": 4,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عمارة",
+    "arabic": "العِمارة",
+    "english": "architecture",
+    "r": 11,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "استحم",
+    "arabic": "اِسْتَحَمَّ",
+    "english": "to bathe",
+    "r": 2,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "رائحة",
+    "arabic": "رائِحة",
+    "english": "smell",
+    "r": 0,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "بضاعة",
+    "arabic": "بِضاعة",
+    "english": "goods, merchandise",
+    "r": 0,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "عيادة",
+    "arabic": "عِيادة",
+    "english": "clinic",
+    "r": 10,
+    "c": 0,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "تناقل",
+    "arabic": "تَناقَلَ",
+    "english": "to pass on (news), relate, transmit among each other",
+    "r": 7,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "نظافة",
+    "arabic": "النَّظافة",
+    "english": "cleanliness, tidiness",
+    "r": 0,
+    "c": 6,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "قاعدة",
+    "arabic": "قاعِدة",
+    "english": "rule",
+    "r": 4,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "واجهة",
+    "arabic": "واجِهة",
+    "english": "façade, front",
+    "r": 5,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "انجاز",
+    "arabic": "إنجاز",
+    "english": "achievement, accomplishment",
+    "r": 7,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "عندئذ",
+    "arabic": "عِندَئِذٍ",
+    "english": "at that time, then",
+    "r": 5,
+    "c": 9,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "نموذج",
+    "arabic": "نُموذَج",
+    "english": "sample, model, type",
+    "r": 6,
+    "c": 12,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "وفير",
+    "arabic": "وَفير",
+    "english": "abundant",
+    "r": 11,
+    "c": 7,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "منزل",
+    "arabic": "مَنْزِل",
+    "english": "house, residence (in classical texts) a way station for travelers",
+    "r": 9,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "حريق",
+    "arabic": "حَريق",
+    "english": "fire (incident)",
+    "r": 7,
+    "c": 1,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "رائع",
+    "arabic": "رائِع",
+    "english": "wonderful, awesome",
+    "r": 10,
+    "c": 7,
+    "dr": -1,
+    "dc": 1
+   },
+   {
+    "answer": "اتجه",
+    "arabic": "اِتَّجَهَ",
+    "english": "to head in the direction of",
+    "r": 5,
+    "c": 13,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "زفاف",
+    "arabic": "زِفاف",
+    "english": "wedding celebration",
+    "r": 1,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اتخذ",
+    "arabic": "اِتَّخَذَ",
+    "english": "to take on, adopt",
+    "r": 9,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مبنى",
+    "arabic": "مَبْنى",
+    "english": "building",
+    "r": 13,
+    "c": 5,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عتيق",
+    "arabic": "عَتيق",
+    "english": "old, ancient",
+    "r": 1,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "سبيل",
+    "arabic": "سَبيل",
+    "english": "path, way; public drinking fountain",
+    "r": 8,
+    "c": 14,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "اقصى",
+    "arabic": "أَقْصى",
+    "english": "farthest, utmost, maximum",
+    "r": 12,
+    "c": 14,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "خيري",
+    "arabic": "خَيْريّ",
+    "english": "charitable, philanthropic",
+    "r": 13,
+    "c": 13,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "خمر",
+    "arabic": "خَمْر",
+    "english": "alcohol, wine",
+    "r": 14,
+    "c": 14,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "ركن",
+    "arabic": "رُكْن",
+    "english": "corner, cornerstone, pillar (literal and figurative)",
+    "r": 12,
+    "c": 8,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "وفر",
+    "arabic": "وَفَّر",
+    "english": "to provide (in abundance), to make abundant",
+    "r": 5,
+    "c": 7,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "هام",
+    "arabic": "هامّ",
+    "english": "important",
+    "r": 14,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "فئة",
+    "arabic": "فِئة",
+    "english": "group, class",
+    "r": 3,
+    "c": 11,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "لون",
+    "arabic": "لَوْن",
+    "english": "also: type (of…), kind (of...)",
+    "r": 6,
+    "c": 14,
+    "dr": 0,
+    "dc": -1
+   }
+  ]
+ },
+ "b4-u5": {
+  "rows": 15,
+  "cols": 15,
+  "grid": [
+   "صاءهبيعقبضعبءعر",
+   "رااحتجدلةيلاعفا",
+   "انتاجيةيحنهبوطك",
+   "سيانصلازيزعتفزض",
+   "مخرصقنقاقليةوجق",
+   "ةارامثتسافتشااا",
+   "تكخسددسرعموفنتع",
+   "لنفماقثلكتقماضا",
+   "خياابهعلبوعرشحا",
+   "ينزمءامسايداطيز",
+   "ادبصىةشلنلاحجةن",
+   "رولعخطنرةيفئاطه",
+   "اسدغملطاعوبشعار",
+   "يكعطامىغصطقحتسا",
+   "اكمحلضقانتعىندا"
+  ],
+  "words": [
+   {
+    "answer": "انتاجية",
+    "arabic": "الإِنتاجِيّة",
+    "english": "productivity",
+    "r": 2,
+    "c": 0,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "استثمار",
+    "arabic": "اِستِثمار",
+    "english": "investment",
+    "r": 5,
+    "c": 8,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "طائفية",
+    "arabic": "الطّائِفِيّة",
+    "english": "sectarianism",
+    "r": 11,
+    "c": 13,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "فعالية",
+    "arabic": "فَعالِيّة",
+    "english": "effectiveness, efficacy",
+    "r": 1,
+    "c": 13,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "اقلية",
+    "arabic": "أَقَلِّيّة",
+    "english": "minority (group)",
+    "r": 4,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "تضحية",
+    "arabic": "التَّضحِية",
+    "english": "sacrifice",
+    "r": 6,
+    "c": 13,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "تعزيز",
+    "arabic": "تَعزيز",
+    "english": "strengthening, enhancing, reinforcing",
+    "r": 3,
+    "c": 11,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "مباشر",
+    "arabic": "مُباشِر",
+    "english": "direct",
+    "r": 7,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "كفاءة",
+    "arabic": "الكَفاءة",
+    "english": "competence, proficiency",
+    "r": 6,
+    "c": 1,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "تناقض",
+    "arabic": "التَّناقُض",
+    "english": "contradiction",
+    "r": 14,
+    "c": 9,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "استحق",
+    "arabic": "اِستَحَقَّ",
+    "english": "to deserve, be worthy of",
+    "r": 13,
+    "c": 14,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "تنامى",
+    "arabic": "تَنامى",
+    "english": "to increase/grow gradually",
+    "r": 6,
+    "c": 0,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "معدل",
+    "arabic": "مُعدَّل",
+    "english": "average, rate",
+    "r": 14,
+    "c": 2,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "سلبي",
+    "arabic": "سَلبِيّ",
+    "english": "negative",
+    "r": 6,
+    "c": 6,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "عاطل",
+    "arabic": "عاطِل",
+    "english": "unemployed",
+    "r": 12,
+    "c": 8,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "هبوط",
+    "arabic": "هُبوط",
+    "english": "fall, drop, decline",
+    "r": 2,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ركود",
+    "arabic": "الرُّكود",
+    "english": "stagnation, recession",
+    "r": 6,
+    "c": 7,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "ادنى",
+    "arabic": "أدنى",
+    "english": "nearest, lowest Near East",
+    "r": 14,
+    "c": 14,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "ناشط",
+    "arabic": "ناشِط",
+    "english": "activist",
+    "r": 6,
+    "c": 12,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "احتج",
+    "arabic": "اِحتَجَّ",
+    "english": "to protest against, to object to",
+    "r": 1,
+    "c": 2,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "ساهم",
+    "arabic": "ساهَمَ",
+    "english": "to contribute to",
+    "r": 6,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "خيار",
+    "arabic": "خِيار",
+    "english": "option, choice",
+    "r": 8,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "توقع",
+    "arabic": "تَوَقُّع",
+    "english": "expectation",
+    "r": 5,
+    "c": 10,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "شعار",
+    "arabic": "شِعار",
+    "english": "slogan, motto",
+    "r": 12,
+    "c": 11,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "اعاق",
+    "arabic": "أَعاقَ",
+    "english": "to hinder, impede obstacle, impediment",
+    "r": 7,
+    "c": 14,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "عمم",
+    "arabic": "عَمَّمَ",
+    "english": "to generalize",
+    "r": 11,
+    "c": 3,
+    "dr": 1,
+    "dc": 1
+   },
+   {
+    "answer": "سمة",
+    "arabic": "سِمة",
+    "english": "characteristic, feature",
+    "r": 3,
+    "c": 0,
+    "dr": 1,
+    "dc": 0
+   },
+   {
+    "answer": "عبء",
+    "arabic": "عِبء",
+    "english": "burden",
+    "r": 0,
+    "c": 10,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "صرخ",
+    "arabic": "صَرَخَ",
+    "english": "to cry, yell",
+    "r": 4,
+    "c": 3,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "قبض",
+    "arabic": "قَبَضَ",
+    "english": "to receive (money, salary)",
+    "r": 0,
+    "c": 7,
+    "dr": 0,
+    "dc": 1
+   },
+   {
+    "answer": "حال",
+    "arabic": "حالَ",
+    "english": "to prevent s.o. from s.th",
+    "r": 10,
+    "c": 11,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "عيب",
+    "arabic": "العَيْب",
+    "english": "shame, disgrace",
+    "r": 0,
+    "c": 6,
+    "dr": 0,
+    "dc": -1
+   },
+   {
+    "answer": "لام",
+    "arabic": "لامَ",
+    "english": "to blame",
+    "r": 14,
+    "c": 4,
+    "dr": -1,
+    "dc": 0
+   },
+   {
+    "answer": "بدا",
+    "arabic": "بَدَأَ",
+    "english": "to begin",
+    "r": 10,
+    "c": 2,
+    "dr": 0,
+    "dc": -1
+   }
+  ]
+ }
+}

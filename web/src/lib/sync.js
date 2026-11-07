@@ -29,6 +29,7 @@ export function mergeProgress(local, remote) {
     dark: remote.dark ?? local.dark ?? null,
     custom: mergeCustom(local.custom, remote.custom),
     crosswords: { done: { ...local.crosswords?.done, ...remote.crosswords?.done } },
+    wordSearches: { done: { ...local.wordSearches?.done, ...remote.wordSearches?.done } },
     profile: {
       name: remote.profile?.name || local.profile?.name || "",
       nameAr: remote.profile?.nameAr || local.profile?.nameAr || "",

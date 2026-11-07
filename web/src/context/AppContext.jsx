@@ -226,6 +226,11 @@ export function AppProvider({ children }) {
     (id) => setProgress((p) => ({ ...p, crosswords: { done: { ...p.crosswords?.done, [id]: true } } })),
     [],
   );
+  const wordSearchesDone = progress.wordSearches?.done ?? {};
+  const finishWordSearch = useCallback(
+    (id) => setProgress((p) => ({ ...p, wordSearches: { done: { ...p.wordSearches?.done, [id]: true } } })),
+    [],
+  );
   const setDark = useCallback((on) => setProgress((p) => ({ ...p, dark: !!on })), []);
 
   // Typing lessons: passed lessons are kept, with their faster result.
@@ -305,6 +310,8 @@ export function AppProvider({ children }) {
     setDark,
     crosswordsDone,
     finishCrossword,
+    wordSearchesDone,
+    finishWordSearch,
     passTyping,
     syncStatus,
     signOut,

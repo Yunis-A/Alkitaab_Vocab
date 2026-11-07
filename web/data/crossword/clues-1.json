@@ -1,131 +1,560 @@
 {
-"b2-u1":[
-{"answer":"ادب","clue":"الشعر والقصص والكتب الجميلة"},
-{"answer":"جنسية","clue":"ما تكتبه في الجواز عن بلدك"},
-{"answer":"سنة","clue":"اثنا عشر شهرا"},
-{"answer":"عمر","clue":"كم سنة لك؟ هذا هو"},
-{"answer":"عنوان","clue":"اسم الشارع والمدينة حيث البيت"},
-{"answer":"مصري","clue":"من القاهرة"},
-{"answer":"منطقة","clue":"جزء من المدينة"},
-{"answer":"والد","clue":"الاب"},
-{"answer":"والدة","clue":"الام"},
-{"answer":"مذكر","clue":"ضد مؤنث"},
-{"answer":"مؤنث","clue":"ضد مذكر"},
-{"answer":"انجليزي","clue":"من لندن"},
-{"answer":"مفردات","clue":"كلمات اللغة"},
-{"answer":"قواعد","clue":"النحو في اللغة"},
-{"answer":"ثقافة","clue":"عادات الناس وادبهم"},
-{"answer":"شامي","clue":"من دمشق او بيروت"}
-],
-"b2-u2":[
-{"answer":"اسرة","clue":"الاب والام والاولاد"},
-{"answer":"ناس","clue":"الرجال والنساء والاطفال"},
-{"answer":"ايضا","clue":"كلمة تقولها مثل: وانا كذلك"},
-{"answer":"بلد","clue":"مصر او لبنان او سوريا"},
-{"answer":"خالة","clue":"اخت الام"},
-{"answer":"دائما","clue":"في كل يوم وكل وقت"},
-{"answer":"مركز","clue":"مكان في وسط المدينة"},
-{"answer":"مشغول","clue":"ليس عنده وقت"},
-{"answer":"غدا","clue":"ضد امس"},
-{"answer":"لغة","clue":"العربية والانجليزية"},
-{"answer":"مساء","clue":"ضد صباح"},
-{"answer":"ليل","clue":"ضد نهار"},
-{"answer":"نهار","clue":"ضد ليل"},
-{"answer":"وحيد","clue":"ليس معه احد"},
-{"answer":"موظف","clue":"من يعمل في شركة"},
-{"answer":"يتكلم","clue":"ماذا يفعل الرجل باللغة العربية؟"}
-],
-"b2-u3":[
-{"answer":"تاريخ","clue":"ما حدث قبل سنوات كثيرة"},
-{"answer":"الان","clue":"في هذا الوقت"},
-{"answer":"ابن","clue":"ولد الاب والام"},
-{"answer":"جدة","clue":"ام الام او ام الاب"},
-{"answer":"جيش","clue":"الضابط والرجال في الحرب"},
-{"answer":"دين","clue":"الاسلام او المسيحية"},
-{"answer":"رسالة","clue":"ما تكتبه وتبعثه الى صديق"},
-{"answer":"زوج","clue":"الرجل المتزوج"},
-{"answer":"زوجة","clue":"المراة التي تعيش مع رجل في بيت واحد"},
-{"answer":"متزوج","clue":"له زوجة"},
-{"answer":"صورة","clue":"ما تراه في الكتاب او على الحائط"},
-{"answer":"ضابط","clue":"رجل في الجيش"},
-{"answer":"الطب","clue":"يدرسه من يريد ان يكون دكتورا"},
-{"answer":"علم","clue":"الفيزياء والكيمياء"},
-{"answer":"عائلة","clue":"الاسرة الكبيرة: الجد والعم والخال"},
-{"answer":"قريب","clue":"ابن العم او ابن الخال"},
-{"answer":"كلية","clue":"جزء من الجامعة"},
-{"answer":"هندسة","clue":"يدرسها من يريد ان يكون مهندسا"}
-],
-"b2-u4":[
-{"answer":"امس","clue":"اليوم الذي قبل اليوم"},
-{"answer":"اول","clue":"ضد اخر"},
-{"answer":"ابتدائي","clue":"المدرسة الاولى للاطفال"},
-{"answer":"حلويات","clue":"الكنافة والبقلاوة"},
-{"answer":"خضار","clue":"الطماطم والخيار والجزر"},
-{"answer":"مدرسة","clue":"مكان يذهب اليه الطالب ليتعلم"},
-{"answer":"زميل","clue":"من يدرس معك في الصف"},
-{"answer":"سفر","clue":"الذهاب الى بلد اخر"},
-{"answer":"سلطة","clue":"خضار باردة على المائدة"},
-{"answer":"سمك","clue":"حيوان يعيش في الماء"},
-{"answer":"شوربة","clue":"طعام ساخن نشربه بالملعقة"},
-{"answer":"صديق","clue":"من تحبه ويحبك"},
-{"answer":"طفولة","clue":"اجمل ايام الحياة قبل المدرسة"},
-{"answer":"مطعم","clue":"مكان ناكل فيه خارج البيت"},
-{"answer":"فواكه","clue":"التفاح والبرتقال والموز"},
-{"answer":"يقرا","clue":"ماذا يفعل الطالب بالكتاب؟"},
-{"answer":"يكتب","clue":"ماذا يفعل الطالب بالقلم؟"},
-{"answer":"لحم","clue":"الدجاج والبقر"}
-],
-"b2-u5":[
-{"answer":"بارد","clue":"ضد حار"},
-{"answer":"ثلج","clue":"ماء ابيض بارد في الشتاء"},
-{"answer":"جدا","clue":"كثير: الجو بارد ..."},
-{"answer":"الجو","clue":"حار او بارد في كل يوم"},
-{"answer":"طقس","clue":"الجو: مطر او ثلج او شمس"},
-{"answer":"حار","clue":"ضد بارد"},
-{"answer":"خريف","clue":"الفصل بين الصيف والشتاء"},
-{"answer":"درجة","clue":"الجو ثلاثون ... في الصيف"},
-{"answer":"ربيع","clue":"فصل الزهور بعد الشتاء"},
-{"answer":"شتاء","clue":"فصل بارد فيه ثلج ومطر"},
-{"answer":"مشمس","clue":"الجو فيه شمس"},
-{"answer":"صيف","clue":"فصل حار قبل الخريف"},
-{"answer":"غائم","clue":"الجو فيه غيوم"},
-{"answer":"فصل","clue":"الصيف والشتاء"},
-{"answer":"فقط","clue":"ليس اكثر"},
-{"answer":"كثيرا","clue":"ضد قليلا"},
-{"answer":"قليلا","clue":"ضد كثيرا"},
-{"answer":"مطر","clue":"ماء ينزل من السماء"},
-{"answer":"احيانا","clue":"ليس دائما: مرة بعد مرة"}
-],
-"b2-u6":[
-{"answer":"تجارة","clue":"البيع والشراء"},
-{"answer":"محاضرة","clue":"درس يتكلم فيه الدكتور في الجامعة"},
-{"answer":"حياة","clue":"ضد موت"},
-{"answer":"رقص","clue":"حركة جميلة مع الموسيقى"},
-{"answer":"رياضة","clue":"كرة القدم والسباحة"},
-{"answer":"سباحة","clue":"رياضة في الماء"},
-{"answer":"اسبوع","clue":"سبعة ايام"},
-{"answer":"سنتان","clue":"اثنا عشر شهرا مرتين"},
-{"answer":"شركة","clue":"مكان يعمل فيه الموظفون"},
-{"answer":"تصوير","clue":"هواية: نصنع بها الصورة"},
-{"answer":"معيد","clue":"يساعد الدكتور في الجامعة"},
-{"answer":"هواية","clue":"ما تحب ان تفعله في وقتك"},
-{"answer":"يلعب","clue":"ماذا يفعل الطفل بالكرة؟"},
-{"answer":"يذهب","clue":"ماذا يفعل الطالب الى الجامعة؟"}
-],
-"b2-u7":[
-{"answer":"ثانوي","clue":"المدرسة بعد الاعدادي"},
-{"answer":"مجنون","clue":"ليس عاقلا"},
-{"answer":"حادث","clue":"ما يحدث للسيارة في الطريق"},
-{"answer":"محزن","clue":"خبر لا يسعدنا"},
-{"answer":"خارجية","clue":"وزارة تعمل مع بلاد اخرى"},
-{"answer":"مستشفى","clue":"مكان فيه الدكتور والمريض"},
-{"answer":"اعدادي","clue":"المدرسة بين الابتدائي والثانوي"},
-{"answer":"عام","clue":"سنة"},
-{"answer":"اقتصاد","clue":"علم المال والتجارة"},
-{"answer":"مات","clue":"ضد عاش"},
-{"answer":"مال","clue":"ما تشتري به الطعام"},
-{"answer":"وزارة","clue":"مكان يعمل فيه وزير"},
-{"answer":"اكبر","clue":"ضد اصغر"},
-{"answer":"يعيش","clue":"ماذا يفعل الانسان في بلده؟"}
-]
+ "b2-u1": [
+  {
+   "answer": "ادب",
+   "clue": "literature"
+  },
+  {
+   "answer": "جنسية",
+   "clue": "nationality"
+  },
+  {
+   "answer": "ادرس",
+   "clue": "I study"
+  },
+  {
+   "answer": "اسكن",
+   "clue": "I live (reside)"
+  },
+  {
+   "answer": "تسكن",
+   "clue": "she lives (resides)"
+  },
+  {
+   "answer": "يسكن",
+   "clue": "he lives (resides)"
+  },
+  {
+   "answer": "سنة",
+   "clue": "year"
+  },
+  {
+   "answer": "عمر",
+   "clue": "age (how old you are)"
+  },
+  {
+   "answer": "تعمل",
+   "clue": "she works"
+  },
+  {
+   "answer": "يعمل",
+   "clue": "he works"
+  },
+  {
+   "answer": "عنوان",
+   "clue": "address"
+  },
+  {
+   "answer": "مصري",
+   "clue": "from Egypt"
+  },
+  {
+   "answer": "منطقة",
+   "clue": "area, region"
+  },
+  {
+   "answer": "والد",
+   "clue": "father"
+  },
+  {
+   "answer": "والدي",
+   "clue": "my father"
+  },
+  {
+   "answer": "والدة",
+   "clue": "mother"
+  },
+  {
+   "answer": "والدتي",
+   "clue": "my mother"
+  },
+  {
+   "answer": "مذكر",
+   "clue": "masculine"
+  },
+  {
+   "answer": "مؤنث",
+   "clue": "feminine"
+  },
+  {
+   "answer": "قواعد",
+   "clue": "grammar"
+  },
+  {
+   "answer": "ثقافة",
+   "clue": "culture"
+  },
+  {
+   "answer": "مفردات",
+   "clue": "vocabulary"
+  }
+ ],
+ "b2-u2": [
+  {
+   "answer": "اسرة",
+   "clue": "(nuclear) family"
+  },
+  {
+   "answer": "ناس",
+   "clue": "people"
+  },
+  {
+   "answer": "ايضا",
+   "clue": "also"
+  },
+  {
+   "answer": "بلد",
+   "clue": "country"
+  },
+  {
+   "answer": "مترجم",
+   "clue": "translator"
+  },
+  {
+   "answer": "خالة",
+   "clue": "maternal aunt"
+  },
+  {
+   "answer": "دائما",
+   "clue": "always"
+  },
+  {
+   "answer": "مركز",
+   "clue": "center"
+  },
+  {
+   "answer": "مشغول",
+   "clue": "busy"
+  },
+  {
+   "answer": "عمل",
+   "clue": "work"
+  },
+  {
+   "answer": "غدا",
+   "clue": "tomorrow"
+  },
+  {
+   "answer": "فعلا",
+   "clue": "really, truly"
+  },
+  {
+   "answer": "يتكلم",
+   "clue": "he speaks"
+  },
+  {
+   "answer": "لغة",
+   "clue": "language"
+  },
+  {
+   "answer": "مساء",
+   "clue": "evening"
+  },
+  {
+   "answer": "ليل",
+   "clue": "night"
+  },
+  {
+   "answer": "نهار",
+   "clue": "daytime"
+  },
+  {
+   "answer": "وحيد",
+   "clue": "only; lonely"
+  },
+  {
+   "answer": "موظف",
+   "clue": "employee"
+  },
+  {
+   "answer": "يوم",
+   "clue": "today"
+  }
+ ],
+ "b2-u3": [
+  {
+   "answer": "تاريخ",
+   "clue": "history"
+  },
+  {
+   "answer": "الان",
+   "clue": "now"
+  },
+  {
+   "answer": "ابن",
+   "clue": "son"
+  },
+  {
+   "answer": "جدة",
+   "clue": "grandmother"
+  },
+  {
+   "answer": "جيش",
+   "clue": "army"
+  },
+  {
+   "answer": "حقوق",
+   "clue": "law (the subject)"
+  },
+  {
+   "answer": "يدرس",
+   "clue": "he teaches"
+  },
+  {
+   "answer": "دين",
+   "clue": "religion"
+  },
+  {
+   "answer": "رسالة",
+   "clue": "letter"
+  },
+  {
+   "answer": "زوج",
+   "clue": "husband"
+  },
+  {
+   "answer": "زوجة",
+   "clue": "wife"
+  },
+  {
+   "answer": "متزوج",
+   "clue": "married"
+  },
+  {
+   "answer": "صورة",
+   "clue": "picture"
+  },
+  {
+   "answer": "ضابط",
+   "clue": "officer"
+  },
+  {
+   "answer": "الطب",
+   "clue": "medicine"
+  },
+  {
+   "answer": "اعرف",
+   "clue": "I know"
+  },
+  {
+   "answer": "علم",
+   "clue": "science"
+  },
+  {
+   "answer": "عائلة",
+   "clue": "extended family"
+  },
+  {
+   "answer": "قريب",
+   "clue": "relative"
+  },
+  {
+   "answer": "كلية",
+   "clue": "college within a university"
+  },
+  {
+   "answer": "هندسة",
+   "clue": "engineering"
+  }
+ ],
+ "b2-u4": [
+  {
+   "answer": "ياكل",
+   "clue": "he eats"
+  },
+  {
+   "answer": "امس",
+   "clue": "yesterday"
+  },
+  {
+   "answer": "اول",
+   "clue": "first"
+  },
+  {
+   "answer": "ابتدائي",
+   "clue": "primary, elementary"
+  },
+  {
+   "answer": "احفظ",
+   "clue": "I memorize"
+  },
+  {
+   "answer": "حلويات",
+   "clue": "sweets, desserts"
+  },
+  {
+   "answer": "خضار",
+   "clue": "vegetables"
+  },
+  {
+   "answer": "مدرسة",
+   "clue": "school"
+  },
+  {
+   "answer": "اتذكر",
+   "clue": "I remember"
+  },
+  {
+   "answer": "زميل",
+   "clue": "classmate, colleague"
+  },
+  {
+   "answer": "سفر",
+   "clue": "traveling"
+  },
+  {
+   "answer": "اسافر",
+   "clue": "I travel"
+  },
+  {
+   "answer": "سلطة",
+   "clue": "salad"
+  },
+  {
+   "answer": "يستمع",
+   "clue": "he listens to"
+  },
+  {
+   "answer": "سمك",
+   "clue": "fish"
+  },
+  {
+   "answer": "شوربة",
+   "clue": "soup"
+  },
+  {
+   "answer": "صديق",
+   "clue": "friend (male)"
+  },
+  {
+   "answer": "صديقة",
+   "clue": "friend (female)"
+  },
+  {
+   "answer": "طفولة",
+   "clue": "childhood"
+  },
+  {
+   "answer": "مطعم",
+   "clue": "restaurant"
+  },
+  {
+   "answer": "فواكه",
+   "clue": "fruits"
+  },
+  {
+   "answer": "يقرا",
+   "clue": "he reads"
+  },
+  {
+   "answer": "يقول",
+   "clue": "he says"
+  },
+  {
+   "answer": "يكتب",
+   "clue": "he writes"
+  },
+  {
+   "answer": "كان",
+   "clue": "he was"
+  },
+  {
+   "answer": "كنت",
+   "clue": "I was"
+  },
+  {
+   "answer": "لحم",
+   "clue": "meat"
+  }
+ ],
+ "b2-u5": [
+  {
+   "answer": "بارد",
+   "clue": "ليس حار"
+  },
+  {
+   "answer": "حار",
+   "clue": "ليس بارد"
+  },
+  {
+   "answer": "ثلج",
+   "clue": "ماء أبيض بارد"
+  },
+  {
+   "answer": "جدا",
+   "clue": "very"
+  },
+  {
+   "answer": "شتاء",
+   "clue": "الثلج في ______"
+  },
+  {
+   "answer": "صيف",
+   "clue": "الجو حار في ______"
+  },
+  {
+   "answer": "خريف",
+   "clue": "قبل الشتاء"
+  },
+  {
+   "answer": "ربيع",
+   "clue": "spring (the season)"
+  },
+  {
+   "answer": "مطر",
+   "clue": "في الشتاء ______ وثلج"
+  },
+  {
+   "answer": "مشمس",
+   "clue": "الجو فيه شمس"
+  },
+  {
+   "answer": "غائم",
+   "clue": "cloudy"
+  },
+  {
+   "answer": "رطوبة",
+   "clue": "humidity"
+  },
+  {
+   "answer": "كثيرا",
+   "clue": "ليس قليلا"
+  },
+  {
+   "answer": "قليلا",
+   "clue": "ليس كثيرا"
+  },
+  {
+   "answer": "فصل",
+   "clue": "الشتاء والصيف: ______"
+  },
+  {
+   "answer": "احيانا",
+   "clue": "ليس دائما"
+  }
+ ],
+ "b2-u6": [
+  {
+   "answer": "رياضة",
+   "clue": "كرة القدم وكرة السلة"
+  },
+  {
+   "answer": "سباحة",
+   "clue": "الرياضة في الماء"
+  },
+  {
+   "answer": "محاضرة",
+   "clue": "درس في الجامعة"
+  },
+  {
+   "answer": "شركة",
+   "clue": "موظف يعمل في ______"
+  },
+  {
+   "answer": "يلعب",
+   "clue": "هو ______ كرة القدم"
+  },
+  {
+   "answer": "يوم",
+   "clue": "النهار والليل"
+  },
+  {
+   "answer": "معيد",
+   "clue": "موظف في الجامعة"
+  },
+  {
+   "answer": "تخرجت",
+   "clue": "أنا ______ من الجامعة"
+  },
+  {
+   "answer": "يتخرج",
+   "clue": "هو ______ من الجامعة"
+  },
+  {
+   "answer": "جري",
+   "clue": "running"
+  },
+  {
+   "answer": "رقص",
+   "clue": "dancing"
+  },
+  {
+   "answer": "اسبوع",
+   "clue": "week"
+  },
+  {
+   "answer": "حياة",
+   "clue": "life"
+  },
+  {
+   "answer": "يذهب",
+   "clue": "he goes"
+  }
+ ],
+ "b2-u7": [
+  {
+   "answer": "ثانوي",
+   "clue": "مدرسة بعد الإعدادي"
+  },
+  {
+   "answer": "اعدادي",
+   "clue": "مدرسة قبل الثانوي"
+  },
+  {
+   "answer": "محزن",
+   "clue": "ليس سعيد"
+  },
+  {
+   "answer": "مستشفى",
+   "clue": "بناية فيها مريض"
+  },
+  {
+   "answer": "يعيش",
+   "clue": "يسكن"
+  },
+  {
+   "answer": "مات",
+   "clue": "هو ليس في الحياة"
+  },
+  {
+   "answer": "ماتت",
+   "clue": "هي ليس في الحياة"
+  },
+  {
+   "answer": "مال",
+   "clue": "ليس عندي ______"
+  },
+  {
+   "answer": "وزارة",
+   "clue": "______ الخارجية"
+  },
+  {
+   "answer": "خارجية",
+   "clue": "وزارة ______"
+  },
+  {
+   "answer": "اول",
+   "clue": "first"
+  },
+  {
+   "answer": "مجنون",
+   "clue": "crazy"
+  },
+  {
+   "answer": "حادث",
+   "clue": "accident"
+  },
+  {
+   "answer": "عام",
+   "clue": "general, public"
+  },
+  {
+   "answer": "اقتصاد",
+   "clue": "economics"
+  },
+  {
+   "answer": "اكبر",
+   "clue": "the biggest or oldest"
+  }
+ ]
 }

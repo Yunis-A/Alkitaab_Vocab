@@ -150,7 +150,7 @@ export function Puzzle({ id, onExit }) {
           return (
             <li key={`${e.n}${e.dir}`} className={`${isCurrent ? "current" : ""}${done ? " done" : ""}`}>
               <button type="button" className="link-button" onClick={() => goEntry(e)}>
-                <bdi>{nf(e.n)}.</bdi> <span className="ar" dir="rtl">{e.clue}</span>
+                <bdi>{nf(e.n)}.</bdi> <span className={/[A-Za-z]/.test(e.clue) ? "" : "ar"} dir="auto">{e.clue}</span>
               </button>
             </li>
           );

@@ -6,6 +6,7 @@ const SHAPES = {
   quick: <path d="M13 2 4 14h7l-1 8 9-12h-7z" />,
   matching: <><circle cx="6" cy="6" r="3" /><circle cx="18" cy="18" r="3" /><path d="m8.5 8.5 7 7" /></>,
   crossword: <><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 3v18M15 3v18M3 9h18M3 15h18" /></>,
+  wordsearch: <><circle cx="10.5" cy="10.5" r="6.5" /><path d="m20 20-4.9-4.9" /><path d="M7.5 10.5h6M10.5 7.5v6" opacity="0.5" /></>,
   verbs: <path d="M5 12h14M13 6l6 6-6 6" />,
   typing: <><rect x="2" y="6" width="20" height="12" rx="2" /><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10" /></>,
   // the sun at the top left and the crescent at the bottom right, clear of each other

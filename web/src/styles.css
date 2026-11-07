@@ -448,3 +448,20 @@ button.primary, .button.primary {
 .cross-clues-col li.done .link-button { color: var(--muted); text-decoration: line-through; }
 .cross-clues-col .ar { font-size: 1.05rem; line-height: 1.6; }
 .cross-done { font-weight: 700; }
+
+/* word search */
+.ws-layout { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+@media (max-width: 900px) { .ws-layout { grid-template-columns: minmax(0, 1fr); } }
+.ws-grid { --cell: min(2.5rem, 6.4vw); display: grid; gap: 2px; width: max-content; max-width: 100%; justify-self: center; user-select: none; }
+.ws-cell { width: var(--cell); height: var(--cell); padding: 0; display: flex; align-items: center; justify-content: center; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 4px; font-size: calc(var(--cell) * 0.58); }
+.ws-cell .ar { line-height: 1.2; }
+.ws-cell.start { background: color-mix(in srgb, var(--theme) 35%, var(--surface)); border-color: var(--theme); border-width: 2px; }
+.ws-cell.miss { background: var(--bad-bg); }
+.ws-cell.f0 { background: #ffe08a; } .ws-cell.f1 { background: #a8e6c1; } .ws-cell.f2 { background: #a9d4ff; }
+.ws-cell.f3 { background: #f6b6c8; } .ws-cell.f4 { background: #d4c1f5; } .ws-cell.f5 { background: #ffc79a; }
+.ws-cell.found { color: #1c1c1e; }
+.ws-words { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 0.35rem 1rem; }
+.ws-words li { display: flex; flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.6rem; }
+.ws-words .ar { font-size: 1.3rem; line-height: 1.6; }
+.ws-words li.done .ar { text-decoration: line-through; color: var(--muted); }
+.ws-gloss.light { color: var(--muted); font-size: 0.78rem; }

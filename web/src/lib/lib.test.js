@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
@@ -10,6 +11,9 @@ import { lessonStyle } from "../config/books.js";
 import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
+import wordsearches from "../data/wordsearch.json" with { type: "json" };
+import { searchId, glossMode, wordCells, lineBetween, wordOnLine } from "./wordsearch.js";
+import { isKnown, knownByUnit, tokens as arabicTokens } from "../../scripts/lib/crossword-known.mjs";
 import crosswords from "../data/crosswords.json" with { type: "json" };
 import { puzzleId, sameLetter, entryCells, entryAt, emptyTyped, isEntrySolved, isSolved, wrongCells, nextCell, prevCell, isCell } from "./crossword.js";
 import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
@@ -1440,7 +1444,7 @@ test("crosswords: one static puzzle per unit from part 1, consistent grids, Arab
     for (const e of p.entries) {
       // the answer is spelled out by the grid, along its direction
       entryCells(e).forEach(({ r, c }, k) => assert.equal(p.cells[r][c], e.answer[k], `${id} ${e.n} ${e.dir}`));
-      assert.ok(e.clue && /[\u0621-\u064A]/.test(e.clue) && !/[A-Za-z0-9]/.test(e.clue), `${id} clue of ${e.answer}`);
+      assert.ok(e.clue && /[A-Za-z\u0621-\u064A]/.test(e.clue) && !/[0-9]/.test(e.clue), `${id} clue of ${e.answer}`);
       assert.ok(!e.clue.includes(e.answer) || e.answer.length < 4, `${id}: ${e.answer} is in its clue`);
     }
     // every letter cell belongs to a word; across and down clues both exist
@@ -1479,4 +1483,62 @@ test("crosswords: one static puzzle per unit from part 1, consistent grids, Arab
   // saved: puzzles solved
   assert.deepEqual(loadProgress().crosswords, { done: {} });
   assert.deepEqual(mergeProgress({ cards: {}, crosswords: { done: { "b2-u1": true } } }, { cards: {}, crosswords: { done: { "b2-u2": true } } }).crosswords, { done: { "b2-u1": true, "b2-u2": true } });
+});
+
+test("crossword clues suit the level: English early, mostly Arabic later, only words the student knows", () => {
+  const known = knownByUnit(allWords, Object.keys(crosswords));
+  for (const [id, p] of Object.entries(crosswords)) {
+    const [book, unit] = id.match(/\d+/g).map(Number);
+    const english = p.entries.filter((e) => /[A-Za-z]/.test(e.clue)).length;
+    const share = english / p.entries.length;
+    if (book === 2 && unit >= 5 && unit <= 11) assert.ok(share <= 0.4 + 1e-9, `${id}: ${english} English clues of ${p.entries.length}`);
+    if (!(book === 2 && unit <= 11)) assert.ok(share <= 0.15 + 1e-9, `${id}: ${english} English clues of ${p.entries.length}`);
+    // every Arabic word of a clue has been met by that unit
+    for (const e of p.entries) {
+      const unknown = arabicTokens(e.clue).filter((tok) => !isKnown(tok, known[id]));
+      assert.deepEqual(unknown, [], `${id} ${e.answer}: ${e.clue}`);
+    }
+  }
+  // part 1 lessons 1-4 can be all English
+  const early = ["b2-u1", "b2-u2", "b2-u3", "b2-u4"].map((id) => crosswords[id].entries.filter((e) => /[A-Za-z]/.test(e.clue)).length);
+  assert.ok(early.every((n) => n > 0));
+});
+
+test("word searches: one per unit from part 1, the words are in the grid, tapping a line finds a word", () => {
+  const ids = Object.keys(wordsearches);
+  assert.equal(ids.length, 28);
+  assert.ok(ids.every((id) => !id.startsWith("b1")));
+  for (const [id, p] of Object.entries(wordsearches)) {
+    assert.equal(p.grid.length, p.rows);
+    assert.ok(p.grid.every((row) => row.length === p.cols));
+    assert.ok(p.words.length >= 16, `${id}: ${p.words.length} words`);
+    assert.equal(new Set(p.words.map((w) => w.answer)).size, p.words.length);
+    for (const w of p.words) {
+      // the word is spelled out by the grid, in a straight line inside it
+      const cells = wordCells(w);
+      assert.equal(cells.map(({ r, c }) => p.grid[r]?.[c]).join(""), w.answer, `${id} ${w.answer}`);
+      assert.ok(w.arabic && w.english);
+    }
+  }
+  // most (all, in small units) of the unit's words are hidden
+  const candidates = JSON.parse(readFileSync(new URL("../../data/crossword/candidates.json", import.meta.url), "utf8"));
+  for (const id of ["b2-u1", "b2-u2", "b2-u7", "b2-u8"]) {
+    assert.equal(wordsearches[id].words.length, new Set(candidates[id].map((c) => c.answer)).size, id);
+  }
+  // how much English the list shows
+  assert.deepEqual([glossMode(2, 1), glossMode(2, 4), glossMode(2, 5), glossMode(2, 11), glossMode(2, 12), glossMode(3, 1)], ["full", "full", "light", "light", "none", "none"]);
+  // selecting
+  const p = wordsearches["b2-u1"];
+  const w = p.words[0];
+  const cells = wordCells(w);
+  const first = cells[0], last = cells.at(-1);
+  assert.equal(lineBetween(first, last).length, w.answer.length);
+  assert.equal(wordOnLine(p, lineBetween(first, last))?.answer, w.answer);
+  assert.equal(wordOnLine(p, lineBetween(last, first))?.answer, w.answer); // from the end works too
+  assert.equal(lineBetween({ r: 0, c: 0 }, { r: 1, c: 2 }), null); // not a straight line
+  assert.equal(wordOnLine(p, [first]), null);
+  assert.equal(searchId(2, 3), "b2-u3");
+  // saved
+  assert.deepEqual(loadProgress().wordSearches, { done: {} });
+  assert.deepEqual(mergeProgress({ cards: {}, wordSearches: { done: { "b2-u1": true } } }, { cards: {}, wordSearches: { done: { "b3-u2": true } } }).wordSearches, { done: { "b2-u1": true, "b3-u2": true } });
 });
