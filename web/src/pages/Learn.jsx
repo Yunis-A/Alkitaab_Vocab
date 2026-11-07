@@ -348,29 +348,32 @@ function Review({ onExit }) {
           <span className="ar huge" dir="rtl">{varietyText(word, variety, level)}</span>
         </div>
 
+        {/* the rating buttons take the place of "Show answer", so the mouse does not have to move */}
         {revealed ? (
-          <>
-            <hr />
-            <WordDetail word={word} showStatus={false} />
-            <div className="ratings">
-              {RATINGS.map((r) => (
-                <button
-                  key={r}
-                  className={`rate rate-${r}`}
-                  onClick={() => {
-                    rate(key, r);
-                    setRevealed(false);
-                  }}
-                >
-                  <span dir="auto">{t(r)}</span>
-                </button>
-              ))}
-            </div>
-          </>
+          <div className="ratings">
+            {RATINGS.map((r) => (
+              <button
+                key={r}
+                className={`rate rate-${r}`}
+                onClick={() => {
+                  rate(key, r);
+                  setRevealed(false);
+                }}
+              >
+                <span dir="auto">{t(r)}</span>
+              </button>
+            ))}
+          </div>
         ) : (
           <button className="primary" onClick={() => setRevealed(true)}>
             <span dir="auto">{t("showAnswer")}</span>
           </button>
+        )}
+        {revealed && (
+          <>
+            <hr />
+            <WordDetail word={word} showStatus={false} />
+          </>
         )}
       </section>
     </main>
