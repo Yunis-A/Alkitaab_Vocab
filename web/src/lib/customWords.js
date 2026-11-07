@@ -21,6 +21,14 @@ export function normalizeRoot(input) {
 // House style, as in the word list: no fatha before alif.
 const clean = (s) => String(s ?? "").trim().replace(/َ(?=ا)/g, "");
 
+// A verb whose root has a weak letter (و ي ا ى), a hamza or a doubled consonant is probably irregular, so the forms the
+// app generates for it should be checked.
+export function mayBeIrregular(word) {
+  if (word.pos !== "verb" || !word.root) return false;
+  const letters = word.root.split(" ");
+  return letters.some((l) => "ويءاى".includes(l)) || letters[1] === letters[2];
+}
+
 // What is missing from the form (keys of the form fields), empty when it can be added.
 export function missingFields(f) {
   const out = [];
@@ -82,6 +90,7 @@ export function courseMatches(courseIndex, { arabic, definition }, level, custom
 export const addOwnWord = (custom, word) => ({ ...custom, words: [...custom.words, word] });
 export const removeOwnWord = (custom, id) => ({ ...custom, words: custom.words.filter((w) => w.id !== id) });
 export const unlockEarly = (custom, id) => (custom.early.includes(id) ? custom : { ...custom, early: [...custom.early, id] });
+export const updateOwnWord = (custom, id, patch) => ({ ...custom, words: custom.words.map((w) => (w.id === id ? { ...w, ...patch } : w)) });
 export const lockEarly = (custom, id) => ({ ...custom, early: custom.early.filter((x) => x !== id) });
 
 // Merging this browser's words with the account's: everything either side has.

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import { GENDER_FROM, PLURAL_FROM, levelReached } from "../config/books.js";
 import { POS_CHOICES, PREPOSITION_CHOICES, VOWELS, courseMatches, missingFields } from "../lib/customWords.js";
@@ -11,13 +11,13 @@ const blank = () => ({
   prepositions: [], pastVowel: "a", presentVowel: "u", notes: "",
 });
 
-// The panel beside the search: add a word from class. If it is already on the course list in a lesson the student
+// A small tab at the side of the search; it opens a panel with more room: add a word from class. If it is already on the course list in a lesson the student
 // has not reached, they can unlock that entry now instead of typing it in; otherwise they fill in the basics and it
 // joins their own list (Lookup, Review and the games).
 export default function AddWord() {
   const { t, nf, bookName, level, dialects, courseIndex, custom, wordsById, addWord, removeWord, unlockWord } = useApp();
   const [f, setF] = useState(blank);
-  const [open, setOpen] = useState(() => typeof window !== "undefined" && !!window.matchMedia?.("(min-width: 960px)")?.matches);
+  const [open, setOpen] = useState(false); // closed: only the small tab shows
   const [message, setMessage] = useState(null); // { kind, text }
   const set = (key, value) => setF((x) => ({ ...x, [key]: value }));
 
@@ -39,12 +39,29 @@ export default function AddWord() {
     setMessage({ kind: "info", text: t("addWordAdded") });
   };
 
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   const mine = [...custom.words, ...custom.early.map((id) => wordsById.get(id)).filter(Boolean)];
 
   return (
-    <aside className="add-word card">
-      <details open={open} onToggle={(e) => setOpen(e.currentTarget.open)}>
-        <summary><bdi>{t("addWordTitle")}</bdi></summary>
+    <>
+      {!open && (
+        <button type="button" className="add-word-tab" onClick={() => setOpen(true)} title={t("addWordTitle")} aria-label={t("addWordTitle")}>
+          ＋
+        </button>
+      )}
+      {open && <div className="add-word-backdrop" onClick={() => setOpen(false)} />}
+      {open && (
+      <aside className="add-word-drawer" role="dialog" aria-label={t("addWordTitle")}>
+        <div className="add-word-head">
+          <h3><bdi>{t("addWordTitle")}</bdi></h3>
+          <button type="button" className="link-button" onClick={() => setOpen(false)} aria-label="Close">✕</button>
+        </div>
         <p className="muted"><bdi>{t("addWordHelp")}</bdi></p>
 
         <form onSubmit={submit} className="add-word-form">
@@ -166,7 +183,8 @@ export default function AddWord() {
             </ul>
           </div>
         )}
-      </details>
-    </aside>
+      </aside>
+      )}
+    </>
   );
 }

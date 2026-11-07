@@ -149,6 +149,18 @@ export const strings = {
   singular: { en: "Singular", ar: "المفرد", unlock: u(3, 8) },
   appearance: { en: "Appearance", ar: "المظهر", unlock: u(3, 8) },
   darkMode: { en: "Dark mode", ar: "الوضع الداكن", unlock: u(3, 8) },
+  // The student's name
+  welcomeName: { en: (n) => `Welcome back, ${n}`, ar: (n) => `أهلا بعودتك يا ${n}`, unlock: u(2, 5) }, // يا is taught in Alif Baa lesson 3
+  nameLabel: { en: "Your name", ar: "اسمك", unlock: u(1, 2) }, // اِسم and ـكَ are taught in Alif Baa lesson 2
+  nameArLabel: { en: "Your name in Arabic", ar: "اسمك بالعربية", unlock: u(2, 1) },
+  nameArAsk: { en: "Write your name in Arabic", ar: "اكتب اسمك بالعربية", unlock: u(3, 8) },
+  nameLater: { en: "Later", ar: "لاحقا", unlock: u(3, 8) },
+  editSave: { en: "Save", ar: "احفظ", unlock: u(3, 8) },
+  editCancel: { en: "Cancel", ar: "ألغ", unlock: u(3, 8) },
+  customFormsNote: { en: "Irregular verbs (with a weak letter, a hamza or a doubled letter) may be generated wrongly. Check the forms, and edit them if needed.", ar: "قد تكون صيغ الأفعال الشاذة خاطئة. تحقق منها وعدلها إذا لزم.", unlock: u(3, 8) },
+  customFormsEdit: { en: "Edit the forms", ar: "عدل الصيغ", unlock: u(3, 8) },
+  customFormsEdited: { en: "The forms were edited by you.", ar: "عدلت الصيغ بنفسك.", unlock: u(3, 8) },
+  customFormsReset: { en: "Back to the generated forms", ar: "العودة إلى الصيغ المولدة", unlock: u(3, 8) },
   // Adding words from class (Lookup). Arabic wording only where the list teaches it; the rest follows later.
   addWordTitle: { en: "Add a word", ar: "أضف كلمة", unlock: u(3, 8) },
   addWordHelp: { en: "A word from class that is not on your list yet. Check first: it may be in a later lesson, and you can add it now.", ar: "كلمة من الدرس ليست في قائمتك. تحقق أولا: قد تكون في درس لاحق ويمكنك إضافتها الآن.", unlock: u(3, 8) },

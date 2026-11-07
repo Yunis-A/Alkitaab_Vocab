@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { NAME_AR_FROM, levelReached } from "../config/books.js";
 import { useApp } from "../context/AppContext.jsx";
 import { useNow } from "../hooks.js";
 
@@ -10,7 +12,8 @@ const STATUSES = [
 ];
 
 export default function Home() {
-  const { t, nf, visibleWords, activeCards, statusOf } = useApp();
+  const { t, nf, level, visibleWords, activeCards, statusOf, displayName, profile, setProfile } = useApp();
+  const [nameAr, setNameAr] = useState("");
   const now = useNow(15000);
 
   const dueCount = activeCards.filter(([, c]) => c.due <= now).length;
@@ -21,7 +24,19 @@ export default function Home() {
 
   return (
     <main className="page">
-      <h1><bdi>{t("welcome")}</bdi></h1>
+      <h1><bdi>{displayName ? t("welcomeName", displayName) : t("welcome")}</bdi></h1>
+
+      {/* once Alif Baa is finished: the name in Arabic, shown from then on instead of the English one */}
+      {levelReached(level, NAME_AR_FROM) && !profile.nameAr.trim() && !profile.skippedAr && (
+        <section className="card">
+          <h2><bdi>{t("nameArAsk")}</bdi></h2>
+          <form className="name-form" onSubmit={(e) => { e.preventDefault(); if (nameAr.trim()) setProfile({ nameAr: nameAr.trim() }); }}>
+            <input className="ar" dir="rtl" value={nameAr} onChange={(e) => setNameAr(e.target.value)} />
+            <button className="primary" disabled={!nameAr.trim()}><span dir="auto">{t("editSave")}</span></button>
+            <button type="button" onClick={() => setProfile({ skippedAr: true })}><span dir="auto">{t("nameLater")}</span></button>
+          </form>
+        </section>
+      )}
 
       <section className="card">
         <h2><bdi>{t("dueTitle")}</bdi></h2>

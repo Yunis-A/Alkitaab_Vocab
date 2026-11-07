@@ -12,7 +12,8 @@ import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
 import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
 import { PLURAL_FROM, GENDER_FROM } from "../config/books.js";
-import { emptyCustom, normalizeRoot, missingFields, buildCustomWord, courseMatches, addOwnWord, removeOwnWord, unlockEarly, lockEarly, mergeCustom } from "./customWords.js";
+import { NAME_AR_FROM } from "../config/books.js";
+import { mayBeIrregular, updateOwnWord, emptyCustom, normalizeRoot, missingFields, buildCustomWord, courseMatches, addOwnWord, removeOwnWord, unlockEarly, lockEarly, mergeCustom } from "./customWords.js";
 import { MOODS, MOOD_LABELS, MOOD_FROM, learnedMoods, moodCharts } from "./moods.js";
 import { TENSES, tensesAt, personFrom, learnedPersons, presentAnswers, conjugationItems, needsForm, isConjugationCorrect, charFor } from "./conjugation.js";
 import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult, targetLength, typicalCpm, TARGET_MINUTES } from "./typing.js";
@@ -1389,4 +1390,37 @@ test("a student's own words: the form, matches with the course list, unlocking e
   const items = buildItems([{ ...noun, book: 4, unit: 9 }], {}, { units: new Set(["1.1"]), lists: new Set([1, 2]), varieties: new Set(["ar-en"]) });
   assert.equal(items.length, 0);
   assert.equal(buildItems([{ ...noun, book: 4, unit: 9 }], {}, { units: new Set(["1.1"]), lists: new Set([1, 2]), varieties: new Set(["ar-en"]), extra: new Set(["my-1"]) }).length, 1);
+});
+
+test("the student's name, and editing the forms of an own verb", () => {
+  // after Alif Baa the Arabic name is asked for and shown instead of the English one
+  assert.deepEqual(NAME_AR_FROM, { book: 2, unit: 1 });
+  assert.deepEqual(loadProgress().profile, { name: "", nameAr: "", skippedAr: false });
+  saveProgress({ ...loadProgress(), profile: { name: "Sara", nameAr: "", skippedAr: false } });
+  assert.equal(loadProgress().profile.name, "Sara");
+  saveProgress({ ...loadProgress(), profile: { name: "", nameAr: "", skippedAr: false } });
+  const m = mergeProgress({ cards: {}, profile: { name: "Sara", nameAr: "", skippedAr: true } }, { cards: {}, profile: { name: "", nameAr: "سارة", skippedAr: false } });
+  assert.deepEqual(m.profile, { name: "Sara", nameAr: "سارة", skippedAr: true });
+  assert.deepEqual(mergeProgress({ cards: {} }, { cards: {} }).profile, { name: "", nameAr: "", skippedAr: false });
+  assert.equal(strings.welcomeName.en("Sara"), "Welcome back, Sara");
+  assert.equal(strings.welcomeName.ar("سارة"), "أهلا بعودتك يا سارة"); // with يا
+  const ya = allWords.find((w) => w.definition.startsWith("signal that you are addressing"));
+  assert.ok(ya.book <= strings.welcomeName.unlock.book && (ya.book < strings.welcomeName.unlock.book || ya.unit <= strings.welcomeName.unlock.unit)); // يا is learned before
+  // irregular verbs: a note on the ones that may be generated wrongly
+  assert.equal(mayBeIrregular({ pos: "verb", root: "ك ت ب" }), false);
+  assert.equal(mayBeIrregular({ pos: "verb", root: "ق و ل" }), true); // hollow
+  assert.equal(mayBeIrregular({ pos: "verb", root: "ر م ي" }), true); // defective
+  assert.equal(mayBeIrregular({ pos: "verb", root: "ء ك ل" }), true); // hamzated
+  assert.equal(mayBeIrregular({ pos: "verb", root: "ح ب ب" }), true); // doubled
+  assert.equal(mayBeIrregular({ pos: "noun", root: "ق و ل" }), false);
+  // editing the forms of an own verb: stored forms win over generated ones, and can be reset
+  const verb = buildCustomWord({ arabic: "قالَ", definition: "to say", pos: "verb", root: "قول", form: 1 }, { book: 2, unit: 1 }, "my-9");
+  let c = addOwnWord(emptyCustom(), verb);
+  c = updateOwnWord(c, "my-9", { conjugations: { past: { "3ms": "قالَ", "3mp": "قالوا" }, present: { "3ms": "يَقولُ" } }, masdar: "قَوْل", edited: true });
+  const edited = c.words[0];
+  assert.equal(getForms(edited).past["3mp"], "قالوا");
+  assert.deepEqual(getForms(edited).masdar, ["قَوْل"]);
+  assert.equal(edited.edited, true);
+  c = updateOwnWord(c, "my-9", { conjugations: null, masdar: null, edited: false });
+  assert.equal(getForms(c.words[0]).past?.["3mp"] === "قالوا", false); // back to the generated forms
 });

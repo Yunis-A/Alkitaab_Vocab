@@ -10,14 +10,18 @@ import Account from "./pages/Account.jsx";
 import { Privacy, Terms } from "./pages/Legal.jsx";
 
 function Onboarding() {
-  const { t, setLevel } = useApp();
+  const { t, setLevel, setProfile } = useApp();
   const [value, setValue] = useState({ book: 1, unit: 1 });
+  const [name, setName] = useState("");
   return (
     <main className="page narrow">
       <h1><bdi>{t("setupTitle")}</bdi></h1>
       <p><bdi>{t("setupHelp")}</bdi></p>
+      <label className="field-label name-field"><span dir="auto">{t("nameLabel")}</span>
+        <input dir="auto" value={name} onChange={(e) => setName(e.target.value)} autoComplete="given-name" />
+      </label>
       <LevelPicker value={value} onChange={setValue} fixed />
-      <button className="primary" onClick={() => setLevel(value.book, value.unit)}>
+      <button className="primary" onClick={() => { if (name.trim()) setProfile({ name: name.trim() }); setLevel(value.book, value.unit); }}>
         <span dir="auto">{t("setupContinue")}</span>
       </button>
       {/* a returning student on a new device signs in instead: their saved level then loads */}

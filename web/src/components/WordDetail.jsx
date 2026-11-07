@@ -3,6 +3,7 @@ import { useApp } from "../context/AppContext.jsx";
 import { getForms, PAST_PERSONS, IMPERATIVE_PERSONS } from "../lib/morphology.js";
 import StatusBadge from "./StatusBadge.jsx";
 import { presentChart } from "../lib/chart.js";
+import CustomVerbTools from "./CustomVerbTools.jsx";
 import { GENDER_FROM, IMPERATIVE_LEVEL, PLURAL_FROM, levelReached } from "../config/books.js";
 import { DIALECTS, headword } from "../lib/varieties.js";
 
@@ -222,6 +223,8 @@ export default function WordDetail({ word, showStatus = true, showHeader = true,
           <bdi><strong>{t("notes")}: </strong>{word.notes}</bdi>
         </p>
       )}
+
+      {word.custom && f.isVerb && links && <CustomVerbTools word={word} />}
 
       {word.arabic && f.isVerb && (f.past || f.present || (showImperative && f.imperative)) && (
         <section className="conjugations">

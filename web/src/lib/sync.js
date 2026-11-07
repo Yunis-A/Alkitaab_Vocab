@@ -28,6 +28,11 @@ export function mergeProgress(local, remote) {
     typing: { passed },
     dark: remote.dark ?? local.dark ?? null,
     custom: mergeCustom(local.custom, remote.custom),
+    profile: {
+      name: remote.profile?.name || local.profile?.name || "",
+      nameAr: remote.profile?.nameAr || local.profile?.nameAr || "",
+      skippedAr: !!(remote.profile?.skippedAr || local.profile?.skippedAr),
+    },
     level: remote.level ?? local.level,
     dialects: { ...local.dialects, ...remote.dialects },
     cards,

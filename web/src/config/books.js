@@ -43,6 +43,9 @@ export function lessonStyle(book, unit) {
 export const PLURAL_FROM = { book: 2, unit: 2 };
 export const GENDER_FROM = { book: 1, unit: 6 };
 
+// After Alif Baa the student is asked for their name in Arabic, which is then shown instead of the English one.
+export const NAME_AR_FROM = { book: 2, unit: 1 };
+
 // The imperative (الأمر) is not shown before Al-Kitaab part 3, lesson 3.
 export const IMPERATIVE_LEVEL = { book: 4, unit: 3 };
 
