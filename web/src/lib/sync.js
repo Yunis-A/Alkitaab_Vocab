@@ -1,6 +1,8 @@
 // Merging the progress kept in this browser with the progress saved in the student's account, used the
 // first time a device signs in. The account wins for settings; for cards the more-studied copy wins and
-// nothing is lost; for the map game the faster time wins.
+// nothing is lost; for the map game the faster time wins; their own words are all kept.
+
+import { mergeCustom } from "./customWords.js";
 
 const newer = (a, b) => {
   if (!a) return b;
@@ -25,6 +27,7 @@ export function mergeProgress(local, remote) {
     ...remote,
     typing: { passed },
     dark: remote.dark ?? local.dark ?? null,
+    custom: mergeCustom(local.custom, remote.custom),
     level: remote.level ?? local.level,
     dialects: { ...local.dialects, ...remote.dialects },
     cards,

@@ -10,6 +10,7 @@ import { buildIndex } from "../lib/search.js";
 import { emptyProgress, loadProgress, saveProgress } from "../lib/storage.js";
 import { fetchProgress, pushProgress } from "../lib/supabase.js";
 import { mergeProgress } from "../lib/sync.js";
+import { addOwnWord, buildCustomWord, emptyCustom, lockEarly, newOwnId, removeOwnWord, unlockEarly } from "../lib/customWords.js";
 import { useAuth } from "./AuthContext.jsx";
 
 const Ctx = createContext(null);
@@ -19,7 +20,6 @@ const DEFAULT_LEVEL = { book: 1, unit: 1 };
 
 // Words are curriculum-ordered by book, then unit, then their order in the file.
 const sortedWords = [...allWords].sort((a, b) => a.book - b.book || a.unit - b.unit);
-const wordsById = new Map(sortedWords.map((w) => [w.id, w]));
 const searchIndex = buildIndex(sortedWords);
 
 export function AppProvider({ children }) {
@@ -74,6 +74,10 @@ export function AppProvider({ children }) {
   }, [userId, synced, authSignOut]);
 
   const { level, cards, dialects } = progress;
+  // the student's own words, and the course words they unlocked ahead of their lesson
+  const custom = progress.custom ?? emptyCustom();
+  const wordsById = useMemo(() => new Map([...sortedWords, ...custom.words].map((w) => [w.id, w])), [custom.words]);
+  const myIds = useMemo(() => new Set([...custom.words.map((w) => w.id), ...custom.early]), [custom]);
   const effectiveLevel = level ?? DEFAULT_LEVEL;
 
   // Words up to and including the student's current unit, minus entries hidden
@@ -82,17 +86,24 @@ export function AppProvider({ children }) {
   const visibleWords = useMemo(
     () =>
       level
-        ? sortedWords.filter(
-            (w) =>
-              compareLevel(w, level) <= 0 &&
-              !(w.hideFromBook && level.book >= w.hideFromBook) &&
-              isWordAvailable(w, dialects),
-          )
+        ? [
+            ...sortedWords.filter(
+              (w) =>
+                (compareLevel(w, level) <= 0 || custom.early.includes(w.id)) &&
+                !(w.hideFromBook && level.book >= w.hideFromBook) &&
+                isWordAvailable(w, dialects),
+            ),
+            ...custom.words.filter((w) => isWordAvailable(w, dialects)),
+          ]
         : [],
-    [level, dialects],
+    [level, dialects, custom],
   );
   const visibleIds = useMemo(() => new Set(visibleWords.map((w) => w.id)), [visibleWords]);
-  const visibleIndex = useMemo(() => searchIndex.filter((e) => visibleIds.has(e.word.id)), [visibleIds]);
+  const customIndex = useMemo(() => buildIndex(custom.words), [custom.words]);
+  const visibleIndex = useMemo(
+    () => [...searchIndex.filter((e) => visibleIds.has(e.word.id)), ...customIndex.filter((e) => visibleIds.has(e.word.id))],
+    [visibleIds, customIndex],
+  );
 
   // Cards that are in play: the word is visible and its variety is enabled.
   const activeCards = useMemo(() => {
@@ -103,7 +114,7 @@ export function AppProvider({ children }) {
       if (word && visibleIds.has(wordId) && activeVarieties(word, dialects).includes(variety)) out.push([key, card]);
     }
     return out;
-  }, [cards, visibleIds, dialects]);
+  }, [cards, visibleIds, dialects, wordsById]);
 
   const vocab = useMemo(() => vocabSets(sortedWords, cards), [cards]);
   const ratio = useMemo(() => arabicRatio(strings, effectiveLevel, vocab), [effectiveLevel, vocab]);
@@ -228,11 +239,30 @@ export function AppProvider({ children }) {
       const word = wordsById.get(wordId);
       return wordStatus(cards, wordId, word ? activeVarieties(word, dialects) : undefined);
     },
-    [cards, dialects],
+    [cards, dialects, wordsById],
   );
+
+  // Adding words: the student's own, or a course word unlocked early.
+  const setCustom = useCallback((fn) => setProgress((p) => ({ ...p, custom: fn(p.custom ?? emptyCustom()) })), []);
+  const addWord = useCallback(
+    (fields) => {
+      const word = buildCustomWord(fields, level ?? DEFAULT_LEVEL, newOwnId());
+      setCustom((c) => addOwnWord(c, word));
+      return word;
+    },
+    [level, setCustom],
+  );
+  const removeWord = useCallback((id) => setCustom((c) => removeOwnWord(lockEarly(c, id), id)), [setCustom]);
+  const unlockWord = useCallback((id) => setCustom((c) => unlockEarly(c, id)), [setCustom]);
 
   const value = {
     words: sortedWords,
+    courseIndex: searchIndex,
+    custom,
+    myIds,
+    addWord,
+    removeWord,
+    unlockWord,
     wordsById,
     visibleWords,
     visibleIds,

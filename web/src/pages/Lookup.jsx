@@ -9,6 +9,7 @@ import {
 } from "../lib/filters.js";
 import WordDetail, { posLabel } from "../components/WordDetail.jsx";
 import StatusBadge from "../components/StatusBadge.jsx";
+import AddWord from "../components/AddWord.jsx";
 
 const PAGE = 50;
 const POS_ORDER = ["noun", "verb", "adjective", "adverb", "particle", "pronoun", "phrase", "suffix"];
@@ -32,7 +33,7 @@ function Select({ label, value, onChange, children }) {
 }
 
 export default function Lookup() {
-  const { t, nf, bookName, level, visibleWords, visibleIndex, dialects, statusOf } = useApp();
+  const { t, nf, bookName, myIds, level, visibleWords, visibleIndex, dialects, statusOf } = useApp();
   const [params, setParams] = useSearchParams();
   const q = params.get("q") ?? "";
   const rawFilters = filtersFromParams(params);
@@ -75,7 +76,9 @@ export default function Lookup() {
   );
 
   return (
-    <main className="page">
+    <main className="page lookup-page">
+      <div className="lookup-layout">
+      <div className="lookup-main">
       <input
         className="search"
         type="search"
@@ -162,6 +165,7 @@ export default function Lookup() {
                 </span>
                 <span className="def" dir="auto">{w.definition}</span>
                 <span className="pos" dir="auto">{posLabel(t, w.pos)}</span>
+                {myIds.has(w.id) && <span className="badge badge-learning my-badge"><bdi>{t("myWord")}</bdi></span>}
                 <StatusBadge wordId={w.id} />
               </summary>
               <WordDetail word={w} showStatus={false} showHeader={false} dialectOnly={filters.dialect || null} />
@@ -173,6 +177,9 @@ export default function Lookup() {
       {results.length > limit && (
         <button onClick={() => setLimit(limit + PAGE)}>+{nf(results.length - limit)}</button>
       )}
+      </div>
+      <AddWord />
+      </div>
     </main>
   );
 }

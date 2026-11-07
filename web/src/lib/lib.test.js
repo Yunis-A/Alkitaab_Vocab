@@ -12,6 +12,7 @@ import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
 import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
 import { PLURAL_FROM, GENDER_FROM } from "../config/books.js";
+import { emptyCustom, normalizeRoot, missingFields, buildCustomWord, courseMatches, addOwnWord, removeOwnWord, unlockEarly, lockEarly, mergeCustom } from "./customWords.js";
 import { MOODS, MOOD_LABELS, MOOD_FROM, learnedMoods, moodCharts } from "./moods.js";
 import { TENSES, tensesAt, personFrom, learnedPersons, presentAnswers, conjugationItems, needsForm, isConjugationCorrect, charFor } from "./conjugation.js";
 import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult, targetLength, typicalCpm, TARGET_MINUTES } from "./typing.js";
@@ -1327,4 +1328,65 @@ test("prepositions are joined, city has the right plural, plurals and gender wai
   assert.equal(isCorrectSet(1, "makaan", ["مَفعَل", ""]), false);
   assert.equal(answerText(1, "makaan"), "مَفعَل / مَفعِل · مَفاعِل");
   assert.equal(strings.conjMarks.ar, "الحركات ضرورية");
+});
+
+test("a student's own words: the form, matches with the course list, unlocking early, saving and merging", () => {
+  // the root: letters spaced out, hamza seats become ء
+  assert.equal(normalizeRoot("كتب"), "ك ت ب");
+  assert.equal(normalizeRoot("ك ت ب"), "ك ت ب");
+  assert.equal(normalizeRoot("سَأَلَ"), "س ء ل");
+  assert.equal(normalizeRoot("بُؤْس"), "ب ء س");
+  assert.equal(normalizeRoot(""), "");
+  // what is needed
+  assert.deepEqual(missingFields({}), ["arabic", "definition", "pos"]);
+  assert.deepEqual(missingFields({ arabic: "كتاب", definition: "book", pos: "noun" }), []);
+  assert.deepEqual(missingFields({ arabic: "كَتَبَ", definition: "to write", pos: "verb" }), ["form"]);
+  // the word: placed in the current lesson, shaped like the course words
+  const L = { book: 3, unit: 4 };
+  const noun = buildCustomWord({ arabic: "كِتاب", definition: " book ", pos: "noun", root: "كتب", gender: "masculine", plural: "كُتُب" }, L, "my-1");
+  assert.deepEqual([noun.id, noun.custom, noun.book, noun.unit, noun.root, noun.gender, noun.plural, noun.definition], ["my-1", true, 3, 4, "ك ت ب", "masculine", "كُتُب", "book"]);
+  assert.equal(noun.form, null);
+  assert.deepEqual(noun.prepositions, []);
+  const verb = buildCustomWord({ arabic: "كَتَبَ", definition: "to write", pos: "verb", root: "كتب", form: "1", presentVowel: "u", prepositions: ["إلى"] }, L, "my-2");
+  assert.deepEqual([verb.form, verb.pastVowel, verb.presentVowel, verb.prepositions, verb.gender], [1, "a", "u", ["إلى"], null]);
+  // its forms are generated like the course verbs
+  assert.equal(getForms(verb).past["3ms"], "كَتَبَ");
+  assert.equal(getForms(verb).present["3ms"], "يَكْتُبُ");
+  assert.ok(getForms(verb).masdar === null || Array.isArray(getForms(verb).masdar));
+  assert.equal(buildCustomWord({ arabic: "فاعَلَ", definition: "x", pos: "verb", form: 3 }, L, "my-3").presentVowel, undefined);
+  assert.equal(buildCustomWord({ arabic: "فَعَلاا", definition: "x", pos: "noun" }, L, "my-4").arabic, "فَعَلاا".replace(/َ(?=ا)/g, "")); // no fatha before alif
+  // checking the course list: a word of a later lesson is offered to be added now
+  const index = buildIndex(allWords);
+  const early = emptyCustom();
+  const future = allWords.find((w) => w.book === 4 && w.unit === 5 && w.arabic && w.pos === "noun");
+  const m1 = courseMatches(index, { arabic: future.arabic, definition: "" }, { book: 2, unit: 1 }, early);
+  assert.ok(m1.some((m) => m.word.id === future.id && m.state === "future"));
+  assert.ok(courseMatches(index, { arabic: future.arabic, definition: "" }, { book: 4, unit: 10 }, early).some((m) => m.word.id === future.id && m.state === "have"));
+  const unlocked = unlockEarly(early, future.id);
+  assert.ok(courseMatches(index, { arabic: future.arabic, definition: "" }, { book: 2, unit: 1 }, unlocked).some((m) => m.word.id === future.id && m.state === "added"));
+  assert.equal(courseMatches(index, { arabic: "", definition: "" }, L, early).length, 0); // nothing typed
+  assert.ok(courseMatches(index, { arabic: "", definition: "library" }, { book: 1, unit: 1 }, early).length >= 1); // by the English
+  assert.ok(courseMatches(index, { arabic: "ك", definition: "" }, L, early).length === 0); // one letter is not enough
+  // changes
+  let c = emptyCustom();
+  c = addOwnWord(c, noun);
+  c = unlockEarly(unlockEarly(c, "x1"), "x1");
+  assert.deepEqual([c.words.length, c.early], [1, ["x1"]]);
+  assert.deepEqual(lockEarly(c, "x1").early, []);
+  assert.equal(removeOwnWord(c, "my-1").words.length, 0);
+  // merging with the account: everything either side has
+  const merged = mergeCustom({ words: [noun], early: ["a"] }, { words: [verb, noun], early: ["b", "a"] });
+  assert.deepEqual(merged.words.map((w) => w.id).sort(), ["my-1", "my-2"]);
+  assert.deepEqual(merged.early.sort(), ["a", "b"]);
+  const m = mergeProgress({ cards: {}, custom: { words: [noun], early: [] } }, { cards: {}, custom: { words: [verb], early: ["z"] } });
+  assert.deepEqual([m.custom.words.length, m.custom.early], [2, ["z"]]);
+  assert.deepEqual(mergeProgress({ cards: {} }, { cards: {} }).custom, { words: [], early: [] });
+  // saved in the browser
+  saveProgress({ ...loadProgress(), custom: { words: [noun], early: ["q"] } });
+  assert.deepEqual(loadProgress().custom, { words: [noun], early: ["q"] });
+  saveProgress({ ...loadProgress(), custom: { words: [], early: [] } });
+  // the study modes can include them whatever their lesson
+  const items = buildItems([{ ...noun, book: 4, unit: 9 }], {}, { units: new Set(["1.1"]), lists: new Set([1, 2]), varieties: new Set(["ar-en"]) });
+  assert.equal(items.length, 0);
+  assert.equal(buildItems([{ ...noun, book: 4, unit: 9 }], {}, { units: new Set(["1.1"]), lists: new Set([1, 2]), varieties: new Set(["ar-en"]), extra: new Set(["my-1"]) }).length, 1);
 });

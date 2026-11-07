@@ -78,12 +78,13 @@ const GROUPS = { verbs: VERB_GAMES, geography: GEO_GAMES };
 const PARENT = Object.fromEntries(Object.entries(GROUPS).flatMap(([group, games]) => games.map((g) => [g.id, group])));
 
 export default function Learn() {
-  const { t, nf, level, visibleWords, activeCards, dialects } = useApp();
+  const { t, nf, level, visibleWords, activeCards, dialects, myIds } = useApp();
   const [mode, setMode] = useState("menu"); // "menu" | a mode id (setup) | "run:<id>"
   const [units, setUnits] = useState(() => new Set([levelKey(level)])); // the current lesson to start with
   const [lists, setLists] = useState(() => new Set([1, 2]));
   const [chosen, setChosen] = useState(() => new Set(["ar-en", "egy", "shm"]));
   const [englishFirst, setEnglishFirst] = useState(false);
+  const [includeMine, setIncludeMine] = useState(true); // the student's own words and the ones unlocked early
   const [marks, setMarks] = useState(true); // conjugation: the vowel marks are required (unticked: letters only)
   const [offTenses, setOffTenses] = useState(() => new Set()); // conjugation: types unticked (all learned ones start on)
   const [offPersons, setOffPersons] = useState(() => new Set()); // conjugation: pronouns unticked (all learned ones start on)
@@ -94,13 +95,13 @@ export default function Learn() {
   const offered = VARIETY_LABELS.filter(([v]) => v === "ar-en" || dialects[v === "egy" ? "egyptian" : "shami"]);
   const varieties = new Set(offered.map(([v]) => v).filter((v) => chosen.has(v)));
   const items = useMemo(
-    () => buildItems(visibleWords, dialects, { units, lists, varieties }),
-    [visibleWords, dialects, units, lists, chosen], // eslint-disable-line react-hooks/exhaustive-deps
+    () => buildItems(visibleWords, dialects, { units, lists, varieties, extra: includeMine ? myIds : null }),
+    [visibleWords, dialects, units, lists, chosen, includeMine, myIds], // eslint-disable-line react-hooks/exhaustive-deps
   );
   // verbs of the chosen units, for the preposition and pattern trainers
   const chosenVerbs = useMemo(
-    () => visibleWords.filter((w) => w.pos === "verb" && w.arabic && units.has(levelKey(w))),
-    [visibleWords, units],
+    () => visibleWords.filter((w) => w.pos === "verb" && w.arabic && (units.has(levelKey(w)) || (includeMine && myIds.has(w.id)))),
+    [visibleWords, units, includeMine, myIds],
   );
   const prepVerbs = useMemo(() => prepositionVerbs(chosenVerbs), [chosenVerbs]);
   // conjugation: the pronouns learned so far, minus those unticked; every verb of the list for the form check
@@ -179,6 +180,7 @@ export default function Learn() {
 
           <h3><bdi>{t("studyUnits")}</bdi></h3>
           <UnitPicker value={units} onChange={setUnits} skipBooks={setup.id === "prepositions" ? [1] : []} />
+          {myIds.size > 0 && <Check checked={includeMine} onChange={setIncludeMine}>{t("myWordsTitle")}</Check>}
 
           <div className="study-options">
             {setup.options.includes("lists") && (

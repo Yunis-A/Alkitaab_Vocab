@@ -8,9 +8,10 @@ const KEY = "alkitaab_progress_v1";
 // geoBest:  best map-game time in ms, keyed by mode id.
 // dialects: which dialect forms the student studies (off by default).
 // typing:   passed typing lessons ({ id: { accuracy, cpm } }).
+// custom:   the student's own words and the course words they unlocked early ({ words, early }).
 // dark:     dark mode; null until the student chooses, then the system's setting is followed.
 export const emptyProgress = () => ({
-  level: null, cards: {}, geoBest: {}, dialects: { egyptian: false, shami: false }, typing: { passed: {} }, dark: null,
+  level: null, cards: {}, geoBest: {}, dialects: { egyptian: false, shami: false }, typing: { passed: {} }, dark: null, custom: { words: [], early: [] },
 });
 
 // Keep only cards for known varieties (older saves had another direction).
@@ -24,6 +25,7 @@ function migrate(progress) {
     cards,
     dialects: { ...emptyProgress().dialects, ...progress.dialects },
     typing: { ...emptyProgress().typing, ...progress.typing },
+    custom: { ...emptyProgress().custom, ...progress.custom },
   };
 }
 

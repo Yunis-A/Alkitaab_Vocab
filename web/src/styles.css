@@ -389,3 +389,19 @@ button.primary, .button.primary {
 /* the account area follows the page: right-aligned in Arabic, even for its English lines */
 [dir="rtl"] .account { text-align: right; }
 [dir="rtl"] .account .auth-links { justify-content: flex-start; }
+
+/* adding words, beside the search */
+.lookup-page { max-width: 80rem; }
+.lookup-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.lookup-main { min-width: 0; }
+@media (min-width: 960px) { .lookup-layout { grid-template-columns: minmax(0, 1fr) 22rem; } .add-word { position: sticky; top: 1rem; } }
+.add-word > details > summary { cursor: pointer; font-weight: 700; font-size: 1.1rem; color: var(--theme); }
+.add-word-form { display: grid; gap: 0.6rem; }
+.add-word-form select, .add-word-form input:not([type="checkbox"]) { padding: 0.5rem 0.6rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); font: inherit; width: 100%; }
+.add-vowels { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.add-matches { border: 1px dashed var(--theme); border-radius: 8px; padding: 0.5rem 0.7rem; }
+.add-matches ul, .my-words ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem; }
+.add-matches li, .my-words li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; }
+.add-matches .ar, .my-words .ar { font-size: 1.3rem; line-height: 1.6; }
+.my-words h4 { margin: 1rem 0 0.4rem; color: var(--theme); }
+.my-badge { margin-inline-start: 0.4rem; }
