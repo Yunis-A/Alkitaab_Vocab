@@ -152,6 +152,7 @@ export const strings = {
   // The student's name
   welcomeName: { en: (n) => `Welcome back, ${n}`, ar: (n) => `أهلا بعودتك يا ${n}`, unlock: u(2, 5) }, // يا is taught in Alif Baa lesson 3
   nameLabel: { en: "Your name", ar: "اسمك", unlock: u(1, 2) }, // اِسم and ـكَ are taught in Alif Baa lesson 2
+  nameEnLabel: { en: "Your name in English", ar: "اسمك بالإنجليزية", unlock: u(2, 1) }, // إنجليزي is taught in part 1 lesson 1
   nameArLabel: { en: "Your name in Arabic", ar: "اسمك بالعربية", unlock: u(2, 1) },
   nameArAsk: { en: "Write your name in Arabic", ar: "اكتب اسمك بالعربية", unlock: u(3, 8) },
   nameLater: { en: "Later", ar: "لاحقا", unlock: u(3, 8) },

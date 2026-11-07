@@ -1,7 +1,6 @@
 import { useApp } from "../context/AppContext.jsx";
 import LevelPicker from "../components/LevelPicker.jsx";
 import { DIALECTS } from "../lib/varieties.js";
-import { NAME_AR_FROM, levelReached } from "../config/books.js";
 import Account from "./Account.jsx";
 
 export default function Settings() {
@@ -18,14 +17,12 @@ export default function Settings() {
 
       <section className="card">
         <h2><bdi>{t("nameLabel")}</bdi></h2>
-        <label className="field-label name-field"><span dir="auto">{t("nameLabel")}</span>
+        <label className="field-label name-field"><span dir="auto">{t("nameEnLabel")}</span>
           <input dir="auto" value={profile.name} onChange={(e) => setProfile({ name: e.target.value })} autoComplete="given-name" />
         </label>
-        {levelReached(level, NAME_AR_FROM) && (
-          <label className="field-label name-field"><span dir="auto">{t("nameArLabel")}</span>
-            <input className="ar" dir="rtl" value={profile.nameAr} onChange={(e) => setProfile({ nameAr: e.target.value })} />
-          </label>
-        )}
+        <label className="field-label name-field"><span dir="auto">{t("nameArLabel")}</span>
+          <input className="ar" dir="rtl" value={profile.nameAr} onChange={(e) => setProfile({ nameAr: e.target.value })} />
+        </label>
       </section>
 
       <section className="card">

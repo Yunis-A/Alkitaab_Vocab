@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import allWords from "../data/words.json";
-import { NAME_AR_FROM, books, compareLevel, levelReached, lessonStyle, ARABIC_DIGITS_LEVEL, TRANSLITERATION_MAX_BOOK } from "../config/books.js";
+import { books, compareLevel, levelReached, lessonStyle, ARABIC_DIGITS_LEVEL, TRANSLITERATION_MAX_BOOK } from "../config/books.js";
 import { localizeDigits } from "../lib/numerals.js";
 import { strings } from "../i18n/strings.js";
 import { vocabSets, arabicRatio, isRtl, translate, isArabic } from "../lib/i18n.js";
@@ -256,10 +256,11 @@ export function AppProvider({ children }) {
   const unlockWord = useCallback((id) => setCustom((c) => unlockEarly(c, id)), [setCustom]);
   const updateWord = useCallback((id, patch) => setCustom((c) => updateOwnWord(c, id, patch)), [setCustom]);
 
-  // The student's name: English from the start; once Alif Baa is finished the Arabic name is asked for and shown instead.
+  // The student's name: English from the start; once Alif Baa is finished the Arabic name is asked for. Either can be
+  // entered in Settings at any time, and the Arabic name, when there is one, is the one shown.
   const profile = progress.profile ?? { name: "", nameAr: "", skippedAr: false };
   const setProfile = useCallback((patch) => setProgress((p) => ({ ...p, profile: { ...(p.profile ?? {}), ...patch } })), []);
-  const displayName = (levelReached(effectiveLevel, NAME_AR_FROM) && profile.nameAr.trim()) || profile.name.trim();
+  const displayName = profile.nameAr.trim() || profile.name.trim();
 
   const value = {
     words: sortedWords,
