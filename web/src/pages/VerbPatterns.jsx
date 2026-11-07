@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
+import ArabicKeyboard from "../components/ArabicKeyboard.jsx";
 import { LAYOUT } from "../data/keyboardLayouts.js";
 import { charFor } from "../lib/conjugation.js";
 import {
@@ -7,7 +8,7 @@ import {
 } from "../lib/patterns.js";
 
 // What can be typed: the letters of the patterns and the vowel marks (fatha, damma, kasra, shadda), on the real
-// keyboard (Arabic 101 positions; Shift for the marks and the hamza seats). There is no on-screen keyboard.
+// keyboard (Arabic 101 positions; Shift for the marks and the hamza seats) or on the on-screen keys below.
 const ALLOWED = new Set(["ل", "ع", "ف", "ة", "س", "م", "ن", "ت", "ي", "و", "ا", "أ", "إ", "َ", "ُ", "ِ", "ّ"]);
 const MODIFIERS = new Set(["ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight", "CapsLock"]);
 
@@ -159,6 +160,8 @@ export default function VerbPatterns({ onExit }) {
             );
           })}
         </div>
+
+        <ArabicKeyboard onKey={key} onBackspace={back} disabled={checked || !cur} />
 
         {checked ? (
           <button className="primary" onClick={next} autoFocus><span dir="auto">{t("genderNext")}</span></button>

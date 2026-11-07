@@ -332,6 +332,9 @@ function Review({ onExit }) {
 
   return (
     <main className="page narrow">
+      <div className="quick-bar">
+        <button type="button" className="link-button" onClick={onExit}><bdi>{t("studyExit")}</bdi></button>
+      </div>
       <section className="card flash">
         <div className="face">
           {dialect && (
