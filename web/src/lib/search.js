@@ -5,6 +5,7 @@
 import { normalizeArabic, normalizeLatin, hasArabic, rootKey, stripDiacritics } from "./arabic.js";
 import { getForms } from "./morphology.js";
 import { DIALECTS } from "./varieties.js";
+import { PLURAL_FROM, levelReached } from "../config/books.js";
 
 const splitList = (s) => String(s ?? "").split(/\s*\/\s*|\s*[،,]\s*/).filter(Boolean);
 
@@ -22,15 +23,19 @@ function collectForms(word) {
   for (const p of [f.activeParticiple, f.passiveParticiple]) {
     if (p) out.push(...Object.values(p));
   }
-  if (f.plural) out.push(...splitList(f.plural));
   if (word.feminine) out.push(word.feminine);
   return out;
 }
 
 function dialectForms(d) {
-  if (!d) return { head: "", forms: [] };
-  const all = [d.past, d.present, d.masdar, ...splitList(d.plural), d.feminine, ...(d.alternates ?? [])].filter(Boolean);
-  return { head: normalizeArabic(d.arabic ?? ""), forms: all.map(normalizeArabic) };
+  if (!d) return { head: "", forms: [], plurals: [] };
+  const all = [d.past, d.present, d.masdar, d.feminine, ...(d.alternates ?? [])].filter(Boolean);
+  return { head: normalizeArabic(d.arabic ?? ""), forms: all.map(normalizeArabic), plurals: splitList(d.plural).map(normalizeArabic) };
+}
+
+// The plurals of a word (found only once they are learned).
+function pluralsOf(word) {
+  return word.arabic ? splitList(getForms(word).plural).map(normalizeArabic) : [];
 }
 
 export function buildIndex(words) {
@@ -39,23 +44,24 @@ export function buildIndex(words) {
     arabic: normalizeArabic(word.arabic ?? ""),
     root: rootKey(word.root ?? ""),
     forms: collectForms(word).map(normalizeArabic),
+    plurals: pluralsOf(word),
     dialect: Object.fromEntries(DIALECTS.map((d) => [d, dialectForms(word[d])])),
     translit: normalizeLatin(word.transliteration),
     definition: normalizeLatin(word.definition),
   }));
 }
 
-function arabicScore(entry, qa, qRoot, dialects) {
+function arabicScore(entry, qa, qRoot, dialects, plurals) {
   let best = 0;
   const up = (n) => { if (n > best) best = n; };
 
   if (entry.arabic) {
     if (entry.arabic === qa) up(100);
     else if (entry.root && entry.root === qRoot) up(90);
-    else if (entry.forms.includes(qa)) up(80);
+    else if (entry.forms.includes(qa) || (plurals && entry.plurals.includes(qa))) up(80);
     else if (entry.arabic.startsWith(qa)) up(70);
     else if (entry.root && qRoot.length >= 2 && entry.root.includes(qRoot)) up(60);
-    else if (entry.arabic.includes(qa) || entry.forms.some((f) => f.includes(qa))) up(50);
+    else if (entry.arabic.includes(qa) || entry.forms.some((f) => f.includes(qa)) || (plurals && entry.plurals.some((f) => f.includes(qa)))) up(50);
   } else if (entry.root && entry.root === qRoot) {
     up(90);
   }
@@ -64,9 +70,9 @@ function arabicScore(entry, qa, qRoot, dialects) {
     if (!dialects[d]) continue;
     const { head, forms } = entry.dialect[d];
     if (head && head === qa) up(95);
-    else if (forms.includes(qa)) up(75);
+    else if (forms.includes(qa) || (plurals && entry.dialect[d].plurals.includes(qa))) up(75);
     else if (head && head.startsWith(qa)) up(65);
-    else if (head.includes(qa) || forms.some((f) => f.includes(qa))) up(45);
+    else if (head.includes(qa) || forms.some((f) => f.includes(qa)) || (plurals && entry.dialect[d].plurals.some((f) => f.includes(qa)))) up(45);
   }
   return best;
 }
@@ -90,10 +96,11 @@ function lessonOrder(order) {
     : (a, b) => a.word.book - b.word.book || a.word.unit - b.word.unit || a.i - b.i;
 }
 
-// `dialects`: { egyptian: bool, shami: bool }.
+// `dialects`: { egyptian: bool, shami: bool }. `level`: the student's level; plurals are searchable once learned.
 // `order`: "oldest" (default) or "newest"; with no query it orders the whole list, with a query
 // the best match still comes first and the order only breaks ties.
-export function search(index, query, dialects = {}, order = "oldest") {
+export function search(index, query, dialects = {}, order = "oldest", level = null) {
+  const plurals = !level || levelReached(level, PLURAL_FROM);
   const byLesson = lessonOrder(order);
   const raw = String(query ?? "").trim();
   if (!raw) return index.map((e, i) => ({ word: e.word, i })).sort(byLesson).map((x) => x.word);
@@ -104,7 +111,7 @@ export function search(index, query, dialects = {}, order = "oldest") {
   const ql = normalizeLatin(raw);
 
   return index
-    .map((e, i) => ({ word: e.word, i, s: arabic ? arabicScore(e, qa, qRoot, dialects) : latinScore(e, ql) }))
+    .map((e, i) => ({ word: e.word, i, s: arabic ? arabicScore(e, qa, qRoot, dialects, plurals) : latinScore(e, ql) }))
     .filter((x) => x.s > 0)
     .sort((a, b) => b.s - a.s || byLesson(a, b))
     .map((x) => x.word);

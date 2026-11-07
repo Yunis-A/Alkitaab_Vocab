@@ -119,7 +119,9 @@ export default function Learn() {
 
   const exit = () => setMode("menu");
   const back = (id) => () => setMode(PARENT[id] ?? "menu");
-  const available = (m) => !m.from || levelReached(level, m.from);
+  // the preposition game needs verbs with prepositions: it appears when the student has some (not in Alif Baa)
+  const hasPrepositions = useMemo(() => prepositionVerbs(visibleWords).length > 0, [visibleWords]);
+  const available = (m) => (m.id === "prepositions" ? hasPrepositions : !m.from || levelReached(level, m.from));
   const count = { quick: items.length, matching: items.length, prepositions: prepVerbs.length, conjugation: conjItems.length };
 
   if (mode === "run:review") return <Review onExit={exit} />;
@@ -174,7 +176,7 @@ export default function Learn() {
           <p className="muted"><bdi>{t(setup.desc)}</bdi></p>
 
           <h3><bdi>{t("studyUnits")}</bdi></h3>
-          <UnitPicker value={units} onChange={setUnits} />
+          <UnitPicker value={units} onChange={setUnits} skipBooks={setup.id === "prepositions" ? [1] : []} />
 
           <div className="study-options">
             {setup.options.includes("lists") && (
@@ -271,7 +273,7 @@ export default function Learn() {
   return (
     <main className="page">
       <div className="mode-grid">
-        {MODES.filter(available).map((m) => (
+        {MODES.filter((m) => available(m) && (!GROUPS[m.id] || GROUPS[m.id].some(available))).map((m) => (
           <button key={m.id} type="button" className="mode-card" onClick={() => setMode(m.direct ? `run:${m.id}` : m.id)}>
             <strong><bdi>{t(m.title)}</bdi></strong>
             <span className="muted"><bdi>{t(m.desc)}</bdi></span>

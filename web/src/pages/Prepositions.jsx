@@ -12,6 +12,7 @@ export default function Prepositions({ verbs, onExit }) {
   const [selected, setSelected] = useState(() => new Set());
   const [graded, setGraded] = useState(null); // { right, wrong, missed, perfect } after Submit
   const [score, setScore] = useState(0);
+  const [hint, setHint] = useState(false); // the meaning is shown only on request
 
   const word = order[i];
   const finished = i >= order.length;
@@ -30,6 +31,7 @@ export default function Prepositions({ verbs, onExit }) {
   const next = () => {
     setSelected(new Set());
     setGraded(null);
+    setHint(false);
     setI(i + 1);
   };
   const restart = () => {
@@ -37,6 +39,7 @@ export default function Prepositions({ verbs, onExit }) {
     setI(0);
     setSelected(new Set());
     setGraded(null);
+    setHint(false);
     setScore(0);
   };
 
@@ -69,7 +72,11 @@ export default function Prepositions({ verbs, onExit }) {
         <section className="card flash">
           <div className="face">
             <span className="ar huge" dir="rtl">{word.arabic}</span>
-            <span className="muted"><bdi>{word.definition}</bdi></span>
+            {hint ? (
+              <span className="muted"><bdi>{word.definition}</bdi></span>
+            ) : (
+              <button type="button" className="link-button" onClick={() => setHint(true)}><bdi>{t("conjHint")}</bdi></button>
+            )}
           </div>
 
           <div className="prep-grid" dir="rtl">

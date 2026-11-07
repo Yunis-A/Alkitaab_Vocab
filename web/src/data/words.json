@@ -200,8 +200,7 @@
   "pos": "noun",
   "form": null,
   "gender": "feminine",
-  "plural": null,
-  "notes": "",
+  "plural": "مُدُن",
   "conjugations": null,
   "egyptian": {
    "arabic": "مدينة"
@@ -229,7 +228,7 @@
    "arabic": "في"
   },
   "shami": {
-   "arabic": "بِ"
+   "arabic": "بِـ"
   }
  },
  {
@@ -8269,7 +8268,7 @@
   "book": 2,
   "unit": 6,
   "part": null,
-  "arabic": "لِ",
+  "arabic": "لِـ",
   "definition": "in order to, for (the purpose of)",
   "transliteration": null,
   "root": null,
@@ -21680,7 +21679,7 @@
    ]
   },
   "shami": {
-   "arabic": "ثِقة بِ أو في"
+   "arabic": "ثِقة بِـ أو في"
   },
   "prepositions": [
    "بِـ",
@@ -21710,7 +21709,7 @@
    ]
   },
   "shami": {
-   "arabic": "واثِق/ة بِ أو في",
+   "arabic": "واثِق/ة بِـ أو في",
    "plural": "واثقْين"
   },
   "feminine": "واثِقة",
@@ -23408,7 +23407,7 @@
   "unit": 6,
   "part": 2,
   "arabic": "أَحَسَّ",
-  "definition": "= شعر ب",
+  "definition": "= شعر بـ",
   "transliteration": null,
   "root": "ح س س",
   "pos": "verb",
@@ -23531,11 +23530,11 @@
   "notes": "",
   "conjugations": null,
   "egyptian": {
-   "arabic": "حاسِس ب /حاسّة",
+   "arabic": "حاسِس بـ /حاسّة",
    "plural": "حاسّين"
   },
   "shami": {
-   "arabic": "حاسِس ب /حاسّة",
+   "arabic": "حاسِس بـ /حاسّة",
    "plural": "حاسّين"
   }
  },
@@ -34921,7 +34920,7 @@
    "arabic": "يِفوز",
    "masdar": "فوز",
    "notes": [
-    "ب/في"
+    "بـ/في"
    ]
   },
   "shami": {
@@ -39355,7 +39354,7 @@
    "arabic": "سعى",
    "present": "يِسعى",
    "notes": [
-    "ل/عشان"
+    "لـ/عشان"
    ]
   },
   "shami": {

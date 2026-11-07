@@ -37,6 +37,12 @@ export function lessonStyle(book, unit) {
   return { digits: levelReached(at, ARABIC_DIGITS_LEVEL), word: levelReached(at, LESSON_WORD_FROM) };
 }
 
+// Plurals are hidden until they are learned (Al-Kitaab part 1, lesson 2); gender information (masculine /
+// feminine as a property of a word, and the Gender filter) until Alif Baa lesson 6. The Arabic words
+// مُذَكَّر and مُؤَنَّث are learned in part 1 lesson 1 (see the UI strings).
+export const PLURAL_FROM = { book: 2, unit: 2 };
+export const GENDER_FROM = { book: 1, unit: 6 };
+
 // The imperative (الأمر) is not shown before Al-Kitaab part 3, lesson 3.
 export const IMPERATIVE_LEVEL = { book: 4, unit: 3 };
 

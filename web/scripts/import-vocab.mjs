@@ -287,6 +287,9 @@ const mapStrings = (v, f) =>
   typeof v === "string" ? f(v) : Array.isArray(v) ? v.map((x) => mapStrings(x, f))
     : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, mapStrings(x, f)])) : v;
 
+// A lone ب or ل (the prepositions بِـ and لِـ) is written joined to the next word, with a tatweel: بِـ, لِـ.
+const connectPrepositions = (s) => s.replace(/(^|[\s/])([بل])([ً-ْ]*)(?=$|[\s/])/g, "$1$2$3ـ");
+
 function finalizeWords(words) {
   return words.map((w) => {
     let def = w.definition;
@@ -295,7 +298,7 @@ function finalizeWords(words) {
     const out = { ...w, definition: def.replace(/\s{2,}/g, " ").trim() };
     // a root is written with plain hamza: أ إ ؤ ئ are never root letters
     if (out.root) out.root = out.root.replace(/[أإؤئ]/g, "ء");
-    return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, k === "id" ? v : mapStrings(v, (s) => s.replace(/َ(?=ا)/g, ""))]));
+    return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, k === "id" ? v : mapStrings(v, (s) => (k === "root" ? s.replace(/َ(?=ا)/g, "") : connectPrepositions(s.replace(/َ(?=ا)/g, ""))))]));
   });
 }
 

@@ -3,7 +3,7 @@ import { startBoxes, pickNext, countBoxes } from "./quickstudy.js";
 import { buildRound } from "./matching.js";
 import { buildItems } from "./study.js";
 import { mergeProgress } from "./sync.js";
-import { FORMS, ALL_FORMS, FIELDS, PATTERNS, canon, hasStackedMarks, canAppend, buildTask, isCorrect, isCorrectSet, withArticle, formsAt, fieldsAt, fieldsForAnyForm, answerSpec, QUAD_FROM } from "./patterns.js";
+import { FORMS, ALL_FORMS, FIELDS, PATTERNS, canon, hasStackedMarks, canAppend, buildTask, isCorrect, isCorrectSet, withArticle, formsAt, fieldsAt, fieldsForAnyForm, answerSpec, answerText, QUAD_FROM } from "./patterns.js";
 import { presentChart, presentChartForm } from "./chart.js";
 import { allPrepositions, gradePrepositions, prepositionVerbs, prepKey, prepositionLevels } from "./prepositions.js";
 import { lessonStyle } from "../config/books.js";
@@ -11,6 +11,7 @@ import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
 import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
+import { PLURAL_FROM, GENDER_FROM } from "../config/books.js";
 import { MOODS, MOOD_LABELS, MOOD_FROM, learnedMoods, moodCharts } from "./moods.js";
 import { TENSES, tensesAt, personFrom, learnedPersons, presentAnswers, conjugationItems, needsForm, isConjugationCorrect, charFor } from "./conjugation.js";
 import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult, targetLength, typicalCpm, TARGET_MINUTES } from "./typing.js";
@@ -361,7 +362,8 @@ test("imported vocabulary: structure, levels, dialect rules and search", () => {
     assert.ok(w.arabic || w.egyptian?.arabic || w.shami?.arabic, `${w.id} has nothing to show`);
     assert.ok(w.definition, `${w.id} has no English`);
     assert.ok(["noun", "verb", "adjective", "adverb", "particle", "pronoun", "phrase", "suffix"].includes(w.pos), `${w.id} pos ${w.pos}`);
-    assert.ok(!/[ـ]/.test(w.arabic ?? "") || w.pos === "suffix", `${w.id} has a stretch mark`);
+    // stretch marks only on suffixes and on the attached prepositions بِـ لِـ (a lone ب or ل is written joined)
+    assert.ok(!/[ـ]/.test(w.arabic ?? "") || w.pos === "suffix" || /^[بل][ً-ْ]*ـ$/.test(w.arabic), `${w.id} has a stretch mark`);
     if (w.book === 1) assert.equal(w.root, null, `${w.id}: Alif Baa has no roots`);
     if (w.form) assert.ok(w.root && w.pos === "verb", `${w.id} form without root`);
     if (w.hideFromBook) assert.equal(w.book, 1, "only Alif Baa form rows are hidden later");
@@ -1292,4 +1294,37 @@ test("conjugation without vowel marks, dark mode setting", () => {
   saveProgress({ ...loadProgress(), dark: null });
   // the four-letter form reads رباعي, with no number
   assert.equal(strings.quadLabel.ar, "رباعي");
+});
+
+test("prepositions are joined, city has the right plural, plurals and gender wait, dialect-only view, makaan boxes", () => {
+  const word = (id) => allWords.find((w) => w.id === id);
+  // a lone ب or ل is always written joined (بِـ لِـ), never as a separate letter
+  const lone = /(^|[\s/])[بل][ً-ْ]*(?=$|[\s/])/;
+  const strings_ = (w) => [w.arabic, w.plural, w.feminine, ...(w.prepositions ?? []), w.egyptian?.arabic, w.shami?.arabic, w.egyptian?.plural, w.shami?.plural].filter((x) => typeof x === "string");
+  assert.deepEqual(allWords.filter((w) => strings_(w).some((x) => lone.test(x))).map((w) => w.id), []);
+  assert.equal(word("b2-u6-023").arabic, "لِـ");
+  assert.equal(word("b1-u1-009").shami.arabic, "بِـ");
+  // the plural of city
+  const city = word("b1-u1-008");
+  assert.equal(city.plural, "مُدُن");
+  assert.equal(getForms(city).plural, "مُدُن");
+  // plurals and gender have their own lessons
+  assert.deepEqual(PLURAL_FROM, { book: 2, unit: 2 });
+  assert.deepEqual(GENDER_FROM, { book: 1, unit: 6 });
+  const pl = buildIndex([{ id: "p", book: 1, unit: 1, arabic: "كِتاب", plural: "كُتُب", pos: "noun", definition: "book", root: "ك ت ب" }]);
+  assert.equal(search(pl, "كتب", {}, "oldest", { book: 2, unit: 1 }).length, 1); // matches by root anyway
+  assert.equal(search(pl, "كُتُب", {}, "oldest", { book: 1, unit: 9 }).length, 1);
+  const noRoot = buildIndex([{ id: "q", book: 1, unit: 1, arabic: "كِتاب", plural: "كُتُب", pos: "noun", definition: "book" }]);
+  assert.equal(search(noRoot, "كتب", {}, "oldest", { book: 1, unit: 9 }).length, 0); // not before part 1 lesson 2
+  assert.equal(search(noRoot, "كتب", {}, "oldest", { book: 2, unit: 2 }).length, 1);
+  assert.equal(search(noRoot, "كتب").length, 1); // no level given: everything
+  // the noun of place (form I): singular then plural, in two boxes; the other forms share one box
+  assert.equal(answerSpec(1, "makaan").boxes, 2);
+  assert.equal(answerSpec(1, "makaan").ordered, true);
+  assert.equal(isCorrectSet(1, "makaan", ["مَفعَل", "مَفاعِل"]), true);
+  assert.equal(isCorrectSet(1, "makaan", ["مَفعِل", "مَفاعِل"]), true);
+  assert.equal(isCorrectSet(1, "makaan", ["مَفاعِل", "مَفعَل"]), false); // singular first
+  assert.equal(isCorrectSet(1, "makaan", ["مَفعَل", ""]), false);
+  assert.equal(answerText(1, "makaan"), "مَفعَل / مَفعِل · مَفاعِل");
+  assert.equal(strings.conjMarks.ar, "الحركات ضرورية");
 });

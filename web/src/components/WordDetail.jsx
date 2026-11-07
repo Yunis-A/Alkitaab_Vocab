@@ -3,7 +3,7 @@ import { useApp } from "../context/AppContext.jsx";
 import { getForms, PAST_PERSONS, IMPERATIVE_PERSONS } from "../lib/morphology.js";
 import StatusBadge from "./StatusBadge.jsx";
 import { presentChart } from "../lib/chart.js";
-import { IMPERATIVE_LEVEL, levelReached } from "../config/books.js";
+import { GENDER_FROM, IMPERATIVE_LEVEL, PLURAL_FROM, levelReached } from "../config/books.js";
 import { DIALECTS, headword } from "../lib/varieties.js";
 
 const POS_KEYS = {
@@ -94,7 +94,8 @@ function DialectBlock({ name, data, showFeminine, showPlural }) {
 // showHeader=false omits the big Arabic word and its meaning, for places that
 // already show them (the Lookup row). links=false turns the root link into plain text, for
 // sessions (quick study) that must not be left by accident.
-export default function WordDetail({ word, showStatus = true, showHeader = true, links = true }) {
+// dialectOnly="egyptian"|"shami" shows only what concerns that dialect (its forms), nothing of the formal word.
+export default function WordDetail({ word, showStatus = true, showHeader = true, links = true, dialectOnly = null }) {
   const { t, level, nf, bookName, showTransliteration, dialects } = useApp();
   const f = getForms(word);
   const showImperative = !!level && levelReached(level, IMPERATIVE_LEVEL);
@@ -103,7 +104,34 @@ export default function WordDetail({ word, showStatus = true, showHeader = true,
   // feminine, pluralFrom just the plural (the feminine of such a word shows from the start).
   const reached = (from) => !from || (!!level && levelReached(level, from));
   const showFeminine = reached(word.formsFrom);
-  const showPlural = showFeminine && reached(word.pluralFrom);
+  // plurals wait for part 1 lesson 2; gender information for Alif Baa lesson 6
+  const showPlural = showFeminine && reached(word.pluralFrom) && reached(PLURAL_FROM);
+  const showGender = reached(GENDER_FROM);
+
+  if (dialectOnly && word[dialectOnly]) {
+    return (
+      <div className="word-detail">
+        {showHeader && (
+          <>
+            <div className="word-top">
+              <span className="ar big" dir="rtl">{word[dialectOnly].arabic}</span>
+              {showStatus && <StatusBadge wordId={word.id} />}
+            </div>
+            <p className="definition"><bdi>{word.definition}</bdi></p>
+          </>
+        )}
+        <dl className="fields">
+          <Field label={t("pos")}>
+            <span dir="auto">{posLabel(t, word.pos)}</span>
+          </Field>
+          <Field label={t("unitOfBook")}>
+            <span dir="auto">{bookName(word.book)} / {nf(word.unit)}</span>
+          </Field>
+        </dl>
+        <DialectBlock name={dialectOnly} data={word[dialectOnly]} showFeminine={showFeminine} showPlural={showPlural} />
+      </div>
+    );
+  }
 
   return (
     <div className="word-detail">
@@ -134,7 +162,7 @@ export default function WordDetail({ word, showStatus = true, showHeader = true,
             )}
           </Field>
         )}
-        {word.gender && (
+        {word.gender && showGender && (
           <Field label={t("gender")}>
             <span dir="auto">{t(word.gender)}</span>
           </Field>

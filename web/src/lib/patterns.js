@@ -37,6 +37,7 @@ export const PATTERNS = {
     activeParticiple: ["فاعِل"],
     passiveParticiple: ["مَفعول"],
     makaan: ["مَفعَل", "مَفعِل"],
+    makaanPlural: ["مَفاعِل"], // the noun of place has a singular and a plural (two boxes)
     passivePast: ["فُعِلَ"],
     passivePresent: ["يُفعَل"],
     imperative: ["اِفعَل", "اِفعِل", "اُفعُل"],
@@ -224,6 +225,8 @@ export function answerSpec(form, field, level = FAR) {
   const list = PATTERNS[form]?.[field];
   if (!list) return { accepted: [], boxes: 1, all: false };
   if (form === 1 && (field === "past" || field === "present")) return { accepted: list, boxes: 3, all: true };
+  // the noun of place (form I): the singular, then the plural, in that order
+  if (form === 1 && field === "makaan") return { accepted: list, parts: [list, PATTERNS[1].makaanPlural], boxes: 2, all: false, ordered: true };
   if (form === 3 && field === "masdar") {
     return levelReached(level, MASDAR_III_BOTH_FROM) ? { accepted: list, boxes: 2, all: true } : { accepted: [list[0]], boxes: 1, all: false };
   }
@@ -231,16 +234,17 @@ export function answerSpec(form, field, level = FAR) {
 }
 
 // Is `answer` right for `field` of `form`? (For "form", the answer is a number.)
-export function isCorrect(form, field, answer, level = FAR) {
+export function isCorrect(form, field, answer, level = FAR, accepted = null) {
   if (field === "form") return String(answer) === String(form);
   const typed = typedForm(field, answer);
-  return typed !== "" && answerSpec(form, field, level).accepted.some((v) => matches(field, typed, v));
+  return typed !== "" && (accepted ?? answerSpec(form, field, level).accepted).some((v) => matches(field, typed, v));
 }
 
 // For a field with several boxes: all of them filled in, in any order, each answer once. For a field with
 // one box, `answers` is a single entry.
 export function isCorrectSet(form, field, answers, level = FAR) {
   const spec = answerSpec(form, field, level);
+  if (spec.ordered) return spec.parts.every((part, i) => isCorrect(1, "makaan", answers[i] ?? "", level, part));
   const typed = answers.map((a) => typedForm(field, a)).filter(Boolean);
   if (!spec.all) return typed.length === 1 && isCorrect(form, field, typed[0], level);
   const wanted = spec.accepted;
@@ -252,8 +256,11 @@ export function isCorrectSet(form, field, answers, level = FAR) {
 }
 
 // The answer to show for a field: every accepted variant.
-export const answerText = (form, field, level = FAR) =>
-  field === "form" ? String(form) : answerSpec(form, field, level).accepted.join(" / ");
+export const answerText = (form, field, level = FAR) => {
+  if (field === "form") return String(form);
+  const spec = answerSpec(form, field, level);
+  return spec.parts ? spec.parts.map((p) => p.join(" / ")).join(" · ") : spec.accepted.join(" / ");
+};
 
 // Fields that may be asked of some form at this level, in order (what is on screen before the student says
 // which form it is).

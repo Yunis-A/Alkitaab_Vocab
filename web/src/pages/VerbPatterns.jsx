@@ -24,7 +24,9 @@ export default function VerbPatterns({ onExit }) {
 
   // fields on screen (not counting the clue): by the believed form, else everything that could be asked
   const wanted = believed !== null ? fieldsAt(believed, level) : fieldsForAnyForm(level);
-  const shown = ["form", ...wanted].filter((f) => f !== clue.field);
+  // the passive participle and the noun of place share one box, except in form I: the noun of place has a box
+  // of its own only once the form is known to be I
+  const shown = ["form", ...wanted].filter((f) => f !== clue.field && (f !== "makaan" || believed === 1));
   // after Check: the real form's fields, so a missed field shows its answer
   const rows = checked ? task.targets : shown;
 
@@ -101,18 +103,20 @@ export default function VerbPatterns({ onExit }) {
                   </span>
                 ) : (
                   <span className="pattern-boxes">
-                    {boxKeys(field).map((k) => (
-                      <input
-                        key={k}
-                        className={`ar pattern-input${cur === k ? " active" : ""}`}
-                        dir="rtl"
-                        readOnly
-                        inputMode="none"
-                        value={answers[k] ?? ""}
-                        onFocus={() => setActive(k)}
-                        onClick={() => setActive(k)}
-                        disabled={checked}
-                      />
+                    {boxKeys(field).map((k, n) => (
+                      <span className="pattern-box" key={k}>
+                        {field === "makaan" && <small className="pattern-caption"><bdi>{t(n === 0 ? "singular" : "plural")}</bdi></small>}
+                        <input
+                          className={`ar pattern-input${cur === k ? " active" : ""}`}
+                          dir="rtl"
+                          readOnly
+                          inputMode="none"
+                          value={answers[k] ?? ""}
+                          onFocus={() => setActive(k)}
+                          onClick={() => setActive(k)}
+                          disabled={checked}
+                        />
+                      </span>
                     ))}
                   </span>
                 )}

@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useApp } from "../context/AppContext.jsx";
-import { books } from "../config/books.js";
+import { GENDER_FROM, books, levelReached } from "../config/books.js";
 import { search } from "../lib/search.js";
-import { headword, DIALECTS } from "../lib/varieties.js";
+import { headword, varietyText, DIALECTS, DIALECT_VARIETY } from "../lib/varieties.js";
 import {
   activeFilterCount, filterOptions, filterWords, filtersFromParams, levelKey, levelsUpTo,
 } from "../lib/filters.js";
@@ -37,7 +37,8 @@ export default function Lookup() {
   const q = params.get("q") ?? "";
   const rawFilters = filtersFromParams(params);
   // A dialect filter left in the URL does nothing once that dialect is switched off.
-  const filters = { ...rawFilters, dialect: dialects[rawFilters.dialect] ? rawFilters.dialect : "" };
+  const showGender = levelReached(level, GENDER_FROM); // gender information starts at Alif Baa lesson 6
+  const filters = { ...rawFilters, dialect: dialects[rawFilters.dialect] ? rawFilters.dialect : "", gender: showGender ? rawFilters.gender : "" };
   const [limit, setLimit] = useState(PAGE);
 
   // Everything lives in the URL (replace, so filtering does not fill the back button).
@@ -61,7 +62,7 @@ export default function Lookup() {
   const levels = useMemo(() => levelsUpTo(level, books).reverse(), [level]);
   // newest lessons first unless the student picks "oldest" (kept in the URL as sort=oldest)
   const order = params.get("sort") === "oldest" ? "oldest" : "newest";
-  const found = useMemo(() => search(visibleIndex, q, dialects, order), [visibleIndex, q, dialects, order]);
+  const found = useMemo(() => search(visibleIndex, q, dialects, order, level), [visibleIndex, q, dialects, order, level]);
   const results = useMemo(() => filterWords(found, filters, { statusOf }), [found, params, dialects, statusOf]); // eslint-disable-line react-hooks/exhaustive-deps
   const shown = results.slice(0, limit);
   const active = activeFilterCount(filters);
@@ -110,7 +111,7 @@ export default function Lookup() {
           </Select>
         )}
 
-        {filters.pos === "noun" && (
+        {filters.pos === "noun" && showGender && (
           <Select label={t("gender")} value={filters.gender} onChange={(v) => setParam("gender", v)}>
             <option value="">{t("filterAny")}</option>
             {["masculine", "feminine"].filter((g) => options.gender.has(g)).map((g) => (
@@ -156,12 +157,14 @@ export default function Lookup() {
           <li key={w.id}>
             <details open={results.length <= 3}>
               <summary>
-                <span className="ar big" dir="rtl">{headword(w, dialects, level)}</span>
+                <span className="ar big" dir="rtl">
+                  {filters.dialect ? varietyText(w, DIALECT_VARIETY[filters.dialect], level) : headword(w, dialects, level)}
+                </span>
                 <span className="def" dir="auto">{w.definition}</span>
                 <span className="pos" dir="auto">{posLabel(t, w.pos)}</span>
                 <StatusBadge wordId={w.id} />
               </summary>
-              <WordDetail word={w} showStatus={false} showHeader={false} />
+              <WordDetail word={w} showStatus={false} showHeader={false} dialectOnly={filters.dialect || null} />
             </details>
           </li>
         ))}
