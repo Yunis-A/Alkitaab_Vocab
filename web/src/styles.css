@@ -452,7 +452,7 @@ button.primary, .button.primary {
 /* word search */
 .ws-layout { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
 @media (max-width: 900px) { .ws-layout { grid-template-columns: minmax(0, 1fr); } }
-.ws-grid { --cell: min(2.5rem, 6.4vw); display: grid; gap: 2px; width: max-content; max-width: 100%; justify-self: center; user-select: none; }
+.ws-grid { --cell: min(2.3rem, 6vw); display: grid; gap: 2px; width: max-content; max-width: 100%; justify-self: center; user-select: none; }
 .ws-cell { width: var(--cell); height: var(--cell); padding: 0; display: flex; align-items: center; justify-content: center; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 4px; font-size: calc(var(--cell) * 0.58); }
 .ws-cell .ar { line-height: 1.2; }
 .ws-cell.start { background: color-mix(in srgb, var(--theme) 35%, var(--surface)); border-color: var(--theme); border-width: 2px; }
@@ -460,8 +460,31 @@ button.primary, .button.primary {
 .ws-cell.f0 { background: #ffe08a; } .ws-cell.f1 { background: #a8e6c1; } .ws-cell.f2 { background: #a9d4ff; }
 .ws-cell.f3 { background: #f6b6c8; } .ws-cell.f4 { background: #d4c1f5; } .ws-cell.f5 { background: #ffc79a; }
 .ws-cell.found { color: #1c1c1e; }
-.ws-words { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 0.35rem 1rem; }
-.ws-words li { display: flex; flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.6rem; }
-.ws-words .ar { font-size: 1.3rem; line-height: 1.6; }
+.ws-words { list-style: none; padding: 0; margin: 0; columns: 3 8.5rem; column-gap: 1rem; font-size: 0.9rem; }
+.ws-words li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.4rem; break-inside: avoid; padding: 0.05rem 0; }
+.ws-words .ar { font-size: 1.1rem; line-height: 1.5; }
 .ws-words li.done .ar { text-decoration: line-through; color: var(--muted); }
-.ws-gloss.light { color: var(--muted); font-size: 0.78rem; }
+.ws-gloss.light { color: var(--muted); font-size: 0.72rem; }
+.ws-gloss.full { font-size: 0.78rem; }
+
+/* typing: live numbers and the hard mode switch */
+.typing-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; margin: 0 0 0.5rem; font-variant-numeric: tabular-nums; }
+.typing-stats span { display: flex; flex-direction: column; align-items: center; min-width: 4rem; }
+.typing-stats small { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; }
+.typing-stats strong { font-size: 1.3rem; }
+.typing-stats .ok strong { color: var(--green); }
+.typing-stats .low strong { color: var(--text); }
+.switch { display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; user-select: none; }
+.switch input { position: absolute; opacity: 0; pointer-events: none; }
+.switch-track { position: relative; width: 2.8rem; height: 1.5rem; border-radius: 999px; background: var(--line); transition: background 0.15s; flex: none; }
+.switch-thumb { position: absolute; top: 0.15rem; inset-inline-start: 0.15rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); transition: inset-inline-start 0.15s; }
+.switch input:checked + .switch-track { background: var(--theme); }
+.switch input:checked + .switch-track .switch-thumb { inset-inline-start: 1.45rem; }
+.switch.hard input:checked + .switch-track { background: #c0392b; } /* hard mode: the slider turns red */
+.switch.hard .switch-label { color: #c0392b; font-weight: 700; }
+.switch input:focus-visible + .switch-track { outline: 2px solid var(--theme); outline-offset: 2px; }
+.hard-note { margin: 0 0 0.75rem; }
+
+.ws-page { max-width: 80rem; }
+/* a vowel mark shown big on its key (the damma was squished at the letter size) */
+.tk-ar.tk-mark { font-size: 2.3rem; line-height: 1; padding-top: 0.55rem; font-weight: 400; }

@@ -10,6 +10,7 @@ import { buildIndex } from "../lib/search.js";
 import { emptyProgress, loadProgress, saveProgress } from "../lib/storage.js";
 import { fetchProgress, pushProgress } from "../lib/supabase.js";
 import { mergeProgress } from "../lib/sync.js";
+import { bestRecord } from "../lib/typing.js";
 import { addOwnWord, buildCustomWord, emptyCustom, lockEarly, newOwnId, removeOwnWord, unlockEarly, updateOwnWord } from "../lib/customWords.js";
 import { useAuth } from "./AuthContext.jsx";
 
@@ -234,15 +235,16 @@ export function AppProvider({ children }) {
   const setDark = useCallback((on) => setProgress((p) => ({ ...p, dark: !!on })), []);
 
   // Typing lessons: passed lessons are kept, with their faster result.
-  const typing = progress.typing ?? { passed: {} };
-  const passTyping = useCallback((id, result) => {
+  const typing = { passed: {}, passedHard: {}, hard: false, ...progress.typing };
+  // a passed lesson keeps its best speed and fastest time; hard mode has a run of its own
+  const passTyping = useCallback((id, result, hard = false) => {
     setProgress((p) => {
-      const t = p.typing ?? { passed: {} };
-      const prev = t.passed[id];
-      const keep = prev && prev.cpm >= result.cpm ? prev : result;
-      return { ...p, typing: { ...t, passed: { ...t.passed, [id]: keep } } };
+      const t = { passed: {}, passedHard: {}, hard: false, ...p.typing };
+      const key = hard ? "passedHard" : "passed";
+      return { ...p, typing: { ...t, [key]: { ...t[key], [id]: bestRecord(t[key][id], result) } } };
     });
   }, []);
+  const setTypingHard = useCallback((hard) => setProgress((p) => ({ ...p, typing: { passed: {}, passedHard: {}, ...p.typing, hard: !!hard } })), []);
 
   const statusOf = useCallback(
     (wordId) => {
@@ -313,6 +315,7 @@ export function AppProvider({ children }) {
     wordSearchesDone,
     finishWordSearch,
     passTyping,
+    setTypingHard,
     syncStatus,
     signOut,
     submitGeoTime,

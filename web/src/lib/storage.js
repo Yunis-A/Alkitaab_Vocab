@@ -7,14 +7,14 @@ const KEY = "alkitaab_progress_v1";
 
 // geoBest:  best map-game time in ms, keyed by mode id.
 // dialects: which dialect forms the student studies (off by default).
-// typing:   passed typing lessons ({ id: { accuracy, cpm } }).
+// typing:   passed typing lessons ({ id: { accuracy, cpm, ms } }), passedHard (the same for hard mode) and hard (on or off).
 // crosswords, wordSearches: the puzzles solved ({ done: { "b2-u1": true } }).
 // (wordSearches are kept the same way)
 // profile:  the student's name, in English (asked first) and in Arabic (asked after Alif Baa).
 // custom:   the student's own words and the course words they unlocked early ({ words, early }).
 // dark:     dark mode; null until the student chooses, then the system's setting is followed.
 export const emptyProgress = () => ({
-  level: null, cards: {}, geoBest: {}, dialects: { egyptian: false, shami: false }, typing: { passed: {} }, dark: null, custom: { words: [], early: [] },
+  level: null, cards: {}, geoBest: {}, dialects: { egyptian: false, shami: false }, typing: { passed: {}, passedHard: {}, hard: false }, dark: null, custom: { words: [], early: [] },
   profile: { name: "", nameAr: "", skippedAr: false }, crosswords: { done: {} }, wordSearches: { done: {} },
 });
 

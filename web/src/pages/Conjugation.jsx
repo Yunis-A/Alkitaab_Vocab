@@ -21,6 +21,7 @@ export default function Conjugation({ items, allVerbs, marks = true, onExit }) {
   const [typed, setTyped] = useState("");
   const [checked, setChecked] = useState(null); // null, or whether the answer was right
   const [hint, setHint] = useState(false);
+  const [formHint, setFormHint] = useState(false); // the form number, asked for (shown by itself when it is needed)
   const [score, setScore] = useState(0);
   const [shiftDown, setShiftDown] = useState(false);
   const shiftHeld = useShiftHeld();
@@ -44,6 +45,7 @@ export default function Conjugation({ items, allVerbs, marks = true, onExit }) {
     setTyped("");
     setChecked(null);
     setHint(false);
+    setFormHint(false);
   };
   const restart = () => {
     setOrder(shuffle(items).slice(0, QUESTIONS));
@@ -51,6 +53,7 @@ export default function Conjugation({ items, allVerbs, marks = true, onExit }) {
     setTyped("");
     setChecked(null);
     setHint(false);
+    setFormHint(false);
     setScore(0);
   };
 
@@ -98,18 +101,24 @@ export default function Conjugation({ items, allVerbs, marks = true, onExit }) {
             <span className="ar huge conj-root" dir="rtl">{item.word.root}</span>
             <span className="muted conj-clue">
               <bdi>
-                {formShown && item.word.form ? `${t("form")} ${nf(item.word.form)} · ` : ""}
+                {(formShown || formHint) && item.word.form ? `${t("form")} ${nf(item.word.form)} · ` : ""}
                 {tenseLabel}
               </bdi>
               {item.mood && <strong className="conj-mood ar" dir="rtl"> · {MOOD_LABELS[item.mood]}</strong>}
               {item.person && <span> · </span>}
               {item.person && <strong className="conj-person"><bdi>{t(`person.${item.person}`)}</bdi></strong>}
             </span>
-            {hint ? (
-              <span className="muted"><bdi>{item.word.definition}</bdi></span>
-            ) : (
-              <button type="button" className="link-button" onClick={() => setHint(true)}><bdi>{t("conjHint")}</bdi></button>
-            )}
+            <span className="conj-hints">
+              {hint ? (
+                <span className="muted"><bdi>{item.word.definition}</bdi></span>
+              ) : (
+                <button type="button" className="link-button" onClick={() => setHint(true)}><bdi>{t("conjHint")}</bdi></button>
+              )}
+              {/* when the root alone does not say which verb, the form is shown; otherwise it is a hint to ask for */}
+              {!formShown && !formHint && item.word.form && (
+                <button type="button" className="link-button" onClick={() => setFormHint(true)}><bdi>{t("conjHintForm")}</bdi></button>
+              )}
+            </span>
           </div>
 
           <div className={`conj-input ar${checked === true ? " ok" : checked === false ? " bad" : ""}`} dir="rtl">
@@ -126,9 +135,9 @@ export default function Conjugation({ items, allVerbs, marks = true, onExit }) {
             wrongCode={null}
             shiftDown={shiftDown}
             shift={shiftHeld || shiftDown}
-            onPress={(code) => {
+            onPress={(code, shifted) => {
               if (code.startsWith("Shift")) setShiftDown((d) => !d);
-              else { press(code, shiftDown); setShiftDown(false); }
+              else { press(code, shifted); setShiftDown(false); }
             }}
           />
 

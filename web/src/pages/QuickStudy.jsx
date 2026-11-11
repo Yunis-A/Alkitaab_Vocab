@@ -112,7 +112,7 @@ export default function QuickStudy({ items, englishFirst, onExit }) {
                   <span className="definition big" dir="auto">{word.definition}</span>
                 )}
               </div>
-              <WordDetail word={word} showStatus={false} showHeader={false} links={false} />
+              <WordDetail word={word} showStatus={false} showHeader={false} links={false} dialectOnly={dialect} />
             </>
           )}
         </section>

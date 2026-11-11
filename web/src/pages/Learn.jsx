@@ -378,7 +378,8 @@ function Review({ onExit }) {
         {revealed && (
           <>
             <hr />
-            <WordDetail word={word} showStatus={false} />
+            {/* a dialect's card is its own: its back shows that dialect, not the formal word */}
+            <WordDetail word={word} showStatus={false} dialectOnly={dialect} />
           </>
         )}
       </section>

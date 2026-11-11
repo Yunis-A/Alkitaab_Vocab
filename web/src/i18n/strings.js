@@ -12,7 +12,7 @@ const u = (book, unit = 1) => ({ book, unit });
 
 export const strings = {
   // --- navigation / shell ---
-  siteTitle: { en: "Al-Kitaab Adaptive Learning", ar: "التعلم التكيفي للكتاب", unlock: u(2, 6) },
+  siteTitle: { en: "kutubiiya", ar: "كتبية", unlock: u(2, 6) },
   navHome: { en: "Home", ar: "الرئيسية", unlock: u(2, 3) },
   navLearn: { en: "Learn", ar: "تعلم", unlock: u(1, 8) },
   navLookup: { en: "Lookup", ar: "بحث", unlock: u(2, 1) },
@@ -120,15 +120,17 @@ export const strings = {
   typingNewLetters: { en: "New letters", ar: "حروف جديدة", unlock: u(3, 8) },
   typingMistakes: { en: "Mistakes", ar: "أخطاء", unlock: u(3, 8) },
   typingAccuracy: { en: "Accuracy", ar: "الدقة", unlock: u(3, 8) },
-  typingSpeed: { en: "Characters per minute", ar: "حرف في الدقيقة", unlock: u(3, 8) },
   typingPassed: { en: "Lesson passed!", ar: "نجحت في الدرس!", unlock: u(3, 8) },
   typingNotYet: { en: "Not yet", ar: "ليس بعد", unlock: u(3, 8) },
   typingNeeded: {
-    en: (a, c) => `To pass: at least ${a}% accuracy and ${c} characters per minute.`,
-    ar: (a, c) => `للنجاح: دقة ${a}٪ على الأقل و${c} حرفا في الدقيقة.`,
+    en: (a, w) => `To pass: at least ${a}% accuracy and ${w} words per minute.`,
+    ar: (a, w) => `للنجاح: دقة ${a}٪ على الأقل و${w} كلمة في الدقيقة.`,
     unlock: u(3, 8),
   },
-  typingMin: { en: (a, c) => `${a}% · ${c}/min`, ar: (a, c) => `${a}٪ · ${c}/د`, unlock: u(3, 8) },
+  typingWpm: { en: "WPM", ar: "ك/د", unlock: u(3, 8) }, // words (5 letters) a minute
+  typingTime: { en: "Time", ar: "الوقت", unlock: u(3, 8) },
+  typingHard: { en: "Hard mode", ar: "الوضع الصعب", unlock: u(3, 8) },
+  typingHardHelp: { en: "A second run from the first lesson: at least 98% accuracy and 40 words a minute. Switch it off to go back to your normal run; both are kept.", ar: "جولة ثانية من الدرس الأول: دقة ٩٨٪ على الأقل و٤٠ كلمة في الدقيقة. أطفئه للعودة إلى جولتك العادية؛ كلتاهما محفوظة.", unlock: u(3, 8) },
   typingRetry: { en: "Try again", ar: "حاول مرة أخرى", unlock: u(3, 8) },
   typingNext: { en: "Next lesson", ar: "الدرس التالي", unlock: u(3, 8) },
   // Sun and moon letters: شمس (sun) and قمر (moon) are taught in Alif Baa lesson 9, where the game unlocks
@@ -190,6 +192,7 @@ export const strings = {
   addWordRemove: { en: "Remove", ar: "احذف", unlock: u(3, 8) },
   myWordsTitle: { en: "My words", ar: "كلماتي", unlock: u(3, 8) },
   myWord: { en: "My word", ar: "كلمتي", unlock: u(3, 8) },
+  conjHintForm: { en: "Show the form", ar: "أظهر الوزن", unlock: u(3, 8) },
   conjHint: { en: "Show the meaning", ar: "أظهر المعنى", unlock: u(3, 8) },
   // مع is a verb's preposition from part 2 lesson 4; بِدون is taught in part 2 lesson 5
   studyArticle: { en: "With ال or not?", ar: "مع ال أو بدون؟", unlock: u(3, 5) },

@@ -16,7 +16,16 @@ export const LETTER_ORDER = [
   "ذ", "لا",
 ];
 
-export const MIN_ACCURACY = 0.9;
+export const MIN_ACCURACY = 0.95;
+// Hard mode: a second run from the beginning with stricter limits, 98% accuracy and 40 words a minute (a word is 5
+// characters, so 200 characters a minute) in every lesson.
+export const HARD_ACCURACY = 0.98;
+export const HARD_CPM = 200;
+export const accuracyFor = (hard) => (hard ? HARD_ACCURACY : MIN_ACCURACY);
+export const cpmFor = (lesson, hard) => (hard ? HARD_CPM : lesson.minCpm);
+export const toWpm = (cpm) => cpm / 5;
+// words a minute as shown: whole, or with one decimal when it is not a whole number
+export const showWpm = (cpm) => Math.round(toWpm(cpm) * 10) / 10;
 // characters per minute needed to pass: 20 in the first lesson, 2 more with each lesson (about 4 words a
 // minute at first, 13 by the end)
 export const minCpm = (index) => 20 + 2 * index;
@@ -141,11 +150,18 @@ export function buildText(lesson, words, rng = Math.random, length = targetLengt
 // --- results ---
 
 // correct: right key presses (spaces included); mistakes: wrong ones; ms: first key to last.
-export function typingResult({ correct, mistakes, ms }, lesson) {
+export function typingResult({ correct, mistakes, ms }, lesson, hard = false) {
   const total = correct + mistakes;
   const accuracy = total ? correct / total : 0;
   const cpm = ms > 0 ? correct / (ms / 60000) : 0;
-  return { accuracy, cpm, passed: accuracy >= MIN_ACCURACY && cpm >= lesson.minCpm };
+  return { accuracy, cpm, ms, passed: accuracy >= accuracyFor(hard) && cpm >= cpmFor(lesson, hard) };
+}
+
+// The record kept for a lesson: the best speed (with the accuracy of that run) and the fastest time.
+export function bestRecord(prev, r) {
+  if (!prev) return { accuracy: r.accuracy, cpm: r.cpm, ms: r.ms };
+  const faster = r.cpm > prev.cpm;
+  return { accuracy: faster ? r.accuracy : prev.accuracy, cpm: faster ? r.cpm : prev.cpm, ms: Math.min(prev.ms ?? Infinity, r.ms) };
 }
 
 // Keeps the better of two saved results for a lesson (by speed).

@@ -198,10 +198,10 @@ export function Puzzle({ id, onExit }) {
         wrongCode={null}
         shiftDown={shiftDown}
         shift={shiftHeld || shiftDown}
-        onPress={(code) => {
+        onPress={(code, shifted) => {
           if (code.startsWith("Shift")) setShiftDown((d) => !d);
           else if (code === "Backspace" || code === "Space") press(code, false);
-          else { press(code, shiftDown); setShiftDown(false); }
+          else { press(code, shifted); setShiftDown(false); }
         }}
       />
     </main>

@@ -79,7 +79,7 @@ export function Puzzle({ id, book, unit, onExit }) {
 
   const all = found.length === puzzle.words.length;
   return (
-    <main className="page">
+    <main className="page ws-page">
       <div className="quick-bar">
         <button type="button" className="link-button" onClick={onExit}><bdi>{t("studyExit")}</bdi></button>
         <span className="muted"><bdi>{nf(found.length)} / {nf(puzzle.words.length)}</bdi></span>

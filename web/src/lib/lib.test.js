@@ -22,7 +22,7 @@ import { NAME_AR_FROM } from "../config/books.js";
 import { mayBeIrregular, updateOwnWord, emptyCustom, normalizeRoot, missingFields, buildCustomWord, courseMatches, addOwnWord, removeOwnWord, unlockEarly, lockEarly, mergeCustom } from "./customWords.js";
 import { MOODS, MOOD_LABELS, MOOD_FROM, learnedMoods, moodCharts } from "./moods.js";
 import { TENSES, tensesAt, personFrom, learnedPersons, presentAnswers, conjugationItems, needsForm, isConjugationCorrect, charFor } from "./conjugation.js";
-import { LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult, targetLength, typicalCpm, TARGET_MINUTES } from "./typing.js";
+import { HARD_ACCURACY, HARD_CPM, accuracyFor, cpmFor, toWpm, showWpm, bestRecord, LESSONS, LETTER_ORDER, MIN_ACCURACY, isUnlocked, buildText, typableWords, typingResult, betterResult, targetLength, typicalCpm, TARGET_MINUTES } from "./typing.js";
 import assert from "node:assert/strict";
 
 import { getForms, analyzeVerb } from "./morphology.js";
@@ -1152,7 +1152,7 @@ test("typing lessons: the Arabic 101 key map, two letters per lesson, review les
   assert.equal(typingResult(fast, L).passed, true);
   assert.equal(typingResult({ correct: 30, mistakes: 5, ms: 60000 }, L).passed, false); // 86%
   assert.equal(typingResult({ correct: 30, mistakes: 0, ms: 120000 }, L).passed, false); // 15 per minute
-  assert.ok(MIN_ACCURACY === 0.9 && Math.abs(typingResult(fast, L).accuracy - 30 / 31) < 1e-9);
+  assert.ok(MIN_ACCURACY === 0.95 && Math.abs(typingResult(fast, L).accuracy - 30 / 31) < 1e-9);
   assert.deepEqual(betterResult({ cpm: 20 }, { cpm: 25 }), { cpm: 25 });
   assert.deepEqual(betterResult({ cpm: 30 }, { cpm: 25 }), { cpm: 30 });
 });
@@ -1541,4 +1541,42 @@ test("word searches: one per unit from part 1, the words are in the grid, tappin
   // saved
   assert.deepEqual(loadProgress().wordSearches, { done: {} });
   assert.deepEqual(mergeProgress({ cards: {}, wordSearches: { done: { "b2-u1": true } } }, { cards: {}, wordSearches: { done: { "b3-u2": true } } }).wordSearches, { done: { "b2-u1": true, "b3-u2": true } });
+});
+
+test("typing: 95% to pass, hard mode (98% and 40 WPM) with its own run, the best record per lesson", () => {
+  const L = LESSONS[0];
+  // normal: 95%
+  assert.equal(MIN_ACCURACY, 0.95);
+  assert.equal(typingResult({ correct: 95, mistakes: 5, ms: 60000 }, L).passed, true); // exactly 95%
+  assert.equal(typingResult({ correct: 94, mistakes: 6, ms: 60000 }, L).passed, false);
+  assert.equal(typingResult({ correct: 100, mistakes: 0, ms: 60000 }, L).ms, 60000);
+  // hard: 98% and 40 words a minute = 200 characters a minute, in every lesson
+  assert.deepEqual([HARD_ACCURACY, HARD_CPM, toWpm(HARD_CPM)], [0.98, 200, 40]);
+  assert.deepEqual([accuracyFor(false), accuracyFor(true), cpmFor(L, true), cpmFor(LESSONS.at(-1), true), cpmFor(L, false)], [0.95, 0.98, 200, 200, L.minCpm]);
+  const fast = { correct: 200, mistakes: 3, ms: 60000 }; // 98.5%, 200 a minute
+  assert.equal(typingResult(fast, L, true).passed, true);
+  assert.equal(typingResult({ correct: 200, mistakes: 5, ms: 60000 }, L, true).passed, false); // 97.6%
+  assert.equal(typingResult({ correct: 100, mistakes: 0, ms: 60000 }, L, true).passed, false); // 100 a minute
+  assert.equal(typingResult({ correct: 100, mistakes: 0, ms: 60000 }, L, false).passed, true); // fine in the normal run
+  assert.deepEqual([showWpm(20), showWpm(22), showWpm(200)], [4, 4.4, 40]);
+  // the record: best speed (with its accuracy) and the fastest time
+  const a = bestRecord(undefined, { accuracy: 0.96, cpm: 40, ms: 90000 });
+  assert.deepEqual(a, { accuracy: 0.96, cpm: 40, ms: 90000 });
+  assert.deepEqual(bestRecord(a, { accuracy: 0.99, cpm: 50, ms: 70000 }), { accuracy: 0.99, cpm: 50, ms: 70000 });
+  assert.deepEqual(bestRecord(a, { accuracy: 1, cpm: 30, ms: 80000 }), { accuracy: 0.96, cpm: 40, ms: 80000 }); // slower run, but a shorter text
+  // saved: normal and hard progress apart, merged with the account's
+  saveProgress({ cards: {}, level: null }); // an old save without typing progress
+  assert.deepEqual(loadProgress().typing, { passed: {}, passedHard: {}, hard: false });
+  const m = mergeProgress(
+    { cards: {}, typing: { passed: { n1: { accuracy: 0.96, cpm: 30, ms: 90000 } }, passedHard: { n1: { accuracy: 0.99, cpm: 210, ms: 20000 } }, hard: true } },
+    { cards: {}, typing: { passed: { n1: { accuracy: 0.97, cpm: 25, ms: 80000 } }, passedHard: {}, hard: false } },
+  );
+  assert.deepEqual(m.typing.passed.n1, { accuracy: 0.96, cpm: 30, ms: 80000 }); // the faster speed, the shorter time
+  assert.deepEqual(Object.keys(m.typing.passedHard), ["n1"]);
+  assert.equal(m.typing.hard, false); // the account's choice
+  assert.equal(mergeProgress({ cards: {}, typing: { hard: true } }, { cards: {} }).typing.hard, true);
+  // the name of the site
+  assert.equal(strings.siteTitle.en, "kutubiiya");
+  assert.equal(strings.siteTitle.ar, "كتبية");
+  assert.equal(strings.conjHintForm.ar, "أظهر الوزن");
 });

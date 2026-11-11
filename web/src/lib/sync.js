@@ -11,6 +11,17 @@ const newer = (a, b) => {
   return (a.lastReviewed ?? 0) >= (b.lastReviewed ?? 0) ? a : b;
 };
 
+// lessons passed on either side stay passed, with the faster speed and the shorter time
+function mergePassed(a = {}, b = {}) {
+  const out = { ...b };
+  for (const [id, r] of Object.entries(a)) {
+    const o = out[id];
+    out[id] = !o ? r : { ...(r.cpm > o.cpm ? r : o), ms: Math.min(r.ms ?? Infinity, o.ms ?? Infinity) };
+    if (out[id].ms === Infinity) delete out[id].ms;
+  }
+  return out;
+}
+
 export function mergeProgress(local, remote) {
   if (!remote) return local;
   const cards = { ...remote.cards };
@@ -20,12 +31,12 @@ export function mergeProgress(local, remote) {
     geoBest[k] = geoBest[k] == null ? ms : Math.min(geoBest[k], ms);
   }
   // typing lessons: a lesson passed on either side stays passed, with its faster result
-  const passed = { ...remote.typing?.passed };
-  for (const [id, r] of Object.entries(local.typing?.passed ?? {})) passed[id] = !passed[id] || r.cpm > passed[id].cpm ? r : passed[id];
+  const passed = mergePassed(local.typing?.passed, remote.typing?.passed);
+  const passedHard = mergePassed(local.typing?.passedHard, remote.typing?.passedHard);
   return {
     ...local,
     ...remote,
-    typing: { passed },
+    typing: { passed, passedHard, hard: remote.typing?.hard ?? local.typing?.hard ?? false },
     dark: remote.dark ?? local.dark ?? null,
     custom: mergeCustom(local.custom, remote.custom),
     crosswords: { done: { ...local.crosswords?.done, ...remote.crosswords?.done } },
