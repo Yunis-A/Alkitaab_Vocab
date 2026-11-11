@@ -3,7 +3,7 @@ import { useApp } from "../context/AppContext.jsx";
 import { useShiftHeld } from "../hooks.js";
 import TypingKeyboard from "../components/TypingKeyboard.jsx";
 import { LAYOUT } from "../data/keyboardLayouts.js";
-import crosswords from "../data/crosswords.json";
+import { useCourse } from "../context/CourseDataContext.jsx";
 import { charFor } from "../lib/conjugation.js";
 import { books } from "../config/books.js";
 import {
@@ -18,6 +18,7 @@ const LETTER = /[ء-ي]/;
 // seats) or on the on-screen keys.
 export default function Crossword({ onExit }) {
   const { t, bookName, unitLabel, level, crosswordsDone } = useApp();
+  const { crosswords } = useCourse();
   const [unit, setUnit] = useState(null); // { book, unit }
 
   if (unit) return <Puzzle id={puzzleId(unit.book, unit.unit)} onExit={() => setUnit(null)} />;
@@ -57,6 +58,7 @@ export default function Crossword({ onExit }) {
 
 export function Puzzle({ id, onExit }) {
   const { t, nf, finishCrossword } = useApp();
+  const { crosswords } = useCourse();
   const puzzle = crosswords[id];
   const [typed, setTyped] = useState(() => emptyTyped(puzzle));
   const first = puzzle.entries[0];

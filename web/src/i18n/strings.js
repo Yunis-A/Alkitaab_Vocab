@@ -86,6 +86,11 @@ export const strings = {
   studyVarieties: { en: "Language", ar: "اللغة", unlock: u(2, 2) },
   studyFormal: { en: "Formal (MSA)", ar: "الفصحى", unlock: u(2, 1) }, // الفُصحى is taught in part 1, lesson 1
   studyFirst: { en: "Show first", ar: "يظهر أولا", unlock: u(3, 8) },
+  studyAgreement: { en: "Gender and number", ar: "المذكر والمؤنث والمفرد والمثنى والجمع", unlock: u(3, 8) },
+  modeAgreementDesc: { en: "Masculine or feminine, singular, dual or plural?", ar: "مذكر أو مؤنث؟ مفرد أو مثنى أو جمع؟", unlock: u(3, 8) },
+  singular: { en: "singular", ar: "مفرد", unlock: u(3, 8) },
+  dual: { en: "dual", ar: "مثنى", unlock: u(3, 8) },
+  plural: { en: "plural", ar: "جمع", unlock: u(3, 8) },
   studyGender: { en: "Gender of countries", ar: "مذكر أم مؤنث؟", unlock: u(3, 8) },
   genderScore: { en: (n, s) => `${s} correct`, ar: (n, s) => `${s} صحيحة`, unlock: u(3, 8) },
   genderRight: { en: "Correct!", ar: "صحيح!", unlock: u(3, 8) },

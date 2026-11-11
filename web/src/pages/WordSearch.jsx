@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
-import wordsearches from "../data/wordsearch.json";
+import { useCourse } from "../context/CourseDataContext.jsx";
 import { books } from "../config/books.js";
 import { glossMode, lineBetween, searchId, wordCells, wordOnLine } from "../lib/wordsearch.js";
 
@@ -8,6 +8,7 @@ import { glossMode, lineBetween, searchId, wordCells, wordOnLine } from "../lib/
 // word and then its last letter; a found word stays marked and is struck through in the list.
 export default function WordSearch({ onExit }) {
   const { t, bookName, unitLabel, level, wordSearchesDone } = useApp();
+  const { wordsearches } = useCourse();
   const [unit, setUnit] = useState(null);
 
   if (unit) return <Puzzle id={searchId(unit.book, unit.unit)} book={unit.book} unit={unit.unit} onExit={() => setUnit(null)} />;
@@ -49,6 +50,7 @@ export default function WordSearch({ onExit }) {
 
 export function Puzzle({ id, book, unit, onExit }) {
   const { t, nf, finishWordSearch } = useApp();
+  const { wordsearches } = useCourse();
   const puzzle = wordsearches[id];
   const [start, setStart] = useState(null); // the first cell tapped
   const [found, setFound] = useState([]); // answers found

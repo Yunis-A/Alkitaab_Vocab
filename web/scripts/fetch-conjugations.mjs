@@ -18,7 +18,7 @@ import { rawPage, entriesOnPage, renderConj, formNumber } from "./lib/wiktionary
 import { pastTitle } from "./lib/past-title.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const words = JSON.parse(fs.readFileSync(path.join(root, "src/data/words.json"), "utf8"));
+const words = JSON.parse(fs.readFileSync(path.join(root, "private/words.json"), "utf8"));
 const { entries } = load();
 const parsed = new Map(entries.map((e) => [e.id, e]));
 

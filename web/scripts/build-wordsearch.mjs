@@ -1,4 +1,4 @@
-// Builds src/data/wordsearch.json: one word search per unit from Al-Kitaab part 1, hiding most of the unit's words
+// Builds private/wordsearch.json: one word search per unit from Al-Kitaab part 1, hiding most of the unit's words
 // (data/crossword/candidates.json has them). Bigger grids and more directions later in the course.
 //   node scripts/build-wordsearch.mjs
 import fs from "node:fs";
@@ -37,5 +37,5 @@ for (const unit of Object.keys(candidates).sort((a, b) => order(a)[0] - order(b)
   out[unit] = keep;
   console.log(unit, `${size}x${size}`, levelOf(book, u), `hidden ${keep.words.length}/${chosen.length} of ${total}`, left.length ? `(left out: ${left.join(" ")})` : "");
 }
-fs.writeFileSync(path.join(root, "src/data/wordsearch.json"), JSON.stringify(out, null, 1) + "\n");
+fs.writeFileSync(path.join(root, "private/wordsearch.json"), JSON.stringify(out, null, 1) + "\n");
 console.log("units:", Object.keys(out).length);

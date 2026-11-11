@@ -17,7 +17,7 @@ import { rawPages, rootsOnPage } from "./lib/wiktionary.mjs";
 import { pastTitle } from "./lib/past-title.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const words = JSON.parse(fs.readFileSync(path.join(root, "src/data/words.json"), "utf8"));
+const words = JSON.parse(fs.readFileSync(path.join(root, "private/words.json"), "utf8"));
 const parsed = new Map(load().entries.map((e) => [e.id, e]));
 const enrichment = JSON.parse(fs.readFileSync(path.join(root, "data/enrichment.json"), "utf8"));
 

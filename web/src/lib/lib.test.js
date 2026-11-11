@@ -11,10 +11,10 @@ import { lessonStyle } from "../config/books.js";
 import { COUNTRIES, GAME_COUNTRIES } from "../data/countries.js";
 import { withoutArticle, addArticle } from "./article.js";
 import { LETTERS } from "../data/letters.js";
-import wordsearches from "../data/wordsearch.json" with { type: "json" };
+import wordsearches from "../../private/wordsearch.json" with { type: "json" };
 import { searchId, glossMode, wordCells, lineBetween, wordOnLine } from "./wordsearch.js";
 import { isKnown, knownByUnit, tokens as arabicTokens } from "../../scripts/lib/crossword-known.mjs";
-import crosswords from "../data/crosswords.json" with { type: "json" };
+import crosswords from "../../private/crosswords.json" with { type: "json" };
 import { puzzleId, sameLetter, entryCells, entryAt, emptyTyped, isEntrySolved, isSolved, wrongCells, nextCell, prevCell, isCell } from "./crossword.js";
 import { LAYOUT, keyFor, codeFor } from "../data/keyboardLayouts.js";
 import { PLURAL_FROM, GENDER_FROM } from "../config/books.js";
@@ -41,7 +41,7 @@ import { unitAfterBookChange, books, IMPERATIVE_LEVEL, levelReached } from "../c
 import { GEO_MODES, TIME_LIMIT_MS, buildQuestions, finalTime, formatTime } from "./geoquiz.js";
 import { geoCountries } from "../data/geography.js";
 import { mapShapes } from "../data/menaMap.js";
-import allWords from "../data/words.json" with { type: "json" };
+import allWords from "../../private/words.json" with { type: "json" };
 import { stripDiacritics } from "./arabic.js";
 import { localizeDigits } from "./numerals.js";
 import { loadProgress, saveProgress } from "./storage.js";
@@ -1579,4 +1579,20 @@ test("typing: 95% to pass, hard mode (98% and 40 WPM) with its own run, the best
   assert.equal(strings.siteTitle.en, "kutubiiya");
   assert.equal(strings.siteTitle.ar, "كتبية");
   assert.equal(strings.conjHintForm.ar, "أظهر الوزن");
+});
+
+import { formsOf as agreeForms, pickQuestion as agreePick, isRight as agreeRight, CHOICES as AGREE_CHOICES, eligible as agreeEligible } from "./agreement.js";
+
+test("gender and number game: six answers, forms built from a noun and an adjective", () => {
+  assert.equal(AGREE_CHOICES.length, 6);
+  const noun = { pos: "noun", gender: "feminine", arabic: "مُدَرِّسة", plural: null };
+  const f = agreeForms(noun);
+  assert.deepEqual(f.map((x) => `${x.gender}-${x.number}`), ["feminine-singular", "feminine-dual", "feminine-plural"]);
+  assert.equal(f[1].text, "مُدَرِّستان");
+  const adj = { pos: "adjective", arabic: "جَديد", feminine: "جَديدة" };
+  assert.equal(agreeForms(adj).length, 6);
+  assert.equal(agreeEligible({ pos: "verb", arabic: "كَتَبَ" }), false);
+  const q = agreePick([adj, noun], () => 0);
+  assert.ok(agreeRight(q, { gender: q.form.gender, number: q.form.number }));
+  assert.equal(agreePick([]), null);
 });

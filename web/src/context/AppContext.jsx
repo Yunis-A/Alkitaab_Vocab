@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
-import allWords from "../data/words.json";
+import { useCourse } from "./CourseDataContext.jsx";
 import { books, compareLevel, levelReached, lessonStyle, ARABIC_DIGITS_LEVEL, TRANSLITERATION_MAX_BOOK } from "../config/books.js";
 import { localizeDigits } from "../lib/numerals.js";
 import { strings } from "../i18n/strings.js";
@@ -19,11 +19,12 @@ export const useApp = () => useContext(Ctx);
 
 const DEFAULT_LEVEL = { book: 1, unit: 1 };
 
-// Words are curriculum-ordered by book, then unit, then their order in the file.
-const sortedWords = [...allWords].sort((a, b) => a.book - b.book || a.unit - b.unit);
-const searchIndex = buildIndex(sortedWords);
-
 export function AppProvider({ children }) {
+  // the course words come from the account service after sign-in (see CourseDataContext), ordered by book, then unit,
+  // then their order in the file
+  const { words: courseWords } = useCourse();
+  const sortedWords = useMemo(() => [...courseWords].sort((a, b) => a.book - b.book || a.unit - b.unit), [courseWords]);
+  const searchIndex = useMemo(() => buildIndex(sortedWords), [sortedWords]);
   const [progress, setProgress] = useState(loadProgress);
   useEffect(() => saveProgress(progress), [progress]);
 
@@ -77,7 +78,7 @@ export function AppProvider({ children }) {
   const { level, cards, dialects } = progress;
   // the student's own words, and the course words they unlocked ahead of their lesson
   const custom = progress.custom ?? emptyCustom();
-  const wordsById = useMemo(() => new Map([...sortedWords, ...custom.words].map((w) => [w.id, w])), [custom.words]);
+  const wordsById = useMemo(() => new Map([...sortedWords, ...custom.words].map((w) => [w.id, w])), [sortedWords, custom.words]);
   const myIds = useMemo(() => new Set([...custom.words.map((w) => w.id), ...custom.early]), [custom]);
   const effectiveLevel = level ?? DEFAULT_LEVEL;
 

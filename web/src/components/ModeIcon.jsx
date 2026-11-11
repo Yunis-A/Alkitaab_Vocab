@@ -14,6 +14,7 @@ const SHAPES = {
   geography: <><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" /></>,
   map: <><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></>,
   gender: <><circle cx="7" cy="9" r="3.5" /><path d="M7 12.5V19M4.5 16h5" /><circle cx="17" cy="15" r="3.5" /><path d="m19.5 12.5 2.5-2.5M19 10h3v3" /></>,
+  agreement: <><circle cx="6" cy="8" r="2.5" /><circle cx="14" cy="8" r="2.5" /><circle cx="19" cy="8" r="2.5" /><path d="M3 18h6M12 18h9" /></>,
   article: <text x="12" y="17" textAnchor="middle" fontSize="13" fontFamily="Arial, sans-serif" fill="currentColor" stroke="none">ال</text>,
   prepositions: <path d="M4 8h12M12 4l4 4-4 4M20 16H8M12 12l-4 4 4 4" />,
   patterns: <><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 10h18M9 4v16" /></>,

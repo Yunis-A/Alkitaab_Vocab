@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import { stripDiacritics } from "../src/lib/arabic.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const words = JSON.parse(fs.readFileSync(path.join(root, "src/data/words.json"), "utf8"));
+const words = JSON.parse(fs.readFileSync(path.join(root, "private/words.json"), "utf8"));
 
 const per = {};
 for (const w of words) {

@@ -8,6 +8,8 @@ import UnitPicker from "../components/UnitPicker.jsx";
 import ModeIcon from "../components/ModeIcon.jsx";
 import QuickStudy from "./QuickStudy.jsx";
 import GenderQuiz from "./GenderQuiz.jsx";
+import Agreement from "./Agreement.jsx";
+import { eligible as agreementEligible } from "../lib/agreement.js";
 import SunMoonQuiz from "./SunMoonQuiz.jsx";
 import Typing from "./Typing.jsx";
 import Crossword from "./Crossword.jsx";
@@ -59,6 +61,7 @@ const MODES = [
   { id: "wordsearch", icon: "wordsearch", title: "wordSearchTitle", desc: "modeWordSearchDesc", direct: true, from: { book: 2, unit: 1 } }, // one per unit, from part 1
   { id: "typing", icon: "typing", title: "studyTyping", desc: "modeTypingDesc", direct: true },
   { id: "sunmoon", icon: "sunmoon", title: "studySunMoon", desc: "modeSunMoonDesc", direct: true, from: { book: 1, unit: 9 } }, // شَمس / قَمَر are taught in Alif Baa lesson 9
+  { id: "agreement", icon: "agreement", title: "studyAgreement", desc: "modeAgreementDesc", options: [], from: { book: 2, unit: 1 } }, // gender and number of a word, from the lessons picked
   { id: "geography", icon: "geography", title: "geoGamesTitle", desc: "modeGeoGamesDesc" }, // opens a menu of geography games
 ];
 
@@ -128,7 +131,11 @@ export default function Learn() {
   // the preposition game needs verbs with prepositions: it appears when the student has some (not in Alif Baa)
   const hasPrepositions = useMemo(() => prepositionVerbs(visibleWords).length > 0, [visibleWords]);
   const available = (m) => (m.id === "prepositions" ? hasPrepositions : !m.from || levelReached(level, m.from));
-  const count = { quick: items.length, matching: items.length, prepositions: prepVerbs.length, conjugation: conjItems.length };
+  const agreeWords = useMemo(
+    () => visibleWords.filter((w) => agreementEligible(w) && (units.has(levelKey(w)) || (includeMine && myIds.has(w.id)))),
+    [visibleWords, units, includeMine, myIds],
+  );
+  const count = { agreement: agreeWords.length, quick: items.length, matching: items.length, prepositions: prepVerbs.length, conjugation: conjItems.length };
 
   if (mode === "run:review") return <Review onExit={exit} />;
   if (mode === "run:quick") return <QuickStudy items={items} englishFirst={englishFirst} onExit={exit} />;
@@ -136,6 +143,7 @@ export default function Learn() {
   if (mode === "run:prepositions") return <Prepositions verbs={prepVerbs} onExit={back("prepositions")} />;
   if (mode === "run:patterns") return <VerbPatterns onExit={back("patterns")} />;
   if (mode === "run:conjugation") return <Conjugation items={conjItems} allVerbs={allVerbs} marks={marks} onExit={back("conjugation")} />;
+  if (mode === "run:agreement") return <Agreement words={agreeWords} onExit={() => setMode("agreement")} />;
   if (mode === "run:gender") return <GenderQuiz onExit={back("gender")} />;
   if (mode === "run:article") return <ArticleQuiz onExit={back("article")} />;
   if (mode === "run:sunmoon") return <SunMoonQuiz onExit={exit} />;

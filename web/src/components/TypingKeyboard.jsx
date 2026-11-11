@@ -23,7 +23,7 @@ export default function TypingKeyboard({ layout, target, wrongCode, shiftDown, s
               isShift && (shiftDown || shift) ? "tk-down" : "", lit ? "tk-lit" : "", dim ? "tk-dim" : "",
             ].join(" ");
             return (
-              <button key={key.code} type="button" tabIndex={-1} className={cls} style={{ flex: `${key.w} 1 0` }} onClick={() => onPress(key.code, shift)}>
+              <button key={key.code} type="button" tabIndex={-1} className={cls} style={{ flex: `${key.w} 1 0` }} onMouseDown={(e) => e.preventDefault()} onClick={() => onPress(key.code, shift)}>
                 {/* the other face, small in the corner */}
                 {(lit ? key.ch : key.sh) && <span className="tk-shifted ar">{face(lit ? key.ch : key.sh)}</span>}
                 {key.ch && <span className={`tk-ar ar${lit && isMark(key.sh) ? " tk-mark" : ""}`}>{lit ? face(key.sh) : key.ch}</span>}

@@ -1,7 +1,7 @@
 // Vocabulary import.
 //
 //   node scripts/import-vocab.mjs inspect [outDir]   parse, report, write enrichment inputs
-//   node scripts/import-vocab.mjs build              merge enrichment -> src/data/words.json + review CSV
+//   node scripts/import-vocab.mjs build              merge enrichment -> private/words.json + review CSV
 //
 // Source:      data/source/arabic-vocab.txt
 // Enrichment:  data/enrichment.json  (root, pos, gender, form, cleaned English; from the review pass)
@@ -392,7 +392,7 @@ if (cmd === "build") {
   edited.words = finalizeWords(edited.words);
   const reviewed = new Set(readJson("data/reviewed-ids.json") ?? []);
 
-  fs.writeFileSync(path.join(root, "src/data/words.json"), JSON.stringify(edited.words, null, 1) + "\n");
+  fs.writeFileSync(path.join(root, "private/words.json"), JSON.stringify(edited.words, null, 1) + "\n");
   // review.csv lists only NEW problems: rows already looked at (data/reviewed-ids.json) are left out.
   const open = review.filter((r) => !reviewed.has(r[0]));
   const csv = ["id,book,unit,english,arabic,flags", ...open.map((r) => r.map(csvCell).join(","))].join("\n");

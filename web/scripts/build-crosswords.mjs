@@ -1,4 +1,4 @@
-// Builds src/data/crosswords.json from the clue files (data/crossword/clues-*.json): lays each unit's words out as a
+// Builds private/crosswords.json from the clue files (data/crossword/clues-*.json): lays each unit's words out as a
 // crossword grid. The puzzles are static: one per unit, from Al-Kitaab part 1.
 //   node scripts/build-crosswords.mjs
 import fs from "node:fs";
@@ -25,5 +25,5 @@ for (const unit of Object.keys(clues).sort((a, b) => order(a)[0] - order(b)[0] |
   out[unit] = keep;
   console.log(unit, `${keep.rows}x${keep.cols}`, `placed ${new Set(keep.entries.map((e) => e.answer)).size}/${words.length}`, unplaced.length ? `(left out: ${unplaced.join(" ")})` : "");
 }
-fs.writeFileSync(path.join(root, "src/data/crosswords.json"), JSON.stringify(out, null, 1) + "\n");
+fs.writeFileSync(path.join(root, "private/crosswords.json"), JSON.stringify(out, null, 1) + "\n");
 console.log("units:", Object.keys(out).length);

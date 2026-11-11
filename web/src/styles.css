@@ -487,4 +487,13 @@ button.primary, .button.primary {
 
 .ws-page { max-width: 80rem; }
 /* a vowel mark shown big on its key (the damma was squished at the letter size) */
-.tk-ar.tk-mark { font-size: 2.3rem; line-height: 1; padding-top: 0.55rem; font-weight: 400; }
+.tk-ar.tk-mark { font-size: 1.9rem; line-height: 1; padding: 0.9rem 0 0 0.35rem; font-weight: 400; } /* low and to the side, clear of the small letter in the corner */
+
+.agree-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 1rem 0; }
+.agree-buttons .gender-btn { padding: 0.8rem 0.5rem; font-size: 1.05rem; }
+/* the title keeps the left edge in Arabic too, as in English */
+html[dir="rtl"] .topbar { direction: ltr; }
+html[dir="rtl"] .topbar nav { direction: rtl; }
+.topbar .title { margin-inline-end: 0; margin-right: auto; }
+/* no lingering focus ring on a clicked key */
+.tk-key:focus, .tk-key:focus-visible { outline: none; }

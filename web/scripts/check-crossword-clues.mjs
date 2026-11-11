@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 import { isKnown, knownByUnit, norm, tokens } from "./lib/crossword-known.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const words = JSON.parse(fs.readFileSync(path.join(root, "src/data/words.json"), "utf8"));
+const words = JSON.parse(fs.readFileSync(path.join(root, "private/words.json"), "utf8"));
 const candidates = JSON.parse(fs.readFileSync(path.join(root, "data/crossword/candidates.json"), "utf8"));
 const known = knownByUnit(words, Object.keys(candidates));
 
