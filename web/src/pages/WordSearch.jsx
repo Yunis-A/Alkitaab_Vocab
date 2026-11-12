@@ -59,7 +59,7 @@ export function Puzzle({ id, book, unit, onExit }) {
 
   const foundCells = useMemo(() => {
     const map = new Map();
-    puzzle.words.filter((w) => found.includes(w.answer)).forEach((w, i) => wordCells(w).forEach(({ r, c }) => map.set(`${r},${c}`, i % 6)));
+    puzzle.words.forEach((w, i) => { if (found.includes(w.answer)) wordCells(w).forEach(({ r, c }) => map.set(`${r},${c}`, i % 6)); });
     return map;
   }, [puzzle, found]);
 

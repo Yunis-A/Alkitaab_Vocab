@@ -61,7 +61,7 @@ const MODES = [
   { id: "wordsearch", icon: "wordsearch", title: "wordSearchTitle", desc: "modeWordSearchDesc", direct: true, from: { book: 2, unit: 1 } }, // one per unit, from part 1
   { id: "typing", icon: "typing", title: "studyTyping", desc: "modeTypingDesc", direct: true },
   { id: "sunmoon", icon: "sunmoon", title: "studySunMoon", desc: "modeSunMoonDesc", direct: true, from: { book: 1, unit: 9 } }, // شَمس / قَمَر are taught in Alif Baa lesson 9
-  { id: "agreement", icon: "agreement", title: "studyAgreement", desc: "modeAgreementDesc", options: [], from: { book: 2, unit: 1 } }, // gender and number of a word, from the lessons picked
+  { id: "agreement", icon: "agreement", title: "studyAgreement", desc: "modeAgreementDesc", options: [], from: { book: 2, unit: 1 }, hidden: true }, // gender and number of a word, from the lessons picked
   { id: "geography", icon: "geography", title: "geoGamesTitle", desc: "modeGeoGamesDesc" }, // opens a menu of geography games
 ];
 
@@ -130,7 +130,8 @@ export default function Learn() {
   const back = (id) => () => setMode(PARENT[id] ?? "menu");
   // the preposition game needs verbs with prepositions: it appears when the student has some (not in Alif Baa)
   const hasPrepositions = useMemo(() => prepositionVerbs(visibleWords).length > 0, [visibleWords]);
-  const available = (m) => (m.id === "prepositions" ? hasPrepositions : !m.from || levelReached(level, m.from));
+  // `hidden` modes stay in the code but are not offered yet
+  const available = (m) => !m.hidden && (m.id === "prepositions" ? hasPrepositions : !m.from || levelReached(level, m.from));
   const agreeWords = useMemo(
     () => visibleWords.filter((w) => agreementEligible(w) && (units.has(levelKey(w)) || (includeMine && myIds.has(w.id)))),
     [visibleWords, units, includeMine, myIds],

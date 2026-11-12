@@ -14,7 +14,8 @@ const SYNC_TEXT = {
 // teaches these words, so the account screens do not turn Arabic.
 export default function Account() {
   const { configured, ready, user, recovering, signUp, signIn, signInWithGoogle, resetPassword, updatePassword } = useAuth();
-  const { t, syncStatus, signOut } = useApp();
+  // the gate shows this screen before the app (and its context) exists
+  const { t = (k) => k, syncStatus, signOut = () => {} } = useApp() ?? {};
   const [mode, setMode] = useState("signin"); // signin | signup | reset
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

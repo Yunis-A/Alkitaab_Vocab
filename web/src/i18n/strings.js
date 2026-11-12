@@ -135,7 +135,7 @@ export const strings = {
   typingWpm: { en: "WPM", ar: "ك/د", unlock: u(3, 8) }, // words (5 letters) a minute
   typingTime: { en: "Time", ar: "الوقت", unlock: u(3, 8) },
   typingHard: { en: "Hard mode", ar: "الوضع الصعب", unlock: u(3, 8) },
-  typingHardHelp: { en: "A second run from the first lesson: at least 98% accuracy and 40 words a minute. Switch it off to go back to your normal run; both are kept.", ar: "جولة ثانية من الدرس الأول: دقة ٩٨٪ على الأقل و٤٠ كلمة في الدقيقة. أطفئه للعودة إلى جولتك العادية؛ كلتاهما محفوظة.", unlock: u(3, 8) },
+  typingHardHelp: { en: "A second run from the first lesson: at least 98% accuracy and 40 words a minute.", ar: "جولة ثانية من الدرس الأول: دقة ٩٨٪ على الأقل و٤٠ كلمة في الدقيقة.", unlock: u(3, 8) },
   typingRetry: { en: "Try again", ar: "حاول مرة أخرى", unlock: u(3, 8) },
   typingNext: { en: "Next lesson", ar: "الدرس التالي", unlock: u(3, 8) },
   // Sun and moon letters: شمس (sun) and قمر (moon) are taught in Alif Baa lesson 9, where the game unlocks

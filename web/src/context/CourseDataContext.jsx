@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useAuth } from "./AuthContext.jsx";
 import Account from "../pages/Account.jsx";
 import { supabase } from "../lib/supabase.js";
+import { clearCourseCache, readCourseCache, writeCourseCache } from "../lib/courseCache.js";
 
 // The course content (the vocabulary, the crosswords, the word searches) is NOT part of the website's files. It sits
 // in the Supabase table `course_data`, readable only by signed-in students (row level security), and is fetched after
@@ -15,12 +16,22 @@ export const useCourse = () => useContext(Ctx);
 const EMPTY = { words: [], crosswords: {}, wordsearches: {} };
 const PUBLIC_PATHS = ["/privacy", "/terms"]; // the legal pages need no account
 
-async function fetchCourse() {
-  const { data, error } = await supabase.from("course_data").select("key, data");
-  if (error) throw error;
-  const by = Object.fromEntries(data.map((r) => [r.key, r.data]));
+const assemble = (by) => {
   if (!by.words) throw new Error("The course content is not uploaded yet.");
   return { words: by.words, crosswords: by.crosswords ?? {}, wordsearches: by.wordsearches ?? {} };
+};
+
+// The server's copy, unless the one kept in this browser is still current (a cheap check of the update times first).
+async function fetchCourse(userId, cached) {
+  const { data: stamps, error: e1 } = await supabase.from("course_data").select("key, updated_at");
+  if (e1) throw e1;
+  const now = Object.fromEntries(stamps.map((r) => [r.key, r.updated_at]));
+  if (cached && JSON.stringify(cached.stamps) === JSON.stringify(now)) return cached.course;
+  const { data, error } = await supabase.from("course_data").select("key, data");
+  if (error) throw error;
+  const course = assemble(Object.fromEntries(data.map((r) => [r.key, r.data])));
+  writeCourseCache(userId, now, course);
+  return course;
 }
 
 // Local development without an account: the files under web/private, which Vite only includes in `npm run dev`.
@@ -47,12 +58,19 @@ export function CourseDataProvider({ children }) {
     if (local) {
       fetchLocal().then((d) => live && setCourse(d)).catch((e) => live && setError(e.message));
     } else if (userId) {
-      fetchCourse().then((d) => live && setCourse(d)).catch((e) => live && setError(e.message));
+      // show the copy kept in this browser at once, then check the server for a newer one in the background
+      readCourseCache(userId).then((cached) => {
+        if (cached && live) setCourse(cached.course);
+        return fetchCourse(userId, cached)
+          .then((d) => live && setCourse(d))
+          .catch((e) => { if (live && !cached) setError(e.message); }); // offline with a copy: carry on with it
+      });
     } else {
       setCourse(null); // signed out: the content is dropped from memory
+      if (ready) clearCourseCache(); // and from this browser (not before the saved session has been read)
     }
     return () => { live = false; };
-  }, [local, userId]);
+  }, [local, userId, ready]);
 
   const value = useMemo(() => course ?? EMPTY, [course]);
 
